@@ -11,17 +11,19 @@ kujo run ./build.kujo -- --site-url https://kujolang.ai
 bash scripts/validate-generated-output.sh output
 ```
 
-Preview the generated site locally:
+Build, validate, and start Kujo's local HTTP server in one command:
 
 ```bash
-kujo serve output --port 8080
+bash scripts/dev.sh
 ```
 
-Create the static Sites deployment bundle after a validated SSG build:
+Then open [http://127.0.0.1:8080](http://127.0.0.1:8080). Pass a different port when needed:
 
 ```bash
-bash scripts/build-sites.sh https://kujolang.ai
+bash scripts/dev.sh 4178
 ```
+
+The equivalent manual preview command is `kujo serve output --host 127.0.0.1 --port 8080`. This repository does not require a third-party hosting runtime.
 
 ## Content model
 
