@@ -1,0 +1,81 @@
+<main id="main-content">
+	<section class="sk-hero home-hero" aria-labelledby="home-hero-title">
+		<canvas class="home-hero__canvas" data-dither-canvas data-source="/assets/images/hero-source.png" aria-hidden="true"></canvas>
+		<div class="home-hero__grid" aria-hidden="true"></div>
+		<div class="home-hero__wash" aria-hidden="true"></div>
+		<div class="home-hero__scanline" aria-hidden="true"></div>
+		<div class="sk-hero__inner">
+			<div class="home-hero__copy">
+				<p class="sk-badge hero-kicker" data-variant="outline">Programming language for AI-native software</p>
+				<h1 id="home-hero-title">KUJO</h1>
+				<p class="home-hero__lead">Build local-first automation, agentic workflows, and application scripts with clarity, context, and control.</p>
+				<p class="home-hero__body">A VM-first language, practical native capabilities, deterministic tooling, and an ecosystem designed to keep the work inspectable.</p>
+				<div class="sk-hero__actions">
+					<a class="sk-button" href="/ecosystem/">Explore ecosystem <span aria-hidden="true">&rarr;</span></a>
+					<a class="sk-button" data-variant="secondary" href="https://github.com/kujolang/kujo/tree/main/docs">Read docs <span aria-hidden="true">&rarr;</span></a>
+				</div>
+			</div>
+			<aside class="sk-command-strip home-hero__status" aria-label="Kujo at a glance">
+				<div><span>Runtime</span><strong>VM-first</strong></div>
+				<div><span>Posture</span><strong>Local-first</strong></div>
+				<div><span>Contracts</span><strong>Deterministic</strong></div>
+				<div><span>Source</span><strong>Open</strong></div>
+			</aside>
+		</div>
+		<div class="home-hero__footer" aria-hidden="true"><span>Language / Runtime / Tools</span><span>KJ–01</span></div>
+	</section>
+
+	<section class="section-shell" aria-labelledby="why-kujo-title">
+		<div class="section-heading sk-heading">
+			<p>Why Kujo</p>
+			<h2 id="why-kujo-title">A language built around operational reality.</h2>
+			<span>Kujo keeps source, capabilities, evidence, and machine-readable contracts close to the work.</span>
+		</div>
+		<div class="sk-feature-grid" data-density="dense">
+			<article><span data-feature-icon aria-hidden="true">01</span><h3>Local-first</h3><p>Workflows run on infrastructure you can inspect, with hosted dependencies kept optional.</p></article>
+			<article><span data-feature-icon aria-hidden="true">02</span><h3>Capability-aware</h3><p>Filesystem, process, network, database, and AI effects stay explicit at runtime.</p></article>
+			<article><span data-feature-icon aria-hidden="true">03</span><h3>Agent-readable</h3><p>Structured diagnostics, DocGen, JSON contracts, and proof artifacts support human and agent collaborators.</p></article>
+			<article><span data-feature-icon aria-hidden="true">04</span><h3>Deterministic</h3><p>Package locks, replay fixtures, evaluation gates, and generated outputs are designed to be repeatable.</p></article>
+		</div>
+	</section>
+
+	<section class="section-shell" aria-labelledby="ecosystem-preview-title">
+		<div class="sk-bento-grid" data-layout="showcase">
+			<div class="sk-bento-grid__intro">
+				<span class="sk-badge" data-variant="outline">One ecosystem</span>
+				<div class="sk-bento-grid__content"><h2 id="ecosystem-preview-title">From language core to shipped proof.</h2><p>Use only the layer you need, or follow the full path from scoped work to verified handoff.</p></div>
+			</div>
+			<article class="sk-bento-grid__item" data-span="wide"><p class="sk-bento-grid__kicker">Foundation</p><h3>Kujo + Kennel</h3><p>The runtime, native capabilities, modules, manifests, lockfiles, and dependency policy.</p><a class="sk-link" href="/ecosystem/kujo/">Meet the language</a></article>
+			<article class="sk-bento-grid__item" data-span="tall"><p class="sk-bento-grid__kicker">AI + Agents</p><h3>SDKs, Dispatch, Watchdog, RAG</h3><p>Provider-normalized calls, agent runners, approvals, orchestration, telemetry, and grounded knowledge.</p><a class="sk-link" href="/ecosystem/">View the map</a></article>
+			<article class="sk-bento-grid__item"><p class="sk-bento-grid__kicker">Proof</p><h3>Eval + Lens + ShipCheck</h3><p>Deterministic checks, browser evidence, and release readiness.</p></article>
+			<article class="sk-bento-grid__item"><p class="sk-bento-grid__kicker">Showcases</p><h3>Real patterns</h3><p>AI Chat, CMS, CRUD API, SSG, and Intake.</p></article>
+		</div>
+	</section>
+
+	<section class="section-shell" aria-labelledby="writing-preview-title">
+		<div class="section-heading sk-heading">
+			<p>Writing</p>
+			<h2 id="writing-preview-title">Notes from the build.</h2>
+			<span>Launch posts, tutorials, ecosystem walkthroughs, and practical operating guides.</span>
+		</div>
+		<ul class="card-grid writing-grid">{{featured_posts_html}}</ul>
+		<div class="section-actions"><a class="sk-button" data-variant="secondary" href="/writing/">Browse all writing</a></div>
+	</section>
+
+	<section class="section-shell faq-shell" aria-labelledby="home-faq-title">
+		<div class="section-heading sk-heading"><p>Questions</p><h2 id="home-faq-title">Start with the boundaries.</h2></div>
+		<div class="sk-accordion" aria-label="Kujo frequently asked questions">
+			<details open><summary>What is Kujo?</summary><p>Kujo is a VM-first programming language built in Rust for AI-native software, local-first automation, agentic workflows, and practical application scripting.</p></details>
+			<details><summary>Is the ecosystem one large framework?</summary><p>No. It is a collection of focused, composable projects. Use the language alone, add primitives such as Eval or the AI SDK, or adopt a complete operating loop.</p></details>
+			<details><summary>Does Kujo require hosted AI services?</summary><p>No. Core workflows are local-first, and many AI surfaces include deterministic offline fixtures. Live providers are explicit integration boundaries.</p></details>
+			<details><summary>Where should I begin?</summary><p>Read the docs for the language, then explore the ecosystem map based on the problem you are solving.</p></details>
+		</div>
+	</section>
+
+	<section class="sk-cta home-cta" data-layout="split" aria-labelledby="home-cta-title">
+		<div class="sk-cta__inner">
+			<div class="sk-cta__copy"><h2 id="home-cta-title">Build something inspectable.</h2><p>Start with Kujo, follow the source, and keep control of every capability and artifact.</p></div>
+			<div class="sk-cta__actions"><a class="sk-button" href="https://github.com/kujolang/kujo">View Kujo on GitHub</a><a class="sk-button" data-variant="secondary" href="/ethos/">Read the ethos</a></div>
+		</div>
+	</section>
+</main>

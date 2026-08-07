@@ -1,0 +1,22 @@
+site_url: https://kujolang.ai
+site_title: Kujolang.ai
+site_tagline: Kujo is the programming language for AI-native software, local-first automation, and agentic workflows.
+
+output: output
+content: content
+templates: templates
+assets: assets
+
+blog_slug: writing
+posts_at_root: false
+posts_per_page: 12
+sort_by: date
+
+fonts: []
+robots: public
+llms: public
+watch: false
+minify: true
+download_remote_images: false
+no_index: false
+no_aux: false
