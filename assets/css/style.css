@@ -270,7 +270,7 @@
     object-position: right center;
   }
 
-  .home-hero__canvas {
+  .hero-dither-canvas {
     position: absolute;
     inset: 0;
     inline-size: 100%;
