@@ -60,6 +60,12 @@ The ecosystem item template reads `install_command`, `github_url`, `launch_story
 
 Releases are tagged from a clean `main` branch after the production build and verification commands pass. User-facing changes are recorded in [CHANGELOG.md](CHANGELOG.md), and GitHub releases use semantic version tags such as `v1.0.0`.
 
+## Deployment
+
+Pushes to `main` deploy the verified `output/` artifact through GitHub Pages using [`.github/workflows/pages.yml`](.github/workflows/pages.yml). The workflow builds a pinned Kujo runtime from source, runs the production SSG and validation contracts, and publishes only the generated static site.
+
+The production custom domain is declared in [`CNAME`](CNAME). DNS is managed separately and should point the apex `kujolang.ai` records to GitHub Pages while `www.kujolang.ai` aliases `kujolang.github.io`.
+
 ## Included licenses
 
 The vendored Kujo SSG and SiteKit assets retain their upstream terms in [SSG-LICENSE.txt](SSG-LICENSE.txt) and [SITEKIT-LICENSE.txt](SITEKIT-LICENSE.txt). The Departure Mono font license is stored beside the font assets.

@@ -35,6 +35,12 @@ require_file "${output_dir}/contact/index.html"
 require_file "${output_dir}/writing/index.html"
 require_file "${output_dir}/assets/js/vendor/scramble-decode.js"
 require_file "${output_dir}/assets/prompts/kujo-agent-onboarding.txt"
+require_file "${repo_root}/CNAME"
+require_file "${repo_root}/.github/workflows/pages.yml"
+
+require_text "${repo_root}/CNAME" 'kujolang.ai'
+require_text "${repo_root}/.github/workflows/pages.yml" 'uses: actions/deploy-pages@v4'
+require_text "${repo_root}/.github/workflows/pages.yml" 'kujo run ./build.kujo -- --site-url https://kujolang.ai'
 
 require_text "${output_dir}/index.html" 'Trust at the speed of AI'
 require_text "${output_dir}/index.html" 'Kujo is an AI-native programming language and toolchain built to make agent-driven software development clear, controlled, and verifiable.'
