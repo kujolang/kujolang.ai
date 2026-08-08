@@ -3,9 +3,13 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "vendor:scramble": "scramble-decode copy assets/js/vendor"
+    "vendor:scramble": "scramble-decode copy assets/js/vendor",
+    "social:cards": "bash scripts/render-social-cards.sh"
   },
   "dependencies": {
     "scramble-decode": "0.1.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.3"
   }
 }

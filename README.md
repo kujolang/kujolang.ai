@@ -56,6 +56,27 @@ npm audit --omit=dev
 
 The ecosystem item template reads `install_command`, `github_url`, `launch_story`, and `scope_note` from frontmatter so every project page keeps the same structure.
 
+## Social sharing cards
+
+Every primary page and ecosystem tool has a dedicated 1200×630 JPEG under
+`assets/images/social/`. The SSG writes absolute Open Graph and X/Twitter image
+URLs plus image type, dimensions, and accessible alt text into each page head.
+
+The cards are reproducible with [Howl](https://github.com/kujolang/howl). The
+editable source is `howl-social.json`: each card supplies its route title,
+short description, page type, destination URL, matching hero background, and
+the local Departure Mono font. Howl embeds those assets into a self-contained
+SVG, then Sharp produces the network-ready JPEG.
+
+```bash
+npm install
+npm run social:cards
+```
+
+To add a page, tool, or Writing post, add a card whose `id` matches the route
+slug, choose its background image, and run the command again. Set `HOWL_BIN` if
+the Howl launcher is not at the default sibling-repository path.
+
 ## Release policy
 
 Releases are tagged from a clean `main` branch after the production build and verification commands pass. User-facing changes are recorded in [CHANGELOG.md](CHANGELOG.md), and GitHub releases use semantic version tags such as `v1.0.0`.

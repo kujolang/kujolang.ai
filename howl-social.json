@@ -1,0 +1,399 @@
+{
+  "project": {
+    "name": "Kujo",
+    "tagline": "Programming language for AI-native software",
+    "url": "kujolang.ai"
+  },
+  "theme": {
+    "name": "kujolang-social",
+    "mode": "light"
+  },
+  "cards": [
+    {
+      "id": "home",
+      "title": "KUJO",
+      "tagline": "Programming language for AI-native software.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "language",
+      "url": "kujolang.ai/",
+      "background_image": "assets/images/home-agent-workflow.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "ecosystem",
+      "title": "Ecosystem",
+      "tagline": "Local-first tools for clear, controlled, verifiable agent workflows.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "collection",
+      "url": "kujolang.ai/ecosystem/",
+      "background_image": "assets/images/ecosystem-distributed-tools.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "ethos",
+      "title": "Ethos",
+      "tagline": "Clarity, context, and control for AI-native software.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "page",
+      "url": "kujolang.ai/ethos/",
+      "background_image": "assets/images/ethos-human-agent-trust.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "writing",
+      "title": "Writing",
+      "tagline": "Launch notes, deep dives, tutorials, and field reports.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "collection",
+      "url": "kujolang.ai/writing/",
+      "background_image": "assets/images/writing-technical-documents.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "contact",
+      "title": "Contact",
+      "tagline": "Talk with the Kujo team and community.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "page",
+      "url": "kujolang.ai/contact/",
+      "background_image": "assets/images/contact-conversation.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "kujo",
+      "title": "Kujo",
+      "tagline": "The programming language at the center of the ecosystem.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/kujo/",
+      "background_image": "assets/images/ecosystem/kujo-language-runtime.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "kennel",
+      "title": "Kennel",
+      "tagline": "Local-first packages, locks, mirrors, and trust policy.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/kennel/",
+      "background_image": "assets/images/ecosystem/kennel-package-system.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "ai-sdk",
+      "title": "AI SDK",
+      "tagline": "Provider primitives for AI-native Kujo software.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/ai-sdk/",
+      "background_image": "assets/images/ecosystem/ai-sdk-provider-network.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "agents-sdk",
+      "title": "Agents SDK",
+      "tagline": "Runtime primitives for bounded agent workflows.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/agents-sdk/",
+      "background_image": "assets/images/ecosystem/agents-sdk-human-handoff.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "spec",
+      "title": "Spec",
+      "tagline": "Portable task contracts for humans and agents.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/spec/",
+      "background_image": "assets/images/ecosystem/spec-task-contracts.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "eval",
+      "title": "Eval",
+      "tagline": "Deterministic quality gates for agent-built software.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/eval/",
+      "background_image": "assets/images/ecosystem/eval-quality-gates.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "dispatch",
+      "title": "Dispatch",
+      "tagline": "Reliable local-first AI workflow orchestration.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/dispatch/",
+      "background_image": "assets/images/ecosystem/dispatch-workflow-orchestration.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "watchdog",
+      "title": "Watchdog",
+      "tagline": "Local AI telemetry, controls, and observability.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/watchdog/",
+      "background_image": "assets/images/ecosystem/watchdog-telemetry-alert.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "mcp",
+      "title": "MCP",
+      "tagline": "Build and validate Kujo-native MCP servers.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/mcp/",
+      "background_image": "assets/images/ecosystem/mcp-tool-connectors.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "rag",
+      "title": "RAG",
+      "tagline": "Local-first retrieval with explicit provider boundaries.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/rag/",
+      "background_image": "assets/images/ecosystem/rag-knowledge-retrieval.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "leash",
+      "title": "Leash",
+      "tagline": "Mobile approvals for agent actions that matter.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/leash/",
+      "background_image": "assets/images/ecosystem/leash-mobile-approval.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "runledger",
+      "title": "RunLedger",
+      "tagline": "Durable receipts for AI-agent build runs.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/runledger/",
+      "background_image": "assets/images/ecosystem/runledger-run-receipts.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "casefile",
+      "title": "CaseFile",
+      "tagline": "Local evidence bundles for failures and handoffs.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/casefile/",
+      "background_image": "assets/images/ecosystem/casefile-evidence-bundle.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "muzzle",
+      "title": "Muzzle",
+      "tagline": "Quiet, bounded workflows for AI-assisted development.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/muzzle/",
+      "background_image": "assets/images/ecosystem/muzzle-bounded-workflow.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "shipcheck",
+      "title": "ShipCheck",
+      "tagline": "Release readiness made visible and repeatable.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/shipcheck/",
+      "background_image": "assets/images/ecosystem/shipcheck-release-containers.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "concord",
+      "title": "Concord",
+      "tagline": "Deterministic checks for ecosystem artifact drift.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/concord/",
+      "background_image": "assets/images/ecosystem/concord-artifact-alignment.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "patchbrief",
+      "title": "PatchBrief",
+      "tagline": "Structured git-diff briefs for clean handoffs.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/patchbrief/",
+      "background_image": "assets/images/ecosystem/patchbrief-diff-handoff.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "changebucket",
+      "title": "ChangeBucket",
+      "tagline": "Measure and enforce code-change footprint.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/changebucket/",
+      "background_image": "assets/images/ecosystem/changebucket-change-footprint.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "scent",
+      "title": "Scent",
+      "tagline": "Compact context packs for agent handoffs.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/scent/",
+      "background_image": "assets/images/ecosystem/scent-context-fragments.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "scout",
+      "title": "Scout",
+      "tagline": "Kujo-native codebase intelligence and context.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/scout/",
+      "background_image": "assets/images/ecosystem/scout-codebase-map.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "lens",
+      "title": "Lens",
+      "tagline": "Deterministic browser and visual QA workflows.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/lens/",
+      "background_image": "assets/images/ecosystem/lens-browser-inspection.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "fence",
+      "title": "Fence",
+      "tagline": "Architecture boundaries agents can inspect and enforce.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/fence/",
+      "background_image": "assets/images/ecosystem/fence-architecture-boundary.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "ward",
+      "title": "Ward",
+      "tagline": "Explicit security controls for agentic operations.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/ward/",
+      "background_image": "assets/images/ecosystem/ward-security-command-center.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "howl",
+      "title": "Howl",
+      "tagline": "Turn real examples into reviewable showcase artifacts.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/howl/",
+      "background_image": "assets/images/ecosystem/howl-showcase-renderer.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "packwrite",
+      "title": "PackWrite",
+      "tagline": "Portable execution packs for coding agents.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/packwrite/",
+      "background_image": "assets/images/ecosystem/packwrite-execution-pack.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "ai-chat",
+      "title": "AI Chat",
+      "tagline": "A local multi-provider AI chat showcase.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem showcase",
+      "url": "kujolang.ai/ecosystem/ai-chat/",
+      "background_image": "assets/images/ecosystem/ai-chat-conversation.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "cms",
+      "title": "CMS",
+      "tagline": "A server-first content management showcase.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem showcase",
+      "url": "kujolang.ai/ecosystem/cms/",
+      "background_image": "assets/images/ecosystem/cms-content-infrastructure.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "crud-api",
+      "title": "CRUD API Showcase",
+      "tagline": "A complete Kujo and SQLite application stack.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem showcase",
+      "url": "kujolang.ai/ecosystem/crud-api/",
+      "background_image": "assets/images/ecosystem/crud-api-application-stack.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "ssg",
+      "title": "SSG",
+      "tagline": "Static sites built with Kujo and plain files.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem showcase",
+      "url": "kujolang.ai/ecosystem/ssg/",
+      "background_image": "assets/images/ecosystem/ssg-static-sites.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "totalrecall",
+      "title": "TotalRecall",
+      "tagline": "Durable local knowledge from the tools where work happens.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem showcase",
+      "url": "kujolang.ai/ecosystem/totalrecall/",
+      "background_image": "assets/images/ecosystem/totalrecall-global-memory.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    }
+  ]
+}
+

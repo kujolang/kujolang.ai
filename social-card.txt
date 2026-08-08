@@ -1,0 +1,1 @@
+Kujolang.ai social card source. The social variant renders manifest metadata and embedded local assets.
