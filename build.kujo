@@ -624,6 +624,7 @@ func parse_frontmatter(content, source_file) {
 		"lang": "en",
 		"canonical": "",
 		"featured_image": "",
+		"social_image": "",
 		"custom_url": "",
 			"template": "",
 			"draft": false,
@@ -986,7 +987,7 @@ func is_reserved_frontmatter_key(key_name) {
 	if key == "description" || key == "keywords" || key == "seo_title" || key == "seo_description" || key == "lang" || key == "canonical" {
 		return true
 	}
-	if key == "featured_image" || key == "custom_url" || key == "template" || key == "draft" || key == "order" || key == "excerpt" || key == "nav_hide" {
+	if key == "featured_image" || key == "social_image" || key == "custom_url" || key == "template" || key == "draft" || key == "order" || key == "excerpt" || key == "nav_hide" {
 		return true
 	}
 	return false
@@ -1684,11 +1685,16 @@ func render_layout(layout_template, settings, route, page_title, meta_descriptio
 	# Delegates to the native renderer (compiled once, byte-identical to the
 	# previous interpreted body, which is preserved as render_layout_interpreted).
 	default_image := ""
-	if has_key(page_meta, "featured_image") {
+	if has_key(page_meta, "social_image") {
+		default_image = trim(to_string(page_meta["social_image"]))
+	}
+	if len(default_image) > 0 {
+		page_meta["featured_image"] = default_image
+	} else if has_key(page_meta, "featured_image") {
 		default_image = trim(to_string(page_meta["featured_image"]))
 	}
 	if len(default_image) == 0 {
-		page_meta["featured_image"] = "/assets/images/og.png"
+		page_meta["featured_image"] = "/assets/images/social/home.jpg"
 	}
 	return render_layout_native(layout_template, settings, route, page_title, meta_description, navigation, content, page_meta)
 }
@@ -3298,6 +3304,10 @@ func build_site(settings) {
 		}
 		canonical := trim(to_string(meta["canonical"]))
 		featured_image := trim(to_string(meta["featured_image"]))
+		social_image := trim(to_string(meta["social_image"]))
+		if len(social_image) == 0 {
+			social_image = "/assets/images/social/" + slug + ".jpg"
+		}
 		author_name := resolve_lookup(meta["author"], authors_lookup, "")
 		page_categories := meta_terms(meta, "categories", categories_lookup)
 		page_tags := meta_terms(meta, "tags", tags_lookup)
@@ -3315,6 +3325,7 @@ func build_site(settings) {
 			"lang": lang,
 			"canonical": canonical,
 			"featured_image": featured_image,
+			"social_image": social_image,
 			"author": author_name,
 			"categories": page_categories,
 			"tags": page_tags,
@@ -3437,6 +3448,7 @@ func build_site(settings) {
 				"lang": page_data["lang"],
 				"canonical": page_data["canonical"],
 				"featured_image": processed_page_featured_image,
+				"social_image": page_data["social_image"],
 				"author": page_data["author"]
 			}
 		)
@@ -3511,6 +3523,10 @@ func build_site(settings) {
 		canonical := trim(to_string(meta["canonical"]))
 		featured_image := trim(to_string(meta["featured_image"]))
 		featured_image = process_featured_image_path(featured_image, post_file, settings)
+		social_image := trim(to_string(meta["social_image"]))
+		if len(social_image) == 0 {
+			social_image = "/assets/images/social/" + slug + ".jpg"
+		}
 
 		excerpt := trim(to_string(meta["excerpt"]))
 		if len(excerpt) == 0 {
@@ -3603,6 +3619,7 @@ func build_site(settings) {
 				"lang": lang,
 				"canonical": canonical,
 				"featured_image": featured_image,
+				"social_image": social_image,
 				"author": author_name,
 				"og_type": "article",
 				"published_iso": post_date["iso"]
@@ -3752,6 +3769,10 @@ func build_site(settings) {
 			canonical := trim(to_string(meta["canonical"]))
 			featured_image := trim(to_string(meta["featured_image"]))
 			featured_image = process_featured_image_path(featured_image, item_file, settings)
+			social_image := trim(to_string(meta["social_image"]))
+			if len(social_image) == 0 {
+				social_image = "/assets/images/social/" + slug + ".jpg"
+			}
 
 			excerpt := trim(to_string(meta["excerpt"]))
 			if len(excerpt) == 0 {
@@ -3851,6 +3872,7 @@ func build_site(settings) {
 					"lang": lang,
 					"canonical": canonical,
 					"featured_image": featured_image,
+					"social_image": social_image,
 					"author": item_author_name,
 					"og_type": "article",
 					"published_iso": item_date["iso"]
@@ -3973,7 +3995,8 @@ func build_site(settings) {
 			{
 				"seo_title": collection_title,
 				"seo_description": settings["site_tagline"],
-				"lang": "en"
+				"lang": "en",
+				"social_image": "/assets/images/social/" + collection_slug + ".jpg"
 			}
 		)
 		write_route_page(output_dir, listing_route, listing_html)
@@ -4085,7 +4108,8 @@ func build_site(settings) {
 				{
 					"seo_title": settings["site_title"],
 					"seo_description": settings["site_tagline"],
-					"lang": "en"
+					"lang": "en",
+					"social_image": "/assets/images/social/home.jpg"
 				}
 			)
 			write_route_page(output_dir, index_route, index_html)
@@ -4102,10 +4126,10 @@ func build_site(settings) {
 
 				blog_posts_html := "<ul class=\"card-grid\">" + cards + "</ul>"
 				blog_pagination := build_pagination_links(page_num, total_pages, settings["blog_slug"] + "/")
-				blog_content := "<main class=\"container max-w-2xl m-auto py-10 px-4\" id=\"main-content\"><h1 class=\"text-6xl font-bold mb-8 pb-8 text-links font-heading-bold border-b border-primary page-title\">Blog</h1>" + blog_posts_html + blog_pagination + "</main>"
+				blog_content := "<main class=\"container max-w-2xl m-auto py-10 px-4\" id=\"main-content\"><h1 class=\"text-6xl font-bold mb-8 pb-8 text-links font-heading-bold border-b border-primary page-title\">Writing</h1>" + blog_posts_html + blog_pagination + "</main>"
 				if len(blog_listing_template) > 0 {
 					blog_content = apply_template(blog_listing_template, {
-						"title": "Blog",
+						"title": "Writing",
 						"description": settings["site_tagline"],
 						"cards": cards,
 						"items": cards,
@@ -4123,14 +4147,15 @@ func build_site(settings) {
 					layout_template,
 					settings,
 					blog_route,
-					"Blog - " + settings["site_title"],
-					settings["site_tagline"],
+					"Writing - " + settings["site_title"],
+					"Launch notes, ecosystem deep dives, tutorials, and field reports from Kujo.",
 					blog_navigation,
 					blog_content,
 					{
-						"seo_title": "Blog",
-						"seo_description": settings["site_tagline"],
-						"lang": "en"
+						"seo_title": "Writing",
+						"seo_description": "Launch notes, ecosystem deep dives, tutorials, and field reports from Kujo.",
+						"lang": "en",
+						"social_image": "/assets/images/social/writing.jpg"
 					}
 				)
 				write_route_page(output_dir, blog_route, blog_html)

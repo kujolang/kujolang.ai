@@ -28,6 +28,24 @@ reject_text() {
 	fi
 }
 
+require_social_meta() {
+	local html_file="$1"
+	local card_id="$2"
+	local expected="https://kujolang.ai/assets/images/social/${card_id}.jpg"
+	local og_image
+	local twitter_image
+	og_image=$(sed -n 's/.*<meta property="og:image" content="\([^"]*\)">.*/\1/p' "$html_file")
+	twitter_image=$(sed -n 's/.*<meta name="twitter:image" content="\([^"]*\)">.*/\1/p' "$html_file")
+	[[ "$og_image" == "$expected" ]] || fail "unexpected og:image in ${html_file}: ${og_image}"
+	[[ "$twitter_image" == "$expected" ]] || fail "unexpected twitter:image in ${html_file}: ${twitter_image}"
+	require_text "$html_file" '<meta property="og:image:type" content="image/jpeg">'
+	require_text "$html_file" '<meta property="og:image:width" content="1200">'
+	require_text "$html_file" '<meta property="og:image:height" content="630">'
+	require_text "$html_file" '<meta property="og:image:alt" content="'
+	require_text "$html_file" '<meta name="twitter:site" content="@kujolang">'
+	require_text "$html_file" '<meta name="twitter:image:alt" content="'
+}
+
 require_file "${output_dir}/index.html"
 require_file "${output_dir}/ecosystem/index.html"
 require_file "${output_dir}/ethos/index.html"
@@ -83,6 +101,22 @@ require_text "${output_dir}/ecosystem/index.html" '<h2 id="primitives-title">Pri
 require_text "${output_dir}/ecosystem/index.html" '<h2 id="tooling-title">Tooling</h2>'
 require_text "${output_dir}/ecosystem/index.html" '<h2 id="showcase-title">Showcase</h2>'
 
+require_social_meta "${output_dir}/index.html" 'home'
+require_social_meta "${output_dir}/ecosystem/index.html" 'ecosystem'
+require_social_meta "${output_dir}/ethos/index.html" 'ethos'
+require_social_meta "${output_dir}/writing/index.html" 'writing'
+require_social_meta "${output_dir}/contact/index.html" 'contact'
+
+social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
+[[ "$social_card_count" == 35 ]] || fail "expected 35 social cards, found ${social_card_count}"
+
+for social_card in "${repo_root}"/assets/images/social/*.jpg; do
+	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
+	card_bytes=$(wc -c < "$social_card" | tr -d ' ')
+	(( card_bytes < 5242880 )) || fail "social card exceeds 5 MB: ${social_card}"
+done
+file "${repo_root}/assets/images/og.png" | grep -Fq '1200 x 630' || fail 'legacy og.png is not 1200x630'
+
 ecosystem_sources=$(find "${repo_root}/content/ecosystem" -maxdepth 1 -type f -name '*.md' | wc -l | tr -d ' ')
 ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
@@ -101,6 +135,8 @@ for source_file in "${repo_root}"/content/ecosystem/*.md; do
 done
 
 for tool_page in "${output_dir}"/ecosystem/*/index.html; do
+	tool_slug=$(basename "$(dirname "$tool_page")")
+	require_social_meta "$tool_page" "$tool_slug"
 	require_text "$tool_page" 'class="copy-icon copy-icon--copy"'
 	require_text "$tool_page" 'data-copy-status data-scramble-skip></span><button'
 	require_text "$tool_page" 'target="_blank" rel="noopener">View on GitHub</a>'
