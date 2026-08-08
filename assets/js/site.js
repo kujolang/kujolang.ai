@@ -135,6 +135,107 @@
     });
   }
 
+  function enhanceHomeDither() {
+    var canvas = document.querySelector('[data-home-dither]');
+    if (!canvas) return;
+
+    var media = canvas.closest('.home-hero__media');
+    var image = media && media.querySelector('img');
+    var context = canvas.getContext('2d', { willReadFrequently: true });
+    var sourceCanvas = document.createElement('canvas');
+    var sourceContext = sourceCanvas.getContext('2d', { willReadFrequently: true });
+    var sourcePixels = null;
+    var frame = 0;
+    var lastTick = 0;
+    var resizeFrame = 0;
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var bayer8 = [
+      [0, 48, 12, 60, 3, 51, 15, 63],
+      [32, 16, 44, 28, 35, 19, 47, 31],
+      [8, 56, 4, 52, 11, 59, 7, 55],
+      [40, 24, 36, 20, 43, 27, 39, 23],
+      [2, 50, 14, 62, 1, 49, 13, 61],
+      [34, 18, 46, 30, 33, 17, 45, 29],
+      [10, 58, 6, 54, 9, 57, 5, 53],
+      [42, 26, 38, 22, 41, 25, 37, 21]
+    ];
+
+    if (!media || !image || !context || !sourceContext) return;
+
+    function sizeCanvas() {
+      var width = Math.max(1, Math.ceil(media.clientWidth / 2));
+      var height = Math.max(1, Math.ceil(media.clientHeight / 2));
+      canvas.width = width;
+      canvas.height = height;
+      sourceCanvas.width = width;
+      sourceCanvas.height = height;
+
+      var scale = Math.max(width / image.naturalWidth, height / image.naturalHeight);
+      var drawWidth = image.naturalWidth * scale;
+      var drawHeight = image.naturalHeight * scale;
+      sourceContext.clearRect(0, 0, width, height);
+      sourceContext.drawImage(image, width - drawWidth, (height - drawHeight) / 2, drawWidth, drawHeight);
+      sourcePixels = sourceContext.getImageData(0, 0, width, height);
+    }
+
+    function drawFrame() {
+      if (!sourcePixels) return;
+      var width = canvas.width;
+      var height = canvas.height;
+      var output = context.createImageData(width, height);
+      var source = sourcePixels.data;
+      var target = output.data;
+      var driftX = Math.floor(frame / 2) % 8;
+      var driftY = Math.floor(frame / 3) % 8;
+      var thresholdShift = reducedMotion ? 0 : Math.sin(frame * 0.36) * 7;
+
+      for (var y = 0; y < height; y += 1) {
+        for (var x = 0; x < width; x += 1) {
+          var index = (y * width + x) * 4;
+          var luminance = 0.299 * source[index] + 0.587 * source[index + 1] + 0.114 * source[index + 2];
+          luminance = (luminance - 128) * 1.12 + 128;
+          var matrix = bayer8[(y + driftY) % 8][(x + driftX) % 8];
+          var threshold = 94 + matrix * 1.88 + thresholdShift;
+          var value = luminance > threshold ? 244 : 14;
+          target[index] = value;
+          target[index + 1] = value;
+          target[index + 2] = value;
+          target[index + 3] = 255;
+        }
+      }
+
+      context.putImageData(output, 0, 0);
+      canvas.dataset.ditherReady = 'true';
+      frame += 1;
+    }
+
+    function render(now) {
+      if (now - lastTick >= 1000 / 14) {
+        lastTick = now;
+        drawFrame();
+      }
+      window.requestAnimationFrame(render);
+    }
+
+    function setup() {
+      sizeCanvas();
+      drawFrame();
+      if (!reducedMotion) window.requestAnimationFrame(render);
+    }
+
+    function handleResize() {
+      window.cancelAnimationFrame(resizeFrame);
+      resizeFrame = window.requestAnimationFrame(function () {
+        sizeCanvas();
+        drawFrame();
+      });
+    }
+
+    if (image.complete && image.naturalWidth) setup();
+    else image.addEventListener('load', setup, { once: true });
+    window.addEventListener('resize', handleResize);
+  }
+
   function enhanceMonoScramble() {
     if (!window.ScrambleDecode || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -227,6 +328,7 @@
     enhanceCopyButtons();
     enhanceDrawerLinks();
     enhanceQuickInstall();
+    enhanceHomeDither();
     enhanceMonoScramble();
   }
 
