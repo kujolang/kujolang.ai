@@ -14,7 +14,7 @@ At the center is Kujo, the language and runtime. Kennel provides the package and
 
 Focused tools sit around those primitives. Some prepare context. Some run bounded workflows. Some collect evidence. Others check release readiness, architecture boundaries, browser behavior, privacy, or cross-artifact drift.
 
-Showcase applications demonstrate complete patterns without claiming to be managed services. AI Chat shows provider-gated chat boundaries. CMS and CRUD API show application architecture. SSG demonstrates deterministic publishing. Intake shows how inbound noise becomes reviewable work.
+Showcase applications demonstrate complete patterns without claiming to be managed services. AI Chat shows provider-gated chat boundaries. CMS and CRUD API Showcase show application architecture. SSG demonstrates deterministic publishing. TotalRecall shows how working context becomes durable local knowledge.
 
 ## Choose the smallest useful path
 

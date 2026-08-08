@@ -2,9 +2,10 @@
 title: "Scout"
 custom_url: scout
 description: "Repository intelligence packs with trees, languages, dependencies, routes, security signals, llms.txt, checklists, and structured indexes."
-section: "Tooling & governance"
-tags: [Tool, Intelligence]
-order: 290
+featured_image: "/assets/images/ecosystem/scout-codebase-map.webp"
+section: "Primitives"
+tags: [Primitive, Intelligence]
+order: 50
 install_command: "git clone https://github.com/kujolang/scout.git"
 github_url: "https://github.com/kujolang/scout"
 launch_story: "Shorten codebase orientation without turning discovery into an opaque hosted index."

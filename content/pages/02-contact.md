@@ -5,6 +5,7 @@ nav_title: Contact
 template: contact
 order: 40
 description: Talk with the Kujo team about the language, ecosystem, community, partnerships, or technical questions.
+featured_image: "/assets/images/contact-conversation.webp"
 keywords: contact Kujo, Kujolang contact, Kujo programming language
 seo_title: Contact the Kujo Team
 ---

@@ -2,9 +2,10 @@
 title: "Muzzle"
 custom_url: muzzle
 description: "Quiet workflow execution with full disk logs, compact summaries, manifests, loop state, dry runs, and secret redaction."
-section: "Tooling & governance"
+featured_image: "/assets/images/ecosystem/muzzle-bounded-workflow.webp"
+section: "Tooling"
 tags: [Tool, Execution]
-order: 230
+order: 200
 install_command: "git clone https://github.com/kujolang/muzzle.git"
 github_url: "https://github.com/kujolang/muzzle"
 launch_story: "Keep agent context focused while retaining the complete operational record on disk."

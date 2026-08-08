@@ -2,7 +2,8 @@
 title: "RunLedger"
 custom_url: runledger
 description: "Durable receipts for tasks, models, providers, git state, changed files, usage, cost, verdicts, follow-ups, comparisons, and reports."
-section: "Tooling & governance"
+featured_image: "/assets/images/ecosystem/runledger-run-receipts.webp"
+section: "Tooling"
 tags: [Tool, Evidence]
 order: 210
 install_command: "git clone https://github.com/kujolang/runledger.git"

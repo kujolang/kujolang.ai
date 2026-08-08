@@ -2,7 +2,8 @@
 title: "SSG"
 custom_url: ssg
 description: "Deterministic static publishing for Markdown, templates, taxonomies, metadata, feeds, sitemaps, robots, llms.txt, and starter content."
-section: "Showcases"
+featured_image: "/assets/images/ecosystem/ssg-static-sites.webp"
+section: "Showcase"
 tags: [Showcase, Publishing]
 order: 430
 install_command: "git clone https://github.com/kujolang/ssg.git"

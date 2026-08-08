@@ -2,7 +2,8 @@
 title: "Kujo"
 custom_url: kujo
 description: "The VM-first programming language and runtime for AI-native software, local-first automation, agentic workflows, and practical scripting."
-section: "Core & foundations"
+featured_image: "/assets/images/ecosystem/kujo-language-runtime.webp"
+section: "Primitives"
 tags: [Core, Language]
 order: 10
 install_command: "curl -fsSL https://raw.githubusercontent.com/kujolang/kujo/main/install.sh | bash -s -- --source"

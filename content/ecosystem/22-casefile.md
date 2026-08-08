@@ -2,9 +2,10 @@
 title: "CaseFile"
 custom_url: casefile
 description: "Reproducible failure and incident bundles with provenance, redaction, logs, reproduction notes, JSON, Markdown, and handoffs."
-section: "Tooling & governance"
+featured_image: "/assets/images/ecosystem/casefile-evidence-bundle.webp"
+section: "Tooling"
 tags: [Tool, Failures]
-order: 220
+order: 270
 install_command: "git clone https://github.com/kujolang/casefile.git"
 github_url: "https://github.com/kujolang/casefile"
 launch_story: "Package a failure so another person or agent can reproduce and continue the investigation."

@@ -2,9 +2,10 @@
 title: "ShipCheck"
 custom_url: shipcheck
 description: "Release-readiness scans, checklists, gates, release-note drafts, Markdown and JSON reports, and deterministic verdict semantics."
-section: "Tooling & governance"
+featured_image: "/assets/images/ecosystem/shipcheck-release-containers.webp"
+section: "Tooling"
 tags: [Tool, Release]
-order: 240
+order: 250
 install_command: "git clone https://github.com/kujolang/shipcheck.git"
 github_url: "https://github.com/kujolang/shipcheck"
 launch_story: "Turn release preparation into a visible, repeatable gate instead of a last-minute memory test."

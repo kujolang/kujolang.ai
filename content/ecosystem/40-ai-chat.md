@@ -2,9 +2,10 @@
 title: "AI Chat"
 custom_url: ai-chat
 description: "A local multi-provider chat application with encrypted provider profiles, SQLite history, streaming, comparison, transcription, and fixture smokes."
-section: "Showcases"
+featured_image: "/assets/images/ecosystem/ai-chat-conversation.webp"
+section: "Showcase"
 tags: [Showcase, AI]
-order: 400
+order: 420
 install_command: "git clone https://github.com/kujolang/ai-chat.git"
 github_url: "https://github.com/kujolang/ai-chat"
 launch_story: "Demonstrate provider-gated AI application boundaries in a complete, inspectable local app."

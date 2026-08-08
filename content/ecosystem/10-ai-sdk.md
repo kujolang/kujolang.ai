@@ -2,9 +2,10 @@
 title: "AI SDK"
 custom_url: ai-sdk
 description: "Provider-normalized chat and embeddings contracts with presets, fixtures, retries, streaming, redaction, budgets, and telemetry hooks."
+featured_image: "/assets/images/ecosystem/ai-sdk-provider-network.webp"
 section: "Primitives"
 tags: [Primitive, AI]
-order: 100
+order: 90
 install_command: "git clone https://github.com/kujolang/ai-sdk.git"
 github_url: "https://github.com/kujolang/ai-sdk"
 launch_story: "A provider-gated foundation for AI calls without binding application code to one hosted service."

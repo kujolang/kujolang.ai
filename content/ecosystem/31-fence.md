@@ -2,9 +2,10 @@
 title: "Fence"
 custom_url: fence
 description: "Architecture-boundary rules, import and layer checks, baselines, graphs, and JSON, Markdown, and SARIF reports."
-section: "Tooling & governance"
-tags: [Tool, Architecture]
-order: 310
+featured_image: "/assets/images/ecosystem/fence-architecture-boundary.webp"
+section: "Primitives"
+tags: [Primitive, Architecture]
+order: 120
 install_command: "git clone https://github.com/kujolang/fence.git"
 github_url: "https://github.com/kujolang/fence"
 launch_story: "Make architecture erosion visible as soon as dependency boundaries move."

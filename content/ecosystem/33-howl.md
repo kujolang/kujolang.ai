@@ -2,9 +2,10 @@
 title: "Howl"
 custom_url: howl
 description: "Deterministic Markdown, HTML, SVG, gallery, card, and caption assets generated from trusted Kujo examples and manifests."
-section: "Tooling & governance"
+featured_image: "/assets/images/ecosystem/howl-showcase-renderer.webp"
+section: "Tooling"
 tags: [Tool, Assets]
-order: 330
+order: 300
 install_command: "git clone https://github.com/kujolang/howl.git"
 github_url: "https://github.com/kujolang/howl"
 launch_story: "Turn verified examples into reusable launch and proof assets."

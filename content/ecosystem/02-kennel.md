@@ -2,7 +2,8 @@
 title: "Kennel"
 custom_url: kennel
 description: "Deterministic Kujo package and dependency workflows with manifests, lockfiles, source policy, trust policy, indexes, and mirrors."
-section: "Core & foundations"
+featured_image: "/assets/images/ecosystem/kennel-package-system.webp"
+section: "Primitives"
 tags: [Core, Packages]
 order: 20
 install_command: "git clone https://github.com/kujolang/kennel.git"

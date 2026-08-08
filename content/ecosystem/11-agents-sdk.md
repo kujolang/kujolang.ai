@@ -2,9 +2,10 @@
 title: "Agents SDK"
 custom_url: agents-sdk
 description: "Agent runners, tools, approvals, handoffs, tracing, sessions, memory, retrieval, artifact stores, budgets, and offline fixtures."
+featured_image: "/assets/images/ecosystem/agents-sdk-human-handoff.webp"
 section: "Primitives"
 tags: [Primitive, Agents]
-order: 110
+order: 100
 install_command: "git clone https://github.com/kujolang/agents-sdk.git"
 github_url: "https://github.com/kujolang/agents-sdk"
 launch_story: "Composable local-first runtime primitives for building inspectable agents."

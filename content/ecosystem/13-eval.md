@@ -2,9 +2,10 @@
 title: "Eval"
 custom_url: eval
 description: "Deterministic checks for files, commands, HTTP, JSON, snapshots, policy, and workflow artifacts with CI-friendly verdicts."
+featured_image: "/assets/images/ecosystem/eval-quality-gates.webp"
 section: "Primitives"
 tags: [Primitive, Verification]
-order: 130
+order: 40
 install_command: "git clone https://github.com/kujolang/eval.git"
 github_url: "https://github.com/kujolang/eval"
 launch_story: "An independent acceptance layer that makes success criteria executable."

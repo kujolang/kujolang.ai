@@ -5,6 +5,7 @@ nav_title: Ethos
 template: ethos
 order: 10
 description: "The working principles behind Kujo: local-first systems, explicit authority, inspectable artifacts, and tools that help people stay in control."
+featured_image: "/assets/images/ethos-human-agent-trust.webp"
 keywords: Kujo ethos, local-first, agentic software, programming language principles
 seo_title: The Kujo Ethos
 ---

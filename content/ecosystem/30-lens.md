@@ -2,9 +2,10 @@
 title: "Lens"
 custom_url: lens
 description: "Deterministic browser checks, screenshots, console and network evidence, accessibility findings, visual baselines, flows, and repair briefs."
-section: "Tooling & governance"
+featured_image: "/assets/images/ecosystem/lens-browser-inspection.webp"
+section: "Tooling"
 tags: [Tool, Browser QA]
-order: 300
+order: 280
 install_command: "git clone https://github.com/kujolang/lens.git"
 github_url: "https://github.com/kujolang/lens"
 launch_story: "Produce browser-backed proof that a UI behaves as intended."

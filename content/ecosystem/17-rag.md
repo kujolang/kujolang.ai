@@ -2,9 +2,10 @@
 title: "RAG"
 custom_url: rag
 description: "A local retrieval kit for ingest, parsing, chunking, embeddings, hybrid search, namespaces, citations, query APIs, and starter templates."
+featured_image: "/assets/images/ecosystem/rag-knowledge-retrieval.webp"
 section: "Primitives"
 tags: [Primitive, Knowledge]
-order: 170
+order: 80
 install_command: "git clone https://github.com/kujolang/rag.git"
 github_url: "https://github.com/kujolang/rag"
 launch_story: "Ground agent answers in operator-controlled knowledge with inspectable citations."

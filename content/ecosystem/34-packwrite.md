@@ -2,9 +2,10 @@
 title: "PackWrite"
 custom_url: packwrite
 description: "Validated agent execution packs compiled from a large prompt and repository context, including phases, handoffs, and review checklists."
-section: "Tooling & governance"
+featured_image: "/assets/images/ecosystem/packwrite-execution-pack.webp"
+section: "Tooling"
 tags: [Tool, Execution Packs]
-order: 340
+order: 260
 install_command: "git clone https://github.com/kujolang/packwrite.git"
 github_url: "https://github.com/kujolang/packwrite"
 launch_story: "Standardize repeatable agent execution without hiding the operating instructions."

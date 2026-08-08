@@ -2,9 +2,10 @@
 title: "CMS"
 custom_url: cms
 description: "A server-first headless CMS with Kujo-backed routes, models, delivery APIs, authentication boundaries, webhooks, jobs, migrations, and recovery operations."
-section: "Showcases"
+featured_image: "/assets/images/ecosystem/cms-content-infrastructure.webp"
+section: "Showcase"
 tags: [Showcase, Content]
-order: 410
+order: 400
 install_command: "git clone https://github.com/kujolang/cms.git"
 github_url: "https://github.com/kujolang/cms"
 launch_story: "Show how an operational content system can be built around Kujo."

@@ -2,9 +2,10 @@
 title: "MCP"
 custom_url: mcp
 description: "A framework and scaffold for MCP servers with tools, resources, path guards, authentication, limits, safety tiers, and multi-root workspaces."
+featured_image: "/assets/images/ecosystem/mcp-tool-connectors.webp"
 section: "Primitives"
 tags: [Primitive, Gateway]
-order: 160
+order: 70
 install_command: "git clone https://github.com/kujolang/mcp.git"
 github_url: "https://github.com/kujolang/mcp"
 launch_story: "A guarded gateway for exposing useful capabilities to agents through explicit contracts."

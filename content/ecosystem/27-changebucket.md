@@ -2,9 +2,10 @@
 title: "ChangeBucket"
 custom_url: changebucket
 description: "Change-footprint and blast-radius reports covering churn, categories, generated files, CI, deletions, dependencies, and budgets."
-section: "Tooling & governance"
+featured_image: "/assets/images/ecosystem/changebucket-change-footprint.webp"
+section: "Tooling"
 tags: [Tool, Scope]
-order: 270
+order: 220
 install_command: "git clone https://github.com/kujolang/changebucket.git"
 github_url: "https://github.com/kujolang/changebucket"
 launch_story: "Detect scope expansion before a focused change becomes an unreviewable patch."

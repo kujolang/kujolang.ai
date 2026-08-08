@@ -2,9 +2,10 @@
 title: "Watchdog"
 custom_url: watchdog
 description: "An OpenAI-compatible proxy and dashboard for request, tool, step, audit, cost, latency, error, and redaction telemetry."
+featured_image: "/assets/images/ecosystem/watchdog-telemetry-alert.webp"
 section: "Primitives"
 tags: [Primitive, Observability]
-order: 150
+order: 130
 install_command: "git clone https://github.com/kujolang/watchdog.git"
 github_url: "https://github.com/kujolang/watchdog"
 launch_story: "Make AI application behavior observable without hiding the request path from the operator."

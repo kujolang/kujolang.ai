@@ -2,9 +2,10 @@
 title: "Scent"
 custom_url: scent
 description: "Bounded task context packs with Markdown, JSON, manifests, selected files, changed-file focus, token budgets, and redaction records."
-section: "Tooling & governance"
-tags: [Tool, Context]
-order: 280
+featured_image: "/assets/images/ecosystem/scent-context-fragments.webp"
+section: "Primitives"
+tags: [Primitive, Context]
+order: 110
 install_command: "git clone https://github.com/kujolang/scent.git"
 github_url: "https://github.com/kujolang/scent"
 launch_story: "Give an agent the smallest useful, inspectable context for the job."

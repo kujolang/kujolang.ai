@@ -2,9 +2,10 @@
 title: "Concord"
 custom_url: concord
 description: "Cross-artifact drift checks for code, CLI behavior, docs, examples, specs, evals, schemas, manifests, and sources of truth."
-section: "Tooling & governance"
+featured_image: "/assets/images/ecosystem/concord-artifact-alignment.webp"
+section: "Tooling"
 tags: [Tool, Drift]
-order: 250
+order: 240
 install_command: "git clone https://github.com/kujolang/concord.git"
 github_url: "https://github.com/kujolang/concord"
 launch_story: "Find when the ecosystem's explanations and contracts stop agreeing with its implementation."

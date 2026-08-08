@@ -2,9 +2,10 @@
 title: "Spec"
 custom_url: spec
 description: "Structured task contracts for goals, scope, acceptance criteria, risks, dependencies, approvals, exports, and evaluation requirements."
+featured_image: "/assets/images/ecosystem/spec-task-contracts.webp"
 section: "Primitives"
 tags: [Primitive, Contracts]
-order: 120
+order: 30
 install_command: "git clone https://github.com/kujolang/spec.git"
 github_url: "https://github.com/kujolang/spec"
 launch_story: "Turn an ambiguous request into an agent-readable contract before execution begins."
