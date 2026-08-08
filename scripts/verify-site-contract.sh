@@ -53,6 +53,19 @@ require_file "${output_dir}/contact/index.html"
 require_file "${output_dir}/writing/index.html"
 require_file "${output_dir}/assets/js/vendor/scramble-decode.js"
 require_file "${output_dir}/assets/prompts/kujo-agent-onboarding.txt"
+require_file "${output_dir}/favicon.ico"
+require_file "${output_dir}/favicon.svg"
+require_file "${output_dir}/favicon-16x16.png"
+require_file "${output_dir}/favicon-32x32.png"
+require_file "${output_dir}/favicon-48x48.png"
+require_file "${output_dir}/apple-touch-icon.png"
+require_file "${output_dir}/android-chrome-192x192.png"
+require_file "${output_dir}/android-chrome-512x512.png"
+require_file "${output_dir}/maskable-icon-512x512.png"
+require_file "${output_dir}/mstile-150x150.png"
+require_file "${output_dir}/safari-pinned-tab.svg"
+require_file "${output_dir}/site.webmanifest"
+require_file "${output_dir}/browserconfig.xml"
 require_file "${repo_root}/CNAME"
 require_file "${repo_root}/.github/workflows/pages.yml"
 
@@ -77,6 +90,17 @@ require_text "${output_dir}/index.html" 'Install Kujo &amp; the local-first ecos
 require_text "${output_dir}/index.html" 'data-copy-status data-scramble-skip'
 require_text "${output_dir}/index.html" 'assets/images/kujo-logomark.svg'
 require_text "${output_dir}/index.html" 'assets/js/vendor/scramble-decode.js'
+require_text "${output_dir}/index.html" '<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">'
+require_text "${output_dir}/index.html" '<link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg">'
+require_text "${output_dir}/index.html" '<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">'
+require_text "${output_dir}/index.html" '<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">'
+require_text "${output_dir}/index.html" '<link rel="mask-icon" href="safari-pinned-tab.svg" color="#000000">'
+require_text "${output_dir}/index.html" '<link rel="manifest" href="site.webmanifest">'
+require_text "${output_dir}/index.html" '<meta name="apple-mobile-web-app-title" content="Kujo">'
+require_text "${output_dir}/index.html" '<meta name="mobile-web-app-capable" content="yes">'
+require_text "${output_dir}/index.html" '<meta name="msapplication-TileImage" content="mstile-150x150.png">'
+require_text "${output_dir}/ecosystem/shipcheck/index.html" 'href="../../favicon.svg"'
+require_text "${output_dir}/ecosystem/shipcheck/index.html" 'href="../../site.webmanifest"'
 require_text "${output_dir}/index.html" '>Home</a></li><li><a href="/ecosystem/"'
 require_text "${output_dir}/index.html" '>Ecosystem</a></li><li><a href="/ethos/"'
 require_text "${output_dir}/index.html" '>Ethos</a></li><li><a href="/writing/"'
@@ -116,6 +140,20 @@ for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	(( card_bytes < 5242880 )) || fail "social card exceeds 5 MB: ${social_card}"
 done
 file "${repo_root}/assets/images/og.png" | grep -Fq '1200 x 630' || fail 'legacy og.png is not 1200x630'
+
+file "${output_dir}/favicon.ico" | grep -Fq '3 icons' || fail 'favicon.ico does not contain 16, 32, and 48px entries'
+file "${output_dir}/favicon-16x16.png" | grep -Fq '16 x 16' || fail 'favicon-16x16.png has the wrong size'
+file "${output_dir}/favicon-32x32.png" | grep -Fq '32 x 32' || fail 'favicon-32x32.png has the wrong size'
+file "${output_dir}/favicon-48x48.png" | grep -Fq '48 x 48' || fail 'favicon-48x48.png has the wrong size'
+file "${output_dir}/apple-touch-icon.png" | grep -Fq '180 x 180' || fail 'apple-touch-icon.png has the wrong size'
+file "${output_dir}/android-chrome-192x192.png" | grep -Fq '192 x 192' || fail 'android-chrome-192x192.png has the wrong size'
+file "${output_dir}/android-chrome-512x512.png" | grep -Fq '512 x 512' || fail 'android-chrome-512x512.png has the wrong size'
+file "${output_dir}/maskable-icon-512x512.png" | grep -Fq '512 x 512' || fail 'maskable-icon-512x512.png has the wrong size'
+file "${output_dir}/mstile-150x150.png" | grep -Fq '150 x 150' || fail 'mstile-150x150.png has the wrong size'
+reject_text "${output_dir}/favicon.svg" '<text'
+require_text "${output_dir}/favicon.svg" 'M178 234 L593 234'
+cmp -s "${repo_root}/assets/icons/favicon.svg" "${output_dir}/favicon.svg" || fail 'root favicon.svg drifted from the generated icon asset'
+node -e 'const fs=require("fs"); const m=JSON.parse(fs.readFileSync(process.argv[1], "utf8")); if (m.short_name !== "Kujo" || !m.icons.some((i) => i.sizes === "512x512" && i.purpose === "maskable")) process.exit(1)' "${output_dir}/site.webmanifest" || fail 'site.webmanifest is missing the Kujo maskable icon contract'
 
 ecosystem_sources=$(find "${repo_root}/content/ecosystem" -maxdepth 1 -type f -name '*.md' | wc -l | tr -d ' ')
 ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')

@@ -77,6 +77,20 @@ To add a page, tool, or Writing post, add a card whose `id` matches the route
 slug, choose its background image, and run the command again. Set `HOWL_BIN` if
 the Howl launcher is not at the default sibling-repository path.
 
+## Favicons and device icons
+
+The browser tab, desktop shortcut, pinned-tab, Apple touch, Android, maskable,
+and Windows tile icons are generated from the canonical Kujo K logomark at
+`assets/images/kujo-logomark.svg`:
+
+```bash
+npm install
+npm run icons:build
+```
+
+Commit the generated files under `assets/icons/`. The SSG copies the complete
+suite and `site.webmanifest` to stable root URLs during every build.
+
 ## Release policy
 
 Releases are tagged from a clean `main` branch after the production build and verification commands pass. User-facing changes are recorded in [CHANGELOG.md](CHANGELOG.md), and GitHub releases use semantic version tags such as `v1.0.0`.
