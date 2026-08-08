@@ -1683,7 +1683,7 @@ func featured_image_html_tag(featured_image_url, title) {
 
 func favicon_html(prefix) {
 	favicon_tag := "<link rel=\"icon\" href=\"" + prefix + "favicon.ico\" sizes=\"16x16 32x32 48x48\">\n"
-	favicon_tag = favicon_tag + "\t<link rel=\"icon\" type=\"image/svg+xml\" sizes=\"any\" href=\"" + prefix + "favicon.svg\">\n"
+	favicon_tag = favicon_tag + "\t<link rel=\"icon\" type=\"image/svg+xml\" sizes=\"any\" href=\"" + prefix + "favicon.svg?v=kujo-k-1\">\n"
 	favicon_tag = favicon_tag + "\t<link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"" + prefix + "favicon-48x48.png\">\n"
 	favicon_tag = favicon_tag + "\t<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"" + prefix + "favicon-32x32.png\">\n"
 	favicon_tag = favicon_tag + "\t<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"" + prefix + "favicon-16x16.png\">\n"
