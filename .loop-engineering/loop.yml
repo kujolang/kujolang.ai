@@ -1,0 +1,55 @@
+objective: "Implement the attached Kujolang.ai content, imagery, navigation, modal, footer, and ecosystem corrections with Kujo SSG and verified local preview behavior."
+checklist_file: ""
+max_iterations: 4
+max_no_progress: 2
+max_consecutive_failures: 3
+
+allowed_actions:
+  - read_files
+  - edit_files
+  - run_tests
+  - commit_local_changes
+  - add_project_assets
+  - convert_project_assets
+
+blocked_actions:
+  - deploy
+  - destructive_cleanup
+  - production_config_change
+
+eval_gates:
+  - id: spec_contract
+    command: "/Users/robertdevore/2026/Kujolang/kujo-repos/spec/scripts/spec validate specs/kujolang-ai-refresh.spec.yml --strict --json"
+    required: true
+
+  - id: shell_syntax
+    command: "bash -n scripts/dev.sh scripts/validate-generated-output.sh scripts/verify-site-contract.sh"
+    required: true
+
+  - id: ssg_build
+    command: "kujo run ./build.kujo -- --site-url http://127.0.0.1:4173"
+    required: true
+
+  - id: generated_output
+    command: "bash scripts/validate-generated-output.sh output"
+    required: true
+
+  - id: site_contract
+    command: "bash scripts/verify-site-contract.sh output"
+    required: true
+
+  - id: diff_check
+    command: "git diff --check"
+    required: true
+
+commit:
+  enabled: true
+  strategy: small_meaningful
+  push: true
+
+memory:
+  enabled: true
+  provider: strata
+  project: "Agent Notes"
+  mode: consolidate
+  retrieval_tests: true
