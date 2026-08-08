@@ -31,12 +31,12 @@
 	<a class="skip-link" href="#main-content">Skip to main content</a>
 	<header class="sk-header site-header" id="site-header">
 		<div class="sk-header__inner">
-			<a class="site-brand" href="{{home_path}}" aria-label="Kujolang.ai home">K–U–J–O</a>
+			<a class="site-brand" href="{{home_path}}" aria-label="Kujolang.ai home"><img src="{{relative_path}}assets/images/kujo-logomark.svg" alt="" width="28" height="28"><span>Kujo</span></a>
 			<nav class="desktop-navigation" aria-label="Primary">
 				<ul>{{navigation}}</ul>
 			</nav>
 			<div class="sk-header__actions">
-				<a class="sk-button header-docs" data-variant="secondary" href="https://github.com/kujolang/kujo/tree/main/docs">Read docs</a>
+				<button class="sk-button header-docs" type="button" data-variant="secondary" data-quick-install-open>Quick Install</button>
 				<button class="sk-button mobile-menu-button" type="button" data-variant="secondary" data-sk-drawer-open="mobile-navigation" aria-label="Open navigation">Menu</button>
 			</div>
 		</div>
@@ -53,28 +53,41 @@
 				<button class="sk-button" type="button" data-variant="secondary" data-sk-drawer-close aria-label="Close navigation">Close</button>
 			</header>
 			<nav aria-label="Mobile navigation"><ul>{{navigation}}</ul></nav>
-			<a class="sk-button" href="https://github.com/kujolang/kujo/tree/main/docs">Read docs</a>
+			<button class="sk-button" type="button" data-quick-install-open>Quick Install</button>
 		</aside>
+	</div>
+	<div class="quick-install-modal" data-quick-install-modal hidden>
+		<div class="quick-install-modal__backdrop" data-quick-install-close></div>
+		<section class="quick-install-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="quick-install-title" tabindex="-1">
+			<header>
+				<div><p class="eyebrow">Kujo Installer</p><h2 id="quick-install-title">Quick Install</h2></div>
+				<button class="icon-button" type="button" data-quick-install-close aria-label="Close quick install"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+			</header>
+			<p>Install Kujo and the local-first ecosystem from the supported installer.</p>
+			<div class="install-copy-field">
+				<input type="text" readonly value="curl -fsSL https://raw.githubusercontent.com/kujolang/kujo/main/install.sh | bash" aria-label="Kujo install command">
+				<button class="icon-button copy-icon-button" type="button" data-copy-install aria-label="Copy install command">
+					<svg class="copy-icon copy-icon--copy" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8m-2 0a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 6V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg>
+					<svg class="copy-icon copy-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
+				</button>
+			</div>
+			<p class="copy-status" role="status" aria-live="polite" data-copy-status></p>
+		</section>
 	</div>
 
 	{{content}}
 
 	<footer class="sk-footer site-footer" id="footer">
 		<div class="sk-footer__inner">
-			<div class="site-footer-brand">
-				<p class="eyebrow">Built in the open</p>
-				<p class="footer-wordmark">K–U–J–O</p>
-				<p>{{site_tagline}}</p>
+			<div class="site-footer__left">
+				<a class="footer-wordmark" href="{{home_path}}">Kujo</a>
+				<nav aria-label="Footer"><a href="{{home_path}}">Home</a><a href="{{relative_path}}ecosystem/">Ecosystem</a><a href="{{relative_path}}ethos/">Ethos</a><a href="{{relative_path}}writing/">Writing</a><a href="{{relative_path}}contact/">Contact</a></nav>
 			</div>
-			<nav aria-label="Footer">
-				<a href="{{home_path}}">Home</a>
-				<a href="{{relative_path}}ethos/">Ethos</a>
-				<a href="{{relative_path}}ecosystem/">Ecosystem</a>
-				<a href="{{relative_path}}writing/">Writing</a>
-				<a href="{{relative_path}}contact/">Contact</a>
-				<a href="https://github.com/kujolang/kujo">GitHub</a>
+			<nav class="social-links" aria-label="Kujo social links">
+				<a href="https://x.com/kujolang" aria-label="Kujo on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l11.7 16H20L8.3 4H4zm0 16L17.5 4H20L6.5 20H4z"/></svg></a>
+				<a href="https://github.com/kujolang" aria-label="Kujo on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.55 9.55 0 0 1 12 7c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.6c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+				<a href="https://discord.gg/kujolang" aria-label="Kujo on Discord"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 5.3A16.3 16.3 0 0 0 15.4 4l-.5 1a14.8 14.8 0 0 0-5.8 0l-.5-1a16.3 16.3 0 0 0-4.1 1.3C1.9 9.2 1.2 13 1.6 16.8A16.5 16.5 0 0 0 6.7 19l1.2-1.7-1.7-.8.4-.3c3.5 1.6 7.3 1.6 10.8 0l.4.3-1.7.8 1.2 1.7a16.5 16.5 0 0 0 5.1-2.2c.5-4.4-.8-8.2-2.9-11.5zM8.5 14.5c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.9 2.2-1.9 2.2zm7 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.9 2.2-1.9 2.2z"/></svg></a>
 			</nav>
-			<small>&copy; 2026 Kujolang.ai. Built with Kujo SSG + SiteKit.</small>
 		</div>
 	</footer>
 	<script src="{{relative_path}}assets/js/sitekit.js" defer></script>

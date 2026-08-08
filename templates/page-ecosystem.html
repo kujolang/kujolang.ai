@@ -1,9 +1,19 @@
 <main class="content-page ecosystem-index" id="main-content">
-	<header class="page-hero sk-hero" data-layout="centered">
-		<div class="sk-hero__inner"><p class="sk-badge" data-variant="outline">Language / primitives / tools / showcases</p><h1>{{title}}</h1><p>Explore the Kujo ecosystem as a set of focused layers: start with the language, add the primitives your work needs, and use proof-oriented tools to keep the result reviewable.</p></div>
+	<header class="page-hero sk-hero" data-layout="split">
+		<div class="page-hero__media" aria-hidden="true"><img src="/assets/images/ecosystem-distributed-tools.webp" alt="" class="featured-image" loading="eager" decoding="async"></div>
+		<div class="page-hero__wash" aria-hidden="true"></div>
+		<div class="sk-hero__inner"><div class="page-hero__copy"><h1>{{title}}</h1><p>Explore the Kujo ecosystem as a set of focused layers: begin with the language and reusable primitives, add the tooling your work needs, then learn from complete showcases.</p></div></div>
 	</header>
-	<section class="section-shell" aria-labelledby="ecosystem-map-title">
-		<div class="section-heading sk-heading"><p>Project map</p><h2 id="ecosystem-map-title">Every part has a job.</h2><span>The largest foundations come first; focused tools and showcase applications follow.</span></div>
-		<ul class="card-grid ecosystem-card-grid sk-ecosystem-map">{{cards}}</ul>
+	<section class="ecosystem-section section-shell" aria-labelledby="primitives-title">
+		<div class="section-heading sk-heading"><p>01 / Foundation</p><h2 id="primitives-title">Primitives</h2><span>The language, package foundation, and reusable building blocks for reliable AI-native software.</span></div>
+		<ul class="card-grid ecosystem-card-grid">{{primitive_cards}}</ul>
+	</section>
+	<section class="ecosystem-section section-shell" aria-labelledby="tooling-title">
+		<div class="section-heading sk-heading"><p>02 / Operations</p><h2 id="tooling-title">Tooling</h2><span>Focused tools for context, execution, evidence, architecture, release readiness, and human review.</span></div>
+		<ul class="card-grid ecosystem-card-grid">{{tooling_cards}}</ul>
+	</section>
+	<section class="ecosystem-section section-shell" aria-labelledby="showcase-title">
+		<div class="section-heading sk-heading"><p>03 / Applications</p><h2 id="showcase-title">Showcase</h2><span>Complete, inspectable examples that demonstrate how Kujo projects work together in real applications.</span></div>
+		<ul class="card-grid ecosystem-card-grid">{{showcase_cards}}</ul>
 	</section>
 </main>
