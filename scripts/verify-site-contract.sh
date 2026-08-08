@@ -34,20 +34,25 @@ require_file "${output_dir}/ethos/index.html"
 require_file "${output_dir}/contact/index.html"
 require_file "${output_dir}/writing/index.html"
 require_file "${output_dir}/assets/js/vendor/scramble-decode.js"
+require_file "${output_dir}/assets/prompts/kujo-agent-onboarding.txt"
 
 require_text "${output_dir}/index.html" 'Trust at the speed of AI'
 require_text "${output_dir}/index.html" 'Kujo is an AI-native programming language and toolchain built to make agent-driven software development clear, controlled, and verifiable.'
 require_text "${output_dir}/index.html" 'href="https://docs.kujolang.ai">Read the docs'
 require_text "${output_dir}/index.html" 'assets/images/home-agent-workflow.webp'
-require_text "${output_dir}/index.html" 'data-home-dither'
+require_text "${output_dir}/index.html" 'data-hero-dither'
 require_text "${output_dir}/index.html" 'data-quick-install-modal hidden'
 require_text "${output_dir}/index.html" 'curl -fsSL https://raw.githubusercontent.com/kujolang/kujo/main/install.sh | bash'
+require_text "${output_dir}/index.html" 'Install Kujo &amp; the local-first ecosystem (or <a href="assets/prompts/kujo-agent-onboarding.txt"'
+require_text "${output_dir}/index.html" 'data-copy-status data-scramble-skip'
 require_text "${output_dir}/index.html" 'assets/images/kujo-logomark.svg'
 require_text "${output_dir}/index.html" 'assets/js/vendor/scramble-decode.js'
 require_text "${output_dir}/index.html" '>Home</a></li><li><a href="/ecosystem/"'
 require_text "${output_dir}/index.html" '>Ecosystem</a></li><li><a href="/ethos/"'
 require_text "${output_dir}/index.html" '>Ethos</a></li><li><a href="/writing/"'
 require_text "${output_dir}/index.html" '>Writing</a></li><li><a href="/contact/"'
+require_text "${output_dir}/index.html" '<nav aria-label="Footer"><a href="ecosystem/">Ecosystem</a>'
+reject_text "${output_dir}/index.html" '<nav aria-label="Footer"><a href="index.html">Home</a>'
 reject_text "${output_dir}/index.html" 'Programming language for AI-native software'
 reject_text "${output_dir}/index.html" 'data-dither-canvas'
 
@@ -83,6 +88,7 @@ done
 
 for tool_page in "${output_dir}"/ecosystem/*/index.html; do
 	require_text "$tool_page" 'class="copy-icon copy-icon--copy"'
+	require_text "$tool_page" 'data-copy-status data-scramble-skip></span><button'
 	require_text "$tool_page" '>View ecosystem</a>'
 	reject_text "$tool_page" 'Back to ecosystem'
 done
@@ -93,17 +99,24 @@ require_text "${output_dir}/assets/css/style.css" 'body:has(.home-hero) .site-fo
 require_text "${output_dir}/assets/css/style.css" '.ethos-page .kujo-content > h2:first-child'
 require_text "${output_dir}/assets/css/style.css" 'margin-block-start: auto;'
 reject_text "${output_dir}/assets/css/style.css" '@keyframes grid-drift'
-require_text "${output_dir}/assets/js/site.js" 'function enhanceHomeDither()'
+require_text "${output_dir}/assets/js/site.js" 'function enhanceHeroDither()'
+require_text "${output_dir}/assets/js/site.js" ".home-hero__media, .page-hero__media, .tool-hero__media"
 require_text "${output_dir}/assets/js/site.js" 'Math.sin(frame * 0.36) * 7'
 reject_text "${output_dir}/assets/js/site.js" 'waveAmplitude'
 reject_text "${output_dir}/assets/js/site.js" 'secondaryWave'
 require_text "${output_dir}/assets/js/site.js" 'function enhanceMonoScramble()'
 require_text "${output_dir}/assets/js/site.js" "indexOf('departure mono')"
 require_text "${output_dir}/assets/js/site.js" "duration: 680 + Math.min(420, original.length * 12)"
+require_text "${output_dir}/assets/css/style.css" 'inset-block-start: var(--site-sticky-offset);'
+require_text "${output_dir}/assets/css/style.css" 'grid-template-columns: minmax(0, 1fr) auto auto;'
+
+require_text "${output_dir}/assets/prompts/kujo-agent-onboarding.txt" 'default core and operating profiles'
+require_text "${output_dir}/assets/prompts/kujo-agent-onboarding.txt" 'kujo doctor --json'
 
 require_text "${output_dir}/contact/index.html" 'href="https://x.com/kujolang"'
 require_text "${output_dir}/contact/index.html" 'href="https://github.com/kujolang"'
-require_text "${output_dir}/contact/index.html" 'href="https://discord.gg/kujolang"'
+require_text "${output_dir}/contact/index.html" 'href="https://discord.gg/RqDgyb3BX"'
+reject_text "${output_dir}/contact/index.html" 'href="https://discord.gg/kujolang"'
 
 if rg -n 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network|Intake' \
 	"${repo_root}/templates" "${repo_root}/content" "${output_dir}" \

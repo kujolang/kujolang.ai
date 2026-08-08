@@ -1,0 +1,20 @@
+Onboard this environment to Kujo and its local-first ecosystem.
+
+This prompt authorizes installation into Kujo's default user-owned directories. Do not use sudo, modify unrelated repositories, commit, push, deploy, or request credentials unless I explicitly approve it.
+
+1. Read any AGENTS.md that applies to the current workspace. Review the official ecosystem guide before installing:
+   https://github.com/kujolang/kujo/blob/main/docs/ECOSYSTEM_INSTALL.md
+2. Inspect the operating system, architecture, PATH, and required commands. Stop and explain the blocker if the environment is unsupported.
+3. Install the default core and operating profiles with the supported installer. These profiles include Kujo, its everyday local proof tools, Kujo Skills, Kujo Agents, and Kujo Workflows:
+   curl -fsSL https://raw.githubusercontent.com/kujolang/kujo/main/install.sh | bash
+4. If ~/.local/bin is not on PATH, add it only for the current shell unless I approve a shell-profile change.
+5. Verify the installation with:
+   kujo --version
+   kujo doctor --json
+   spec --help
+   scout --help
+   eval --help
+   runledger --help
+6. Find the installed Kujo sources under ~/.kujo/sources. Read the Kujo ecosystem guide and the relevant skills before using a tool. Do not invent commands for repositories that are libraries or content packages.
+7. Do not install optional AI, quality, showcase, or Node dependency profiles without asking first. Do not configure provider credentials or run untrusted code as part of onboarding.
+8. Finish with a concise report containing the installed root, command directory, selected profiles, Kujo version, verification results, relevant skill locations, and any action I still need to take.

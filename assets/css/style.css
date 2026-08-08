@@ -3,6 +3,7 @@
     --site-header-block: calc(var(--sk-space-16) + var(--sk-space-4));
     --site-pad-inline: clamp(var(--sk-space-5), 5vw, var(--sk-space-16));
     --site-section-gap: clamp(var(--sk-space-16), 8vw, var(--sk-space-24));
+    --site-sticky-offset: calc(var(--site-header-block) + (2 * var(--sk-space-4)) + var(--sk-space-5));
   }
 
   html {
@@ -179,7 +180,7 @@
 
   .install-copy-field {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto auto;
     align-items: center;
     border: var(--sk-border-1) solid var(--sk-border-default);
     background: var(--sk-code-surface);
@@ -231,11 +232,18 @@
   }
 
   .copy-status {
-    min-block-size: 1.4em;
-    margin-block: var(--sk-space-2) 0 !important;
+    min-block-size: 1em;
+    margin: 0 !important;
     color: var(--sk-text-muted);
     font-family: var(--sk-font-mono);
     font-size: var(--sk-type-size-xs) !important;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .install-copy-field .copy-status {
+    justify-self: end;
+    padding-inline: var(--sk-space-3);
   }
 
   .home-hero {
@@ -498,7 +506,7 @@
 
   .ethos-aside {
     position: sticky;
-    inset-block-start: var(--sk-space-5);
+    inset-block-start: var(--site-sticky-offset);
   }
 
   .ethos-aside h2 {
@@ -631,6 +639,12 @@
 
   .tool-install-panel .sk-code-block figcaption {
     align-items: center;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+  }
+
+  .tool-install-panel .copy-status {
+    justify-self: end;
   }
 
   .tool-install-panel .copy-icon-button {
