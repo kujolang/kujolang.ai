@@ -36,7 +36,7 @@ acceptance_criteria:
   - "The home hero uses the approved static right-aligned image with no wave animation and links to the docs and ecosystem"
   - "Ethos, Contact, Writing, Ecosystem, and ecosystem detail heroes use static WebP dither imagery instead of the square pattern"
   - "Writing cards align their actions at the bottom and the section heading is not artificially width-constrained"
-  - "Ecosystem content is grouped into Primitives, Tooling, and Showcases using only the verified repository inventory"
+  - "Ecosystem content is grouped into Primitives, Tooling, and Showcase using only the verified repository inventory"
   - "Every ecosystem detail page uses the common image hero, View ecosystem label, and an accessible icon copy control that signals success"
   - "The footer matches the supplied local reference structure with Kujo and navigation on the left and X/GitHub/Discord icons on the right"
   - "All supplied raster assets used by the project are converted to descriptive WebP filenames"
