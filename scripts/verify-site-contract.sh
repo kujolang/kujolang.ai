@@ -33,6 +33,7 @@ require_file "${output_dir}/ecosystem/index.html"
 require_file "${output_dir}/ethos/index.html"
 require_file "${output_dir}/contact/index.html"
 require_file "${output_dir}/writing/index.html"
+require_file "${output_dir}/assets/js/vendor/scramble-decode.js"
 
 require_text "${output_dir}/index.html" 'Trust at the speed of AI'
 require_text "${output_dir}/index.html" 'Kujo is an AI-native programming language and toolchain built to make agent-driven software development clear, controlled, and verifiable.'
@@ -41,6 +42,7 @@ require_text "${output_dir}/index.html" 'assets/images/home-agent-workflow.webp'
 require_text "${output_dir}/index.html" 'data-quick-install-modal hidden'
 require_text "${output_dir}/index.html" 'curl -fsSL https://raw.githubusercontent.com/kujolang/kujo/main/install.sh | bash'
 require_text "${output_dir}/index.html" 'assets/images/kujo-logomark.svg'
+require_text "${output_dir}/index.html" 'assets/js/vendor/scramble-decode.js'
 require_text "${output_dir}/index.html" '>Home</a></li><li><a href="/ecosystem/"'
 require_text "${output_dir}/index.html" '>Ecosystem</a></li><li><a href="/ethos/"'
 require_text "${output_dir}/index.html" '>Ethos</a></li><li><a href="/writing/"'
@@ -86,6 +88,9 @@ require_text "${output_dir}/assets/css/style.css" '.ethos-page .kujo-content > h
 require_text "${output_dir}/assets/css/style.css" 'margin-block-start: auto;'
 reject_text "${output_dir}/assets/css/style.css" '@keyframes grid-drift'
 reject_text "${output_dir}/assets/js/site.js" 'enhanceDitherHero'
+require_text "${output_dir}/assets/js/site.js" 'function enhanceMonoScramble()'
+require_text "${output_dir}/assets/js/site.js" "indexOf('departure mono')"
+require_text "${output_dir}/assets/js/site.js" "duration: 680 + Math.min(420, original.length * 12)"
 
 require_text "${output_dir}/contact/index.html" 'href="https://x.com/kujolang"'
 require_text "${output_dir}/contact/index.html" 'href="https://github.com/kujolang"'

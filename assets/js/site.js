@@ -135,10 +135,99 @@
     });
   }
 
+  function enhanceMonoScramble() {
+    if (!window.ScrambleDecode || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var selector = '[data-scramble-text]';
+    var pool = '█▓▒░<>/\\#[]{}=+*01';
+    var observer = null;
+
+    function usesMonoFont(element) {
+      return window.getComputedStyle(element).fontFamily.toLowerCase().indexOf('departure mono') !== -1;
+    }
+
+    function runScramble(element) {
+      if (element.dataset.scrambleComplete === 'true') return;
+      var original = element.dataset.scrambleText || element.textContent;
+      if (!original.trim()) return;
+
+      element.dataset.scrambleComplete = 'true';
+      element.setAttribute('aria-label', original);
+      window.ScrambleDecode.scramble(element, {
+        text: original,
+        duration: 680 + Math.min(420, original.length * 12),
+        pool: pool
+      }).finished.then(function () {
+        element.textContent = original;
+      });
+    }
+
+    function observeScramble(element) {
+      if (observer) observer.observe(element);
+      else runScramble(element);
+    }
+
+    function wrapTextNode(node) {
+      var parent = node.parentElement;
+      if (!parent || !node.nodeValue.trim() || parent.closest(selector)) return;
+      if (/^(SCRIPT|STYLE|NOSCRIPT|TEMPLATE|SVG)$/i.test(parent.tagName) || !usesMonoFont(parent)) return;
+
+      var match = node.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);
+      var original = match && match[2];
+      if (!original) return;
+
+      var fragment = document.createDocumentFragment();
+      if (match[1]) fragment.appendChild(document.createTextNode(match[1]));
+      var span = document.createElement('span');
+      span.dataset.scrambleText = original;
+      span.textContent = original;
+      fragment.appendChild(span);
+      if (match[3]) fragment.appendChild(document.createTextNode(match[3]));
+      node.parentNode.replaceChild(fragment, node);
+      observeScramble(span);
+    }
+
+    function findMonoText(root) {
+      if (root.nodeType === Node.TEXT_NODE) {
+        wrapTextNode(root);
+        return;
+      }
+      if (root.nodeType !== Node.ELEMENT_NODE || root.closest(selector)) return;
+
+      var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(wrapTextNode);
+    }
+
+    if ('IntersectionObserver' in window) {
+      observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          observer.unobserve(entry.target);
+          runScramble(entry.target);
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: 0.25 });
+    }
+
+    findMonoText(document.body);
+
+    var mutationObserver = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+        mutation.addedNodes.forEach(function (node) {
+          if (node.parentElement && node.parentElement.closest(selector)) return;
+          findMonoText(node);
+        });
+      });
+    });
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+  }
+
   function init() {
     enhanceCopyButtons();
     enhanceDrawerLinks();
     enhanceQuickInstall();
+    enhanceMonoScramble();
   }
 
   if (document.readyState === 'loading') {
