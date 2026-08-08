@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
+    "icons:build": "node scripts/build-icons.mjs",
     "vendor:scramble": "scramble-decode copy assets/js/vendor",
     "social:cards": "bash scripts/render-social-cards.sh"
   },
@@ -10,6 +11,7 @@
     "scramble-decode": "0.1.0"
   },
   "devDependencies": {
+    "png-to-ico": "^3.0.2",
     "sharp": "^0.35.3"
   }
 }
