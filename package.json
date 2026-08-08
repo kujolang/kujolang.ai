@@ -1,0 +1,11 @@
+{
+  "name": "kujolang-ai-site",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "vendor:scramble": "scramble-decode copy assets/js/vendor"
+  },
+  "dependencies": {
+    "scramble-decode": "0.1.0"
+  }
+}
