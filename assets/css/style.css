@@ -137,6 +137,12 @@
     align-self: stretch;
   }
 
+  .mobile-drawer-shell .sk-drawer nav,
+  .mobile-drawer-shell .sk-drawer nav ul {
+    border: 0;
+    background: #fff;
+  }
+
   .mobile-drawer-shell .sk-drawer nav li,
   .mobile-drawer-shell .sk-drawer nav a {
     inline-size: 100%;
@@ -215,6 +221,22 @@
     font-family: var(--sk-font-mono);
     font-size: var(--sk-type-size-sm);
     line-height: var(--sk-type-line-normal);
+    scrollbar-color: var(--sk-border-default) var(--sk-surface-card);
+    scrollbar-width: thin;
+  }
+
+  .agent-prompt-copy-field textarea::-webkit-scrollbar {
+    inline-size: var(--sk-space-3);
+  }
+
+  .agent-prompt-copy-field textarea::-webkit-scrollbar-track {
+    background: var(--sk-surface-card);
+    border-inline-start: var(--sk-border-1) solid var(--sk-border-default);
+  }
+
+  .agent-prompt-copy-field textarea::-webkit-scrollbar-thumb {
+    border: var(--sk-border-2) solid var(--sk-surface-card);
+    background: var(--sk-border-default);
   }
 
   .agent-prompt-copy-actions {
@@ -233,6 +255,11 @@
   .agent-prompt-copy-actions .copy-icon {
     inline-size: 1.1rem;
     block-size: 1.1rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   .install-copy-field {
@@ -877,7 +904,7 @@
 
     .home-hero .sk-hero__actions .sk-button {
       inline-size: 100%;
-      justify-content: space-between;
+      justify-content: center;
       gap: var(--sk-space-2);
       padding-inline: var(--sk-space-2);
       font-size: clamp(.6875rem, 3vw, var(--sk-type-size-sm));
@@ -925,7 +952,7 @@
     }
 
     .mobile-drawer-shell .sk-drawer nav ul {
-      align-content: center;
+      align-content: start;
       min-block-size: 100%;
       gap: var(--sk-space-4);
     }

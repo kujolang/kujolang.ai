@@ -875,6 +875,7 @@ func build_navigation(pages_data, custom_collections, current_route, blog_slug) 
 	html = html + navigation_item("/ecosystem/", "Ecosystem", starts_with(current_path, "/ecosystem/"))
 	html = html + navigation_item("/ethos/", "Ethos", current_path == "/ethos/")
 	html = html + navigation_item("/writing/", "Writing", starts_with(current_path, "/writing/"))
+	html = html + navigation_item("https://docs.kujolang.ai", "Docs", false)
 	html = html + navigation_item("/contact/", "Contact", current_path == "/contact/")
 	return html
 }
