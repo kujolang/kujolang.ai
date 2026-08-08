@@ -26,12 +26,14 @@
   }
 
   function setCopiedState(button, status) {
+    var copyLabel = button.dataset.copyLabel || 'Copy install command';
+    var copiedLabel = button.dataset.copiedLabel || 'Install command copied';
     button.dataset.copied = 'true';
-    button.setAttribute('aria-label', 'Install command copied');
+    button.setAttribute('aria-label', copiedLabel);
     if (status) status.textContent = 'Copied to clipboard.';
     window.setTimeout(function () {
       button.dataset.copied = 'false';
-      button.setAttribute('aria-label', 'Copy install command');
+      button.setAttribute('aria-label', copyLabel);
       if (status) status.textContent = '';
     }, 1800);
   }
@@ -60,68 +62,69 @@
         });
       });
     });
-  }
 
-  function enhanceDrawerLinks() {
-    document.querySelectorAll('[data-sk-drawer] a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        var drawer = link.closest('[data-sk-drawer]');
-        var scrim = document.querySelector('[data-sk-drawer-scrim]');
-        if (drawer) {
-          drawer.hidden = true;
-          drawer.setAttribute('aria-hidden', 'true');
-        }
-        if (scrim) scrim.hidden = true;
+    document.querySelectorAll('[data-copy-agent-prompt]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var dialog = button.closest('[role="dialog"]');
+        var field = dialog && dialog.querySelector('[data-agent-prompt-text]');
+        var status = dialog && dialog.querySelector('[data-copy-status]');
+        if (!field || !field.value.trim()) return;
+        copyText(field.value).then(function () {
+          setCopiedState(button, status);
+        });
       });
     });
   }
 
-  function enhanceQuickInstall() {
-    var modal = document.querySelector('[data-quick-install-modal]');
-    if (!modal) return;
-    var dialog = modal.querySelector('[role="dialog"]');
-    var previousFocus = null;
+  function enhanceMobileNavigation() {
+    var toggle = document.querySelector('[data-mobile-menu-toggle]');
+    var label = toggle && toggle.querySelector('[data-mobile-menu-label]');
+    var shell = document.querySelector('[data-mobile-menu-shell]');
+    var drawer = document.querySelector('[data-mobile-navigation]');
+    var scrim = document.querySelector('[data-mobile-menu-scrim]');
+    if (!toggle || !label || !shell || !drawer) return;
 
-    function closeDrawer() {
-      var drawer = document.querySelector('[data-sk-drawer]');
-      var scrim = document.querySelector('[data-sk-drawer-scrim]');
-      if (drawer) {
-        drawer.hidden = true;
-        drawer.setAttribute('aria-hidden', 'true');
+    function isOpen() {
+      return !drawer.hidden;
+    }
+
+    function setOpen(open, restoreFocus) {
+      drawer.hidden = !open;
+      drawer.setAttribute('aria-hidden', String(!open));
+      if (scrim) scrim.hidden = !open;
+      shell.classList.toggle('is-open', open);
+      document.body.classList.toggle('mobile-menu-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      label.textContent = open ? 'Close' : 'Menu';
+      if (open) {
+        var firstLink = drawer.querySelector('a, button');
+        if (firstLink) window.requestAnimationFrame(function () { firstLink.focus(); });
+      } else if (restoreFocus) {
+        toggle.focus();
       }
-      if (scrim) scrim.hidden = true;
     }
 
-    function openModal(trigger) {
-      previousFocus = trigger || document.activeElement;
-      closeDrawer();
-      modal.hidden = false;
-      document.body.classList.add('modal-open');
-      window.requestAnimationFrame(function () { dialog.focus(); });
-    }
-
-    function closeModal() {
-      modal.hidden = true;
-      document.body.classList.remove('modal-open');
-      if (previousFocus && typeof previousFocus.focus === 'function') previousFocus.focus();
-    }
-
-    document.querySelectorAll('[data-quick-install-open]').forEach(function (button) {
-      button.addEventListener('click', function () { openModal(button); });
+    toggle.addEventListener('click', function () {
+      setOpen(!isOpen(), false);
     });
 
-    modal.querySelectorAll('[data-quick-install-close]').forEach(function (button) {
-      button.addEventListener('click', closeModal);
+    drawer.querySelectorAll('a, [data-quick-install-open]').forEach(function (control) {
+      control.addEventListener('click', function () { setOpen(false, false); });
     });
 
-    modal.addEventListener('keydown', function (event) {
+    if (scrim) scrim.addEventListener('click', function () { setOpen(false, true); });
+
+    document.addEventListener('kujo:close-mobile-menu', function () { setOpen(false, false); });
+    document.addEventListener('keydown', function (event) {
+      if (!isOpen()) return;
       if (event.key === 'Escape') {
         event.preventDefault();
-        closeModal();
+        setOpen(false, true);
         return;
       }
       if (event.key !== 'Tab') return;
-      var focusable = Array.prototype.slice.call(dialog.querySelectorAll('button, input, a[href], [tabindex]:not([tabindex="-1"])'));
+      var focusable = [toggle].concat(Array.prototype.slice.call(drawer.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')));
       if (!focusable.length) return;
       var first = focusable[0];
       var last = focusable[focusable.length - 1];
@@ -133,6 +136,92 @@
         first.focus();
       }
     });
+  }
+
+  function enhanceInstallModals() {
+    var quickModal = document.querySelector('[data-quick-install-modal]');
+    var agentModal = document.querySelector('[data-agent-prompt-modal]');
+    if (!quickModal || !agentModal) return;
+    var currentModal = null;
+    var previousFocus = null;
+
+    function closeDrawer() {
+      document.dispatchEvent(new Event('kujo:close-mobile-menu'));
+    }
+
+    function openModal(modal, trigger) {
+      if (!currentModal) previousFocus = trigger || document.activeElement;
+      closeDrawer();
+      if (currentModal) currentModal.hidden = true;
+      modal.hidden = false;
+      currentModal = modal;
+      document.body.classList.add('modal-open');
+      var dialog = modal.querySelector('[role="dialog"]');
+      window.requestAnimationFrame(function () { dialog.focus(); });
+    }
+
+    function closeModal(modal) {
+      modal.hidden = true;
+      if (currentModal === modal) currentModal = null;
+      document.body.classList.remove('modal-open');
+      var restore = previousFocus;
+      if (restore && restore.closest && restore.closest('[hidden]')) restore = document.querySelector('[data-mobile-menu-toggle]');
+      if (restore && typeof restore.focus === 'function') restore.focus();
+      previousFocus = null;
+    }
+
+    document.querySelectorAll('[data-quick-install-open]').forEach(function (button) {
+      button.addEventListener('click', function () { openModal(quickModal, button); });
+    });
+
+    document.querySelectorAll('[data-agent-prompt-open]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        var field = agentModal.querySelector('[data-agent-prompt-text]');
+        openModal(agentModal, link);
+        if (!field || field.dataset.loaded === 'true') return;
+        fetch(link.href).then(function (response) {
+          if (!response.ok) throw new Error('Prompt request failed');
+          return response.text();
+        }).then(function (text) {
+          field.value = text.trim();
+          field.dataset.loaded = 'true';
+          var copyButton = agentModal.querySelector('[data-copy-agent-prompt]');
+          if (copyButton) copyButton.disabled = false;
+        }).catch(function () {
+          field.value = 'The onboarding prompt could not be loaded. Open ' + link.href + ' to view and copy it.';
+        });
+      });
+    });
+
+    function bindModal(modal, closeSelector) {
+      var dialog = modal.querySelector('[role="dialog"]');
+      modal.querySelectorAll(closeSelector).forEach(function (button) {
+        button.addEventListener('click', function () { closeModal(modal); });
+      });
+      modal.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          event.preventDefault();
+          closeModal(modal);
+          return;
+        }
+        if (event.key !== 'Tab') return;
+        var focusable = Array.prototype.slice.call(dialog.querySelectorAll('button, input, textarea, a[href], [tabindex]:not([tabindex="-1"])'));
+        if (!focusable.length) return;
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      });
+    }
+
+    bindModal(quickModal, '[data-quick-install-close]');
+    bindModal(agentModal, '[data-agent-prompt-close]');
   }
 
   function enhanceHeroDither() {
@@ -336,8 +425,8 @@
 
   function init() {
     enhanceCopyButtons();
-    enhanceDrawerLinks();
-    enhanceQuickInstall();
+    enhanceMobileNavigation();
+    enhanceInstallModals();
     enhanceHeroDither();
     enhanceMonoScramble();
   }

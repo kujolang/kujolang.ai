@@ -42,6 +42,10 @@ require_text "${output_dir}/index.html" 'href="https://docs.kujolang.ai">Read th
 require_text "${output_dir}/index.html" 'assets/images/home-agent-workflow.webp'
 require_text "${output_dir}/index.html" 'data-hero-dither'
 require_text "${output_dir}/index.html" 'data-quick-install-modal hidden'
+require_text "${output_dir}/index.html" 'data-agent-prompt-modal hidden'
+require_text "${output_dir}/index.html" 'data-agent-prompt-open'
+require_text "${output_dir}/index.html" 'data-agent-prompt-text'
+require_text "${output_dir}/index.html" 'data-copy-agent-prompt'
 require_text "${output_dir}/index.html" 'curl -fsSL https://raw.githubusercontent.com/kujolang/kujo/main/install.sh | bash'
 require_text "${output_dir}/index.html" 'Install Kujo &amp; the local-first ecosystem (or <a href="assets/prompts/kujo-agent-onboarding.txt"'
 require_text "${output_dir}/index.html" 'data-copy-status data-scramble-skip'
@@ -60,6 +64,7 @@ require_text "${output_dir}/ethos/index.html" 'ethos-human-agent-trust'
 require_text "${output_dir}/contact/index.html" 'contact-conversation'
 require_text "${output_dir}/writing/index.html" 'writing-technical-documents.webp'
 require_text "${output_dir}/writing/index.html" 'Content coming soon.'
+require_text "${output_dir}/writing/index.html" 'Launch notes, ecosystem deep dives, tutorials, and field reports are on the way. Follow on <a href="https://x.com/kujolang">X</a> for updates'
 reject_text "${output_dir}/writing/index.html" 'From the Kujo ecosystem.'
 reject_text "${output_dir}/writing/index.html" 'Welcome to Kujo'
 reject_text "${output_dir}/writing/index.html" 'Local-first agent workflows'
@@ -89,6 +94,7 @@ done
 for tool_page in "${output_dir}"/ecosystem/*/index.html; do
 	require_text "$tool_page" 'class="copy-icon copy-icon--copy"'
 	require_text "$tool_page" 'data-copy-status data-scramble-skip></span><button'
+	require_text "$tool_page" 'target="_blank" rel="noopener">View on GitHub</a>'
 	require_text "$tool_page" '>View ecosystem</a>'
 	reject_text "$tool_page" 'Back to ecosystem'
 done
@@ -109,6 +115,9 @@ require_text "${output_dir}/assets/js/site.js" "indexOf('departure mono')"
 require_text "${output_dir}/assets/js/site.js" "duration: 680 + Math.min(420, original.length * 12)"
 require_text "${output_dir}/assets/css/style.css" 'inset-block-start: var(--site-sticky-offset);'
 require_text "${output_dir}/assets/css/style.css" 'grid-template-columns: minmax(0, 1fr) auto auto;'
+require_text "${output_dir}/assets/css/style.css" 'grid-template-columns: repeat(2, minmax(0, 1fr));'
+require_text "${output_dir}/assets/css/style.css" '.contact-grid .sk-feature-grid'
+require_text "${output_dir}/assets/js/site.js" "label.textContent = open ? 'Close' : 'Menu';"
 
 require_text "${output_dir}/assets/prompts/kujo-agent-onboarding.txt" 'default core and operating profiles'
 require_text "${output_dir}/assets/prompts/kujo-agent-onboarding.txt" 'kujo doctor --json'

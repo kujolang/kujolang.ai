@@ -37,21 +37,14 @@
 			</nav>
 			<div class="sk-header__actions">
 				<button class="sk-button header-docs" type="button" data-variant="secondary" data-quick-install-open>Quick Install</button>
-				<button class="sk-button mobile-menu-button" type="button" data-variant="secondary" data-sk-drawer-open="mobile-navigation" aria-label="Open navigation">Menu</button>
+				<button class="sk-button mobile-menu-button" type="button" data-variant="secondary" data-mobile-menu-toggle aria-controls="mobile-navigation" aria-expanded="false" aria-label="Open navigation"><span data-mobile-menu-label>Menu</span></button>
 			</div>
 		</div>
 	</header>
 
-	<div class="mobile-drawer-shell">
-		<div class="sk-drawer-scrim" data-sk-drawer-scrim hidden aria-hidden="true"></div>
-		<aside class="sk-drawer" id="mobile-navigation" data-sk-drawer hidden aria-hidden="true" aria-labelledby="mobile-navigation-title">
-			<header>
-				<div>
-					<h2 id="mobile-navigation-title">Navigate</h2>
-					<p>Kujolang.ai</p>
-				</div>
-				<button class="sk-button" type="button" data-variant="secondary" data-sk-drawer-close aria-label="Close navigation">Close</button>
-			</header>
+	<div class="mobile-drawer-shell" data-mobile-menu-shell>
+		<div class="sk-drawer-scrim" data-mobile-menu-scrim hidden aria-hidden="true"></div>
+		<aside class="sk-drawer" id="mobile-navigation" data-mobile-navigation hidden aria-hidden="true" aria-label="Mobile navigation">
 			<nav aria-label="Mobile navigation"><ul>{{navigation}}</ul></nav>
 			<button class="sk-button" type="button" data-quick-install-open>Quick Install</button>
 		</aside>
@@ -63,7 +56,7 @@
 				<div><p class="eyebrow">Kujo Installer</p><h2 id="quick-install-title">Quick Install</h2></div>
 				<button class="icon-button" type="button" data-quick-install-close aria-label="Close quick install"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
 			</header>
-			<p>Install Kujo &amp; the local-first ecosystem (or <a href="{{relative_path}}assets/prompts/kujo-agent-onboarding.txt" target="_blank" rel="noopener">let your agents</a>)</p>
+			<p>Install Kujo &amp; the local-first ecosystem (or <a href="{{relative_path}}assets/prompts/kujo-agent-onboarding.txt" data-agent-prompt-open>let your agents</a>)</p>
 			<div class="install-copy-field">
 				<input type="text" readonly value="curl -fsSL https://raw.githubusercontent.com/kujolang/kujo/main/install.sh | bash" aria-label="Kujo install command">
 				<span class="copy-status" role="status" aria-live="polite" data-copy-status data-scramble-skip></span>
@@ -74,13 +67,34 @@
 			</div>
 		</section>
 	</div>
+	<div class="quick-install-modal agent-prompt-modal" data-agent-prompt-modal hidden>
+		<div class="quick-install-modal__backdrop" data-agent-prompt-close></div>
+		<section class="quick-install-modal__dialog agent-prompt-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="agent-prompt-title" tabindex="-1">
+			<header>
+				<div><p class="eyebrow">Agent Onboarding</p><h2 id="agent-prompt-title">Give this prompt to your agent</h2></div>
+				<button class="icon-button" type="button" data-agent-prompt-close aria-label="Close agent onboarding prompt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+			</header>
+			<p>Copy the prompt below and send it to your coding agent to install Kujo, add the ecosystem skills, and verify its setup.</p>
+			<div class="agent-prompt-copy-field">
+				<textarea readonly aria-label="Kujo agent onboarding prompt" data-agent-prompt-text>Loading prompt…</textarea>
+				<div class="agent-prompt-copy-actions">
+					<span class="copy-status" role="status" aria-live="polite" data-copy-status data-scramble-skip></span>
+					<button class="sk-button copy-icon-button" type="button" data-copy-agent-prompt data-copy-label="Copy prompt" data-copied-label="Prompt copied" aria-label="Copy prompt" disabled>
+						<span>Copy prompt</span>
+						<svg class="copy-icon copy-icon--copy" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8m-2 0a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 6V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg>
+						<svg class="copy-icon copy-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
+					</button>
+				</div>
+			</div>
+		</section>
+	</div>
 
 	{{content}}
 
 	<footer class="sk-footer site-footer" id="footer">
 		<div class="sk-footer__inner">
 			<div class="site-footer__left">
-				<a class="footer-wordmark" href="{{home_path}}">Kujo</a>
+				<a class="footer-wordmark" href="{{home_path}}"><img src="{{relative_path}}assets/images/kujo-logomark.svg" alt="" width="24" height="24"><span>Kujo</span></a>
 				<nav aria-label="Footer"><a href="{{relative_path}}ecosystem/">Ecosystem</a><a href="{{relative_path}}ethos/">Ethos</a><a href="{{relative_path}}writing/">Writing</a><a href="{{relative_path}}contact/">Contact</a></nav>
 			</div>
 			<nav class="social-links" aria-label="Kujo social links">

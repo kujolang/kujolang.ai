@@ -87,6 +87,8 @@
 
   .mobile-menu-button {
     display: none;
+    min-inline-size: 5.5rem;
+    justify-content: center;
   }
 
   .mobile-drawer-shell {
@@ -96,25 +98,31 @@
     pointer-events: none;
   }
 
-  .mobile-drawer-shell:has(.sk-drawer:not([hidden])) {
+  .mobile-drawer-shell.is-open {
     pointer-events: auto;
   }
 
   .mobile-drawer-shell .sk-drawer-scrim {
     position: absolute;
     inset: 0;
-    background: color-mix(in srgb, var(--sk-surface-inverse) 62%, transparent);
+    background: var(--sk-surface-page);
   }
 
   .mobile-drawer-shell .sk-drawer {
     position: absolute;
-    inset: 0 0 0 auto;
-    inline-size: min(100%, calc(var(--sk-size-content-sm) - var(--sk-space-8)));
+    inset: 0;
+    inline-size: 100%;
     min-block-size: 100%;
-    border-inline-start: var(--sk-border-1) solid var(--sk-border-default);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: stretch;
+    gap: var(--sk-space-8);
+    border: 0;
+    background: var(--sk-surface-page);
+    padding: calc(var(--site-header-block) + (2 * var(--sk-space-4)) + var(--sk-space-8)) var(--site-pad-inline) var(--sk-space-8);
   }
 
-  .mobile-drawer-shell .sk-drawer[hidden],
+  .mobile-drawer-shell [data-mobile-navigation][hidden],
   .mobile-drawer-shell .sk-drawer-scrim[hidden] {
     display: none;
   }
@@ -126,7 +134,7 @@
   }
 
   .mobile-drawer-shell .sk-drawer nav {
-    align-self: start;
+    align-self: stretch;
   }
 
   .mobile-drawer-shell .sk-drawer nav li,
@@ -136,6 +144,14 @@
 
   .mobile-drawer-shell .sk-drawer nav a {
     display: block;
+  }
+
+  body.mobile-menu-open {
+    overflow: hidden;
+  }
+
+  body.mobile-menu-open .site-header {
+    z-index: calc(var(--sk-z-modal) + 1);
   }
 
   .quick-install-modal {
@@ -176,6 +192,47 @@
   .quick-install-modal__dialog h2,
   .quick-install-modal__dialog p {
     margin-block-start: 0;
+  }
+
+  .agent-prompt-modal__dialog {
+    inline-size: min(100%, 54rem);
+  }
+
+  .agent-prompt-copy-field {
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-code-surface);
+  }
+
+  .agent-prompt-copy-field textarea {
+    inline-size: 100%;
+    min-block-size: min(42svh, 22rem);
+    resize: vertical;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--sk-code-text);
+    padding: var(--sk-space-4);
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-sm);
+    line-height: var(--sk-type-line-normal);
+  }
+
+  .agent-prompt-copy-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--sk-space-3);
+    border-block-start: var(--sk-border-1) solid var(--sk-border-default);
+    padding: var(--sk-space-3);
+  }
+
+  .agent-prompt-copy-actions .sk-button {
+    gap: var(--sk-space-2);
+  }
+
+  .agent-prompt-copy-actions .copy-icon {
+    inline-size: 1.1rem;
+    block-size: 1.1rem;
   }
 
   .install-copy-field {
@@ -750,6 +807,9 @@
   }
 
   .footer-wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sk-space-2);
     color: var(--sk-text-primary);
     font-family: var(--sk-font-mono);
     font-size: var(--sk-type-size-lg);
@@ -810,12 +870,17 @@
 
     .home-hero .sk-hero__actions {
       display: grid;
-      inline-size: min(100%, 22rem);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      inline-size: 100%;
+      gap: var(--sk-space-2);
     }
 
     .home-hero .sk-hero__actions .sk-button {
       inline-size: 100%;
       justify-content: space-between;
+      gap: var(--sk-space-2);
+      padding-inline: var(--sk-space-2);
+      font-size: clamp(.6875rem, 3vw, var(--sk-type-size-sm));
     }
 
     .home-hero__wash {
@@ -840,13 +905,50 @@
     }
 
     .site-footer .sk-footer__inner {
-      align-items: flex-start;
+      align-items: center;
       flex-direction: column;
+      text-align: center;
     }
 
     .site-footer__left {
-      align-items: flex-start;
+      align-items: center;
       flex-direction: column;
+    }
+
+    .site-footer__left nav,
+    .social-links {
+      justify-content: center;
+    }
+
+    .contact-grid .sk-feature-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .mobile-drawer-shell .sk-drawer nav ul {
+      align-content: center;
+      min-block-size: 100%;
+      gap: var(--sk-space-4);
+    }
+
+    .mobile-drawer-shell .sk-drawer nav a {
+      border-block-end: var(--sk-border-1) solid var(--sk-border-default);
+      padding-block: var(--sk-space-4);
+      font-family: var(--sk-font-mono);
+      font-size: clamp(var(--sk-type-size-xl), 8vw, var(--sk-type-size-3xl));
+      text-decoration: none;
+    }
+
+    .mobile-drawer-shell .sk-drawer > .sk-button {
+      inline-size: 100%;
+    }
+
+    .quick-install-modal {
+      padding: var(--sk-space-3);
+    }
+
+    .quick-install-modal__dialog {
+      max-block-size: calc(100svh - (2 * var(--sk-space-3)));
+      overflow-y: auto;
     }
   }
 
