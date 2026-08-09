@@ -124,6 +124,9 @@ require_text "${output_dir}/ecosystem/index.html" 'ecosystem-distributed-tools.w
 require_text "${output_dir}/ecosystem/index.html" '<h2 id="primitives-title">Primitives</h2>'
 require_text "${output_dir}/ecosystem/index.html" '<h2 id="tooling-title">Tooling</h2>'
 require_text "${output_dir}/ecosystem/index.html" '<h2 id="showcase-title">Showcase</h2>'
+require_text "${output_dir}/ecosystem/workcell/index.html" 'href="https://github.com/kujolang/workcell"'
+require_text "${output_dir}/ecosystem/redact/index.html" 'href="https://github.com/kujolang/redact"'
+require_text "${output_dir}/ecosystem/sitekit/index.html" 'href="https://github.com/kujolang/site-kit"'
 
 require_social_meta "${output_dir}/index.html" 'home'
 require_social_meta "${output_dir}/ecosystem/index.html" 'ecosystem'
@@ -132,7 +135,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 35 ]] || fail "expected 35 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 38 ]] || fail "expected 38 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -160,10 +163,10 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 30 ]] || fail "expected 30 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 30 ]] || fail "expected 30 ecosystem output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_sources" == 33 ]] || fail "expected 33 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 33 ]] || fail "expected 33 ecosystem output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 14 ]] || fail "expected 14 primitive cards, found ${primitive_count}"
-[[ "$tooling_count" == 11 ]] || fail "expected 11 tooling cards, found ${tooling_count}"
+[[ "$tooling_count" == 14 ]] || fail "expected 14 tooling cards, found ${tooling_count}"
 [[ "$showcase_count" == 5 ]] || fail "expected 5 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
@@ -228,4 +231,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 30 ecosystem projects, static WebP heroes, navigation, modal, footer, and content requirements verified.\n'
+printf 'Site contract passed: 33 ecosystem projects, static WebP heroes, navigation, modal, footer, and content requirements verified.\n'

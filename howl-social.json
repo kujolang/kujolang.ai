@@ -393,7 +393,39 @@
       "url": "kujolang.ai/ecosystem/totalrecall/",
       "background_image": "assets/images/ecosystem/totalrecall-global-memory.webp",
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "workcell",
+      "title": "Workcell",
+      "tagline": "Bounded container execution with receipts and declared artifacts.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/workcell/",
+      "background_image": "assets/images/ecosystem/workcell-contained-execution.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "redact",
+      "title": "Redact",
+      "tagline": "Deterministic local redaction with reviewable evidence.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/redact/",
+      "background_image": "assets/images/ecosystem/redact-document-sanitization.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "sitekit",
+      "title": "SiteKit",
+      "tagline": "Accessible, semantic building blocks for durable interfaces.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/sitekit/",
+      "background_image": "assets/images/ecosystem/sitekit-interface-system.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
     }
   ]
 }
-
