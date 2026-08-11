@@ -12,6 +12,10 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 - Nested missing routes now render the styled custom 404 with root-safe assets, useful recovery links, and explicit `noindex` handling.
 
+### Changed
+
+- Relay and Tribunal hero artwork now use stark, pure black-and-white dithered compositions with fragmented subjects and larger negative-space fields; their Howl social cards were regenerated from the new source art.
+
 ## [1.0.0] - 2026-08-08
 
 The first production release of the official Kujo programming language website.
