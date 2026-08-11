@@ -75,11 +75,18 @@ SVG, then Sharp produces the network-ready JPEG.
 ```bash
 npm install
 npm run social:cards
+kujo run ./build.kujo -- --site-url https://kujolang.ai
+npm run social:verify
 ```
 
 To add a page, tool, or Writing post, add a card whose `id` matches the route
 slug, choose its background image, and run the command again. Set `HOWL_BIN` if
 the Howl launcher is not at the default sibling-repository path.
+
+The verification command checks that every generated shareable route has one
+manifest card, a matching 1200×630 JPEG copied into the built site, exact
+Open Graph and X/Twitter image metadata, accessible alt text, and matching
+JSON-LD image data.
 
 ## Favicons and device icons
 

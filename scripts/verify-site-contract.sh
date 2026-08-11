@@ -171,6 +171,7 @@ for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	(( card_bytes < 5242880 )) || fail "social card exceeds 5 MB: ${social_card}"
 done
 file "${repo_root}/assets/images/og.png" | grep -Fq '1200 x 630' || fail 'legacy og.png is not 1200x630'
+node "${repo_root}/scripts/verify-social-cards.mjs" || fail 'exhaustive social card verification failed'
 
 file "${output_dir}/favicon.ico" | grep -Fq '3 icons' || fail 'favicon.ico does not contain 16, 32, and 48px entries'
 file "${output_dir}/favicon-16x16.png" | grep -Fq '16 x 16' || fail 'favicon-16x16.png has the wrong size'
