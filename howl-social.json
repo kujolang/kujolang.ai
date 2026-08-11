@@ -30,6 +30,8 @@
       "variant": "social",
       "label": "collection",
       "url": "kujolang.ai/ecosystem/",
+      "show_border": false,
+      "show_url": false,
       "background_image": "assets/images/ecosystem-distributed-tools.webp",
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
     },
