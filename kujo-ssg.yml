@@ -20,3 +20,4 @@ minify: true
 download_remote_images: false
 no_index: false
 no_aux: false
+no_aliases: true

@@ -1678,7 +1678,20 @@ func featured_image_html_tag(featured_image_url, title) {
 	}
 	safe_url := xml_escape(url)
 	safe_title := xml_escape(title)
-	return "<img src=\"" + safe_url + "\" alt=\"Featured image for " + safe_title + "\" class=\"featured-image\" loading=\"lazy\" decoding=\"async\">"
+	return "<img src=\"" + safe_url + "\" alt=\"Featured image for " + safe_title + "\" class=\"featured-image\"" + featured_image_dimension_attrs(url) + " loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"
+}
+
+# The current visual system uses a small, fixed family of committed hero
+# assets. Intrinsic dimensions prevent layout shifts before CSS and media load.
+func featured_image_dimension_attrs(featured_image_url) {
+	url := to_lower(trim(featured_image_url))
+	if contains(url, "shipcheck-release-containers") || contains(url, "sitekit-interface-system") || contains(url, "workcell-contained-execution") {
+		return " width=\"1916\" height=\"821\""
+	}
+	if contains(url, "totalrecall-global-memory") {
+		return " width=\"1536\" height=\"1024\""
+	}
+	return " width=\"1672\" height=\"941\""
 }
 
 func favicon_html(prefix) {
@@ -1717,7 +1730,37 @@ func render_layout(layout_template, settings, route, page_title, meta_descriptio
 	prefix := route_prefix(route)
 	native_favicon := "<link rel=\"icon\" type=\"image/svg+xml\" href=\"" + prefix + "favicon.svg\">"
 	rendered := render_layout_native(layout_template, settings, route, page_title, meta_description, navigation, content, page_meta)
-	return replace(rendered, native_favicon, favicon_html(prefix))
+	rendered = replace(rendered, native_favicon, favicon_html(prefix))
+	rendered = replace(rendered, "href=\"" + prefix + "index.html\"", "href=\"/\"")
+	rendered = replace(rendered, "<meta name=\"author\" content=\"Robert DeVore\">", "<meta name=\"author\" content=\"Kujo Team\">")
+
+	schema_type := ""
+	if route == "ecosystem/" || route == settings["blog_slug"] + "/" {
+		schema_type = "CollectionPage"
+	} else if starts_with(route, "ecosystem/") {
+		schema_type = "SoftwareSourceCode"
+	} else if route == "ethos/" {
+		schema_type = "AboutPage"
+	} else if route == "contact/" {
+		schema_type = "ContactPage"
+	} else if len(route) > 0 {
+		schema_type = "WebPage"
+	}
+	if len(schema_type) > 0 {
+		rendered = replace(rendered, "\"@type\":\"WebSite\"", "\"@type\":\"" + schema_type + "\"")
+		rendered = replace(rendered, "\"@type\":\"BlogPosting\"", "\"@type\":\"" + schema_type + "\"")
+	}
+	if has_key(page_meta, "code_repository") {
+		code_repository := trim(to_string(page_meta["code_repository"]))
+		if len(code_repository) > 0 {
+			rendered = replace(rendered, "\"publisher\":", "\"codeRepository\":\"" + json_escape(code_repository) + "\",\"publisher\":")
+		}
+	}
+	if len(route) == 0 {
+		home_schema_name := json_escape(meta_string(page_meta, "seo_title", page_title))
+		rendered = replace(rendered, "\"name\":\"" + home_schema_name + "\"", "\"name\":\"Kujo\",\"alternateName\":[\"Kujolang.ai\",\"Kujolang\"]")
+	}
+	return rendered
 }
 
 func render_layout_interpreted(layout_template, settings, route, page_title, meta_description, navigation, content, page_meta) {
@@ -1733,7 +1776,7 @@ func render_layout_interpreted(layout_template, settings, route, page_title, met
 		seo_description = trim(to_string(settings["site_tagline"]))
 	}
 	seo_keywords := meta_string(page_meta, "seo_keywords", "SSG, Static Site Generator")
-	author_meta := meta_string(page_meta, "author", "Robert DeVore")
+	author_meta := meta_string(page_meta, "author", "Kujo Team")
 	lang := to_lower(meta_string(page_meta, "lang", "en"))
 	if len(lang) == 0 {
 		lang = "en"
@@ -2382,6 +2425,7 @@ func listing_card_html(route, title, excerpt, featured_image, terms, action_labe
 	html := render_listing_card(route, title, excerpt, featured_image, terms, action_label)
 	html = replace(html, "class=\"listing-card\"", "class=\"listing-card sk-card\"")
 	html = replace(html, "class=\"listing-card-button\"", "class=\"listing-card-button sk-button\"")
+	html = replace(html, "class=\"listing-card-image\" loading=\"lazy\"", "class=\"listing-card-image\"" + featured_image_dimension_attrs(featured_image) + " loading=\"lazy\"")
 	return html
 }
 
@@ -3904,7 +3948,7 @@ func build_site(settings) {
 					"featured_image_html": featured_image_html_tag(item_featured_image_url, title),
 					"body": item_body_html
 				})
-				item_author_name := resolve_lookup(meta["author"], authors_lookup, "Unknown Author")
+				item_author_name := resolve_lookup(meta["author"], authors_lookup, "Kujo Team")
 
 				item_html := render_layout(
 				layout_template,
@@ -3923,8 +3967,7 @@ func build_site(settings) {
 					"featured_image": featured_image,
 					"social_image": social_image,
 					"author": item_author_name,
-					"og_type": "article",
-					"published_iso": item_date["iso"]
+					"code_repository": trim(to_string(meta["github_url"]))
 				}
 			)
 			write_route_page(output_dir, route, item_html)
@@ -4033,17 +4076,21 @@ func build_site(settings) {
 		}
 
 		listing_navigation := build_navigation(pages_data, custom_collections, listing_route, settings["blog_slug"])
+		listing_description := settings["site_tagline"]
+		if collection_slug == "ecosystem" {
+			listing_description = "Explore the Kujo ecosystem of language primitives, local-first tools, and inspectable AI-native application showcases."
+		}
 		listing_html := render_layout(
 			layout_template,
 			settings,
 			listing_route,
 			collection_title + " - " + settings["site_title"],
-			settings["site_tagline"],
+			listing_description,
 			listing_navigation,
 			listing_content,
 			{
 				"seo_title": collection_title,
-				"seo_description": settings["site_tagline"],
+				"seo_description": listing_description,
 				"lang": "en",
 				"social_image": "/assets/images/social/" + collection_slug + ".jpg"
 			}
@@ -4155,7 +4202,7 @@ func build_site(settings) {
 				index_navigation,
 				index_content,
 				{
-					"seo_title": settings["site_title"],
+					"seo_title": "Kujo — AI-Native Programming Language",
 					"seo_description": settings["site_tagline"],
 					"lang": "en",
 					"social_image": "/assets/images/social/home.jpg"

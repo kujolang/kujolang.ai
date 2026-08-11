@@ -33,6 +33,10 @@ bash scripts/dev.sh 4178
 
 The equivalent manual preview command is `kujo serve output --host 127.0.0.1 --port 8080`. This repository does not require a third-party hosting runtime.
 
+The production build disables flat `.html` aliases. GitHub Pages can therefore
+redirect extensionless nested paths to the canonical trailing-slash routes
+instead of serving duplicate HTML at both URL forms.
+
 ## Verification
 
 Run the production build and both site contracts before publishing:
