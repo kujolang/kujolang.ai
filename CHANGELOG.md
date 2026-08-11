@@ -6,7 +6,11 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ### Added
 
-- Ecosystem pages, WebP hero art, and social sharing cards for the official Workcell, Redact, SiteKit, and Tribunal 1.0.0 releases.
+- Ecosystem pages, WebP hero art, and social sharing cards for the official Workcell, Redact, SiteKit, Tribunal, and Relay 1.0.0 releases.
+
+### Fixed
+
+- Nested missing routes now render the styled custom 404 with root-safe assets, useful recovery links, and explicit `noindex` handling.
 
 ## [1.0.0] - 2026-08-08
 

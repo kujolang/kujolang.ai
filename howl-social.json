@@ -437,6 +437,17 @@
       "url": "kujolang.ai/ecosystem/tribunal/",
       "background_image": "assets/images/ecosystem/tribunal-adversarial-hearing.webp",
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "relay",
+      "title": "Relay",
+      "tagline": "Bounded agent missions with policy controls and verifiable evidence.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem showcase",
+      "url": "kujolang.ai/ecosystem/relay/",
+      "background_image": "assets/images/ecosystem/relay-mission-orchestration.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
     }
   ]
 }

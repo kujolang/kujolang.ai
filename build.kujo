@@ -1685,7 +1685,7 @@ func featured_image_html_tag(featured_image_url, title) {
 # assets. Intrinsic dimensions prevent layout shifts before CSS and media load.
 func featured_image_dimension_attrs(featured_image_url) {
 	url := to_lower(trim(featured_image_url))
-	if contains(url, "shipcheck-release-containers") || contains(url, "sitekit-interface-system") || contains(url, "tribunal-adversarial-hearing") || contains(url, "workcell-contained-execution") {
+	if contains(url, "shipcheck-release-containers") || contains(url, "sitekit-interface-system") || contains(url, "tribunal-adversarial-hearing") || contains(url, "workcell-contained-execution") || contains(url, "relay-mission-orchestration") {
 		return " width=\"1916\" height=\"821\""
 	}
 	if contains(url, "totalrecall-global-memory") {

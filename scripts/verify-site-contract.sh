@@ -140,6 +140,21 @@ require_text "${output_dir}/ecosystem/redact/index.html" 'href="https://github.c
 require_text "${output_dir}/ecosystem/sitekit/index.html" 'href="https://github.com/kujolang/site-kit"'
 require_text "${output_dir}/ecosystem/tribunal/index.html" 'href="https://github.com/kujolang/tribunal"'
 require_text "${output_dir}/ecosystem/tribunal/index.html" 'width="1916" height="821"'
+require_text "${output_dir}/ecosystem/relay/index.html" 'href="https://github.com/kujolang/relay"'
+require_text "${output_dir}/ecosystem/relay/index.html" 'width="1916" height="821"'
+require_text "${output_dir}/ecosystem/relay/index.html" '<link rel="canonical" href="https://kujolang.ai/ecosystem/relay/">'
+require_text "${output_dir}/ecosystem/relay/index.html" '"@type":"SoftwareSourceCode"'
+require_text "${output_dir}/ecosystem/relay/index.html" '"codeRepository":"https://github.com/kujolang/relay"'
+
+require_text "${output_dir}/404.html" '<meta name="robots" content="noindex,follow">'
+require_text "${output_dir}/404.html" 'href="/assets/css/sitekit.css"'
+require_text "${output_dir}/404.html" 'href="/assets/css/style.min.css?v='
+require_text "${output_dir}/404.html" 'src="/assets/images/kujo-logomark.svg"'
+require_text "${output_dir}/404.html" 'src="/assets/js/site.js"'
+require_text "${output_dir}/404.html" 'href="/favicon.ico"'
+reject_text "${output_dir}/404.html" '<link rel="canonical"'
+reject_text "${output_dir}/404.html" 'href="../'
+reject_text "${output_dir}/404.html" 'src="../'
 
 require_social_meta "${output_dir}/index.html" 'home'
 require_social_meta "${output_dir}/ecosystem/index.html" 'ecosystem'
@@ -148,7 +163,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 39 ]] || fail "expected 39 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 40 ]] || fail "expected 40 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -176,11 +191,11 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 34 ]] || fail "expected 34 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 34 ]] || fail "expected 34 ecosystem output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_sources" == 35 ]] || fail "expected 35 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 35 ]] || fail "expected 35 ecosystem output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 14 ]] || fail "expected 14 primitive cards, found ${primitive_count}"
 [[ "$tooling_count" == 14 ]] || fail "expected 14 tooling cards, found ${tooling_count}"
-[[ "$showcase_count" == 6 ]] || fail "expected 6 showcase cards, found ${showcase_count}"
+[[ "$showcase_count" == 7 ]] || fail "expected 7 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
 	image_path=$(sed -n 's/^featured_image: "\(.*\.webp\)"$/\1/p' "$source_file")
@@ -249,4 +264,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 34 ecosystem projects, static WebP heroes, navigation, modal, footer, and content requirements verified.\n'
+printf 'Site contract passed: 35 ecosystem projects, static WebP heroes, nested 404 recovery, navigation, modal, footer, and content requirements verified.\n'
