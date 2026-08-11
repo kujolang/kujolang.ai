@@ -69,7 +69,7 @@ def request(url: str, user_agent: str, timeout: int = 15) -> dict:
 
 def write_csv(path: Path, fields: list[str], rows: list[dict]) -> None:
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
+        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -103,9 +103,11 @@ def redirects(origin: str, phase: str) -> tuple[list[dict], dict]:
         final_query = urllib.parse.urlparse(final_url).query
         query_preserved = "n/a" if not source_query else ("yes" if source_query == final_query else "no")
         issues = []
-        if label in {"apex HTTP", "www HTTP", "www HTTPS", "nested no trailing slash", "flat HTML alias"}:
+        if label in {"apex HTTP", "www HTTP", "www HTTPS", "nested no trailing slash"}:
             if first_status not in (301, 308):
                 issues.append("non-permanent or missing canonical redirect")
+        if label == "flat HTML alias" and receipt["status"] != 404:
+            issues.append("retired flat alias did not return 404")
         if label == "404" and receipt["status"] != 404:
             issues.append("unexpected missing-route status")
         if receipt["status"] not in (200, 404):
@@ -114,10 +116,10 @@ def redirects(origin: str, phase: str) -> tuple[list[dict], dict]:
             "phase": phase, "source_url": url, "source_variant": label,
             "http_status": first_status, "target_url": final_url,
             "chain_length": len(receipt["chain"]), "final_status": receipt["status"],
-            "canonical_target": "yes" if final_url.startswith(canonical_host) else "no",
+            "canonical_target": "n/a" if label in {"flat HTML alias", "404"} else ("yes" if final_url.startswith(canonical_host) else "no"),
             "query_preserved": query_preserved,
             "verification": "live request with redirects followed",
-            "issues": "; ".join(issues + ([receipt["error"]] if receipt["error"] and not (label == "404" and receipt["status"] == 404) else [])),
+            "issues": "; ".join(issues + ([receipt["error"]] if receipt["error"] and not (label in {"404", "flat HTML alias"} and receipt["status"] == 404) else [])),
         })
     return rows, receipts
 

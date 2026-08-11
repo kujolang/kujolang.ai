@@ -70,5 +70,9 @@ python3 scripts/extract_lighthouse.py --audit-dir seo-audit/2026-08-10
 - A 401/403/405/429 external response is indeterminate. The two reported broken
   GitHub links were repeatable anonymous 404 responses and are still subject to
   owner confirmation because private repositories also appear as 404.
+- Removing flat output aliases intentionally reduced generated HTML from 76 to
+  39 files. GitHub Pages now redirects extensionless nested paths to their
+  trailing-slash directory routes; retired `.html` aliases return a truthful
+  404 because this host has no repository-level permanent redirect facility.
 - `llms.txt` remains an experimental discovery aid. No consulted search or AI
   provider documents it as an indexing or ranking requirement.

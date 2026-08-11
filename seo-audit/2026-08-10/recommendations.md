@@ -4,9 +4,9 @@ Audit date: 2026-08-10
 
 ## Immediate after deployment
 
-- Re-run `scripts/probe_site.py` and confirm HTTP/www, extensionless, and
-  `.html` variants resolve in one permanent hop to the canonical HTTPS routes;
-  verify the missing-route response remains a true 404.
+- Re-run `scripts/probe_site.py`; confirm HTTP/www and extensionless nested
+  variants resolve in one permanent hop to canonical HTTPS routes, retired
+  `.html` aliases return 404, and the missing-route response remains a true 404.
 - Validate the home, ecosystem, and one software page in Schema Markup
   Validator. Rich Results Test eligibility is a separate question and is not
   expected for every Schema.org type.

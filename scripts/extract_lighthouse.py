@@ -51,7 +51,7 @@ def main() -> int:
             "notes": "Lab run; not field Core Web Vitals. One run per representative template.",
         })
     with (audit / "performance.csv").open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=FIELDS)
+        writer = csv.DictWriter(handle, fieldnames=FIELDS, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     print(f"Normalized {len(rows)} Lighthouse receipts")
