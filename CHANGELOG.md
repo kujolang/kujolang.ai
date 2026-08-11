@@ -6,7 +6,7 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ### Added
 
-- Ecosystem pages, WebP hero art, and social sharing cards for the official Workcell, Redact, and SiteKit 1.0.0 releases.
+- Ecosystem pages, WebP hero art, and social sharing cards for the official Workcell, Redact, SiteKit, and Tribunal 1.0.0 releases.
 
 ## [1.0.0] - 2026-08-08
 

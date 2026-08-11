@@ -426,6 +426,17 @@
       "url": "kujolang.ai/ecosystem/sitekit/",
       "background_image": "assets/images/ecosystem/sitekit-interface-system.webp",
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "tribunal",
+      "title": "Tribunal",
+      "tagline": "Adversarial decision review with durable, sealed evidence.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem showcase",
+      "url": "kujolang.ai/ecosystem/tribunal/",
+      "background_image": "assets/images/ecosystem/tribunal-adversarial-hearing.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
     }
   ]
 }
