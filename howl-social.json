@@ -17,6 +17,8 @@
       "variant": "social",
       "label": "language",
       "url": "kujolang.ai/",
+      "show_border": false,
+      "show_url": false,
       "background_image": "assets/images/home-agent-workflow.webp",
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
     },
