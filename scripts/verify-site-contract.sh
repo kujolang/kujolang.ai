@@ -98,6 +98,7 @@ require_text "${output_dir}/index.html" 'Install Kujo &amp; the local-first ecos
 require_text "${output_dir}/index.html" 'data-copy-status data-scramble-skip'
 require_text "${output_dir}/index.html" 'assets/images/kujo-logomark.svg'
 require_text "${output_dir}/index.html" 'assets/js/vendor/scramble-decode.js'
+require_text "${output_dir}/index.html" 'assets/css/style.min.css?v='
 require_text "${output_dir}/index.html" '<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">'
 require_text "${output_dir}/index.html" '<link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg?v=kujo-k-1">'
 require_text "${output_dir}/index.html" '<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">'

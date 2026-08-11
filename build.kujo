@@ -1730,6 +1730,19 @@ func render_layout(layout_template, settings, route, page_title, meta_descriptio
 	prefix := route_prefix(route)
 	native_favicon := "<link rel=\"icon\" type=\"image/svg+xml\" href=\"" + prefix + "favicon.svg\">"
 	rendered := render_layout_native(layout_template, settings, route, page_title, meta_description, navigation, content, page_meta)
+	style_file := "assets/css/style.css"
+	if settings["minify"] {
+		style_file = "assets/css/style.min.css"
+	}
+	style_source := path_join(path_join(settings["assets"], "css"), "style.css")
+	if path_exists(style_source) {
+		style_version := md5(read_file(style_source))
+		if len(style_version) > 12 {
+			style_version = substring(style_version, 0, 12)
+		}
+		style_href := prefix + style_file
+		rendered = replace(rendered, "href=\"" + style_href + "\"", "href=\"" + style_href + "?v=" + style_version + "\"")
+	}
 	rendered = replace(rendered, native_favicon, favicon_html(prefix))
 	rendered = replace(rendered, "href=\"" + prefix + "index.html\"", "href=\"/\"")
 	rendered = replace(rendered, "<meta name=\"author\" content=\"Robert DeVore\">", "<meta name=\"author\" content=\"Kujo Team\">")
