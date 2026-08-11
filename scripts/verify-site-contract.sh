@@ -203,6 +203,8 @@ require_text "${output_dir}/assets/css/style.css" 'font-size: 96px;'
 require_text "${output_dir}/assets/css/style.css" 'body:has(.home-hero) .site-footer'
 require_text "${output_dir}/assets/css/style.css" '.ethos-page .kujo-content > h2:first-child'
 require_text "${output_dir}/assets/css/style.css" 'margin-block-start: auto;'
+require_text "${output_dir}/assets/css/style.css" 'block-size: auto;'
+require_text "${output_dir}/assets/css/style.css" 'aspect-ratio: 16 / 9;'
 reject_text "${output_dir}/assets/css/style.css" '@keyframes grid-drift'
 require_text "${output_dir}/assets/js/site.js" 'function enhanceHeroDither()'
 require_text "${output_dir}/assets/js/site.js" ".home-hero__media, .page-hero__media, .tool-hero__media"
