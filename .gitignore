@@ -3,5 +3,7 @@ output/
 node_modules/
 tmp/
 *.log
+__pycache__/
 .kujo-*
 .runledger/
+seo-audit/*/raw/
