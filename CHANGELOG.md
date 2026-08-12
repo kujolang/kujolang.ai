@@ -4,8 +4,11 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-12
+
 ### Added
 
+- Ecosystem pages, custom binary dither hero art, and Howl social sharing cards for ContentGraph, SearchBridge, and SiteProbe 0.1.0.
 - Ecosystem pages, WebP hero art, and social sharing cards for the official Workcell, Redact, SiteKit, Tribunal, and Relay 1.0.0 releases.
 
 ### Fixed
