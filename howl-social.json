@@ -528,6 +528,45 @@
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
       "show_border": false,
       "show_url": false
+    },
+    {
+      "id": "contentgraph",
+      "title": "ContentGraph",
+      "tagline": "Inspectable content relationships, clusters, orphans, and link opportunities.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/contentgraph/",
+      "background_image": "assets/images/ecosystem/contentgraph-content-network.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
+      "id": "searchbridge",
+      "title": "SearchBridge",
+      "tagline": "Scoped provider evidence for search, analytics, and WebOps.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/searchbridge/",
+      "background_image": "assets/images/ecosystem/searchbridge-provider-relay.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
+      "id": "siteprobe",
+      "title": "SiteProbe",
+      "tagline": "Bounded website crawls with durable, comparable evidence.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/siteprobe/",
+      "background_image": "assets/images/ecosystem/siteprobe-website-crawler.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
     }
   ]
 }

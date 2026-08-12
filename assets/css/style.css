@@ -702,6 +702,12 @@
   .tool-hero__copy {
     display: grid;
     justify-items: start;
+    min-inline-size: 0;
+  }
+
+  .tool-hero h1 {
+    font-size: clamp(3.5rem, 5.5vw, var(--sk-type-size-5xl));
+    overflow-wrap: anywhere;
   }
 
   .tool-hero__lead {
@@ -920,6 +926,10 @@
     .page-hero__wash,
     .tool-hero__wash {
       background: linear-gradient(0deg, var(--sk-surface-page) 0%, color-mix(in srgb, var(--sk-surface-page) 92%, transparent) 58%, color-mix(in srgb, var(--sk-surface-page) 56%, transparent) 100%);
+    }
+
+    .tool-hero h1 {
+      font-size: clamp(2.5rem, 11vw, 3.5rem);
     }
 
     .longform-layout,
