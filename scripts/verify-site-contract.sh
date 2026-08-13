@@ -112,7 +112,9 @@ require_text "${output_dir}/ecosystem/shipcheck/index.html" 'href="../../favicon
 require_text "${output_dir}/ecosystem/shipcheck/index.html" 'href="../../site.webmanifest"'
 require_text "${output_dir}/index.html" '>Home</a></li><li class="nav-dropdown" data-nav-dropdown>'
 require_text "${output_dir}/index.html" '<a href="/ecosystem/" class="text-primary hover:underline">Ecosystem</a>'
-require_text "${output_dir}/index.html" '<a href="/ecosystem/#primitives-title">Primitives</a>'
+require_text "${output_dir}/index.html" '<a href="/ecosystem/primitives/">Primitives</a>'
+require_text "${output_dir}/index.html" '<a href="/ecosystem/tooling/">Tooling</a>'
+require_text "${output_dir}/index.html" '<a href="/ecosystem/showcase/">Showcase</a>'
 require_text "${output_dir}/index.html" '<a href="/ecosystem/skills/">Skills</a>'
 require_text "${output_dir}/index.html" '<a href="/ecosystem/workflows/">Workflows</a>'
 require_text "${output_dir}/index.html" '<a href="https://agents.kujolang.ai" target="_blank" rel="noopener">Agents'
@@ -139,6 +141,16 @@ require_text "${output_dir}/ecosystem/index.html" '"@type":"CollectionPage"'
 require_text "${output_dir}/ecosystem/index.html" '<h2 id="primitives-title">Primitives</h2>'
 require_text "${output_dir}/ecosystem/index.html" '<h2 id="tooling-title">Tooling</h2>'
 require_text "${output_dir}/ecosystem/index.html" '<h2 id="showcase-title">Showcase</h2>'
+require_text "${output_dir}/ecosystem/index.html" '<h2 id="skills-title">Skills</h2>'
+require_text "${output_dir}/ecosystem/index.html" '<h2 id="workflows-title">Workflows</h2>'
+require_text "${output_dir}/ecosystem/index.html" '<h2 id="agents-title">Agents</h2>'
+require_text "${output_dir}/ecosystem/index.html" 'data-carousel aria-label="Primitive projects"'
+require_text "${output_dir}/ecosystem/index.html" 'data-carousel aria-label="Application showcases"'
+require_text "${output_dir}/ecosystem/index.html" '>All primitives</a>'
+require_text "${output_dir}/ecosystem/index.html" '>All tooling</a>'
+require_text "${output_dir}/ecosystem/index.html" '>All skills</a>'
+require_text "${output_dir}/ecosystem/index.html" '>All workflows</a>'
+require_text "${output_dir}/ecosystem/index.html" '>All showcases</a>'
 require_text "${output_dir}/ecosystem/workcell/index.html" 'href="https://github.com/kujolang/workcell"'
 require_text "${output_dir}/ecosystem/redact/index.html" 'href="https://github.com/kujolang/redact"'
 require_text "${output_dir}/ecosystem/sitekit/index.html" 'href="https://github.com/kujolang/site-kit"'
@@ -168,12 +180,19 @@ reject_text "${output_dir}/404.html" 'src="../'
 
 require_social_meta "${output_dir}/index.html" 'home'
 require_social_meta "${output_dir}/ecosystem/index.html" 'ecosystem'
+for section in primitives tooling showcase; do
+	require_file "${output_dir}/ecosystem/${section}/index.html"
+	require_social_meta "${output_dir}/ecosystem/${section}/index.html" "$section"
+	require_text "${output_dir}/ecosystem/${section}/index.html" '"@type":"CollectionPage"'
+	require_text "${output_dir}/ecosystem/${section}/index.html" 'class="card-grid ecosystem-card-grid"'
+	require_text "${output_dir}/ecosystem/${section}/index.html" 'fetchpriority="high"'
+done
 require_social_meta "${output_dir}/ethos/index.html" 'ethos'
 require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 154 ]] || fail "expected 154 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 157 ]] || fail "expected 157 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -203,7 +222,7 @@ primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosy
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 [[ "$ecosystem_sources" == 38 ]] || fail "expected 38 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 38 ]] || fail "expected 38 ecosystem output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_outputs" == 41 ]] || fail "expected 38 project and 3 catalog output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 14 ]] || fail "expected 14 primitive cards, found ${primitive_count}"
 [[ "$tooling_count" == 17 ]] || fail "expected 17 tooling cards, found ${tooling_count}"
 [[ "$showcase_count" == 7 ]] || fail "expected 7 showcase cards, found ${showcase_count}"
@@ -216,14 +235,17 @@ done
 
 for tool_page in "${output_dir}"/ecosystem/*/index.html; do
 	tool_slug=$(basename "$(dirname "$tool_page")")
-	if [[ "$tool_slug" == "skills" || "$tool_slug" == "workflows" ]]; then
+	if [[ "$tool_slug" == "skills" || "$tool_slug" == "workflows" || "$tool_slug" == "primitives" || "$tool_slug" == "tooling" || "$tool_slug" == "showcase" ]]; then
 		continue
 	fi
 	require_social_meta "$tool_page" "$tool_slug"
 	require_text "$tool_page" 'class="copy-icon copy-icon--copy"'
 	require_text "$tool_page" 'data-copy-status data-scramble-skip></span><button'
-	require_text "$tool_page" 'target="_blank" rel="noopener">View on GitHub</a>'
-	require_text "$tool_page" '>View ecosystem</a>'
+	require_text "$tool_page" 'class="sk-button github-button"'
+	require_text "$tool_page" '<span>GitHub</span></a>'
+	require_text "$tool_page" '>All '
+	reject_text "$tool_page" 'View on GitHub'
+	reject_text "$tool_page" 'View ecosystem'
 	require_text "$tool_page" '"@type":"SoftwareSourceCode"'
 	require_text "$tool_page" '"codeRepository":"https://github.com/'
 	require_text "$tool_page" 'fetchpriority="high"'
@@ -245,7 +267,11 @@ done
 for skill_page in "${output_dir}"/ecosystem/skills/*/index.html; do
 	skill_slug=$(basename "$(dirname "$skill_page")")
 	require_social_meta "$skill_page" "$skill_slug"
-	require_text "$skill_page" 'target="_blank" rel="noopener">View on GitHub</a>'
+	require_text "$skill_page" 'class="sk-button github-button"'
+	require_text "$skill_page" '<span>GitHub</span></a>'
+	require_text "$skill_page" '>All skills</a>'
+	reject_text "$skill_page" 'View on GitHub'
+	reject_text "$skill_page" 'View all skills'
 	require_text "$skill_page" '"@type":"SoftwareSourceCode"'
 	require_text "$skill_page" 'width="1916" height="821"'
 done
@@ -253,7 +279,11 @@ done
 for workflow_page in "${output_dir}"/ecosystem/workflows/*/index.html; do
 	workflow_slug=$(basename "$(dirname "$workflow_page")")
 	require_social_meta "$workflow_page" "$workflow_slug"
-	require_text "$workflow_page" 'target="_blank" rel="noopener">View on GitHub</a>'
+	require_text "$workflow_page" 'class="sk-button github-button"'
+	require_text "$workflow_page" '<span>GitHub</span></a>'
+	require_text "$workflow_page" '>All workflows</a>'
+	reject_text "$workflow_page" 'View on GitHub'
+	reject_text "$workflow_page" 'View all workflows'
 	require_text "$workflow_page" '"@type":"SoftwareSourceCode"'
 	require_text "$workflow_page" 'width="1916" height="821"'
 done
@@ -268,6 +298,8 @@ require_text "${output_dir}/assets/css/style.css" 'aspect-ratio: 16 / 9;'
 require_text "${output_dir}/assets/css/style.css" 'aspect-ratio: 16 / 9;'
 reject_text "${output_dir}/assets/css/style.css" '@keyframes grid-drift'
 require_text "${output_dir}/assets/js/site.js" 'function enhanceHeroDither()'
+require_text "${output_dir}/assets/js/site.js" 'function enhanceCarousels()'
+require_text "${output_dir}/assets/css/style.css" 'grid-auto-columns: calc((100% - (2 * var(--sk-space-5))) / 3);'
 require_text "${output_dir}/assets/js/site.js" ".home-hero__media, .page-hero__media, .tool-hero__media"
 require_text "${output_dir}/assets/js/site.js" 'Math.sin(frame * 0.36) * 7'
 reject_text "${output_dir}/assets/js/site.js" 'waveAmplitude'
@@ -308,4 +340,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 38 ecosystem projects, 83 skills, 26 workflows, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 38 ecosystem projects, 3 section catalogs, 83 skills, 26 workflows, carousels, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

@@ -1,0 +1,4 @@
+crawler,purpose,robots_access,live_status,waf_or_cdn_result,recommended_action,action_taken,evidence
+Googlebot,search discovery,pending after deployment,pending,pending,Verify representative routes after deployment,None yet,Production verification pending
+Bingbot,search discovery,pending after deployment,pending,pending,Verify representative routes after deployment,None yet,Production verification pending
+OAI-SearchBot,AI search discovery,pending after deployment,pending,pending,Verify representative routes after deployment,None yet,Production verification pending

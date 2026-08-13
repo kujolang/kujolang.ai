@@ -137,6 +137,9 @@ def source_map(repo: Path) -> dict[str, str]:
     result = {
         "/": "templates/page-home.html",
         "/ecosystem/": "templates/page-ecosystem.html",
+        "/ecosystem/primitives/": "templates/page-ecosystem-section.html",
+        "/ecosystem/tooling/": "templates/page-ecosystem-section.html",
+        "/ecosystem/showcase/": "templates/page-ecosystem-section.html",
         "/writing/": "templates/page-writing.html",
     }
     for source in sorted((repo / "content").glob("**/*.md")):
@@ -154,7 +157,7 @@ def source_map(repo: Path) -> dict[str, str]:
 def page_type(route: str) -> str:
     if route == "/":
         return "home"
-    if route in {"/ecosystem/", "/ecosystem/skills/", "/ecosystem/workflows/"}:
+    if route in {"/ecosystem/", "/ecosystem/primitives/", "/ecosystem/tooling/", "/ecosystem/showcase/", "/ecosystem/skills/", "/ecosystem/workflows/"}:
         return "collection"
     if route.startswith("/ecosystem/"):
         return "software-detail"

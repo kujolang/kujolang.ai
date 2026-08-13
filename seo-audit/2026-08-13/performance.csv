@@ -1,0 +1,2 @@
+phase,url,template,run_date,environment,lighthouse_version,html_bytes,css_bytes,js_bytes,image_bytes,font_bytes,requests,lcp_ms,inp_ms,cls,ttfb_ms,source,notes
+after,https://kujolang.ai/ecosystem/,ecosystem-overview,2026-08-13,local,,,,,,,,,,,,NOT AVAILABLE — DATA ACCESS REQUIRED,No Lighthouse or field Core Web Vitals dataset was captured; browser geometry verified three visible desktop cards
