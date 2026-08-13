@@ -11,7 +11,7 @@ github_url: "https://github.com/kujolang/kujo-workflows/tree/main/webops-content
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
-last_updated: "2026-08-11"
+last_updated: "2026-08-12"
 keywords: "Webops Content Refresh, Kujo workflow, webops-content-refresh, local-first agent workflow"
 seo_title: "Webops Content Refresh — Kujo Workflow"
 seo_description: "Turn decay and accuracy evidence into a Spec, approved update boundary, verification, and future measurement cue."

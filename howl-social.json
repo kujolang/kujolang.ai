@@ -713,7 +713,7 @@
     },
     {
       "id": "kujo-contentgraph-workflows",
-      "title": "Kujo Contentgraph Workflows",
+      "title": "Kujo ContentGraph Workflows",
       "tagline": "Use when building, inspecting, comparing, exporting, or consuming deterministic ContentGraph artifacts.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1155,7 +1155,7 @@
     },
     {
       "id": "kujo-site-kit-workflows",
-      "title": "Kujo Site Kit Workflows",
+      "title": "Kujo SiteKit Repository Workflows",
       "tagline": "Use this skill when building, validating, consuming, or maintaining SiteKit design-system artifacts in the `site-kit` repository: tokens, component schemas/templates/CSS, generated `dist/sitekit.css`, optional `dist/sitekit.js`, accessibility checks, browser smoke tests, launch checklist, or Workcell evidence.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1663,7 +1663,7 @@
     {
       "id": "workflows",
       "title": "Workflows",
-      "tagline": "25 local-first workflow kits with inspectable evidence.",
+      "tagline": "26 local-first workflow kits with inspectable evidence.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "collection",
@@ -1981,6 +1981,19 @@
       "label": "workflow",
       "url": "kujolang.ai/ecosystem/workflows/webops-weekly-site-health/",
       "background_image": "assets/images/ecosystem/workflow-webops-weekly-site-health.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
+      "id": "codebase-cleanup",
+      "title": "Codebase Cleanup",
+      "tagline": "Reduce unnecessary repository code and complexity through evidence-classified analysis, reviewer-approved mechanical cleanup, verification rollback, and structured reporting.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "workflow",
+      "url": "kujolang.ai/ecosystem/workflows/codebase-cleanup/",
+      "background_image": "assets/images/ecosystem/workflow-codebase-cleanup.webp",
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
       "show_border": false,
       "show_url": false

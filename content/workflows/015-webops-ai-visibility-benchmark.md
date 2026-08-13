@@ -11,7 +11,7 @@ github_url: "https://github.com/kujolang/kujo-workflows/tree/main/webops-ai-visi
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: experimental. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
-last_updated: "2026-08-11"
+last_updated: "2026-08-12"
 keywords: "Webops AI Visibility Benchmark, Kujo workflow, webops-ai-visibility-benchmark, local-first agent workflow"
 seo_title: "Webops AI Visibility Benchmark — Kujo Workflow"
 seo_description: "Run a fixed longitudinal query suite across explicitly available AI/search surfaces without fabricated availability."

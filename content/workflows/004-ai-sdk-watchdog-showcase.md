@@ -11,7 +11,7 @@ github_url: "https://github.com/kujolang/kujo-workflows/tree/main/ai-sdk-watchdo
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
-last_updated: "2026-08-11"
+last_updated: "2026-08-12"
 keywords: "AI SDK Watchdog Showcase, Kujo workflow, ai-sdk-watchdog-showcase, local-first agent workflow"
 seo_title: "AI SDK Watchdog Showcase — Kujo Workflow"
 seo_description: "Route AI SDK chat traffic through Watchdog and export telemetry."

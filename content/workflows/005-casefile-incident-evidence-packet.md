@@ -11,7 +11,7 @@ github_url: "https://github.com/kujolang/kujo-workflows/tree/main/casefile-incid
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
-last_updated: "2026-08-11"
+last_updated: "2026-08-12"
 keywords: "Casefile Incident Evidence Packet, Kujo workflow, casefile-incident-evidence-packet, local-first agent workflow"
 seo_title: "Casefile Incident Evidence Packet — Kujo Workflow"
 seo_description: "Capture a deterministic failure into a redacted incident evidence bundle."

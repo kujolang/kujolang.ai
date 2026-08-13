@@ -173,7 +173,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 153 ]] || fail "expected 153 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 154 ]] || fail "expected 154 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -235,7 +235,7 @@ workflow_sources=$(find "${repo_root}/content/workflows" -maxdepth 1 -type f -na
 skills_outputs=$(find "${output_dir}/ecosystem/skills" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
 workflow_outputs=$(find "${output_dir}/ecosystem/workflows" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
 [[ "$skills_sources" == 83 && "$skills_outputs" == 83 ]] || fail "expected 83 skill source and output routes, found ${skills_sources}/${skills_outputs}"
-[[ "$workflow_sources" == 25 && "$workflow_outputs" == 25 ]] || fail "expected 25 workflow source and output routes, found ${workflow_sources}/${workflow_outputs}"
+[[ "$workflow_sources" == 26 && "$workflow_outputs" == 26 ]] || fail "expected 26 workflow source and output routes, found ${workflow_sources}/${workflow_outputs}"
 
 for catalog_page in "${output_dir}/ecosystem/skills/index.html" "${output_dir}/ecosystem/workflows/index.html"; do
 	require_text "$catalog_page" '"@type":"CollectionPage"'
@@ -307,4 +307,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 38 ecosystem projects, 83 skills, 25 workflows, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 38 ecosystem projects, 83 skills, 26 workflows, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

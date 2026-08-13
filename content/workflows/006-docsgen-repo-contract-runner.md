@@ -11,7 +11,7 @@ github_url: "https://github.com/kujolang/kujo-workflows/tree/main/docsgen-repo-c
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
-last_updated: "2026-08-11"
+last_updated: "2026-08-12"
 keywords: "Docsgen Repo Contract Runner, Kujo workflow, docsgen-repo-contract-runner, local-first agent workflow"
 seo_title: "Docsgen Repo Contract Runner — Kujo Workflow"
 seo_description: "Generate a reviewable DocsGen contract packet for a chosen repository."

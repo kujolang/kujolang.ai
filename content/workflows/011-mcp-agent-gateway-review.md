@@ -11,7 +11,7 @@ github_url: "https://github.com/kujolang/kujo-workflows/tree/main/mcp-agent-gate
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
-last_updated: "2026-08-11"
+last_updated: "2026-08-12"
 keywords: "MCP Agent Gateway Review, Kujo workflow, mcp-agent-gateway-review, local-first agent workflow"
 seo_title: "MCP Agent Gateway Review — Kujo Workflow"
 seo_description: "Generate and validate a constrained MCP server scaffold and safety packet for a repository."

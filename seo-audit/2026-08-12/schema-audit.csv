@@ -129,6 +129,7 @@ after,https://kujolang.ai/ecosystem/workflows/agency-verified-fix-loop/,1,valid 
 after,https://kujolang.ai/ecosystem/workflows/ai-sdk-muzzle-benchmark/,1,valid JSON,Organization|SoftwareSourceCode,manual review required,Not inferred from Schema.org validity,
 after,https://kujolang.ai/ecosystem/workflows/ai-sdk-watchdog-showcase/,1,valid JSON,Organization|SoftwareSourceCode,manual review required,Not inferred from Schema.org validity,
 after,https://kujolang.ai/ecosystem/workflows/casefile-incident-evidence-packet/,1,valid JSON,Organization|SoftwareSourceCode,manual review required,Not inferred from Schema.org validity,
+after,https://kujolang.ai/ecosystem/workflows/codebase-cleanup/,1,valid JSON,Organization|SoftwareSourceCode,manual review required,Not inferred from Schema.org validity,
 after,https://kujolang.ai/ecosystem/workflows/docsgen-repo-contract-runner/,1,valid JSON,Organization|SoftwareSourceCode,manual review required,Not inferred from Schema.org validity,
 after,https://kujolang.ai/ecosystem/workflows/enterprise-dispatch-approval-router/,1,valid JSON,Organization|SoftwareSourceCode,manual review required,Not inferred from Schema.org validity,
 after,https://kujolang.ai/ecosystem/workflows/feature-card-workflow/,1,valid JSON,Organization|SoftwareSourceCode,manual review required,Not inferred from Schema.org validity,

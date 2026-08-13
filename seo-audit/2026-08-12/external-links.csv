@@ -1214,6 +1214,16 @@ after,https://kujolang.ai/ecosystem/workflows/casefile-incident-evidence-packet/
 after,https://kujolang.ai/ecosystem/workflows/casefile-incident-evidence-packet/,https://x.com/kujolang,Kujo on X,nav,,https://x.com/kujolang,0,not probed in crawl,,none
 after,https://kujolang.ai/ecosystem/workflows/casefile-incident-evidence-packet/,https://github.com/kujolang,Kujo on GitHub,nav,,https://github.com/kujolang,0,not probed in crawl,,none
 after,https://kujolang.ai/ecosystem/workflows/casefile-incident-evidence-packet/,https://discord.gg/RqDgyb3BX,Kujo on Discord,nav,,https://discord.gg/RqDgyb3BX,0,not probed in crawl,,none
+after,https://kujolang.ai/ecosystem/workflows/codebase-cleanup/,https://agents.kujolang.ai,Agents (opens in a new tab),nav,,https://agents.kujolang.ai,0,not probed in crawl,noopener,none
+after,https://kujolang.ai/ecosystem/workflows/codebase-cleanup/,https://docs.kujolang.ai,Docs,nav,,https://docs.kujolang.ai,0,not probed in crawl,,none
+after,https://kujolang.ai/ecosystem/workflows/codebase-cleanup/,https://agents.kujolang.ai,Agents (opens in a new tab),nav,,https://agents.kujolang.ai,0,not probed in crawl,noopener,none
+after,https://kujolang.ai/ecosystem/workflows/codebase-cleanup/,https://docs.kujolang.ai,Docs,nav,,https://docs.kujolang.ai,0,not probed in crawl,,none
+after,https://kujolang.ai/ecosystem/workflows/codebase-cleanup/,https://github.com/kujolang/kujo-workflows/tree/main/codebase-cleanup,Open the complete codebase-cleanup workflow kit on GitHub,article,,https://github.com/kujolang/kujo-workflows/tree/main/codebase-cleanup,0,not probed in crawl,,none
+after,https://kujolang.ai/ecosystem/workflows/codebase-cleanup/,https://github.com/kujolang/kujo-workflows/blob/main/docs/audit/workflow-catalog.json,Browse the released workflow catalog,article,,https://github.com/kujolang/kujo-workflows/blob/main/docs/audit/workflow-catalog.json,0,not probed in crawl,,none
+after,https://kujolang.ai/ecosystem/workflows/codebase-cleanup/,https://github.com/kujolang/kujo-workflows/tree/main/codebase-cleanup,View workflow on GitHub,aside,,https://github.com/kujolang/kujo-workflows/tree/main/codebase-cleanup,0,not probed in crawl,noopener,none
+after,https://kujolang.ai/ecosystem/workflows/codebase-cleanup/,https://x.com/kujolang,Kujo on X,nav,,https://x.com/kujolang,0,not probed in crawl,,none
+after,https://kujolang.ai/ecosystem/workflows/codebase-cleanup/,https://github.com/kujolang,Kujo on GitHub,nav,,https://github.com/kujolang,0,not probed in crawl,,none
+after,https://kujolang.ai/ecosystem/workflows/codebase-cleanup/,https://discord.gg/RqDgyb3BX,Kujo on Discord,nav,,https://discord.gg/RqDgyb3BX,0,not probed in crawl,,none
 after,https://kujolang.ai/ecosystem/workflows/docsgen-repo-contract-runner/,https://agents.kujolang.ai,Agents (opens in a new tab),nav,,https://agents.kujolang.ai,0,not probed in crawl,noopener,none
 after,https://kujolang.ai/ecosystem/workflows/docsgen-repo-contract-runner/,https://docs.kujolang.ai,Docs,nav,,https://docs.kujolang.ai,0,not probed in crawl,,none
 after,https://kujolang.ai/ecosystem/workflows/docsgen-repo-contract-runner/,https://agents.kujolang.ai,Agents (opens in a new tab),nav,,https://agents.kujolang.ai,0,not probed in crawl,noopener,none

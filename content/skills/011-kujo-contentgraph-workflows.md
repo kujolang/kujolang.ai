@@ -1,5 +1,5 @@
 ---
-title: "Kujo Contentgraph Workflows"
+title: "Kujo ContentGraph Workflows"
 custom_url: "kujo-contentgraph-workflows"
 description: "Use when building, inspecting, comparing, exporting, or consuming deterministic ContentGraph artifacts."
 featured_image: "/assets/images/ecosystem/skill-kujo-contentgraph-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Contentgraph Workflows, Kujo Agent Skill, kujo-contentgraph-workflows, repository-backed agent guidance"
-seo_title: "Kujo Contentgraph Workflows — Kujo Agent Skill"
+keywords: "Kujo ContentGraph Workflows, Kujo Agent Skill, kujo-contentgraph-workflows, repository-backed agent guidance"
+seo_title: "Kujo ContentGraph Workflows — Kujo Agent Skill"
 seo_description: "Use when building, inspecting, comparing, exporting, or consuming deterministic ContentGraph artifacts."
 ---
 

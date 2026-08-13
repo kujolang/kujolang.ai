@@ -107,7 +107,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Contentgraph Workflows",
+      "name": "Kujo ContentGraph Workflows",
       "slug": "kujo-contentgraph-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-contentgraph-workflows/SKILL.md",
       "object_description": "contentgraph content relationship map with connected document nodes",
@@ -413,7 +413,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Site Kit Workflows",
+      "name": "Kujo SiteKit Repository Workflows",
       "slug": "kujo-site-kit-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-site-kit-workflows/SKILL.md",
       "object_description": "site kit interface component drafting table with accessible control samples",
@@ -986,6 +986,14 @@
       "object_description": "weekly website health inspection rig with crawl performance and accessibility gauges",
       "hero_path": "assets/images/ecosystem/workflow-webops-weekly-site-health.webp",
       "social_path": "assets/images/social/webops-weekly-site-health.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "Codebase Cleanup",
+      "slug": "codebase-cleanup",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/codebase-cleanup",
+      "hero_path": "assets/images/ecosystem/workflow-codebase-cleanup.webp",
+      "social_path": "assets/images/social/codebase-cleanup.jpg"
     },
     {
       "kind": "workflow",

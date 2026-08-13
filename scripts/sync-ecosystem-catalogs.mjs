@@ -28,7 +28,11 @@ function frontmatterValue(source, key) {
 }
 
 function titleFromMarkdown(source, fallback) {
-  return source.match(/^#\s+(.+)$/m)?.[1]?.trim() || fallback;
+  const title = source.match(/^#\s+(.+)$/m)?.[1]?.trim() || fallback;
+  return title
+    .replace(/\bContentgraph\b/g, 'ContentGraph')
+    .replace(/\bSite Kit\b/g, 'SiteKit')
+    .replace(/\bSitekit\b/g, 'SiteKit');
 }
 
 function usefulBullets(source) {
@@ -179,7 +183,9 @@ const generatedCards = [{
 skillPaths.forEach((skillPath, index) => {
   const source = releasedFile(skillsRepo, skillPath);
   const slug = skillPath.split('/')[1];
-  const title = titleFromMarkdown(source, words(slug));
+  const title = slug === 'kujo-site-kit-workflows'
+    ? 'Kujo SiteKit Repository Workflows'
+    : titleFromMarkdown(source, words(slug));
   const description = frontmatterValue(source, 'description');
   const heroPath = `assets/images/ecosystem/skill-${slug}.webp`;
   const sourceUrl = `https://github.com/kujolang/kujo-skills/blob/main/${skillPath}`;
