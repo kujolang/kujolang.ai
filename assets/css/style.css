@@ -702,6 +702,7 @@
   .listing-card {
     display: grid;
     grid-template-rows: auto 1fr;
+    min-inline-size: 0;
     padding: 0;
     overflow: hidden;
   }
@@ -739,6 +740,7 @@
     flex-direction: column;
     align-items: stretch;
     gap: var(--sk-space-4);
+    min-inline-size: 0;
     padding: var(--sk-space-6);
   }
 
@@ -754,6 +756,7 @@
   .listing-card-excerpt {
     margin: 0;
     color: var(--sk-text-secondary);
+    overflow-wrap: anywhere;
   }
 
   .listing-card-tags {
