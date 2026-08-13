@@ -247,15 +247,15 @@ for skill_page in "${output_dir}"/ecosystem/skills/*/index.html; do
 	require_social_meta "$skill_page" "$skill_slug"
 	require_text "$skill_page" 'target="_blank" rel="noopener">View skill on GitHub</a>'
 	require_text "$skill_page" '"@type":"SoftwareSourceCode"'
-	require_text "$skill_page" 'width="1672" height="941"'
+	require_text "$skill_page" 'width="1916" height="821"'
 done
 
 for workflow_page in "${output_dir}"/ecosystem/workflows/*/index.html; do
 	workflow_slug=$(basename "$(dirname "$workflow_page")")
 	require_social_meta "$workflow_page" "$workflow_slug"
-	require_text "$workflow_page" 'target="_blank" rel="noopener">View workflow on GitHub</a>'
+	require_text "$workflow_page" 'target="_blank" rel="noopener">View on GitHub</a>'
 	require_text "$workflow_page" '"@type":"SoftwareSourceCode"'
-	require_text "$workflow_page" 'width="1672" height="941"'
+	require_text "$workflow_page" 'width="1916" height="821"'
 done
 
 require_text "${output_dir}/assets/css/style.css" 'position: fixed;'
@@ -263,7 +263,8 @@ require_text "${output_dir}/assets/css/style.css" 'font-size: 96px;'
 require_text "${output_dir}/assets/css/style.css" 'body:has(.home-hero) .site-footer'
 require_text "${output_dir}/assets/css/style.css" '.ethos-page .kujo-content > h2:first-child'
 require_text "${output_dir}/assets/css/style.css" 'margin-block-start: auto;'
-require_text "${output_dir}/assets/css/style.css" 'block-size: auto;'
+require_text "${output_dir}/assets/css/style.css" 'block-size: 100%;'
+require_text "${output_dir}/assets/css/style.css" 'aspect-ratio: 16 / 9;'
 require_text "${output_dir}/assets/css/style.css" 'aspect-ratio: 16 / 9;'
 reject_text "${output_dir}/assets/css/style.css" '@keyframes grid-drift'
 require_text "${output_dir}/assets/js/site.js" 'function enhanceHeroDither()'

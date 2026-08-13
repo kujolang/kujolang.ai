@@ -708,7 +708,9 @@
 
   .listing-card-image-link {
     display: block;
-    min-block-size: calc(var(--sk-space-24) + var(--sk-space-8));
+    aspect-ratio: 16 / 9;
+    min-block-size: 0;
+    overflow: hidden;
     border-block-end: var(--sk-border-1) solid var(--sk-border-default);
     background: var(--sk-surface-subtle);
     color: var(--sk-text-primary);
@@ -726,7 +728,7 @@
 
   .listing-card-image {
     inline-size: 100%;
-    block-size: auto;
+    block-size: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     filter: grayscale(1) contrast(1.1);

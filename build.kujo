@@ -1700,7 +1700,7 @@ func featured_image_html_tag(featured_image_url, title) {
 # assets. Intrinsic dimensions prevent layout shifts before CSS and media load.
 func featured_image_dimension_attrs(featured_image_url) {
 	url := to_lower(trim(featured_image_url))
-	if contains(url, "shipcheck-release-containers") || contains(url, "sitekit-interface-system") || contains(url, "tribunal-adversarial-hearing") || contains(url, "workcell-contained-execution") || contains(url, "relay-mission-orchestration") || contains(url, "contentgraph-content-network") || contains(url, "searchbridge-provider-relay") || contains(url, "siteprobe-website-crawler") {
+	if contains(url, "skill-") || contains(url, "workflow-") || contains(url, "shipcheck-release-containers") || contains(url, "sitekit-interface-system") || contains(url, "tribunal-adversarial-hearing") || contains(url, "workcell-contained-execution") || contains(url, "relay-mission-orchestration") || contains(url, "contentgraph-content-network") || contains(url, "searchbridge-provider-relay") || contains(url, "siteprobe-website-crawler") {
 		return " width=\"1916\" height=\"821\""
 	}
 	if contains(url, "totalrecall-global-memory") {
@@ -4059,6 +4059,9 @@ func build_site(settings) {
 			}
 			card_terms := item["tags"]
 			card_excerpt := item["excerpt"]
+			if collection_slug == "skills" || collection_slug == "workflows" {
+				card_excerpt = item["description"]
+			}
 			if collection_slug == "ecosystem" {
 				card_terms = []
 				card_excerpt = item["description"]
