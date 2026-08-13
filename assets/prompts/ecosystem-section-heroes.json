@@ -1,30 +1,36 @@
 {
   "generated_at": "2026-08-13",
-  "generator": "OpenAI image generation via generate-kujo-dither-heroes",
-  "visual_contract": {
-    "composition": "wide 16:9 editorial technical scene with subject detail on the right two-thirds and quiet copy space on the left",
-    "palette": "pure black and white",
-    "texture": "high-contrast ordered-dither and halftone screenprint grain",
-    "excluded": ["color", "gradients", "typography", "letters", "logos", "UI text"]
+  "generator": "OpenAI built-in image generation via generate-kujo-dither-heroes",
+  "contract_source": "/Users/robertdevore/.codex/skills/generate-kujo-dither-heroes/references/visual-contract.json",
+  "finalizer": "/Users/robertdevore/.codex/skills/generate-kujo-dither-heroes/scripts/finalize_hero.cjs --width 1916 --height 821 --threshold 160 --force",
+  "execution_constraints": {
+    "use_case": "stylized-concept",
+    "asset_type": "website hero section background",
+    "canvas": "very wide landscape, approximately 1916x821",
+    "layout": "reserve the left 42-48% as clean white copy space and concentrate the object on the right",
+    "text": "no readable text, letters, numbers, logos, brands, or watermark"
   },
   "targets": [
     {
       "route": "/ecosystem/primitives/",
       "output": "assets/images/ecosystem/primitives-language-foundation.webp",
-      "source": "/Users/robertdevore/.codex/generated_images/019ff8c1-deec-7901-b14a-887649e3d916/exec-e6e2472c-bd9b-4855-9407-426b84089a55.png",
-      "subject": "A modular programming-language foundation with interlocking syntax blocks, typed data structures, package modules, and a compact runtime core."
+      "generated_source": "/Users/robertdevore/.codex/generated_images/019ff8c1-deec-7901-b14a-887649e3d916/exec-58f060f6-b691-4c1c-9c0b-1435c05d76b0.png",
+      "object": "modular programming language foundation with interlocking syntax, package, typed data, and runtime components",
+      "final": {"width": 1916, "height": 821, "channel_values": [0, 255]}
     },
     {
       "route": "/ecosystem/tooling/",
       "output": "assets/images/ecosystem/tooling-operator-bench.webp",
-      "source": "/Users/robertdevore/.codex/generated_images/019ff8c1-deec-7901-b14a-887649e3d916/exec-c4680f4a-f273-451a-8700-d80ecdaab5b2.png",
-      "subject": "A local-first operator instrument bench with inspection, evidence, guarded execution, release, and artifact controls."
+      "generated_source": "/Users/robertdevore/.codex/generated_images/019ff8c1-deec-7901-b14a-887649e3d916/exec-9c992b3a-e845-45cf-b599-bb820068bdfc.png",
+      "object": "local operator instrument bench with inspection lens, evidence recorder, guarded execution switch, and artifact trays",
+      "final": {"width": 1916, "height": 821, "channel_values": [0, 255]}
     },
     {
       "route": "/ecosystem/showcase/",
       "output": "assets/images/ecosystem/showcase-application-gallery.webp",
-      "source": "/Users/robertdevore/.codex/generated_images/019ff8c1-deec-7901-b14a-887649e3d916/exec-92fa89a7-85dc-4f2f-bf88-71401f422287.png",
-      "subject": "An inspectable gallery of three complete AI-native applications with their internal service, content, and conversational modules exposed."
+      "generated_source": "/Users/robertdevore/.codex/generated_images/019ff8c1-deec-7901-b14a-887649e3d916/exec-b328fec7-9ad1-4df7-b5ee-3c659bbf04bb.png",
+      "object": "gallery of three open application models exposing service, content, and conversational layers",
+      "final": {"width": 1916, "height": 821, "channel_values": [0, 255]}
     }
   ]
 }

@@ -423,7 +423,7 @@
 
     function wrapTextNode(node) {
       var parent = node.parentElement;
-      if (!parent || !node.nodeValue.trim() || parent.closest(selector) || parent.closest('[data-scramble-skip]')) return;
+      if (!parent || !node.nodeValue.trim() || parent.closest(selector) || parent.closest('[data-scramble-skip], .ecosystem-carousel-controls')) return;
       if (/^(SCRIPT|STYLE|NOSCRIPT|TEMPLATE|SVG)$/i.test(parent.tagName) || !usesMonoFont(parent)) return;
 
       var match = node.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);

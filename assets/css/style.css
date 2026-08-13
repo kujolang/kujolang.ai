@@ -788,7 +788,7 @@
 
   .ecosystem-section-heading {
     display: flex;
-    align-items: end;
+    align-items: start;
     justify-content: space-between;
     gap: var(--sk-space-6);
     margin-block-end: var(--sk-space-8);
@@ -798,8 +798,29 @@
     margin-block-end: 0;
   }
 
-  .ecosystem-section-heading > .sk-button {
+  .ecosystem-section-title-link,
+  .ecosystem-section-title-link:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .ecosystem-section-title-link:focus-visible {
+    outline: var(--sk-focus-width) solid var(--sk-focus-ring);
+    outline-offset: var(--sk-focus-offset);
+  }
+
+  .ecosystem-carousel-controls {
     flex: 0 0 auto;
+    justify-content: flex-end;
+    margin-inline-start: auto;
+    padding-block-start: var(--sk-space-6);
+  }
+
+  .ecosystem-carousel-controls .sk-button {
+    min-inline-size: var(--sk-size-control-sm);
+    padding-inline: var(--sk-space-3);
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-lg);
   }
 
   .ecosystem-carousel {
@@ -823,11 +844,7 @@
     scroll-snap-align: start;
   }
 
-  .ecosystem-carousel .sk-carousel__controls {
-    justify-content: space-between;
-  }
-
-  .ecosystem-carousel .sk-carousel__controls button:disabled {
+  .ecosystem-carousel-controls button:disabled {
     opacity: .38;
     cursor: not-allowed;
   }
@@ -1046,11 +1063,6 @@
   }
 
   @media (max-width: 48rem) {
-    .ecosystem-section-heading {
-      align-items: start;
-      flex-direction: column;
-    }
-
     .ecosystem-carousel .sk-carousel__track {
       grid-auto-columns: min(84%, 19rem);
     }
