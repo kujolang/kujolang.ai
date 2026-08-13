@@ -80,6 +80,81 @@
     list-style: none;
   }
 
+  .visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown__trigger {
+    display: flex;
+    align-items: center;
+    gap: var(--sk-space-1);
+  }
+
+  .nav-dropdown__toggle {
+    display: inline-grid;
+    inline-size: 1.75rem;
+    block-size: 1.75rem;
+    place-items: center;
+    border: 0;
+    background: transparent;
+    color: currentColor;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .nav-dropdown__toggle svg {
+    inline-size: 1rem;
+    block-size: 1rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5;
+    transition: rotate 150ms ease;
+  }
+
+  .nav-dropdown.is-open .nav-dropdown__toggle svg {
+    rotate: 180deg;
+  }
+
+  .desktop-navigation .nav-submenu {
+    position: absolute;
+    inset-block-start: calc(100% + var(--sk-space-3));
+    inset-inline-start: 0;
+    display: grid;
+    min-inline-size: 13rem;
+    align-items: stretch;
+    gap: 0;
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-card);
+    box-shadow: 0 .75rem 2rem rgb(0 0 0 / .12);
+    padding: var(--sk-space-2);
+  }
+
+  .desktop-navigation .nav-submenu[hidden] {
+    display: none;
+  }
+
+  .desktop-navigation .nav-submenu a {
+    display: block;
+    padding: var(--sk-space-2) var(--sk-space-3);
+    text-decoration: none;
+  }
+
+  .desktop-navigation .nav-submenu a:hover,
+  .desktop-navigation .nav-submenu a:focus-visible {
+    background: var(--sk-surface-subtle);
+  }
+
   .desktop-navigation a[aria-current="page"] {
     text-decoration: underline;
     text-decoration-thickness: var(--sk-border-2);
@@ -150,6 +225,19 @@
 
   .mobile-drawer-shell .sk-drawer nav a {
     display: block;
+  }
+
+  .mobile-drawer-shell .nav-dropdown__trigger {
+    justify-content: space-between;
+  }
+
+  .mobile-drawer-shell .nav-submenu {
+    display: grid;
+    padding-inline-start: var(--sk-space-5);
+  }
+
+  .mobile-drawer-shell .nav-submenu[hidden] {
+    display: none;
   }
 
   body.mobile-menu-open {

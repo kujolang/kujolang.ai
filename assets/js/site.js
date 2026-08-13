@@ -138,6 +138,35 @@
     });
   }
 
+  function enhanceNavigationDropdowns() {
+    document.querySelectorAll('[data-nav-dropdown]').forEach(function (dropdown) {
+      var toggle = dropdown.querySelector('[data-nav-dropdown-toggle]');
+      var menu = dropdown.querySelector('[data-nav-submenu]');
+      if (!toggle || !menu) return;
+
+      function setOpen(open) {
+        menu.hidden = !open;
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', (open ? 'Hide' : 'Show') + ' Ecosystem menu');
+        dropdown.classList.toggle('is-open', open);
+      }
+
+      toggle.addEventListener('click', function () {
+        setOpen(menu.hidden);
+      });
+      dropdown.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !menu.hidden) {
+          event.preventDefault();
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      document.addEventListener('click', function (event) {
+        if (!dropdown.contains(event.target)) setOpen(false);
+      });
+    });
+  }
+
   function enhanceInstallModals() {
     var quickModal = document.querySelector('[data-quick-install-modal]');
     var agentModal = document.querySelector('[data-agent-prompt-modal]');
@@ -425,6 +454,7 @@
 
   function init() {
     enhanceCopyButtons();
+    enhanceNavigationDropdowns();
     enhanceMobileNavigation();
     enhanceInstallModals();
     enhanceHeroDither();

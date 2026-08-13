@@ -1,0 +1,18 @@
+<main class="ecosystem-detail" id="main-content">
+	<header class="sk-hero tool-hero" data-layout="split">
+		<div class="tool-hero__media" aria-hidden="true">{{featured_image_html}}</div>
+		<div class="tool-hero__wash" aria-hidden="true"></div>
+		<div class="sk-hero__inner">
+			<div class="tool-hero__copy"><p class="sk-badge" data-variant="outline">{{section}}</p><h1>{{title}}</h1><p class="tool-hero__lead">{{description}}</p><p class="tool-hero__story">{{launch_story}}</p></div>
+			<div class="tool-install-panel">
+				<p class="eyebrow">Install this skill</p>
+				<figure class="sk-code-block"><figcaption><span>Terminal</span><span class="copy-status" role="status" aria-live="polite" data-copy-status data-scramble-skip></span><button class="icon-button copy-icon-button" type="button" data-copy-code aria-label="Copy install command"><svg class="copy-icon copy-icon--copy" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8m-2 0a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 6V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg><svg class="copy-icon copy-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></button></figcaption><pre><code>{{install_command}}</code></pre></figure>
+				<p class="tool-scope-note">{{scope_note}}</p>
+			</div>
+		</div>
+	</header>
+	<section class="tool-body section-shell">
+		<article class="prose-shell kujo-content">{{body}}</article>
+		<aside class="sk-card tool-links" aria-labelledby="tool-links-title"><h2 id="tool-links-title">Source and catalog</h2><p>Read the released skill file for its full instructions, current sources, boundaries, and verification guidance.</p><div class="sk-card__actions"><a class="sk-button" href="{{github_url}}" target="_blank" rel="noopener">View skill on GitHub</a><a class="sk-button" data-variant="secondary" href="/ecosystem/skills/">View all skills</a></div></aside>
+	</section>
+</main>

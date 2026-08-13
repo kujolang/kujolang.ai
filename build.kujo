@@ -774,6 +774,14 @@ func navigation_item(href, label, is_current) {
 	return "<li><a href=\"" + safe_href + "\" class=\"text-primary hover:underline\"" + current_attr + ">" + safe_label + "</a></li>"
 }
 
+func ecosystem_navigation_item(is_current) {
+	current_attr := ""
+	if is_current {
+		current_attr = " aria-current=\"page\""
+	}
+	return "<li class=\"nav-dropdown\" data-nav-dropdown><div class=\"nav-dropdown__trigger\"><a href=\"/ecosystem/\" class=\"text-primary hover:underline\"" + current_attr + ">Ecosystem</a><button class=\"nav-dropdown__toggle\" type=\"button\" aria-expanded=\"false\" aria-label=\"Show Ecosystem menu\" data-nav-dropdown-toggle><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"m4 6 4 4 4-4\"/></svg></button></div><ul class=\"nav-submenu\" data-nav-submenu hidden><li><a href=\"/ecosystem/#primitives-title\">Primitives</a></li><li><a href=\"/ecosystem/#tooling-title\">Tooling</a></li><li><a href=\"/ecosystem/#showcase-title\">Showcase</a></li><li><a href=\"/ecosystem/skills/\">Skills</a></li><li><a href=\"/ecosystem/workflows/\">Workflows</a></li><li><a href=\"https://agents.kujolang.ai\" target=\"_blank\" rel=\"noopener\">Agents<span class=\"visually-hidden\"> (opens in a new tab)</span></a></li></ul></li>"
+}
+
 func docs_list_html(values, class_name) {
 	items := to_string_array(values)
 	if len(items) == 0 {
@@ -873,12 +881,19 @@ func docs_body_html(markdown) {
 func build_navigation(pages_data, custom_collections, current_route, blog_slug) {
 	current_path := route_to_path(current_route)
 	html := navigation_item("/", "Home", current_path == "/")
-	html = html + navigation_item("/ecosystem/", "Ecosystem", starts_with(current_path, "/ecosystem/"))
+	html = html + ecosystem_navigation_item(starts_with(current_path, "/ecosystem/"))
 	html = html + navigation_item("/ethos/", "Ethos", current_path == "/ethos/")
 	html = html + navigation_item("/writing/", "Writing", starts_with(current_path, "/writing/"))
 	html = html + navigation_item("https://docs.kujolang.ai", "Docs", false)
 	html = html + navigation_item("/contact/", "Contact", current_path == "/contact/")
 	return html
+}
+
+func collection_base_route(collection_slug) {
+	if collection_slug == "skills" || collection_slug == "workflows" {
+		return "ecosystem/" + collection_slug + "/"
+	}
+	return collection_slug + "/"
 }
 
 func load_lookup(path) {
@@ -1748,7 +1763,7 @@ func render_layout(layout_template, settings, route, page_title, meta_descriptio
 	rendered = replace(rendered, "<meta name=\"author\" content=\"Robert DeVore\">", "<meta name=\"author\" content=\"Kujo Team\">")
 
 	schema_type := ""
-	if route == "ecosystem/" || route == settings["blog_slug"] + "/" {
+	if route == "ecosystem/" || route == "ecosystem/skills/" || route == "ecosystem/workflows/" || route == settings["blog_slug"] + "/" {
 		schema_type = "CollectionPage"
 	} else if starts_with(route, "ecosystem/") {
 		schema_type = "SoftwareSourceCode"
@@ -3905,7 +3920,7 @@ func build_site(settings) {
 				item_category_text = item_categories[0]
 			}
 
-			route := collection_slug + "/" + slug + "/"
+			route := collection_base_route(collection_slug) + slug + "/"
 
 			selected_collection_template := default_collection_item_template
 			custom_template_name := trim(to_string(meta["template"]))
@@ -3987,7 +4002,7 @@ func build_site(settings) {
 			write_route_alias(output_dir, route, make_aliases)
 
 			if want_sitemap {
-				append_file(sitemap_tmp, sitemap_url_entry(site_url, route, item_date["iso"], blog_prefix))
+				append_file(sitemap_tmp, sitemap_url_entry(site_url, route, item_date["iso"], ""))
 			}
 			collection_items = push(collection_items, {
 				"title": title,
@@ -4069,7 +4084,7 @@ func build_site(settings) {
 			location_preview_cards = location_cards
 		}
 
-		listing_route := collection_slug + "/"
+		listing_route := collection_base_route(collection_slug)
 		listing_content := "<main class=\"container max-w-2xl m-auto py-10 px-4\" id=\"main-content\"><h1 class=\"text-6xl font-bold mb-8 pb-8 text-links font-heading-bold border-b border-primary page-title\">" + collection_title + "</h1><ul class=\"card-grid\">" + collection_cards + "</ul></main>"
 		listing_template_path := path_join(templates_dir, "page-" + collection_slug + ".html")
 		if path_exists(listing_template_path) {
@@ -4092,6 +4107,10 @@ func build_site(settings) {
 		listing_description := settings["site_tagline"]
 		if collection_slug == "ecosystem" {
 			listing_description = "Explore the Kujo ecosystem of language primitives, local-first tools, and inspectable AI-native application showcases."
+		} else if collection_slug == "skills" {
+			listing_description = "Browse all 83 repository-backed Kujo Agent Skills released in kujo-skills 0.2.0, including language, tooling, safety, release, and WebOps guidance."
+		} else if collection_slug == "workflows" {
+			listing_description = "Browse all 25 local-first workflow kits released in kujo-workflows 0.2.0, with explicit inputs, boundaries, evidence, and readiness status."
 		}
 		listing_html := render_layout(
 			layout_template,
@@ -4111,7 +4130,7 @@ func build_site(settings) {
 		write_route_page(output_dir, listing_route, listing_html)
 		write_route_alias(output_dir, listing_route, make_aliases)
 		if want_sitemap {
-			append_file(sitemap_tmp, sitemap_url_entry(site_url, listing_route, "", blog_prefix))
+			append_file(sitemap_tmp, sitemap_url_entry(site_url, listing_route, "", ""))
 		}
 		if settings["llms"] == "public" && len(site_url) > 0 && !settings["no_aux"] {
 			append_file(llms_collections_tmp, "\n## " + collection_title + "\n")
