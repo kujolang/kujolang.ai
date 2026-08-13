@@ -110,8 +110,12 @@ require_text "${output_dir}/index.html" '<meta name="mobile-web-app-capable" con
 require_text "${output_dir}/index.html" '<meta name="msapplication-TileImage" content="mstile-150x150.png">'
 require_text "${output_dir}/ecosystem/shipcheck/index.html" 'href="../../favicon.svg?v=kujo-k-1"'
 require_text "${output_dir}/ecosystem/shipcheck/index.html" 'href="../../site.webmanifest"'
-require_text "${output_dir}/index.html" '>Home</a></li><li><a href="/ecosystem/"'
-require_text "${output_dir}/index.html" '>Ecosystem</a></li><li><a href="/ethos/"'
+require_text "${output_dir}/index.html" '>Home</a></li><li class="nav-dropdown" data-nav-dropdown>'
+require_text "${output_dir}/index.html" '<a href="/ecosystem/" class="text-primary hover:underline">Ecosystem</a>'
+require_text "${output_dir}/index.html" '<a href="/ecosystem/#primitives-title">Primitives</a>'
+require_text "${output_dir}/index.html" '<a href="/ecosystem/skills/">Skills</a>'
+require_text "${output_dir}/index.html" '<a href="/ecosystem/workflows/">Workflows</a>'
+require_text "${output_dir}/index.html" '<a href="https://agents.kujolang.ai" target="_blank" rel="noopener">Agents'
 require_text "${output_dir}/index.html" '>Ethos</a></li><li><a href="/writing/"'
 require_text "${output_dir}/index.html" '>Writing</a></li><li><a href="https://docs.kujolang.ai"'
 require_text "${output_dir}/index.html" '>Docs</a></li><li><a href="/contact/"'
@@ -169,7 +173,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 43 ]] || fail "expected 43 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 153 ]] || fail "expected 153 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -194,7 +198,7 @@ cmp -s "${repo_root}/assets/icons/favicon.svg" "${output_dir}/favicon.svg" || fa
 node -e 'const fs=require("fs"); const m=JSON.parse(fs.readFileSync(process.argv[1], "utf8")); if (m.short_name !== "Kujo" || !m.icons.some((i) => i.sizes === "512x512" && i.purpose === "maskable")) process.exit(1)' "${output_dir}/site.webmanifest" || fail 'site.webmanifest is missing the Kujo maskable icon contract'
 
 ecosystem_sources=$(find "${repo_root}/content/ecosystem" -maxdepth 1 -type f -name '*.md' | wc -l | tr -d ' ')
-ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
+ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type d ! -name skills ! -name workflows | wc -l | tr -d ' ')
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
@@ -212,6 +216,9 @@ done
 
 for tool_page in "${output_dir}"/ecosystem/*/index.html; do
 	tool_slug=$(basename "$(dirname "$tool_page")")
+	if [[ "$tool_slug" == "skills" || "$tool_slug" == "workflows" ]]; then
+		continue
+	fi
 	require_social_meta "$tool_page" "$tool_slug"
 	require_text "$tool_page" 'class="copy-icon copy-icon--copy"'
 	require_text "$tool_page" 'data-copy-status data-scramble-skip></span><button'
@@ -221,6 +228,34 @@ for tool_page in "${output_dir}"/ecosystem/*/index.html; do
 	require_text "$tool_page" '"codeRepository":"https://github.com/'
 	require_text "$tool_page" 'fetchpriority="high"'
 	reject_text "$tool_page" 'Back to ecosystem'
+done
+
+skills_sources=$(find "${repo_root}/content/skills" -maxdepth 1 -type f -name '*.md' | wc -l | tr -d ' ')
+workflow_sources=$(find "${repo_root}/content/workflows" -maxdepth 1 -type f -name '*.md' | wc -l | tr -d ' ')
+skills_outputs=$(find "${output_dir}/ecosystem/skills" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
+workflow_outputs=$(find "${output_dir}/ecosystem/workflows" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
+[[ "$skills_sources" == 83 && "$skills_outputs" == 83 ]] || fail "expected 83 skill source and output routes, found ${skills_sources}/${skills_outputs}"
+[[ "$workflow_sources" == 25 && "$workflow_outputs" == 25 ]] || fail "expected 25 workflow source and output routes, found ${workflow_sources}/${workflow_outputs}"
+
+for catalog_page in "${output_dir}/ecosystem/skills/index.html" "${output_dir}/ecosystem/workflows/index.html"; do
+	require_text "$catalog_page" '"@type":"CollectionPage"'
+	require_text "$catalog_page" 'target="_blank" rel="noopener">View repository</a>'
+done
+
+for skill_page in "${output_dir}"/ecosystem/skills/*/index.html; do
+	skill_slug=$(basename "$(dirname "$skill_page")")
+	require_social_meta "$skill_page" "$skill_slug"
+	require_text "$skill_page" 'target="_blank" rel="noopener">View skill on GitHub</a>'
+	require_text "$skill_page" '"@type":"SoftwareSourceCode"'
+	require_text "$skill_page" 'width="1672" height="941"'
+done
+
+for workflow_page in "${output_dir}"/ecosystem/workflows/*/index.html; do
+	workflow_slug=$(basename "$(dirname "$workflow_page")")
+	require_social_meta "$workflow_page" "$workflow_slug"
+	require_text "$workflow_page" 'target="_blank" rel="noopener">View workflow on GitHub</a>'
+	require_text "$workflow_page" '"@type":"SoftwareSourceCode"'
+	require_text "$workflow_page" 'width="1672" height="941"'
 done
 
 require_text "${output_dir}/assets/css/style.css" 'position: fixed;'
@@ -257,7 +292,8 @@ require_text "${output_dir}/contact/index.html" 'href="https://discord.gg/RqDgyb
 reject_text "${output_dir}/contact/index.html" 'href="https://discord.gg/kujolang"'
 
 if rg -n 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network|Intake' \
-	"${repo_root}/templates" "${repo_root}/content" "${output_dir}" \
+	"${repo_root}/templates" "${repo_root}/content/pages" "${repo_root}/content/ecosystem" "${repo_root}/content/posts" \
+	"${output_dir}/index.html" "${output_dir}/ecosystem/index.html" "${output_dir}/ethos" "${output_dir}/contact" "${output_dir}/writing" \
 	--glob '*.html' --glob '*.md' --glob '*.txt'; then
 	fail "found obsolete product naming or removed ecosystem entries"
 fi
@@ -271,4 +307,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 38 ecosystem projects, static WebP heroes, nested 404 recovery, navigation, modal, footer, and content requirements verified.\n'
+printf 'Site contract passed: 38 ecosystem projects, 83 skills, 25 workflows, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

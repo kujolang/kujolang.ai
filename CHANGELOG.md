@@ -4,6 +4,19 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-08-12
+
+### Added
+
+- Accessible Ecosystem navigation dropdown for Primitives, Tooling, Showcase, Skills, Workflows, and the external Agents site.
+- 83 released Kujo Agent Skill pages and 25 released Kujo Workflow pages, each with source-grounded metadata, repository links, and dedicated Kujo dither hero art.
+- Howl-rendered 1200×630 social cards for every new catalog and detail route.
+
+### Changed
+
+- Nested Skills and Workflows routes now participate in canonical metadata, JSON-LD, `llms.txt`, internal navigation, and the XML sitemap.
+- Expanded the production site contract and SEO audit coverage to all 153 shareable routes.
+
 ## [1.1.0] - 2026-08-12
 
 ### Added

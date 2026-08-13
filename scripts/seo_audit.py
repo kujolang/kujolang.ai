@@ -145,7 +145,8 @@ def source_map(repo: Path) -> dict[str, str]:
         if not match:
             continue
         slug = match.group(1).strip()
-        prefix = "/ecosystem/" if source.parent.name == "ecosystem" else "/"
+        collection = source.parent.name
+        prefix = f"/ecosystem/{collection}/" if collection in {"skills", "workflows"} else ("/ecosystem/" if collection == "ecosystem" else "/")
         result[f"{prefix}{slug}/"] = source.relative_to(repo).as_posix()
     return result
 
@@ -153,7 +154,7 @@ def source_map(repo: Path) -> dict[str, str]:
 def page_type(route: str) -> str:
     if route == "/":
         return "home"
-    if route == "/ecosystem/":
+    if route in {"/ecosystem/", "/ecosystem/skills/", "/ecosystem/workflows/"}:
         return "collection"
     if route.startswith("/ecosystem/"):
         return "software-detail"
@@ -249,7 +250,9 @@ def crawl(args: argparse.Namespace) -> None:
     origin = args.origin.rstrip("/")
     sitemap_urls = parse_sitemap(output)
     sources = source_map(repo)
-    canonical_files = [output / "index.html"] + sorted(output.glob("*/index.html")) + sorted(output.glob("*/*/index.html"))
+    canonical_files = [output / "index.html"] + sorted(
+        path for path in output.rglob("index.html") if path != output / "index.html"
+    )
     canonical_files = [path for path in canonical_files if path.is_file()]
 
     pages: list[dict] = []

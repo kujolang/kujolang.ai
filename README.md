@@ -4,7 +4,7 @@ The official website for the [Kujo programming language](https://github.com/kujo
 
 This site is built with the Kujo SSG and the Kujo SiteKit design system. Markdown content is the editable source of truth; generated files are written to `output/` and should not be edited by hand.
 
-Current release: **v1.1.0**
+Current release: **v1.2.0**
 
 - Website: [kujolang.ai](https://kujolang.ai)
 - Documentation: [docs.kujolang.ai](https://docs.kujolang.ai)
@@ -53,6 +53,8 @@ npm audit --omit=dev
 
 - `content/pages/` contains the Ethos and Contact pages.
 - `content/ecosystem/` contains one editable page per Kujo project or showcase.
+- `content/skills/` mirrors the released `kujo-skills` catalog under `/ecosystem/skills/`.
+- `content/workflows/` mirrors the released `kujo-workflows` catalog under `/ecosystem/workflows/`.
 - `content/posts/` contains Writing articles.
 - `templates/` contains shared SiteKit markup and page templates.
 - `assets/css/style.css` contains site-specific, token-based composition styles.
@@ -79,7 +81,7 @@ kujo run ./build.kujo -- --site-url https://kujolang.ai
 npm run social:verify
 ```
 
-To add a page, tool, or Writing post, add a card whose `id` matches the route
+To add a page, tool, skill, workflow, or Writing post, add a card whose `id` matches the route
 slug, choose its background image, and run the command again. Set `HOWL_BIN` if
 the Howl launcher is not at the default sibling-repository path.
 
