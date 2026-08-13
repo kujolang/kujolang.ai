@@ -187,14 +187,16 @@
     position: absolute;
     inset: 0;
     inline-size: 100%;
-    min-block-size: 100%;
+    block-size: 100%;
+    min-block-size: 0;
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: minmax(0, 1fr) auto;
     align-items: stretch;
-    gap: var(--sk-space-8);
+    gap: var(--sk-space-4);
     border: 0;
     background: var(--sk-surface-page);
-    padding: calc(var(--site-header-block) + (2 * var(--sk-space-4)) + var(--sk-space-8)) var(--site-pad-inline) var(--sk-space-8);
+    padding: calc(var(--site-header-block) + (2 * var(--sk-space-4)) + var(--sk-space-2)) var(--site-pad-inline) max(var(--sk-space-4), env(safe-area-inset-bottom));
+    overflow: hidden;
   }
 
   .mobile-drawer-shell [data-mobile-navigation][hidden],
@@ -210,12 +212,15 @@
 
   .mobile-drawer-shell .sk-drawer nav {
     align-self: stretch;
+    min-block-size: 0;
   }
 
   .mobile-drawer-shell .sk-drawer nav,
-  .mobile-drawer-shell .sk-drawer nav ul {
+  .mobile-drawer-shell .sk-drawer nav ul,
+  .mobile-drawer-shell .sk-drawer nav li,
+  .mobile-drawer-shell .sk-drawer nav a {
     border: 0;
-    background: #fff;
+    background: transparent;
   }
 
   .mobile-drawer-shell .sk-drawer nav li,
@@ -1052,16 +1057,28 @@
 
     .mobile-drawer-shell .sk-drawer nav ul {
       align-content: start;
-      min-block-size: 100%;
-      gap: var(--sk-space-4);
+      min-block-size: 0;
+      gap: 0;
     }
 
     .mobile-drawer-shell .sk-drawer nav a {
-      border-block-end: var(--sk-border-1) solid var(--sk-border-default);
-      padding-block: var(--sk-space-4);
+      border: 0;
+      background: transparent;
+      padding-block: var(--sk-space-2);
       font-family: var(--sk-font-mono);
-      font-size: clamp(var(--sk-type-size-xl), 8vw, var(--sk-type-size-3xl));
+      font-size: clamp(.8125rem, 3.5vw, var(--sk-type-size-base));
+      line-height: 1.25;
       text-decoration: none;
+    }
+
+    .mobile-drawer-shell .nav-submenu {
+      gap: 0;
+      padding-inline-start: var(--sk-space-4);
+    }
+
+    .mobile-drawer-shell .nav-submenu a {
+      font-size: clamp(.75rem, 3.25vw, var(--sk-type-size-sm));
+      padding-block: var(--sk-space-1);
     }
 
     .mobile-drawer-shell .sk-drawer > .sk-button {
