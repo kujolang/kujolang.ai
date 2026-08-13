@@ -2,6 +2,7 @@
 title: "Webops Accessibility Review"
 custom_url: "webops-accessibility-review"
 description: "Use when running repeatable automated accessibility review with explicit manual gaps."
+excerpt: "Use when running repeatable automated accessibility review with explicit manual gaps."
 featured_image: "/assets/images/ecosystem/skill-webops-accessibility-review.webp"
 social_image: "/assets/images/social/webops-accessibility-review.jpg"
 section: "Agent Skill"

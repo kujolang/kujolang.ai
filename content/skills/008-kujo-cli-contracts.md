@@ -2,6 +2,7 @@
 title: "Kujo CLI Contracts"
 custom_url: "kujo-cli-contracts"
 description: "Use this skill when changing Kujo CLI output, exit codes, diagnostics, `--json` payloads, `--json-runtime-diagnostics`, LSP helper JSON, formatter/linter/docgen JSON, or automation/toolchain compatibility behavior."
+excerpt: "Use this skill when changing Kujo CLI output, exit codes, diagnostics, `--json` payloads, `--json-runtime-diagnostics`, LSP helper JSON, formatter/linter/docgen JSON, or automation/toolchain compatibility behavior."
 featured_image: "/assets/images/ecosystem/skill-kujo-cli-contracts.webp"
 social_image: "/assets/images/social/kujo-cli-contracts.jpg"
 section: "Agent Skill"

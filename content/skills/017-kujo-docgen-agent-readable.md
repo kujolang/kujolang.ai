@@ -2,6 +2,7 @@
 title: "Kujo DocGen And DocsGen"
 custom_url: "kujo-docgen-agent-readable"
 description: "Use this skill when working on Kujo DocGen/DocsGen (`kujo docgen`), generated documentation, docs-as-contract surfaces, agent-readable JSON/gap outputs, documentation coverage gates, public-only docs gates, link validation, adapter extraction, README/reference alignment, or example smoke policy."
+excerpt: "Use this skill when working on Kujo DocGen/DocsGen (`kujo docgen`), generated documentation, docs-as-contract surfaces, agent-readable JSON/gap outputs, documentation coverage gates, public-only docs gates, link…"
 featured_image: "/assets/images/ecosystem/skill-kujo-docgen-agent-readable.webp"
 social_image: "/assets/images/social/kujo-docgen-agent-readable.jpg"
 section: "Agent Skill"

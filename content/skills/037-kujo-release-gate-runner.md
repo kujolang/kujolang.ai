@@ -2,6 +2,7 @@
 title: "Kujo Release Gate Runner"
 custom_url: "kujo-release-gate-runner"
 description: "Use this skill when running Kujo release gates, recurring release-readiness automation, pre-tag checks, blocker triage, or monthly gate evidence collection across ShipCheck, Eval, Fence, ChangeBucket, RunLedger, Casefile, DocGen gates, and Muzzle workflows."
+excerpt: "Use this skill when running Kujo release gates, recurring release-readiness automation, pre-tag checks, blocker triage, or monthly gate evidence collection across ShipCheck, Eval, Fence,…"
 featured_image: "/assets/images/ecosystem/skill-kujo-release-gate-runner.webp"
 social_image: "/assets/images/social/kujo-release-gate-runner.jpg"
 section: "Agent Skill"

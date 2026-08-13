@@ -2,6 +2,7 @@
 title: "Webops Web Performance"
 custom_url: "webops-web-performance"
 description: "Use when analyzing lab and field website performance as distinct evidence classes."
+excerpt: "Use when analyzing lab and field website performance as distinct evidence classes."
 featured_image: "/assets/images/ecosystem/skill-webops-web-performance.webp"
 social_image: "/assets/images/social/webops-web-performance.jpg"
 section: "Agent Skill"

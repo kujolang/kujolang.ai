@@ -245,7 +245,7 @@ done
 for skill_page in "${output_dir}"/ecosystem/skills/*/index.html; do
 	skill_slug=$(basename "$(dirname "$skill_page")")
 	require_social_meta "$skill_page" "$skill_slug"
-	require_text "$skill_page" 'target="_blank" rel="noopener">View skill on GitHub</a>'
+	require_text "$skill_page" 'target="_blank" rel="noopener">View on GitHub</a>'
 	require_text "$skill_page" '"@type":"SoftwareSourceCode"'
 	require_text "$skill_page" 'width="1916" height="821"'
 done

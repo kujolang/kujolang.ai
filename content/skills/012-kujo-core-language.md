@@ -2,6 +2,7 @@
 title: "Kujo Core Language"
 custom_url: "kujo-core-language"
 description: "Use this skill when writing, editing, explaining, or reviewing Kujo `.kujo` source code, including syntax, bindings, imports, functions, control flow, collections, truthiness, runtime errors, and VM-first execution defaults."
+excerpt: "Use this skill when writing, editing, explaining, or reviewing Kujo `.kujo` source code, including syntax, bindings, imports, functions, control flow, collections, truthiness, runtime errors,…"
 featured_image: "/assets/images/ecosystem/skill-kujo-core-language.webp"
 social_image: "/assets/images/social/kujo-core-language.jpg"
 section: "Agent Skill"

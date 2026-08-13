@@ -2,6 +2,7 @@
 title: "Kujo RAG"
 custom_url: "kujo-rag-workflows"
 description: "Use this skill when setting up, running, extending, testing, or maintaining the Kujo RAG Starter Kit: `kujo run main.kujo --interpreter ingest|query|serve|demo|bootstrap`, local/offline RAG indexes, namespace isolation, parser/chunking/embedding/retrieval changes, API ingest/query endpoints, OpenAPI/SDK parity, release-evaluation gates, large-corpus benchmarks, index maintenance, bootstrap templates, or RAG security/operations docs."
+excerpt: "Use this skill when setting up, running, extending, testing, or maintaining the Kujo RAG Starter Kit."
 featured_image: "/assets/images/ecosystem/skill-kujo-rag-workflows.webp"
 social_image: "/assets/images/social/kujo-rag-workflows.jpg"
 section: "Agent Skill"

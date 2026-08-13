@@ -2,6 +2,7 @@
 title: "Kujo Dispatch"
 custom_url: "kujo-dispatch-workflows"
 description: "Use this skill when running, inspecting, extending, or maintaining Dispatch reliable AI workflow orchestration: `dispatch.kujo`, `kujo run dispatch.kujo`, `demo`, `resume`, `templates`, `runs`, `show`, `inspect`, `doctor`, `cleanup`, `export-run`, `import-run`, workflow templates, declarative workflow files, plugins, approval gates, trace/report/state artifacts, tool policy profiles, bundle signing, offline fixture runs, SDK bridge integration, or Dispatch CLI/tests/source changes."
+excerpt: "Use this skill when running, inspecting, extending, or maintaining Dispatch reliable AI workflow orchestration."
 featured_image: "/assets/images/ecosystem/skill-kujo-dispatch-workflows.webp"
 social_image: "/assets/images/social/kujo-dispatch-workflows.jpg"
 section: "Agent Skill"

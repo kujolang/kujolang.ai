@@ -2,6 +2,7 @@
 title: "Kujo Language Implementation"
 custom_url: "kujo-language-implementation"
 description: "Use this skill when contributing to Kujo's Rust implementation: lexer, parser, AST, diagnostics, compiler, VM, interpreter, module loader, native functions, CLI, LSP, DocGen, JIT, or runtime security boundaries."
+excerpt: "Use this skill when contributing to Kujo's Rust implementation."
 featured_image: "/assets/images/ecosystem/skill-kujo-language-implementation.webp"
 social_image: "/assets/images/social/kujo-language-implementation.jpg"
 section: "Agent Skill"

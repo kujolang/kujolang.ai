@@ -2,6 +2,7 @@
 title: "Webops Indexation"
 custom_url: "webops-indexation"
 description: "Use when auditing crawlability, local indexability, and confirmed provider index state."
+excerpt: "Use when auditing crawlability, local indexability, and confirmed provider index state."
 featured_image: "/assets/images/ecosystem/skill-webops-indexation.webp"
 social_image: "/assets/images/social/webops-indexation.jpg"
 section: "Agent Skill"

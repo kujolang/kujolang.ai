@@ -2,6 +2,7 @@
 title: "Kujo Howl"
 custom_url: "kujo-howl-workflows"
 description: "Use this skill when creating, validating, rendering, reviewing, or maintaining Howl showcase artifacts for Kujo examples: `howl init`, `howl validate`, `howl list`, `howl show`, `howl caption`, `howl render`, `howl.json`, `examples/*.kujo`, `dist/howl/`, deterministic SVG/Markdown/HTML cards, static galleries, social captions, or Howl CLI/source/test changes."
+excerpt: "Use this skill when creating, validating, rendering, reviewing, or maintaining Howl showcase artifacts for Kujo examples."
 featured_image: "/assets/images/ecosystem/skill-kujo-howl-workflows.webp"
 social_image: "/assets/images/social/kujo-howl-workflows.jpg"
 section: "Agent Skill"

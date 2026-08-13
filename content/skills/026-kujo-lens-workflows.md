@@ -2,6 +2,7 @@
 title: "Kujo Lens"
 custom_url: "kujo-lens-workflows"
 description: "Use this skill when setting up, running, interpreting, or maintaining Lens deterministic browser and visual QA workflows: `lens check`, `lens inspect`, `lens flow`, `.lens.toml`, `.lens/runs/`, `lens-report.json`, Agent Repair Briefs, screenshots, accessibility checks, link checks, visual baselines, CI action wiring, RunLedger/Howl output, or Lens source/test changes."
+excerpt: "Use this skill when setting up, running, interpreting, or maintaining Lens deterministic browser and visual QA workflows."
 featured_image: "/assets/images/ecosystem/skill-kujo-lens-workflows.webp"
 social_image: "/assets/images/social/kujo-lens-workflows.jpg"
 section: "Agent Skill"

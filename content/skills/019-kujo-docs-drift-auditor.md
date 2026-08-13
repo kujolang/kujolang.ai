@@ -2,6 +2,7 @@
 title: "Kujo Docs Drift Auditor"
 custom_url: "kujo-docs-drift-auditor"
 description: "Use this skill when auditing Kujo documentation drift, README/reference mismatches, generated-doc staleness, CLI/docs drift, example validity, or recurring docs health using Concord, Scout, PatchBrief, Lens, DocGen, and Muzzle evidence."
+excerpt: "Use this skill when auditing Kujo documentation drift, README/reference mismatches, generated-doc staleness, CLI/docs drift, example validity, or recurring docs health using Concord, Scout, PatchBrief,…"
 featured_image: "/assets/images/ecosystem/skill-kujo-docs-drift-auditor.webp"
 social_image: "/assets/images/social/kujo-docs-drift-auditor.jpg"
 section: "Agent Skill"

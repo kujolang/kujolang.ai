@@ -2,6 +2,7 @@
 title: "Kujo ContentGraph"
 custom_url: "kujo-contentgraph-workflows"
 description: "Use when building, inspecting, comparing, exporting, or consuming deterministic ContentGraph artifacts."
+excerpt: "Use when building, inspecting, comparing, exporting, or consuming deterministic ContentGraph artifacts."
 featured_image: "/assets/images/ecosystem/skill-kujo-contentgraph-workflows.webp"
 social_image: "/assets/images/social/kujo-contentgraph-workflows.jpg"
 section: "Agent Skill"

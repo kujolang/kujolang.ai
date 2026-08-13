@@ -2,6 +2,7 @@
 title: "Webops Content Accuracy"
 custom_url: "webops-content-accuracy"
 description: "Use when reviewing website claims for outdated or invalid guidance."
+excerpt: "Use when reviewing website claims for outdated or invalid guidance."
 featured_image: "/assets/images/ecosystem/skill-webops-content-accuracy.webp"
 social_image: "/assets/images/social/webops-content-accuracy.jpg"
 section: "Agent Skill"

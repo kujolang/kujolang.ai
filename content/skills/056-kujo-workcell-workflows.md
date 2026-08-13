@@ -2,6 +2,7 @@
 title: "Kujo Workcell"
 custom_url: "kujo-workcell-workflows"
 description: "Use this skill when initializing, validating, inspecting, running, verifying, cleaning, or maintaining Workcell local Docker/Podman execution sandboxes: `workcell.json`, `bin/workcell`, `doctor`, `init`, `validate`, `inspect`, `run`, `verify`, `clean`, `.workcell/runs/`, receipts, manifests, artifacts, runtime boundaries, release reports, or Workcell source/docs changes."
+excerpt: "Use this skill when initializing, validating, inspecting, running, verifying, cleaning, or maintaining Workcell local Docker/Podman execution sandboxes."
 featured_image: "/assets/images/ecosystem/skill-kujo-workcell-workflows.webp"
 social_image: "/assets/images/social/kujo-workcell-workflows.jpg"
 section: "Agent Skill"

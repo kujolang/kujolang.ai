@@ -2,6 +2,7 @@
 title: "Kujo Scout"
 custom_url: "kujo-scout-workflows"
 description: "Use this skill when running, interpreting, extending, or maintaining Scout, the Kujo-native codebase intelligence tool: `kujo run scout.kujo`, repo context packs, `FILE_TREE.md`, `llms.txt`, `AGENTS.md`, `CHECKLIST.md`, `intelligence.json`, `scan_manifest.json`, security exports, baseline suppression, Kennel metadata, Scout fixtures, snapshots, or Scout regression scripts."
+excerpt: "Use this skill when running, interpreting, extending, or maintaining Scout, the Kujo-native codebase intelligence tool."
 featured_image: "/assets/images/ecosystem/skill-kujo-scout-workflows.webp"
 social_image: "/assets/images/social/kujo-scout-workflows.jpg"
 section: "Agent Skill"

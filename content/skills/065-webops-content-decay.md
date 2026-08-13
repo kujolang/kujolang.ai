@@ -2,6 +2,7 @@
 title: "Webops Content Decay"
 custom_url: "webops-content-decay"
 description: "Use when identifying content deterioration or staleness without conflating age and decline."
+excerpt: "Use when identifying content deterioration or staleness without conflating age and decline."
 featured_image: "/assets/images/ecosystem/skill-webops-content-decay.webp"
 social_image: "/assets/images/social/webops-content-decay.jpg"
 section: "Agent Skill"

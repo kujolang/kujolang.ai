@@ -2,6 +2,7 @@
 title: "Kujo Standard Library"
 custom_url: "kujo-standard-library"
 description: "Use this skill when using, adding, or reviewing Kujo native standard library functions, including arity, return types, capability gates, JSON conversion, filesystem, process, network, database, crypto, strings, arrays, dictionaries, rendering helpers, AI helpers, and collection helper behavior."
+excerpt: "Use this skill when using, adding, or reviewing Kujo native standard library functions, including arity, return types, capability gates, JSON conversion, filesystem, process, network,…"
 featured_image: "/assets/images/ecosystem/skill-kujo-standard-library.webp"
 social_image: "/assets/images/social/kujo-standard-library.jpg"
 section: "Agent Skill"

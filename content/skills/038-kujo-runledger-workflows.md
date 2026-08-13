@@ -2,6 +2,7 @@
 title: "Kujo RunLedger"
 custom_url: "kujo-runledger-workflows"
 description: "Use this skill when recording, comparing, reporting, or maintaining RunLedger receipts for AI-agent build runs: `runledger start`, `finish`, `usage`, `cost`, `note`, `followup`, `list`, `show`, `compare`, `report`, `.runledger/` JSON files, run verdicts, token/cost capture, read-only git metadata receipts, RunLedger reports, or RunLedger CLI/tests/source changes."
+excerpt: "Use this skill when recording, comparing, reporting, or maintaining RunLedger receipts for AI-agent build runs."
 featured_image: "/assets/images/ecosystem/skill-kujo-runledger-workflows.webp"
 social_image: "/assets/images/social/kujo-runledger-workflows.jpg"
 section: "Agent Skill"

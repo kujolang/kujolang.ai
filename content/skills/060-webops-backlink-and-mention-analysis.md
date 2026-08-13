@@ -2,6 +2,7 @@
 title: "Webops Backlink And Mention Analysis"
 custom_url: "webops-backlink-and-mention-analysis"
 description: "Use when analyzing new/lost backlinks, linked and unlinked mentions, and evidence-backed link concerns."
+excerpt: "Use when analyzing new/lost backlinks, linked and unlinked mentions, and evidence-backed link concerns."
 featured_image: "/assets/images/ecosystem/skill-webops-backlink-and-mention-analysis.webp"
 social_image: "/assets/images/social/webops-backlink-and-mention-analysis.jpg"
 section: "Agent Skill"

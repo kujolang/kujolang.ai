@@ -2,6 +2,7 @@
 title: "Kujo Concord"
 custom_url: "kujo-concord-workflows"
 description: "Use this skill when scanning, reporting, triaging, or maintaining Concord artifact-drift checks for Kujo ecosystem repositories: `concord scan`, `check`, `report`, `tasks`, `--format json`, `--output`, CLI/docs drift, Spec/Eval alignment, manifest/docs alignment, version consistency, example validity, source-of-truth findings, `.dogfood/concord/` outputs, or Concord CLI/source/test changes."
+excerpt: "Use this skill when scanning, reporting, triaging, or maintaining Concord artifact-drift checks for Kujo ecosystem repositories."
 featured_image: "/assets/images/ecosystem/skill-kujo-concord-workflows.webp"
 social_image: "/assets/images/social/kujo-concord-workflows.jpg"
 section: "Agent Skill"

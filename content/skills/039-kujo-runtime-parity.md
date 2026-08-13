@@ -2,6 +2,7 @@
 title: "Kujo Runtime Parity"
 custom_url: "kujo-runtime-parity"
 description: "Use this skill when investigating VM versus interpreter behavior, deciding runtime flags, adding language/runtime surfaces, updating parity tests, or preventing accidental interpreter-default workflows."
+excerpt: "Use this skill when investigating VM versus interpreter behavior, deciding runtime flags, adding language/runtime surfaces, updating parity tests, or preventing accidental interpreter-default workflows."
 featured_image: "/assets/images/ecosystem/skill-kujo-runtime-parity.webp"
 social_image: "/assets/images/social/kujo-runtime-parity.jpg"
 section: "Agent Skill"

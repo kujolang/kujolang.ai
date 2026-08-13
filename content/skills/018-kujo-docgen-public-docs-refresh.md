@@ -2,6 +2,7 @@
 title: "Kujo DocGen Public Docs Refresh"
 custom_url: "kujo-docgen-public-docs-refresh"
 description: "Use this skill when refreshing Kujo DocGen public docs, generated documentation, agent-readable JSON/gap outputs, coverage gates, README/reference alignment, or example smoke policy after readiness or docs-drift evidence. Use `kujo docgen` and validate before committing; do not publish or deploy without explicit supported authorization."
+excerpt: "Use this skill when refreshing Kujo DocGen public docs, generated documentation, agent-readable JSON/gap outputs, coverage gates, README/reference alignment, or example smoke policy after readiness…"
 featured_image: "/assets/images/ecosystem/skill-kujo-docgen-public-docs-refresh.webp"
 social_image: "/assets/images/social/kujo-docgen-public-docs-refresh.jpg"
 section: "Agent Skill"

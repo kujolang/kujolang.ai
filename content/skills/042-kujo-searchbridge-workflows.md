@@ -2,6 +2,7 @@
 title: "Kujo Searchbridge"
 custom_url: "kujo-searchbridge-workflows"
 description: "Use when running SearchBridge doctor, capability preflight, fixture providers, normalized evidence reads, or explicit ACT submission."
+excerpt: "Use when running SearchBridge doctor, capability preflight, fixture providers, normalized evidence reads, or explicit ACT submission."
 featured_image: "/assets/images/ecosystem/skill-kujo-searchbridge-workflows.webp"
 social_image: "/assets/images/social/kujo-searchbridge-workflows.jpg"
 section: "Agent Skill"

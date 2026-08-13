@@ -2,6 +2,7 @@
 title: "Kujo Tribunal"
 custom_url: "kujo-tribunal-workflows"
 description: "Use this skill when running, reviewing, integrating, or maintaining Tribunal local decision-evidence workflows: `tribunal review`, `resume`, `compare`, `re-review`, `kill`, `validate`, `audit`, `verify`, bundle/store/provenance commands, signed evidence, trust policies, run artifacts, schemas, release gates, or Tribunal source/docs changes."
+excerpt: "Use this skill when running, reviewing, integrating, or maintaining Tribunal local decision-evidence workflows."
 featured_image: "/assets/images/ecosystem/skill-kujo-tribunal-workflows.webp"
 social_image: "/assets/images/social/kujo-tribunal-workflows.jpg"
 section: "Agent Skill"

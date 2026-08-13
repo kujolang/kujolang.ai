@@ -2,6 +2,7 @@
 title: "Webops Reporting"
 custom_url: "webops-reporting"
 description: "Use when synthesizing validated specialist evidence into quiet WebOps reports."
+excerpt: "Use when synthesizing validated specialist evidence into quiet WebOps reports."
 featured_image: "/assets/images/ecosystem/skill-webops-reporting.webp"
 social_image: "/assets/images/social/webops-reporting.jpg"
 section: "Agent Skill"

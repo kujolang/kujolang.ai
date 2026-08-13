@@ -2,6 +2,7 @@
 title: "Kujo ChangeBucket"
 custom_url: "kujo-changebucket-workflows"
 description: "Use this skill when measuring or enforcing code-change footprint with ChangeBucket: `changebucket`, `changebucket check`, `--json`, `--markdown`, `--output`, `--base`, `--head`, `--repo`, budget flags, risk/blast-radius reports, file-category counts, generated markdown reports, or ChangeBucket CLI/tests/source changes."
+excerpt: "Use this skill when measuring or enforcing code-change footprint with ChangeBucket."
 featured_image: "/assets/images/ecosystem/skill-kujo-changebucket-workflows.webp"
 social_image: "/assets/images/social/kujo-changebucket-workflows.jpg"
 section: "Agent Skill"

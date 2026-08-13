@@ -2,6 +2,7 @@
 title: "Kujo Security Hardening"
 custom_url: "kujo-security-hardening"
 description: "Use this skill when writing or reviewing Kujo scripts that touch files, processes, shell commands, network, databases, archives, HTML/static serving, AI provider egress, secrets, or untrusted input; it enforces Kujo's conservative native API security posture."
+excerpt: "Use this skill when writing or reviewing Kujo scripts that touch files, processes, shell commands, network, databases, archives, HTML/static serving, AI provider egress, secrets,…"
 featured_image: "/assets/images/ecosystem/skill-kujo-security-hardening.webp"
 social_image: "/assets/images/social/kujo-security-hardening.jpg"
 section: "Agent Skill"

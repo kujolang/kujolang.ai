@@ -2,6 +2,7 @@
 title: "Kujo Dependabot Alert Triage"
 custom_url: "kujo-dependabot-alert-triage"
 description: "Use this skill when triaging GitHub Dependabot or security alerts across Kujo repos, summarizing affected repositories/packages/severity/status/patched versions/PR state/next actions, creating fix-ready tasks, or maintaining a Strata running list. Do not dismiss alerts or mutate GitHub security state without explicit authorization."
+excerpt: "Use this skill when triaging GitHub Dependabot or security alerts across Kujo repos, summarizing affected repositories/packages/severity/status/patched versions/PR state/next actions, creating fix-ready tasks, or maintaining…"
 featured_image: "/assets/images/ecosystem/skill-kujo-dependabot-alert-triage.webp"
 social_image: "/assets/images/social/kujo-dependabot-alert-triage.jpg"
 section: "Agent Skill"

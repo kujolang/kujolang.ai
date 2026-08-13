@@ -2,6 +2,7 @@
 title: "Webops Search Standards Watch"
 custom_url: "webops-search-standards-watch"
 description: "Use when monitoring authoritative search, indexing, structured-data, analytics, browser, AI-search, and web-standard changes."
+excerpt: "Use when monitoring authoritative search, indexing, structured-data, analytics, browser, AI-search, and web-standard changes."
 featured_image: "/assets/images/ecosystem/skill-webops-search-standards-watch.webp"
 social_image: "/assets/images/social/webops-search-standards-watch.jpg"
 section: "Agent Skill"

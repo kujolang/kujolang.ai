@@ -2,6 +2,7 @@
 title: "Webops Content Gap"
 custom_url: "webops-content-gap"
 description: "Use when classifying site coverage against audience/search needs."
+excerpt: "Use when classifying site coverage against audience/search needs."
 featured_image: "/assets/images/ecosystem/skill-webops-content-gap.webp"
 social_image: "/assets/images/social/webops-content-gap.jpg"
 section: "Agent Skill"

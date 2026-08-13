@@ -2,6 +2,7 @@
 title: "Webops Link Health"
 custom_url: "webops-link-health"
 description: "Use when auditing broken, redirected, malformed, or unexpected links."
+excerpt: "Use when auditing broken, redirected, malformed, or unexpected links."
 featured_image: "/assets/images/ecosystem/skill-webops-link-health.webp"
 social_image: "/assets/images/social/webops-link-health.jpg"
 section: "Agent Skill"

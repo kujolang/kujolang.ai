@@ -2,6 +2,7 @@
 title: "Webops Distribution"
 custom_url: "webops-distribution"
 description: "Use when creating source-grounded distribution assets and optionally publishing with ACT authority."
+excerpt: "Use when creating source-grounded distribution assets and optionally publishing with ACT authority."
 featured_image: "/assets/images/ecosystem/skill-webops-distribution.webp"
 social_image: "/assets/images/social/webops-distribution.jpg"
 section: "Agent Skill"

@@ -2,6 +2,7 @@
 title: "Kujo Scent"
 custom_url: "kujo-scent-workflows"
 description: "Use this skill when creating, previewing, reviewing, or maintaining Scent context packs for agent handoff: `scent pack`, `--dry-run`, `--json`, `--budget`, `--target`, `--include`, `--exclude`, `--changed`, `--staged`, `--unstaged`, `.scent/` or generated pack artifacts, `context.md`, `context.json`, `manifest.json`, `files.json`, `redactions.json`, and Scent CLI/source/test changes."
+excerpt: "Use this skill when creating, previewing, reviewing, or maintaining Scent context packs for agent handoff."
 featured_image: "/assets/images/ecosystem/skill-kujo-scent-workflows.webp"
 social_image: "/assets/images/social/kujo-scent-workflows.jpg"
 section: "Agent Skill"

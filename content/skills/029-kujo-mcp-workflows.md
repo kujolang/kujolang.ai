@@ -2,6 +2,7 @@
 title: "Kujo MCP"
 custom_url: "kujo-mcp-workflows"
 description: "Use this skill when generating, running, validating, deploying, or maintaining Kujo MCP servers and repo-specific MCP scaffolds: `mcp make`, `kujo run mcp.kujo --interpreter make`, `mcp-server.json`, MCP tool/resource registries, generated `.mcp/` outputs, `mcp.manifest.json`, repo profiles, MCP safety tiers, auth/host/request guardrails, endpoint tests, or MCP source/test changes."
+excerpt: "Use this skill when generating, running, validating, deploying, or maintaining Kujo MCP servers and repo-specific MCP scaffolds."
 featured_image: "/assets/images/ecosystem/skill-kujo-mcp-workflows.webp"
 social_image: "/assets/images/social/kujo-mcp-workflows.jpg"
 section: "Agent Skill"

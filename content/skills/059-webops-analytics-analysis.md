@@ -2,6 +2,7 @@
 title: "Webops Analytics Analysis"
 custom_url: "webops-analytics-analysis"
 description: "Use when analyzing real website behavior from normalized analytics evidence."
+excerpt: "Use when analyzing real website behavior from normalized analytics evidence."
 featured_image: "/assets/images/ecosystem/skill-webops-analytics-analysis.webp"
 social_image: "/assets/images/social/webops-analytics-analysis.jpg"
 section: "Agent Skill"

@@ -2,6 +2,7 @@
 title: "Kujo CRUD API"
 custom_url: "kujo-crud-api-workflows"
 description: "Use this skill when running, testing, extending, or maintaining the CRUD API showcase: `main.kujo`, SQLite item/project APIs, Next.js playground, auth strategies, smoke tests, frontend lint/build, DR/performance drills, API contracts, release checklist, or `crud-api` source/docs changes."
+excerpt: "Use this skill when running, testing, extending, or maintaining the CRUD API showcase."
 featured_image: "/assets/images/ecosystem/skill-kujo-crud-api-workflows.webp"
 social_image: "/assets/images/social/kujo-crud-api-workflows.jpg"
 section: "Agent Skill"

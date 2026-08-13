@@ -2,6 +2,7 @@
 title: "Kujo AI SDK"
 custom_url: "kujo-ai-sdk-workflows"
 description: "Use this skill when building, testing, integrating, or maintaining Kujo AI SDK provider primitives: OpenAI-compatible chat/embeddings contracts, provider presets, fixture mode, streaming callbacks, retries/backoff, redaction, live provider smoke tests, telemetry bridge examples, benchmark quality gates, release gates, or `ai-sdk` source/docs changes."
+excerpt: "Use this skill when building, testing, integrating, or maintaining Kujo AI SDK provider primitives."
 featured_image: "/assets/images/ecosystem/skill-kujo-ai-sdk-workflows.webp"
 social_image: "/assets/images/social/kujo-ai-sdk-workflows.jpg"
 section: "Agent Skill"

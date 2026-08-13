@@ -2,6 +2,7 @@
 title: "Kujo ShipCheck"
 custom_url: "kujo-shipcheck-workflows"
 description: "Use this skill when running, reviewing, integrating, or maintaining ShipCheck release-readiness workflows for Kujo ecosystem repositories: `shipcheck.kujo`, `scan`, `checklist`, `gate`, `release-note`, `--format json`, CI release gates, markdown/json reports, release check catalogs, gate exit semantics, or ShipCheck CLI/source/test changes."
+excerpt: "Use this skill when running, reviewing, integrating, or maintaining ShipCheck release-readiness workflows for Kujo ecosystem repositories."
 featured_image: "/assets/images/ecosystem/skill-kujo-shipcheck-workflows.webp"
 social_image: "/assets/images/social/kujo-shipcheck-workflows.jpg"
 section: "Agent Skill"

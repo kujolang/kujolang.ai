@@ -2,6 +2,7 @@
 title: "Kujo Siteprobe"
 custom_url: "kujo-siteprobe-workflows"
 description: "Use when running, validating, comparing, reporting, or integrating SiteProbe website-intelligence crawls and `.siteprobe` artifacts."
+excerpt: "Use when running, validating, comparing, reporting, or integrating SiteProbe website-intelligence crawls and `.siteprobe` artifacts."
 featured_image: "/assets/images/ecosystem/skill-kujo-siteprobe-workflows.webp"
 social_image: "/assets/images/social/kujo-siteprobe-workflows.jpg"
 section: "Agent Skill"

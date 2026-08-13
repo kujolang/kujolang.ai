@@ -2,6 +2,7 @@
 title: "Webops Internal Linking"
 custom_url: "webops-internal-linking"
 description: "Use when analyzing, proposing, or explicitly applying contextual internal links."
+excerpt: "Use when analyzing, proposing, or explicitly applying contextual internal links."
 featured_image: "/assets/images/ecosystem/skill-webops-internal-linking.webp"
 social_image: "/assets/images/social/webops-internal-linking.jpg"
 section: "Agent Skill"

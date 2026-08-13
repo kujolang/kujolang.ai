@@ -2,6 +2,7 @@
 title: "Webops Content Pruning"
 custom_url: "webops-content-pruning"
 description: "Use when reviewing obsolete or redundant content for keep, refresh, merge, redirect, or retire proposals."
+excerpt: "Use when reviewing obsolete or redundant content for keep, refresh, merge, redirect, or retire proposals."
 featured_image: "/assets/images/ecosystem/skill-webops-content-pruning.webp"
 social_image: "/assets/images/social/webops-content-pruning.jpg"
 section: "Agent Skill"

@@ -2,6 +2,7 @@
 title: "Webops Keyword Opportunity"
 custom_url: "webops-keyword-opportunity"
 description: "Use when finding query opportunities while separating measurement, estimates, and public research."
+excerpt: "Use when finding query opportunities while separating measurement, estimates, and public research."
 featured_image: "/assets/images/ecosystem/skill-webops-keyword-opportunity.webp"
 social_image: "/assets/images/social/webops-keyword-opportunity.jpg"
 section: "Agent Skill"

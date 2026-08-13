@@ -2,6 +2,7 @@
 title: "Kujo Muzzle"
 custom_url: "kujo-muzzle-workflows"
 description: "Use this skill when setting up, running, or reviewing Muzzle quiet workflows for AI-assisted development: `muzzle init`, `.muzzle/workflows/`, `.muzzle/manifests/`, `muzzle run`, `--json`, `--verbose`, `--dry-run`, workflow logs/reports, loop mode, or Muzzle safety and output-contract changes."
+excerpt: "Use this skill when setting up, running, or reviewing Muzzle quiet workflows for AI-assisted development."
 featured_image: "/assets/images/ecosystem/skill-kujo-muzzle-workflows.webp"
 social_image: "/assets/images/social/kujo-muzzle-workflows.jpg"
 section: "Agent Skill"

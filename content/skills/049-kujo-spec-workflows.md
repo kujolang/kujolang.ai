@@ -2,6 +2,7 @@
 title: "Kujo Spec"
 custom_url: "kujo-spec-workflows"
 description: "Use this skill when creating, validating, exporting, reviewing, or maintaining Kujo Spec task contracts: `.spec.yml`, `.spec.yaml`, `.spec.toml`, `.spec.json`, `spec init`, `validate`, `render`, `export`, `export-agent-context`, `export-eval`, `ci`, `list`, `search`, `status`, `template`, `graph`, safe-write/template-source policy, Spec schema changes, or Spec CLI/tests/source changes."
+excerpt: "Use this skill when creating, validating, exporting, reviewing, or maintaining Kujo Spec task contracts."
 featured_image: "/assets/images/ecosystem/skill-kujo-spec-workflows.webp"
 social_image: "/assets/images/social/kujo-spec-workflows.jpg"
 section: "Agent Skill"

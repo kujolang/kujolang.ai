@@ -2,6 +2,7 @@
 title: "Webops Cannibalization"
 custom_url: "webops-cannibalization"
 description: "Use when identifying likely intent competition while separating normal overlap."
+excerpt: "Use when identifying likely intent competition while separating normal overlap."
 featured_image: "/assets/images/ecosystem/skill-webops-cannibalization.webp"
 social_image: "/assets/images/social/webops-cannibalization.jpg"
 section: "Agent Skill"

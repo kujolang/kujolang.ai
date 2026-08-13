@@ -46,6 +46,13 @@ function words(value) {
   return value.replace(/^kujo-/, '').replace(/-workflows$/, '').replace(/-/g, ' ');
 }
 
+function skillCatalogExcerpt(description) {
+  const summary = description.split(/:\s/)[0].replace(/\s+/g, ' ').trim();
+  const parts = summary.split(' ');
+  if (parts.length <= 24) return /[.!?]$/.test(summary) ? summary : `${summary}.`;
+  return `${parts.slice(0, 24).join(' ')}…`;
+}
+
 const objectRules = [
   [/accessibility/, 'tactile inspection desk with contrast gauges and navigation controls'],
   [/ai-search|visibility/, 'signal observatory with citation lenses and query beacons'],
@@ -192,7 +199,7 @@ skillPaths.forEach((skillPath, index) => {
   const bullets = usefulBullets(source);
   const body = `## What it covers\n\n${description}\n\n## Released guidance\n\n${bullets.length ? bullets.join('\n') : 'The released skill file defines the authoritative workflow, boundaries, sources, and validation guidance.'}\n\n## Release boundary\n\nThis page reflects the ${skillVersion} technical preview on ${skillDate}. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.\n\n## Source\n\n- [Read the complete ${slug} skill on GitHub](${sourceUrl})\n- [Browse the released Kujo Skills Index](https://github.com/kujolang/kujo-skills/blob/main/SKILLS_INDEX.md)`;
   writePage(skillsDir, index + 1, slug, {
-    title, custom_url: slug, description,
+    title, custom_url: slug, description, excerpt: skillCatalogExcerpt(description),
     featured_image: `/${heroPath}`, social_image: `/assets/images/social/${slug}.jpg`,
     section: 'Agent Skill', order: (index + 1) * 10,
     install_command: `mkdir -p ~/.codex/skills && cp -R skills/${slug} ~/.codex/skills/`,

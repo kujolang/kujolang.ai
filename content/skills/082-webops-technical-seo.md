@@ -2,6 +2,7 @@
 title: "Webops Technical SEO"
 custom_url: "webops-technical-seo"
 description: "Use when performing a deterministic technical SEO audit from crawl evidence."
+excerpt: "Use when performing a deterministic technical SEO audit from crawl evidence."
 featured_image: "/assets/images/ecosystem/skill-webops-technical-seo.webp"
 social_image: "/assets/images/social/webops-technical-seo.jpg"
 section: "Agent Skill"

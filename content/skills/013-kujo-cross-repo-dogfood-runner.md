@@ -2,6 +2,7 @@
 title: "Kujo Cross-Repo Dogfood Runner"
 custom_url: "kujo-cross-repo-dogfood-runner"
 description: "Use this skill when running recurring cross-repo Kujo dogfood checks, weekly/monthly ecosystem automation, tool interoperability audits, or multi-repo evidence collection using Concord, Fence, Scout, ChangeBucket, PatchBrief, Scent, RunLedger, Casefile, DocGen, and Muzzle."
+excerpt: "Use this skill when running recurring cross-repo Kujo dogfood checks, weekly/monthly ecosystem automation, tool interoperability audits, or multi-repo evidence collection using Concord, Fence, Scout,…"
 featured_image: "/assets/images/ecosystem/skill-kujo-cross-repo-dogfood-runner.webp"
 social_image: "/assets/images/social/kujo-cross-repo-dogfood-runner.jpg"
 section: "Agent Skill"

@@ -2,6 +2,7 @@
 title: "Webops Capability Preflight"
 custom_url: "webops-capability-preflight"
 description: "Use when checking which WebOps website, repository, browser, search, analytics, performance, backlink, keyword, publishing, distribution, or submission capabilities are available."
+excerpt: "Use when checking which WebOps website, repository, browser, search, analytics, performance, backlink, keyword, publishing, distribution, or submission capabilities are available."
 featured_image: "/assets/images/ecosystem/skill-webops-capability-preflight.webp"
 social_image: "/assets/images/social/webops-capability-preflight.jpg"
 section: "Agent Skill"

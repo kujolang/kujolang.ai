@@ -2,6 +2,7 @@
 title: "Kujo Benchmarks Capsule"
 custom_url: "kujo-benchmarks-capsule-workflows"
 description: "Use this skill when running, validating, comparing, or maintaining the Capsule benchmark tool: `bin/capsule`, `make`, `inspect`, `validate`, `--stable`, `--dry-run`, `capsule.json`, `capsule.md`, `manifest.json`, fixture projects, benchmark evidence, or benchmarks-capsule source/test changes."
+excerpt: "Use this skill when running, validating, comparing, or maintaining the Capsule benchmark tool."
 featured_image: "/assets/images/ecosystem/skill-kujo-benchmarks-capsule-workflows.webp"
 social_image: "/assets/images/social/kujo-benchmarks-capsule-workflows.jpg"
 section: "Agent Skill"

@@ -2,6 +2,7 @@
 title: "Kujo Watchdog"
 custom_url: "kujo-watchdog-workflows"
 description: "Use this skill when running, configuring, testing, integrating, or maintaining Watchdog local AI telemetry/proxy workflows: `dashboard_server.kujo`, `/proxy/v1`, `/api/requests`, `/api/proxy-config`, SQLite telemetry, auth modes, redaction, rate limits, dashboard assets, benchmark scripts, AI Chat integration, or `watchdog` source/docs changes."
+excerpt: "Use this skill when running, configuring, testing, integrating, or maintaining Watchdog local AI telemetry/proxy workflows."
 featured_image: "/assets/images/ecosystem/skill-kujo-watchdog-workflows.webp"
 social_image: "/assets/images/social/kujo-watchdog-workflows.jpg"
 section: "Agent Skill"

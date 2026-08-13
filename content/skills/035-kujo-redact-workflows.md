@@ -2,6 +2,7 @@
 title: "Kujo Redact"
 custom_url: "kujo-redact-workflows"
 description: "Use this skill when scanning, sanitizing, verifying, packing, or maintaining Redact local deterministic anonymization workflows: `redact.kujo`, `scan`, `sanitize`, `verify`, `pack`, policy YAML files, `.redact/runs/` audit artifacts, leakage checks, unsafe originals, AI-stub boundaries, or Redact CLI/source/test changes."
+excerpt: "Use this skill when scanning, sanitizing, verifying, packing, or maintaining Redact local deterministic anonymization workflows."
 featured_image: "/assets/images/ecosystem/skill-kujo-redact-workflows.webp"
 social_image: "/assets/images/social/kujo-redact-workflows.jpg"
 section: "Agent Skill"

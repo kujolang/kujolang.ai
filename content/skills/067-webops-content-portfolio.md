@@ -2,6 +2,7 @@
 title: "Webops Content Portfolio"
 custom_url: "webops-content-portfolio"
 description: "Use when assigning longitudinal content portfolio states."
+excerpt: "Use when assigning longitudinal content portfolio states."
 featured_image: "/assets/images/ecosystem/skill-webops-content-portfolio.webp"
 social_image: "/assets/images/social/webops-content-portfolio.jpg"
 section: "Agent Skill"

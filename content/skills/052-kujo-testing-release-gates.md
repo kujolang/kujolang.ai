@@ -2,6 +2,7 @@
 title: "Kujo Testing And Release Gates"
 custom_url: "kujo-testing-release-gates"
 description: "Use this skill when testing Kujo scripts, examples, docs, security behavior, runtime parity, CLI contracts, or Rust implementation changes, and when preparing or reviewing release-gate readiness."
+excerpt: "Use this skill when testing Kujo scripts, examples, docs, security behavior, runtime parity, CLI contracts, or Rust implementation changes, and when preparing or reviewing…"
 featured_image: "/assets/images/ecosystem/skill-kujo-testing-release-gates.webp"
 social_image: "/assets/images/social/kujo-testing-release-gates.jpg"
 section: "Agent Skill"

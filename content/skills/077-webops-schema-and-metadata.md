@@ -2,6 +2,7 @@
 title: "Webops Schema And Metadata"
 custom_url: "webops-schema-and-metadata"
 description: "Use when auditing structured data and page/social metadata."
+excerpt: "Use when auditing structured data and page/social metadata."
 featured_image: "/assets/images/ecosystem/skill-webops-schema-and-metadata.webp"
 social_image: "/assets/images/social/webops-schema-and-metadata.jpg"
 section: "Agent Skill"

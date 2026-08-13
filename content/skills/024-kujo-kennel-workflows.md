@@ -2,6 +2,7 @@
 title: "Kujo Kennel"
 custom_url: "kujo-kennel-workflows"
 description: "Use this skill when inspecting, using, validating, or maintaining Kennel package/dependency workflows: `kennel.kujo`, package manifests, lockfiles, file dependencies, static indexes and mirrors, trust policy, source policy, semver range resolution, local hosted-registry lifecycle, install/update/validate behavior, release gates, or `kennel` source/test changes."
+excerpt: "Use this skill when inspecting, using, validating, or maintaining Kennel package/dependency workflows."
 featured_image: "/assets/images/ecosystem/skill-kujo-kennel-workflows.webp"
 social_image: "/assets/images/social/kujo-kennel-workflows.jpg"
 section: "Agent Skill"

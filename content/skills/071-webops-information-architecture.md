@@ -2,6 +2,7 @@
 title: "Webops Information Architecture"
 custom_url: "webops-information-architecture"
 description: "Use when auditing site navigation, hierarchy, taxonomy, URLs, depth, clusters, and discoverability."
+excerpt: "Use when auditing site navigation, hierarchy, taxonomy, URLs, depth, clusters, and discoverability."
 featured_image: "/assets/images/ecosystem/skill-webops-information-architecture.webp"
 social_image: "/assets/images/social/webops-information-architecture.jpg"
 section: "Agent Skill"

@@ -2,6 +2,7 @@
 title: "Kujo Eval"
 custom_url: "kujo-eval-workflows"
 description: "Use this skill when creating, running, debugging, or maintaining Kujo Eval deterministic evaluation suites: `eval.json`, `kujo run main.kujo run`, `report`, `compare`, `lint`, `list-checks`, `snapshots`, `policy-explain`, `verify-manifest`, snapshot tests, JSON/HTTP/file/command checks, Eval artifacts, policy profiles, CI gates, or Eval CLI/source/test changes."
+excerpt: "Use this skill when creating, running, debugging, or maintaining Kujo Eval deterministic evaluation suites."
 featured_image: "/assets/images/ecosystem/skill-kujo-eval-workflows.webp"
 social_image: "/assets/images/social/kujo-eval-workflows.jpg"
 section: "Agent Skill"

@@ -2,6 +2,7 @@
 title: "Webops Longitudinal Findings"
 custom_url: "webops-longitudinal-findings"
 description: "Use when creating, comparing, or updating stable WebOps findings, recommendations, actions, outcomes, and recurring-run history."
+excerpt: "Use when creating, comparing, or updating stable WebOps findings, recommendations, actions, outcomes, and recurring-run history."
 featured_image: "/assets/images/ecosystem/skill-webops-longitudinal-findings.webp"
 social_image: "/assets/images/social/webops-longitudinal-findings.jpg"
 section: "Agent Skill"

@@ -2,6 +2,7 @@
 title: "Webops Competitor Intelligence"
 custom_url: "webops-competitor-intelligence"
 description: "Use when monitoring selected public competitors or peers for meaningful change."
+excerpt: "Use when monitoring selected public competitors or peers for meaningful change."
 featured_image: "/assets/images/ecosystem/skill-webops-competitor-intelligence.webp"
 social_image: "/assets/images/social/webops-competitor-intelligence.jpg"
 section: "Agent Skill"

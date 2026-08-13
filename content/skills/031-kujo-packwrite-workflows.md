@@ -2,6 +2,7 @@
 title: "Kujo PackWrite"
 custom_url: "kujo-packwrite-workflows"
 description: "Use this skill when generating, validating, reviewing, or maintaining PackWrite agent execution packs: `packwrite init`, `validate`, `prompt`, `config`, `doctor`, `packwrite.toml`, `MEGA_PROMPT.md`, generated `agent/` packs, model/provider setup, offline fake-response tests, or PackWrite CLI/source changes."
+excerpt: "Use this skill when generating, validating, reviewing, or maintaining PackWrite agent execution packs."
 featured_image: "/assets/images/ecosystem/skill-kujo-packwrite-workflows.webp"
 social_image: "/assets/images/social/kujo-packwrite-workflows.jpg"
 section: "Agent Skill"

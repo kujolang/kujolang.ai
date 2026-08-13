@@ -2,6 +2,7 @@
 title: "Kujo CMS"
 custom_url: "kujo-cms-workflows"
 description: "Use this skill when running, validating, extending, or maintaining the Kujo CMS server-first showcase: `backend/runtime/main.kujo`, content models, delivery routes, auth boundaries, contract tests, startup compatibility, webhook/background jobs, migration safety, backup/restore, release gates, or `cms` source/docs changes."
+excerpt: "Use this skill when running, validating, extending, or maintaining the Kujo CMS server-first showcase."
 featured_image: "/assets/images/ecosystem/skill-kujo-cms-workflows.webp"
 social_image: "/assets/images/social/kujo-cms-workflows.jpg"
 section: "Agent Skill"

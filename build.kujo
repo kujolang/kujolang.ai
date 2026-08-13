@@ -4059,7 +4059,7 @@ func build_site(settings) {
 			}
 			card_terms := item["tags"]
 			card_excerpt := item["excerpt"]
-			if collection_slug == "skills" || collection_slug == "workflows" {
+			if collection_slug == "workflows" {
 				card_excerpt = item["description"]
 			}
 			if collection_slug == "ecosystem" {

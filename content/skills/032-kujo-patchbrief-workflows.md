@@ -2,6 +2,7 @@
 title: "Kujo PatchBrief"
 custom_url: "kujo-patchbrief-workflows"
 description: "Use this skill when generating, consuming, validating, or maintaining PatchBrief structured git-diff briefs: `patchbrief.kujo`, `summarize`, `suggest-tests`, `handoff`, `--format json`, `--pretty`, implementation handoffs, reviewer notes, changed-file risk summaries, PatchBrief CLI/tests/source changes, or PatchBrief dogfood workflows."
+excerpt: "Use this skill when generating, consuming, validating, or maintaining PatchBrief structured git-diff briefs."
 featured_image: "/assets/images/ecosystem/skill-kujo-patchbrief-workflows.webp"
 social_image: "/assets/images/social/kujo-patchbrief-workflows.jpg"
 section: "Agent Skill"

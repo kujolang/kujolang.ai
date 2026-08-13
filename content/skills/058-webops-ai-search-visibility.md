@@ -2,6 +2,7 @@
 title: "Webops AI Search Visibility"
 custom_url: "webops-ai-search-visibility"
 description: "Use when running repeatable AI/search visibility benchmark suites."
+excerpt: "Use when running repeatable AI/search visibility benchmark suites."
 featured_image: "/assets/images/ecosystem/skill-webops-ai-search-visibility.webp"
 social_image: "/assets/images/social/webops-ai-search-visibility.jpg"
 section: "Agent Skill"

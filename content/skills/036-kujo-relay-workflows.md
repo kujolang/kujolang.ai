@@ -2,6 +2,7 @@
 title: "Kujo Relay"
 custom_url: "kujo-relay-workflows"
 description: "Use this skill when running, validating, inspecting, repairing, or maintaining Relay bounded agent mission workflows: `bin/relay`, `doctor`, `chat`, `models`, `agents`, `missions`, `runs`, fixture/live provider paths, PackWrite/RunLedger/ChangeBucket/Eval evidence, event bundles, tool-result bundles, run indexes, Watchdog route posture, or Relay source/docs changes."
+excerpt: "Use this skill when running, validating, inspecting, repairing, or maintaining Relay bounded agent mission workflows."
 featured_image: "/assets/images/ecosystem/skill-kujo-relay-workflows.webp"
 social_image: "/assets/images/social/kujo-relay-workflows.jpg"
 section: "Agent Skill"

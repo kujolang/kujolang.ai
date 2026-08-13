@@ -2,6 +2,7 @@
 title: "Kujo SiteKit Repository"
 custom_url: "kujo-site-kit-workflows"
 description: "Use this skill when building, validating, consuming, or maintaining SiteKit design-system artifacts in the `site-kit` repository: tokens, component schemas/templates/CSS, generated `dist/sitekit.css`, optional `dist/sitekit.js`, accessibility checks, browser smoke tests, launch checklist, or Workcell evidence."
+excerpt: "Use this skill when building, validating, consuming, or maintaining SiteKit design-system artifacts in the `site-kit` repository."
 featured_image: "/assets/images/ecosystem/skill-kujo-site-kit-workflows.webp"
 social_image: "/assets/images/social/kujo-site-kit-workflows.jpg"
 section: "Agent Skill"

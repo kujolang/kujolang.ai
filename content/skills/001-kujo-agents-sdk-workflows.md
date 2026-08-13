@@ -2,6 +2,7 @@
 title: "Agents SDK"
 custom_url: "kujo-agents-sdk-workflows"
 description: "Use this skill when working on Kujo Agents SDK runtime primitives, examples, offline fixtures, agent runners, tools, approvals, handoffs, tracing, artifact/session/memory stores, retrieval providers, integration adapters, MCP 2026 helpers, budget limits, no-network harnesses, or `agents-sdk` source/test changes."
+excerpt: "Use this skill when working on Kujo Agents SDK runtime primitives, examples, offline fixtures, agent runners, tools, approvals, handoffs, tracing, artifact/session/memory stores, retrieval providers,…"
 featured_image: "/assets/images/ecosystem/skill-kujo-agents-sdk-workflows.webp"
 social_image: "/assets/images/social/kujo-agents-sdk-workflows.jpg"
 section: "Agent Skill"

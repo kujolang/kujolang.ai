@@ -2,6 +2,7 @@
 title: "Kujo Enterprise Automation"
 custom_url: "kujo-enterprise-automation"
 description: "Use this skill when designing Kujo automation for CI, policy gates, operational workflows, enterprise-safe scripting, audit logs, machine-readable reports, or capability-minimal production runs."
+excerpt: "Use this skill when designing Kujo automation for CI, policy gates, operational workflows, enterprise-safe scripting, audit logs, machine-readable reports, or capability-minimal production runs."
 featured_image: "/assets/images/ecosystem/skill-kujo-enterprise-automation.webp"
 social_image: "/assets/images/social/kujo-enterprise-automation.jpg"
 section: "Agent Skill"

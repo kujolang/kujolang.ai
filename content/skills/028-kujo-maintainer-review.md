@@ -2,6 +2,7 @@
 title: "Kujo Maintainer Review"
 custom_url: "kujo-maintainer-review"
 description: "Use this skill when asked to review Kujo code, PRs, patches, examples, docs, CLI changes, native API changes, security boundaries, runtime parity work, or release-readiness changes like a strict Kujo maintainer."
+excerpt: "Use this skill when asked to review Kujo code, PRs, patches, examples, docs, CLI changes, native API changes, security boundaries, runtime parity work, or…"
 featured_image: "/assets/images/ecosystem/skill-kujo-maintainer-review.webp"
 social_image: "/assets/images/social/kujo-maintainer-review.jpg"
 section: "Agent Skill"

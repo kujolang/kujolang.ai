@@ -2,6 +2,7 @@
 title: "Kujo AI Chat"
 custom_url: "kujo-ai-chat-workflows"
 description: "Use this skill when running, configuring, testing, extending, or maintaining the AI Chat local multi-provider chat app: `npm run dev`, `npm run smoke`, SQLite chat state, provider profiles, encrypted API keys, SSE streaming, transcription, `bridge_chat.kujo`, HTTP/API contracts, smoke tests, or `ai-chat` source/docs changes."
+excerpt: "Use this skill when running, configuring, testing, extending, or maintaining the AI Chat local multi-provider chat app."
 featured_image: "/assets/images/ecosystem/skill-kujo-ai-chat-workflows.webp"
 social_image: "/assets/images/social/kujo-ai-chat-workflows.jpg"
 section: "Agent Skill"

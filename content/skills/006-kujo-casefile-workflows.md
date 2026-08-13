@@ -2,6 +2,7 @@
 title: "Kujo Casefile"
 custom_url: "kujo-casefile-workflows"
 description: "Use this skill when capturing, reviewing, handing off, cleaning, or maintaining Casefile local failure evidence bundles: `casefile.kujo`, `casefile.toml`, `.casefile/`, `capture`, `show latest`, `list`, `doctor`, `clean`, `--from-log`, `--manual`, `--mirror-exit-code`, redaction, path safety, or Casefile CLI/tests/source changes."
+excerpt: "Use this skill when capturing, reviewing, handing off, cleaning, or maintaining Casefile local failure evidence bundles."
 featured_image: "/assets/images/ecosystem/skill-kujo-casefile-workflows.webp"
 social_image: "/assets/images/social/kujo-casefile-workflows.jpg"
 section: "Agent Skill"

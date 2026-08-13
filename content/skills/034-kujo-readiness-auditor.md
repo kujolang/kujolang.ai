@@ -2,6 +2,7 @@
 title: "Kujo Readiness Auditor"
 custom_url: "kujo-readiness-auditor"
 description: "Use this skill when auditing Kujo repositories for recurring readiness posture, release preparedness, production gaps, evidence quality, or weekly/monthly readiness reports across ShipCheck, Fence, Eval, Concord, ChangeBucket, RunLedger, and Casefile outputs."
+excerpt: "Use this skill when auditing Kujo repositories for recurring readiness posture, release preparedness, production gaps, evidence quality, or weekly/monthly readiness reports across ShipCheck, Fence,…"
 featured_image: "/assets/images/ecosystem/skill-kujo-readiness-auditor.webp"
 social_image: "/assets/images/social/kujo-readiness-auditor.jpg"
 section: "Agent Skill"

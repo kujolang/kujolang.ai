@@ -2,6 +2,7 @@
 title: "Kujo Skill Auditor"
 custom_url: "kujo-skill-auditor"
 description: "Use this skill when reviewing, refreshing, or auditing the Kujo skills pack so each `skills/*/SKILL.md` file matches current Kujo tool behavior, commands, docs, tests, safety boundaries, and repo reality. Use for weekly skill maintenance, stale skill checks, trigger/index updates, or when Kujo tools changed and their agent skills may need synchronization."
+excerpt: "Use this skill when reviewing, refreshing, or auditing the Kujo skills pack so each `skills/*/SKILL.md` file matches current Kujo tool behavior, commands, docs, tests,…"
 featured_image: "/assets/images/ecosystem/skill-kujo-skill-auditor.webp"
 social_image: "/assets/images/social/kujo-skill-auditor.jpg"
 section: "Agent Skill"

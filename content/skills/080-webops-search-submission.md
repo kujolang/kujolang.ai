@@ -2,6 +2,7 @@
 title: "Webops Search Submission"
 custom_url: "webops-search-submission"
 description: "Use when preflighting or performing explicit ACT search submission through supported providers."
+excerpt: "Use when preflighting or performing explicit ACT search submission through supported providers."
 featured_image: "/assets/images/ecosystem/skill-webops-search-submission.webp"
 social_image: "/assets/images/social/webops-search-submission.jpg"
 section: "Agent Skill"

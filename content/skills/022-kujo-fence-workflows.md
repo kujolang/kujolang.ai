@@ -2,6 +2,7 @@
 title: "Kujo Fence"
 custom_url: "kujo-fence-workflows"
 description: "Use this skill when setting up, running, interpreting, integrating, or maintaining Fence architecture-boundary checks for Kujo ecosystem repositories: `fence.kujo`, `fence.toml`, `fence-baseline.json`, `init`, `validate`, `check`, `explain`, `graph`, `baseline create`, `--changed-only`, `--baseline`, JSON/Markdown/SARIF reports, CI gates, zone rules, import-boundary violations, or Fence CLI/source/test changes."
+excerpt: "Use this skill when setting up, running, interpreting, integrating, or maintaining Fence architecture-boundary checks for Kujo ecosystem repositories."
 featured_image: "/assets/images/ecosystem/skill-kujo-fence-workflows.webp"
 social_image: "/assets/images/social/kujo-fence-workflows.jpg"
 section: "Agent Skill"

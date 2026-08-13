@@ -2,6 +2,7 @@
 title: "Webops Search Performance"
 custom_url: "webops-search-performance"
 description: "Use when analyzing longitudinal measured search performance."
+excerpt: "Use when analyzing longitudinal measured search performance."
 featured_image: "/assets/images/ecosystem/skill-webops-search-performance.webp"
 social_image: "/assets/images/social/webops-search-performance.jpg"
 section: "Agent Skill"

@@ -2,6 +2,7 @@
 title: "Webops Site Profile"
 custom_url: "webops-site-profile"
 description: "Use when configuring or validating a portable WebOps site profile, repository binding, integration references, permission default, or site identity."
+excerpt: "Use when configuring or validating a portable WebOps site profile, repository binding, integration references, permission default, or site identity."
 featured_image: "/assets/images/ecosystem/skill-webops-site-profile.webp"
 social_image: "/assets/images/social/webops-site-profile.jpg"
 section: "Agent Skill"

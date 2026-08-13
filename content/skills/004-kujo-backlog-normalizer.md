@@ -2,6 +2,7 @@
 title: "Kujo Backlog Normalizer"
 custom_url: "kujo-backlog-normalizer"
 description: "Use this skill when converting Kujo audit findings, drift reports, release blockers, DocGen gaps, Dependabot/security triage, or recurring automation output into fix-ready backlog tasks using Scout, PatchBrief, ChangeBucket, Spec, ShipCheck, DocGen evidence, and RunLedger context."
+excerpt: "Use this skill when converting Kujo audit findings, drift reports, release blockers, DocGen gaps, Dependabot/security triage, or recurring automation output into fix-ready backlog tasks…"
 featured_image: "/assets/images/ecosystem/skill-kujo-backlog-normalizer.webp"
 social_image: "/assets/images/social/kujo-backlog-normalizer.jpg"
 section: "Agent Skill"

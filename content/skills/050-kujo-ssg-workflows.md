@@ -2,6 +2,7 @@
 title: "Kujo SSG"
 custom_url: "kujo-ssg-workflows"
 description: "Use this skill when building, validating, configuring, testing, or maintaining the Kujo SSG static-site showcase: `build.kujo`, starter content, templates, assets, `kujo-ssg.yml`, feeds, sitemap, robots, `llms.txt`, generated `output/`, CLI flags, parallel shard builds, DocGen docs bridge, reusable docs starter, validation scripts, release gates, or `ssg` source/docs changes."
+excerpt: "Use this skill when building, validating, configuring, testing, or maintaining the Kujo SSG static-site showcase."
 featured_image: "/assets/images/ecosystem/skill-kujo-ssg-workflows.webp"
 social_image: "/assets/images/social/kujo-ssg-workflows.jpg"
 section: "Agent Skill"

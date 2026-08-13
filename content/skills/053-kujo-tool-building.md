@@ -2,6 +2,7 @@
 title: "Kujo Tool Building"
 custom_url: "kujo-tool-building"
 description: "Use this skill when building practical Kujo CLI tools, quality gates, policy checkers, repo scanners, JSON-reporting scripts, or local automation that needs deterministic arguments, output, and exit behavior."
+excerpt: "Use this skill when building practical Kujo CLI tools, quality gates, policy checkers, repo scanners, JSON-reporting scripts, or local automation that needs deterministic arguments,…"
 featured_image: "/assets/images/ecosystem/skill-kujo-tool-building.webp"
 social_image: "/assets/images/social/kujo-tool-building.jpg"
 section: "Agent Skill"
