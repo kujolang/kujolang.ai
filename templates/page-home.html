@@ -8,9 +8,20 @@
 				<p class="home-hero__body">Kujo is an AI-native programming language and toolchain built to make agent-driven software development clear, controlled, and verifiable.</p>
 				<div class="sk-hero__actions">
 					<a class="sk-button" href="/ecosystem/">Explore ecosystem</a>
-					<button class="sk-button" data-variant="secondary" type="button" data-quick-install-open>Quick Install</button>
+					<button class="sk-button home-video-button" data-variant="secondary" type="button" data-hero-video-open aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7 8 5-8 5z"/></svg><span>View video</span></button>
 				</div>
 			</div>
 		</div>
 	</section>
+	<div class="hero-video-modal" data-hero-video-modal hidden>
+		<div class="hero-video-modal__backdrop" data-hero-video-close></div>
+		<section class="hero-video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="hero-video-title" tabindex="-1">
+			<h2 class="visually-hidden" id="hero-video-title">Introduction to Kujo</h2>
+			<video controls playsinline preload="metadata" poster="/assets/images/home-agent-workflow.webp" data-hero-video>
+				<source src="/assets/videos/kujo-intro.mp4" type="video/mp4">
+				Your browser does not support embedded video. <a href="/assets/videos/kujo-intro.mp4">Download the Kujo introduction video</a>.
+			</video>
+			<button class="hero-video-modal__close" type="button" data-hero-video-close aria-label="Close video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+		</section>
+	</div>
 </main>

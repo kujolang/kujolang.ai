@@ -4,6 +4,14 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ## [Unreleased]
 
+### Added
+
+- Full-screen, accessible Kujo introduction video player launched from the homepage hero.
+
+### Changed
+
+- Replaced the homepage hero's Quick Install action with a View video action while preserving Quick Install in the site navigation.
+
 ## [1.2.0] - 2026-08-12
 
 ### Added

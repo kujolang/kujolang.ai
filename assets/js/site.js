@@ -253,6 +253,65 @@
     bindModal(agentModal, '[data-agent-prompt-close]');
   }
 
+  function enhanceHeroVideo() {
+    var modal = document.querySelector('[data-hero-video-modal]');
+    var video = modal && modal.querySelector('[data-hero-video]');
+    var dialog = modal && modal.querySelector('[role="dialog"]');
+    if (!modal || !video || !dialog) return;
+    var previousFocus = null;
+
+    function openVideo(trigger) {
+      previousFocus = trigger || document.activeElement;
+      document.dispatchEvent(new Event('kujo:close-mobile-menu'));
+      modal.hidden = false;
+      document.body.classList.add('modal-open');
+      window.requestAnimationFrame(function () {
+        var closeButton = modal.querySelector('.hero-video-modal__close');
+        if (closeButton) closeButton.focus();
+        else dialog.focus();
+        var playRequest = video.play();
+        if (playRequest && typeof playRequest.catch === 'function') playRequest.catch(function () {});
+      });
+    }
+
+    function closeVideo() {
+      video.pause();
+      video.currentTime = 0;
+      modal.hidden = true;
+      document.body.classList.remove('modal-open');
+      if (previousFocus && typeof previousFocus.focus === 'function') previousFocus.focus();
+      previousFocus = null;
+    }
+
+    document.querySelectorAll('[data-hero-video-open]').forEach(function (button) {
+      button.addEventListener('click', function () { openVideo(button); });
+    });
+
+    modal.querySelectorAll('[data-hero-video-close]').forEach(function (control) {
+      control.addEventListener('click', closeVideo);
+    });
+
+    modal.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeVideo();
+        return;
+      }
+      if (event.key !== 'Tab') return;
+      var focusable = Array.prototype.slice.call(dialog.querySelectorAll('button, video[controls], a[href], [tabindex]:not([tabindex="-1"])'));
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+  }
+
   function enhanceHeroDither() {
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var bayer8 = [
@@ -482,6 +541,7 @@
     enhanceNavigationDropdowns();
     enhanceMobileNavigation();
     enhanceInstallModals();
+    enhanceHeroVideo();
     enhanceCarousels();
     enhanceHeroDither();
     enhanceMonoScramble();

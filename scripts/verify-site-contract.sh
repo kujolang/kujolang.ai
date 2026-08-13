@@ -53,6 +53,7 @@ require_file "${output_dir}/contact/index.html"
 require_file "${output_dir}/writing/index.html"
 require_file "${output_dir}/assets/js/vendor/scramble-decode.js"
 require_file "${output_dir}/assets/prompts/kujo-agent-onboarding.txt"
+require_file "${output_dir}/assets/videos/kujo-intro.mp4"
 require_file "${output_dir}/favicon.ico"
 require_file "${output_dir}/favicon.svg"
 require_file "${output_dir}/favicon-16x16.png"
@@ -82,7 +83,12 @@ require_text "${output_dir}/index.html" '<title>Kujo — AI-Native Programming L
 require_text "${output_dir}/index.html" '"name":"Kujo","alternateName":["Kujolang.ai","Kujolang"]'
 require_text "${output_dir}/index.html" '<meta name="author" content="Kujo Team">'
 require_text "${output_dir}/index.html" 'Kujo is an AI-native programming language and toolchain built to make agent-driven software development clear, controlled, and verifiable.'
-require_text "${output_dir}/index.html" '<button class="sk-button" data-variant="secondary" type="button" data-quick-install-open>Quick Install</button>'
+require_text "${output_dir}/index.html" 'data-hero-video-open aria-haspopup="dialog"'
+require_text "${output_dir}/index.html" '<span>View video</span>'
+require_text "${output_dir}/index.html" 'data-hero-video-modal hidden'
+require_text "${output_dir}/index.html" '<source src="/assets/videos/kujo-intro.mp4" type="video/mp4">'
+require_text "${output_dir}/index.html" 'controls playsinline preload="metadata"'
+reject_text "${output_dir}/index.html" '<button class="sk-button" data-variant="secondary" type="button" data-quick-install-open>Quick Install</button>'
 reject_text "${output_dir}/index.html" 'Read the docs'
 reject_text "${output_dir}/index.html" '&rarr;'
 require_text "${output_dir}/index.html" 'assets/images/home-agent-workflow.webp'
