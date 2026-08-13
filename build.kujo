@@ -779,7 +779,7 @@ func ecosystem_navigation_item(is_current) {
 	if is_current {
 		current_attr = " aria-current=\"page\""
 	}
-	return "<li class=\"nav-dropdown\" data-nav-dropdown><div class=\"nav-dropdown__trigger\"><a href=\"/ecosystem/\" class=\"text-primary hover:underline\"" + current_attr + ">Ecosystem</a><button class=\"nav-dropdown__toggle\" type=\"button\" aria-expanded=\"false\" aria-label=\"Show Ecosystem menu\" data-nav-dropdown-toggle><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"m4 6 4 4 4-4\"/></svg></button></div><ul class=\"nav-submenu\" data-nav-submenu hidden><li><a href=\"/ecosystem/#primitives-title\">Primitives</a></li><li><a href=\"/ecosystem/#tooling-title\">Tooling</a></li><li><a href=\"/ecosystem/#showcase-title\">Showcase</a></li><li><a href=\"/ecosystem/skills/\">Skills</a></li><li><a href=\"/ecosystem/workflows/\">Workflows</a></li><li><a href=\"https://agents.kujolang.ai\" target=\"_blank\" rel=\"noopener\">Agents<span class=\"visually-hidden\"> (opens in a new tab)</span></a></li></ul></li>"
+	return "<li class=\"nav-dropdown\" data-nav-dropdown><div class=\"nav-dropdown__trigger\"><a href=\"/ecosystem/\" class=\"text-primary hover:underline\"" + current_attr + ">Ecosystem</a><button class=\"nav-dropdown__toggle\" type=\"button\" aria-expanded=\"false\" aria-label=\"Show Ecosystem menu\" data-nav-dropdown-toggle><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"m4 6 4 4 4-4\"/></svg></button></div><ul class=\"nav-submenu\" data-nav-submenu hidden><li><a href=\"/ecosystem/primitives/\">Primitives</a></li><li><a href=\"/ecosystem/tooling/\">Tooling</a></li><li><a href=\"/ecosystem/showcase/\">Showcase</a></li><li><a href=\"/ecosystem/skills/\">Skills</a></li><li><a href=\"/ecosystem/workflows/\">Workflows</a></li><li><a href=\"https://agents.kujolang.ai\" target=\"_blank\" rel=\"noopener\">Agents<span class=\"visually-hidden\"> (opens in a new tab)</span></a></li></ul></li>"
 }
 
 func docs_list_html(values, class_name) {
@@ -1763,7 +1763,7 @@ func render_layout(layout_template, settings, route, page_title, meta_descriptio
 	rendered = replace(rendered, "<meta name=\"author\" content=\"Robert DeVore\">", "<meta name=\"author\" content=\"Kujo Team\">")
 
 	schema_type := ""
-	if route == "ecosystem/" || route == "ecosystem/skills/" || route == "ecosystem/workflows/" || route == settings["blog_slug"] + "/" {
+	if route == "ecosystem/" || route == "ecosystem/primitives/" || route == "ecosystem/tooling/" || route == "ecosystem/showcase/" || route == "ecosystem/skills/" || route == "ecosystem/workflows/" || route == settings["blog_slug"] + "/" {
 		schema_type = "CollectionPage"
 	} else if starts_with(route, "ecosystem/") {
 		schema_type = "SoftwareSourceCode"
@@ -3384,6 +3384,31 @@ func build_site(settings) {
 			})
 		}
 	}
+	# Build catalog-backed collections before the ecosystem overview so its
+	# carousels can reuse the released skill and workflow card previews.
+	collection_build_order := []
+	custom_collection_order_idx := 0
+	loop {
+		if custom_collection_order_idx >= len(custom_collections) {
+			break
+		}
+		ordered_collection := custom_collections[custom_collection_order_idx]
+		custom_collection_order_idx := custom_collection_order_idx + 1
+		if ordered_collection["slug"] != "ecosystem" {
+			collection_build_order = push(collection_build_order, ordered_collection)
+		}
+	}
+	custom_collection_order_idx = 0
+	loop {
+		if custom_collection_order_idx >= len(custom_collections) {
+			break
+		}
+		ordered_collection := custom_collections[custom_collection_order_idx]
+		custom_collection_order_idx := custom_collection_order_idx + 1
+		if ordered_collection["slug"] == "ecosystem" {
+			collection_build_order = push(collection_build_order, ordered_collection)
+		}
+	}
 
 	pages_data := []
 	page_file_idx := 0
@@ -3828,13 +3853,15 @@ func build_site(settings) {
 	if path_exists(llms_collections_tmp) {
 		delete_file(llms_collections_tmp)
 	}
+	skills_preview_cards := ""
+	workflows_preview_cards := ""
 	collection_idx := 0
 	loop {
-		if collection_idx >= len(custom_collections) {
+		if collection_idx >= len(collection_build_order) {
 			break
 		}
 
-		collection := custom_collections[collection_idx]
+		collection := collection_build_order[collection_idx]
 		collection_idx := collection_idx + 1
 		collection_slug := collection["slug"]
 		collection_title := collection["title"]
@@ -3942,12 +3969,35 @@ func build_site(settings) {
 					"last_updated": trim(to_string(meta["last_updated"])),
 					"date": item_date_raw
 				}
+				catalog_url := "/ecosystem/"
+				catalog_label := "All ecosystem"
+				if collection_slug == "skills" {
+					catalog_url = "/ecosystem/skills/"
+					catalog_label = "All skills"
+				} else if collection_slug == "workflows" {
+					catalog_url = "/ecosystem/workflows/"
+					catalog_label = "All workflows"
+				} else if collection_slug == "ecosystem" {
+					item_section := trim(to_string(meta["section"]))
+					if item_section == "Primitives" {
+						catalog_url = "/ecosystem/primitives/"
+						catalog_label = "All primitives"
+					} else if item_section == "Tooling" {
+						catalog_url = "/ecosystem/tooling/"
+						catalog_label = "All tooling"
+					} else if item_section == "Showcase" {
+						catalog_url = "/ecosystem/showcase/"
+						catalog_label = "All showcases"
+					}
+				}
 
 				item_inner := apply_template(selected_collection_template, {
 					"title": title,
 					"description": description,
 					"install_command": trim(to_string(meta["install_command"])),
 					"github_url": trim(to_string(meta["github_url"])),
+					"catalog_url": catalog_url,
+					"catalog_label": catalog_label,
 					"launch_story": trim(to_string(meta["launch_story"])),
 					"scope_note": trim(to_string(meta["scope_note"])),
 					"author": resolve_lookup(meta["author"], authors_lookup, "Unknown Author"),
@@ -4036,6 +4086,7 @@ func build_site(settings) {
 		primitive_cards := ""
 		tooling_cards := ""
 		showcase_cards := ""
+		agent_cards := ""
 		preview_cards := ""
 		location_cards := ""
 		preview_count := 0
@@ -4077,6 +4128,9 @@ func build_site(settings) {
 				} else if item_section == "Showcase" {
 					showcase_cards = showcase_cards + card_html
 				}
+				if item["title"] == "Agents SDK" || item["title"] == "Dispatch" || item["title"] == "Relay" {
+					agent_cards = agent_cards + card_html
+				}
 			}
 			if preview_count < 6 {
 				preview_cards = preview_cards + card_html
@@ -4089,6 +4143,11 @@ func build_site(settings) {
 		if collection_slug == "storefronts" {
 			storefront_preview_cards = preview_cards
 			location_preview_cards = location_cards
+		}
+		if collection_slug == "skills" {
+			skills_preview_cards = preview_cards
+		} else if collection_slug == "workflows" {
+			workflows_preview_cards = preview_cards
 		}
 
 		listing_route := collection_base_route(collection_slug)
@@ -4103,6 +4162,9 @@ func build_site(settings) {
 				"primitive_cards": primitive_cards,
 				"tooling_cards": tooling_cards,
 				"showcase_cards": showcase_cards,
+				"skills_cards": skills_preview_cards,
+				"workflows_cards": workflows_preview_cards,
+				"agent_cards": agent_cards,
 				"items": collection_cards,
 				"posts": collection_cards,
 				"pagination": "",
@@ -4117,7 +4179,7 @@ func build_site(settings) {
 		} else if collection_slug == "skills" {
 			listing_description = "Browse all 83 repository-backed Kujo Agent Skills released in kujo-skills 0.2.0, including language, tooling, safety, release, and WebOps guidance."
 		} else if collection_slug == "workflows" {
-			listing_description = "Browse all 25 local-first workflow kits released in kujo-workflows 0.2.0, with explicit inputs, boundaries, evidence, and readiness status."
+			listing_description = "Browse all 26 local-first workflow kits released in kujo-workflows 0.2.0, with explicit inputs, boundaries, evidence, and readiness status."
 		}
 		listing_html := render_layout(
 			layout_template,
@@ -4138,6 +4200,44 @@ func build_site(settings) {
 		write_route_alias(output_dir, listing_route, make_aliases)
 		if want_sitemap {
 			append_file(sitemap_tmp, sitemap_url_entry(site_url, listing_route, "", ""))
+		}
+		if collection_slug == "ecosystem" {
+			section_template_path := path_join(templates_dir, "page-ecosystem-section.html")
+			if path_exists(section_template_path) {
+				section_template := read_file(section_template_path)
+				section_pages := [
+					{"slug": "primitives", "title": "Primitives", "eyebrow": "14 / Foundation projects", "hero": "/assets/images/ecosystem/primitives-language-foundation.webp", "intro": "Build from the Kujo language, package foundation, runtimes, SDKs, and reusable components designed for explicit, inspectable AI-native software.", "catalog_title": "Primitive catalog", "catalog_description": "Every released foundation project, from the language and package manager to portable runtime and provider building blocks.", "cards": primitive_cards},
+					{"slug": "tooling", "title": "Tooling", "eyebrow": "17 / Operational tools", "hero": "/assets/images/ecosystem/tooling-operator-bench.webp", "intro": "Choose focused local-first tools for context, execution, evidence, safety, interface delivery, architecture, and release readiness.", "catalog_title": "Tooling catalog", "catalog_description": "Every released operational tool, with direct paths to its source, setup, contracts, boundaries, and verification guidance.", "cards": tooling_cards},
+					{"slug": "showcase", "title": "Showcase", "eyebrow": "7 / Complete applications", "hero": "/assets/images/ecosystem/showcase-application-gallery.webp", "intro": "Explore complete, inspectable applications that demonstrate how Kujo projects fit together across APIs, content systems, retrieval, chat, and agent workflows.", "catalog_title": "Showcase catalog", "catalog_description": "Every released application showcase, built as a working reference that can be inspected, run, and extended.", "cards": showcase_cards}
+				]
+				section_page_idx := 0
+				loop {
+					if section_page_idx >= len(section_pages) {
+						break
+					}
+					section_page := section_pages[section_page_idx]
+					section_page_idx := section_page_idx + 1
+					section_route := "ecosystem/" + section_page["slug"] + "/"
+					section_content := apply_template(section_template, section_page)
+					section_navigation := build_navigation(pages_data, custom_collections, section_route, settings["blog_slug"])
+					section_description := section_page["intro"]
+					section_html := render_layout(
+						layout_template,
+						settings,
+						section_route,
+						section_page["title"] + " - " + settings["site_title"],
+						section_description,
+						section_navigation,
+						section_content,
+						{"seo_title": section_page["title"] + " ecosystem", "seo_description": section_description, "lang": "en", "social_image": "/assets/images/social/" + section_page["slug"] + ".jpg"}
+					)
+					write_route_page(output_dir, section_route, section_html)
+					write_route_alias(output_dir, section_route, make_aliases)
+					if want_sitemap {
+						append_file(sitemap_tmp, sitemap_url_entry(site_url, section_route, "", ""))
+					}
+				}
+			}
 		}
 		if settings["llms"] == "public" && len(site_url) > 0 && !settings["no_aux"] {
 			append_file(llms_collections_tmp, "\n## " + collection_title + "\n")

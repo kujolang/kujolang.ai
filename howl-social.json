@@ -36,6 +36,45 @@
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
     },
     {
+      "id": "primitives",
+      "title": "Primitives",
+      "tagline": "Foundation projects for inspectable AI-native software.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "collection",
+      "url": "kujolang.ai/ecosystem/primitives/",
+      "show_border": false,
+      "show_url": false,
+      "background_image": "assets/images/ecosystem/primitives-language-foundation.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "tooling",
+      "title": "Tooling",
+      "tagline": "Local-first tools for evidence, safety, and delivery.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "collection",
+      "url": "kujolang.ai/ecosystem/tooling/",
+      "show_border": false,
+      "show_url": false,
+      "background_image": "assets/images/ecosystem/tooling-operator-bench.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "showcase",
+      "title": "Showcase",
+      "tagline": "Complete applications built to inspect, run, and extend.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "collection",
+      "url": "kujolang.ai/ecosystem/showcase/",
+      "show_border": false,
+      "show_url": false,
+      "background_image": "assets/images/ecosystem/showcase-application-gallery.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
       "id": "ethos",
       "title": "Ethos",
       "tagline": "Clarity, context, and control for AI-native software.",

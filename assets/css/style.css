@@ -786,6 +786,52 @@
     padding: 0;
   }
 
+  .ecosystem-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: var(--sk-space-6);
+    margin-block-end: var(--sk-space-8);
+  }
+
+  .ecosystem-section-heading .section-heading {
+    margin-block-end: 0;
+  }
+
+  .ecosystem-section-heading > .sk-button {
+    flex: 0 0 auto;
+  }
+
+  .ecosystem-carousel {
+    gap: var(--sk-space-5);
+    border: 0;
+    background: transparent;
+    padding: 0;
+  }
+
+  .ecosystem-carousel .sk-carousel__track {
+    grid-auto-columns: calc((100% - (2 * var(--sk-space-5))) / 3);
+    gap: var(--sk-space-5);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .ecosystem-carousel .sk-carousel__track > .listing-card {
+    min-block-size: 0;
+    padding: 0;
+    scroll-snap-align: start;
+  }
+
+  .ecosystem-carousel .sk-carousel__controls {
+    justify-content: space-between;
+  }
+
+  .ecosystem-carousel .sk-carousel__controls button:disabled {
+    opacity: .38;
+    cursor: not-allowed;
+  }
+
   .tool-hero .sk-hero__inner {
     position: relative;
     z-index: 1;
@@ -867,6 +913,28 @@
   .tool-links {
     position: sticky;
     inset-block-start: var(--sk-space-5);
+  }
+
+  .tool-links .sk-card__actions {
+    flex-wrap: nowrap;
+  }
+
+  .tool-links .sk-button {
+    min-inline-size: 0;
+    white-space: nowrap;
+  }
+
+  .github-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sk-space-2);
+  }
+
+  .github-button svg {
+    inline-size: 1rem;
+    block-size: 1rem;
+    flex: 0 0 auto;
+    fill: currentColor;
   }
 
   .post-header {
@@ -978,6 +1046,15 @@
   }
 
   @media (max-width: 48rem) {
+    .ecosystem-section-heading {
+      align-items: start;
+      flex-direction: column;
+    }
+
+    .ecosystem-carousel .sk-carousel__track {
+      grid-auto-columns: min(84%, 19rem);
+    }
+
     .desktop-navigation,
     .header-docs {
       display: none !important;
