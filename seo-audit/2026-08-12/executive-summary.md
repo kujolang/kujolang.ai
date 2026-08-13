@@ -4,7 +4,7 @@ Audit date: 2026-08-12
 
 ## Overall status
 
-PASS WITH RECOMMENDATIONS — the repository and local production artifact pass the technical gates. Search visibility, traffic, field performance, and AI citations require elapsed time and platform access.
+PASS WITH RECOMMENDATIONS — the repository, production artifact, GitHub Pages deployment, and 153-route live crawl pass the technical gates. Search visibility, traffic, field performance, and AI citations require elapsed time and platform access.
 
 ## Where the site was
 
@@ -24,7 +24,7 @@ The immutable production baseline contained 43 canonical, indexable pages with c
 
 ## Where the site is now
 
-The after artifact contains 153 canonical, indexable, sitemap-listed routes. The local crawl found no missing or duplicate titles/descriptions, H1 issues, canonical mismatches, broken internal links, or orphans. All 153 pages have parseable schema and dedicated social-card coverage.
+The after artifact contains 153 canonical, indexable, sitemap-listed routes, and all 153 returned 200 in production. The crawl found no missing or duplicate titles/descriptions, H1 issues, canonical mismatches, broken internal links, or orphans. All 153 pages have parseable schema and dedicated social-card coverage.
 
 ## Available measurements
 
