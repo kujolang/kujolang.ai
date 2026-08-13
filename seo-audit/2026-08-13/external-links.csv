@@ -123,7 +123,7 @@ after,https://kujolang.ai/ecosystem/,https://agents.kujolang.ai,Agents (opens in
 after,https://kujolang.ai/ecosystem/,https://docs.kujolang.ai,Docs,nav,,https://docs.kujolang.ai,0,not probed in crawl,,none
 after,https://kujolang.ai/ecosystem/,https://agents.kujolang.ai,Agents (opens in a new tab),nav,,https://agents.kujolang.ai,0,not probed in crawl,noopener,none
 after,https://kujolang.ai/ecosystem/,https://docs.kujolang.ai,Docs,nav,,https://docs.kujolang.ai,0,not probed in crawl,,none
-after,https://kujolang.ai/ecosystem/,https://agents.kujolang.ai,Agents site (opens in a new tab),main,,https://agents.kujolang.ai,0,not probed in crawl,noopener,none
+after,https://kujolang.ai/ecosystem/,https://agents.kujolang.ai,Agents (opens in a new tab),main,,https://agents.kujolang.ai,0,not probed in crawl,noopener,none
 after,https://kujolang.ai/ecosystem/,https://x.com/kujolang,Kujo on X,nav,,https://x.com/kujolang,0,not probed in crawl,,none
 after,https://kujolang.ai/ecosystem/,https://github.com/kujolang,Kujo on GitHub,nav,,https://github.com/kujolang,0,not probed in crawl,,none
 after,https://kujolang.ai/ecosystem/,https://discord.gg/RqDgyb3BX,Kujo on Discord,nav,,https://discord.gg/RqDgyb3BX,0,not probed in crawl,,none

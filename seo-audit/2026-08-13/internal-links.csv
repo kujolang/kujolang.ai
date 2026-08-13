@@ -440,7 +440,7 @@ after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ethos/,Ethos,nav,200,ht
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,let your agents,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
-after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/primitives/,All primitives,main,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/primitives/,Primitives,main,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/kujo/,,main,200,https://kujolang.ai/ecosystem/kujo/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/kujo/,Kujo,main,200,https://kujolang.ai/ecosystem/kujo/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/kujo/,Explore Project,main,200,https://kujolang.ai/ecosystem/kujo/,0,rendered local route,,none
@@ -483,7 +483,7 @@ after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/watchdog/,Exp
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/leash/,,main,200,https://kujolang.ai/ecosystem/leash/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/leash/,Leash,main,200,https://kujolang.ai/ecosystem/leash/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/leash/,Explore Project,main,200,https://kujolang.ai/ecosystem/leash/,0,rendered local route,,none
-after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/tooling/,All tooling,main,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/tooling/,Tooling,main,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/muzzle/,,main,200,https://kujolang.ai/ecosystem/muzzle/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/muzzle/,Muzzle,main,200,https://kujolang.ai/ecosystem/muzzle/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/muzzle/,Explore Project,main,200,https://kujolang.ai/ecosystem/muzzle/,0,rendered local route,,none
@@ -535,7 +535,7 @@ after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/searchbridge/
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/siteprobe/,,main,200,https://kujolang.ai/ecosystem/siteprobe/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/siteprobe/,SiteProbe,main,200,https://kujolang.ai/ecosystem/siteprobe/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/siteprobe/,Explore Project,main,200,https://kujolang.ai/ecosystem/siteprobe/,0,rendered local route,,none
-after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/skills/,All skills,main,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/skills/,Skills,main,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/skills/kujo-agents-sdk-workflows/,,main,200,https://kujolang.ai/ecosystem/skills/kujo-agents-sdk-workflows/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/skills/kujo-agents-sdk-workflows/,Agents SDK,main,200,https://kujolang.ai/ecosystem/skills/kujo-agents-sdk-workflows/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/skills/kujo-agents-sdk-workflows/,View Skill,main,200,https://kujolang.ai/ecosystem/skills/kujo-agents-sdk-workflows/,0,rendered local route,,none
@@ -554,7 +554,7 @@ after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/skills/kujo-b
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/skills/kujo-casefile-workflows/,,main,200,https://kujolang.ai/ecosystem/skills/kujo-casefile-workflows/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/skills/kujo-casefile-workflows/,Kujo Casefile,main,200,https://kujolang.ai/ecosystem/skills/kujo-casefile-workflows/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/skills/kujo-casefile-workflows/,View Skill,main,200,https://kujolang.ai/ecosystem/skills/kujo-casefile-workflows/,0,rendered local route,,none
-after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/workflows/,All workflows,main,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/workflows/,Workflows,main,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/workflows/agency-runner/,,main,200,https://kujolang.ai/ecosystem/workflows/agency-runner/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/workflows/agency-runner/,Agency Runner,main,200,https://kujolang.ai/ecosystem/workflows/agency-runner/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/workflows/agency-runner/,View Workflow,main,200,https://kujolang.ai/ecosystem/workflows/agency-runner/,0,rendered local route,,none
@@ -582,7 +582,7 @@ after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/agents-sdk/,E
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/relay/,,main,200,https://kujolang.ai/ecosystem/relay/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/relay/,Relay,main,200,https://kujolang.ai/ecosystem/relay/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/relay/,Explore Project,main,200,https://kujolang.ai/ecosystem/relay/,0,rendered local route,,none
-after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/showcase/,All showcases,main,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/showcase/,Showcase,main,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/cms/,,main,200,https://kujolang.ai/ecosystem/cms/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/cms/,CMS,main,200,https://kujolang.ai/ecosystem/cms/,0,rendered local route,,none
 after,https://kujolang.ai/ecosystem/,https://kujolang.ai/ecosystem/cms/,Explore Project,main,200,https://kujolang.ai/ecosystem/cms/,0,rendered local route,,none
