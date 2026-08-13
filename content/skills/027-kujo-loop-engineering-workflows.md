@@ -1,5 +1,5 @@
 ---
-title: "Kujo Loop Engineering Workflows"
+title: "Kujo Loop Engineering"
 custom_url: "kujo-loop-engineering-workflows"
 description: "Use this skill when an agent should work through a bounded engineering task in an arbitrary repository with the Kujo loop-engineering harness: repo-local `.loop-engineering/` initialization, Markdown checklist classification, scoped local fixes only, deterministic eval gates, per-iteration evidence, structured external blockers, optional small commits/pushes, optional Strata handoff, and a fixed final summary contract."
 featured_image: "/assets/images/ecosystem/skill-kujo-loop-engineering-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Loop Engineering Workflows, Kujo Agent Skill, kujo-loop-engineering-workflows, repository-backed agent guidance"
-seo_title: "Kujo Loop Engineering Workflows — Kujo Agent Skill"
+keywords: "Kujo Loop Engineering, Kujo Agent Skill, kujo-loop-engineering-workflows, repository-backed agent guidance"
+seo_title: "Kujo Loop Engineering — Kujo Agent Skill"
 seo_description: "Use this skill when an agent should work through a bounded engineering task in an arbitrary repository with the Kujo loop-engineering harness: repo-local `.loop-engineering/` initialization, Markdown checklist classification, scoped local fixes only, deterministic eval gates, per-iteration evidence, structured external blockers, optional small commits/pushes, optional Strata handoff, and a fixed final summary contract."
 ---
 

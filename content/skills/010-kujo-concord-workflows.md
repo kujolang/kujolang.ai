@@ -1,5 +1,5 @@
 ---
-title: "Kujo Concord Workflows"
+title: "Kujo Concord"
 custom_url: "kujo-concord-workflows"
 description: "Use this skill when scanning, reporting, triaging, or maintaining Concord artifact-drift checks for Kujo ecosystem repositories: `concord scan`, `check`, `report`, `tasks`, `--format json`, `--output`, CLI/docs drift, Spec/Eval alignment, manifest/docs alignment, version consistency, example validity, source-of-truth findings, `.dogfood/concord/` outputs, or Concord CLI/source/test changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-concord-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Concord Workflows, Kujo Agent Skill, kujo-concord-workflows, repository-backed agent guidance"
-seo_title: "Kujo Concord Workflows — Kujo Agent Skill"
+keywords: "Kujo Concord, Kujo Agent Skill, kujo-concord-workflows, repository-backed agent guidance"
+seo_title: "Kujo Concord — Kujo Agent Skill"
 seo_description: "Use this skill when scanning, reporting, triaging, or maintaining Concord artifact-drift checks for Kujo ecosystem repositories: `concord scan`, `check`, `report`, `tasks`, `--format json`, `--output`, CLI/docs drift, Spec/Eval alignment, manifest/docs alignment, version consistency, example validity, source-of-truth findings, `.dogfood/concord/` outputs, or Concord CLI/source/test changes."
 ---
 

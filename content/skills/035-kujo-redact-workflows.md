@@ -1,5 +1,5 @@
 ---
-title: "Kujo Redact Workflows"
+title: "Kujo Redact"
 custom_url: "kujo-redact-workflows"
 description: "Use this skill when scanning, sanitizing, verifying, packing, or maintaining Redact local deterministic anonymization workflows: `redact.kujo`, `scan`, `sanitize`, `verify`, `pack`, policy YAML files, `.redact/runs/` audit artifacts, leakage checks, unsafe originals, AI-stub boundaries, or Redact CLI/source/test changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-redact-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Redact Workflows, Kujo Agent Skill, kujo-redact-workflows, repository-backed agent guidance"
-seo_title: "Kujo Redact Workflows — Kujo Agent Skill"
+keywords: "Kujo Redact, Kujo Agent Skill, kujo-redact-workflows, repository-backed agent guidance"
+seo_title: "Kujo Redact — Kujo Agent Skill"
 seo_description: "Use this skill when scanning, sanitizing, verifying, packing, or maintaining Redact local deterministic anonymization workflows: `redact.kujo`, `scan`, `sanitize`, `verify`, `pack`, policy YAML files, `.redact/runs/` audit artifacts, leakage checks, unsafe originals, AI-stub boundaries, or Redact CLI/source/test changes."
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Kujo RAG Workflows"
+title: "Kujo RAG"
 custom_url: "kujo-rag-workflows"
 description: "Use this skill when setting up, running, extending, testing, or maintaining the Kujo RAG Starter Kit: `kujo run main.kujo --interpreter ingest|query|serve|demo|bootstrap`, local/offline RAG indexes, namespace isolation, parser/chunking/embedding/retrieval changes, API ingest/query endpoints, OpenAPI/SDK parity, release-evaluation gates, large-corpus benchmarks, index maintenance, bootstrap templates, or RAG security/operations docs."
 featured_image: "/assets/images/ecosystem/skill-kujo-rag-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo RAG Workflows, Kujo Agent Skill, kujo-rag-workflows, repository-backed agent guidance"
-seo_title: "Kujo RAG Workflows — Kujo Agent Skill"
+keywords: "Kujo RAG, Kujo Agent Skill, kujo-rag-workflows, repository-backed agent guidance"
+seo_title: "Kujo RAG — Kujo Agent Skill"
 seo_description: "Use this skill when setting up, running, extending, testing, or maintaining the Kujo RAG Starter Kit: `kujo run main.kujo --interpreter ingest|query|serve|demo|bootstrap`, local/offline RAG indexes, namespace isolation, parser/chunking/embedding/retrieval changes, API ingest/query endpoints, OpenAPI/SDK parity, release-evaluation gates, large-corpus benchmarks, index maintenance, bootstrap templates, or RAG security/operations docs."
 ---
 

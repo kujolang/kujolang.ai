@@ -1,5 +1,5 @@
 ---
-title: "Kujo Scent Workflows"
+title: "Kujo Scent"
 custom_url: "kujo-scent-workflows"
 description: "Use this skill when creating, previewing, reviewing, or maintaining Scent context packs for agent handoff: `scent pack`, `--dry-run`, `--json`, `--budget`, `--target`, `--include`, `--exclude`, `--changed`, `--staged`, `--unstaged`, `.scent/` or generated pack artifacts, `context.md`, `context.json`, `manifest.json`, `files.json`, `redactions.json`, and Scent CLI/source/test changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-scent-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Scent Workflows, Kujo Agent Skill, kujo-scent-workflows, repository-backed agent guidance"
-seo_title: "Kujo Scent Workflows — Kujo Agent Skill"
+keywords: "Kujo Scent, Kujo Agent Skill, kujo-scent-workflows, repository-backed agent guidance"
+seo_title: "Kujo Scent — Kujo Agent Skill"
 seo_description: "Use this skill when creating, previewing, reviewing, or maintaining Scent context packs for agent handoff: `scent pack`, `--dry-run`, `--json`, `--budget`, `--target`, `--include`, `--exclude`, `--changed`, `--staged`, `--unstaged`, `.scent/` or generated pack artifacts, `context.md`, `context.json`, `manifest.json`, `files.json`, `redactions.json`, and Scent CLI/source/test changes."
 ---
 

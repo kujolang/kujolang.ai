@@ -1,5 +1,5 @@
 ---
-title: "Kujo ChangeBucket Workflows"
+title: "Kujo ChangeBucket"
 custom_url: "kujo-changebucket-workflows"
 description: "Use this skill when measuring or enforcing code-change footprint with ChangeBucket: `changebucket`, `changebucket check`, `--json`, `--markdown`, `--output`, `--base`, `--head`, `--repo`, budget flags, risk/blast-radius reports, file-category counts, generated markdown reports, or ChangeBucket CLI/tests/source changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-changebucket-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo ChangeBucket Workflows, Kujo Agent Skill, kujo-changebucket-workflows, repository-backed agent guidance"
-seo_title: "Kujo ChangeBucket Workflows — Kujo Agent Skill"
+keywords: "Kujo ChangeBucket, Kujo Agent Skill, kujo-changebucket-workflows, repository-backed agent guidance"
+seo_title: "Kujo ChangeBucket — Kujo Agent Skill"
 seo_description: "Use this skill when measuring or enforcing code-change footprint with ChangeBucket: `changebucket`, `changebucket check`, `--json`, `--markdown`, `--output`, `--base`, `--head`, `--repo`, budget flags, risk/blast-radius reports, file-category counts, generated markdown reports, or ChangeBucket CLI/tests/source changes."
 ---
 

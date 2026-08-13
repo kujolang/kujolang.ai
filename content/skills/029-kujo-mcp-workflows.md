@@ -1,5 +1,5 @@
 ---
-title: "Kujo MCP Workflows"
+title: "Kujo MCP"
 custom_url: "kujo-mcp-workflows"
 description: "Use this skill when generating, running, validating, deploying, or maintaining Kujo MCP servers and repo-specific MCP scaffolds: `mcp make`, `kujo run mcp.kujo --interpreter make`, `mcp-server.json`, MCP tool/resource registries, generated `.mcp/` outputs, `mcp.manifest.json`, repo profiles, MCP safety tiers, auth/host/request guardrails, endpoint tests, or MCP source/test changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-mcp-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo MCP Workflows, Kujo Agent Skill, kujo-mcp-workflows, repository-backed agent guidance"
-seo_title: "Kujo MCP Workflows — Kujo Agent Skill"
+keywords: "Kujo MCP, Kujo Agent Skill, kujo-mcp-workflows, repository-backed agent guidance"
+seo_title: "Kujo MCP — Kujo Agent Skill"
 seo_description: "Use this skill when generating, running, validating, deploying, or maintaining Kujo MCP servers and repo-specific MCP scaffolds: `mcp make`, `kujo run mcp.kujo --interpreter make`, `mcp-server.json`, MCP tool/resource registries, generated `.mcp/` outputs, `mcp.manifest.json`, repo profiles, MCP safety tiers, auth/host/request guardrails, endpoint tests, or MCP source/test changes."
 ---
 

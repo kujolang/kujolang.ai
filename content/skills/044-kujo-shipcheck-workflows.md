@@ -1,5 +1,5 @@
 ---
-title: "Kujo ShipCheck Workflows"
+title: "Kujo ShipCheck"
 custom_url: "kujo-shipcheck-workflows"
 description: "Use this skill when running, reviewing, integrating, or maintaining ShipCheck release-readiness workflows for Kujo ecosystem repositories: `shipcheck.kujo`, `scan`, `checklist`, `gate`, `release-note`, `--format json`, CI release gates, markdown/json reports, release check catalogs, gate exit semantics, or ShipCheck CLI/source/test changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-shipcheck-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo ShipCheck Workflows, Kujo Agent Skill, kujo-shipcheck-workflows, repository-backed agent guidance"
-seo_title: "Kujo ShipCheck Workflows — Kujo Agent Skill"
+keywords: "Kujo ShipCheck, Kujo Agent Skill, kujo-shipcheck-workflows, repository-backed agent guidance"
+seo_title: "Kujo ShipCheck — Kujo Agent Skill"
 seo_description: "Use this skill when running, reviewing, integrating, or maintaining ShipCheck release-readiness workflows for Kujo ecosystem repositories: `shipcheck.kujo`, `scan`, `checklist`, `gate`, `release-note`, `--format json`, CI release gates, markdown/json reports, release check catalogs, gate exit semantics, or ShipCheck CLI/source/test changes."
 ---
 

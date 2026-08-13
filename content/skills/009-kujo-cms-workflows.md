@@ -1,5 +1,5 @@
 ---
-title: "Kujo CMS Workflows"
+title: "Kujo CMS"
 custom_url: "kujo-cms-workflows"
 description: "Use this skill when running, validating, extending, or maintaining the Kujo CMS server-first showcase: `backend/runtime/main.kujo`, content models, delivery routes, auth boundaries, contract tests, startup compatibility, webhook/background jobs, migration safety, backup/restore, release gates, or `cms` source/docs changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-cms-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo CMS Workflows, Kujo Agent Skill, kujo-cms-workflows, repository-backed agent guidance"
-seo_title: "Kujo CMS Workflows — Kujo Agent Skill"
+keywords: "Kujo CMS, Kujo Agent Skill, kujo-cms-workflows, repository-backed agent guidance"
+seo_title: "Kujo CMS — Kujo Agent Skill"
 seo_description: "Use this skill when running, validating, extending, or maintaining the Kujo CMS server-first showcase: `backend/runtime/main.kujo`, content models, delivery routes, auth boundaries, contract tests, startup compatibility, webhook/background jobs, migration safety, backup/restore, release gates, or `cms` source/docs changes."
 ---
 

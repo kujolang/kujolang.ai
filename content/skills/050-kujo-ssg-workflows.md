@@ -1,5 +1,5 @@
 ---
-title: "Kujo SSG Workflows"
+title: "Kujo SSG"
 custom_url: "kujo-ssg-workflows"
 description: "Use this skill when building, validating, configuring, testing, or maintaining the Kujo SSG static-site showcase: `build.kujo`, starter content, templates, assets, `kujo-ssg.yml`, feeds, sitemap, robots, `llms.txt`, generated `output/`, CLI flags, parallel shard builds, DocGen docs bridge, reusable docs starter, validation scripts, release gates, or `ssg` source/docs changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-ssg-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo SSG Workflows, Kujo Agent Skill, kujo-ssg-workflows, repository-backed agent guidance"
-seo_title: "Kujo SSG Workflows — Kujo Agent Skill"
+keywords: "Kujo SSG, Kujo Agent Skill, kujo-ssg-workflows, repository-backed agent guidance"
+seo_title: "Kujo SSG — Kujo Agent Skill"
 seo_description: "Use this skill when building, validating, configuring, testing, or maintaining the Kujo SSG static-site showcase: `build.kujo`, starter content, templates, assets, `kujo-ssg.yml`, feeds, sitemap, robots, `llms.txt`, generated `output/`, CLI flags, parallel shard builds, DocGen docs bridge, reusable docs starter, validation scripts, release gates, or `ssg` source/docs changes."
 ---
 

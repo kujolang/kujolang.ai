@@ -1,5 +1,5 @@
 ---
-title: "Agents SDK Workflows"
+title: "Agents SDK"
 custom_url: "kujo-agents-sdk-workflows"
 description: "Use this skill when working on Kujo Agents SDK runtime primitives, examples, offline fixtures, agent runners, tools, approvals, handoffs, tracing, artifact/session/memory stores, retrieval providers, integration adapters, MCP 2026 helpers, budget limits, no-network harnesses, or `agents-sdk` source/test changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-agents-sdk-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Agents SDK Workflows, Kujo Agent Skill, kujo-agents-sdk-workflows, repository-backed agent guidance"
-seo_title: "Agents SDK Workflows — Kujo Agent Skill"
+keywords: "Agents SDK, Kujo Agent Skill, kujo-agents-sdk-workflows, repository-backed agent guidance"
+seo_title: "Agents SDK — Kujo Agent Skill"
 seo_description: "Use this skill when working on Kujo Agents SDK runtime primitives, examples, offline fixtures, agent runners, tools, approvals, handoffs, tracing, artifact/session/memory stores, retrieval providers, integration adapters, MCP 2026 helpers, budget limits, no-network harnesses, or `agents-sdk` source/test changes."
 ---
 

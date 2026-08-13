@@ -1,5 +1,5 @@
 ---
-title: "Kujo Eval Workflows"
+title: "Kujo Eval"
 custom_url: "kujo-eval-workflows"
 description: "Use this skill when creating, running, debugging, or maintaining Kujo Eval deterministic evaluation suites: `eval.json`, `kujo run main.kujo run`, `report`, `compare`, `lint`, `list-checks`, `snapshots`, `policy-explain`, `verify-manifest`, snapshot tests, JSON/HTTP/file/command checks, Eval artifacts, policy profiles, CI gates, or Eval CLI/source/test changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-eval-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Eval Workflows, Kujo Agent Skill, kujo-eval-workflows, repository-backed agent guidance"
-seo_title: "Kujo Eval Workflows — Kujo Agent Skill"
+keywords: "Kujo Eval, Kujo Agent Skill, kujo-eval-workflows, repository-backed agent guidance"
+seo_title: "Kujo Eval — Kujo Agent Skill"
 seo_description: "Use this skill when creating, running, debugging, or maintaining Kujo Eval deterministic evaluation suites: `eval.json`, `kujo run main.kujo run`, `report`, `compare`, `lint`, `list-checks`, `snapshots`, `policy-explain`, `verify-manifest`, snapshot tests, JSON/HTTP/file/command checks, Eval artifacts, policy profiles, CI gates, or Eval CLI/source/test changes."
 ---
 

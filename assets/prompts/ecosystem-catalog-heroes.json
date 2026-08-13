@@ -17,7 +17,7 @@
     },
     {
       "kind": "skill",
-      "name": "Agents SDK Workflows",
+      "name": "Agents SDK",
       "slug": "kujo-agents-sdk-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-agents-sdk-workflows/SKILL.md",
       "object_description": "agents sdk agent orchestration console with bounded handoff trays",
@@ -26,7 +26,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo AI Chat Workflows",
+      "name": "Kujo AI Chat",
       "slug": "kujo-ai-chat-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ai-chat-workflows/SKILL.md",
       "object_description": "ai chat conversation relay desk with paired communication terminals",
@@ -35,7 +35,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo AI SDK Workflows",
+      "name": "Kujo AI SDK",
       "slug": "kujo-ai-sdk-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ai-sdk-workflows/SKILL.md",
       "object_description": "ai sdk modular provider patch bay with guarded adapter sockets",
@@ -53,7 +53,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Benchmarks Capsule Workflows",
+      "name": "Kujo Benchmarks Capsule",
       "slug": "kujo-benchmarks-capsule-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-benchmarks-capsule-workflows/SKILL.md",
       "object_description": "benchmarks capsule repository guidance desk with source manuals and verification instruments",
@@ -62,7 +62,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Casefile Workflows",
+      "name": "Kujo Casefile",
       "slug": "kujo-casefile-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-casefile-workflows/SKILL.md",
       "object_description": "casefile incident evidence desk with sealed case folders and redaction tools",
@@ -71,7 +71,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo ChangeBucket Workflows",
+      "name": "Kujo ChangeBucket",
       "slug": "kujo-changebucket-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-changebucket-workflows/SKILL.md",
       "object_description": "changebucket change-footprint weighing station with categorized file bins",
@@ -89,7 +89,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo CMS Workflows",
+      "name": "Kujo CMS",
       "slug": "kujo-cms-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-cms-workflows/SKILL.md",
       "object_description": "cms content operations room with delivery shelves and migration controls",
@@ -98,7 +98,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Concord Workflows",
+      "name": "Kujo Concord",
       "slug": "kujo-concord-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-concord-workflows/SKILL.md",
       "object_description": "concord artifact alignment table with synchronized document frames",
@@ -107,7 +107,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo ContentGraph Workflows",
+      "name": "Kujo ContentGraph",
       "slug": "kujo-contentgraph-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-contentgraph-workflows/SKILL.md",
       "object_description": "contentgraph content relationship map with connected document nodes",
@@ -134,7 +134,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo CRUD API Workflows",
+      "name": "Kujo CRUD API",
       "slug": "kujo-crud-api-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-crud-api-workflows/SKILL.md",
       "object_description": "crud api application service bench with database and interface modules",
@@ -152,7 +152,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Dispatch Workflows",
+      "name": "Kujo Dispatch",
       "slug": "kujo-dispatch-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-dispatch-workflows/SKILL.md",
       "object_description": "dispatch agent orchestration console with bounded handoff trays",
@@ -161,7 +161,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo DocGen And DocsGen Workflows",
+      "name": "Kujo DocGen And DocsGen",
       "slug": "kujo-docgen-agent-readable",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-docgen-agent-readable/SKILL.md",
       "object_description": "docgen agent readable documentation press with source pages and generated reference trays",
@@ -197,7 +197,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Eval Workflows",
+      "name": "Kujo Eval",
       "slug": "kujo-eval-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-eval-workflows/SKILL.md",
       "object_description": "eval calibration rig with deterministic pass and failure gates",
@@ -206,7 +206,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Fence Workflows",
+      "name": "Kujo Fence",
       "slug": "kujo-fence-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-fence-workflows/SKILL.md",
       "object_description": "fence architectural boundary model with guarded dependency crossings",
@@ -215,7 +215,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Howl Workflows",
+      "name": "Kujo Howl",
       "slug": "kujo-howl-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-howl-workflows/SKILL.md",
       "object_description": "howl printmaking station rendering social cards from source artifacts",
@@ -224,7 +224,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Kennel Workflows",
+      "name": "Kujo Kennel",
       "slug": "kujo-kennel-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-kennel-workflows/SKILL.md",
       "object_description": "kennel package registry storeroom with lockboxes and trust checkpoints",
@@ -242,7 +242,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Lens Workflows",
+      "name": "Kujo Lens",
       "slug": "kujo-lens-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-lens-workflows/SKILL.md",
       "object_description": "lens browser inspection rig with screenshot and accessibility instruments",
@@ -251,7 +251,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Loop Engineering Workflows",
+      "name": "Kujo Loop Engineering",
       "slug": "kujo-loop-engineering-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-loop-engineering-workflows/SKILL.md",
       "object_description": "loop engineering bounded engineering loop console with evaluation and stop gates",
@@ -269,7 +269,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo MCP Workflows",
+      "name": "Kujo MCP",
       "slug": "kujo-mcp-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-mcp-workflows/SKILL.md",
       "object_description": "mcp modular provider patch bay with guarded adapter sockets",
@@ -278,7 +278,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Muzzle Workflows",
+      "name": "Kujo Muzzle",
       "slug": "kujo-muzzle-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-muzzle-workflows/SKILL.md",
       "object_description": "muzzle quiet workflow console with filtered logs and controlled output",
@@ -287,7 +287,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo PackWrite Workflows",
+      "name": "Kujo PackWrite",
       "slug": "kujo-packwrite-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-packwrite-workflows/SKILL.md",
       "object_description": "packwrite execution-pack assembly desk with prompts and validation seals",
@@ -296,7 +296,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo PatchBrief Workflows",
+      "name": "Kujo PatchBrief",
       "slug": "kujo-patchbrief-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-patchbrief-workflows/SKILL.md",
       "object_description": "patchbrief git diff briefing table with reviewer handoff folders",
@@ -305,7 +305,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo RAG Workflows",
+      "name": "Kujo RAG",
       "slug": "kujo-rag-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-rag-workflows/SKILL.md",
       "object_description": "rag knowledge retrieval archive with citation drawers and namespace gates",
@@ -323,7 +323,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Redact Workflows",
+      "name": "Kujo Redact",
       "slug": "kujo-redact-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-redact-workflows/SKILL.md",
       "object_description": "redact document sanitization station with blackout tools and audit tray",
@@ -332,7 +332,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Relay Workflows",
+      "name": "Kujo Relay",
       "slug": "kujo-relay-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-relay-workflows/SKILL.md",
       "object_description": "relay agent orchestration console with bounded handoff trays",
@@ -350,7 +350,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo RunLedger Workflows",
+      "name": "Kujo RunLedger",
       "slug": "kujo-runledger-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-runledger-workflows/SKILL.md",
       "object_description": "runledger run receipt ledger desk with usage meters and verdict stamps",
@@ -368,7 +368,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Scent Workflows",
+      "name": "Kujo Scent",
       "slug": "kujo-scent-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-scent-workflows/SKILL.md",
       "object_description": "scent context packing bench with budget scale and selected file bundles",
@@ -377,7 +377,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Scout Workflows",
+      "name": "Kujo Scout",
       "slug": "kujo-scout-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-scout-workflows/SKILL.md",
       "object_description": "scout codebase survey table with repository maps and context packets",
@@ -386,7 +386,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Searchbridge Workflows",
+      "name": "Kujo Searchbridge",
       "slug": "kujo-searchbridge-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-searchbridge-workflows/SKILL.md",
       "object_description": "searchbridge search provider relay console with normalized evidence channels",
@@ -404,7 +404,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo ShipCheck Workflows",
+      "name": "Kujo ShipCheck",
       "slug": "kujo-shipcheck-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-shipcheck-workflows/SKILL.md",
       "object_description": "shipcheck release inspection dock with checklist gates and sealed containers",
@@ -413,7 +413,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo SiteKit Repository Workflows",
+      "name": "Kujo SiteKit Repository",
       "slug": "kujo-site-kit-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-site-kit-workflows/SKILL.md",
       "object_description": "site kit interface component drafting table with accessible control samples",
@@ -422,7 +422,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo SiteKit Workflows",
+      "name": "Kujo SiteKit",
       "slug": "kujo-sitekit-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-sitekit-workflows/SKILL.md",
       "object_description": "sitekit interface component drafting table with accessible control samples",
@@ -431,7 +431,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Siteprobe Workflows",
+      "name": "Kujo Siteprobe",
       "slug": "kujo-siteprobe-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-siteprobe-workflows/SKILL.md",
       "object_description": "siteprobe website crawler station scanning linked page structures",
@@ -449,7 +449,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Spec Workflows",
+      "name": "Kujo Spec",
       "slug": "kujo-spec-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-spec-workflows/SKILL.md",
       "object_description": "spec task contract drafting table with acceptance gates and export trays",
@@ -458,7 +458,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo SSG Workflows",
+      "name": "Kujo SSG",
       "slug": "kujo-ssg-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ssg-workflows/SKILL.md",
       "object_description": "ssg static site printing press with templates and generated page stacks",
@@ -494,7 +494,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Tribunal Workflows",
+      "name": "Kujo Tribunal",
       "slug": "kujo-tribunal-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-tribunal-workflows/SKILL.md",
       "object_description": "tribunal adversarial review chamber with evidence bench and decision seal",
@@ -503,7 +503,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Watchdog Workflows",
+      "name": "Kujo Watchdog",
       "slug": "kujo-watchdog-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-watchdog-workflows/SKILL.md",
       "object_description": "watchdog local telemetry watch station with proxy gauges and alert beacon",
@@ -512,7 +512,7 @@
     },
     {
       "kind": "skill",
-      "name": "Kujo Workcell Workflows",
+      "name": "Kujo Workcell",
       "slug": "kujo-workcell-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-workcell-workflows/SKILL.md",
       "object_description": "workcell sealed execution workcell with operator console and artifact bay",

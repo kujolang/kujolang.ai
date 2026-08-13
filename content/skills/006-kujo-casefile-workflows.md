@@ -1,5 +1,5 @@
 ---
-title: "Kujo Casefile Workflows"
+title: "Kujo Casefile"
 custom_url: "kujo-casefile-workflows"
 description: "Use this skill when capturing, reviewing, handing off, cleaning, or maintaining Casefile local failure evidence bundles: `casefile.kujo`, `casefile.toml`, `.casefile/`, `capture`, `show latest`, `list`, `doctor`, `clean`, `--from-log`, `--manual`, `--mirror-exit-code`, redaction, path safety, or Casefile CLI/tests/source changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-casefile-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Casefile Workflows, Kujo Agent Skill, kujo-casefile-workflows, repository-backed agent guidance"
-seo_title: "Kujo Casefile Workflows — Kujo Agent Skill"
+keywords: "Kujo Casefile, Kujo Agent Skill, kujo-casefile-workflows, repository-backed agent guidance"
+seo_title: "Kujo Casefile — Kujo Agent Skill"
 seo_description: "Use this skill when capturing, reviewing, handing off, cleaning, or maintaining Casefile local failure evidence bundles: `casefile.kujo`, `casefile.toml`, `.casefile/`, `capture`, `show latest`, `list`, `doctor`, `clean`, `--from-log`, `--manual`, `--mirror-exit-code`, redaction, path safety, or Casefile CLI/tests/source changes."
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Kujo Howl Workflows"
+title: "Kujo Howl"
 custom_url: "kujo-howl-workflows"
 description: "Use this skill when creating, validating, rendering, reviewing, or maintaining Howl showcase artifacts for Kujo examples: `howl init`, `howl validate`, `howl list`, `howl show`, `howl caption`, `howl render`, `howl.json`, `examples/*.kujo`, `dist/howl/`, deterministic SVG/Markdown/HTML cards, static galleries, social captions, or Howl CLI/source/test changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-howl-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Howl Workflows, Kujo Agent Skill, kujo-howl-workflows, repository-backed agent guidance"
-seo_title: "Kujo Howl Workflows — Kujo Agent Skill"
+keywords: "Kujo Howl, Kujo Agent Skill, kujo-howl-workflows, repository-backed agent guidance"
+seo_title: "Kujo Howl — Kujo Agent Skill"
 seo_description: "Use this skill when creating, validating, rendering, reviewing, or maintaining Howl showcase artifacts for Kujo examples: `howl init`, `howl validate`, `howl list`, `howl show`, `howl caption`, `howl render`, `howl.json`, `examples/*.kujo`, `dist/howl/`, deterministic SVG/Markdown/HTML cards, static galleries, social captions, or Howl CLI/source/test changes."
 ---
 

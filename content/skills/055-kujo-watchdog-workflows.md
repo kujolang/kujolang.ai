@@ -1,5 +1,5 @@
 ---
-title: "Kujo Watchdog Workflows"
+title: "Kujo Watchdog"
 custom_url: "kujo-watchdog-workflows"
 description: "Use this skill when running, configuring, testing, integrating, or maintaining Watchdog local AI telemetry/proxy workflows: `dashboard_server.kujo`, `/proxy/v1`, `/api/requests`, `/api/proxy-config`, SQLite telemetry, auth modes, redaction, rate limits, dashboard assets, benchmark scripts, AI Chat integration, or `watchdog` source/docs changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-watchdog-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Watchdog Workflows, Kujo Agent Skill, kujo-watchdog-workflows, repository-backed agent guidance"
-seo_title: "Kujo Watchdog Workflows — Kujo Agent Skill"
+keywords: "Kujo Watchdog, Kujo Agent Skill, kujo-watchdog-workflows, repository-backed agent guidance"
+seo_title: "Kujo Watchdog — Kujo Agent Skill"
 seo_description: "Use this skill when running, configuring, testing, integrating, or maintaining Watchdog local AI telemetry/proxy workflows: `dashboard_server.kujo`, `/proxy/v1`, `/api/requests`, `/api/proxy-config`, SQLite telemetry, auth modes, redaction, rate limits, dashboard assets, benchmark scripts, AI Chat integration, or `watchdog` source/docs changes."
 ---
 

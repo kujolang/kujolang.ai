@@ -1,5 +1,5 @@
 ---
-title: "Kujo Workcell Workflows"
+title: "Kujo Workcell"
 custom_url: "kujo-workcell-workflows"
 description: "Use this skill when initializing, validating, inspecting, running, verifying, cleaning, or maintaining Workcell local Docker/Podman execution sandboxes: `workcell.json`, `bin/workcell`, `doctor`, `init`, `validate`, `inspect`, `run`, `verify`, `clean`, `.workcell/runs/`, receipts, manifests, artifacts, runtime boundaries, release reports, or Workcell source/docs changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-workcell-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Workcell Workflows, Kujo Agent Skill, kujo-workcell-workflows, repository-backed agent guidance"
-seo_title: "Kujo Workcell Workflows — Kujo Agent Skill"
+keywords: "Kujo Workcell, Kujo Agent Skill, kujo-workcell-workflows, repository-backed agent guidance"
+seo_title: "Kujo Workcell — Kujo Agent Skill"
 seo_description: "Use this skill when initializing, validating, inspecting, running, verifying, cleaning, or maintaining Workcell local Docker/Podman execution sandboxes: `workcell.json`, `bin/workcell`, `doctor`, `init`, `validate`, `inspect`, `run`, `verify`, `clean`, `.workcell/runs/`, receipts, manifests, artifacts, runtime boundaries, release reports, or Workcell source/docs changes."
 ---
 

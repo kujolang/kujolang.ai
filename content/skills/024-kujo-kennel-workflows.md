@@ -1,5 +1,5 @@
 ---
-title: "Kujo Kennel Workflows"
+title: "Kujo Kennel"
 custom_url: "kujo-kennel-workflows"
 description: "Use this skill when inspecting, using, validating, or maintaining Kennel package/dependency workflows: `kennel.kujo`, package manifests, lockfiles, file dependencies, static indexes and mirrors, trust policy, source policy, semver range resolution, local hosted-registry lifecycle, install/update/validate behavior, release gates, or `kennel` source/test changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-kennel-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Kennel Workflows, Kujo Agent Skill, kujo-kennel-workflows, repository-backed agent guidance"
-seo_title: "Kujo Kennel Workflows — Kujo Agent Skill"
+keywords: "Kujo Kennel, Kujo Agent Skill, kujo-kennel-workflows, repository-backed agent guidance"
+seo_title: "Kujo Kennel — Kujo Agent Skill"
 seo_description: "Use this skill when inspecting, using, validating, or maintaining Kennel package/dependency workflows: `kennel.kujo`, package manifests, lockfiles, file dependencies, static indexes and mirrors, trust policy, source policy, semver range resolution, local hosted-registry lifecycle, install/update/validate behavior, release gates, or `kennel` source/test changes."
 ---
 

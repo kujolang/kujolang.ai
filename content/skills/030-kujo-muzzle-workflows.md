@@ -1,5 +1,5 @@
 ---
-title: "Kujo Muzzle Workflows"
+title: "Kujo Muzzle"
 custom_url: "kujo-muzzle-workflows"
 description: "Use this skill when setting up, running, or reviewing Muzzle quiet workflows for AI-assisted development: `muzzle init`, `.muzzle/workflows/`, `.muzzle/manifests/`, `muzzle run`, `--json`, `--verbose`, `--dry-run`, workflow logs/reports, loop mode, or Muzzle safety and output-contract changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-muzzle-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Muzzle Workflows, Kujo Agent Skill, kujo-muzzle-workflows, repository-backed agent guidance"
-seo_title: "Kujo Muzzle Workflows — Kujo Agent Skill"
+keywords: "Kujo Muzzle, Kujo Agent Skill, kujo-muzzle-workflows, repository-backed agent guidance"
+seo_title: "Kujo Muzzle — Kujo Agent Skill"
 seo_description: "Use this skill when setting up, running, or reviewing Muzzle quiet workflows for AI-assisted development: `muzzle init`, `.muzzle/workflows/`, `.muzzle/manifests/`, `muzzle run`, `--json`, `--verbose`, `--dry-run`, workflow logs/reports, loop mode, or Muzzle safety and output-contract changes."
 ---
 

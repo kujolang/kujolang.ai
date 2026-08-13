@@ -1,5 +1,5 @@
 ---
-title: "Kujo PackWrite Workflows"
+title: "Kujo PackWrite"
 custom_url: "kujo-packwrite-workflows"
 description: "Use this skill when generating, validating, reviewing, or maintaining PackWrite agent execution packs: `packwrite init`, `validate`, `prompt`, `config`, `doctor`, `packwrite.toml`, `MEGA_PROMPT.md`, generated `agent/` packs, model/provider setup, offline fake-response tests, or PackWrite CLI/source changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-packwrite-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo PackWrite Workflows, Kujo Agent Skill, kujo-packwrite-workflows, repository-backed agent guidance"
-seo_title: "Kujo PackWrite Workflows — Kujo Agent Skill"
+keywords: "Kujo PackWrite, Kujo Agent Skill, kujo-packwrite-workflows, repository-backed agent guidance"
+seo_title: "Kujo PackWrite — Kujo Agent Skill"
 seo_description: "Use this skill when generating, validating, reviewing, or maintaining PackWrite agent execution packs: `packwrite init`, `validate`, `prompt`, `config`, `doctor`, `packwrite.toml`, `MEGA_PROMPT.md`, generated `agent/` packs, model/provider setup, offline fake-response tests, or PackWrite CLI/source changes."
 ---
 

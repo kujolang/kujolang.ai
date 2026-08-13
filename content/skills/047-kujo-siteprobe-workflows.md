@@ -1,5 +1,5 @@
 ---
-title: "Kujo Siteprobe Workflows"
+title: "Kujo Siteprobe"
 custom_url: "kujo-siteprobe-workflows"
 description: "Use when running, validating, comparing, reporting, or integrating SiteProbe website-intelligence crawls and `.siteprobe` artifacts."
 featured_image: "/assets/images/ecosystem/skill-kujo-siteprobe-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Siteprobe Workflows, Kujo Agent Skill, kujo-siteprobe-workflows, repository-backed agent guidance"
-seo_title: "Kujo Siteprobe Workflows — Kujo Agent Skill"
+keywords: "Kujo Siteprobe, Kujo Agent Skill, kujo-siteprobe-workflows, repository-backed agent guidance"
+seo_title: "Kujo Siteprobe — Kujo Agent Skill"
 seo_description: "Use when running, validating, comparing, reporting, or integrating SiteProbe website-intelligence crawls and `.siteprobe` artifacts."
 ---
 

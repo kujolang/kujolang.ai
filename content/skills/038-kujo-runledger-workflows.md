@@ -1,5 +1,5 @@
 ---
-title: "Kujo RunLedger Workflows"
+title: "Kujo RunLedger"
 custom_url: "kujo-runledger-workflows"
 description: "Use this skill when recording, comparing, reporting, or maintaining RunLedger receipts for AI-agent build runs: `runledger start`, `finish`, `usage`, `cost`, `note`, `followup`, `list`, `show`, `compare`, `report`, `.runledger/` JSON files, run verdicts, token/cost capture, read-only git metadata receipts, RunLedger reports, or RunLedger CLI/tests/source changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-runledger-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo RunLedger Workflows, Kujo Agent Skill, kujo-runledger-workflows, repository-backed agent guidance"
-seo_title: "Kujo RunLedger Workflows — Kujo Agent Skill"
+keywords: "Kujo RunLedger, Kujo Agent Skill, kujo-runledger-workflows, repository-backed agent guidance"
+seo_title: "Kujo RunLedger — Kujo Agent Skill"
 seo_description: "Use this skill when recording, comparing, reporting, or maintaining RunLedger receipts for AI-agent build runs: `runledger start`, `finish`, `usage`, `cost`, `note`, `followup`, `list`, `show`, `compare`, `report`, `.runledger/` JSON files, run verdicts, token/cost capture, read-only git metadata receipts, RunLedger reports, or RunLedger CLI/tests/source changes."
 ---
 

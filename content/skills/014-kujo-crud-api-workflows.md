@@ -1,5 +1,5 @@
 ---
-title: "Kujo CRUD API Workflows"
+title: "Kujo CRUD API"
 custom_url: "kujo-crud-api-workflows"
 description: "Use this skill when running, testing, extending, or maintaining the CRUD API showcase: `main.kujo`, SQLite item/project APIs, Next.js playground, auth strategies, smoke tests, frontend lint/build, DR/performance drills, API contracts, release checklist, or `crud-api` source/docs changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-crud-api-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo CRUD API Workflows, Kujo Agent Skill, kujo-crud-api-workflows, repository-backed agent guidance"
-seo_title: "Kujo CRUD API Workflows — Kujo Agent Skill"
+keywords: "Kujo CRUD API, Kujo Agent Skill, kujo-crud-api-workflows, repository-backed agent guidance"
+seo_title: "Kujo CRUD API — Kujo Agent Skill"
 seo_description: "Use this skill when running, testing, extending, or maintaining the CRUD API showcase: `main.kujo`, SQLite item/project APIs, Next.js playground, auth strategies, smoke tests, frontend lint/build, DR/performance drills, API contracts, release checklist, or `crud-api` source/docs changes."
 ---
 

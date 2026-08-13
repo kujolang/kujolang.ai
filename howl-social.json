@@ -583,7 +583,7 @@
     },
     {
       "id": "kujo-agents-sdk-workflows",
-      "title": "Agents SDK Workflows",
+      "title": "Agents SDK",
       "tagline": "Use this skill when working on Kujo Agents SDK runtime primitives, examples, offline fixtures, agent runners, tools, approvals, handoffs, tracing, artifact/session/memory stores, retrieval providers, integration adapters, MCP 2026 helpers, budget limits, no-network harnesses, or `agents-sdk` source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -596,7 +596,7 @@
     },
     {
       "id": "kujo-ai-chat-workflows",
-      "title": "Kujo AI Chat Workflows",
+      "title": "Kujo AI Chat",
       "tagline": "Use this skill when running, configuring, testing, extending, or maintaining the AI Chat local multi-provider chat app: `npm run dev`, `npm run smoke`, SQLite chat state, provider profiles, encrypted API keys, SSE streaming, transcription, `bridge_chat.kujo`, HTTP/API contracts, smoke tests, or `ai-chat` source/docs changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -609,7 +609,7 @@
     },
     {
       "id": "kujo-ai-sdk-workflows",
-      "title": "Kujo AI SDK Workflows",
+      "title": "Kujo AI SDK",
       "tagline": "Use this skill when building, testing, integrating, or maintaining Kujo AI SDK provider primitives: OpenAI-compatible chat/embeddings contracts, provider presets, fixture mode, streaming callbacks, retries/backoff, redaction, live provider smoke tests, telemetry bridge examples, benchmark quality gates, release gates, or `ai-sdk` source/docs changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -635,7 +635,7 @@
     },
     {
       "id": "kujo-benchmarks-capsule-workflows",
-      "title": "Kujo Benchmarks Capsule Workflows",
+      "title": "Kujo Benchmarks Capsule",
       "tagline": "Use this skill when running, validating, comparing, or maintaining the Capsule benchmark tool: `bin/capsule`, `make`, `inspect`, `validate`, `--stable`, `--dry-run`, `capsule.json`, `capsule.md`, `manifest.json`, fixture projects, benchmark evidence, or benchmarks-capsule source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -648,7 +648,7 @@
     },
     {
       "id": "kujo-casefile-workflows",
-      "title": "Kujo Casefile Workflows",
+      "title": "Kujo Casefile",
       "tagline": "Use this skill when capturing, reviewing, handing off, cleaning, or maintaining Casefile local failure evidence bundles: `casefile.kujo`, `casefile.toml`, `.casefile/`, `capture`, `show latest`, `list`, `doctor`, `clean`, `--from-log`, `--manual`, `--mirror-exit-code`, redaction, path safety, or Casefile CLI/tests/source changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -661,7 +661,7 @@
     },
     {
       "id": "kujo-changebucket-workflows",
-      "title": "Kujo ChangeBucket Workflows",
+      "title": "Kujo ChangeBucket",
       "tagline": "Use this skill when measuring or enforcing code-change footprint with ChangeBucket: `changebucket`, `changebucket check`, `--json`, `--markdown`, `--output`, `--base`, `--head`, `--repo`, budget flags, risk/blast-radius reports, file-category counts, generated markdown reports, or ChangeBucket CLI/tests/source changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -687,7 +687,7 @@
     },
     {
       "id": "kujo-cms-workflows",
-      "title": "Kujo CMS Workflows",
+      "title": "Kujo CMS",
       "tagline": "Use this skill when running, validating, extending, or maintaining the Kujo CMS server-first showcase: `backend/runtime/main.kujo`, content models, delivery routes, auth boundaries, contract tests, startup compatibility, webhook/background jobs, migration safety, backup/restore, release gates, or `cms` source/docs changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -700,7 +700,7 @@
     },
     {
       "id": "kujo-concord-workflows",
-      "title": "Kujo Concord Workflows",
+      "title": "Kujo Concord",
       "tagline": "Use this skill when scanning, reporting, triaging, or maintaining Concord artifact-drift checks for Kujo ecosystem repositories: `concord scan`, `check`, `report`, `tasks`, `--format json`, `--output`, CLI/docs drift, Spec/Eval alignment, manifest/docs alignment, version consistency, example validity, source-of-truth findings, `.dogfood/concord/` outputs, or Concord CLI/source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -713,7 +713,7 @@
     },
     {
       "id": "kujo-contentgraph-workflows",
-      "title": "Kujo ContentGraph Workflows",
+      "title": "Kujo ContentGraph",
       "tagline": "Use when building, inspecting, comparing, exporting, or consuming deterministic ContentGraph artifacts.",
       "file": "social-card.txt",
       "variant": "social",
@@ -752,7 +752,7 @@
     },
     {
       "id": "kujo-crud-api-workflows",
-      "title": "Kujo CRUD API Workflows",
+      "title": "Kujo CRUD API",
       "tagline": "Use this skill when running, testing, extending, or maintaining the CRUD API showcase: `main.kujo`, SQLite item/project APIs, Next.js playground, auth strategies, smoke tests, frontend lint/build, DR/performance drills, API contracts, release checklist, or `crud-api` source/docs changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -778,7 +778,7 @@
     },
     {
       "id": "kujo-dispatch-workflows",
-      "title": "Kujo Dispatch Workflows",
+      "title": "Kujo Dispatch",
       "tagline": "Use this skill when running, inspecting, extending, or maintaining Dispatch reliable AI workflow orchestration: `dispatch.kujo`, `kujo run dispatch.kujo`, `demo`, `resume`, `templates`, `runs`, `show`, `inspect`, `doctor`, `cleanup`, `export-run`, `import-run`, workflow templates, declarative workflow files, plugins, approval gates, trace/report/state artifacts, tool policy profiles, bundle signing, offline fixture runs, SDK bridge integration, or Dispatch CLI/tests/source changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -791,7 +791,7 @@
     },
     {
       "id": "kujo-docgen-agent-readable",
-      "title": "Kujo DocGen And DocsGen Workflows",
+      "title": "Kujo DocGen And DocsGen",
       "tagline": "Use this skill when working on Kujo DocGen/DocsGen (`kujo docgen`), generated documentation, docs-as-contract surfaces, agent-readable JSON/gap outputs, documentation coverage gates, public-only docs gates, link validation, adapter extraction, README/reference alignment, or example smoke policy.",
       "file": "social-card.txt",
       "variant": "social",
@@ -843,7 +843,7 @@
     },
     {
       "id": "kujo-eval-workflows",
-      "title": "Kujo Eval Workflows",
+      "title": "Kujo Eval",
       "tagline": "Use this skill when creating, running, debugging, or maintaining Kujo Eval deterministic evaluation suites: `eval.json`, `kujo run main.kujo run`, `report`, `compare`, `lint`, `list-checks`, `snapshots`, `policy-explain`, `verify-manifest`, snapshot tests, JSON/HTTP/file/command checks, Eval artifacts, policy profiles, CI gates, or Eval CLI/source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -856,7 +856,7 @@
     },
     {
       "id": "kujo-fence-workflows",
-      "title": "Kujo Fence Workflows",
+      "title": "Kujo Fence",
       "tagline": "Use this skill when setting up, running, interpreting, integrating, or maintaining Fence architecture-boundary checks for Kujo ecosystem repositories: `fence.kujo`, `fence.toml`, `fence-baseline.json`, `init`, `validate`, `check`, `explain`, `graph`, `baseline create`, `--changed-only`, `--baseline`, JSON/Markdown/SARIF reports, CI gates, zone rules, import-boundary violations, or Fence CLI/source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -869,7 +869,7 @@
     },
     {
       "id": "kujo-howl-workflows",
-      "title": "Kujo Howl Workflows",
+      "title": "Kujo Howl",
       "tagline": "Use this skill when creating, validating, rendering, reviewing, or maintaining Howl showcase artifacts for Kujo examples: `howl init`, `howl validate`, `howl list`, `howl show`, `howl caption`, `howl render`, `howl.json`, `examples/*.kujo`, `dist/howl/`, deterministic SVG/Markdown/HTML cards, static galleries, social captions, or Howl CLI/source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -882,7 +882,7 @@
     },
     {
       "id": "kujo-kennel-workflows",
-      "title": "Kujo Kennel Workflows",
+      "title": "Kujo Kennel",
       "tagline": "Use this skill when inspecting, using, validating, or maintaining Kennel package/dependency workflows: `kennel.kujo`, package manifests, lockfiles, file dependencies, static indexes and mirrors, trust policy, source policy, semver range resolution, local hosted-registry lifecycle, install/update/validate behavior, release gates, or `kennel` source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -908,7 +908,7 @@
     },
     {
       "id": "kujo-lens-workflows",
-      "title": "Kujo Lens Workflows",
+      "title": "Kujo Lens",
       "tagline": "Use this skill when setting up, running, interpreting, or maintaining Lens deterministic browser and visual QA workflows: `lens check`, `lens inspect`, `lens flow`, `.lens.toml`, `.lens/runs/`, `lens-report.json`, Agent Repair Briefs, screenshots, accessibility checks, link checks, visual baselines, CI action wiring, RunLedger/Howl output, or Lens source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -921,7 +921,7 @@
     },
     {
       "id": "kujo-loop-engineering-workflows",
-      "title": "Kujo Loop Engineering Workflows",
+      "title": "Kujo Loop Engineering",
       "tagline": "Use this skill when an agent should work through a bounded engineering task in an arbitrary repository with the Kujo loop-engineering harness: repo-local `.loop-engineering/` initialization, Markdown checklist classification, scoped local fixes only, deterministic eval gates, per-iteration evidence, structured external blockers, optional small commits/pushes, optional Strata handoff, and a fixed final summary contract.",
       "file": "social-card.txt",
       "variant": "social",
@@ -947,7 +947,7 @@
     },
     {
       "id": "kujo-mcp-workflows",
-      "title": "Kujo MCP Workflows",
+      "title": "Kujo MCP",
       "tagline": "Use this skill when generating, running, validating, deploying, or maintaining Kujo MCP servers and repo-specific MCP scaffolds: `mcp make`, `kujo run mcp.kujo --interpreter make`, `mcp-server.json`, MCP tool/resource registries, generated `.mcp/` outputs, `mcp.manifest.json`, repo profiles, MCP safety tiers, auth/host/request guardrails, endpoint tests, or MCP source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -960,7 +960,7 @@
     },
     {
       "id": "kujo-muzzle-workflows",
-      "title": "Kujo Muzzle Workflows",
+      "title": "Kujo Muzzle",
       "tagline": "Use this skill when setting up, running, or reviewing Muzzle quiet workflows for AI-assisted development: `muzzle init`, `.muzzle/workflows/`, `.muzzle/manifests/`, `muzzle run`, `--json`, `--verbose`, `--dry-run`, workflow logs/reports, loop mode, or Muzzle safety and output-contract changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -973,7 +973,7 @@
     },
     {
       "id": "kujo-packwrite-workflows",
-      "title": "Kujo PackWrite Workflows",
+      "title": "Kujo PackWrite",
       "tagline": "Use this skill when generating, validating, reviewing, or maintaining PackWrite agent execution packs: `packwrite init`, `validate`, `prompt`, `config`, `doctor`, `packwrite.toml`, `MEGA_PROMPT.md`, generated `agent/` packs, model/provider setup, offline fake-response tests, or PackWrite CLI/source changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -986,7 +986,7 @@
     },
     {
       "id": "kujo-patchbrief-workflows",
-      "title": "Kujo PatchBrief Workflows",
+      "title": "Kujo PatchBrief",
       "tagline": "Use this skill when generating, consuming, validating, or maintaining PatchBrief structured git-diff briefs: `patchbrief.kujo`, `summarize`, `suggest-tests`, `handoff`, `--format json`, `--pretty`, implementation handoffs, reviewer notes, changed-file risk summaries, PatchBrief CLI/tests/source changes, or PatchBrief dogfood workflows.",
       "file": "social-card.txt",
       "variant": "social",
@@ -999,7 +999,7 @@
     },
     {
       "id": "kujo-rag-workflows",
-      "title": "Kujo RAG Workflows",
+      "title": "Kujo RAG",
       "tagline": "Use this skill when setting up, running, extending, testing, or maintaining the Kujo RAG Starter Kit: `kujo run main.kujo --interpreter ingest|query|serve|demo|bootstrap`, local/offline RAG indexes, namespace isolation, parser/chunking/embedding/retrieval changes, API ingest/query endpoints, OpenAPI/SDK parity, release-evaluation gates, large-corpus benchmarks, index maintenance, bootstrap templates, or RAG security/operations docs.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1025,7 +1025,7 @@
     },
     {
       "id": "kujo-redact-workflows",
-      "title": "Kujo Redact Workflows",
+      "title": "Kujo Redact",
       "tagline": "Use this skill when scanning, sanitizing, verifying, packing, or maintaining Redact local deterministic anonymization workflows: `redact.kujo`, `scan`, `sanitize`, `verify`, `pack`, policy YAML files, `.redact/runs/` audit artifacts, leakage checks, unsafe originals, AI-stub boundaries, or Redact CLI/source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1038,7 +1038,7 @@
     },
     {
       "id": "kujo-relay-workflows",
-      "title": "Kujo Relay Workflows",
+      "title": "Kujo Relay",
       "tagline": "Use this skill when running, validating, inspecting, repairing, or maintaining Relay bounded agent mission workflows: `bin/relay`, `doctor`, `chat`, `models`, `agents`, `missions`, `runs`, fixture/live provider paths, PackWrite/RunLedger/ChangeBucket/Eval evidence, event bundles, tool-result bundles, run indexes, Watchdog route posture, or Relay source/docs changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1064,7 +1064,7 @@
     },
     {
       "id": "kujo-runledger-workflows",
-      "title": "Kujo RunLedger Workflows",
+      "title": "Kujo RunLedger",
       "tagline": "Use this skill when recording, comparing, reporting, or maintaining RunLedger receipts for AI-agent build runs: `runledger start`, `finish`, `usage`, `cost`, `note`, `followup`, `list`, `show`, `compare`, `report`, `.runledger/` JSON files, run verdicts, token/cost capture, read-only git metadata receipts, RunLedger reports, or RunLedger CLI/tests/source changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1090,7 +1090,7 @@
     },
     {
       "id": "kujo-scent-workflows",
-      "title": "Kujo Scent Workflows",
+      "title": "Kujo Scent",
       "tagline": "Use this skill when creating, previewing, reviewing, or maintaining Scent context packs for agent handoff: `scent pack`, `--dry-run`, `--json`, `--budget`, `--target`, `--include`, `--exclude`, `--changed`, `--staged`, `--unstaged`, `.scent/` or generated pack artifacts, `context.md`, `context.json`, `manifest.json`, `files.json`, `redactions.json`, and Scent CLI/source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1103,7 +1103,7 @@
     },
     {
       "id": "kujo-scout-workflows",
-      "title": "Kujo Scout Workflows",
+      "title": "Kujo Scout",
       "tagline": "Use this skill when running, interpreting, extending, or maintaining Scout, the Kujo-native codebase intelligence tool: `kujo run scout.kujo`, repo context packs, `FILE_TREE.md`, `llms.txt`, `AGENTS.md`, `CHECKLIST.md`, `intelligence.json`, `scan_manifest.json`, security exports, baseline suppression, Kennel metadata, Scout fixtures, snapshots, or Scout regression scripts.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1116,7 +1116,7 @@
     },
     {
       "id": "kujo-searchbridge-workflows",
-      "title": "Kujo Searchbridge Workflows",
+      "title": "Kujo Searchbridge",
       "tagline": "Use when running SearchBridge doctor, capability preflight, fixture providers, normalized evidence reads, or explicit ACT submission.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1142,7 +1142,7 @@
     },
     {
       "id": "kujo-shipcheck-workflows",
-      "title": "Kujo ShipCheck Workflows",
+      "title": "Kujo ShipCheck",
       "tagline": "Use this skill when running, reviewing, integrating, or maintaining ShipCheck release-readiness workflows for Kujo ecosystem repositories: `shipcheck.kujo`, `scan`, `checklist`, `gate`, `release-note`, `--format json`, CI release gates, markdown/json reports, release check catalogs, gate exit semantics, or ShipCheck CLI/source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1155,7 +1155,7 @@
     },
     {
       "id": "kujo-site-kit-workflows",
-      "title": "Kujo SiteKit Repository Workflows",
+      "title": "Kujo SiteKit Repository",
       "tagline": "Use this skill when building, validating, consuming, or maintaining SiteKit design-system artifacts in the `site-kit` repository: tokens, component schemas/templates/CSS, generated `dist/sitekit.css`, optional `dist/sitekit.js`, accessibility checks, browser smoke tests, launch checklist, or Workcell evidence.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1168,7 +1168,7 @@
     },
     {
       "id": "kujo-sitekit-workflows",
-      "title": "Kujo SiteKit Workflows",
+      "title": "Kujo SiteKit",
       "tagline": "Use this skill when building, validating, consuming, or maintaining SiteKit design-system artifacts: tokens, component schemas/templates/CSS, layout recipes, generated `dist/sitekit.css`, optional `dist/sitekit.js`, `DESIGN.md`, accessibility/semantic standards, examples, snapshots, smoke tests, or SiteKit source/docs changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1181,7 +1181,7 @@
     },
     {
       "id": "kujo-siteprobe-workflows",
-      "title": "Kujo Siteprobe Workflows",
+      "title": "Kujo Siteprobe",
       "tagline": "Use when running, validating, comparing, reporting, or integrating SiteProbe website-intelligence crawls and `.siteprobe` artifacts.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1207,7 +1207,7 @@
     },
     {
       "id": "kujo-spec-workflows",
-      "title": "Kujo Spec Workflows",
+      "title": "Kujo Spec",
       "tagline": "Use this skill when creating, validating, exporting, reviewing, or maintaining Kujo Spec task contracts: `.spec.yml`, `.spec.yaml`, `.spec.toml`, `.spec.json`, `spec init`, `validate`, `render`, `export`, `export-agent-context`, `export-eval`, `ci`, `list`, `search`, `status`, `template`, `graph`, safe-write/template-source policy, Spec schema changes, or Spec CLI/tests/source changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1220,7 +1220,7 @@
     },
     {
       "id": "kujo-ssg-workflows",
-      "title": "Kujo SSG Workflows",
+      "title": "Kujo SSG",
       "tagline": "Use this skill when building, validating, configuring, testing, or maintaining the Kujo SSG static-site showcase: `build.kujo`, starter content, templates, assets, `kujo-ssg.yml`, feeds, sitemap, robots, `llms.txt`, generated `output/`, CLI flags, parallel shard builds, DocGen docs bridge, reusable docs starter, validation scripts, release gates, or `ssg` source/docs changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1272,7 +1272,7 @@
     },
     {
       "id": "kujo-tribunal-workflows",
-      "title": "Kujo Tribunal Workflows",
+      "title": "Kujo Tribunal",
       "tagline": "Use this skill when running, reviewing, integrating, or maintaining Tribunal local decision-evidence workflows: `tribunal review`, `resume`, `compare`, `re-review`, `kill`, `validate`, `audit`, `verify`, bundle/store/provenance commands, signed evidence, trust policies, run artifacts, schemas, release gates, or Tribunal source/docs changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1285,7 +1285,7 @@
     },
     {
       "id": "kujo-watchdog-workflows",
-      "title": "Kujo Watchdog Workflows",
+      "title": "Kujo Watchdog",
       "tagline": "Use this skill when running, configuring, testing, integrating, or maintaining Watchdog local AI telemetry/proxy workflows: `dashboard_server.kujo`, `/proxy/v1`, `/api/requests`, `/api/proxy-config`, SQLite telemetry, auth modes, redaction, rate limits, dashboard assets, benchmark scripts, AI Chat integration, or `watchdog` source/docs changes.",
       "file": "social-card.txt",
       "variant": "social",
@@ -1298,7 +1298,7 @@
     },
     {
       "id": "kujo-workcell-workflows",
-      "title": "Kujo Workcell Workflows",
+      "title": "Kujo Workcell",
       "tagline": "Use this skill when initializing, validating, inspecting, running, verifying, cleaning, or maintaining Workcell local Docker/Podman execution sandboxes: `workcell.json`, `bin/workcell`, `doctor`, `init`, `validate`, `inspect`, `run`, `verify`, `clean`, `.workcell/runs/`, receipts, manifests, artifacts, runtime boundaries, release reports, or Workcell source/docs changes.",
       "file": "social-card.txt",
       "variant": "social",

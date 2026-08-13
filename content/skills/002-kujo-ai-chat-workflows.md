@@ -1,5 +1,5 @@
 ---
-title: "Kujo AI Chat Workflows"
+title: "Kujo AI Chat"
 custom_url: "kujo-ai-chat-workflows"
 description: "Use this skill when running, configuring, testing, extending, or maintaining the AI Chat local multi-provider chat app: `npm run dev`, `npm run smoke`, SQLite chat state, provider profiles, encrypted API keys, SSE streaming, transcription, `bridge_chat.kujo`, HTTP/API contracts, smoke tests, or `ai-chat` source/docs changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-ai-chat-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo AI Chat Workflows, Kujo Agent Skill, kujo-ai-chat-workflows, repository-backed agent guidance"
-seo_title: "Kujo AI Chat Workflows — Kujo Agent Skill"
+keywords: "Kujo AI Chat, Kujo Agent Skill, kujo-ai-chat-workflows, repository-backed agent guidance"
+seo_title: "Kujo AI Chat — Kujo Agent Skill"
 seo_description: "Use this skill when running, configuring, testing, extending, or maintaining the AI Chat local multi-provider chat app: `npm run dev`, `npm run smoke`, SQLite chat state, provider profiles, encrypted API keys, SSE streaming, transcription, `bridge_chat.kujo`, HTTP/API contracts, smoke tests, or `ai-chat` source/docs changes."
 ---
 

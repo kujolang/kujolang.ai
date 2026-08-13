@@ -1,5 +1,5 @@
 ---
-title: "Kujo Benchmarks Capsule Workflows"
+title: "Kujo Benchmarks Capsule"
 custom_url: "kujo-benchmarks-capsule-workflows"
 description: "Use this skill when running, validating, comparing, or maintaining the Capsule benchmark tool: `bin/capsule`, `make`, `inspect`, `validate`, `--stable`, `--dry-run`, `capsule.json`, `capsule.md`, `manifest.json`, fixture projects, benchmark evidence, or benchmarks-capsule source/test changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-benchmarks-capsule-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Benchmarks Capsule Workflows, Kujo Agent Skill, kujo-benchmarks-capsule-workflows, repository-backed agent guidance"
-seo_title: "Kujo Benchmarks Capsule Workflows — Kujo Agent Skill"
+keywords: "Kujo Benchmarks Capsule, Kujo Agent Skill, kujo-benchmarks-capsule-workflows, repository-backed agent guidance"
+seo_title: "Kujo Benchmarks Capsule — Kujo Agent Skill"
 seo_description: "Use this skill when running, validating, comparing, or maintaining the Capsule benchmark tool: `bin/capsule`, `make`, `inspect`, `validate`, `--stable`, `--dry-run`, `capsule.json`, `capsule.md`, `manifest.json`, fixture projects, benchmark evidence, or benchmarks-capsule source/test changes."
 ---
 

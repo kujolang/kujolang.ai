@@ -1,5 +1,5 @@
 ---
-title: "Kujo Relay Workflows"
+title: "Kujo Relay"
 custom_url: "kujo-relay-workflows"
 description: "Use this skill when running, validating, inspecting, repairing, or maintaining Relay bounded agent mission workflows: `bin/relay`, `doctor`, `chat`, `models`, `agents`, `missions`, `runs`, fixture/live provider paths, PackWrite/RunLedger/ChangeBucket/Eval evidence, event bundles, tool-result bundles, run indexes, Watchdog route posture, or Relay source/docs changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-relay-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Relay Workflows, Kujo Agent Skill, kujo-relay-workflows, repository-backed agent guidance"
-seo_title: "Kujo Relay Workflows — Kujo Agent Skill"
+keywords: "Kujo Relay, Kujo Agent Skill, kujo-relay-workflows, repository-backed agent guidance"
+seo_title: "Kujo Relay — Kujo Agent Skill"
 seo_description: "Use this skill when running, validating, inspecting, repairing, or maintaining Relay bounded agent mission workflows: `bin/relay`, `doctor`, `chat`, `models`, `agents`, `missions`, `runs`, fixture/live provider paths, PackWrite/RunLedger/ChangeBucket/Eval evidence, event bundles, tool-result bundles, run indexes, Watchdog route posture, or Relay source/docs changes."
 ---
 

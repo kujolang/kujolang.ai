@@ -1,5 +1,5 @@
 ---
-title: "Kujo PatchBrief Workflows"
+title: "Kujo PatchBrief"
 custom_url: "kujo-patchbrief-workflows"
 description: "Use this skill when generating, consuming, validating, or maintaining PatchBrief structured git-diff briefs: `patchbrief.kujo`, `summarize`, `suggest-tests`, `handoff`, `--format json`, `--pretty`, implementation handoffs, reviewer notes, changed-file risk summaries, PatchBrief CLI/tests/source changes, or PatchBrief dogfood workflows."
 featured_image: "/assets/images/ecosystem/skill-kujo-patchbrief-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo PatchBrief Workflows, Kujo Agent Skill, kujo-patchbrief-workflows, repository-backed agent guidance"
-seo_title: "Kujo PatchBrief Workflows — Kujo Agent Skill"
+keywords: "Kujo PatchBrief, Kujo Agent Skill, kujo-patchbrief-workflows, repository-backed agent guidance"
+seo_title: "Kujo PatchBrief — Kujo Agent Skill"
 seo_description: "Use this skill when generating, consuming, validating, or maintaining PatchBrief structured git-diff briefs: `patchbrief.kujo`, `summarize`, `suggest-tests`, `handoff`, `--format json`, `--pretty`, implementation handoffs, reviewer notes, changed-file risk summaries, PatchBrief CLI/tests/source changes, or PatchBrief dogfood workflows."
 ---
 

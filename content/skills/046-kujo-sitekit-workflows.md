@@ -1,5 +1,5 @@
 ---
-title: "Kujo SiteKit Workflows"
+title: "Kujo SiteKit"
 custom_url: "kujo-sitekit-workflows"
 description: "Use this skill when building, validating, consuming, or maintaining SiteKit design-system artifacts: tokens, component schemas/templates/CSS, layout recipes, generated `dist/sitekit.css`, optional `dist/sitekit.js`, `DESIGN.md`, accessibility/semantic standards, examples, snapshots, smoke tests, or SiteKit source/docs changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-sitekit-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo SiteKit Workflows, Kujo Agent Skill, kujo-sitekit-workflows, repository-backed agent guidance"
-seo_title: "Kujo SiteKit Workflows — Kujo Agent Skill"
+keywords: "Kujo SiteKit, Kujo Agent Skill, kujo-sitekit-workflows, repository-backed agent guidance"
+seo_title: "Kujo SiteKit — Kujo Agent Skill"
 seo_description: "Use this skill when building, validating, consuming, or maintaining SiteKit design-system artifacts: tokens, component schemas/templates/CSS, layout recipes, generated `dist/sitekit.css`, optional `dist/sitekit.js`, `DESIGN.md`, accessibility/semantic standards, examples, snapshots, smoke tests, or SiteKit source/docs changes."
 ---
 

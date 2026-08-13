@@ -1,5 +1,5 @@
 ---
-title: "Kujo Spec Workflows"
+title: "Kujo Spec"
 custom_url: "kujo-spec-workflows"
 description: "Use this skill when creating, validating, exporting, reviewing, or maintaining Kujo Spec task contracts: `.spec.yml`, `.spec.yaml`, `.spec.toml`, `.spec.json`, `spec init`, `validate`, `render`, `export`, `export-agent-context`, `export-eval`, `ci`, `list`, `search`, `status`, `template`, `graph`, safe-write/template-source policy, Spec schema changes, or Spec CLI/tests/source changes."
 featured_image: "/assets/images/ecosystem/skill-kujo-spec-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Spec Workflows, Kujo Agent Skill, kujo-spec-workflows, repository-backed agent guidance"
-seo_title: "Kujo Spec Workflows — Kujo Agent Skill"
+keywords: "Kujo Spec, Kujo Agent Skill, kujo-spec-workflows, repository-backed agent guidance"
+seo_title: "Kujo Spec — Kujo Agent Skill"
 seo_description: "Use this skill when creating, validating, exporting, reviewing, or maintaining Kujo Spec task contracts: `.spec.yml`, `.spec.yaml`, `.spec.toml`, `.spec.json`, `spec init`, `validate`, `render`, `export`, `export-agent-context`, `export-eval`, `ci`, `list`, `search`, `status`, `template`, `graph`, safe-write/template-source policy, Spec schema changes, or Spec CLI/tests/source changes."
 ---
 

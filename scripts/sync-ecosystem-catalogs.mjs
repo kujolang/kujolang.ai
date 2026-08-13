@@ -184,8 +184,8 @@ skillPaths.forEach((skillPath, index) => {
   const source = releasedFile(skillsRepo, skillPath);
   const slug = skillPath.split('/')[1];
   const title = slug === 'kujo-site-kit-workflows'
-    ? 'Kujo SiteKit Repository Workflows'
-    : titleFromMarkdown(source, words(slug));
+    ? 'Kujo SiteKit Repository'
+    : titleFromMarkdown(source, words(slug)).replace(/\s+Workflows$/i, '');
   const description = frontmatterValue(source, 'description');
   const heroPath = `assets/images/ecosystem/skill-${slug}.webp`;
   const sourceUrl = `https://github.com/kujolang/kujo-skills/blob/main/${skillPath}`;

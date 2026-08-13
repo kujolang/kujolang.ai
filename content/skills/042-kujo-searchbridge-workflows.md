@@ -1,5 +1,5 @@
 ---
-title: "Kujo Searchbridge Workflows"
+title: "Kujo Searchbridge"
 custom_url: "kujo-searchbridge-workflows"
 description: "Use when running SearchBridge doctor, capability preflight, fixture providers, normalized evidence reads, or explicit ACT submission."
 featured_image: "/assets/images/ecosystem/skill-kujo-searchbridge-workflows.webp"
@@ -12,8 +12,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Kujo Searchbridge Workflows, Kujo Agent Skill, kujo-searchbridge-workflows, repository-backed agent guidance"
-seo_title: "Kujo Searchbridge Workflows — Kujo Agent Skill"
+keywords: "Kujo Searchbridge, Kujo Agent Skill, kujo-searchbridge-workflows, repository-backed agent guidance"
+seo_title: "Kujo Searchbridge — Kujo Agent Skill"
 seo_description: "Use when running SearchBridge doctor, capability preflight, fixture providers, normalized evidence reads, or explicit ACT submission."
 ---
 
