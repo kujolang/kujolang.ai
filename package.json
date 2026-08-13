@@ -1,7 +1,7 @@
 {
   "name": "kujolang-ai-site",
   "private": true,
-  "version": "1.2.2",
+  "version": "1.2.3",
   "scripts": {
     "icons:build": "node scripts/build-icons.mjs",
     "vendor:scramble": "scramble-decode copy assets/js/vendor",
