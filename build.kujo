@@ -4052,6 +4052,10 @@ func build_site(settings) {
 				item_action_label = "View Storefront"
 			} else if collection_slug == "ecosystem" {
 				item_action_label = "Explore Project"
+			} else if collection_slug == "skills" {
+				item_action_label = "View Skill"
+			} else if collection_slug == "workflows" {
+				item_action_label = "View Workflow"
 			}
 			card_terms := item["tags"]
 			card_excerpt := item["excerpt"]
