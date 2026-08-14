@@ -9,7 +9,7 @@ order: 530
 install_command: "git clone https://github.com/kujolang/storydesk.git"
 github_url: "https://github.com/kujolang/storydesk"
 launch_story: "Operate the editorial queue from idea and commission through assignment, handoff, packet creation, and human review."
-scope_note: "StoryDesk 0.1.0 coordinates local editorial work; it does not grant publication authority or claim hosted identity and distributed multi-host coordination."
+scope_note: "StoryDesk coordinates local editorial work; it does not grant publication authority or claim hosted identity and distributed multi-host coordination."
 keywords: "StoryDesk, Kujo ecosystem, editorial operations, commissions, assignments, publishing workflow, human review"
 seo_title: "StoryDesk — Kujo Ecosystem"
 ---
@@ -32,4 +32,4 @@ StoryDesk records and coordinates work. It does not approve content, publish art
 
 ## Learn more
 
-The repository documents the 0.1.0 editorial commands, state model, schemas, security posture, deterministic fixtures, and production validation gate.
+The repository documents the editorial commands, state model, schemas, security posture, deterministic fixtures, and production validation gate.

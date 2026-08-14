@@ -9,7 +9,7 @@ order: 510
 install_command: "git clone https://github.com/kujolang/presswire.git"
 github_url: "https://github.com/kujolang/presswire"
 launch_story: "Preflight an exact approved package, perform a bounded publication effect, and retain an idempotent delivery receipt."
-scope_note: "PressWire 0.1.0 performs only explicitly authorized publication effects; optional external destinations require configured adapters and valid approval scope."
+scope_note: "PressWire performs only explicitly authorized publication effects; optional external destinations require configured adapters and valid approval scope."
 keywords: "PressWire, Kujo ecosystem, approval-gated publishing, publication receipts, corrections, idempotent delivery"
 seo_title: "PressWire — Kujo Ecosystem"
 ---
@@ -32,4 +32,4 @@ A receipt reports the effect PressWire could verify. It does not manufacture app
 
 ## Learn more
 
-The repository documents the 0.1.0 preflight, publication, correction, receipt, export, security, and validation contracts.
+The repository documents the preflight, publication, correction, receipt, export, security, and validation contracts.

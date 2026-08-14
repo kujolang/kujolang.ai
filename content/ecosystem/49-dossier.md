@@ -9,7 +9,7 @@ order: 490
 install_command: "git clone https://github.com/kujolang/dossier.git"
 github_url: "https://github.com/kujolang/dossier"
 launch_story: "Bind material claims to captured support, classifications, conflicts, quotations, consent, and rights evidence."
-scope_note: "Dossier 0.1.0 records evidence assertions; a URL is not verification, inference is not fact, and a record does not grant consent, rights, or approval."
+scope_note: "Dossier records evidence assertions; a URL is not verification, inference is not fact, and a record does not grant consent, rights, or approval."
 keywords: "Dossier, Kujo ecosystem, evidence ledger, claim verification, source provenance, publishing standards"
 seo_title: "Dossier — Kujo Ecosystem"
 ---
@@ -32,4 +32,4 @@ Records are immutable, history is append-only, and exports are bounded and atomi
 
 ## Learn more
 
-The repository documents the 0.1.0 command groups, evidence taxonomy, public contracts, security guarantees, and deterministic verification suite.
+The repository documents the command groups, evidence taxonomy, public contracts, security guarantees, and deterministic verification suite.

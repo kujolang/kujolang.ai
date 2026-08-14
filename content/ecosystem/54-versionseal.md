@@ -9,7 +9,7 @@ order: 540
 install_command: "git clone https://github.com/kujolang/versionseal.git"
 github_url: "https://github.com/kujolang/versionseal"
 launch_story: "Bind a named human approval to an exact package version and verify that neither scope nor bytes have drifted."
-scope_note: "VersionSeal 0.1.0 records explicit local approvals and revocations; checksum integrity does not prove identity, custody, legal authority, or external publication."
+scope_note: "VersionSeal records explicit local approvals and revocations; checksum integrity does not prove identity, custody, legal authority, or external publication."
 keywords: "VersionSeal, Kujo ecosystem, human approval, exact version, revocation, checksum verification, publishing authority"
 seo_title: "VersionSeal — Kujo Ecosystem"
 ---
@@ -32,4 +32,4 @@ A checksum proves byte identity, not human identity, custody, legal rights, or p
 
 ## Learn more
 
-The repository documents the 0.1.0 approval, revocation, validation, export, security, and drift-detection contracts.
+The repository documents the approval, revocation, validation, export, security, and drift-detection contracts.

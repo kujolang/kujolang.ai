@@ -9,7 +9,7 @@ order: 500
 install_command: "git clone https://github.com/kujolang/galleypack.git"
 github_url: "https://github.com/kujolang/galleypack"
 launch_story: "Freeze reproducible editorial packages whose artifacts, lineage, evidence, reviews, and versions can be verified offline."
-scope_note: "GalleyPack 0.1.0 packages and verifies exact artifacts; it does not modify source work, interpret review as approval, or publish."
+scope_note: "GalleyPack packages and verifies exact artifacts; it does not modify source work, interpret review as approval, or publish."
 keywords: "GalleyPack, Kujo ecosystem, editorial packaging, artifact lineage, checksum verification, production workflow"
 seo_title: "GalleyPack — Kujo Ecosystem"
 ---
@@ -32,4 +32,4 @@ Packaging is not publication or approval. GalleyPack preserves review references
 
 ## Learn more
 
-The repository documents the 0.1.0 artifact and package contracts, lineage model, comparison commands, security controls, and full validation gate.
+The repository documents the artifact and package contracts, lineage model, comparison commands, security controls, and full validation gate.

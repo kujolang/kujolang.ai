@@ -9,7 +9,7 @@ order: 470
 install_command: "git clone https://github.com/kujolang/assetworks.git"
 github_url: "https://github.com/kujolang/assetworks"
 launch_story: "Plan publication assets, preserve their lineage, and validate accessible production deliverables against exact checksums."
-scope_note: "AssetWorks 0.1.0 is a local-first evidence system; hosted identity, distributed coordination, and external media services require operator-provided adapters."
+scope_note: "AssetWorks is a local-first evidence system; hosted identity, distributed coordination, and external media services require operator-provided adapters."
 keywords: "AssetWorks, Kujo ecosystem, publishing assets, media provenance, accessibility artifacts, checksum validation"
 seo_title: "AssetWorks — Kujo Ecosystem"
 ---
@@ -32,4 +32,4 @@ Core workflows are local and deterministic. Optional integrations must be config
 
 ## Learn more
 
-The repository documents the 0.1.0 commands, public schemas, deterministic fixtures, security model, and complete validation gate.
+The repository documents the commands, public schemas, deterministic fixtures, security model, and complete validation gate.

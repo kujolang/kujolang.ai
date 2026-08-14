@@ -9,7 +9,7 @@ order: 520
 install_command: "git clone https://github.com/kujolang/readersignal.git"
 github_url: "https://github.com/kujolang/readersignal"
 launch_story: "Capture bounded audience evidence and compare compatible measurements without turning metrics into editorial authority."
-scope_note: "ReaderSignal 0.1.0 stores privacy-bounded evidence; provider access, identity, consent, interpretation, and consequential decisions remain external responsibilities."
+scope_note: "ReaderSignal stores privacy-bounded evidence; provider access, identity, consent, interpretation, and consequential decisions remain external responsibilities."
 keywords: "ReaderSignal, Kujo ecosystem, audience measurement, reader feedback, privacy-bounded analytics, publishing intelligence"
 seo_title: "ReaderSignal — Kujo Ecosystem"
 ---
@@ -32,4 +32,4 @@ The tool records measurements and feedback; it does not identify readers, infer 
 
 ## Learn more
 
-The repository documents the 0.1.0 snapshot, feedback, comparison, export, security, and deterministic validation contracts.
+The repository documents the snapshot, feedback, comparison, export, security, and deterministic validation contracts.
