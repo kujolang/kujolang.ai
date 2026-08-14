@@ -1,0 +1,7 @@
+phase,url,template,run_date,environment,lighthouse_version,html_bytes,css_bytes,js_bytes,image_bytes,font_bytes,requests,lcp_ms,inp_ms,cls,ttfb_ms,source,notes
+baseline,https://kujolang.ai/ecosystem/,ecosystem-overview,2026-08-14,production mobile lab,13.4.1,14390,,,,,40,4697,,0.003,95,Lighthouse JSON,"Performance 53; TBT 1133 ms; Accessibility/Best Practices/SEO 100"
+baseline,https://kujolang.ai/ecosystem/tooling/,tooling-catalog,2026-08-14,production mobile lab,13.4.1,9689,,,,,23,7500,,0.001,208,Lighthouse JSON,"Performance 39; TBT 2918 ms; Accessibility/Best Practices/SEO 100"
+baseline,https://kujolang.ai/ecosystem/assetworks/,software-detail,2026-08-14,production mobile lab,13.4.1,7501,,,,,16,3312,,0,82,Lighthouse JSON,"Performance 62; TBT 1369 ms; Accessibility/Best Practices/SEO 100"
+after,https://kujolang.ai/ecosystem/,ecosystem-overview,2026-08-14,production mobile lab,13.4.1,14467,,,,,40,3266,,0.003,145,Lighthouse JSON,"Performance 91; TBT 28 ms; Accessibility/Best Practices/SEO 100"
+after,https://kujolang.ai/ecosystem/tooling/,tooling-catalog,2026-08-14,production mobile lab,13.4.1,9681,,,,,23,3368,,0,109,Lighthouse JSON,"Performance 84; TBT 62 ms; Accessibility/Best Practices/SEO 100"
+after,https://kujolang.ai/ecosystem/assetworks/,software-detail,2026-08-14,production mobile lab,13.4.1,7537,,,,,16,2095,,0,121,Lighthouse JSON,"Performance 92; TBT 36 ms; Accessibility/Best Practices/SEO 100"
