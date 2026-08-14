@@ -201,7 +201,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 157 ]] || fail "expected 157 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 165 ]] || fail "expected 165 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -230,10 +230,10 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 38 ]] || fail "expected 38 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 41 ]] || fail "expected 38 project and 3 catalog output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_sources" == 46 ]] || fail "expected 46 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 49 ]] || fail "expected 46 project and 3 catalog output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 14 ]] || fail "expected 14 primitive cards, found ${primitive_count}"
-[[ "$tooling_count" == 17 ]] || fail "expected 17 tooling cards, found ${tooling_count}"
+[[ "$tooling_count" == 25 ]] || fail "expected 25 tooling cards, found ${tooling_count}"
 [[ "$showcase_count" == 7 ]] || fail "expected 7 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
@@ -350,4 +350,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 38 ecosystem projects, 3 section catalogs, 83 skills, 26 workflows, carousels, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 46 ecosystem projects, 3 section catalogs, 83 skills, 26 workflows, carousels, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
