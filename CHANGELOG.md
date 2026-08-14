@@ -7,6 +7,8 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 ### Added
 
 - Full-screen, accessible Kujo introduction video player launched from the homepage hero.
+- Ecosystem pages for the eight Publishing House tools: AssetWorks, BluePencil, Dossier, GalleyPack, PressWire, ReaderSignal, StoryDesk, and VersionSeal.
+- Dedicated binary Kujo dither hero art and Howl-rendered 1200×630 social cards for every Publishing House tool.
 
 ### Changed
 
