@@ -93,7 +93,7 @@ reject_text "${output_dir}/index.html" 'Read the docs'
 reject_text "${output_dir}/index.html" '&rarr;'
 require_text "${output_dir}/index.html" 'assets/images/home-agent-workflow.webp'
 require_text "${output_dir}/index.html" 'width="1672" height="941" fetchpriority="high"'
-require_text "${output_dir}/index.html" 'data-hero-dither'
+reject_text "${output_dir}/index.html" 'data-hero-dither'
 require_text "${output_dir}/index.html" 'data-quick-install-modal hidden'
 require_text "${output_dir}/index.html" 'data-agent-prompt-modal hidden'
 require_text "${output_dir}/index.html" 'data-agent-prompt-open'
@@ -127,6 +127,7 @@ require_text "${output_dir}/index.html" '<a href="https://agents.kujolang.ai" ta
 require_text "${output_dir}/index.html" '>Ethos</a></li><li><a href="/writing/"'
 require_text "${output_dir}/index.html" '>Writing</a></li><li><a href="https://docs.kujolang.ai"'
 require_text "${output_dir}/index.html" '>Docs</a></li><li><a href="/contact/"'
+require_text "${output_dir}/index.html" 'aria-label="Menu, open navigation"'
 require_text "${output_dir}/index.html" '<nav aria-label="Footer"><a href="ecosystem/">Ecosystem</a>'
 reject_text "${output_dir}/index.html" '<nav aria-label="Footer"><a href="index.html">Home</a>'
 reject_text "${output_dir}/index.html" 'Programming language for AI-native software'
@@ -195,6 +196,20 @@ for section in primitives tooling showcase; do
 	require_text "${output_dir}/ecosystem/${section}/index.html" 'class="card-grid ecosystem-card-grid"'
 	require_text "${output_dir}/ecosystem/${section}/index.html" 'fetchpriority="high"'
 	require_text "${output_dir}/ecosystem/${section}/index.html" 'width="1916" height="821"'
+done
+
+for section in primitives tooling showcase; do
+	require_text "${output_dir}/llms.txt" "https://kujolang.ai/ecosystem/${section}/"
+done
+
+for publishing_tool in assetworks bluepencil dossier galleypack presswire readersignal storydesk versionseal; do
+	tool_page="${output_dir}/ecosystem/${publishing_tool}/index.html"
+	require_file "$tool_page"
+	require_text "$tool_page" "https://github.com/kujolang/${publishing_tool}"
+	require_text "$tool_page" "https://kujolang.ai/assets/images/social/${publishing_tool}.jpg"
+	require_text "${output_dir}/sitemap.xml" "https://kujolang.ai/ecosystem/${publishing_tool}/"
+	require_text "${output_dir}/llms.txt" "https://kujolang.ai/ecosystem/${publishing_tool}/"
+	reject_text "$tool_page" '0.1.0'
 done
 require_social_meta "${output_dir}/ethos/index.html" 'ethos'
 require_social_meta "${output_dir}/writing/index.html" 'writing'
@@ -306,14 +321,10 @@ require_text "${output_dir}/assets/css/style.css" 'block-size: 100%;'
 require_text "${output_dir}/assets/css/style.css" 'aspect-ratio: 16 / 9;'
 require_text "${output_dir}/assets/css/style.css" 'aspect-ratio: 16 / 9;'
 reject_text "${output_dir}/assets/css/style.css" '@keyframes grid-drift'
-require_text "${output_dir}/assets/js/site.js" 'function enhanceHeroDither()'
 require_text "${output_dir}/assets/js/site.js" 'function enhanceCarousels()'
 require_text "${output_dir}/assets/css/style.css" 'grid-auto-columns: calc((100% - (2 * var(--sk-space-5))) / 3);'
 require_text "${output_dir}/assets/css/style.css" '.ecosystem-section-title-link:hover'
-require_text "${output_dir}/assets/js/site.js" ".home-hero__media, .page-hero__media, .tool-hero__media"
-require_text "${output_dir}/assets/js/site.js" 'Math.sin(frame * 0.36) * 7'
-reject_text "${output_dir}/assets/js/site.js" 'waveAmplitude'
-reject_text "${output_dir}/assets/js/site.js" 'secondaryWave'
+reject_text "${output_dir}/assets/js/site.js" 'requestAnimationFrame(render)'
 require_text "${output_dir}/assets/js/site.js" 'function enhanceMonoScramble()'
 require_text "${output_dir}/assets/js/site.js" "indexOf('departure mono')"
 require_text "${output_dir}/assets/js/site.js" "duration: 680 + Math.min(420, original.length * 12)"
@@ -325,6 +336,7 @@ require_text "${output_dir}/assets/css/style.css" 'scrollbar-color: var(--sk-bor
 require_text "${output_dir}/assets/css/style.css" '.agent-prompt-copy-field textarea::-webkit-scrollbar-thumb'
 require_text "${output_dir}/assets/css/style.css" 'stroke: currentColor;'
 require_text "${output_dir}/assets/js/site.js" "label.textContent = open ? 'Close' : 'Menu';"
+reject_text "${output_dir}/assets/js/site.js" 'findMonoText(document.body)'
 
 require_text "${output_dir}/assets/prompts/kujo-agent-onboarding.txt" 'default core and operating profiles'
 require_text "${output_dir}/assets/prompts/kujo-agent-onboarding.txt" 'kujo doctor --json'
