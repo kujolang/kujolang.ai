@@ -19,6 +19,10 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 - Standardized the WebOps name across Skills, Workflows, metadata, and social sharing cards.
 - Restored the animated Bayer-dither treatment across every image-backed homepage, page, catalog, skill, workflow, and ecosystem hero, with offscreen and background-tab pausing.
 
+### Fixed
+
+- Made the shared hero animation visibly glitch binary dither artwork with periodic horizontal tears, jitter, and scanline inversion instead of redrawing indistinguishable frames.
+
 ## [1.2.0] - 2026-08-12
 
 ### Added
