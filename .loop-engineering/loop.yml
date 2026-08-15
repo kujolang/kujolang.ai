@@ -1,4 +1,4 @@
-objective: "Implement the attached Kujolang.ai content, imagery, navigation, modal, footer, and ecosystem corrections with Kujo SSG and verified local preview behavior."
+objective: "Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output."
 checklist_file: ""
 max_iterations: 4
 max_no_progress: 2
@@ -11,23 +11,23 @@ allowed_actions:
   - commit_local_changes
   - add_project_assets
   - convert_project_assets
+  - deploy
 
 blocked_actions:
-  - deploy
   - destructive_cleanup
   - production_config_change
 
 eval_gates:
-  - id: spec_contract
-    command: "/Users/robertdevore/2026/Kujolang/kujo-repos/spec/scripts/spec validate specs/kujolang-ai-refresh.spec.yml --strict --json"
-    required: true
-
   - id: shell_syntax
-    command: "bash -n scripts/dev.sh scripts/validate-generated-output.sh scripts/verify-site-contract.sh"
+    command: "bash -n scripts/dev.sh scripts/render-social-cards.sh scripts/validate-generated-output.sh scripts/verify-site-contract.sh"
     required: true
 
-  - id: ssg_build
-    command: "kujo run ./build.kujo -- --site-url http://127.0.0.1:4173"
+  - id: howl_manifest
+    command: "/Users/robertdevore/2026/Kujolang/kujo-repos/howl/bin/howl validate --manifest howl-social.json"
+    required: true
+
+  - id: ssg_build_receipt
+    command: "test -s output/sitemap.xml && test -s output/ecosystem/workflows/publishing-house-post-publication/index.html"
     required: true
 
   - id: generated_output
@@ -38,8 +38,16 @@ eval_gates:
     command: "bash scripts/verify-site-contract.sh output"
     required: true
 
+  - id: social_contract
+    command: "npm run social:verify"
+    required: true
+
+  - id: publishing_house_counts
+    command: "test $(find content/workflows -maxdepth 1 -type f -name \*.md | wc -l) -eq 34 && test $(find assets/images/social -maxdepth 1 -type f -name \*.jpg | wc -l) -eq 173"
+    required: true
+
   - id: diff_check
-    command: "git diff --check"
+    command: "git diff --check -- .loop-engineering/loop.yml CHANGELOG.md README.md build.kujo howl-social.json scripts templates content assets seo-audit"
     required: true
 
 commit:

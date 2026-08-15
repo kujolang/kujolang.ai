@@ -1,0 +1,282 @@
+diff --git a/.loop-engineering/iterations/001/context.md b/.loop-engineering/iterations/001/context.md
+index cf54a4b..ec64559 100644
+--- a/.loop-engineering/iterations/001/context.md
++++ b/.loop-engineering/iterations/001/context.md
+@@ -1,6 +1,12 @@
+ # Context
+ 
+-- objective: Implement the attached Kujolang.ai content, imagery, navigation, modal, footer, and ecosystem corrections with Kujo SSG and verified local preview behavior.
+-- git_head: bcae1fd
++- objective: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
++- git_head: 03d2a2a
+ - changed_files:
+-  - none
++  - .loop-engineering/loop.yml
++  - CHANGELOG.md
++  - README.md
++  - build.kujo
++  - howl-social.json
++  - scripts/verify-site-contract.sh
++  - templates/page-workflows.html
+diff --git a/.loop-engineering/loop.yml b/.loop-engineering/loop.yml
+index b162be4..124c736 100644
+--- a/.loop-engineering/loop.yml
++++ b/.loop-engineering/loop.yml
+@@ -1,4 +1,4 @@
+-objective: "Implement the attached Kujolang.ai content, imagery, navigation, modal, footer, and ecosystem corrections with Kujo SSG and verified local preview behavior."
++objective: "Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output."
+ checklist_file: ""
+ max_iterations: 4
+ max_no_progress: 2
+@@ -11,23 +11,23 @@ allowed_actions:
+   - commit_local_changes
+   - add_project_assets
+   - convert_project_assets
++  - deploy
+ 
+ blocked_actions:
+-  - deploy
+   - destructive_cleanup
+   - production_config_change
+ 
+ eval_gates:
+-  - id: spec_contract
+-    command: "/Users/robertdevore/2026/Kujolang/kujo-repos/spec/scripts/spec validate specs/kujolang-ai-refresh.spec.yml --strict --json"
++  - id: shell_syntax
++    command: "bash -n scripts/dev.sh scripts/render-social-cards.sh scripts/validate-generated-output.sh scripts/verify-site-contract.sh"
+     required: true
+ 
+-  - id: shell_syntax
+-    command: "bash -n scripts/dev.sh scripts/validate-generated-output.sh scripts/verify-site-contract.sh"
++  - id: howl_manifest
++    command: "/Users/robertdevore/2026/Kujolang/kujo-repos/howl/bin/howl validate --manifest howl-social.json"
+     required: true
+ 
+-  - id: ssg_build
+-    command: "kujo run ./build.kujo -- --site-url http://127.0.0.1:4173"
++  - id: ssg_build_receipt
++    command: "test -s output/sitemap.xml && test -s output/ecosystem/workflows/publishing-house-post-publication/index.html"
+     required: true
+ 
+   - id: generated_output
+@@ -38,8 +38,16 @@ eval_gates:
+     command: "bash scripts/verify-site-contract.sh output"
+     required: true
+ 
++  - id: social_contract
++    command: "npm run social:verify"
++    required: true
++
++  - id: publishing_house_counts
++    command: "test $(find content/workflows -maxdepth 1 -type f -name \*.md | wc -l) -eq 34 && test $(find assets/images/social -maxdepth 1 -type f -name \*.jpg | wc -l) -eq 173"
++    required: true
++
+   - id: diff_check
+-    command: "git diff --check"
++    command: "git diff --check -- .loop-engineering/loop.yml CHANGELOG.md README.md build.kujo howl-social.json scripts templates content assets seo-audit"
+     required: true
+ 
+ commit:
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 66d97c5..e9b3107 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -9,10 +9,12 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
+ - Full-screen, accessible Kujo introduction video player launched from the homepage hero.
+ - Ecosystem pages for the eight Publishing House tools: AssetWorks, BluePencil, Dossier, GalleyPack, PressWire, ReaderSignal, StoryDesk, and VersionSeal.
+ - Dedicated binary Kujo dither hero art and Howl-rendered 1200×630 social cards for every Publishing House tool.
++- Eight installable Publishing House workflow pages covering Daily Desk through Post-Publication Learning, each with source-grounded boundaries, custom Kujo dither hero art, and a Howl-rendered social card.
+ 
+ ### Changed
+ 
+ - Replaced the homepage hero's Quick Install action with a View video action while preserving Quick Install in the site navigation.
++- Updated the Workflows catalog from 26 workflows in kujo-workflows 0.2.0 to 34 workflows in kujo-workflows 0.3.0.
+ 
+ ## [1.2.0] - 2026-08-12
+ 
+diff --git a/README.md b/README.md
+index da797f3..5618d6a 100644
+--- a/README.md
++++ b/README.md
+@@ -4,7 +4,7 @@ The official website for the [Kujo programming language](https://github.com/kujo
+ 
+ This site is built with the Kujo SSG and the Kujo SiteKit design system. Markdown content is the editable source of truth; generated files are written to `output/` and should not be edited by hand.
+ 
+-Current release: **v1.2.3**
++Current release: **v1.2.5**
+ 
+ - Website: [kujolang.ai](https://kujolang.ai)
+ - Documentation: [docs.kujolang.ai](https://docs.kujolang.ai)
+diff --git a/build.kujo b/build.kujo
+index a7d07c7..e3771a1 100644
+--- a/build.kujo
++++ b/build.kujo
+@@ -4179,7 +4179,7 @@ func build_site(settings) {
+ 		} else if collection_slug == "skills" {
+ 			listing_description = "Browse all 83 repository-backed Kujo Agent Skills released in kujo-skills 0.2.0, including language, tooling, safety, release, and WebOps guidance."
+ 		} else if collection_slug == "workflows" {
+-			listing_description = "Browse all 26 local-first workflow kits released in kujo-workflows 0.2.0, with explicit inputs, boundaries, evidence, and readiness status."
++			listing_description = "Browse all 34 local-first workflow kits released in kujo-workflows 0.3.0, with explicit inputs, boundaries, evidence, and readiness status."
+ 		}
+ 		listing_html := render_layout(
+ 			layout_template,
+diff --git a/howl-social.json b/howl-social.json
+index 28e56d7..9bf3ad9 100644
+--- a/howl-social.json
++++ b/howl-social.json
+@@ -2128,6 +2128,110 @@
+       "show_border": false,
+       "show_url": false
+     },
++    {
++      "id": "publishing-house-daily-desk",
++      "title": "Publishing House Daily Desk",
++      "tagline": "Validate a daily editorial packet and route each item to the narrowest actionable Publishing House workflow.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "workflow",
++      "url": "kujolang.ai/ecosystem/workflows/publishing-house-daily-desk/",
++      "background_image": "assets/images/ecosystem/workflow-publishing-house-daily-desk.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "show_border": false,
++      "show_url": false
++    },
++    {
++      "id": "publishing-house-commissioning",
++      "title": "Publishing House Commissioning",
++      "tagline": "Turn an approved idea or audience signal into a specific Editorial Brief and bounded assignment structure.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "workflow",
++      "url": "kujolang.ai/ecosystem/workflows/publishing-house-commissioning/",
++      "background_image": "assets/images/ecosystem/workflow-publishing-house-commissioning.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "show_border": false,
++      "show_url": false
++    },
++    {
++      "id": "publishing-house-evidence-dossier",
++      "title": "Publishing House Evidence Dossier",
++      "tagline": "Build a checksum-bound claims, sources, rights, conflicts, and freshness record before drafting.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "workflow",
++      "url": "kujolang.ai/ecosystem/workflows/publishing-house-evidence-dossier/",
++      "background_image": "assets/images/ecosystem/workflow-publishing-house-evidence-dossier.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "show_border": false,
++      "show_url": false
++    },
++    {
++      "id": "publishing-house-primary-piece",
++      "title": "Publishing House Primary Piece Production",
++      "tagline": "Create a claim-mapped authoritative artifact and freeze its exact lineage and checksum in GalleyPack.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "workflow",
++      "url": "kujolang.ai/ecosystem/workflows/publishing-house-primary-piece/",
++      "background_image": "assets/images/ecosystem/workflow-publishing-house-primary-piece.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "show_border": false,
++      "show_url": false
++    },
++    {
++      "id": "publishing-house-asset-production",
++      "title": "Publishing House Asset Production",
++      "tagline": "Plan, validate, and package supported media with provenance, accessibility records, and exact checksums.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "workflow",
++      "url": "kujolang.ai/ecosystem/workflows/publishing-house-asset-production/",
++      "background_image": "assets/images/ecosystem/workflow-publishing-house-asset-production.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "show_border": false,
++      "show_url": false
++    },
++    {
++      "id": "publishing-house-editorial-review",
++      "title": "Publishing House Editorial Review and Revision",
++      "tagline": "Review an exact package, preserve independent findings, and route a bounded revision loop.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "workflow",
++      "url": "kujolang.ai/ecosystem/workflows/publishing-house-editorial-review/",
++      "background_image": "assets/images/ecosystem/workflow-publishing-house-editorial-review.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "show_border": false,
++      "show_url": false
++    },
++    {
++      "id": "publishing-house-approval-publication",
++      "title": "Publishing House Approval and Publication",
++      "tagline": "Bind real human approval to an exact checksum and allow publication only through PressWire.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "workflow",
++      "url": "kujolang.ai/ecosystem/workflows/publishing-house-approval-publication/",
++      "background_image": "assets/images/ecosystem/workflow-publishing-house-approval-publication.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "show_border": false,
++      "show_url": false
++    },
++    {
++      "id": "publishing-house-post-publication",
++      "title": "Publishing House Post-Publication Learning",
++      "tagline": "Turn a verified publication receipt and audience signals into bounded editorial learning.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "workflow",
++      "url": "kujolang.ai/ecosystem/workflows/publishing-house-post-publication/",
++      "background_image": "assets/images/ecosystem/workflow-publishing-house-post-publication.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "show_border": false,
++      "show_url": false
++    },
+     {
+       "id": "codebase-cleanup",
+       "title": "Codebase Cleanup",
+diff --git a/scripts/verify-site-contract.sh b/scripts/verify-site-contract.sh
+index 0bf17bd..5735dd5 100755
+--- a/scripts/verify-site-contract.sh
++++ b/scripts/verify-site-contract.sh
+@@ -216,7 +216,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
+ require_social_meta "${output_dir}/contact/index.html" 'contact'
+ 
+ social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
+-[[ "$social_card_count" == 165 ]] || fail "expected 165 social cards, found ${social_card_count}"
++[[ "$social_card_count" == 173 ]] || fail "expected 173 social cards, found ${social_card_count}"
+ 
+ for social_card in "${repo_root}"/assets/images/social/*.jpg; do
+ 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
+@@ -281,7 +281,7 @@ workflow_sources=$(find "${repo_root}/content/workflows" -maxdepth 1 -type f -na
+ skills_outputs=$(find "${output_dir}/ecosystem/skills" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
+ workflow_outputs=$(find "${output_dir}/ecosystem/workflows" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
+ [[ "$skills_sources" == 83 && "$skills_outputs" == 83 ]] || fail "expected 83 skill source and output routes, found ${skills_sources}/${skills_outputs}"
+-[[ "$workflow_sources" == 26 && "$workflow_outputs" == 26 ]] || fail "expected 26 workflow source and output routes, found ${workflow_sources}/${workflow_outputs}"
++[[ "$workflow_sources" == 34 && "$workflow_outputs" == 34 ]] || fail "expected 34 workflow source and output routes, found ${workflow_sources}/${workflow_outputs}"
+ 
+ for catalog_page in "${output_dir}/ecosystem/skills/index.html" "${output_dir}/ecosystem/workflows/index.html"; do
+ 	require_text "$catalog_page" '"@type":"CollectionPage"'
+@@ -362,4 +362,4 @@ if (( failures > 0 )); then
+ 	exit 1
+ fi
+ 
+-printf 'Site contract passed: 46 ecosystem projects, 3 section catalogs, 83 skills, 26 workflows, carousels, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
++printf 'Site contract passed: 46 ecosystem projects, 3 section catalogs, 83 skills, 34 workflows, carousels, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+diff --git a/templates/page-workflows.html b/templates/page-workflows.html
+index 5d45495..3543baa 100644
+--- a/templates/page-workflows.html
++++ b/templates/page-workflows.html
+@@ -2,10 +2,10 @@
+ 	<header class="page-hero sk-hero" data-layout="split">
+ 		<div class="page-hero__media" aria-hidden="true"><img src="/assets/images/ecosystem/workflows-evidence-routing-bench.webp" alt="" class="featured-image" width="1916" height="821" loading="eager" decoding="async" fetchpriority="high"></div>
+ 		<div class="page-hero__wash" aria-hidden="true"></div>
+-		<div class="sk-hero__inner"><div class="page-hero__copy"><p class="sk-badge" data-variant="outline">kujo-workflows 0.2.0</p><h1>{{title}}</h1><p>Local-first workflow kits with explicit inputs, approvals, evidence, recovery, and readiness boundaries. Start from a runnable proof instead of an opaque hosted service.</p><div class="sk-hero__actions"><a class="sk-button" href="https://github.com/kujolang/kujo-workflows" target="_blank" rel="noopener">View repository</a></div></div></div>
++		<div class="sk-hero__inner"><div class="page-hero__copy"><p class="sk-badge" data-variant="outline">kujo-workflows 0.3.0</p><h1>{{title}}</h1><p>Local-first workflow kits with explicit inputs, approvals, evidence, recovery, and readiness boundaries. Start from a runnable proof instead of an opaque hosted service.</p><div class="sk-hero__actions"><a class="sk-button" href="https://github.com/kujolang/kujo-workflows" target="_blank" rel="noopener">View repository</a></div></div></div>
+ 	</header>
+ 	<section class="ecosystem-section section-shell" aria-labelledby="workflows-catalog-title">
+-		<div class="section-heading sk-heading"><p>26 / Released workflows</p><h2 id="workflows-catalog-title">Workflow catalog</h2><span>Every active workflow in the 0.2.0 technical preview, with its real entry point, evidence model, and current readiness.</span></div>
++		<div class="section-heading sk-heading"><p>34 / Released workflows</p><h2 id="workflows-catalog-title">Workflow catalog</h2><span>Every active workflow in the 0.3.0 release, with its real entry point, evidence model, and current readiness.</span></div>
+ 		<ul class="card-grid ecosystem-card-grid">{{cards}}</ul>
+ 	</section>
+ </main>

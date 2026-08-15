@@ -2,21 +2,21 @@
 
 ## Verdict
 
-success
+blocked
 
 ## Completed
 
-- configured loop run completed through iteration 1
+- configured loop run completed through iteration 3
 
 ## Verification
 
-- passed: spec_contract, shell_syntax, ssg_build, generated_output, site_contract, diff_check
+- passed: shell_syntax, howl_manifest, generated_output, publishing_house_counts, diff_check, shell_syntax, howl_manifest, generated_output, publishing_house_counts, diff_check, shell_syntax, howl_manifest, generated_output, publishing_house_counts, diff_check
 - blocked: none
-- failed: none
+- failed: ssg_build_receipt, site_contract, social_contract, ssg_build_receipt, site_contract, social_contract, ssg_build_receipt, site_contract, social_contract
 
 ## Commits
 
-- Loop engineering: Implement the attached Kujolang.ai content, imagery, navigation, modal, footer, and ecosystem corrections with Kujo SSG and verified local preview behavior.
+- Loop engineering: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
 
 ## Remaining
 
@@ -28,4 +28,4 @@ success
 
 ## Next Start
 
-- success: required gates passed
+- repeated-failure: required gate failed 3 times

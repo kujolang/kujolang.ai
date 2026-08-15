@@ -9,10 +9,12 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 - Full-screen, accessible Kujo introduction video player launched from the homepage hero.
 - Ecosystem pages for the eight Publishing House tools: AssetWorks, BluePencil, Dossier, GalleyPack, PressWire, ReaderSignal, StoryDesk, and VersionSeal.
 - Dedicated binary Kujo dither hero art and Howl-rendered 1200×630 social cards for every Publishing House tool.
+- Eight installable Publishing House workflow pages covering Daily Desk through Post-Publication Learning, each with source-grounded boundaries, custom Kujo dither hero art, and a Howl-rendered social card.
 
 ### Changed
 
 - Replaced the homepage hero's Quick Install action with a View video action while preserving Quick Install in the site navigation.
+- Updated the Workflows catalog from 26 workflows in kujo-workflows 0.2.0 to 34 workflows in kujo-workflows 0.3.0.
 
 ## [1.2.0] - 2026-08-12
 

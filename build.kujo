@@ -4179,7 +4179,7 @@ func build_site(settings) {
 		} else if collection_slug == "skills" {
 			listing_description = "Browse all 83 repository-backed Kujo Agent Skills released in kujo-skills 0.2.0, including language, tooling, safety, release, and WebOps guidance."
 		} else if collection_slug == "workflows" {
-			listing_description = "Browse all 26 local-first workflow kits released in kujo-workflows 0.2.0, with explicit inputs, boundaries, evidence, and readiness status."
+			listing_description = "Browse all 34 local-first workflow kits released in kujo-workflows 0.3.0, with explicit inputs, boundaries, evidence, and readiness status."
 		}
 		listing_html := render_layout(
 			layout_template,

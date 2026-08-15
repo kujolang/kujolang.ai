@@ -1,0 +1,2 @@
+id,phase,category,severity,affected_urls,affected_count,evidence,expected_benefit,confidence,difficulty,recommended_action,owner,status
+SEO-PHWF-20260814-01,baseline,content-discovery,P1,https://kujolang.ai/ecosystem/workflows/,9,"Public catalog reported 26 workflows at kujo-workflows 0.2.0 and had no detail routes for the eight released Publishing House workflows",Align the public catalog with the releasable workflow repository,high,medium,"Add eight detail routes and update counts, metadata, sitemap, llms.txt, images, and social cards",site engineering,resolved
