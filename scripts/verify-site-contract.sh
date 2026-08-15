@@ -216,7 +216,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 173 ]] || fail "expected 173 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 174 ]] || fail "expected 174 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -280,7 +280,7 @@ skills_sources=$(find "${repo_root}/content/skills" -maxdepth 1 -type f -name '*
 workflow_sources=$(find "${repo_root}/content/workflows" -maxdepth 1 -type f -name '*.md' | wc -l | tr -d ' ')
 skills_outputs=$(find "${output_dir}/ecosystem/skills" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
 workflow_outputs=$(find "${output_dir}/ecosystem/workflows" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
-[[ "$skills_sources" == 83 && "$skills_outputs" == 83 ]] || fail "expected 83 skill source and output routes, found ${skills_sources}/${skills_outputs}"
+[[ "$skills_sources" == 84 && "$skills_outputs" == 84 ]] || fail "expected 84 skill source and output routes, found ${skills_sources}/${skills_outputs}"
 [[ "$workflow_sources" == 34 && "$workflow_outputs" == 34 ]] || fail "expected 34 workflow source and output routes, found ${workflow_sources}/${workflow_outputs}"
 
 for catalog_page in "${output_dir}/ecosystem/skills/index.html" "${output_dir}/ecosystem/workflows/index.html"; do
@@ -362,4 +362,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 46 ecosystem projects, 3 section catalogs, 83 skills, 34 workflows, carousels, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 46 ecosystem projects, 3 section catalogs, 84 skills, 34 workflows, carousels, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

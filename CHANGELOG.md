@@ -10,6 +10,7 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 - Ecosystem pages for the eight Publishing House tools: AssetWorks, BluePencil, Dossier, GalleyPack, PressWire, ReaderSignal, StoryDesk, and VersionSeal.
 - Dedicated binary Kujo dither hero art and Howl-rendered 1200×630 social cards for every Publishing House tool.
 - Eight installable Publishing House workflow pages covering Daily Desk through Post-Publication Learning, each with source-grounded boundaries, custom Kujo dither hero art, and a Howl-rendered social card.
+- Kujo Ecosystem Launch skill page with release-pinned source links, custom binary dither hero art, and a Howl-rendered social card.
 
 ### Changed
 

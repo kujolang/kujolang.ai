@@ -4177,7 +4177,7 @@ func build_site(settings) {
 		if collection_slug == "ecosystem" {
 			listing_description = "Explore the Kujo ecosystem of language primitives, local-first tools, and inspectable AI-native application showcases."
 		} else if collection_slug == "skills" {
-			listing_description = "Browse all 83 repository-backed Kujo Agent Skills released in kujo-skills 0.2.0, including language, tooling, safety, release, and WebOps guidance."
+			listing_description = "Browse 84 published Kujo Agent Skill pages drawn from kujo-skills releases through 0.4.1, including language, tooling, safety, release, and WebOps guidance."
 		} else if collection_slug == "workflows" {
 			listing_description = "Browse all 34 local-first workflow kits released in kujo-workflows 0.3.0, with explicit inputs, boundaries, evidence, and readiness status."
 		}

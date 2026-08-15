@@ -763,6 +763,15 @@
       "social_path": "assets/images/social/webops-web-performance.jpg"
     },
     {
+      "kind": "skill",
+      "name": "Kujo Ecosystem Launch",
+      "slug": "kujo-ecosystem-launch",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.4.1/skills/kujo-ecosystem-launch/SKILL.md",
+      "object_description": "staged ecosystem launch control station with release gates, publishing press, and verification receipt trays",
+      "hero_path": "assets/images/ecosystem/skill-kujo-ecosystem-launch.webp",
+      "social_path": "assets/images/social/kujo-ecosystem-launch.jpg"
+    },
+    {
       "kind": "workflows-index",
       "name": "Workflows",
       "slug": "workflows",
