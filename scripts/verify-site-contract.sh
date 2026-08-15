@@ -332,8 +332,6 @@ require_text "${output_dir}/assets/css/style.css" '.hero-dither-canvas'
 require_text "${output_dir}/assets/js/site.js" 'function enhanceHeroDither()'
 require_text "${output_dir}/assets/js/site.js" ".home-hero__media, .page-hero__media, .tool-hero__media"
 require_text "${output_dir}/assets/js/site.js" 'Math.sin(frame * 0.36) * 7'
-require_text "${output_dir}/assets/js/site.js" 'var glitchCycle = reducedMotion.matches ? 8 : frame % 42'
-require_text "${output_dir}/assets/js/site.js" "canvas.dataset.ditherGlitch = glitchBurst ? 'burst' : 'idle'"
 require_text "${output_dir}/assets/js/site.js" 'animationFrame = window.requestAnimationFrame(render)'
 require_text "${output_dir}/assets/js/site.js" 'document.hidden'
 require_text "${output_dir}/assets/js/site.js" 'visibilityObserver.observe(media)'

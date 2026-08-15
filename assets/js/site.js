@@ -383,24 +383,14 @@
         var driftX = Math.floor(frame / 2) % 8;
         var driftY = Math.floor(frame / 3) % 8;
         var thresholdShift = reducedMotion.matches ? 0 : Math.sin(frame * 0.36) * 7;
-        var glitchCycle = reducedMotion.matches ? 8 : frame % 42;
-        var glitchBurst = glitchCycle < 8;
-        var globalShift = glitchBurst ? (glitchCycle % 2 === 0 ? -3 : 3) : 0;
 
         for (var y = 0; y < height; y += 1) {
-          var band = Math.floor(y / Math.max(4, Math.floor(height / 24)));
-          var tearSeed = (band * 13 + frame * 7) % 19;
-          var sliceShift = glitchBurst && tearSeed < 5 ? (tearSeed - 2) * 5 : 0;
-          var scanline = glitchBurst && (y + frame * 5) % 53 < 2;
           for (var x = 0; x < width; x += 1) {
             var pixelIndex = y * width + x;
             var targetIndex = pixelIndex * 4;
             var matrix = bayer8[(y + driftY) % 8][(x + driftX) % 8];
             var threshold = 94 + matrix * 1.88 + thresholdShift;
-            var sourceX = Math.max(0, Math.min(width - 1, x + globalShift + sliceShift));
-            var sourcePixelIndex = y * width + sourceX;
-            var value = sourceLuminance[sourcePixelIndex] > threshold ? 244 : 14;
-            if (scanline) value = 258 - value;
+            var value = sourceLuminance[pixelIndex] > threshold ? 244 : 14;
             target[targetIndex] = value;
             target[targetIndex + 1] = value;
             target[targetIndex + 2] = value;
@@ -411,7 +401,6 @@
         context.putImageData(outputPixels, 0, 0);
         canvas.dataset.ditherReady = 'true';
         canvas.dataset.ditherFrame = String(frame);
-        canvas.dataset.ditherGlitch = glitchBurst ? 'burst' : 'idle';
         frame += 1;
       }
 
