@@ -2,17 +2,17 @@
 
 ## Verdict
 
-blocked
+success
 
 ## Completed
 
-- configured loop run completed through iteration 3
+- configured loop run completed through iteration 1
 
 ## Verification
 
-- passed: shell_syntax, howl_manifest, generated_output, publishing_house_counts, diff_check, shell_syntax, howl_manifest, generated_output, publishing_house_counts, diff_check, shell_syntax, howl_manifest, generated_output, publishing_house_counts, diff_check
+- passed: shell_syntax, howl_manifest, ssg_build_receipt, generated_output, site_contract, social_contract, publishing_house_counts, diff_check
 - blocked: none
-- failed: ssg_build_receipt, site_contract, social_contract, ssg_build_receipt, site_contract, social_contract, ssg_build_receipt, site_contract, social_contract
+- failed: none
 
 ## Commits
 
@@ -28,4 +28,4 @@ blocked
 
 ## Next Start
 
-- repeated-failure: required gate failed 3 times
+- success: required gates passed

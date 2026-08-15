@@ -1,12 +1,6 @@
 # Context
 
 - objective: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
-- git_head: 03d2a2a
+- git_head: 621d13f
 - changed_files:
-  - .loop-engineering/loop.yml
-  - CHANGELOG.md
-  - README.md
-  - build.kujo
-  - howl-social.json
-  - scripts/verify-site-contract.sh
-  - templates/page-workflows.html
+  - none
