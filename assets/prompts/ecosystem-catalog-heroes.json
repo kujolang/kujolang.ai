@@ -521,7 +521,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Accessibility Review",
+      "name": "WebOps Accessibility Review",
       "slug": "webops-accessibility-review",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-accessibility-review/SKILL.md",
       "object_description": "webops accessibility review tactile inspection desk with contrast gauges and navigation controls",
@@ -530,7 +530,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops AI Search Visibility",
+      "name": "WebOps AI Search Visibility",
       "slug": "webops-ai-search-visibility",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-ai-search-visibility/SKILL.md",
       "object_description": "webops ai search signal observatory with citation lenses and query beacons",
@@ -539,7 +539,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Analytics Analysis",
+      "name": "WebOps Analytics Analysis",
       "slug": "webops-analytics-analysis",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-analytics-analysis/SKILL.md",
       "object_description": "webops analytics analysis measurement console with trend reels and evidence meters",
@@ -548,7 +548,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Backlink And Mention Analysis",
+      "name": "WebOps Backlink And Mention Analysis",
       "slug": "webops-backlink-and-mention-analysis",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-backlink-and-mention-analysis/SKILL.md",
       "object_description": "webops backlink and link-analysis table with connected citation pins and archive trays",
@@ -557,7 +557,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Cannibalization",
+      "name": "WebOps Cannibalization",
       "slug": "webops-cannibalization",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-cannibalization/SKILL.md",
       "object_description": "webops cannibalization two competing signal transmitters converging on one receiver",
@@ -566,7 +566,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Capability Preflight",
+      "name": "WebOps Capability Preflight",
       "slug": "webops-capability-preflight",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-capability-preflight/SKILL.md",
       "object_description": "webops capability preflight preflight inspection bench with sealed capability modules",
@@ -575,7 +575,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Competitor Intelligence",
+      "name": "WebOps Competitor Intelligence",
       "slug": "webops-competitor-intelligence",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-competitor-intelligence/SKILL.md",
       "object_description": "webops competitor intelligence public intelligence map table with comparison lenses",
@@ -584,7 +584,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Content Accuracy",
+      "name": "WebOps Content Accuracy",
       "slug": "webops-content-accuracy",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-content-accuracy/SKILL.md",
       "object_description": "webops content accuracy fact-checking desk with source files and calibration instruments",
@@ -593,7 +593,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Content Decay",
+      "name": "WebOps Content Decay",
       "slug": "webops-content-decay",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-content-decay/SKILL.md",
       "object_description": "webops content decay archive conservation table with aging documents and review trays",
@@ -602,7 +602,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Content Gap",
+      "name": "WebOps Content Gap",
       "slug": "webops-content-gap",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-content-gap/SKILL.md",
       "object_description": "webops content gap topic map with one clearly missing structural tile",
@@ -611,7 +611,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Content Portfolio",
+      "name": "WebOps Content Portfolio",
       "slug": "webops-content-portfolio",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-content-portfolio/SKILL.md",
       "object_description": "webops content portfolio portfolio sorting table with evidence folders and decision bins",
@@ -620,7 +620,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Content Pruning",
+      "name": "WebOps Content Pruning",
       "slug": "webops-content-pruning",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-content-pruning/SKILL.md",
       "object_description": "webops content pruning archive conservation table with aging documents and review trays",
@@ -629,7 +629,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Distribution",
+      "name": "WebOps Distribution",
       "slug": "webops-distribution",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-distribution/SKILL.md",
       "object_description": "webops distribution publication routing press with outbound channel trays",
@@ -638,7 +638,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Indexation",
+      "name": "WebOps Indexation",
       "slug": "webops-indexation",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-indexation/SKILL.md",
       "object_description": "webops indexation search index cabinet with crawl gates and canonical drawers",
@@ -647,7 +647,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Information Architecture",
+      "name": "WebOps Information Architecture",
       "slug": "webops-information-architecture",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-information-architecture/SKILL.md",
       "object_description": "webops information architecture website blueprint table with hierarchical route blocks",
@@ -656,7 +656,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Internal Linking",
+      "name": "WebOps Internal Linking",
       "slug": "webops-internal-linking",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-internal-linking/SKILL.md",
       "object_description": "webops internal linking interconnected document table with contextual bridge lines",
@@ -665,7 +665,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Keyword Opportunity",
+      "name": "WebOps Keyword Opportunity",
       "slug": "webops-keyword-opportunity",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-keyword-opportunity/SKILL.md",
       "object_description": "webops keyword opportunity query research console with clustered signal tokens",
@@ -674,7 +674,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Link Health",
+      "name": "WebOps Link Health",
       "slug": "webops-link-health",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-link-health/SKILL.md",
       "object_description": "webops link health network continuity tester attached to a web of cables",
@@ -683,7 +683,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Longitudinal Findings",
+      "name": "WebOps Longitudinal Findings",
       "slug": "webops-longitudinal-findings",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-longitudinal-findings/SKILL.md",
       "object_description": "webops longitudinal findings timeline evidence bench with aligned historical measurement reels",
@@ -692,7 +692,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Reporting",
+      "name": "WebOps Reporting",
       "slug": "webops-reporting",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-reporting/SKILL.md",
       "object_description": "webops reporting quiet reporting desk with verified evidence trays and summary press",
@@ -701,7 +701,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Schema And Metadata",
+      "name": "WebOps Schema And Metadata",
       "slug": "webops-schema-and-metadata",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-schema-and-metadata/SKILL.md",
       "object_description": "webops schema and structured-data drafting table with nested semantic blocks",
@@ -710,7 +710,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Search Performance",
+      "name": "WebOps Search Performance",
       "slug": "webops-search-performance",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-search-performance/SKILL.md",
       "object_description": "webops search performance measurement console with trend reels and evidence meters",
@@ -719,7 +719,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Search Standards Watch",
+      "name": "WebOps Search Standards Watch",
       "slug": "webops-search-standards-watch",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-search-standards-watch/SKILL.md",
       "object_description": "webops search standards standards observatory with update signals and source archives",
@@ -728,7 +728,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Search Submission",
+      "name": "WebOps Search Submission",
       "slug": "webops-search-submission",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-search-submission/SKILL.md",
       "object_description": "webops search submission controlled dispatch gate with approved URL packets",
@@ -737,7 +737,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Site Profile",
+      "name": "WebOps Site Profile",
       "slug": "webops-site-profile",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-site-profile/SKILL.md",
       "object_description": "webops site profile portable website identity dossier beside a configuration console",
@@ -746,7 +746,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Technical SEO",
+      "name": "WebOps Technical SEO",
       "slug": "webops-technical-seo",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-technical-seo/SKILL.md",
       "object_description": "webops technical seo crawler diagnostics bench with sitemap and canonical instruments",
@@ -755,7 +755,7 @@
     },
     {
       "kind": "skill",
-      "name": "Webops Web Performance",
+      "name": "WebOps Web Performance",
       "slug": "webops-web-performance",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-web-performance/SKILL.md",
       "object_description": "webops web performance performance wind tunnel testing a webpage frame",
@@ -899,7 +899,7 @@
     },
     {
       "kind": "workflow",
-      "name": "Webops AI Visibility Benchmark",
+      "name": "WebOps AI Visibility Benchmark",
       "slug": "webops-ai-visibility-benchmark",
       "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-ai-visibility-benchmark",
       "object_description": "AI search observatory running fixed queries across citation surfaces",
@@ -908,7 +908,7 @@
     },
     {
       "kind": "workflow",
-      "name": "Webops Content Refresh",
+      "name": "WebOps Content Refresh",
       "slug": "webops-content-refresh",
       "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-content-refresh",
       "object_description": "content restoration desk with decay evidence approval gate and updated pages",
@@ -917,7 +917,7 @@
     },
     {
       "kind": "workflow",
-      "name": "Webops Finding To Fix",
+      "name": "WebOps Finding To Fix",
       "slug": "webops-finding-to-fix",
       "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-finding-to-fix",
       "object_description": "website finding moving through proposal approval repair and verification gates",
@@ -926,7 +926,7 @@
     },
     {
       "kind": "workflow",
-      "name": "Webops Monthly SEO Review",
+      "name": "WebOps Monthly SEO Review",
       "slug": "webops-monthly-seo-review",
       "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-monthly-seo-review",
       "object_description": "monthly search review table consolidating specialist evidence packets",
@@ -935,7 +935,7 @@
     },
     {
       "kind": "workflow",
-      "name": "Webops Post Publish",
+      "name": "WebOps Post Publish",
       "slug": "webops-post-publish",
       "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-post-publish",
       "object_description": "post-publication control desk checking pages links submissions and receipts",
@@ -944,7 +944,7 @@
     },
     {
       "kind": "workflow",
-      "name": "Webops Quarterly Content Portfolio",
+      "name": "WebOps Quarterly Content Portfolio",
       "slug": "webops-quarterly-content-portfolio",
       "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-quarterly-content-portfolio",
       "object_description": "quarterly content portfolio board with evidence folders and disposition bins",
@@ -953,7 +953,7 @@
     },
     {
       "kind": "workflow",
-      "name": "Webops Site Bootstrap",
+      "name": "WebOps Site Bootstrap",
       "slug": "webops-site-bootstrap",
       "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-site-bootstrap",
       "object_description": "website baseline survey station with crawler browser and graph instruments",
@@ -962,7 +962,7 @@
     },
     {
       "kind": "workflow",
-      "name": "Webops Weekly Content Intelligence",
+      "name": "WebOps Weekly Content Intelligence",
       "slug": "webops-weekly-content-intelligence",
       "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-weekly-content-intelligence",
       "object_description": "weekly content intelligence desk connecting trends gaps accuracy and links",
@@ -971,7 +971,7 @@
     },
     {
       "kind": "workflow",
-      "name": "Webops Weekly Search Intelligence",
+      "name": "WebOps Weekly Search Intelligence",
       "slug": "webops-weekly-search-intelligence",
       "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-weekly-search-intelligence",
       "object_description": "weekly search measurement console comparing queries trends and decay signals",
@@ -980,7 +980,7 @@
     },
     {
       "kind": "workflow",
-      "name": "Webops Weekly Site Health",
+      "name": "WebOps Weekly Site Health",
       "slug": "webops-weekly-site-health",
       "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-weekly-site-health",
       "object_description": "weekly website health inspection rig with crawl performance and accessibility gauges",

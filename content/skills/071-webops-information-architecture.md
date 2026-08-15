@@ -1,5 +1,5 @@
 ---
-title: "Webops Information Architecture"
+title: "WebOps Information Architecture"
 custom_url: "webops-information-architecture"
 description: "Use when auditing site navigation, hierarchy, taxonomy, URLs, depth, clusters, and discoverability."
 excerpt: "Use when auditing site navigation, hierarchy, taxonomy, URLs, depth, clusters, and discoverability."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Information Architecture, Kujo Agent Skill, webops-information-architecture, repository-backed agent guidance"
-seo_title: "Webops Information Architecture — Kujo Agent Skill"
+keywords: "WebOps Information Architecture, Kujo Agent Skill, webops-information-architecture, repository-backed agent guidance"
+seo_title: "WebOps Information Architecture — Kujo Agent Skill"
 seo_description: "Use when auditing site navigation, hierarchy, taxonomy, URLs, depth, clusters, and discoverability."
 ---
 

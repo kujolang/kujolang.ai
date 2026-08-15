@@ -1,5 +1,5 @@
 ---
-title: "Webops Weekly Search Intelligence"
+title: "WebOps Weekly Search Intelligence"
 custom_url: "webops-weekly-search-intelligence"
 description: "Compare measured search evidence, keyword opportunities, and decay signals with capability-level degradation."
 featured_image: "/assets/images/ecosystem/workflow-webops-weekly-search-intelligence.webp"
@@ -12,8 +12,8 @@ launch_story: "A local-first workflow kit with explicit inputs, outputs, evidenc
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
 last_updated: "2026-08-12"
-keywords: "Webops Weekly Search Intelligence, Kujo workflow, webops-weekly-search-intelligence, local-first agent workflow"
-seo_title: "Webops Weekly Search Intelligence — Kujo Workflow"
+keywords: "WebOps Weekly Search Intelligence, Kujo workflow, webops-weekly-search-intelligence, local-first agent workflow"
+seo_title: "WebOps Weekly Search Intelligence — Kujo Workflow"
 seo_description: "Compare measured search evidence, keyword opportunities, and decay signals with capability-level degradation."
 ---
 

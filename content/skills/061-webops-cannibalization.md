@@ -1,5 +1,5 @@
 ---
-title: "Webops Cannibalization"
+title: "WebOps Cannibalization"
 custom_url: "webops-cannibalization"
 description: "Use when identifying likely intent competition while separating normal overlap."
 excerpt: "Use when identifying likely intent competition while separating normal overlap."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Cannibalization, Kujo Agent Skill, webops-cannibalization, repository-backed agent guidance"
-seo_title: "Webops Cannibalization — Kujo Agent Skill"
+keywords: "WebOps Cannibalization, Kujo Agent Skill, webops-cannibalization, repository-backed agent guidance"
+seo_title: "WebOps Cannibalization — Kujo Agent Skill"
 seo_description: "Use when identifying likely intent competition while separating normal overlap."
 ---
 

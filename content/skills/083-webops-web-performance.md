@@ -1,5 +1,5 @@
 ---
-title: "Webops Web Performance"
+title: "WebOps Web Performance"
 custom_url: "webops-web-performance"
 description: "Use when analyzing lab and field website performance as distinct evidence classes."
 excerpt: "Use when analyzing lab and field website performance as distinct evidence classes."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Web Performance, Kujo Agent Skill, webops-web-performance, repository-backed agent guidance"
-seo_title: "Webops Web Performance — Kujo Agent Skill"
+keywords: "WebOps Web Performance, Kujo Agent Skill, webops-web-performance, repository-backed agent guidance"
+seo_title: "WebOps Web Performance — Kujo Agent Skill"
 seo_description: "Use when analyzing lab and field website performance as distinct evidence classes."
 ---
 

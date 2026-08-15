@@ -1,5 +1,5 @@
 ---
-title: "Webops Competitor Intelligence"
+title: "WebOps Competitor Intelligence"
 custom_url: "webops-competitor-intelligence"
 description: "Use when monitoring selected public competitors or peers for meaningful change."
 excerpt: "Use when monitoring selected public competitors or peers for meaningful change."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Competitor Intelligence, Kujo Agent Skill, webops-competitor-intelligence, repository-backed agent guidance"
-seo_title: "Webops Competitor Intelligence — Kujo Agent Skill"
+keywords: "WebOps Competitor Intelligence, Kujo Agent Skill, webops-competitor-intelligence, repository-backed agent guidance"
+seo_title: "WebOps Competitor Intelligence — Kujo Agent Skill"
 seo_description: "Use when monitoring selected public competitors or peers for meaningful change."
 ---
 

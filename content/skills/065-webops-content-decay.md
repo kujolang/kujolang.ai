@@ -1,5 +1,5 @@
 ---
-title: "Webops Content Decay"
+title: "WebOps Content Decay"
 custom_url: "webops-content-decay"
 description: "Use when identifying content deterioration or staleness without conflating age and decline."
 excerpt: "Use when identifying content deterioration or staleness without conflating age and decline."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Content Decay, Kujo Agent Skill, webops-content-decay, repository-backed agent guidance"
-seo_title: "Webops Content Decay — Kujo Agent Skill"
+keywords: "WebOps Content Decay, Kujo Agent Skill, webops-content-decay, repository-backed agent guidance"
+seo_title: "WebOps Content Decay — Kujo Agent Skill"
 seo_description: "Use when identifying content deterioration or staleness without conflating age and decline."
 ---
 

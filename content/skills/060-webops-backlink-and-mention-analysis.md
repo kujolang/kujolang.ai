@@ -1,5 +1,5 @@
 ---
-title: "Webops Backlink And Mention Analysis"
+title: "WebOps Backlink And Mention Analysis"
 custom_url: "webops-backlink-and-mention-analysis"
 description: "Use when analyzing new/lost backlinks, linked and unlinked mentions, and evidence-backed link concerns."
 excerpt: "Use when analyzing new/lost backlinks, linked and unlinked mentions, and evidence-backed link concerns."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Backlink And Mention Analysis, Kujo Agent Skill, webops-backlink-and-mention-analysis, repository-backed agent guidance"
-seo_title: "Webops Backlink And Mention Analysis — Kujo Agent Skill"
+keywords: "WebOps Backlink And Mention Analysis, Kujo Agent Skill, webops-backlink-and-mention-analysis, repository-backed agent guidance"
+seo_title: "WebOps Backlink And Mention Analysis — Kujo Agent Skill"
 seo_description: "Use when analyzing new/lost backlinks, linked and unlinked mentions, and evidence-backed link concerns."
 ---
 

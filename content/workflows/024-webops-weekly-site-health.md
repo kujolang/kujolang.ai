@@ -1,5 +1,5 @@
 ---
-title: "Webops Weekly Site Health"
+title: "WebOps Weekly Site Health"
 custom_url: "webops-weekly-site-health"
 description: "Compare weekly crawl and rendered site health, links, performance, accessibility, schema, and metadata."
 featured_image: "/assets/images/ecosystem/workflow-webops-weekly-site-health.webp"
@@ -12,8 +12,8 @@ launch_story: "A local-first workflow kit with explicit inputs, outputs, evidenc
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
 last_updated: "2026-08-12"
-keywords: "Webops Weekly Site Health, Kujo workflow, webops-weekly-site-health, local-first agent workflow"
-seo_title: "Webops Weekly Site Health — Kujo Workflow"
+keywords: "WebOps Weekly Site Health, Kujo workflow, webops-weekly-site-health, local-first agent workflow"
+seo_title: "WebOps Weekly Site Health — Kujo Workflow"
 seo_description: "Compare weekly crawl and rendered site health, links, performance, accessibility, schema, and metadata."
 ---
 

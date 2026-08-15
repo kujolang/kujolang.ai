@@ -1,5 +1,5 @@
 ---
-title: "Webops Keyword Opportunity"
+title: "WebOps Keyword Opportunity"
 custom_url: "webops-keyword-opportunity"
 description: "Use when finding query opportunities while separating measurement, estimates, and public research."
 excerpt: "Use when finding query opportunities while separating measurement, estimates, and public research."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Keyword Opportunity, Kujo Agent Skill, webops-keyword-opportunity, repository-backed agent guidance"
-seo_title: "Webops Keyword Opportunity — Kujo Agent Skill"
+keywords: "WebOps Keyword Opportunity, Kujo Agent Skill, webops-keyword-opportunity, repository-backed agent guidance"
+seo_title: "WebOps Keyword Opportunity — Kujo Agent Skill"
 seo_description: "Use when finding query opportunities while separating measurement, estimates, and public research."
 ---
 

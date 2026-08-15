@@ -1,5 +1,5 @@
 ---
-title: "Webops Longitudinal Findings"
+title: "WebOps Longitudinal Findings"
 custom_url: "webops-longitudinal-findings"
 description: "Use when creating, comparing, or updating stable WebOps findings, recommendations, actions, outcomes, and recurring-run history."
 excerpt: "Use when creating, comparing, or updating stable WebOps findings, recommendations, actions, outcomes, and recurring-run history."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Longitudinal Findings, Kujo Agent Skill, webops-longitudinal-findings, repository-backed agent guidance"
-seo_title: "Webops Longitudinal Findings — Kujo Agent Skill"
+keywords: "WebOps Longitudinal Findings, Kujo Agent Skill, webops-longitudinal-findings, repository-backed agent guidance"
+seo_title: "WebOps Longitudinal Findings — Kujo Agent Skill"
 seo_description: "Use when creating, comparing, or updating stable WebOps findings, recommendations, actions, outcomes, and recurring-run history."
 ---
 

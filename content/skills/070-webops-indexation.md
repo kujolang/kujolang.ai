@@ -1,5 +1,5 @@
 ---
-title: "Webops Indexation"
+title: "WebOps Indexation"
 custom_url: "webops-indexation"
 description: "Use when auditing crawlability, local indexability, and confirmed provider index state."
 excerpt: "Use when auditing crawlability, local indexability, and confirmed provider index state."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Indexation, Kujo Agent Skill, webops-indexation, repository-backed agent guidance"
-seo_title: "Webops Indexation — Kujo Agent Skill"
+keywords: "WebOps Indexation, Kujo Agent Skill, webops-indexation, repository-backed agent guidance"
+seo_title: "WebOps Indexation — Kujo Agent Skill"
 seo_description: "Use when auditing crawlability, local indexability, and confirmed provider index state."
 ---
 

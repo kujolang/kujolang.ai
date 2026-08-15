@@ -1,5 +1,5 @@
 ---
-title: "Webops AI Visibility Benchmark"
+title: "WebOps AI Visibility Benchmark"
 custom_url: "webops-ai-visibility-benchmark"
 description: "Run a fixed longitudinal query suite across explicitly available AI/search surfaces without fabricated availability."
 featured_image: "/assets/images/ecosystem/workflow-webops-ai-visibility-benchmark.webp"
@@ -12,8 +12,8 @@ launch_story: "A local-first workflow kit with explicit inputs, outputs, evidenc
 scope_note: "Current readiness: experimental. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
 last_updated: "2026-08-12"
-keywords: "Webops AI Visibility Benchmark, Kujo workflow, webops-ai-visibility-benchmark, local-first agent workflow"
-seo_title: "Webops AI Visibility Benchmark — Kujo Workflow"
+keywords: "WebOps AI Visibility Benchmark, Kujo workflow, webops-ai-visibility-benchmark, local-first agent workflow"
+seo_title: "WebOps AI Visibility Benchmark — Kujo Workflow"
 seo_description: "Run a fixed longitudinal query suite across explicitly available AI/search surfaces without fabricated availability."
 ---
 

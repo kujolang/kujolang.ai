@@ -1,5 +1,5 @@
 ---
-title: "Webops Monthly SEO Review"
+title: "WebOps Monthly SEO Review"
 custom_url: "webops-monthly-seo-review"
 description: "Synthesize monthly specialist SEO evidence without duplicating specialist analysis."
 featured_image: "/assets/images/ecosystem/workflow-webops-monthly-seo-review.webp"
@@ -12,8 +12,8 @@ launch_story: "A local-first workflow kit with explicit inputs, outputs, evidenc
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
 last_updated: "2026-08-12"
-keywords: "Webops Monthly SEO Review, Kujo workflow, webops-monthly-seo-review, local-first agent workflow"
-seo_title: "Webops Monthly SEO Review — Kujo Workflow"
+keywords: "WebOps Monthly SEO Review, Kujo workflow, webops-monthly-seo-review, local-first agent workflow"
+seo_title: "WebOps Monthly SEO Review — Kujo Workflow"
 seo_description: "Synthesize monthly specialist SEO evidence without duplicating specialist analysis."
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Webops Finding To Fix"
+title: "WebOps Finding To Fix"
 custom_url: "webops-finding-to-fix"
 description: "Move one stable WebOps finding through Spec, proposal, approval, implementation boundary, Eval, Lens, SiteProbe, and receipt evidence."
 featured_image: "/assets/images/ecosystem/workflow-webops-finding-to-fix.webp"
@@ -12,8 +12,8 @@ launch_story: "A local-first workflow kit with explicit inputs, outputs, evidenc
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
 last_updated: "2026-08-12"
-keywords: "Webops Finding To Fix, Kujo workflow, webops-finding-to-fix, local-first agent workflow"
-seo_title: "Webops Finding To Fix — Kujo Workflow"
+keywords: "WebOps Finding To Fix, Kujo workflow, webops-finding-to-fix, local-first agent workflow"
+seo_title: "WebOps Finding To Fix — Kujo Workflow"
 seo_description: "Move one stable WebOps finding through Spec, proposal, approval, implementation boundary, Eval, Lens, SiteProbe, and receipt evidence."
 ---
 

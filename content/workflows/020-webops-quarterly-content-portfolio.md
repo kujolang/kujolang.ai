@@ -1,5 +1,5 @@
 ---
-title: "Webops Quarterly Content Portfolio"
+title: "WebOps Quarterly Content Portfolio"
 custom_url: "webops-quarterly-content-portfolio"
 description: "Classify the content portfolio from graph, search, analytics, decay, pruning, and information-architecture evidence."
 featured_image: "/assets/images/ecosystem/workflow-webops-quarterly-content-portfolio.webp"
@@ -12,8 +12,8 @@ launch_story: "A local-first workflow kit with explicit inputs, outputs, evidenc
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
 last_updated: "2026-08-12"
-keywords: "Webops Quarterly Content Portfolio, Kujo workflow, webops-quarterly-content-portfolio, local-first agent workflow"
-seo_title: "Webops Quarterly Content Portfolio — Kujo Workflow"
+keywords: "WebOps Quarterly Content Portfolio, Kujo workflow, webops-quarterly-content-portfolio, local-first agent workflow"
+seo_title: "WebOps Quarterly Content Portfolio — Kujo Workflow"
 seo_description: "Classify the content portfolio from graph, search, analytics, decay, pruning, and information-architecture evidence."
 ---
 

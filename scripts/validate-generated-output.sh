@@ -35,6 +35,10 @@ while IFS= read -r html_file; do
 		record_failure "FAIL empty-link: $html_file"
 	fi
 
+	if grep -Eq '\bWebops\b' "$html_file"; then
+		record_failure "FAIL WebOps casing: $html_file"
+	fi
+
 	if grep -Eqi '<img[[:space:]][^>]*>' "$html_file"; then
 		if grep -Eio '<img[[:space:]][^>]*>' "$html_file" | grep -Eiv ' alt="' >/dev/null; then
 			record_failure "FAIL image-alt: $html_file"

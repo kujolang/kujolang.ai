@@ -1,5 +1,5 @@
 ---
-title: "Webops Capability Preflight"
+title: "WebOps Capability Preflight"
 custom_url: "webops-capability-preflight"
 description: "Use when checking which WebOps website, repository, browser, search, analytics, performance, backlink, keyword, publishing, distribution, or submission capabilities are available."
 excerpt: "Use when checking which WebOps website, repository, browser, search, analytics, performance, backlink, keyword, publishing, distribution, or submission capabilities are available."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Capability Preflight, Kujo Agent Skill, webops-capability-preflight, repository-backed agent guidance"
-seo_title: "Webops Capability Preflight — Kujo Agent Skill"
+keywords: "WebOps Capability Preflight, Kujo Agent Skill, webops-capability-preflight, repository-backed agent guidance"
+seo_title: "WebOps Capability Preflight — Kujo Agent Skill"
 seo_description: "Use when checking which WebOps website, repository, browser, search, analytics, performance, backlink, keyword, publishing, distribution, or submission capabilities are available."
 ---
 

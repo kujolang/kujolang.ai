@@ -1,5 +1,5 @@
 ---
-title: "Webops Site Profile"
+title: "WebOps Site Profile"
 custom_url: "webops-site-profile"
 description: "Use when configuring or validating a portable WebOps site profile, repository binding, integration references, permission default, or site identity."
 excerpt: "Use when configuring or validating a portable WebOps site profile, repository binding, integration references, permission default, or site identity."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Site Profile, Kujo Agent Skill, webops-site-profile, repository-backed agent guidance"
-seo_title: "Webops Site Profile — Kujo Agent Skill"
+keywords: "WebOps Site Profile, Kujo Agent Skill, webops-site-profile, repository-backed agent guidance"
+seo_title: "WebOps Site Profile — Kujo Agent Skill"
 seo_description: "Use when configuring or validating a portable WebOps site profile, repository binding, integration references, permission default, or site identity."
 ---
 

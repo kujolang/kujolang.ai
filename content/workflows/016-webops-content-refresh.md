@@ -1,5 +1,5 @@
 ---
-title: "Webops Content Refresh"
+title: "WebOps Content Refresh"
 custom_url: "webops-content-refresh"
 description: "Turn decay and accuracy evidence into a Spec, approved update boundary, verification, and future measurement cue."
 featured_image: "/assets/images/ecosystem/workflow-webops-content-refresh.webp"
@@ -12,8 +12,8 @@ launch_story: "A local-first workflow kit with explicit inputs, outputs, evidenc
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
 last_updated: "2026-08-12"
-keywords: "Webops Content Refresh, Kujo workflow, webops-content-refresh, local-first agent workflow"
-seo_title: "Webops Content Refresh — Kujo Workflow"
+keywords: "WebOps Content Refresh, Kujo workflow, webops-content-refresh, local-first agent workflow"
+seo_title: "WebOps Content Refresh — Kujo Workflow"
 seo_description: "Turn decay and accuracy evidence into a Spec, approved update boundary, verification, and future measurement cue."
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Webops Reporting"
+title: "WebOps Reporting"
 custom_url: "webops-reporting"
 description: "Use when synthesizing validated specialist evidence into quiet WebOps reports."
 excerpt: "Use when synthesizing validated specialist evidence into quiet WebOps reports."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Reporting, Kujo Agent Skill, webops-reporting, repository-backed agent guidance"
-seo_title: "Webops Reporting — Kujo Agent Skill"
+keywords: "WebOps Reporting, Kujo Agent Skill, webops-reporting, repository-backed agent guidance"
+seo_title: "WebOps Reporting — Kujo Agent Skill"
 seo_description: "Use when synthesizing validated specialist evidence into quiet WebOps reports."
 ---
 

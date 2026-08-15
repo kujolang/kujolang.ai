@@ -1,5 +1,5 @@
 ---
-title: "Webops Search Performance"
+title: "WebOps Search Performance"
 custom_url: "webops-search-performance"
 description: "Use when analyzing longitudinal measured search performance."
 excerpt: "Use when analyzing longitudinal measured search performance."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Search Performance, Kujo Agent Skill, webops-search-performance, repository-backed agent guidance"
-seo_title: "Webops Search Performance — Kujo Agent Skill"
+keywords: "WebOps Search Performance, Kujo Agent Skill, webops-search-performance, repository-backed agent guidance"
+seo_title: "WebOps Search Performance — Kujo Agent Skill"
 seo_description: "Use when analyzing longitudinal measured search performance."
 ---
 

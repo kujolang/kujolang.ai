@@ -1,5 +1,5 @@
 ---
-title: "Webops Distribution"
+title: "WebOps Distribution"
 custom_url: "webops-distribution"
 description: "Use when creating source-grounded distribution assets and optionally publishing with ACT authority."
 excerpt: "Use when creating source-grounded distribution assets and optionally publishing with ACT authority."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Distribution, Kujo Agent Skill, webops-distribution, repository-backed agent guidance"
-seo_title: "Webops Distribution — Kujo Agent Skill"
+keywords: "WebOps Distribution, Kujo Agent Skill, webops-distribution, repository-backed agent guidance"
+seo_title: "WebOps Distribution — Kujo Agent Skill"
 seo_description: "Use when creating source-grounded distribution assets and optionally publishing with ACT authority."
 ---
 

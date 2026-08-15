@@ -1,5 +1,5 @@
 ---
-title: "Webops AI Search Visibility"
+title: "WebOps AI Search Visibility"
 custom_url: "webops-ai-search-visibility"
 description: "Use when running repeatable AI/search visibility benchmark suites."
 excerpt: "Use when running repeatable AI/search visibility benchmark suites."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops AI Search Visibility, Kujo Agent Skill, webops-ai-search-visibility, repository-backed agent guidance"
-seo_title: "Webops AI Search Visibility — Kujo Agent Skill"
+keywords: "WebOps AI Search Visibility, Kujo Agent Skill, webops-ai-search-visibility, repository-backed agent guidance"
+seo_title: "WebOps AI Search Visibility — Kujo Agent Skill"
 seo_description: "Use when running repeatable AI/search visibility benchmark suites."
 ---
 

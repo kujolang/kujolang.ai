@@ -15,6 +15,7 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 - Replaced the homepage hero's Quick Install action with a View video action while preserving Quick Install in the site navigation.
 - Updated the Workflows catalog from 26 workflows in kujo-workflows 0.2.0 to 34 workflows in kujo-workflows 0.3.0.
+- Standardized the WebOps name across Skills, Workflows, metadata, and social sharing cards.
 
 ## [1.2.0] - 2026-08-12
 

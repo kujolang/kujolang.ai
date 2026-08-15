@@ -1,5 +1,5 @@
 ---
-title: "Webops Link Health"
+title: "WebOps Link Health"
 custom_url: "webops-link-health"
 description: "Use when auditing broken, redirected, malformed, or unexpected links."
 excerpt: "Use when auditing broken, redirected, malformed, or unexpected links."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Link Health, Kujo Agent Skill, webops-link-health, repository-backed agent guidance"
-seo_title: "Webops Link Health — Kujo Agent Skill"
+keywords: "WebOps Link Health, Kujo Agent Skill, webops-link-health, repository-backed agent guidance"
+seo_title: "WebOps Link Health — Kujo Agent Skill"
 seo_description: "Use when auditing broken, redirected, malformed, or unexpected links."
 ---
 

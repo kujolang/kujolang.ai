@@ -1,5 +1,5 @@
 ---
-title: "Webops Content Portfolio"
+title: "WebOps Content Portfolio"
 custom_url: "webops-content-portfolio"
 description: "Use when assigning longitudinal content portfolio states."
 excerpt: "Use when assigning longitudinal content portfolio states."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Content Portfolio, Kujo Agent Skill, webops-content-portfolio, repository-backed agent guidance"
-seo_title: "Webops Content Portfolio — Kujo Agent Skill"
+keywords: "WebOps Content Portfolio, Kujo Agent Skill, webops-content-portfolio, repository-backed agent guidance"
+seo_title: "WebOps Content Portfolio — Kujo Agent Skill"
 seo_description: "Use when assigning longitudinal content portfolio states."
 ---
 

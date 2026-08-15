@@ -1,5 +1,5 @@
 ---
-title: "Webops Internal Linking"
+title: "WebOps Internal Linking"
 custom_url: "webops-internal-linking"
 description: "Use when analyzing, proposing, or explicitly applying contextual internal links."
 excerpt: "Use when analyzing, proposing, or explicitly applying contextual internal links."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Internal Linking, Kujo Agent Skill, webops-internal-linking, repository-backed agent guidance"
-seo_title: "Webops Internal Linking — Kujo Agent Skill"
+keywords: "WebOps Internal Linking, Kujo Agent Skill, webops-internal-linking, repository-backed agent guidance"
+seo_title: "WebOps Internal Linking — Kujo Agent Skill"
 seo_description: "Use when analyzing, proposing, or explicitly applying contextual internal links."
 ---
 

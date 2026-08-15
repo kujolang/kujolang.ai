@@ -1,5 +1,5 @@
 ---
-title: "Webops Accessibility Review"
+title: "WebOps Accessibility Review"
 custom_url: "webops-accessibility-review"
 description: "Use when running repeatable automated accessibility review with explicit manual gaps."
 excerpt: "Use when running repeatable automated accessibility review with explicit manual gaps."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Accessibility Review, Kujo Agent Skill, webops-accessibility-review, repository-backed agent guidance"
-seo_title: "Webops Accessibility Review — Kujo Agent Skill"
+keywords: "WebOps Accessibility Review, Kujo Agent Skill, webops-accessibility-review, repository-backed agent guidance"
+seo_title: "WebOps Accessibility Review — Kujo Agent Skill"
 seo_description: "Use when running repeatable automated accessibility review with explicit manual gaps."
 ---
 

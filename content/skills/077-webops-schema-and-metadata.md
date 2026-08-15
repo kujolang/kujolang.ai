@@ -1,5 +1,5 @@
 ---
-title: "Webops Schema And Metadata"
+title: "WebOps Schema And Metadata"
 custom_url: "webops-schema-and-metadata"
 description: "Use when auditing structured data and page/social metadata."
 excerpt: "Use when auditing structured data and page/social metadata."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Schema And Metadata, Kujo Agent Skill, webops-schema-and-metadata, repository-backed agent guidance"
-seo_title: "Webops Schema And Metadata — Kujo Agent Skill"
+keywords: "WebOps Schema And Metadata, Kujo Agent Skill, webops-schema-and-metadata, repository-backed agent guidance"
+seo_title: "WebOps Schema And Metadata — Kujo Agent Skill"
 seo_description: "Use when auditing structured data and page/social metadata."
 ---
 

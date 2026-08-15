@@ -1,5 +1,5 @@
 ---
-title: "Webops Search Submission"
+title: "WebOps Search Submission"
 custom_url: "webops-search-submission"
 description: "Use when preflighting or performing explicit ACT search submission through supported providers."
 excerpt: "Use when preflighting or performing explicit ACT search submission through supported providers."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Search Submission, Kujo Agent Skill, webops-search-submission, repository-backed agent guidance"
-seo_title: "Webops Search Submission — Kujo Agent Skill"
+keywords: "WebOps Search Submission, Kujo Agent Skill, webops-search-submission, repository-backed agent guidance"
+seo_title: "WebOps Search Submission — Kujo Agent Skill"
 seo_description: "Use when preflighting or performing explicit ACT search submission through supported providers."
 ---
 

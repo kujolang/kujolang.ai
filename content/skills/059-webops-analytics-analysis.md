@@ -1,5 +1,5 @@
 ---
-title: "Webops Analytics Analysis"
+title: "WebOps Analytics Analysis"
 custom_url: "webops-analytics-analysis"
 description: "Use when analyzing real website behavior from normalized analytics evidence."
 excerpt: "Use when analyzing real website behavior from normalized analytics evidence."
@@ -13,8 +13,8 @@ launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.2.0"
 last_updated: "2026-08-11"
-keywords: "Webops Analytics Analysis, Kujo Agent Skill, webops-analytics-analysis, repository-backed agent guidance"
-seo_title: "Webops Analytics Analysis — Kujo Agent Skill"
+keywords: "WebOps Analytics Analysis, Kujo Agent Skill, webops-analytics-analysis, repository-backed agent guidance"
+seo_title: "WebOps Analytics Analysis — Kujo Agent Skill"
 seo_description: "Use when analyzing real website behavior from normalized analytics evidence."
 ---
 

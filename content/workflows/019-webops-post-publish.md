@@ -1,5 +1,5 @@
 ---
-title: "Webops Post Publish"
+title: "WebOps Post Publish"
 custom_url: "webops-post-publish"
 description: "Verify newly published content, relationships, rendered quality, optional submission, distribution assets, and receipts."
 featured_image: "/assets/images/ecosystem/workflow-webops-post-publish.webp"
@@ -12,8 +12,8 @@ launch_story: "A local-first workflow kit with explicit inputs, outputs, evidenc
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
 last_updated: "2026-08-12"
-keywords: "Webops Post Publish, Kujo workflow, webops-post-publish, local-first agent workflow"
-seo_title: "Webops Post Publish — Kujo Workflow"
+keywords: "WebOps Post Publish, Kujo workflow, webops-post-publish, local-first agent workflow"
+seo_title: "WebOps Post Publish — Kujo Workflow"
 seo_description: "Verify newly published content, relationships, rendered quality, optional submission, distribution assets, and receipts."
 ---
 

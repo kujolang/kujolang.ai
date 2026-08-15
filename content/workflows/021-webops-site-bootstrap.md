@@ -1,5 +1,5 @@
 ---
-title: "Webops Site Bootstrap"
+title: "WebOps Site Bootstrap"
 custom_url: "webops-site-bootstrap"
 description: "Establish a credential-free initial website, repository, content-graph, browser, and reporting baseline."
 featured_image: "/assets/images/ecosystem/workflow-webops-site-bootstrap.webp"
@@ -12,8 +12,8 @@ launch_story: "A local-first workflow kit with explicit inputs, outputs, evidenc
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
 version: "0.2.0"
 last_updated: "2026-08-12"
-keywords: "Webops Site Bootstrap, Kujo workflow, webops-site-bootstrap, local-first agent workflow"
-seo_title: "Webops Site Bootstrap — Kujo Workflow"
+keywords: "WebOps Site Bootstrap, Kujo workflow, webops-site-bootstrap, local-first agent workflow"
+seo_title: "WebOps Site Bootstrap — Kujo Workflow"
 seo_description: "Establish a credential-free initial website, repository, content-graph, browser, and reporting baseline."
 ---
 
