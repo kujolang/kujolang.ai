@@ -324,7 +324,14 @@ reject_text "${output_dir}/assets/css/style.css" '@keyframes grid-drift'
 require_text "${output_dir}/assets/js/site.js" 'function enhanceCarousels()'
 require_text "${output_dir}/assets/css/style.css" 'grid-auto-columns: calc((100% - (2 * var(--sk-space-5))) / 3);'
 require_text "${output_dir}/assets/css/style.css" '.ecosystem-section-title-link:hover'
-reject_text "${output_dir}/assets/js/site.js" 'requestAnimationFrame(render)'
+require_text "${output_dir}/assets/css/style.css" '.hero-dither-canvas'
+require_text "${output_dir}/assets/js/site.js" 'function enhanceHeroDither()'
+require_text "${output_dir}/assets/js/site.js" ".home-hero__media, .page-hero__media, .tool-hero__media"
+require_text "${output_dir}/assets/js/site.js" 'Math.sin(frame * 0.36) * 7'
+require_text "${output_dir}/assets/js/site.js" 'animationFrame = window.requestAnimationFrame(render)'
+require_text "${output_dir}/assets/js/site.js" 'document.hidden'
+require_text "${output_dir}/assets/js/site.js" 'visibilityObserver.observe(media)'
+require_text "${output_dir}/assets/js/site.js" "canvas.dataset.ditherFrame = String(frame)"
 require_text "${output_dir}/assets/js/site.js" 'function enhanceMonoScramble()'
 require_text "${output_dir}/assets/js/site.js" "indexOf('departure mono')"
 require_text "${output_dir}/assets/js/site.js" "duration: 680 + Math.min(420, original.length * 12)"
