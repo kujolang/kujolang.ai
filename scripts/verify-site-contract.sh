@@ -300,6 +300,9 @@ for skill_page in "${output_dir}"/ecosystem/skills/*/index.html; do
 	require_text "$skill_page" 'width="1916" height="821"'
 done
 
+ecosystem_launch_page="${output_dir}/ecosystem/skills/kujo-ecosystem-launch/index.html"
+reject_text "$ecosystem_launch_page" '0.4.1'
+
 for workflow_page in "${output_dir}"/ecosystem/workflows/*/index.html; do
 	workflow_slug=$(basename "$(dirname "$workflow_page")")
 	require_social_meta "$workflow_page" "$workflow_slug"
@@ -369,4 +372,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 46 ecosystem projects, 3 section catalogs, 84 skills, 34 workflows, carousels, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 46 ecosystem projects, 3 section catalogs, 84 skills, 34 workflows, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
