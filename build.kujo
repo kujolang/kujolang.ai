@@ -1758,6 +1758,15 @@ func render_layout(layout_template, settings, route, page_title, meta_descriptio
 		style_href := prefix + style_file
 		rendered = replace(rendered, "href=\"" + style_href + "\"", "href=\"" + style_href + "?v=" + style_version + "\"")
 	}
+	site_script_source := path_join(path_join(settings["assets"], "js"), "site.js")
+	if path_exists(site_script_source) {
+		site_script_version := md5(read_file(site_script_source))
+		if len(site_script_version) > 12 {
+			site_script_version = substring(site_script_version, 0, 12)
+		}
+		site_script_src := prefix + "assets/js/site.js"
+		rendered = replace(rendered, "src=\"" + site_script_src + "\"", "src=\"" + site_script_src + "?v=" + site_script_version + "\"")
+	}
 	rendered = replace(rendered, native_favicon, favicon_html(prefix))
 	rendered = replace(rendered, "href=\"" + prefix + "index.html\"", "href=\"/\"")
 	rendered = replace(rendered, "<meta name=\"author\" content=\"Robert DeVore\">", "<meta name=\"author\" content=\"Kujo Team\">")

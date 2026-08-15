@@ -21,7 +21,7 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ### Fixed
 
-- Made the shared hero animation visibly glitch binary dither artwork with periodic horizontal tears, jitter, and scanline inversion instead of redrawing indistinguishable frames.
+- Made the shared hero animation visibly glitch binary dither artwork with periodic horizontal tears, jitter, and scanline inversion instead of redrawing indistinguishable frames, and cache-busted the runtime so returning visitors receive the fix.
 
 ## [1.2.0] - 2026-08-12
 
