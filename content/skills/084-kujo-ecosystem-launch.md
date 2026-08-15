@@ -8,10 +8,10 @@ social_image: "/assets/images/social/kujo-ecosystem-launch.jpg"
 section: "Agent Skill"
 order: "840"
 install_command: "mkdir -p ~/.codex/skills && cp -R skills/kujo-ecosystem-launch ~/.codex/skills/"
-github_url: "https://github.com/kujolang/kujo-skills/blob/v0.4.1/skills/kujo-ecosystem-launch/SKILL.md"
-launch_story: "A stage-gated coordinator released with Kujo Skills 0.4.1 for repeatable tool, workflow, skill-pack, and agent-team launches."
+github_url: "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ecosystem-launch/SKILL.md"
+launch_story: "A stage-gated coordinator for repeatable tool, workflow, skill-pack, and agent-team launches."
 scope_note: "Coordination guidance only. Release and deployment authority remain explicit, and specialist skills retain ownership of their domain checks."
-version: "0.4.1"
+version: ""
 last_updated: "2026-08-15"
 keywords: "Kujo Ecosystem Launch, Kujo Agent Skill, release-to-site workflow, GitHub release, Kujolang.ai publishing"
 seo_title: "Kujo Ecosystem Launch — Release-to-Site Agent Skill"
@@ -32,10 +32,9 @@ Kujo Ecosystem Launch coordinates the complete, evidence-backed path from a rele
 
 ## Release boundary
 
-This page reflects the 0.4.1 release published on 2026-08-15. The skill coordinates existing specialist workflows; it does not broaden permissions or replace repository-owned release, visual, audit, deployment, or verification contracts.
+The skill coordinates existing specialist workflows; it does not broaden permissions or replace repository-owned release, visual, audit, deployment, or verification contracts.
 
 ## Source
 
-- [Read the released Kujo Ecosystem Launch skill on GitHub](https://github.com/kujolang/kujo-skills/blob/v0.4.1/skills/kujo-ecosystem-launch/SKILL.md)
-- [Open the Kujo Skills 0.4.1 release](https://github.com/kujolang/kujo-skills/releases/tag/v0.4.1)
-- [Browse the released Kujo Skills Index](https://github.com/kujolang/kujo-skills/blob/v0.4.1/SKILLS_INDEX.md)
+- [Read the Kujo Ecosystem Launch skill on GitHub](https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ecosystem-launch/SKILL.md)
+- [Browse the Kujo Skills Index](https://github.com/kujolang/kujo-skills/blob/main/SKILLS_INDEX.md)

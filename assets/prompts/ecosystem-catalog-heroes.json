@@ -766,7 +766,7 @@
       "kind": "skill",
       "name": "Kujo Ecosystem Launch",
       "slug": "kujo-ecosystem-launch",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.4.1/skills/kujo-ecosystem-launch/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ecosystem-launch/SKILL.md",
       "object_description": "staged ecosystem launch control station with release gates, publishing press, and verification receipt trays",
       "hero_path": "assets/images/ecosystem/skill-kujo-ecosystem-launch.webp",
       "social_path": "assets/images/social/kujo-ecosystem-launch.jpg"
