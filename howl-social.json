@@ -714,7 +714,7 @@
     {
       "id": "skills",
       "title": "Skills",
-      "tagline": "83 repository-backed skills for Kujo and WebOps.",
+      "tagline": "84 published skill pages for Kujo and WebOps.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "collection",
@@ -1799,6 +1799,19 @@
       "label": "agent skill",
       "url": "kujolang.ai/ecosystem/skills/webops-web-performance/",
       "background_image": "assets/images/ecosystem/skill-webops-web-performance.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
+      "id": "kujo-ecosystem-launch",
+      "title": "Kujo Ecosystem Launch",
+      "tagline": "Coordinate verified Kujo releases, public-site synchronization, visual assets, search audits, deployment, and live checks.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "agent skill",
+      "url": "kujolang.ai/ecosystem/skills/kujo-ecosystem-launch/",
+      "background_image": "assets/images/ecosystem/skill-kujo-ecosystem-launch.webp",
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
       "show_border": false,
       "show_url": false
