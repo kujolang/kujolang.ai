@@ -5,6 +5,7 @@ set -Eeuo pipefail
 readonly KUJO_INSTALL_VERSION="0.1.0"
 readonly GITHUB_OWNER="${KUJO_GITHUB_OWNER:-kujolang}"
 readonly DEFAULT_REF="${KUJO_ECOSYSTEM_REF:-main}"
+readonly DEFAULT_RELEASE_VERSION="${KUJO_RELEASE_VERSION:-v1.0.1}"
 readonly DEFAULT_PREFIX="${KUJO_INSTALL_ROOT:-${HOME}/.kujo}"
 readonly DEFAULT_BIN_DIR="${KUJO_BIN_DIR:-${HOME}/.local/bin}"
 
@@ -49,7 +50,7 @@ Examples:
   bash install.sh --ref v1.0.1 --with-deps
 
 Environment overrides:
-  KUJO_ECOSYSTEM_REF, KUJO_INSTALL_ROOT, KUJO_BIN_DIR, KUJO_GITHUB_OWNER,
+  KUJO_ECOSYSTEM_REF, KUJO_RELEASE_VERSION, KUJO_INSTALL_ROOT, KUJO_BIN_DIR, KUJO_GITHUB_OWNER,
   KUJO_GITHUB_TOKEN (only needed while repositories are private)
 EOF
 }
@@ -186,7 +187,7 @@ verify_sha256() {
 }
 
 install_kujo_from_release() {
-	local version="$REF"
+	local version="$1"
 	local os
 	local arch
 	local target
@@ -257,16 +258,20 @@ install_kujo_from_source() {
 
 install_kujo() {
 	if [[ "$DRY_RUN" -eq 1 ]]; then
-		if [[ "$INSTALL_SOURCE" -eq 1 || "$REF" == "main" ]]; then
+		if [[ "$INSTALL_SOURCE" -eq 1 ]]; then
 			log "would build Kujo from source at ref $REF"
+		elif [[ "$REF" == "main" ]]; then
+			log "would download and verify Kujo release $DEFAULT_RELEASE_VERSION"
 		else
 			log "would download and verify Kujo release $REF"
 		fi
 		return 0
 	fi
-	if [[ "$INSTALL_SOURCE" -eq 1 || "$REF" == "main" ]]; then
+	if [[ "$INSTALL_SOURCE" -eq 1 ]]; then
 		install_kujo_from_source
-	elif ! install_kujo_from_release; then
+	elif [[ "$REF" == "main" ]]; then
+		install_kujo_from_release "$DEFAULT_RELEASE_VERSION"
+	elif ! install_kujo_from_release "$REF"; then
 		log "release artifact unavailable for $REF; falling back to a source build"
 		install_kujo_from_source
 	fi
