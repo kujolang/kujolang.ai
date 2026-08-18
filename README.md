@@ -37,6 +37,19 @@ The production build disables flat `.html` aliases. GitHub Pages can therefore
 redirect extensionless nested paths to the canonical trailing-slash routes
 instead of serving duplicate HTML at both URL forms.
 
+## Installer URL
+
+The one-line installer is published from the site root:
+
+```bash
+curl -fsSL https://kujolang.ai/install.sh | bash
+```
+
+[`public/install.sh`](public/install.sh) is the published copy of Kujo's
+canonical [`install.sh`](https://github.com/kujolang/kujo/blob/main/install.sh).
+When the installer changes, copy the reviewed canonical script here in the same
+change so the website artifact remains self-contained and deployable.
+
 ## Verification
 
 Run the production build and both site contracts before publishing:

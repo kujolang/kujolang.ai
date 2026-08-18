@@ -69,6 +69,12 @@ if [[ -f "$OUT_DIR/feed/index.xml" ]]; then
 	fi
 fi
 
+if [[ ! -s "$OUT_DIR/install.sh" ]]; then
+	record_failure "FAIL installer: missing or empty $OUT_DIR/install.sh"
+elif ! grep -Fq 'Kujo ecosystem installer' "$OUT_DIR/install.sh"; then
+	record_failure "FAIL installer: unexpected $OUT_DIR/install.sh content"
+fi
+
 echo "Checked HTML files: $html_count"
 
 if [[ "$failures" -gt 0 ]]; then

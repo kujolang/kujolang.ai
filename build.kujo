@@ -3190,6 +3190,16 @@ func copy_assets(settings) {
 	}
 }
 
+# Files in public/ are intentionally published at the site root (rather than
+# below /assets). Keep this surface small: it is for stable, non-HTML URLs such
+# as the installer that people fetch directly with curl.
+func copy_public_files(settings) {
+	public_dir := "public"
+	if path_exists(public_dir) && path_is_dir(public_dir) {
+		copy_tree(public_dir, settings["output"])
+	}
+}
+
 func build_site(settings) {
 	build_start := performance_now()
 	output_dir := settings["output"]
@@ -3217,6 +3227,7 @@ func build_site(settings) {
 		ensure_dir(output_dir)
 
 		copy_assets(settings)
+		copy_public_files(settings)
 		generate_fonts_css(settings)
 
 		# Copy the generated Kujo K icon suite to stable root URLs used by browsers,

@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/kujo-language-runtime.webp"
 section: "Primitives"
 tags: [Core, Language]
 order: 10
-install_command: "curl -fsSL https://raw.githubusercontent.com/kujolang/kujo/main/install.sh | bash -s -- --source"
+install_command: "curl -fsSL https://kujolang.ai/install.sh | bash -s -- --source"
 github_url: "https://github.com/kujolang/kujo"
 launch_story: "The ecosystem core: readable source, explicit capabilities, deterministic tooling contracts, and strong native APIs."
 scope_note: "Kujo is a general-purpose language, not a sandbox. Use capability-minimal execution for untrusted scripts."
