@@ -10,8 +10,8 @@ install_command: "git clone https://github.com/kujolang/kujo-workflows.git && cd
 github_url: "https://github.com/kujolang/kujo-workflows/tree/main/agency-verified-fix-loop"
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
-version: "0.2.0"
-last_updated: "2026-08-12"
+version: "0.3.0"
+last_updated: "2026-08-22"
 keywords: "Agency Verified Fix Loop, Kujo workflow, agency-verified-fix-loop, local-first agent workflow"
 seo_title: "Agency Verified Fix Loop — Kujo Workflow"
 seo_description: "Demonstrate a deterministic browser-visible fix with staged evidence and handoff."
@@ -46,7 +46,7 @@ timestamped run and disposable work tree; cleanup trap
 
 ## Release boundary
 
-Readiness is **production capable with limitations** in the 0.2.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
+Readiness is **production capable with limitations** in the 0.3.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
 
 ## Source
 

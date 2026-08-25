@@ -11,11 +11,13 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 - Dedicated binary Kujo dither hero art and Howl-rendered 1200×630 social cards for every Publishing House tool.
 - Eight installable Publishing House workflow pages covering Daily Desk through Post-Publication Learning, each with source-grounded boundaries, custom Kujo dither hero art, and a Howl-rendered social card.
 - Kujo Ecosystem Launch skill page with release-pinned source links, custom binary dither hero art, and a Howl-rendered social card.
+- Kujo Way Development skill page, installation guidance, custom binary dither hero art, and a Howl-rendered social card.
 
 ### Changed
 
 - Replaced the homepage hero's Quick Install action with a View video action while preserving Quick Install in the site navigation.
 - Updated the Workflows catalog from 26 workflows in kujo-workflows 0.2.0 to 34 workflows in kujo-workflows 0.3.0.
+- Synchronized the public catalog to 96 Kujo Skills and 37 Kujo Workflows from their released source repositories.
 - Standardized the WebOps name across Skills, Workflows, metadata, and social sharing cards.
 - Restored the animated Bayer-dither treatment across every image-backed homepage, page, catalog, skill, workflow, and ecosystem hero, with offscreen and background-tab pausing.
 

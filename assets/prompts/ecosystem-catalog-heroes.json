@@ -44,6 +44,15 @@
     },
     {
       "kind": "skill",
+      "name": "Kujo AssetWorks",
+      "slug": "kujo-assetworks-workflows",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-assetworks-workflows/SKILL.md",
+      "object_description": "assetworks media production bench with render adapters checksum manifest and accessibility artifact trays",
+      "hero_path": "assets/images/ecosystem/skill-kujo-assetworks-workflows.webp",
+      "social_path": "assets/images/social/kujo-assetworks-workflows.jpg"
+    },
+    {
+      "kind": "skill",
       "name": "Kujo Backlog Normalizer",
       "slug": "kujo-backlog-normalizer",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-backlog-normalizer/SKILL.md",
@@ -59,6 +68,15 @@
       "object_description": "benchmarks capsule repository guidance desk with source manuals and verification instruments",
       "hero_path": "assets/images/ecosystem/skill-kujo-benchmarks-capsule-workflows.webp",
       "social_path": "assets/images/social/kujo-benchmarks-capsule-workflows.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "Kujo BluePencil",
+      "slug": "kujo-bluepencil-workflows",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-bluepencil-workflows/SKILL.md",
+      "object_description": "bluepencil editorial review desk with eight calibration gauges and blocker verdict stamps",
+      "hero_path": "assets/images/ecosystem/skill-kujo-bluepencil-workflows.webp",
+      "social_path": "assets/images/social/kujo-bluepencil-workflows.jpg"
     },
     {
       "kind": "skill",
@@ -188,6 +206,24 @@
     },
     {
       "kind": "skill",
+      "name": "Kujo Dossier",
+      "slug": "kujo-dossier-workflows",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-dossier-workflows/SKILL.md",
+      "object_description": "dossier evidence ledger desk linking claim cards to captured source fragments",
+      "hero_path": "assets/images/ecosystem/skill-kujo-dossier-workflows.webp",
+      "social_path": "assets/images/social/kujo-dossier-workflows.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "Kujo Ecosystem Launch",
+      "slug": "kujo-ecosystem-launch",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ecosystem-launch/SKILL.md",
+      "object_description": "ecosystem launch repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skill-kujo-ecosystem-launch.webp",
+      "social_path": "assets/images/social/kujo-ecosystem-launch.jpg"
+    },
+    {
+      "kind": "skill",
       "name": "Kujo Enterprise Automation",
       "slug": "kujo-enterprise-automation",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-enterprise-automation/SKILL.md",
@@ -212,6 +248,15 @@
       "object_description": "fence architectural boundary model with guarded dependency crossings",
       "hero_path": "assets/images/ecosystem/skill-kujo-fence-workflows.webp",
       "social_path": "assets/images/social/kujo-fence-workflows.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "Kujo GalleyPack",
+      "slug": "kujo-galleypack-workflows",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-galleypack-workflows/SKILL.md",
+      "object_description": "galleypack immutable package press binding artifacts evidence records and review seals",
+      "hero_path": "assets/images/ecosystem/skill-kujo-galleypack-workflows.webp",
+      "social_path": "assets/images/social/kujo-galleypack-workflows.jpg"
     },
     {
       "kind": "skill",
@@ -305,12 +350,39 @@
     },
     {
       "kind": "skill",
+      "name": "Kujo PressWire",
+      "slug": "kujo-presswire-workflows",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-presswire-workflows/SKILL.md",
+      "object_description": "presswire guarded publication switchboard with approval seal and destination adapters",
+      "hero_path": "assets/images/ecosystem/skill-kujo-presswire-workflows.webp",
+      "social_path": "assets/images/social/kujo-presswire-workflows.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "Kujo Publishing House",
+      "slug": "kujo-publishing-house-workflows",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-publishing-house-workflows/SKILL.md",
+      "object_description": "publishing house editorial lifecycle floor with separated authority desks and receipt handoff trays",
+      "hero_path": "assets/images/ecosystem/skill-kujo-publishing-house-workflows.webp",
+      "social_path": "assets/images/social/kujo-publishing-house-workflows.jpg"
+    },
+    {
+      "kind": "skill",
       "name": "Kujo RAG",
       "slug": "kujo-rag-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-rag-workflows/SKILL.md",
       "object_description": "rag knowledge retrieval archive with citation drawers and namespace gates",
       "hero_path": "assets/images/ecosystem/skill-kujo-rag-workflows.webp",
       "social_path": "assets/images/social/kujo-rag-workflows.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "Kujo ReaderSignal",
+      "slug": "kujo-readersignal-workflows",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-readersignal-workflows/SKILL.md",
+      "object_description": "readersignal privacy-bounded audience measurement console with uncertainty gauges and feedback cards",
+      "hero_path": "assets/images/ecosystem/skill-kujo-readersignal-workflows.webp",
+      "social_path": "assets/images/social/kujo-readersignal-workflows.jpg"
     },
     {
       "kind": "skill",
@@ -476,6 +548,15 @@
     },
     {
       "kind": "skill",
+      "name": "Kujo StoryDesk",
+      "slug": "kujo-storydesk-workflows",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-storydesk-workflows/SKILL.md",
+      "object_description": "storydesk editorial planning desk with campaign queues assignment cards and handoff lanes",
+      "hero_path": "assets/images/ecosystem/skill-kujo-storydesk-workflows.webp",
+      "social_path": "assets/images/social/kujo-storydesk-workflows.jpg"
+    },
+    {
+      "kind": "skill",
       "name": "Kujo Testing And Release Gates",
       "slug": "kujo-testing-release-gates",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-testing-release-gates/SKILL.md",
@@ -503,6 +584,15 @@
     },
     {
       "kind": "skill",
+      "name": "Kujo VersionSeal",
+      "slug": "kujo-versionseal-workflows",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-versionseal-workflows/SKILL.md",
+      "object_description": "versionseal human approval station sealing an exact checksum to a destination action card",
+      "hero_path": "assets/images/ecosystem/skill-kujo-versionseal-workflows.webp",
+      "social_path": "assets/images/social/kujo-versionseal-workflows.jpg"
+    },
+    {
+      "kind": "skill",
       "name": "Kujo Watchdog",
       "slug": "kujo-watchdog-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-watchdog-workflows/SKILL.md",
@@ -512,12 +602,39 @@
     },
     {
       "kind": "skill",
+      "name": "Kujo Way Development",
+      "slug": "kujo-way-development",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-way-development/SKILL.md",
+      "object_description": "way development engineering workbench with routing map contract cards and verification gates",
+      "hero_path": "assets/images/ecosystem/skill-kujo-way-development.webp",
+      "social_path": "assets/images/social/kujo-way-development.jpg"
+    },
+    {
+      "kind": "skill",
       "name": "Kujo Workcell",
       "slug": "kujo-workcell-workflows",
       "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-workcell-workflows/SKILL.md",
       "object_description": "workcell sealed execution workcell with operator console and artifact bay",
       "hero_path": "assets/images/ecosystem/skill-kujo-workcell-workflows.webp",
       "social_path": "assets/images/social/kujo-workcell-workflows.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "Publishing House Profile Setup",
+      "slug": "publishing-house-profile-setup",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/publishing-house-profile-setup/SKILL.md",
+      "object_description": "publishing house profile cabinet holding house brand audience and permission-boundary cards",
+      "hero_path": "assets/images/ecosystem/skill-publishing-house-profile-setup.webp",
+      "social_path": "assets/images/social/publishing-house-profile-setup.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "Publishing House Quality Calibration",
+      "slug": "publishing-house-quality-calibration",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/publishing-house-quality-calibration/SKILL.md",
+      "object_description": "publishing house quality blind editorial comparison bench with eight scoring gauges and a blocker seal",
+      "hero_path": "assets/images/ecosystem/skill-publishing-house-quality-calibration.webp",
+      "social_path": "assets/images/social/publishing-house-quality-calibration.jpg"
     },
     {
       "kind": "skill",
@@ -763,15 +880,6 @@
       "social_path": "assets/images/social/webops-web-performance.jpg"
     },
     {
-      "kind": "skill",
-      "name": "Kujo Ecosystem Launch",
-      "slug": "kujo-ecosystem-launch",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ecosystem-launch/SKILL.md",
-      "object_description": "staged ecosystem launch control station with release gates, publishing press, and verification receipt trays",
-      "hero_path": "assets/images/ecosystem/skill-kujo-ecosystem-launch.webp",
-      "social_path": "assets/images/social/kujo-ecosystem-launch.jpg"
-    },
-    {
       "kind": "workflows-index",
       "name": "Workflows",
       "slug": "workflows",
@@ -827,6 +935,14 @@
     },
     {
       "kind": "workflow",
+      "name": "Codebase Cleanup",
+      "slug": "codebase-cleanup",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/codebase-cleanup",
+      "hero_path": "assets/images/ecosystem/workflow-codebase-cleanup.webp",
+      "social_path": "assets/images/social/codebase-cleanup.jpg"
+    },
+    {
+      "kind": "workflow",
       "name": "Docsgen Repo Contract Runner",
       "slug": "docsgen-repo-contract-runner",
       "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/docsgen-repo-contract-runner",
@@ -878,6 +994,97 @@
       "object_description": "constrained agent gateway checkpoint with tool manifests and safety inspection",
       "hero_path": "assets/images/ecosystem/workflow-mcp-agent-gateway-review.webp",
       "social_path": "assets/images/social/mcp-agent-gateway-review.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "Publishing House Adaptation",
+      "slug": "publishing-house-adaptation",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-adaptation",
+      "object_description": "versioned adaptation drafting bench with source-lineage spool and format trays",
+      "hero_path": "assets/images/ecosystem/workflow-publishing-house-adaptation.webp",
+      "social_path": "assets/images/social/publishing-house-adaptation.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "Publishing House Approval Publication",
+      "slug": "publishing-house-approval-publication",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-approval-publication",
+      "hero_path": "assets/images/ecosystem/workflow-publishing-house-approval-publication.webp",
+      "social_path": "assets/images/social/publishing-house-approval-publication.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "Publishing House Asset Production",
+      "slug": "publishing-house-asset-production",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-asset-production",
+      "hero_path": "assets/images/ecosystem/workflow-publishing-house-asset-production.webp",
+      "social_path": "assets/images/social/publishing-house-asset-production.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "Publishing House Commissioning",
+      "slug": "publishing-house-commissioning",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-commissioning",
+      "hero_path": "assets/images/ecosystem/workflow-publishing-house-commissioning.webp",
+      "social_path": "assets/images/social/publishing-house-commissioning.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "Publishing House Daily Desk",
+      "slug": "publishing-house-daily-desk",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-daily-desk",
+      "hero_path": "assets/images/ecosystem/workflow-publishing-house-daily-desk.webp",
+      "social_path": "assets/images/social/publishing-house-daily-desk.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "Publishing House Editorial Review",
+      "slug": "publishing-house-editorial-review",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-editorial-review",
+      "hero_path": "assets/images/ecosystem/workflow-publishing-house-editorial-review.webp",
+      "social_path": "assets/images/social/publishing-house-editorial-review.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "Publishing House Evidence Dossier",
+      "slug": "publishing-house-evidence-dossier",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-evidence-dossier",
+      "hero_path": "assets/images/ecosystem/workflow-publishing-house-evidence-dossier.webp",
+      "social_path": "assets/images/social/publishing-house-evidence-dossier.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "Publishing House Format Production",
+      "slug": "publishing-house-format-production",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-format-production",
+      "object_description": "multi-format production press feeding newsletter social case-study and media trays",
+      "hero_path": "assets/images/ecosystem/workflow-publishing-house-format-production.webp",
+      "social_path": "assets/images/social/publishing-house-format-production.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "Publishing House Governance",
+      "slug": "publishing-house-governance",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-governance",
+      "object_description": "portfolio decision table with mandate folder priority tokens and accountable handoff trays",
+      "hero_path": "assets/images/ecosystem/workflow-publishing-house-governance.webp",
+      "social_path": "assets/images/social/publishing-house-governance.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "Publishing House Post Publication",
+      "slug": "publishing-house-post-publication",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-post-publication",
+      "hero_path": "assets/images/ecosystem/workflow-publishing-house-post-publication.webp",
+      "social_path": "assets/images/social/publishing-house-post-publication.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "Publishing House Primary Piece",
+      "slug": "publishing-house-primary-piece",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-primary-piece",
+      "hero_path": "assets/images/ecosystem/workflow-publishing-house-primary-piece.webp",
+      "social_path": "assets/images/social/publishing-house-primary-piece.jpg"
     },
     {
       "kind": "workflow",
@@ -995,14 +1202,6 @@
       "object_description": "weekly website health inspection rig with crawl performance and accessibility gauges",
       "hero_path": "assets/images/ecosystem/workflow-webops-weekly-site-health.webp",
       "social_path": "assets/images/social/webops-weekly-site-health.jpg"
-    },
-    {
-      "kind": "workflow",
-      "name": "Codebase Cleanup",
-      "slug": "codebase-cleanup",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/codebase-cleanup",
-      "hero_path": "assets/images/ecosystem/workflow-codebase-cleanup.webp",
-      "social_path": "assets/images/social/codebase-cleanup.jpg"
     },
     {
       "kind": "workflow",

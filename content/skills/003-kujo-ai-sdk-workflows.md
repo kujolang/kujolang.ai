@@ -9,10 +9,10 @@ section: "Agent Skill"
 order: "30"
 install_command: "mkdir -p ~/.codex/skills && cp -R skills/kujo-ai-sdk-workflows ~/.codex/skills/"
 github_url: "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ai-sdk-workflows/SKILL.md"
-launch_story: "One of 83 focused, repository-backed skills in the Kujo Skills 0.2.0 technical preview."
+launch_story: "One of 96 focused, repository-backed skills in the Kujo Skills 0.4.1 technical preview."
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
-version: "0.2.0"
-last_updated: "2026-08-11"
+version: "0.4.1"
+last_updated: "2026-08-25"
 keywords: "Kujo AI SDK, Kujo Agent Skill, kujo-ai-sdk-workflows, repository-backed agent guidance"
 seo_title: "Kujo AI SDK — Kujo Agent Skill"
 seo_description: "Use this skill when building, testing, integrating, or maintaining Kujo AI SDK provider primitives: OpenAI-compatible chat/embeddings contracts, provider presets, fixture mode, streaming callbacks, retries/backoff, redaction, live provider smoke tests, telemetry bridge examples, benchmark quality gates, release gates, or `ai-sdk` source/docs changes."
@@ -32,7 +32,7 @@ Use this skill when building, testing, integrating, or maintaining Kujo AI SDK p
 
 ## Release boundary
 
-This page reflects the 0.2.0 technical preview on 2026-08-11. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
+This page reflects the 0.4.1 technical preview on 2026-08-25. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
 
 ## Source
 

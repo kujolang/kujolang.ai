@@ -10,8 +10,8 @@ install_command: "git clone https://github.com/kujolang/kujo-workflows.git && cd
 github_url: "https://github.com/kujolang/kujo-workflows/tree/main/agency-runner"
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: experimental. Review the workflow README before live-provider or host-affecting use."
-version: "0.2.0"
-last_updated: "2026-08-12"
+version: "0.3.0"
+last_updated: "2026-08-22"
 keywords: "Agency Runner, Kujo workflow, agency-runner, local-first agent workflow"
 seo_title: "Agency Runner — Kujo Workflow"
 seo_description: "Turn an agency task and site profile into a resumable local proof packet."
@@ -48,7 +48,7 @@ run-state.json phase tracking; continue resumes pending phases
 
 ## Release boundary
 
-Readiness is **experimental** in the 0.2.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
+Readiness is **experimental** in the 0.3.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
 
 ## Source
 

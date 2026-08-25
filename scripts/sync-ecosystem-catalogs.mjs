@@ -31,6 +31,7 @@ function titleFromMarkdown(source, fallback) {
   const title = source.match(/^#\s+(.+)$/m)?.[1]?.trim() || fallback;
   return title
     .replace(/\bContentgraph\b/g, 'ContentGraph')
+    .replace(/\bWebops\b/g, 'WebOps')
     .replace(/\bSite Kit\b/g, 'SiteKit')
     .replace(/\bSitekit\b/g, 'SiteKit');
 }
@@ -54,6 +55,18 @@ function skillCatalogExcerpt(description) {
 }
 
 const objectRules = [
+  [/assetworks/, 'media production bench with render adapters checksum manifest and accessibility artifact trays'],
+  [/bluepencil/, 'editorial review desk with eight calibration gauges and blocker verdict stamps'],
+  [/dossier/, 'evidence ledger desk linking claim cards to captured source fragments'],
+  [/galleypack/, 'immutable package press binding artifacts evidence records and review seals'],
+  [/presswire/, 'guarded publication switchboard with approval seal and destination adapters'],
+  [/publishing-house-workflows/, 'editorial lifecycle floor with separated authority desks and receipt handoff trays'],
+  [/readersignal/, 'privacy-bounded audience measurement console with uncertainty gauges and feedback cards'],
+  [/storydesk/, 'editorial planning desk with campaign queues assignment cards and handoff lanes'],
+  [/versionseal/, 'human approval station sealing an exact checksum to a destination action card'],
+  [/way-development/, 'engineering workbench with routing map contract cards and verification gates'],
+  [/publishing-house-profile/, 'cabinet holding house brand audience and permission-boundary cards'],
+  [/publishing-house-quality/, 'blind editorial comparison bench with eight scoring gauges and a blocker seal'],
   [/accessibility/, 'tactile inspection desk with contrast gauges and navigation controls'],
   [/ai-search|visibility/, 'signal observatory with citation lenses and query beacons'],
   [/analytics|search-performance/, 'measurement console with trend reels and evidence meters'],
@@ -138,6 +151,9 @@ const workflowObjects = {
   'howl-content-factory': 'content print factory rendering cards galleries and caption sheets',
   'loop-engineering': 'bounded engineering loop console with context evaluation and stop gates',
   'mcp-agent-gateway-review': 'constrained agent gateway checkpoint with tool manifests and safety inspection',
+  'publishing-house-adaptation': 'versioned adaptation drafting bench with source-lineage spool and format trays',
+  'publishing-house-format-production': 'multi-format production press feeding newsletter social case-study and media trays',
+  'publishing-house-governance': 'portfolio decision table with mandate folder priority tokens and accountable handoff trays',
   'rag-enterprise-knowledge-gate': 'enterprise knowledge archive with namespace gate and citation drawers',
   'relay-lifecycle-handoff': 'mission relay station with pause resume export and delivery receipts',
   'tribunal-decision-gate': 'adversarial decision chamber with review evidence and verified receipt seal',
@@ -241,7 +257,10 @@ generatedCards.push({
 workflows.forEach((workflow, index) => {
   const slug = workflow.id;
   const sourceUrl = `https://github.com/kujolang/kujo-workflows/tree/main/${workflow.path}`;
-  const title = slug.split('-').map((part) => /^(ai|sdk|mcp|rag|seo)$/.test(part) ? part.toUpperCase() : part[0].toUpperCase() + part.slice(1)).join(' ');
+  const title = slug.split('-').map((part) => {
+    if (part === 'webops') return 'WebOps';
+    return /^(ai|sdk|mcp|rag|seo)$/.test(part) ? part.toUpperCase() : part[0].toUpperCase() + part.slice(1);
+  }).join(' ');
   const readiness = workflow.production_readiness.replace(/-/g, ' ');
   const list = (items) => items.map((item) => `- ${item}`).join('\n');
   const body = `## Outcome\n\n${workflow.purpose}\n\n## Inputs\n\n${list(workflow.inputs)}\n\n## Evidence and outputs\n\n${list(workflow.outputs)}\n\nThe workflow's evidence contract is: ${workflow.evidence}.\n\n## Approval boundaries\n\n${list(workflow.approval_boundaries)}\n\n## State and recovery\n\n${workflow.state_and_recovery}\n\n## Release boundary\n\nReadiness is **${readiness}** in the ${workflowVersion} local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.\n\n## Source\n\n- [Open the complete ${slug} workflow kit on GitHub](${sourceUrl})\n- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/main/docs/audit/workflow-catalog.json)`;
