@@ -1022,13 +1022,9 @@
   }
 
   .providers-page { padding-block: calc(var(--site-header-block) + var(--sk-space-16)) var(--site-section-gap); }
-  .providers-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, .55fr); gap: var(--sk-space-12); align-items: end; padding-block: var(--sk-space-12) var(--sk-space-16); border-block-end: var(--sk-border-1) solid var(--sk-border-default); }
+  .providers-hero { padding-block: var(--sk-space-12) var(--sk-space-16); border-block-end: var(--sk-border-1) solid var(--sk-border-default); }
   .providers-hero h1 { max-inline-size: 10ch; font-size: clamp(3.75rem, 10vw, 8rem); line-height: .88; letter-spacing: -.07em; }
   .providers-hero__lead { max-inline-size: 42rem; color: var(--sk-text-secondary); font-family: var(--sk-font-mono); font-size: var(--sk-type-size-lg); line-height: 1.55; }
-  .providers-hero__signal { min-block-size: 14rem; display: grid; align-content: space-between; border: var(--sk-border-1) solid var(--sk-border-default); padding: var(--sk-space-5); font-family: var(--sk-font-mono); }
-  .providers-hero__signal span { font-size: var(--sk-type-size-sm); letter-spacing: .12em; }
-  .providers-hero__signal i { display: block; inline-size: 5rem; block-size: 5rem; border-radius: 50%; background: var(--sk-text-primary); box-shadow: 2rem 0 0 var(--sk-border-default); }
-  .providers-hero__signal strong { justify-self: end; font-size: var(--sk-type-size-xl); line-height: 1; text-align: end; }
   .providers-directory { padding-block-start: var(--sk-space-16); }
   .providers-directory__intro { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sk-space-12); align-items: end; margin-block-end: var(--sk-space-8); }
   .providers-directory__intro h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.5rem); }
@@ -1323,7 +1319,6 @@
     .providers-page { padding-block-start: calc(var(--site-header-block) + var(--sk-space-8)); }
     .providers-hero, .providers-directory__intro { grid-template-columns: 1fr; gap: var(--sk-space-8); }
     .providers-hero h1 { font-size: clamp(3.5rem, 18vw, 6rem); }
-    .providers-hero__signal { min-block-size: 10rem; }
     .providers-toolbar { align-items: stretch; flex-direction: column; }
     .providers-search { inline-size: 100%; }
     .providers-filters { justify-content: start; }

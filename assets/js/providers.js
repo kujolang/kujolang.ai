@@ -28,6 +28,19 @@
     });
   }
 
+  function setCopiedState(button, status) {
+    var copyLabel = button.dataset.copyLabel || 'Copy starter code';
+    var copiedLabel = button.dataset.copiedLabel || 'Starter code copied';
+    button.dataset.copied = 'true';
+    button.setAttribute('aria-label', copiedLabel);
+    if (status) status.textContent = 'Copied to clipboard.';
+    window.setTimeout(function () {
+      button.dataset.copied = 'false';
+      button.setAttribute('aria-label', copyLabel);
+      if (status) status.textContent = '';
+    }, 1800);
+  }
+
   function render() {
     var query = (search.value || '').toLowerCase().trim();
     var visible = records.filter(function (provider) {
@@ -85,6 +98,7 @@
   });
   modal.querySelector('[data-provider-copy]').addEventListener('click', function (event) {
     var button = event.currentTarget;
-    copyText(modal.querySelector('[data-provider-code]').textContent).then(function () { button.textContent = button.dataset.copiedLabel; modal.querySelector('[data-provider-copy-status]').textContent = 'Copied to clipboard.'; window.setTimeout(function () { button.textContent = button.dataset.copyLabel; modal.querySelector('[data-provider-copy-status]').textContent = ''; }, 1800); }).catch(function () { modal.querySelector('[data-provider-copy-status]').textContent = 'Copy failed. Select the code to copy it.'; });
+    var status = modal.querySelector('[data-provider-copy-status]');
+    copyText(modal.querySelector('[data-provider-code]').textContent).then(function () { setCopiedState(button, status); }).catch(function () { status.textContent = 'Copy failed. Select the code to copy it.'; });
   });
 }());
