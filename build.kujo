@@ -758,6 +758,17 @@ func html_escape(value) {
 	return escape_xml(value)
 }
 
+func normalize_lang(value) {
+	lang := to_lower(trim(to_string(value)))
+	lang = replace(lang, "_", "-")
+	lang = regex_replace(lang, "[^a-z0-9-]", "")
+	lang = regex_replace(lang, "^-+|-+$", "")
+	if len(lang) == 0 {
+		return "en"
+	}
+	return lang
+}
+
 func route_to_path(route) {
 	clean := normalize_route(route)
 	if len(clean) == 0 {
@@ -3647,6 +3658,11 @@ func build_site(settings) {
 
 		copy_assets(settings)
 		copy_public_files(settings)
+		if settings["webmcp"] {
+			webmcp_assets_dir := path_join(output_dir, "assets/js")
+			ensure_dir(webmcp_assets_dir)
+			write_file(path_join(webmcp_assets_dir, "kujo-webmcp.js"), webmcp_runtime_source())
+		}
 		generate_fonts_css(settings)
 
 		# Copy the generated Kujo K icon suite to stable root URLs used by browsers,
