@@ -1,0 +1,25 @@
+<main class="providers-page" id="main-content">
+	<header class="providers-hero section-shell">
+		<div class="providers-hero__copy"><p class="eyebrow">25 / Native integrations</p><h1>{{title}}</h1><p class="providers-hero__lead">One consistent way to work with the providers you choose. Keep native capabilities visible, add a normalized AI SDK path where it fits, and move between local, hosted, cloud, search, and media workloads without rewriting your application.</p></div>
+		<div class="providers-hero__signal" aria-hidden="true"><span>KUJO</span><i></i><strong>PROVIDER<br>DIRECTORY</strong></div>
+	</header>
+	<section class="providers-directory section-shell" aria-labelledby="provider-directory-title">
+		<div class="providers-directory__intro"><div><p class="eyebrow">Start here</p><h2 id="provider-directory-title">Find your provider</h2></div><p>Every card links to the official Kujo package and provider documentation. Open a card to copy a small, truthful first request.</p></div>
+		<div class="providers-toolbar"><label class="providers-search"><span class="visually-hidden">Search providers</span><input type="search" data-provider-search placeholder="Search by name, package, or protocol" autocomplete="off"><span aria-hidden="true">⌕</span></label><div class="providers-filters" role="group" aria-label="Filter providers"><button class="provider-filter is-active" type="button" data-provider-filter="all" aria-pressed="true">All <span>25</span></button><button class="provider-filter" type="button" data-provider-filter="Local" aria-pressed="false">Local</button><button class="provider-filter" type="button" data-provider-filter="Hosted" aria-pressed="false">Hosted</button><button class="provider-filter" type="button" data-provider-filter="Cloud" aria-pressed="false">Cloud</button><button class="provider-filter" type="button" data-provider-filter="Media" aria-pressed="false">Media</button></div></div>
+		<p class="providers-count" role="status" aria-live="polite" data-provider-count>25 providers</p>
+		<div class="provider-grid" data-provider-grid></div>
+		<noscript><p class="providers-noscript">JavaScript is required to search the provider directory and open starter details. The <a href="https://github.com/kujolang">Kujo GitHub organization</a> lists the official packages.</p></noscript>
+	</section>
+	<div class="provider-modal" data-provider-modal hidden>
+		<div class="provider-modal__backdrop" data-provider-close></div>
+		<section class="provider-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="provider-modal-title" aria-describedby="provider-modal-description" tabindex="-1">
+			<header class="provider-modal__header"><div class="provider-modal__identity"><div class="provider-logo provider-logo--modal"><img data-provider-logo alt=""></div><div><p class="eyebrow" data-provider-category></p><h2 id="provider-modal-title" data-provider-title></h2></div></div><button class="icon-button" type="button" data-provider-close aria-label="Close provider details"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></header>
+			<p id="provider-modal-description" class="provider-modal__description" data-provider-description></p>
+			<div class="provider-modal__meta"><span data-provider-protocol></span><span>Kujo package: <code data-provider-package></code></span></div>
+			<div class="provider-modal__code"><div class="provider-modal__code-head"><span>30-second start</span><span class="copy-status" role="status" aria-live="polite" data-provider-copy-status></span><button class="sk-button" type="button" data-provider-copy data-copy-label="Copy starter" data-copied-label="Starter copied">Copy starter</button></div><pre><code data-provider-code></code></pre></div>
+			<div class="provider-modal__install"><p class="eyebrow">Install</p><code data-provider-install></code></div>
+			<footer class="provider-modal__actions"><a class="sk-button" data-provider-repo target="_blank" rel="noopener">Package repository<span class="visually-hidden"> (opens in a new tab)</span></a><a class="sk-button" data-variant="secondary" data-provider-docs target="_blank" rel="noopener">Provider docs<span class="visually-hidden"> (opens in a new tab)</span></a></footer>
+		</section>
+	</div>
+</main>
+<script src="/assets/js/providers.js" defer></script>
