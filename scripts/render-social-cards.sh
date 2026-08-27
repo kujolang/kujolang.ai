@@ -24,6 +24,7 @@ mkdir -p "$output_dir"
 
 if command -v node >/dev/null 2>&1 && [[ -d "${repo_root}/node_modules/sharp" ]]; then
 	node "${repo_root}/scripts/rasterize-social-cards.mjs" "$render_dir" "$output_dir" "${repo_root}/howl-social.json"
+	node "${repo_root}/scripts/render-provider-social-promo.mjs"
 else
 	printf 'Node.js and project dependencies are required to rasterize Howl SVG cards. Run npm install first.\n' >&2
 	exit 1

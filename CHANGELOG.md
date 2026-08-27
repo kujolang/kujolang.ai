@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Added the Kujo Providers directory with 25 native provider integrations, local provider marks, searchable cards, accessible detail dialogs, and README-sourced starter snippets.
+- Added a dithered provider-grid social promo card with the Kujo mark and all 25 provider logos.
 
 All notable changes to Kujolang.ai are documented here. Releases follow semantic versioning.
 
