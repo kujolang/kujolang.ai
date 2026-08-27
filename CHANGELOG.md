@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Added the Kujo Providers directory with 25 native provider integrations, local provider marks, searchable cards, accessible detail dialogs, and README-sourced starter snippets.
+
 All notable changes to Kujolang.ai are documented here. Releases follow semantic versioning.
 
 ## [Unreleased]

@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.2.5",
   "scripts": {
+    "test": "node --test tests/*.test.mjs",
     "icons:build": "node scripts/build-icons.mjs",
     "vendor:scramble": "scramble-decode copy assets/js/vendor",
     "social:cards": "bash scripts/render-social-cards.sh",
