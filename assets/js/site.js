@@ -72,16 +72,6 @@
         copyText(field.value).then(function () {
           setCopiedState(button, status);
 		});
-		document.querySelectorAll('[data-copy-mcp]').forEach(function (button) {
-			button.addEventListener('click', function () {
-				var field = button.closest('.install-copy-field').querySelector('input');
-				var status = button.closest('.install-copy-field').querySelector('[data-mcp-copy-status]');
-				navigator.clipboard.writeText(field.value).then(function () {
-					status.textContent = 'Copied';
-					setTimeout(function () { status.textContent = ''; }, 1800);
-				}).catch(function () { status.textContent = 'Copy unavailable'; });
-			});
-		});
       });
     });
   }
