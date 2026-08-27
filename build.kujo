@@ -2217,7 +2217,7 @@ func render_layout(layout_template, settings, route, page_title, meta_descriptio
 	if has_key(page_meta, "webmcp_skip") {
 		webmcp_skip = parse_bool_value(page_meta["webmcp_skip"], false)
 	}
-	if settings["webmcp"] && !webmcp_skip {
+	if settings["webmcp"] && !webmcp_skip && route != "404/" && route != "404.html" {
 		rendered = inject_webmcp_runtime(rendered, settings, route)
 	}
 	return rendered
