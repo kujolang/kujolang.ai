@@ -13,6 +13,17 @@
 			</div>
 		</div>
 	</section>
+	<section class="section-shell mcp-onboarding" aria-labelledby="mcp-onboarding-title">
+		<div class="section-heading sk-heading"><p>Public, read-only discovery</p><h2 id="mcp-onboarding-title">Use the Kujo MCP</h2><span>Give an MCP-compatible client a direct view of the reviewed Kujo ecosystem—no account, clone, installation, or API key required.</span></div>
+		<div class="mcp-onboarding__card">
+			<p class="mcp-onboarding__label">Endpoint</p>
+			<div class="install-copy-field"><input type="text" readonly value="https://mcp.kujolang.ai/mcp" aria-label="Kujo MCP endpoint"><span class="copy-status" role="status" aria-live="polite" data-mcp-copy-status data-scramble-skip></span><button class="sk-button" type="button" data-copy-mcp aria-label="Copy Kujo MCP endpoint">Copy endpoint</button></div>
+			<p>Agents can discover Kujo, its primitives, tools, agent-related offerings, skills, workflows, showcases, WebOps capabilities, installation profiles, source links, and safety boundaries. The service is stateless and read-only; commands are returned as inert guidance and are never executed.</p>
+			<p><a href="https://github.com/kujolang/kujolang-mcp">GitHub repository</a> · <a href="https://github.com/kujolang/kujolang-mcp/blob/main/SECURITY.md">Security and privacy</a> · <a href="https://mcp.kujolang.ai/health">Health/status</a> · <a href="/ecosystem/">Browse the ecosystem</a></p>
+			<p class="mcp-onboarding__meta">Catalog last reviewed: 2026-08-26 · No standalone agent directory is claimed; agent offerings remain discoverable through public projects, skills, and workflows.</p>
+			<details><summary>Client configuration and troubleshooting</summary><p>For clients that support remote Streamable HTTP MCP servers, set the URL to the endpoint above. If a client reports a connection error, confirm HTTPS access, use the <a href="https://mcp.kujolang.ai/health">health URL</a>, and ensure the client sends JSON-RPC over POST with <code>Content-Type: application/json</code>. The public service does not accept writes, shell commands, authentication, or arbitrary URL fetching.</p></details>
+		</div>
+	</section>
 	<div class="hero-video-modal" data-hero-video-modal hidden>
 		<div class="hero-video-modal__backdrop" data-hero-video-close></div>
 		<section class="hero-video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="hero-video-title" tabindex="-1">

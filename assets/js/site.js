@@ -63,7 +63,7 @@
       });
     });
 
-    document.querySelectorAll('[data-copy-agent-prompt]').forEach(function (button) {
+		document.querySelectorAll('[data-copy-agent-prompt]').forEach(function (button) {
       button.addEventListener('click', function () {
         var dialog = button.closest('[role="dialog"]');
         var field = dialog && dialog.querySelector('[data-agent-prompt-text]');
@@ -71,7 +71,17 @@
         if (!field || !field.value.trim()) return;
         copyText(field.value).then(function () {
           setCopiedState(button, status);
-        });
+		});
+		document.querySelectorAll('[data-copy-mcp]').forEach(function (button) {
+			button.addEventListener('click', function () {
+				var field = button.closest('.install-copy-field').querySelector('input');
+				var status = button.closest('.install-copy-field').querySelector('[data-mcp-copy-status]');
+				navigator.clipboard.writeText(field.value).then(function () {
+					status.textContent = 'Copied';
+					setTimeout(function () { status.textContent = ''; }, 1800);
+				}).catch(function () { status.textContent = 'Copy unavailable'; });
+			});
+		});
       });
     });
   }
