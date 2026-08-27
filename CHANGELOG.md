@@ -4,6 +4,10 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ## [Unreleased]
 
+### Changed
+
+- Updated the Dispatch ecosystem page for the Dispatch 1.2.0 release, including deterministic routing, persisted route evidence, and the current GitHub release link.
+
 ### Added
 
 - Full-screen, accessible Kujo introduction video player launched from the homepage hero.
