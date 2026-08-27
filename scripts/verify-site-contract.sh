@@ -354,14 +354,27 @@ require_text "${output_dir}/contact/index.html" 'href="https://github.com/kujola
 require_text "${output_dir}/contact/index.html" 'href="https://discord.gg/RqDgyb3BX"'
 reject_text "${output_dir}/contact/index.html" 'href="https://discord.gg/kujolang"'
 
-if rg -n 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network|Intake' \
-	"${repo_root}/templates" "${repo_root}/content/pages" "${repo_root}/content/ecosystem" "${repo_root}/content/posts" \
-	"${output_dir}/index.html" "${output_dir}/ecosystem/index.html" "${output_dir}/ethos" "${output_dir}/contact" "${output_dir}/writing" \
-	--glob '*.html' --glob '*.md' --glob '*.txt'; then
+if command -v rg >/dev/null 2>&1; then
+	obsolete_naming=$(rg -n 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network|Intake' \
+		"${repo_root}/templates" "${repo_root}/content/pages" "${repo_root}/content/ecosystem" "${repo_root}/content/posts" \
+		"${output_dir}/index.html" "${output_dir}/ecosystem/index.html" "${output_dir}/ethos" "${output_dir}/contact" "${output_dir}/writing" \
+		--glob '*.html' --glob '*.md' --glob '*.txt' || true)
+	else
+	obsolete_naming=$(grep -REn 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network|Intake' \
+		--include='*.html' --include='*.md' --include='*.txt' \
+		"${repo_root}/templates" "${repo_root}/content/pages" "${repo_root}/content/ecosystem" "${repo_root}/content/posts" \
+		"${output_dir}/index.html" "${output_dir}/ecosystem/index.html" "${output_dir}/ethos" "${output_dir}/contact" "${output_dir}/writing" || true)
+fi
+if [[ -n "${obsolete_naming}" ]]; then
 	fail "found obsolete product naming or removed ecosystem entries"
 fi
 
-if rg -n -F '{{' "$output_dir" --glob '*.html'; then
+if command -v rg >/dev/null 2>&1; then
+	unresolved_placeholders=$(rg -n -F '{{' "$output_dir" --glob '*.html' || true)
+	else
+	unresolved_placeholders=$(grep -RInF '{{' "$output_dir" --include='*.html' || true)
+fi
+if [[ -n "${unresolved_placeholders}" ]]; then
 	fail "found unresolved template placeholders"
 fi
 

@@ -36,6 +36,19 @@
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
     },
     {
+      "id": "providers",
+      "title": "Kujo Providers",
+      "tagline": "Native integrations for local, hosted, cloud, search, and media AI.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "page",
+      "url": "kujolang.ai/providers/",
+      "show_border": false,
+      "show_url": false,
+      "background_image": "assets/images/ecosystem/ai-sdk-provider-network.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
       "id": "primitives",
       "title": "Primitives",
       "tagline": "Foundation projects for inspectable AI-native software.",
