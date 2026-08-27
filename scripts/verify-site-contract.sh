@@ -217,7 +217,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 189 ]] || fail "expected 189 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 190 ]] || fail "expected 190 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -354,16 +354,30 @@ require_text "${output_dir}/contact/index.html" 'href="https://github.com/kujola
 require_text "${output_dir}/contact/index.html" 'href="https://discord.gg/RqDgyb3BX"'
 reject_text "${output_dir}/contact/index.html" 'href="https://discord.gg/kujolang"'
 
+scan_paths=(
+	"${repo_root}/templates"
+	"${repo_root}/content/pages"
+	"${repo_root}/content/ecosystem"
+	"${repo_root}/content/posts"
+	"${output_dir}/index.html"
+	"${output_dir}/ecosystem/index.html"
+	"${output_dir}/ethos"
+	"${output_dir}/contact"
+	"${output_dir}/writing"
+)
+existing_scan_paths=()
+for scan_path in "${scan_paths[@]}"; do
+	[[ -e "${scan_path}" ]] && existing_scan_paths+=("${scan_path}")
+done
+
 if command -v rg >/dev/null 2>&1; then
 	obsolete_naming=$(rg -n 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network|Intake' \
-		"${repo_root}/templates" "${repo_root}/content/pages" "${repo_root}/content/ecosystem" "${repo_root}/content/posts" \
-		"${output_dir}/index.html" "${output_dir}/ecosystem/index.html" "${output_dir}/ethos" "${output_dir}/contact" "${output_dir}/writing" \
+		"${existing_scan_paths[@]}" \
 		--glob '*.html' --glob '*.md' --glob '*.txt' || true)
 	else
 	obsolete_naming=$(grep -REn 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network|Intake' \
 		--include='*.html' --include='*.md' --include='*.txt' \
-		"${repo_root}/templates" "${repo_root}/content/pages" "${repo_root}/content/ecosystem" "${repo_root}/content/posts" \
-		"${output_dir}/index.html" "${output_dir}/ecosystem/index.html" "${output_dir}/ethos" "${output_dir}/contact" "${output_dir}/writing" || true)
+		"${existing_scan_paths[@]}" || true)
 fi
 if [[ -n "${obsolete_naming}" ]]; then
 	fail "found obsolete product naming or removed ecosystem entries"
