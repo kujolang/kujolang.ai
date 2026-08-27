@@ -5062,7 +5062,8 @@ func build_site(settings) {
 		{
 			"seo_title": "Page Not Found",
 			"seo_description": "The requested Kujolang.ai page could not be found.",
-			"lang": "en"
+			"lang": "en",
+			"webmcp_skip": true
 		}
 	)
 	# GitHub Pages serves this document at the originally requested URL. Root-
