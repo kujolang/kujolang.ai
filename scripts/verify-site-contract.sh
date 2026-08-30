@@ -47,6 +47,7 @@ require_social_meta() {
 }
 
 require_file "${output_dir}/index.html"
+require_file "${output_dir}/install.sh"
 require_file "${output_dir}/ecosystem/index.html"
 require_file "${output_dir}/ethos/index.html"
 require_file "${output_dir}/contact/index.html"
@@ -69,6 +70,13 @@ require_file "${output_dir}/site.webmanifest"
 require_file "${output_dir}/browserconfig.xml"
 require_file "${repo_root}/CNAME"
 require_file "${repo_root}/.github/workflows/pages.yml"
+
+require_text "${output_dir}/install.sh" 'readonly DEFAULT_RELEASE_VERSION="${KUJO_RELEASE_VERSION:-v1.1.0}"'
+require_text "${output_dir}/install.sh" '--group <name>         Add one profile: agent, ai, quality, showcases, or operating'
+require_text "${output_dir}/install.sh" 'agent      eval runledger kujo-skills kujo-agents kujo-workflows ai-sdk agents-sdk dispatch watchdog mcp rag relay workcell'
+require_text "${output_dir}/install.sh" '--release-manifest <path-or-url>'
+bash "${output_dir}/install.sh" --list | grep -F 'agent      Focused owned-agent environment' >/dev/null \
+	|| fail 'published installer does not expose the focused agent profile'
 
 require_text "${repo_root}/CNAME" 'kujolang.ai'
 require_text "${repo_root}/.github/workflows/pages.yml" 'uses: actions/deploy-pages@v4'

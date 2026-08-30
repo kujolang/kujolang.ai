@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Updated the public installer to Kujo v1.1.0 with the focused `agent` profile,
+  immutable repository pin support, and current release defaults.
 - Added the Kujo Providers directory with 25 native provider integrations, local provider marks, searchable cards, accessible detail dialogs, and README-sourced starter snippets.
 - Added a dithered provider-grid social promo card with the Kujo mark and all 25 provider logos.
 
