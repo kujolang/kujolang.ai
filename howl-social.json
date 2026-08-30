@@ -467,7 +467,7 @@
     {
       "id": "cms",
       "title": "CMS",
-      "tagline": "A server-first content management showcase.",
+      "tagline": "Framework-neutral content management with first-class agent access.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "ecosystem showcase",
@@ -870,7 +870,7 @@
     {
       "id": "kujo-cms-workflows",
       "title": "Kujo CMS",
-      "tagline": "Use this skill when running, validating, extending, or maintaining the Kujo CMS server-first showcase: `backend/runtime/main.kujo`, content models, delivery routes, auth boundaries, contract tests, startup compatibility, webhook/background jobs, migration safety, backup/restore, release gates, or `cms` source/docs changes.",
+      "tagline": "Run and maintain CMS content, extensions, abilities, WebMCP, operations, and release gates.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "agent skill",
