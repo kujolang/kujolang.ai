@@ -53,9 +53,9 @@
 
     document.querySelectorAll('[data-copy-install]').forEach(function (button) {
       button.addEventListener('click', function () {
-        var dialog = button.closest('[role="dialog"]');
-        var field = dialog && dialog.querySelector('input');
-        var status = dialog && dialog.querySelector('[data-copy-status]');
+		var fieldGroup = button.closest('.install-copy-field');
+		var field = fieldGroup && fieldGroup.querySelector('input');
+		var status = fieldGroup && fieldGroup.querySelector('[data-copy-status]');
         if (!field) return;
         copyText(field.value).then(function () {
           setCopiedState(button, status);

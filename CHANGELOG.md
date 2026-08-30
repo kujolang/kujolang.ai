@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added a homepage Agent Development Platform quickstart with focused install,
+  create, and run commands plus direct links to the showcase and documentation.
+- Added the focused agent installer to the Quick Install dialog with an
+  independent copy control for each installation path.
 - Updated the public installer to Kujo v1.1.0 with the focused `agent` profile,
   immutable repository pin support, and current release defaults.
 - Added the Kujo Providers directory with 25 native provider integrations, local provider marks, searchable cards, accessible detail dialogs, and README-sourced starter snippets.

@@ -61,7 +61,8 @@
 				<div><p class="eyebrow">Kujo Installer</p><h2 id="quick-install-title">Quick Install</h2></div>
 				<button class="icon-button" type="button" data-quick-install-close aria-label="Close quick install"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
 			</header>
-			<p>Install Kujo &amp; the local-first ecosystem (or <a href="{{relative_path}}assets/prompts/kujo-agent-onboarding.txt" data-agent-prompt-open>let your agents</a>)</p>
+			<p>Install Kujo and the local-first ecosystem, or choose the focused Agent Development Platform.</p>
+			<p class="install-option-label">Default toolchain</p>
 			<div class="install-copy-field">
 				<input type="text" readonly value="curl -fsSL https://kujolang.ai/install.sh | bash" aria-label="Kujo install command">
 				<span class="copy-status" role="status" aria-live="polite" data-copy-status data-scramble-skip></span>
@@ -70,6 +71,16 @@
 					<svg class="copy-icon copy-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
 				</button>
 			</div>
+			<p class="install-option-label">Agent Development Platform</p>
+			<div class="install-copy-field">
+				<input type="text" readonly value="curl -fsSL https://kujolang.ai/install.sh | bash -s -- --group agent" aria-label="Kujo Agent Development Platform install command">
+				<span class="copy-status" role="status" aria-live="polite" data-copy-status data-scramble-skip></span>
+				<button class="icon-button copy-icon-button" type="button" data-copy-install data-copy-label="Copy agent install command" data-copied-label="Agent install command copied" aria-label="Copy agent install command">
+					<svg class="copy-icon copy-icon--copy" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8m-2 0a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 6V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2"/></svg>
+					<svg class="copy-icon copy-icon--check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
+				</button>
+			</div>
+			<p>Developers can also <a href="{{relative_path}}assets/prompts/kujo-agent-onboarding.txt" data-agent-prompt-open>give the setup prompt to a coding agent</a>.</p>
 		</section>
 	</div>
 	<div class="quick-install-modal agent-prompt-modal" data-agent-prompt-modal hidden>

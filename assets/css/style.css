@@ -363,6 +363,14 @@
     background: var(--sk-code-surface);
   }
 
+  .install-option-label {
+    margin-block: var(--sk-space-5) var(--sk-space-2) !important;
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-xs);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
   .install-copy-field input {
     min-inline-size: 0;
     border: 0;
@@ -516,6 +524,48 @@
     inline-size: 1.1rem;
     block-size: 1.1rem;
     fill: currentColor;
+  }
+
+  .home-agent-platform {
+    inline-size: min(100% - (2 * var(--site-pad-inline)), var(--sk-size-content-xl));
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(var(--sk-space-8), 6vw, var(--sk-space-16));
+    align-items: center;
+    margin-inline: auto;
+    padding-block: var(--site-section-gap);
+  }
+
+  .home-agent-platform__copy { display: grid; gap: var(--sk-space-5); }
+  .home-agent-platform__copy h2 {
+    max-inline-size: 14ch;
+    margin: 0;
+    font-size: clamp(var(--sk-type-size-3xl), 6vw, var(--sk-type-size-5xl));
+    line-height: var(--sk-type-line-tight);
+  }
+  .home-agent-platform__copy p { max-inline-size: 62ch; margin: 0; color: var(--sk-text-secondary); }
+  .home-agent-platform__copy .sk-hero__actions { justify-content: flex-start; margin-block-start: var(--sk-space-2); }
+  .home-agent-platform__commands { display: grid; gap: var(--sk-space-3); min-inline-size: 0; }
+  .home-agent-platform__commands p {
+    display: grid;
+    gap: var(--sk-space-2);
+    margin: 0;
+    padding: var(--sk-space-5);
+    border: var(--sk-border-1) solid var(--sk-border-default);
+    background: var(--sk-surface-card);
+  }
+  .home-agent-platform__commands span {
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-xs);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .home-agent-platform__commands code {
+    display: block;
+    overflow-x: auto;
+    font-family: var(--sk-font-mono);
+    font-size: var(--sk-type-size-sm);
+    white-space: nowrap;
   }
 
   .hero-video-modal {
@@ -1191,6 +1241,13 @@
   }
 
   @media (max-width: 48rem) {
+	.home-agent-platform { grid-template-columns: 1fr; }
+	.home-agent-platform__copy .sk-hero__actions {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.home-agent-platform__copy .sk-hero__actions .sk-button { inline-size: 100%; justify-content: center; }
+
     .ecosystem-carousel .sk-carousel__track {
       grid-auto-columns: min(84%, 19rem);
     }
