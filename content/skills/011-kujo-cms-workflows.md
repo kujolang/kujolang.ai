@@ -20,10 +20,7 @@ seo_description: "Use the Kujo CMS workflow skill for content, identity, SEO, th
 
 ## What it covers
 
-Use this skill when running, validating, extending, or maintaining Kujo CMS. It
-routes work through the canonical `backend/runtime/main.kujo` entrypoint and
-keeps content, identity, SEO, theme and plugin packages, abilities, connectors,
-WebMCP, operational scripts, documentation, and release evidence aligned.
+Use this skill when running, validating, extending, or maintaining Kujo CMS. It routes work through the canonical `backend/runtime/main.kujo` entrypoint and keeps content, identity, SEO, theme and plugin packages, abilities, connectors, WebMCP, operational scripts, documentation, and release evidence aligned.
 
 ## Released guidance
 
@@ -37,9 +34,7 @@ WebMCP, operational scripts, documentation, and release evidence aligned.
 
 ## Release boundary
 
-This page reflects the 0.4.1 technical preview guidance reviewed against CMS
-1.1.0 on 2026-08-30. The skill provides repository-backed guidance; the agent
-host remains responsible for permissions, approval, and enforcement.
+This page reflects the 0.4.1 technical preview guidance reviewed against CMS 1.1.0 on 2026-08-30. The skill provides repository-backed guidance; the agent host remains responsible for permissions, approval, and enforcement.
 
 ## Source
 
