@@ -2,10 +2,8 @@
 
 ## Unreleased
 
-- Added a homepage Agent Development Platform quickstart with focused install,
-  create, and run commands plus direct links to the showcase and documentation.
-- Added the focused agent installer to the Quick Install dialog with an
-  independent copy control for each installation path.
+- Added a homepage Agent Development Platform quickstart with focused install, create, and run commands plus direct links to the showcase and documentation.
+- Added the focused agent installer to the Quick Install dialog with an independent copy control for each installation path.
 - Updated the CMS ecosystem and workflow-skill pages for CMS 1.1.0, including
   framework-neutral clients, granular SEO and social tools, portable extension
   packages, identity sessions, abilities, connectors, MCP, and built-in WebMCP.
