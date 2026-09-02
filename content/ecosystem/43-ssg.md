@@ -26,6 +26,14 @@ An agent-inspectable publishing pipeline where content and generated output rema
 
 SSG is a generator and showcase, not a hosted deployment service or a guarantee of SEO and accessibility outcomes.
 
+## Ability integration
+
+SSG can expose build inspection and validation through canonical Abilities, then add file-writing, network, or publishing operations only behind explicit effects, approval, and idempotency policy. This keeps the same operation usable from Agents SDK, Codex, Cursor, VS Code, Kujo Pi, or another MCP host without making the generated static site an execution server.
+
+Browser-facing WebMCP should remain public and read-only. Build and deploy Abilities belong in a trusted local process or authenticated application gateway.
+
+[See how Ability separates portable operation meaning from execution authority](/ecosystem/ability/).
+
 ## Learn more
 
 The repository is the source of truth for current setup, commands, examples, security notes, compatibility, and verification evidence.

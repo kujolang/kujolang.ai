@@ -271,9 +271,9 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 46 ]] || fail "expected 46 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 49 ]] || fail "expected 46 project and 3 catalog output routes, found ${ecosystem_outputs}"
-[[ "$primitive_count" == 14 ]] || fail "expected 14 primitive cards, found ${primitive_count}"
+[[ "$ecosystem_sources" == 47 ]] || fail "expected 47 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 50 ]] || fail "expected 47 project and 3 catalog output routes, found ${ecosystem_outputs}"
+[[ "$primitive_count" == 15 ]] || fail "expected 15 primitive cards, found ${primitive_count}"
 [[ "$tooling_count" == 25 ]] || fail "expected 25 tooling cards, found ${tooling_count}"
 [[ "$showcase_count" == 7 ]] || fail "expected 7 showcase cards, found ${showcase_count}"
 
@@ -422,4 +422,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 46 ecosystem projects, 3 section catalogs, 96 skills, 37 workflows, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 47 ecosystem projects, 3 section catalogs, 96 skills, 37 workflows, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

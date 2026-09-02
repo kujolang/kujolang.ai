@@ -23,6 +23,10 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ### Added
 
+- Kujo Ability 1.0.1 ecosystem page with source-grounded contract, runtime, CMS, SSG, Agents SDK, MCP, Codex, Cursor, VS Code, Kujo Pi, deployment, and safety boundaries.
+- Reciprocal Ability integration sections on the Agents SDK, MCP, CMS, and SSG pages.
+- Pure black-and-white Ability hero artwork and a Howl-rendered 1200×630 social card.
+- Dated before/after SEO and AI-search audit evidence for the 190-page production baseline and the expanded launch inventory.
 - Full-screen, accessible Kujo introduction video player launched from the homepage hero.
 - Ecosystem pages for the eight Publishing House tools: AssetWorks, BluePencil, Dossier, GalleyPack, PressWire, ReaderSignal, StoryDesk, and VersionSeal.
 - Dedicated binary Kujo dither hero art and Howl-rendered 1200×630 social cards for every Publishing House tool.

@@ -244,6 +244,19 @@
       "show_url": false
     },
     {
+      "id": "ability",
+      "title": "Ability",
+      "tagline": "Portable operation contracts with guarded execution.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/ability/",
+      "background_image": "assets/images/ecosystem/ability-portable-operation-contracts.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
       "id": "rag",
       "title": "RAG",
       "tagline": "Local-first retrieval with explicit provider boundaries.",

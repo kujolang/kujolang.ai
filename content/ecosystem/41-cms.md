@@ -49,6 +49,14 @@ CMS shows what an AI-native application looks like when agents are first-class c
 
 The backend includes scoped authentication, revocable sessions, role-derived capabilities, audit logs, rate-limit support, idempotency, migrations, jobs, webhooks, dead-letter recovery, backup and restore workflows, and a complete release gate. A real deployment still needs its own identity adapter, rotated secrets, trusted ingress, durable storage, monitoring, recovery objectives, compliance review, and governance controls.
 
+## Ability integration
+
+CMS is the current reference Ability producer. It defines six core operations, validates plugin-provided definitions, binds handlers and permissions, resolves tenant-aware principals, stores request-bound one-time approvals and keyed idempotency records, and returns canonical receipts. Its authenticated REST gateway exposes principal-visible MCP descriptors and executes each operation through the same Ability runtime used by other surfaces.
+
+Static WebMCP remains a separate public, same-origin, read-only surface. Authenticated or mutating CMS operations stay behind Ability and server-side authorization.
+
+[Review the six CMS Abilities and their execution boundary](/ecosystem/ability/).
+
 ## Learn more
 
 - [CMS 1.1.0 release](https://github.com/kujolang/cms/releases/tag/v1.1.0)

@@ -2,7 +2,7 @@
 set -euo pipefail
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-howl_bin="${HOWL_BIN:-${repo_root}/../kujo-repos/howl/bin/howl}"
+howl_bin="${HOWL_BIN:-${repo_root}/../howl/bin/howl}"
 output_dir="${repo_root}/assets/images/social"
 render_dir="${repo_root}/.howl-social-render"
 
