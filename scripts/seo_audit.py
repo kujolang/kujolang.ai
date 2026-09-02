@@ -326,7 +326,8 @@ def crawl(args: argparse.Namespace) -> None:
             if is_internal:
                 outbound_internal[url].append(destination.split("?", 1)[0])
 
-        for image in soup.find_all("img"):
+        rendered_images = [image for image in soup.find_all("img") if image.get("src", "").strip()]
+        for image in rendered_images:
             raw_src = image.get("src", "").strip()
             image_url = urllib.parse.urljoin(url, raw_src)
             local_image = local_file_for_url(output, image_url, origin)
@@ -389,9 +390,9 @@ def crawl(args: argparse.Namespace) -> None:
                 1 for link in links if link["source_url"] == url and link["http_status"] == 404
             ),
             "broken_external_links": "NOT AVAILABLE — DATA ACCESS REQUIRED",
-            "image_count": len(soup.find_all("img")),
-            "missing_alt": sum(1 for image in soup.find_all("img") if image.get("alt") is None),
-            "missing_dimensions": sum(1 for image in soup.find_all("img") if not image.get("width") or not image.get("height")),
+            "image_count": len(rendered_images),
+            "missing_alt": sum(1 for image in rendered_images if image.get("alt") is None),
+            "missing_dimensions": sum(1 for image in rendered_images if not image.get("width") or not image.get("height")),
             "page_depth": 0 if route == "/" else len([part for part in route.split("/") if part]),
             "orphan": "", "sitemap_included": "yes" if url in sitemap_urls else "no",
             "duplicate_title": "", "duplicate_description": "",
