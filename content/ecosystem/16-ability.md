@@ -47,7 +47,9 @@ These hosts do not receive different Ability semantics. Host packages provide in
 
 ## Local, hosted, and customer-hosted use
 
-For local use, an MCP host can start the Kujo Ability STDIO bridge and connect it to a loopback CMS or another compatible application gateway. For a managed or customer-hosted deployment, the same bridge can connect over HTTPS with a least-privilege bearer token. A future remote gateway should use OAuth 2.1, tenant-scoped discovery, durable policy and receipt storage, quotas, revocation, and operational telemetry.
+For local use, an MCP host can start the Kujo Ability STDIO bridge and connect it to a loopback CMS or another compatible application gateway. For a managed or customer-hosted deployment, the same bridge can connect over HTTPS through OAuth authorization.
+
+The source-available [Kujo Ability Gateway](https://github.com/kujolang/ability-gateway) now implements the controlled-beta remote topology on Cloudflare Workers: OAuth 2.1 with PKCE and audience binding, GitHub organization identity, tenant-scoped discovery, durable approval and receipt state, atomic idempotency, quotas, retention, and signed membership-removal revocation. Deployment and authenticated host certification are still pending, so `ability.kujolang.ai` is not yet advertised as a live service.
 
 The public `mcp.kujolang.ai` endpoint remains a read-only ecosystem catalog. It should not hold customer credentials or become the privileged Ability execution plane.
 
@@ -65,4 +67,4 @@ Ability 1.0.1 is the current release. Install it through Kennel from the reviewe
 
 ## Learn more
 
-The [Ability repository](https://github.com/kujolang/ability) is the source of truth for the contract, runtime, compatibility policy, production-readiness guidance, tests, and release notes. The [Kujo MCP repository](https://github.com/kujolang/mcp) contains the executable gateway projection and portable agent-host package.
+The [Ability repository](https://github.com/kujolang/ability) is the source of truth for the contract, runtime, compatibility policy, production-readiness guidance, tests, and release notes. The [Kujo MCP repository](https://github.com/kujolang/mcp) contains the executable projection and portable agent-host package. The [Ability Gateway repository](https://github.com/kujolang/ability-gateway) owns the managed controlled-beta service implementation.
