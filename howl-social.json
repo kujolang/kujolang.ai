@@ -2311,6 +2311,19 @@
       "show_url": false
     },
     {
+      "id": "publishing-house-operator",
+      "title": "Publishing House Operator",
+      "tagline": "Move publication-specific work through a resumable, policy-bound editorial control loop.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "workflow",
+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-operator/",
+      "background_image": "assets/images/ecosystem/workflow-publishing-house-daily-desk.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
       "id": "rag-enterprise-knowledge-gate",
       "title": "RAG Enterprise Knowledge Gate",
       "tagline": "Ingest an approved local corpus and query it with namespace-scoped citations.",

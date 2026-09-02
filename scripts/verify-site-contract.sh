@@ -245,7 +245,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 191 ]] || fail "expected 191 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 192 ]] || fail "expected 192 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -310,7 +310,7 @@ workflow_sources=$(find "${repo_root}/content/workflows" -maxdepth 1 -type f -na
 skills_outputs=$(find "${output_dir}/ecosystem/skills" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
 workflow_outputs=$(find "${output_dir}/ecosystem/workflows" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
 [[ "$skills_sources" == 96 && "$skills_outputs" == 96 ]] || fail "expected 96 skill source and output routes, found ${skills_sources}/${skills_outputs}"
-[[ "$workflow_sources" == 37 && "$workflow_outputs" == 37 ]] || fail "expected 37 workflow source and output routes, found ${workflow_sources}/${workflow_outputs}"
+[[ "$workflow_sources" == 38 && "$workflow_outputs" == 38 ]] || fail "expected 38 workflow source and output routes, found ${workflow_sources}/${workflow_outputs}"
 
 for catalog_page in "${output_dir}/ecosystem/skills/index.html" "${output_dir}/ecosystem/workflows/index.html"; do
 	require_text "$catalog_page" '"@type":"CollectionPage"'
@@ -425,4 +425,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 47 ecosystem projects, 3 section catalogs, 96 skills, 37 workflows, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 47 ecosystem projects, 3 section catalogs, 96 skills, 38 workflows, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

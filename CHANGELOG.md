@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added the fixture-operational Publishing House Operator to the workflow catalog, including its publication-profile, SourcePack, planning, approval, resumability, event-intake, and fail-closed live-adapter boundaries.
+- Added a Howl social card and expanded the generated-site contract to 38 workflow routes.
 - Added a homepage Agent Development Platform quickstart with focused install, create, and run commands plus direct links to the showcase and documentation.
 - Added the focused agent installer to the Quick Install dialog with an independent copy control for each installation path.
 - Updated the CMS ecosystem and workflow-skill pages for CMS 1.1.0, including
@@ -38,7 +40,7 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 - Replaced the homepage hero's Quick Install action with a View video action while preserving Quick Install in the site navigation.
 - Updated the Workflows catalog from 26 workflows in kujo-workflows 0.2.0 to 34 workflows in kujo-workflows 0.3.0.
-- Synchronized the public catalog to 96 Kujo Skills and 37 Kujo Workflows from their released source repositories.
+- Synchronized the public catalog to 96 Kujo Skills and 38 Kujo Workflows from their released source repositories.
 - Standardized the WebOps name across Skills, Workflows, metadata, and social sharing cards.
 - Restored the animated Bayer-dither treatment across every image-backed homepage, page, catalog, skill, workflow, and ecosystem hero, with offscreen and background-tab pausing.
 
