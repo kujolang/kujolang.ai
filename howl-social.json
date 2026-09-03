@@ -2001,12 +2001,25 @@
     {
       "id": "workflows",
       "title": "Workflows",
-      "tagline": "37 local-first workflow kits with inspectable evidence.",
+      "tagline": "38 local-first workflow kits with inspectable evidence.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "collection",
       "url": "kujolang.ai/ecosystem/workflows/",
       "background_image": "assets/images/ecosystem/workflows-evidence-routing-bench.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
+      "id": "owned-agent-project",
+      "title": "Owned Agent Project",
+      "tagline": "Prove the complete repository-owned Kujo Agent Project lifecycle with inspectable evidence.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "workflow",
+      "url": "kujolang.ai/ecosystem/workflows/owned-agent-project/",
+      "background_image": "assets/images/ecosystem/workflow-owned-agent-project.webp",
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
       "show_border": false,
       "show_url": false

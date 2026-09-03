@@ -9,6 +9,9 @@
   long code or command content, and made contained scrolling code blocks
   keyboard-focusable when needed.
 - Added a Howl social card and expanded the generated-site contract to 38 workflow routes.
+- Updated the complete workflow catalog to the official kujo-workflows 0.4.0
+  release: 38 source-backed workflow pages, including Owned Agent Project,
+  refreshed release metadata, and complete hero and Howl social-card coverage.
 - Added a homepage Agent Development Platform quickstart with focused install, create, and run commands plus direct links to the showcase and documentation.
 - Added the focused agent installer to the Quick Install dialog with an independent copy control for each installation path.
 - Updated the CMS ecosystem and workflow-skill pages for CMS 1.1.0, including

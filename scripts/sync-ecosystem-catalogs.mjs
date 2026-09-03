@@ -3,7 +3,9 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 
 const siteRoot = path.resolve(import.meta.dirname, '..');
-const reposRoot = path.resolve(siteRoot, '..', 'kujo-repos');
+const reposRoot = process.env.KUJO_REPOS
+  ? path.resolve(process.env.KUJO_REPOS)
+  : path.resolve(siteRoot, '..');
 const skillsRepo = path.join(reposRoot, 'kujo-skills');
 const workflowsRepo = path.join(reposRoot, 'kujo-workflows');
 
@@ -151,6 +153,7 @@ const workflowObjects = {
   'howl-content-factory': 'content print factory rendering cards galleries and caption sheets',
   'loop-engineering': 'bounded engineering loop console with context evaluation and stop gates',
   'mcp-agent-gateway-review': 'constrained agent gateway checkpoint with tool manifests and safety inspection',
+  'owned-agent-project': 'repository-owned agent project workbench with scaffold frame locked dependency boxes diagnostic instruments and evidence trays',
   'publishing-house-adaptation': 'versioned adaptation drafting bench with source-lineage spool and format trays',
   'publishing-house-format-production': 'multi-format production press feeding newsletter social case-study and media trays',
   'publishing-house-governance': 'portfolio decision table with mandate folder priority tokens and accountable handoff trays',
@@ -239,6 +242,12 @@ const workflowVersion = releasedFile(workflowsRepo, 'VERSION').trim();
 const workflowDate = git(workflowsRepo, 'show', '-s', '--format=%cs', 'origin/main').trim();
 const workflows = workflowCatalog.active_workflows;
 const workflowsDir = path.join(siteRoot, 'content', 'workflows');
+const operatorPageName = fs.existsSync(workflowsDir)
+  ? fs.readdirSync(workflowsDir).find((name) => name.endsWith('-publishing-house-operator.md'))
+  : undefined;
+const operatorPage = operatorPageName
+  ? fs.readFileSync(path.join(workflowsDir, operatorPageName), 'utf8')
+  : undefined;
 fs.rmSync(workflowsDir, { recursive: true, force: true });
 targets.push({
   kind: 'workflows-index', name: 'Workflows', slug: 'workflows',
@@ -285,9 +294,17 @@ workflows.forEach((workflow, index) => {
   });
 });
 
+if (operatorPage) {
+  const operatorOrder = String(workflows.length + 1).padStart(3, '0');
+  fs.writeFileSync(path.join(workflowsDir, `${operatorOrder}-publishing-house-operator.md`), operatorPage);
+}
+
 const manifestPath = path.join(siteRoot, 'howl-social.json');
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-manifest.cards = manifest.cards.filter((card) => !/^kujolang\.ai\/ecosystem\/(skills|workflows)\//.test(card.url || ''));
+manifest.cards = manifest.cards.filter((card) => (
+  card.id === 'publishing-house-operator'
+  || !/^kujolang\.ai\/ecosystem\/(skills|workflows)\//.test(card.url || '')
+));
 manifest.cards.push(...generatedCards);
 fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
 

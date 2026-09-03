@@ -890,6 +890,15 @@
     },
     {
       "kind": "workflow",
+      "name": "Owned Agent Project",
+      "slug": "owned-agent-project",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/owned-agent-project",
+      "object_description": "repository-owned agent project workbench with scaffold frame locked dependency boxes diagnostic instruments and evidence trays",
+      "hero_path": "assets/images/ecosystem/workflow-owned-agent-project.webp",
+      "social_path": "assets/images/social/owned-agent-project.jpg"
+    },
+    {
+      "kind": "workflow",
       "name": "Agency Runner",
       "slug": "agency-runner",
       "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/agency-runner",
