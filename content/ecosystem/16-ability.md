@@ -49,7 +49,7 @@ These hosts do not receive different Ability semantics. Host packages provide in
 
 For local use, an MCP host can start the Kujo Ability STDIO bridge and connect it to a loopback CMS or another compatible application gateway. For a managed or customer-hosted deployment, the same bridge can connect over HTTPS through OAuth authorization.
 
-The source-available [Kujo Ability Gateway](https://github.com/kujolang/ability-gateway) now implements the controlled-beta remote topology on Cloudflare Workers: OAuth 2.1 with PKCE and audience binding, GitHub organization identity, tenant-scoped discovery, durable approval and receipt state, atomic idempotency, quotas, retention, and signed membership-removal revocation. Deployment and authenticated host certification are still pending, so `ability.kujolang.ai` is not yet advertised as a live service.
+The source-available [Kujo Ability Gateway](https://github.com/kujolang/ability-gateway) now runs the controlled-beta remote topology at [ability.kujolang.ai](https://ability.kujolang.ai): OAuth 2.1 with PKCE and audience binding, GitHub organization identity, tenant-scoped discovery, durable approval and receipt state, atomic idempotency, quotas, retention, and signed membership-removal revocation. A VS Code 1.136 editor smoke certificate covers authenticated discovery and `gateway_echo`. Access remains controlled while refresh/revocation drills, representative Free-plan CPU measurements, and public-release approvals are completed.
 
 The public `mcp.kujolang.ai` endpoint remains a read-only ecosystem catalog. It should not hold customer credentials or become the privileged Ability execution plane.
 

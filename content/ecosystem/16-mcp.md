@@ -34,11 +34,11 @@ MCP projects explicitly enabled Kujo Abilities into host-discoverable tools with
 
 The portable host package targets Codex, Cursor, VS Code, and generic STDIO MCP clients. Its packaged bridge and configuration have been validated in the repository. An installed VS Code 1.135 CLI accepted and persisted the server configuration in an isolated profile without storing a credential; authenticated end-to-end execution remains a live-gateway release gate, so this is configuration evidence rather than a completed editor certification.
 
-The bridge connects to a local or HTTPS application gateway. The source-available [Kujo Ability Gateway](https://github.com/kujolang/ability-gateway) implements the controlled-beta Cloudflare Workers topology with OAuth 2.1, GitHub organization identity, tenant-scoped discovery, separate human approval, atomic idempotency, receipts, audit, quotas, and membership-driven revocation. It is not yet a live service. The public `mcp.kujolang.ai` catalog stays read-only and separate from privileged execution.
+The bridge connects to a local or HTTPS application gateway. The source-available [Kujo Ability Gateway](https://github.com/kujolang/ability-gateway) runs the controlled-beta Cloudflare Workers topology at [ability.kujolang.ai](https://ability.kujolang.ai) with OAuth 2.1, GitHub organization identity, tenant-scoped discovery, separate human approval, atomic idempotency, receipts, audit, quotas, and membership-driven revocation. The public `mcp.kujolang.ai` catalog stays read-only and separate from privileged execution.
 
 ## 1.1.0 release boundary
 
-The repository version is 1.1.0, but the Ability host artifact remains a local unpublished preview until the managed gateway is deployed and the authenticated VS Code flow, revocation, tenant isolation, approval replay, and free-tier CPU gates pass. No token should be copied into editor configuration.
+The repository version is 1.1.0, and VS Code 1.136 has completed a managed editor smoke certification that discovered two remote tools and executed `gateway_echo` with a canonical receipt. The host artifact remains an unpublished preview until signing/publication authority is granted; native editor URL-handler OAuth, refresh/revocation, tenant-isolation drills, approval replay, and representative Free-plan CPU gates remain explicit release boundaries. No token should be copied into editor configuration.
 
 [See the Ability contract and host architecture](/ecosystem/ability/).
 
