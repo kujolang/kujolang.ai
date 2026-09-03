@@ -747,6 +747,7 @@
   }
 
   .kujo-content pre {
+    max-inline-size: 100%;
     overflow-x: auto;
     border: var(--sk-border-1) solid var(--sk-border-default);
     background: var(--sk-code-surface);
@@ -1012,6 +1013,8 @@
 
   .tool-body .prose-shell {
     inline-size: 100%;
+    min-inline-size: 0;
+    max-inline-size: 100%;
     padding-block: 0;
   }
 
@@ -1264,7 +1267,7 @@
 
     .longform-layout,
     .tool-body {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
 
     .ethos-aside,

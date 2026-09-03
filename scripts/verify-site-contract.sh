@@ -351,6 +351,8 @@ require_text "${output_dir}/assets/css/style.css" 'aspect-ratio: 16 / 9;'
 require_text "${output_dir}/assets/css/style.css" 'aspect-ratio: 16 / 9;'
 reject_text "${output_dir}/assets/css/style.css" '@keyframes grid-drift'
 require_text "${output_dir}/assets/js/site.js" 'function enhanceCarousels()'
+require_text "${output_dir}/assets/js/site.js" 'function enhanceScrollableCodeBlocks()'
+require_text "${output_dir}/assets/js/site.js" "document.querySelectorAll('.kujo-content pre')"
 require_text "${output_dir}/assets/css/style.css" 'grid-auto-columns: calc((100% - (2 * var(--sk-space-5))) / 3);'
 require_text "${output_dir}/assets/css/style.css" '.ecosystem-section-title-link:hover'
 require_text "${output_dir}/assets/css/style.css" '.hero-dither-canvas'

@@ -2,7 +2,12 @@
 
 ## Unreleased
 
-- Added the fixture-operational Publishing House Operator to the workflow catalog, including its publication-profile, SourcePack, planning, approval, resumability, event-intake, and fail-closed live-adapter boundaries.
+- Promoted the Publishing House Operator page to its production-capable live
+  phase-adapter contract, including checksum-bound receipts, bounded retries,
+  explicit blocked-item recovery, and deployment authority gates.
+- Fixed intrinsic-width overflow on mobile ecosystem detail pages containing
+  long code or command content, and made contained scrolling code blocks
+  keyboard-focusable when needed.
 - Added a Howl social card and expanded the generated-site contract to 38 workflow routes.
 - Added a homepage Agent Development Platform quickstart with focused install, create, and run commands plus direct links to the showcase and documentation.
 - Added the focused agent installer to the Quick Install dialog with an independent copy control for each installation path.

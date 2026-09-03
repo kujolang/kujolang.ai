@@ -495,6 +495,19 @@
     });
   }
 
+  function enhanceScrollableCodeBlocks() {
+    function update() {
+      document.querySelectorAll('.kujo-content pre').forEach(function (block) {
+        if (block.scrollWidth > block.clientWidth + 1) block.tabIndex = 0;
+        else block.removeAttribute('tabindex');
+      });
+    }
+
+    update();
+    window.addEventListener('load', update, { once: true });
+    window.addEventListener('resize', function () { window.requestAnimationFrame(update); });
+  }
+
   function enhanceMonoScramble() {
     if (!window.ScrambleDecode || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -581,6 +594,7 @@
     enhanceHeroVideo();
     enhanceHeroDither();
     enhanceCarousels();
+    enhanceScrollableCodeBlocks();
     enhanceMonoScramble();
   }
 
