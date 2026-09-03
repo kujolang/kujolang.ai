@@ -1,9 +1,9 @@
 {
   "phase": "after",
-  "generated_at": "2026-09-03T02:38:55.573082+00:00",
+  "generated_at": "2026-09-03T03:05:25.424315+00:00",
   "origin": "https://kujolang.ai",
   "canonical_pages": 192,
-  "production_200_pages": 0,
+  "production_200_pages": 192,
   "indexable_pages": 192,
   "sitemap_urls": 192,
   "missing_titles": 0,

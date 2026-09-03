@@ -4,9 +4,9 @@ Audit date: 2026-09-02
 
 ## Overall status
 
-PASS LOCALLY; PUBLICATION VERIFICATION PENDING — the complete generated site,
-changed-route browser checks, Howl cards, and repository contracts pass. Public
-edge verification must follow the GitHub Pages deployment.
+PASS — the complete generated site, changed-route browser checks, Howl cards,
+repository contracts, GitHub Pages deployment, and public edge verification
+pass.
 
 ## Where the site was
 
@@ -40,6 +40,12 @@ internal links, orphan pages, schema parse errors, missing image alt text, or
 missing intrinsic image dimensions. The changed route now fits exactly within
 its 390px viewport, and its automated accessibility check passes. All 192
 shareable routes have generated Howl social cards.
+
+The deployed public site returned HTTP 200 for all 192 canonical pages. Both the
+ecosystem catalog and the Publishing House Operator route fit exactly inside a
+390px production viewport. The changed route passed Lens accessibility, link,
+network, console, and overflow gates. The synchronized docs route also returned
+HTTP 200 and passed its production mobile accessibility and link check.
 
 ## Available measurements
 
