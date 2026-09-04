@@ -1,7 +1,7 @@
 ---
 title: "Workcell"
 custom_url: workcell
-description: "A stable local and CI execution harness for bounded Kujo and agent workflows in disposable Docker or Podman workspaces."
+description: "Workcell 1.1 runs bounded Kujo and agent workflows in disposable Docker or Podman workspaces, with alpha portable-backend contracts for future remote execution."
 featured_image: "/assets/images/ecosystem/workcell-contained-execution.webp"
 section: "Tooling"
 tags: [Tool, Execution]
@@ -16,7 +16,11 @@ seo_title: "Workcell — Kujo Ecosystem"
 
 ## What it does
 
-Workcell 1.0 validates a versioned JSON execution definition, prepares a disposable Git worktree or isolated clone, and runs the declared workload with bounded CPU, memory, process, time, output, mount, and writable-path limits. Docker and Podman are supported, with explicit `none`, `default`, or pre-created custom network selection.
+Workcell 1.1 validates a versioned JSON execution definition, prepares a disposable Git worktree or isolated clone, and runs the declared workload with bounded CPU, memory, process, time, output, mount, and writable-path limits. Docker and Podman remain the stable execution backends, with explicit `none`, `default`, or pre-created custom network selection.
+
+## Portable execution, still alpha
+
+The 1.1 source release adds provider-neutral definitions, strict capability negotiation, portable receipts, ownership-bound recovery, compact agent summaries, and digest-pinned adapters for E2B, Vercel Sandbox, and Daytona. Those remote adapters are alpha. Offline conformance proves their contract behavior, not a provider account, region, plan, security boundary, or production deployment.
 
 ## Evidence and recovery
 
@@ -32,4 +36,4 @@ Containers are not universal isolation. Higher-risk or multi-tenant workloads ne
 
 ## Learn more
 
-The repository documents the workcell definition, stable CLI and exit codes, runtime lifecycle, security model, platform compatibility, examples, verification, and release artifacts.
+The repository documents the stable and alpha contracts separately, along with runtime lifecycle, security limits, platform compatibility, verification, provider operations, and release artifacts. Download the source and checksums from the [Workcell 1.1.0 release](https://github.com/kujolang/workcell/releases/tag/v1.1.0).
