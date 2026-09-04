@@ -7,3 +7,6 @@ __pycache__/
 .kujo-*
 .runledger/
 seo-audit/*/raw/
+
+# Audit receipts and preserved build artifacts stay local at any depth.
+/seo-audit/**/raw/

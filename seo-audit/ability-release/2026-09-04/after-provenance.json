@@ -1,0 +1,9 @@
+{
+  "source_commit": "025bad2dc7990889796fd0b63f7c78866ec05915",
+  "ci_run": 33929513049,
+  "artifact_id": 9958285900,
+  "artifact_sha256": "ab6a5d4410a2cda0685bc92dc2fa64df771e20dcd2536088d78d64477fac7704",
+  "runtime_commit": "7df293865ae7d342b669789d011f607449808b02",
+  "cli_version": "1.0.0",
+  "artifact_files": 1986
+}

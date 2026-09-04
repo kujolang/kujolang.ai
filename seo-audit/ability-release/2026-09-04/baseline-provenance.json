@@ -1,0 +1,7 @@
+{
+  "artifact_files": 1986,
+  "source_commit": "396494bb14eb70a3cad940ec4543b722b9f41906",
+  "upstream_build": "GitHub Pages workflow 33922119926, artifact 9955713743, source cd00a3a",
+  "reused_baseline": true,
+  "reason": "Source changes since the qualified build are audit records/gitignore only; redundant local builds stopped under heavy load."
+}
