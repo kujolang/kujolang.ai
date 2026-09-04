@@ -314,6 +314,8 @@ workflow_outputs=$(find "${output_dir}/ecosystem/workflows" -mindepth 1 -maxdept
 require_file "${output_dir}/ecosystem/workflows/owned-agent-project/index.html"
 require_file "${output_dir}/ecosystem/workflows/publishing-house-operator/index.html"
 require_text "${output_dir}/ecosystem/workflows/index.html" 'kujo-workflows 0.4.0'
+require_text "${output_dir}/ecosystem/workflows/index.html" '38 / Released workflows'
+require_text "${output_dir}/ecosystem/workflows/index.html" 'Every active workflow in the 0.4.0 release'
 require_text "${output_dir}/ecosystem/workflows/owned-agent-project/index.html" 'in the 0.4.0 local technical preview'
 require_text "${output_dir}/ecosystem/workflows/publishing-house-operator/index.html" 'Kujo Workflows 0.4.0 release'
 require_social_meta "${output_dir}/ecosystem/workflows/owned-agent-project/index.html" 'owned-agent-project'
