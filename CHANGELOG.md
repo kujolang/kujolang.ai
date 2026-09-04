@@ -4,6 +4,12 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ## Unreleased
 
+## [1.2.7] - 2026-09-04
+
+### Added
+
+- Added Kujo for Paperclip to the Tooling catalog with direct installation and first-use guidance, documented safety boundaries, dedicated Kujo dither hero art, and a Howl social card.
+
 ## [1.2.6] - 2026-09-04
 
 ### Added

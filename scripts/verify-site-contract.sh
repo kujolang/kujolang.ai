@@ -245,7 +245,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 193 ]] || fail "expected 193 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 194 ]] || fail "expected 194 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -274,10 +274,10 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 47 ]] || fail "expected 47 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 50 ]] || fail "expected 47 project and 3 catalog output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_sources" == 48 ]] || fail "expected 48 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 51 ]] || fail "expected 48 project and 3 catalog output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 15 ]] || fail "expected 15 primitive cards, found ${primitive_count}"
-[[ "$tooling_count" == 25 ]] || fail "expected 25 tooling cards, found ${tooling_count}"
+[[ "$tooling_count" == 26 ]] || fail "expected 26 tooling cards, found ${tooling_count}"
 [[ "$showcase_count" == 7 ]] || fail "expected 7 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
@@ -318,6 +318,14 @@ require_text "${output_dir}/ecosystem/workflows/owned-agent-project/index.html" 
 require_text "${output_dir}/ecosystem/workflows/publishing-house-operator/index.html" 'Kujo Workflows 0.4.0 release'
 require_social_meta "${output_dir}/ecosystem/workflows/owned-agent-project/index.html" 'owned-agent-project'
 require_social_meta "${output_dir}/ecosystem/workflows/publishing-house-operator/index.html" 'publishing-house-operator'
+
+require_file "${output_dir}/ecosystem/paperclip/index.html"
+require_text "${output_dir}/ecosystem/paperclip/index.html" 'npx paperclipai plugin install @kujolang/paperclip'
+require_text "${output_dir}/ecosystem/paperclip/index.html" 'paperclipai/paperclip/pull/12745'
+require_text "${output_dir}/ecosystem/tooling/index.html" 'href="/ecosystem/paperclip/"'
+require_text "${output_dir}/sitemap.xml" '/ecosystem/paperclip/'
+require_text "${output_dir}/llms.txt" 'Kujo for Paperclip'
+require_social_meta "${output_dir}/ecosystem/paperclip/index.html" 'paperclip'
 
 for catalog_page in "${output_dir}/ecosystem/skills/index.html" "${output_dir}/ecosystem/workflows/index.html"; do
 	require_text "$catalog_page" '"@type":"CollectionPage"'
@@ -434,4 +442,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 47 ecosystem projects, 3 section catalogs, 96 skills, 38 released workflow kits, the Publishing House Operator control layer, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 48 ecosystem projects, 3 section catalogs, 96 skills, 38 released workflow kits, the Publishing House Operator control layer, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
