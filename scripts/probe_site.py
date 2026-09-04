@@ -74,23 +74,35 @@ def write_csv(path: Path, fields: list[str], rows: list[dict]) -> None:
         writer.writerows(rows)
 
 
-def redirects(origin: str, phase: str) -> tuple[list[dict], dict]:
+def redirects(
+    origin: str,
+    phase: str,
+    key_path: str,
+    probe_www: bool,
+    feed_path: str | None,
+) -> tuple[list[dict], dict]:
     host = urllib.parse.urlparse(origin).netloc
+    key_path = "/" + key_path.strip("/") + "/"
+    flat_alias = key_path.rstrip("/") + ".html"
     variants = [
         (f"http://{host}/", "apex HTTP"),
         (f"https://{host}/", "apex HTTPS"),
-        (f"http://www.{host}/", "www HTTP"),
-        (f"https://www.{host}/", "www HTTPS"),
-        (f"https://{host}/ecosystem/kujo/", "nested canonical"),
-        (f"https://{host}/ecosystem/kujo", "nested no trailing slash"),
-        (f"https://{host}/ecosystem/kujo.html", "flat HTML alias"),
-        (f"https://{host}/ecosystem/kujo/?audit=1", "query string"),
+        (f"https://{host}{key_path}", "nested canonical"),
+        (f"https://{host}{key_path.rstrip('/')}", "nested no trailing slash"),
+        (f"https://{host}{flat_alias}", "flat HTML alias"),
+        (f"https://{host}{key_path}?audit=1", "query string"),
         (f"https://{host}/robots.txt", "robots"),
         (f"https://{host}/sitemap.xml", "sitemap"),
-        (f"https://{host}/feed/index.xml", "feed"),
         (f"https://{host}/llms.txt", "llms experimental"),
         (f"https://{host}/seo-audit-missing-route-20260810/", "404"),
     ]
+    if probe_www:
+        variants[2:2] = [
+            (f"http://www.{host}/", "www HTTP"),
+            (f"https://www.{host}/", "www HTTPS"),
+        ]
+    if feed_path:
+        variants.insert(-2, (f"https://{host}/" + feed_path.strip("/"), "feed"))
     receipts = {}
     rows = []
     canonical_host = f"https://{host}"
@@ -124,7 +136,7 @@ def redirects(origin: str, phase: str) -> tuple[list[dict], dict]:
     return rows, receipts
 
 
-def crawler_access(origin: str, phase: str) -> tuple[list[dict], dict]:
+def crawler_access(origin: str, phase: str, key_path: str) -> tuple[list[dict], dict]:
     bots = [
         ("Googlebot", "search indexing", "Googlebot"),
         ("Bingbot", "search indexing and grounding", "bingbot"),
@@ -144,18 +156,21 @@ def crawler_access(origin: str, phase: str) -> tuple[list[dict], dict]:
     except Exception:
         robot_parser = None
     rows, receipts = [], {}
+    key_url = origin + "/" + key_path.strip("/") + "/"
     for name, category, agent in bots:
         bot_receipts = {
             "robots": request(robots_url, agent),
             "homepage": request(origin + "/", agent),
-            "key_page": request(origin + "/ecosystem/kujo/", agent),
+            "key_page": request(key_url, agent),
             "sitemap": request(origin + "/sitemap.xml", agent),
         }
         receipts[name] = bot_receipts
         statuses = [bot_receipts[key]["status"] for key in ("robots", "homepage", "key_page", "sitemap")]
-        allowed = robot_parser.can_fetch(agent, origin + "/ecosystem/kujo/") if robot_parser else None
+        allowed = robot_parser.can_fetch(agent, key_url) if robot_parser else None
         issue = "" if statuses == [200, 200, 200, 200] else "one or more live requests did not return 200"
-        policy = "generic allow; training policy unchanged" if "training" in category else "generic allow"
+        policy = "robots allow" if allowed else ("robots disallow" if allowed is False else "robots policy unknown")
+        if "training" in category:
+            policy += "; training policy unchanged"
         rows.append({
             "phase": phase, "crawler": name, "category": category, "user_agent": agent,
             "robots_allowed": "yes" if allowed else ("no" if allowed is False else "unknown"),
@@ -204,18 +219,26 @@ def main() -> int:
     parser.add_argument("--origin", default="https://kujolang.ai")
     parser.add_argument("--phase", choices=("baseline", "after"), required=True)
     parser.add_argument("--skip-external", action="store_true")
+    parser.add_argument("--key-path", default="/ecosystem/kujo/", help="Canonical nested page used for redirect and crawler checks")
+    parser.add_argument("--skip-www", action="store_true", help="Skip www.<host> probes when that hostname is not part of the site contract")
+    parser.add_argument("--feed-path", default="/feed/index.xml", help="Expected feed path; pass an empty value when the site has no feed")
     args = parser.parse_args()
     audit = Path(args.audit_dir).resolve()
     origin = args.origin.rstrip("/")
-    redirect_rows, redirect_receipts = redirects(origin, args.phase)
-    crawler_rows, crawler_receipts = crawler_access(origin, args.phase)
+    redirect_rows, redirect_receipts = redirects(
+        origin, args.phase, args.key_path, not args.skip_www, args.feed_path or None
+    )
+    crawler_rows, crawler_receipts = crawler_access(origin, args.phase, args.key_path)
     external_rows, external_receipts = ([], {}) if args.skip_external else probe_external_links(audit, args.phase)
     write_csv(audit / "redirects.csv", REDIRECT_FIELDS, redirect_rows)
     write_csv(audit / "crawler-access.csv", CRAWLER_FIELDS, crawler_rows)
     raw = audit / "raw" / "live"
     raw.mkdir(parents=True, exist_ok=True)
     dns = {}
-    for hostname in [urllib.parse.urlparse(origin).netloc, "www." + urllib.parse.urlparse(origin).netloc]:
+    hostnames = [urllib.parse.urlparse(origin).netloc]
+    if not args.skip_www:
+        hostnames.append("www." + urllib.parse.urlparse(origin).netloc)
+    for hostname in hostnames:
         try:
             dns[hostname] = sorted({item[4][0] for item in socket.getaddrinfo(hostname, 443)})
         except Exception as error:

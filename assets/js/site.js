@@ -353,8 +353,11 @@
       if (!context || !sourceContext) return;
 
       function sizeCanvas() {
-        var width = Math.max(1, Math.ceil(media.clientWidth / 2));
-        var height = Math.max(1, Math.ceil(media.clientHeight / 2));
+        // The canvas is intentionally low resolution: CSS scales the ordered
+        // dither back over the hero, while each animation frame touches far
+        // fewer pixels and leaves the main thread available for interaction.
+        var width = Math.max(1, Math.ceil(media.clientWidth / 4));
+        var height = Math.max(1, Math.ceil(media.clientHeight / 4));
         canvas.width = width;
         canvas.height = height;
         sourceCanvas.width = width;
@@ -413,7 +416,7 @@
       function render(now) {
         animationFrame = 0;
         if (!isReady || !isVisible || document.hidden || reducedMotion.matches) return;
-        if (now - lastTick >= 1000 / 14) {
+        if (now - lastTick >= 1000 / 4) {
           lastTick = now;
           drawFrame();
         }

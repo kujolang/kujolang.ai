@@ -4,6 +4,17 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ## Unreleased
 
+## [1.2.8] - 2026-09-04
+
+### Added
+
+- Reproducible full-site SEO and AI-search audit evidence for all 193 canonical pages, including production, crawler, link, schema, media, search-observation, and representative Lighthouse datasets.
+
+### Changed
+
+- Reduced animated hero dither work to a quarter-resolution canvas at four frames per second, preserving the visual treatment while materially reducing main-thread scripting cost.
+- Generalized production diagnostics so sibling sites can supply their canonical key route and explicitly omit non-contract `www` or feed probes without creating false findings.
+
 ## [1.2.7] - 2026-09-04
 
 ### Added
