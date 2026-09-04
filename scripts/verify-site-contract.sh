@@ -201,9 +201,9 @@ require_text "${output_dir}/ecosystem/cms/index.html" 'Abilities API'
 require_text "${output_dir}/ecosystem/cms/index.html" 'WebMCP'
 require_text "${output_dir}/ecosystem/cms/index.html" 'https://github.com/kujolang/cms/releases/tag/v1.1.0'
 require_text "${output_dir}/ecosystem/cms/index.html" 'https://github.com/kujolang/cms-example/releases/tag/v1.1.0'
-require_text "${output_dir}/ecosystem/ability/index.html" 'Kujo Ability 1.0.1'
+require_text "${output_dir}/ecosystem/ability/index.html" 'Kujo Ability gives'
 require_text "${output_dir}/ecosystem/ability/index.html" 'width="1916" height="821"'
-require_text "${output_dir}/ecosystem/ability/index.html" 'https://github.com/kujolang/ability/releases/tag/v1.0.1'
+require_text "${output_dir}/ecosystem/ability/index.html" 'https://docs.kujolang.ai/tools/ability/'
 require_text "${output_dir}/ecosystem/skills/kujo-cms-workflows/index.html" 'CMS 1.1.0 adds framework-neutral sessions'
 require_text "${output_dir}/llms.txt" 'https://kujolang.ai/ecosystem/cms/'
 require_text "${output_dir}/llms.txt" 'https://kujolang.ai/ecosystem/skills/kujo-cms-workflows/'
@@ -450,3 +450,11 @@ if (( failures > 0 )); then
 fi
 
 printf 'Site contract passed: 48 ecosystem projects, 3 section catalogs, 96 skills, 38 released workflow kits, the Publishing House Operator control layer, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+
+# Product copy stays independent of package releases.
+if rg -q "[0-9]+\.[0-9]+\.[0-9]+|VS Code [0-9]+\.[0-9]+" "${output_dir}/ecosystem/ability/index.html"; then
+  echo "Ability product page contains a release number" >&2
+  exit 1
+fi
+
+require_text "${output_dir}/ecosystem/ability/index.html" "SSG publishes inspect, validate, and approval-gated build definitions."

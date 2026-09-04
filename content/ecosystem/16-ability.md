@@ -12,13 +12,12 @@ launch_story: "Define an operation once, then project the same meaning into appl
 scope_note: "Ability is a contract and runtime package, not a hosted gateway, global catalog, identity provider, permission system, or workflow engine."
 keywords: "Kujo Ability, operation contracts, MCP tools, agent tools, typed schemas, policy gates, execution receipts"
 seo_title: "Kujo Ability — Portable Operation Contracts"
-version: "1.0.1"
-last_updated: 2026-09-01
+last_updated: 2026-09-04
 ---
 
 ## What it does
 
-Kujo Ability 1.0.1 gives an operation a stable identity, version, input and output schemas, declared effects, and retry semantics. Its runtime validates the exact definition and binding, evaluates application policy, enforces approval and idempotency requirements, invokes the application-owned handler, validates the result, and returns a canonical receipt.
+Kujo Ability gives an operation a stable identity, version, input and output schemas, declared effects, and retry semantics. Its runtime validates the exact definition and binding, evaluates application policy, enforces approval and idempotency requirements, invokes the application-owned handler, validates the result, and returns a canonical receipt.
 
 The portable definition says what an operation means. The application still owns credentials, identity, authorization, storage, network access, handlers, and deployment policy.
 
@@ -26,12 +25,15 @@ The portable definition says what an operation means. The application still owns
 
 AI tools often expose the same operation through several surfaces: an application API, an agent runtime, a command line, or an MCP server. Ability keeps those projections anchored to one contract instead of letting every integration invent different inputs, effects, and safety claims.
 
-## What ships in 1.0.1
+## What it includes
 
-- The stable `kujo.ability/v1` definition contract and JSON Schema
+- The stable Ability definition contract and JSON Schema
 - Supporting binding, exposure, invocation, policy-decision, approval, and receipt contracts
 - Deterministic definition digests and exact-version registry resolution
 - A fail-closed execution pipeline for policy, approval, idempotency, audit, handler execution, output validation, and receipts
+- Local TypeScript and Python SDK previews for shared definition digests, receipt checks, and effect review
+- Offline verification of signed packs, checksums, publisher trust, revocation, compatibility, and tenant visibility
+- A fixture development kit for definition checks, reference docs, approval simulation, keyed replay, and receipt inspection
 - Conformance guidance for products and adapters
 - A documentation example used as a fixture, not a production operation catalog
 
@@ -49,22 +51,26 @@ These hosts do not receive different Ability semantics. Host packages provide in
 
 For local use, an MCP host can start the Kujo Ability STDIO bridge and connect it to a loopback CMS or another compatible application gateway. For a managed or customer-hosted deployment, the same bridge can connect over HTTPS through OAuth authorization.
 
-The source-available [Kujo Ability Gateway](https://github.com/kujolang/ability-gateway) now runs the controlled-beta remote topology at [ability.kujolang.ai](https://ability.kujolang.ai): OAuth 2.1 with PKCE and audience binding, GitHub organization identity, tenant-scoped discovery, durable approval and receipt state, atomic idempotency, quotas, retention, and signed membership-removal revocation. A native VS Code 1.136 editor certificate covers the localhost callback, PKCE exchange, refreshable-session restoration, authenticated discovery, and `gateway_echo`. The optimized authorization start averaged 4.37 ms CPU with a 9 ms p95 across 30 production requests on Cloudflare Workers Free, with no `exceededCpu` outcomes. Access remains controlled while mutation, refresh/revocation, isolation, approval-replay, and recovery drills are completed.
+The Kujo Ability Gateway runs a controlled beta at [ability.kujolang.ai](https://ability.kujolang.ai). It supplies authenticated discovery and an application execution boundary. Access remains controlled; the gateway repository is private.
 
 The public `mcp.kujolang.ai` endpoint remains a read-only ecosystem catalog. It should not hold customer credentials or become the privileged Ability execution plane.
 
 ## CMS and SSG
 
-CMS is the current reference producer because it has authenticated users, durable state, approvals, and domain handlers. SSG can use Ability for build inspection, validation, and publishing operations, but static browser-facing WebMCP should remain read-only. Any build, file-write, network, or deploy Ability belongs behind a trusted local or authenticated server execution boundary.
+CMS is the current reference producer because it has authenticated users, durable state, approvals, and domain handlers. SSG publishes inspect, validate, and approval-gated build definitions. Static browser-facing WebMCP remains read-only. Any build, file-write, network, or deploy Ability belongs behind a trusted local or authenticated server execution boundary.
 
 ## Operating boundary
 
 An Ability definition never grants permission. Production deployments must authenticate the principal before discovery, authorize every invocation server-side, keep secrets out of definitions and receipts, bind one-time approvals to the exact invocation, scope idempotency by tenant and operation, enforce hard timeouts and cancellation at the handler boundary, and retain redacted audit evidence.
 
-## Release
+## Try an operation locally
 
-Ability 1.0.1 is the current release. Install it through Kennel from the reviewed [`v1.0.1` release](https://github.com/kujolang/ability/releases/tag/v1.0.1), and keep the generated lockfile in source control.
+Use the fixture development kit to validate a definition, generate its reference docs, and test approval and retry behavior before connecting an application. The local server uses bounded fixture outputs and requires authentication. Production execution belongs in the canonical runtime or an application gateway.
+
+The TypeScript and Python helpers are local previews. The offline pack verifier checks package trust; it does not operate a registry or grant permission to run an operation.
+
+[Read the Ability guide](https://docs.kujolang.ai/tools/ability/) for installation, digest compatibility, and development-kit commands. Choose a reviewed [release](https://github.com/kujolang/ability/releases/latest) and keep the generated Kennel lockfile in source control.
 
 ## Learn more
 
-The [Ability repository](https://github.com/kujolang/ability) is the source of truth for the contract, runtime, compatibility policy, production-readiness guidance, tests, and release notes. The [Kujo MCP repository](https://github.com/kujolang/mcp) contains the executable projection and portable agent-host package. The [Ability Gateway repository](https://github.com/kujolang/ability-gateway) owns the managed controlled-beta service implementation.
+The [Ability repository](https://github.com/kujolang/ability) is the source of truth for the contract, runtime, compatibility policy, production-readiness guidance, tests, and release notes. The [Kujo MCP repository](https://github.com/kujolang/mcp) contains the executable projection and portable agent-host package. The separately operated Ability Gateway owns the controlled beta service.

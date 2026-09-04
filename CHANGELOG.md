@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Update Ability with SDK previews, offline pack verification, fixture tooling, and a documentation guide. Keep the product page free of release numbers.
+- Remove inaccessible private-repository links and installation commands; preserve source-access limits.
+
+
 All notable changes to Kujolang.ai are documented here. Releases follow semantic versioning.
 
 ## Unreleased
