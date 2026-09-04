@@ -1,0 +1,7 @@
+phase,source_url,destination_url,anchor_text,link_context,http_status,final_url,chain_length,verification,rel,recommended_action
+after,https://kujolang.ai/ecosystem/ability/,https://github.com/kujolang/ability-gateway,Kujo Ability Gateway,article,404,https://github.com/kujolang/ability-gateway,0,confirmed unavailable by live request,,review destination
+after,https://kujolang.ai/ecosystem/ability/,https://github.com/kujolang/ability-gateway,Ability Gateway repository,article,404,https://github.com/kujolang/ability-gateway,0,confirmed unavailable by live request,,review destination
+after,https://kujolang.ai/ecosystem/leash/,https://github.com/robertdevore/leash,GitHub,aside,404,https://github.com/robertdevore/leash,0,confirmed unavailable by live request,noopener,review destination
+after,https://kujolang.ai/ecosystem/mcp/,https://github.com/kujolang/ability-gateway,Kujo Ability Gateway,article,404,https://github.com/kujolang/ability-gateway,0,confirmed unavailable by live request,,review destination
+after,https://kujolang.ai/ecosystem/mcp/,https://github.com/kujolang/ability-gateway,Ability Gateway repository,article,404,https://github.com/kujolang/ability-gateway,0,confirmed unavailable by live request,,review destination
+after,https://kujolang.ai/ecosystem/ward/,https://github.com/robertdevore/ward,GitHub,aside,404,https://github.com/robertdevore/ward,0,confirmed unavailable by live request,noopener,review destination

@@ -4,11 +4,15 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ## Unreleased
 
+### Fixed
+
+- Corrected the Workflows catalog summary to report the 38 released `kujo-workflows 0.4.0` kits, with a generated-site contract that prevents the visible count and release label from drifting again.
+
 ## [1.2.8] - 2026-09-04
 
 ### Added
 
-- Reproducible full-site SEO and AI-search audit evidence for all 193 canonical pages, including production, crawler, link, schema, media, search-observation, and representative Lighthouse datasets.
+- Reproducible full-site SEO and AI-search audit evidence for all 194 canonical pages, including production, crawler, link, schema, media, search-observation, and representative browser-performance datasets.
 
 ### Changed
 
