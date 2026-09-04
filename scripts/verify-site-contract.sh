@@ -294,15 +294,22 @@ for tool_page in "${output_dir}"/ecosystem/*/index.html; do
 		continue
 	fi
 	require_social_meta "$tool_page" "$tool_slug"
-	require_text "$tool_page" 'class="copy-icon copy-icon--copy"'
-	require_text "$tool_page" 'data-copy-status data-scramble-skip></span><button'
-	require_text "$tool_page" 'class="sk-button github-button"'
-	require_text "$tool_page" '<span>GitHub</span></a>'
+	if [[ "$tool_slug" == "leash" || "$tool_slug" == "ward" ]]; then
+		require_text "$tool_page" 'This repository is private. Public installation is not available.'
+		reject_text "$tool_page" 'class="sk-button github-button"'
+		reject_text "$tool_page" '"codeRepository":"https://github.com/'
+		reject_text "$tool_page" "https://github.com/robertdevore/${tool_slug}"
+	else
+		require_text "$tool_page" 'class="copy-icon copy-icon--copy"'
+		require_text "$tool_page" 'data-copy-status data-scramble-skip></span><button'
+		require_text "$tool_page" 'class="sk-button github-button"'
+		require_text "$tool_page" '<span>GitHub</span></a>'
+		require_text "$tool_page" '"codeRepository":"https://github.com/'
+	fi
 	require_text "$tool_page" '>All '
 	reject_text "$tool_page" 'View on GitHub'
 	reject_text "$tool_page" 'View ecosystem'
 	require_text "$tool_page" '"@type":"SoftwareSourceCode"'
-	require_text "$tool_page" '"codeRepository":"https://github.com/'
 	require_text "$tool_page" 'fetchpriority="high"'
 	reject_text "$tool_page" 'Back to ecosystem'
 done
