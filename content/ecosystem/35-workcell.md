@@ -1,7 +1,7 @@
 ---
 title: "Workcell"
 custom_url: workcell
-description: "Workcell 1.1 runs bounded Kujo and agent workflows in disposable Docker or Podman workspaces, with alpha portable-backend contracts for future remote execution."
+description: "Run bounded Kujo and agent workflows in disposable workspaces with explicit policy, selective artifact export, and verifiable evidence."
 featured_image: "/assets/images/ecosystem/workcell-contained-execution.webp"
 section: "Tooling"
 tags: [Tool, Execution]
@@ -16,15 +16,21 @@ seo_title: "Workcell — Kujo Ecosystem"
 
 ## What it does
 
-Workcell 1.1 validates a versioned JSON execution definition, prepares a disposable Git worktree or isolated clone, and runs the declared workload with bounded CPU, memory, process, time, output, mount, and writable-path limits. Docker and Podman remain the stable execution backends, with explicit `none`, `default`, or pre-created custom network selection.
+Workcell runs Kujo and agent workflows inside disposable Docker or Podman workspaces. A strict execution definition sets resource limits, filesystem access, network policy, environment variables, commands, and the artifacts allowed to leave the workspace.
 
-## Portable execution, still alpha
+## How it works
 
-The 1.1 source release adds provider-neutral definitions, strict capability negotiation, portable receipts, ownership-bound recovery, compact agent summaries, and digest-pinned adapters for E2B, Vercel Sandbox, and Daytona. Those remote adapters are alpha. Offline conformance proves their contract behavior, not a provider account, region, plan, security boundary, or production deployment.
+Workcell validates the definition before it starts, prepares a clean Git worktree or isolated clone, runs the workload with bounded CPU, memory, processes, time, output, mounts, and writable paths, then removes resources it owns. Network access can be disabled, use the engine default, or use an operator-managed network.
+
+## Portable backends
+
+Provider-neutral definitions can move the same workload between host profiles without putting provider settings in the workload itself. Workcell negotiates required capabilities before provisioning and records what the backend accepted, enforced, observed, or could not prove.
+
+Docker and Podman provide the supported execution path. Adapters for E2B, Vercel Sandbox, and Daytona are available as previews and require live certification in the operator's account before production use.
 
 ## Evidence and recovery
 
-Each lifecycle can export only declared artifacts and record structured receipts, logs, a changes patch, and a SHA-256 integrity manifest. Offline verification detects changes to immutable evidence, while ownership-scoped cleanup and failed-workspace preservation make interrupted runs inspectable and recoverable.
+Each run exports only declared artifacts and records a structured receipt, logs, a changes patch, and a SHA-256 integrity manifest. Offline verification detects changed evidence. Ownership-scoped cleanup and failed-workspace preservation keep interrupted runs inspectable and recoverable.
 
 ## Why it belongs in Kujo
 
@@ -32,8 +38,8 @@ Workcell turns execution authority into a visible contract. Kujo governs what a 
 
 ## Operating boundary
 
-Containers are not universal isolation. Higher-risk or multi-tenant workloads need an operator-provided stronger boundary, and deployment-specific image governance, egress controls, key custody, retention, and host hardening remain outside Workcell's v1 guarantee.
+Containers are not universal isolation. Higher-risk or multi-tenant workloads need a stronger operator-provided boundary. Image governance, egress controls, key custody, retention, and host hardening remain deployment responsibilities.
 
 ## Learn more
 
-The repository documents the stable and alpha contracts separately, along with runtime lifecycle, security limits, platform compatibility, verification, provider operations, and release artifacts. Download the source and checksums from the [Workcell 1.1.0 release](https://github.com/kujolang/workcell/releases/tag/v1.1.0).
+The [Workcell repository](https://github.com/kujolang/workcell) includes installation, examples, contract references, security limits, platform compatibility, provider operations, and verified release artifacts.

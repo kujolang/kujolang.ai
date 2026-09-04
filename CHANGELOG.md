@@ -6,7 +6,7 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ### Changed
 
-- Updated the Workcell ecosystem page for the 1.1.0 source release, its stable Docker and Podman lifecycle, and the alpha boundary around portable contracts and remote adapters.
+- Reworked the Workcell ecosystem page as a durable product overview without release-specific copy.
 
 ## [1.2.9] - 2026-09-04
 
