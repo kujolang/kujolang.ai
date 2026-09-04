@@ -8,6 +8,16 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 - Reworked the Workcell ecosystem page as a durable product overview without release-specific copy.
 
+## [1.2.10] - 2026-09-04
+
+### Added
+
+- Added a release-scoped SEO and AI-search audit for the SearchBridge 1.0.0 ecosystem publication.
+
+### Changed
+
+- Updated the SearchBridge ecosystem page from its original 0.1 fixture-preview description to the released 1.0.0 product contract, verified stable-live providers, fixture-only boundaries, and v1.1 follow-ups.
+
 ## [1.2.9] - 2026-09-04
 
 ### Added
@@ -26,7 +36,7 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ### Added
 
-- Reproducible full-site SEO and AI-search audit evidence for all 194 canonical pages, including production, crawler, link, schema, media, search-observation, and representative browser-performance datasets.
+- Reproducible full-site SEO and AI-search audit evidence for all 193 canonical pages, including production, crawler, link, schema, media, search-observation, and representative Lighthouse datasets.
 
 ### Changed
 

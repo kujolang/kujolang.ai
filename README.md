@@ -4,7 +4,7 @@ The official website for the [Kujo programming language](https://github.com/kujo
 
 This site is built with the Kujo SSG and the Kujo SiteKit design system. Markdown content is the editable source of truth; generated files are written to `output/` and should not be edited by hand.
 
-Current release: **v1.2.9**
+Current release: **v1.2.10**
 
 - Website: [kujolang.ai](https://kujolang.ai)
 - Documentation: [docs.kujolang.ai](https://docs.kujolang.ai)
