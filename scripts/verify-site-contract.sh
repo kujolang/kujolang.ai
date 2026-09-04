@@ -451,10 +451,32 @@ fi
 
 printf 'Site contract passed: 48 ecosystem projects, 3 section catalogs, 96 skills, 38 released workflow kits, the Publishing House Operator control layer, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
 
-# Product copy stays independent of package releases.
-if rg -q "[0-9]+\.[0-9]+\.[0-9]+|VS Code [0-9]+\.[0-9]+" "${output_dir}/ecosystem/ability/index.html"; then
-  echo "Ability product page contains a release number" >&2
-  exit 1
-fi
+# Inspect visible copy; SVG path coordinates can resemble version numbers.
+python3 - "${output_dir}/ecosystem/ability/index.html" <<'PYVERSIONS'
+from html.parser import HTMLParser
+from pathlib import Path
+import re
+import sys
+
+class MainText(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.in_main = False
+        self.parts = []
+    def handle_starttag(self, tag, attrs):
+        if tag == "main":
+            self.in_main = True
+    def handle_endtag(self, tag):
+        if tag == "main":
+            self.in_main = False
+    def handle_data(self, data):
+        if self.in_main:
+            self.parts.append(data)
+
+parser = MainText()
+parser.feed(Path(sys.argv[1]).read_text())
+if re.search(r"\bv?\d+\.\d+(?:\.\d+)?\b", " ".join(parser.parts)):
+    raise SystemExit("Ability product copy contains a version number")
+PYVERSIONS
 
 require_text "${output_dir}/ecosystem/ability/index.html" "SSG publishes inspect, validate, and approval-gated build definitions."
