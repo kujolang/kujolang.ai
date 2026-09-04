@@ -451,13 +451,6 @@ if [[ -n "${unresolved_placeholders}" ]]; then
 	fail "found unresolved template placeholders"
 fi
 
-if (( failures > 0 )); then
-	printf 'Site contract failed with %d issue(s).\n' "$failures" >&2
-	exit 1
-fi
-
-printf 'Site contract passed: 48 ecosystem projects, 3 section catalogs, 96 skills, 38 released workflow kits, the Publishing House Operator control layer, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
-
 # Inspect visible copy; SVG path coordinates can resemble version numbers.
 python3 - "${output_dir}/ecosystem/ability/index.html" <<'PYVERSIONS'
 from html.parser import HTMLParser
@@ -487,3 +480,10 @@ if re.search(r"\bv?\d+\.\d+(?:\.\d+)?\b", " ".join(parser.parts)):
 PYVERSIONS
 
 require_text "${output_dir}/ecosystem/ability/index.html" "SSG publishes inspect, validate, and approval-gated build definitions."
+
+if (( failures > 0 )); then
+	printf 'Site contract failed with %d issue(s).\n' "$failures" >&2
+	exit 1
+fi
+
+printf 'Site contract passed: 48 ecosystem projects, 3 section catalogs, 96 skills, 38 released workflow kits, the Publishing House Operator control layer, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
