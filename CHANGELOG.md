@@ -4,6 +4,16 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
 
 ## Unreleased
 
+## [1.2.9] - 2026-09-04
+
+### Added
+
+- Deterministic 640 px, 960 px, and 1280 px WebP derivatives, responsive `srcset` and `sizes` markup, and build-time contracts for local featured and catalog images.
+
+### Changed
+
+- Production and local preview builds now generate responsive media before validating or publishing the site.
+
 ### Fixed
 
 - Corrected the Workflows catalog summary to report the 38 released `kujo-workflows 0.4.0` kits, with a generated-site contract that prevents the visible count and release label from drifting again.

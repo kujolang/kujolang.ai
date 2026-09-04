@@ -46,7 +46,8 @@ LINK_FIELDS = [
 
 IMAGE_FIELDS = [
     "phase", "source_url", "image_url", "source_file", "alt", "width", "height",
-    "loading", "format", "bytes", "exists", "issues",
+    "loading", "format", "bytes", "exists", "srcset", "sizes",
+    "responsive_candidates", "responsive_missing", "issues",
 ]
 
 SCHEMA_FIELDS = [
@@ -332,6 +333,17 @@ def crawl(args: argparse.Namespace) -> None:
             image_url = urllib.parse.urljoin(url, raw_src)
             local_image = local_file_for_url(output, image_url, origin)
             width, height = image.get("width", ""), image.get("height", "")
+            raw_srcset = image.get("srcset", "").strip()
+            responsive_urls = [
+                urllib.parse.urljoin(url, candidate.strip().split()[0])
+                for candidate in raw_srcset.split(",")
+                if candidate.strip()
+            ]
+            missing_responsive = [
+                candidate for candidate in responsive_urls
+                if urllib.parse.urlparse(candidate).netloc == urllib.parse.urlparse(origin).netloc
+                and not local_file_for_url(output, candidate, origin)
+            ]
             issue_parts = []
             if image.get("alt") is None:
                 issue_parts.append("missing alt attribute")
@@ -339,6 +351,8 @@ def crawl(args: argparse.Namespace) -> None:
                 issue_parts.append("missing intrinsic dimensions")
             if not local_image:
                 issue_parts.append("missing local asset")
+            if missing_responsive:
+                issue_parts.append("missing responsive candidate")
             images.append({
                 "phase": args.phase, "source_url": url, "image_url": image_url,
                 "source_file": local_image.relative_to(output).as_posix() if local_image else "",
@@ -346,7 +360,11 @@ def crawl(args: argparse.Namespace) -> None:
                 "loading": image.get("loading", ""),
                 "format": local_image.suffix.lstrip(".") if local_image else Path(raw_src).suffix.lstrip("."),
                 "bytes": local_image.stat().st_size if local_image else "",
-                "exists": bool(local_image), "issues": "; ".join(issue_parts),
+                "exists": bool(local_image), "srcset": raw_srcset,
+                "sizes": image.get("sizes", ""),
+                "responsive_candidates": len(responsive_urls),
+                "responsive_missing": len(missing_responsive),
+                "issues": "; ".join(issue_parts),
             })
 
         production_status = ""
@@ -495,6 +513,8 @@ def crawl(args: argparse.Namespace) -> None:
         "images": len(images),
         "missing_alt": sum(1 for row in images if "missing alt" in row["issues"]),
         "missing_dimensions": sum(1 for row in images if "missing intrinsic dimensions" in row["issues"]),
+        "responsive_images": sum(1 for row in images if row["responsive_candidates"]),
+        "missing_responsive_candidates": sum(int(row["responsive_missing"]) for row in images),
         "schema_parse_errors": sum(1 for row in schema_rows if row["parse_state"] != "valid JSON"),
         "schema_coverage_pages": sum(1 for row in pages if row["schema_types"]),
         "issue_counts": dict(sorted(issue_counts.items())),

@@ -4,7 +4,7 @@ The official website for the [Kujo programming language](https://github.com/kujo
 
 This site is built with the Kujo SSG and the Kujo SiteKit design system. Markdown content is the editable source of truth; generated files are written to `output/` and should not be edited by hand.
 
-Current release: **v1.2.8**
+Current release: **v1.2.9**
 
 - Website: [kujolang.ai](https://kujolang.ai)
 - Documentation: [docs.kujolang.ai](https://docs.kujolang.ai)
@@ -15,7 +15,9 @@ Current release: **v1.2.8**
 Install [Kujo](https://github.com/kujolang/kujo), then run:
 
 ```bash
+npm ci
 kujo run ./build.kujo -- --site-url https://kujolang.ai
+npm run images:responsive
 bash scripts/validate-generated-output.sh output
 ```
 
@@ -56,11 +58,17 @@ Run the production build and both site contracts before publishing:
 
 ```bash
 kujo run ./build.kujo -- --site-url https://kujolang.ai
+npm run images:responsive
 bash scripts/verify-site-contract.sh output
 bash scripts/validate-generated-output.sh output
 node --check assets/js/site.js
 npm audit --omit=dev
 ```
+
+The responsive-image step creates deterministic 640 px, 960 px, and 1280 px WebP variants in the
+generated `output/` tree. Page and listing markup uses those smaller files on
+narrow viewports while retaining the full-resolution originals for larger
+layouts.
 
 ## Content model
 
@@ -91,6 +99,7 @@ SVG, then Sharp produces the network-ready JPEG.
 npm install
 npm run social:cards
 kujo run ./build.kujo -- --site-url https://kujolang.ai
+npm run images:responsive
 npm run social:verify
 ```
 

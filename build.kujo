@@ -2109,20 +2109,41 @@ func featured_image_html_tag(featured_image_url, title) {
 	}
 	safe_url := xml_escape(url)
 	safe_title := xml_escape(title)
-	return "<img src=\"" + safe_url + "\" alt=\"Featured image for " + safe_title + "\" class=\"featured-image\"" + featured_image_dimension_attrs(url) + " loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"
+	return "<img src=\"" + safe_url + "\" alt=\"Featured image for " + safe_title + "\" class=\"featured-image\"" + featured_image_dimension_attrs(url) + responsive_image_attrs(url, "(max-width: 720px) calc(100vw - 2rem), (max-width: 1280px) calc(100vw - 4rem), 1200px") + " loading=\"eager\" decoding=\"async\" fetchpriority=\"high\">"
 }
 
 # The current visual system uses a small, fixed family of committed hero
 # assets. Intrinsic dimensions prevent layout shifts before CSS and media load.
 func featured_image_dimension_attrs(featured_image_url) {
-	url := to_lower(trim(featured_image_url))
-	if contains(url, "skill-") || contains(url, "workflow-") || contains(url, "ability-portable-operation-contracts") || contains(url, "shipcheck-release-containers") || contains(url, "sitekit-interface-system") || contains(url, "tribunal-adversarial-hearing") || contains(url, "workcell-contained-execution") || contains(url, "relay-mission-orchestration") || contains(url, "contentgraph-content-network") || contains(url, "searchbridge-provider-relay") || contains(url, "siteprobe-website-crawler") || contains(url, "assetworks-media-provenance") || contains(url, "bluepencil-editorial-calibration") || contains(url, "dossier-evidence-ledger") || contains(url, "galleypack-production-package") || contains(url, "presswire-publication-dispatch") || contains(url, "readersignal-measurement-console") || contains(url, "storydesk-editorial-control") || contains(url, "versionseal-version-approval") {
+	width := featured_image_intrinsic_width(featured_image_url)
+	if width == 1916 {
 		return " width=\"1916\" height=\"821\""
 	}
-	if contains(url, "totalrecall-global-memory") {
+	if width == 1536 {
 		return " width=\"1536\" height=\"1024\""
 	}
 	return " width=\"1672\" height=\"941\""
+}
+
+func featured_image_intrinsic_width(featured_image_url) {
+	url := to_lower(trim(featured_image_url))
+	if contains(url, "skill-") || contains(url, "workflow-") || contains(url, "ability-portable-operation-contracts") || contains(url, "shipcheck-release-containers") || contains(url, "sitekit-interface-system") || contains(url, "tribunal-adversarial-hearing") || contains(url, "workcell-contained-execution") || contains(url, "relay-mission-orchestration") || contains(url, "contentgraph-content-network") || contains(url, "searchbridge-provider-relay") || contains(url, "siteprobe-website-crawler") || contains(url, "assetworks-media-provenance") || contains(url, "bluepencil-editorial-calibration") || contains(url, "dossier-evidence-ledger") || contains(url, "galleypack-production-package") || contains(url, "presswire-publication-dispatch") || contains(url, "readersignal-measurement-console") || contains(url, "storydesk-editorial-control") || contains(url, "versionseal-version-approval") {
+		return 1916
+	}
+	if contains(url, "totalrecall-global-memory") {
+		return 1536
+	}
+	return 1672
+}
+
+func responsive_image_attrs(image_url, sizes) {
+	url := trim(image_url)
+	lowered := to_lower(url)
+	if len(url) == 0 || starts_with(lowered, "http://") || starts_with(lowered, "https://") || starts_with(lowered, "//") || !ends_with(lowered, ".webp") {
+		return ""
+	}
+	base_url := substring(url, 0, len(url) - 5)
+	return " srcset=\"" + xml_escape(base_url + "-640.webp") + " 640w, " + xml_escape(base_url + "-960.webp") + " 960w, " + xml_escape(base_url + "-1280.webp") + " 1280w, " + xml_escape(url) + " " + to_string(featured_image_intrinsic_width(url)) + "w\" sizes=\"" + xml_escape(sizes) + "\""
 }
 
 func favicon_html(prefix) {
@@ -2885,7 +2906,7 @@ func listing_card_html(route, title, excerpt, featured_image, terms, action_labe
 	html := render_listing_card(route, title, excerpt, featured_image, terms, action_label)
 	html = replace(html, "class=\"listing-card\"", "class=\"listing-card sk-card\"")
 	html = replace(html, "class=\"listing-card-button\"", "class=\"listing-card-button sk-button\"")
-	html = replace(html, "class=\"listing-card-image\" loading=\"lazy\"", "class=\"listing-card-image\"" + featured_image_dimension_attrs(featured_image) + " loading=\"lazy\"")
+	html = replace(html, "class=\"listing-card-image\" loading=\"lazy\"", "class=\"listing-card-image\"" + featured_image_dimension_attrs(featured_image) + responsive_image_attrs(listing_card_media_url(featured_image), "(max-width: 48rem) min(84vw, 19rem), 302px") + " loading=\"lazy\"")
 	return html
 }
 

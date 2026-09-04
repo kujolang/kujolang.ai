@@ -71,6 +71,8 @@ require_file "${output_dir}/browserconfig.xml"
 require_file "${repo_root}/CNAME"
 require_file "${repo_root}/.github/workflows/pages.yml"
 
+node "${repo_root}/scripts/verify-responsive-images.mjs" "${output_dir}" || fail 'responsive image contract failed'
+
 require_text "${output_dir}/install.sh" 'readonly DEFAULT_RELEASE_VERSION="${KUJO_RELEASE_VERSION:-v1.1.0}"'
 require_text "${output_dir}/install.sh" '--group <name>         Add one profile: agent, ai, quality, showcases, or operating'
 require_text "${output_dir}/install.sh" 'agent      eval runledger kujo-skills kujo-agents kujo-workflows ai-sdk agents-sdk dispatch watchdog mcp rag relay workcell'

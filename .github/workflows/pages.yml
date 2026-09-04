@@ -28,6 +28,18 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: Configure Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install image tooling
+        run: npm ci
+
+      - name: Run Node.js tests
+        run: npm test
+
       - name: Restore Kujo build cache
         uses: actions/cache@v4
         with:
@@ -55,6 +67,7 @@ jobs:
         run: |
           kujo --version
           kujo run ./build.kujo -- --site-url https://kujolang.ai
+          npm run images:responsive
           cp CNAME output/CNAME
           touch output/.nojekyll
           bash scripts/verify-site-contract.sh output
