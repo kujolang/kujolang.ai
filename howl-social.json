@@ -543,6 +543,19 @@
       "show_url": false
     },
     {
+      "id": "paperclip",
+      "title": "Kujo for Paperclip",
+      "tagline": "Focused context, change review, and failure evidence inside Paperclip.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem integration",
+      "url": "kujolang.ai/ecosystem/paperclip/",
+      "background_image": "assets/images/ecosystem/paperclip-workspace-intelligence.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
       "id": "redact",
       "title": "Redact",
       "tagline": "Deterministic local redaction with reviewable evidence.",
