@@ -1,0 +1,6 @@
+url,page_type,primary_topic,search_intent,audience,distinctive_evidence,cannibalization_note,recommended_action
+https://kujolang.ai/,home,Kujo AI-native programming language,navigational/product discovery,AI software builders,"Language/toolchain positioning and install paths",Distinct from task documentation,Maintain entity summary and direct paths
+https://kujolang.ai/ecosystem/,collection,Kujo ecosystem tools,product comparison,Kujo adopters,"Complete categorized tool catalog",Collection intentionally links details,Add responsive card images
+https://kujolang.ai/ecosystem/packwrite/,software-detail,PackWrite agent execution packs,evaluation/how-to,agent workflow engineers,"Commands pack structure supported workflows",Docs page serves deeper how-to intent,Preserve commands and cross-link docs
+https://kujolang.ai/ecosystem/ability/,software-detail,Kujo Ability MCP authorization,evaluation/integration,MCP developers,"Authorization model and MCP interface",MCP page covers broader server tooling,Resolve public repository claim
+https://kujolang.ai/writing/,writing-index,Kujo technical writing,informational,developers/evaluators,"First-party essays and release explanations",No material duplicate detected,Continue evidence-led writing

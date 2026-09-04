@@ -1,0 +1,1 @@
+33898146360 — failed because the first contract exposed eight static-template heroes without responsive markup; fixed in 349d626643e296c4c8c52d335ff7d70c626080e2.

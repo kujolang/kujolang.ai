@@ -1,0 +1,61 @@
+retrieved_at=2026-09-04T17:42:16Z
+
+url=https://kujolang.ai/assets/images/ecosystem-distributed-tools-960.webp
+HTTP/2 200 
+date: Fri, 04 Sep 2026 17:42:16 GMT
+content-type: image/webp
+content-length: 90618
+server: cloudflare
+last-modified: Fri, 04 Sep 2026 17:28:12 GMT
+access-control-allow-origin: *
+etag: "6a9affac-161fa"
+expires: Fri, 04 Sep 2026 17:51:10 GMT
+cache-control: max-age=14400
+x-proxy-cache: MISS
+x-github-request-id: E3A6:27D349:989CE:C7C0A:6A9B02B6
+x-github-edge-region: iad
+accept-ranges: bytes
+age: 65
+via: 1.1 varnish
+x-served-by: cache-chi-klot8100035-CHI
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1788543671.793057,VS0,VE40
+vary: Accept-Encoding
+x-fastly-request-id: 5147e18c01c07dd990d5abe374bbc6554da4eb56
+cf-cache-status: HIT
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=AlayIOR%2FtQxwEUAc%2FBJoMEPBvHEFc5OnaDIjZ3QG5KKSha3T%2BUBTxBaNB1McBrH7GocjV%2BiW46GzjwzuWmQ0Wz54YHVian7YFOeaHo8QN%2BFHIEtv%2BNf8S%2BemHf%2FDBg%3D%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-ray: a35eca31cc1761d3-ORD
+alt-svc: h3=":443"; ma=86400
+
+
+url=https://kujolang.ai/images/kujo-language-runtime-cef66c407b45-640.webp
+HTTP/2 200 
+date: Fri, 04 Sep 2026 17:42:16 GMT
+content-type: image/webp
+content-length: 34656
+server: cloudflare
+last-modified: Fri, 04 Sep 2026 17:28:12 GMT
+access-control-allow-origin: *
+etag: "6a9affac-8760"
+expires: Fri, 04 Sep 2026 17:51:11 GMT
+cache-control: max-age=14400
+x-proxy-cache: MISS
+x-github-request-id: 1836:2A9AFF:12CFF7:14AC3B:6A9B02B6
+x-github-edge-region: iad
+accept-ranges: bytes
+age: 65
+via: 1.1 varnish
+x-served-by: cache-chi-klot8100132-CHI
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1788543671.023191,VS0,VE55
+vary: Accept-Encoding
+x-fastly-request-id: 260efc5973d4ca56838929f00f04939842ba4756
+cf-cache-status: HIT
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=naetyhDMQ%2FYOwtbgQDfx%2Fsfp2op67slcPN9P2HSIKeAMbC6841NETwkS2874tuOEEseMdE1YkbJ73cUJEsMoJw3PbpAaHgrYW84jQnX%2BcGFgEb8vX19ohrqiWqD8RA%3D%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-ray: a35eca336a9c23d3-ORD
+alt-svc: h3=":443"; ma=86400
+
