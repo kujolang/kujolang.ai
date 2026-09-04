@@ -1,13 +1,14 @@
 ---
 title: "Ward"
 custom_url: ward
+template: private-tool
 description: "A local Dependabot security command center for collecting alerts, planning remediation, preparing safe fixes, verifying changes, and generating reports."
 featured_image: "/assets/images/ecosystem/ward-security-command-center.webp"
 section: "Tooling"
 tags: [Tool, Security]
 order: 290
-install_command: "git clone https://github.com/robertdevore/ward.git"
-github_url: "https://github.com/robertdevore/ward"
+install_command: ""
+github_url: ""
 launch_story: "Turn dependency alerts across many repositories into a local, reviewable remediation workflow."
 scope_note: "Ward is read-only by default; code changes require explicit apply mode, and operators remain responsible for credentials and review."
 keywords: "Ward, Kujo ecosystem, Dependabot, dependency security"
@@ -25,6 +26,10 @@ It demonstrates how security operations can stay local, explicit, and inspectabl
 ## Operating boundary
 
 Ward never auto-merges, dismisses alerts, or pushes protected branches. Applying changes is opt-in and every proposed fix still requires repository-aware review.
+
+## Source access
+
+The repository is private. Public source access and installation are not available.
 
 ## Learn more
 
