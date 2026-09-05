@@ -9,14 +9,18 @@ order: 450
 install_command: "git clone https://github.com/kujolang/tribunal.git"
 github_url: "https://github.com/kujolang/tribunal"
 launch_story: "Replace a disposable model answer with independent testimony, cross-examination, a fatal-flaw pass, an explicit ruling, and a sealed decision packet."
-scope_note: "Tribunal 1.0 is stable for local or operator-controlled decision evidence; shared, regulated, or hosted deployments require environment-specific identity, custody, storage, network, and independent security certification."
+scope_note: "Tribunal 1.0.1 is stable for local or operator-controlled decision evidence; shared, regulated, or hosted deployments require environment-specific identity, custody, storage, network, and independent security certification."
 keywords: "Tribunal, Kujo ecosystem, decision review, adversarial hearing, sealed evidence"
 seo_title: "Tribunal — Kujo Ecosystem"
 ---
 
 ## What it does
 
-Tribunal 1.0 runs a consequential proposal through a structured nine-stage hearing: docket opening, scope validation, context construction, blind specialist testimony, cross-examination, an Executioner fatal-flaw pass, a Judge ruling, a decision packet, and durable persistence. Focused, two-model, and five-seat panels support different review depths, while deterministic mock mode remains offline and credential-free.
+Tribunal 1.0.1 runs a consequential proposal through a structured nine-stage hearing: docket opening, scope validation, context construction, blind specialist testimony, cross-examination, an Executioner fatal-flaw pass, a Judge ruling, a decision packet, and durable persistence. Focused, two-model, and five-seat panels support different review depths, while deterministic mock mode remains offline and credential-free.
+
+## Tribunal 1.0.1
+
+The [1.0.1 patch release](https://github.com/kujolang/tribunal/releases/tag/v1.0.1) strengthens credential redaction, bridge failure handling, bundle integrity, and coordination of concurrent local index updates. It also reduces repeated prompt and memory work. The v1 library API and evidence formats remain compatible. See the [operator guide](https://docs.kujolang.ai/tools/tribunal/) for installation, verification, and recovery references.
 
 ## Durable decision evidence
 
