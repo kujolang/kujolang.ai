@@ -1,0 +1,25 @@
+{
+  "source_commit": "d573862d1665bef05ce9e552523976b8730945e8",
+  "pages_run": 33989210667,
+  "build_and_deployment": "success",
+  "checks": [
+    {
+      "url": "https://kujolang.ai/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/",
+      "h1_count": 1,
+      "upgrade_launch_copy_removed": true,
+      "json_ld_valid": true
+    },
+    {
+      "url": "https://kujolang.ai/ecosystem/kujo/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/ecosystem/kujo/",
+      "h1_count": 1,
+      "upgrade_launch_copy_removed": true,
+      "json_ld_valid": true
+    }
+  ],
+  "scope": "Restore general current-Kujo content; remove upgrade-specific product page section, install-dialog notice and footer link. Command guidance remains on docs site.",
+  "probe_note": "Default Python user agent received 403; standard browser user agent succeeded. No CDN policy changed."
+}
