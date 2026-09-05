@@ -1,0 +1,16 @@
+[
+  {
+    "file": "external-links.csv",
+    "originalSha256": "0cf24fa6c378db80d2ab93558885d637f5d112d535e6bb8cf7a76fec61e9c4dc",
+    "normalizedSha256": "d73b5ebe55b04da6cdef1a7f1aac3f7e1cb0592a334c76766fc2ca1d7ae9d37c",
+    "rowsUnchanged": true,
+    "originalPreserved": "raw/original-csv-line-endings/external-links.csv"
+  },
+  {
+    "file": "baseline-external-links.csv",
+    "originalSha256": "3c551473226a0ac59cba8db9d799cbd9831865bd547865bcc7507f240c21c95b",
+    "normalizedSha256": "9474831ed6eaa6a8b0ce08815d9cecb02f37bde61e10b37d5e3ff361c08cfd5d",
+    "rowsUnchanged": true,
+    "originalPreserved": "raw/original-csv-line-endings/baseline-external-links.csv"
+  }
+]

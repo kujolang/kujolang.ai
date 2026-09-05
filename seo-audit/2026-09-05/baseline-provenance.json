@@ -1,0 +1,11 @@
+{
+  "sourceRevision": "4c94b3878eb055e44561e33d1157029a0fad933e",
+  "sourceStatus": "?? seo-audit/2026-09-05/\n",
+  "host": "kujolang.ai",
+  "buildSourceRevision": "025bad2dc7990889796fd0b63f7c78866ec05915",
+  "workflowRun": 33929513049,
+  "artifactId": 9958285900,
+  "archiveSha256": "ab6a5d4410a2cda0685bc92dc2fa64df771e20dcd2536088d78d64477fac7704",
+  "sourceEquivalence": "No generated-content inputs changed between verified build source and current HEAD; intervening changes are tests/audit records.",
+  "runtimeRevision": "7df293865ae7d342b669789d011f607449808b02"
+}

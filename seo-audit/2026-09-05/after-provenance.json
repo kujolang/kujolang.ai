@@ -1,0 +1,12 @@
+{
+  "sourceRevision": "f6401ae01ec666476653438e0e097e8297c2df43",
+  "workflowRun": 33974292905,
+  "artifactId": 9972024436,
+  "archiveSha256": "e2786fd2036e6bd263bf47fef5d99f3a69ef367a52d30e9a8614a115f4254ad3",
+  "runtimeRevision": "7df293865ae7d342b669789d011f607449808b02",
+  "runtimeVersion": "1.0.0",
+  "buildExit": 0,
+  "basis": "Successful unchanged pinned Pages workflow; exact deployed artifact independently downloaded and crawled.",
+  "validationExit": 0,
+  "deploymentRun": 33974292905
+}

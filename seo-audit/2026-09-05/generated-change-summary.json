@@ -1,0 +1,8 @@
+{
+  "added": [],
+  "removed": [],
+  "modified": [
+    ".well-known/kujo-site-index.json",
+    "ecosystem/tribunal/index.html"
+  ]
+}
