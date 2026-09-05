@@ -139,3 +139,7 @@ The production custom domain is declared in [`CNAME`](CNAME). DNS is managed sep
 ## Included licenses
 
 The vendored Kujo SSG and SiteKit assets retain their upstream terms in [SSG-LICENSE.txt](SSG-LICENSE.txt) and [SITEKIT-LICENSE.txt](SITEKIT-LICENSE.txt). The Departure Mono font license is stored beside the font assets.
+
+## Runtime upgrade content
+
+The Kujo ecosystem page, Quick Install dialog, and footer link to the [runtime upgrade guide](https://docs.kujolang.ai/upgrade/). Availability is explicit: the command is implemented on runtime main but absent from the latest published v1.2.3 as of September 5, 2026. Update that boundary only after verifying a supporting runtime release. Website versions are independent of runtime versions.
