@@ -1,0 +1,2 @@
+id,phase,category,severity,affected_urls,affected_count,evidence,expected_benefit,confidence,difficulty,recommended_action,owner,status
+UPGRADE-01,baseline,content,medium,https://kujolang.ai/ecosystem/kujo/,1,baseline-live-probes.json; baseline-evidence,Readers can find accurate runtime-only upgrade and bootstrap guidance,high,low,Publish source-backed guide with explicit unreleased status,Kujo site maintainers,resolved and verified in production

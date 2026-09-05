@@ -1,0 +1,11 @@
+{
+  "source_revision": "5b52d4e0061eada45cb4d92b706a2837ef0dc587",
+  "workflow_run": 33987657961,
+  "artifact_id": 9975833299,
+  "archive_sha256": "56e77396cb542991e97ebed99f0c00dd9ae168f29a9d79d323d757b0020bb722",
+  "runtime_revision": "7df293865ae7d342b669789d011f607449808b02",
+  "build_exit": 0,
+  "validation_exit": 0,
+  "deployment_conclusion": "success",
+  "basis": "Exact successful pinned Pages artifact downloaded, extracted, crawled and independently validated locally in standard output/ path."
+}

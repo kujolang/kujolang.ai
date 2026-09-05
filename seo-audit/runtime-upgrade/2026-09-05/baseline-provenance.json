@@ -1,0 +1,9 @@
+{
+  "source_revision": "bec5869e2b808c2a684e03df339f15ede88568a5",
+  "basis": "Successful Pages artifact 9972024436 from run 33974292905, source f6401ae; subsequent bec5869 changes audit records only",
+  "origin": "https://kujolang.ai",
+  "files": 1986,
+  "snapshot": "raw/baseline-build",
+  "date": "2026-09-05",
+  "baseline_build": "Existing successful production build; new default-runtime local attempts were not valid baselines."
+}
