@@ -361,7 +361,8 @@ for skill_page in "${output_dir}"/ecosystem/skills/*/index.html; do
 	reject_text "$skill_page" 'View all skills'
 	require_text "$skill_page" '"@type":"SoftwareSourceCode"'
 	if [[ "$skill_slug" == kujo-release-video || "$skill_slug" == kujo-video-styles || "$skill_slug" == kujo-videoops-workflows || "$skill_slug" == videoops-* ]]; then
-		require_text "$skill_page" 'skills-agent-guidance-library.webp'
+		require_text "$skill_page" 'skills-agent-guidance-library-'
+		require_text "$skill_page" 'width="1916" height="821"'
 	else
 		require_text "$skill_page" 'width="1916" height="821"'
 	fi
