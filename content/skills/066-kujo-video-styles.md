@@ -12,7 +12,7 @@ github_url: "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-vid
 launch_story: "One of 135 focused, repository-backed skills in the Kujo Skills 0.7.0 technical preview."
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.7.0"
-last_updated: "2026-09-08"
+last_updated: "tag v0.7.0 Tagger: Robert DeVore <deviodigital@gmail.com> Kujo Skills v0.7.0: reusable video styles 2026-09-08"
 keywords: "Kujo video styles, Kujo Agent Skill, kujo-video-styles, repository-backed agent guidance"
 seo_title: "Kujo video styles — Kujo Agent Skill"
 seo_description: "Create Kujo launch and release videos in ten reusable styles, from kinetic drops and polished micro interactions to changelog films, product proof reels, PR explainers, integrations and cinematic launches. Use to choose a style or automate a family of HyperFrames videos from source evidence."
@@ -48,7 +48,11 @@ For the fixed 15-second monochrome announcement, choose [Kujo Release Video](/ec
 
 ## Release boundary
 
-This page reflects the 0.7.0 technical preview on 2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
+This page reflects the 0.7.0 technical preview on tag v0.7.0
+Tagger: Robert DeVore <deviodigital@gmail.com>
+
+Kujo Skills v0.7.0: reusable video styles
+2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
 
 ## Source
 

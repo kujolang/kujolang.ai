@@ -12,7 +12,7 @@ github_url: "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-rel
 launch_story: "One of 135 focused, repository-backed skills in the Kujo Skills 0.7.0 technical preview."
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.7.0"
-last_updated: "2026-09-08"
+last_updated: "tag v0.7.0 Tagger: Robert DeVore <deviodigital@gmail.com> Kujo Skills v0.7.0: reusable video styles 2026-09-08"
 keywords: "Kujo Relay, Kujo Agent Skill, kujo-relay-workflows, repository-backed agent guidance"
 seo_title: "Kujo Relay — Kujo Agent Skill"
 seo_description: "Use this skill when running, validating, inspecting, repairing, or maintaining Relay bounded agent mission workflows: `bin/relay`, `doctor`, `chat`, `models`, `agents`, `missions`, `runs`, fixture/live provider paths, PackWrite/RunLedger/ChangeBucket/Eval evidence, event bundles, tool-result bundles, run indexes, Watchdog route posture, or Relay source/docs changes."
@@ -34,7 +34,11 @@ Run the install command from a new working directory. If you already have the re
 
 ## Release boundary
 
-This page reflects the 0.7.0 technical preview on 2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
+This page reflects the 0.7.0 technical preview on tag v0.7.0
+Tagger: Robert DeVore <deviodigital@gmail.com>
+
+Kujo Skills v0.7.0: reusable video styles
+2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
 
 ## Source
 

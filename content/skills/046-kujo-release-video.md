@@ -12,7 +12,7 @@ github_url: "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-rel
 launch_story: "One of 135 focused, repository-backed skills in the Kujo Skills 0.7.0 technical preview."
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.7.0"
-last_updated: "2026-09-08"
+last_updated: "tag v0.7.0 Tagger: Robert DeVore <deviodigital@gmail.com> Kujo Skills v0.7.0: reusable video styles 2026-09-08"
 keywords: "Kujo release video, Kujo Agent Skill, kujo-release-video, repository-backed agent guidance"
 seo_title: "Kujo release video — Kujo Agent Skill"
 seo_description: "Create source-grounded Kujo ecosystem release videos in the monochrome trust-at-speed style, with a release-specific narrative, ElevenLabs voiceover, original ambient music and synchronized sound effects. Use for repeatable tool/version announcements and agent-driven release-video pipelines."
@@ -46,7 +46,11 @@ Use [Kujo Video Styles](/ecosystem/skills/kujo-video-styles/) for longer films, 
 
 ## Release boundary
 
-This page reflects the 0.7.0 technical preview on 2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
+This page reflects the 0.7.0 technical preview on tag v0.7.0
+Tagger: Robert DeVore <deviodigital@gmail.com>
+
+Kujo Skills v0.7.0: reusable video styles
+2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
 
 ## Source
 

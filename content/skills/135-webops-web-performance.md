@@ -12,7 +12,7 @@ github_url: "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-w
 launch_story: "One of 135 focused, repository-backed skills in the Kujo Skills 0.7.0 technical preview."
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.7.0"
-last_updated: "2026-09-08"
+last_updated: "tag v0.7.0 Tagger: Robert DeVore <deviodigital@gmail.com> Kujo Skills v0.7.0: reusable video styles 2026-09-08"
 keywords: "WebOps Web Performance, Kujo Agent Skill, webops-web-performance, repository-backed agent guidance"
 seo_title: "WebOps Web Performance — Kujo Agent Skill"
 seo_description: "Use when analyzing lab and field website performance as distinct evidence classes."
@@ -33,7 +33,11 @@ Run the install command from a new working directory. If you already have the re
 
 ## Release boundary
 
-This page reflects the 0.7.0 technical preview on 2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
+This page reflects the 0.7.0 technical preview on tag v0.7.0
+Tagger: Robert DeVore <deviodigital@gmail.com>
+
+Kujo Skills v0.7.0: reusable video styles
+2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
 
 ## Source
 

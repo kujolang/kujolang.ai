@@ -247,7 +247,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 194 ]] || fail "expected 194 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 233 ]] || fail "expected 233 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -360,7 +360,11 @@ for skill_page in "${output_dir}"/ecosystem/skills/*/index.html; do
 	reject_text "$skill_page" 'View on GitHub'
 	reject_text "$skill_page" 'View all skills'
 	require_text "$skill_page" '"@type":"SoftwareSourceCode"'
-	require_text "$skill_page" 'width="1916" height="821"'
+	if [[ "$skill_slug" == kujo-release-video || "$skill_slug" == kujo-video-styles || "$skill_slug" == kujo-videoops-workflows || "$skill_slug" == videoops-* ]]; then
+		require_text "$skill_page" 'skills-agent-guidance-library.webp'
+	else
+		require_text "$skill_page" 'width="1916" height="821"'
+	fi
 done
 
 for workflow_page in "${output_dir}"/ecosystem/workflows/*/index.html; do

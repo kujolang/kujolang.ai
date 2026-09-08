@@ -12,7 +12,7 @@ github_url: "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-run
 launch_story: "One of 135 focused, repository-backed skills in the Kujo Skills 0.7.0 technical preview."
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.7.0"
-last_updated: "2026-09-08"
+last_updated: "tag v0.7.0 Tagger: Robert DeVore <deviodigital@gmail.com> Kujo Skills v0.7.0: reusable video styles 2026-09-08"
 keywords: "Kujo RunLedger, Kujo Agent Skill, kujo-runledger-workflows, repository-backed agent guidance"
 seo_title: "Kujo RunLedger — Kujo Agent Skill"
 seo_description: "Use this skill when recording, comparing, reporting, correlating, or maintaining RunLedger receipts for AI-agent build runs: `runledger start`, `finish`, `usage`, `cost`, `correlate`, `note`, `followup`, `list`, `show`, `compare`, `report`, `.runledger/` JSON files, run verdicts, token/cost capture, Watchdog/Dispatch/Relay/Eval links, read-only git metadata receipts, RunLedger reports, or RunLedger CLI/tests/source changes."
@@ -34,7 +34,11 @@ Run the install command from a new working directory. If you already have the re
 
 ## Release boundary
 
-This page reflects the 0.7.0 technical preview on 2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
+This page reflects the 0.7.0 technical preview on tag v0.7.0
+Tagger: Robert DeVore <deviodigital@gmail.com>
+
+Kujo Skills v0.7.0: reusable video styles
+2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
 
 ## Source
 
