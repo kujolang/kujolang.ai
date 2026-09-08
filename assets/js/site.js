@@ -517,6 +517,7 @@
     var selector = '[data-scramble-text]';
     var pool = '█▓▒░<>/\\#[]{}=+*01';
     var observer = null;
+    var textCandidates = new Set();
 
     function usesMonoFont(element) {
       return window.getComputedStyle(element).fontFamily.toLowerCase().indexOf('departure mono') !== -1;
@@ -546,7 +547,7 @@
     function wrapTextNode(node) {
       var parent = node.parentElement;
       if (!parent || !node.nodeValue.trim() || parent.closest(selector) || parent.closest('[data-scramble-skip], .ecosystem-carousel-controls')) return;
-      if (/^(SCRIPT|STYLE|NOSCRIPT|TEMPLATE|SVG)$/i.test(parent.tagName) || !usesMonoFont(parent)) return;
+      if (/^(SCRIPT|STYLE|NOSCRIPT|TEMPLATE|SVG)$/i.test(parent.tagName)) return;
 
       var match = node.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);
       var original = match && match[2];
@@ -565,7 +566,7 @@
 
     function findMonoText(root) {
       if (root.nodeType === Node.TEXT_NODE) {
-        wrapTextNode(root);
+        textCandidates.add(root);
         return;
       }
       if (root.nodeType !== Node.ELEMENT_NODE || root.closest(selector)) return;
@@ -573,7 +574,7 @@
       var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
       var nodes = [];
       while (walker.nextNode()) nodes.push(walker.currentNode);
-      nodes.forEach(wrapTextNode);
+      nodes.forEach(function (node) { textCandidates.add(node); });
     }
 
     if ('IntersectionObserver' in window) {
@@ -587,6 +588,11 @@
     }
 
     document.querySelectorAll('h1, h2, .sk-badge, .eyebrow, .site-brand, .footer-wordmark').forEach(findMonoText);
+    // Read fonts before inserting wrappers to avoid repeated layout on long catalogs.
+    var monoNodes = Array.from(textCandidates).filter(function (node) {
+      return node.parentElement && node.nodeValue.trim() && usesMonoFont(node.parentElement);
+    });
+    monoNodes.forEach(wrapTextNode);
   }
 
   function init() {
