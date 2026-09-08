@@ -19,8 +19,6 @@ last_updated: 2026-09-07
 
 SiteProbe 0.3.0 is a native Kujo website crawler. It records versioned run, page, link, redirect, metadata, structured-data, sitemap, robots, finding, and report artifacts. Inspect one URL, validate and digest-verify a run, compare baselines, or read focused link and sitemap inventories without repeating the crawl.
 
-Kujo owns the complete product workflow. Python is used only for maintenance tests, fixture servers, and benchmarks; it is not required by product commands.
-
 ## Bounded crawl evidence
 
 Crawls enforce page, depth, concurrency, timeout, retry, response-byte, artifact-byte, and report budgets. Every redirect is checked against same-origin and robots policy. Isolated async workers overlap requests at the configured concurrency while preserving origin pacing and ordered evidence.
