@@ -139,3 +139,14 @@ The production custom domain is declared in [`CNAME`](CNAME). DNS is managed sep
 ## Included licenses
 
 The vendored Kujo SSG and SiteKit assets retain their upstream terms in [SSG-LICENSE.txt](SSG-LICENSE.txt) and [SITEKIT-LICENSE.txt](SITEKIT-LICENSE.txt). The Departure Mono font license is stored beside the font assets.
+
+## Sync the released skills catalog
+
+Use an explicit release ref to update skills without rewriting workflow pages:
+
+```bash
+KUJO_SKILLS_REF=v0.7.0 node scripts/sync-ecosystem-catalogs.mjs --skills-only
+npm run social:cards
+```
+
+This release contains 135 skills. The sync preserves workflow content, reuses the existing skills-library hero where no dedicated image exists, and keeps curated video examples under `catalog-overrides/skills/`. Rebuild and run the full site contracts after syncing.

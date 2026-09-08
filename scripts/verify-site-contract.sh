@@ -318,8 +318,16 @@ skills_sources=$(find "${repo_root}/content/skills" -maxdepth 1 -type f -name '*
 workflow_sources=$(find "${repo_root}/content/workflows" -maxdepth 1 -type f -name '*.md' | wc -l | tr -d ' ')
 skills_outputs=$(find "${output_dir}/ecosystem/skills" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
 workflow_outputs=$(find "${output_dir}/ecosystem/workflows" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
-[[ "$skills_sources" == 96 && "$skills_outputs" == 96 ]] || fail "expected 96 skill source and output routes, found ${skills_sources}/${skills_outputs}"
+[[ "$skills_sources" == 135 && "$skills_outputs" == 135 ]] || fail "expected 135 skill source and output routes, found ${skills_sources}/${skills_outputs}"
 [[ "$workflow_sources" == 39 && "$workflow_outputs" == 39 ]] || fail "expected 38 released workflow kits plus the operator control-layer route, found ${workflow_sources}/${workflow_outputs}"
+require_text "${output_dir}/ecosystem/skills/index.html" "${skills_sources} / Released skills"
+require_text "${output_dir}/ecosystem/skills/index.html" "Browse ${skills_sources} Kujo Agent Skills"
+require_file "${output_dir}/ecosystem/skills/kujo-video-styles/index.html"
+require_file "${output_dir}/ecosystem/skills/kujo-release-video/index.html"
+require_file "${output_dir}/ecosystem/skills/videoops-media-provider-execution/index.html"
+require_text "${output_dir}/ecosystem/skills/kujo-video-styles/index.html" "https://docs.kujolang.ai/collections/video-skills/"
+require_text "${output_dir}/ecosystem/skills/kujo-video-styles/index.html" "feature-reveal"
+require_social_meta "${output_dir}/ecosystem/skills/kujo-video-styles/index.html" "kujo-video-styles"
 require_file "${output_dir}/ecosystem/workflows/owned-agent-project/index.html"
 require_file "${output_dir}/ecosystem/workflows/publishing-house-operator/index.html"
 require_text "${output_dir}/ecosystem/workflows/index.html" 'kujo-workflows 0.4.0'
@@ -486,4 +494,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 48 ecosystem projects, 3 section catalogs, 96 skills, 38 released workflow kits, the Publishing House Operator control layer, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 48 ecosystem projects, 3 section catalogs, 135 skills, 38 released workflow kits, the Publishing House Operator control layer, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

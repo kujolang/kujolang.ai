@@ -7,12 +7,12 @@ featured_image: "/assets/images/ecosystem/skill-kujo-docgen-agent-readable.webp"
 social_image: "/assets/images/social/kujo-docgen-agent-readable.jpg"
 section: "Agent Skill"
 order: "190"
-install_command: "mkdir -p ~/.codex/skills && cp -R skills/kujo-docgen-agent-readable ~/.codex/skills/"
-github_url: "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-docgen-agent-readable/SKILL.md"
-launch_story: "One of 96 focused, repository-backed skills in the Kujo Skills 0.4.1 technical preview."
+install_command: "git clone --branch v0.7.0 --depth 1 https://github.com/kujolang/kujo-skills.git && mkdir -p ~/.codex/skills && cp -R kujo-skills/skills/kujo-docgen-agent-readable ~/.codex/skills/"
+github_url: "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-docgen-agent-readable/SKILL.md"
+launch_story: "One of 135 focused, repository-backed skills in the Kujo Skills 0.7.0 technical preview."
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
-version: "0.4.1"
-last_updated: "2026-08-25"
+version: "0.7.0"
+last_updated: "2026-09-08"
 keywords: "Kujo DocGen And DocsGen, Kujo Agent Skill, kujo-docgen-agent-readable, repository-backed agent guidance"
 seo_title: "Kujo DocGen And DocsGen — Kujo Agent Skill"
 seo_description: "Use this skill when working on Kujo DocGen/DocsGen (`kujo docgen`), generated documentation, docs-as-contract surfaces, agent-readable JSON/gap outputs, documentation coverage gates, public-only docs gates, link validation, adapter extraction, README/reference alignment, or example smoke policy."
@@ -21,6 +21,8 @@ seo_description: "Use this skill when working on Kujo DocGen/DocsGen (`kujo docg
 ## What it covers
 
 Use this skill when working on Kujo DocGen/DocsGen (`kujo docgen`), generated documentation, docs-as-contract surfaces, agent-readable JSON/gap outputs, documentation coverage gates, public-only docs gates, link validation, adapter extraction, README/reference alignment, or example smoke policy.
+
+Run the install command from a new working directory. If you already have the released checkout, copy the complete skill folder from it instead of cloning again.
 
 ## Released guidance
 
@@ -32,9 +34,9 @@ Use this skill when working on Kujo DocGen/DocsGen (`kujo docgen`), generated do
 
 ## Release boundary
 
-This page reflects the 0.4.1 technical preview on 2026-08-25. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
+This page reflects the 0.7.0 technical preview on 2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
 
 ## Source
 
-- [Read the complete kujo-docgen-agent-readable skill on GitHub](https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-docgen-agent-readable/SKILL.md)
-- [Browse the released Kujo Skills Index](https://github.com/kujolang/kujo-skills/blob/main/SKILLS_INDEX.md)
+- [Read the complete kujo-docgen-agent-readable skill on GitHub](https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-docgen-agent-readable/SKILL.md)
+- [Browse the released Kujo Skills Index](https://github.com/kujolang/kujo-skills/blob/v0.7.0/SKILLS_INDEX.md)

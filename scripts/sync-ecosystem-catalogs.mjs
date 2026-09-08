@@ -6,6 +6,9 @@ const siteRoot = path.resolve(import.meta.dirname, '..');
 const reposRoot = process.env.KUJO_REPOS
   ? path.resolve(process.env.KUJO_REPOS)
   : path.resolve(siteRoot, '..');
+const skillsOnly = process.argv.includes('--skills-only');
+const skillsRef = process.env.KUJO_SKILLS_REF || 'origin/main';
+const skillsLinkRef = skillsRef.replace(/^origin\//, '');
 const skillsRepo = path.join(reposRoot, 'kujo-skills');
 const workflowsRepo = path.join(reposRoot, 'kujo-workflows');
 
@@ -14,7 +17,7 @@ function git(repo, ...args) {
 }
 
 function releasedFile(repo, file) {
-  return git(repo, 'show', `origin/main:${file}`);
+  return git(repo, 'show', `${repo === skillsRepo ? skillsRef : 'origin/main'}:${file}`);
 }
 
 function yamlString(value) {
@@ -182,17 +185,17 @@ function writePage(dir, order, slug, fields, body) {
   fs.writeFileSync(path.join(dir, name), lines.join('\n'));
 }
 
-const skillPaths = git(skillsRepo, 'ls-tree', '-r', '--name-only', 'origin/main', 'skills')
+const skillPaths = git(skillsRepo, 'ls-tree', '-r', '--name-only', skillsRef, 'skills')
   .split('\n').filter((file) => /^skills\/[^/]+\/SKILL\.md$/.test(file)).sort();
 const skillVersion = releasedFile(skillsRepo, 'VERSION').trim();
-const skillDate = git(skillsRepo, 'show', '-s', '--format=%cs', 'origin/main').trim();
+const skillDate = git(skillsRepo, 'show', '-s', '--format=%cs', skillsRef).trim();
 const skillsDir = path.join(siteRoot, 'content', 'skills');
 fs.rmSync(skillsDir, { recursive: true, force: true });
 
 const targets = [
   {
     kind: 'skills-index', name: 'Skills', slug: 'skills',
-    source_evidence: 'https://github.com/kujolang/kujo-skills/tree/main/skills',
+    source_evidence: `https://github.com/kujolang/kujo-skills/tree/${skillsLinkRef}/skills`,
     object_description: 'agent guidance library with modular field manuals and verification instruments',
     hero_path: 'assets/images/ecosystem/skills-agent-guidance-library.webp',
     social_path: 'assets/images/social/skills.jpg'
@@ -213,15 +216,18 @@ skillPaths.forEach((skillPath, index) => {
     ? 'Kujo SiteKit Repository'
     : titleFromMarkdown(source, words(slug)).replace(/\s+Workflows$/i, '');
   const description = frontmatterValue(source, 'description');
-  const heroPath = `assets/images/ecosystem/skill-${slug}.webp`;
-  const sourceUrl = `https://github.com/kujolang/kujo-skills/blob/main/${skillPath}`;
-  const bullets = usefulBullets(source);
-  const body = `## What it covers\n\n${description}\n\n## Released guidance\n\n${bullets.length ? bullets.join('\n') : 'The released skill file defines the authoritative workflow, boundaries, sources, and validation guidance.'}\n\n## Release boundary\n\nThis page reflects the ${skillVersion} technical preview on ${skillDate}. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.\n\n## Source\n\n- [Read the complete ${slug} skill on GitHub](${sourceUrl})\n- [Browse the released Kujo Skills Index](https://github.com/kujolang/kujo-skills/blob/main/SKILLS_INDEX.md)`;
+  const dedicatedHero = `assets/images/ecosystem/skill-${slug}.webp`;
+  const heroPath = fs.existsSync(path.join(siteRoot, dedicatedHero)) ? dedicatedHero : 'assets/images/ecosystem/skills-agent-guidance-library.webp';
+  const sourceUrl = `https://github.com/kujolang/kujo-skills/blob/${skillsLinkRef}/${skillPath}`;
+  const bullets = usefulBullets(source).map((line) => line.replace(/\]\((?!https?:|#)([^)]+)\)/g, (_, href) => `](https://github.com/kujolang/kujo-skills/blob/${skillsLinkRef}/${path.posix.normalize(path.posix.join(path.posix.dirname(skillPath), href))})`));
+  let body = `## What it covers\n\n${description}\n\nRun the install command from a new working directory. If you already have the released checkout, copy the complete skill folder from it instead of cloning again.\n\n## Released guidance\n\n${bullets.length ? bullets.join('\n') : 'The released skill file defines the authoritative workflow, boundaries, sources, and validation guidance.'}\n\n## Release boundary\n\nThis page reflects the ${skillVersion} technical preview on ${skillDate}. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.\n\n## Source\n\n- [Read the complete ${slug} skill on GitHub](${sourceUrl})\n- [Browse the released Kujo Skills Index](https://github.com/kujolang/kujo-skills/blob/${skillsLinkRef}/SKILLS_INDEX.md)`;
+  const extraPath = path.join(siteRoot, 'catalog-overrides', 'skills', `${slug}.md`);
+  if (fs.existsSync(extraPath)) body = body.replace('## Release boundary', `${fs.readFileSync(extraPath, 'utf8').trim()}\n\n## Release boundary`);
   writePage(skillsDir, index + 1, slug, {
     title, custom_url: slug, description, excerpt: skillCatalogExcerpt(description),
     featured_image: `/${heroPath}`, social_image: `/assets/images/social/${slug}.jpg`,
     section: 'Agent Skill', order: (index + 1) * 10,
-    install_command: `mkdir -p ~/.codex/skills && cp -R skills/${slug} ~/.codex/skills/`,
+    install_command: `git clone --branch ${skillsLinkRef} --depth 1 https://github.com/kujolang/kujo-skills.git && mkdir -p ~/.codex/skills && cp -R kujo-skills/skills/${slug} ~/.codex/skills/`,
     github_url: sourceUrl,
     launch_story: `One of ${skillPaths.length} focused, repository-backed skills in the Kujo Skills ${skillVersion} technical preview.`,
     scope_note: 'Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries.',
@@ -237,10 +243,12 @@ skillPaths.forEach((skillPath, index) => {
   });
 });
 
+let workflows = [];
+if (!skillsOnly) {
 const workflowCatalog = JSON.parse(releasedFile(workflowsRepo, 'docs/audit/workflow-catalog.json'));
 const workflowVersion = releasedFile(workflowsRepo, 'VERSION').trim();
 const workflowDate = git(workflowsRepo, 'show', '-s', '--format=%cs', 'origin/main').trim();
-const workflows = workflowCatalog.active_workflows;
+workflows = workflowCatalog.active_workflows;
 const workflowsDir = path.join(siteRoot, 'content', 'workflows');
 const operatorPageName = fs.existsSync(workflowsDir)
   ? fs.readdirSync(workflowsDir).find((name) => name.endsWith('-publishing-house-operator.md'))
@@ -299,15 +307,18 @@ if (operatorPage) {
   fs.writeFileSync(path.join(workflowsDir, `${operatorOrder}-publishing-house-operator.md`), operatorPage);
 }
 
+}
+
 const manifestPath = path.join(siteRoot, 'howl-social.json');
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 manifest.cards = manifest.cards.filter((card) => (
   card.id === 'publishing-house-operator'
-  || !/^kujolang\.ai\/ecosystem\/(skills|workflows)\//.test(card.url || '')
+  || !(skillsOnly ? /^kujolang\.ai\/ecosystem\/skills\// : /^kujolang\.ai\/ecosystem\/(skills|workflows)\//).test(card.url || '')
 ));
 manifest.cards.push(...generatedCards);
 fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
 
+if (!skillsOnly) {
 const targetsPath = path.join(siteRoot, 'assets', 'prompts', 'ecosystem-catalog-heroes.json');
 fs.writeFileSync(targetsPath, `${JSON.stringify({
   contract: 'generate-kujo-dither-heroes/references/visual-contract.json',
@@ -315,5 +326,7 @@ fs.writeFileSync(targetsPath, `${JSON.stringify({
   dimensions: { width: 1916, height: 821 },
   targets
 }, null, 2)}\n`);
+
+}
 
 console.log(JSON.stringify({ skills: skillPaths.length, workflows: workflows.length, targets: targets.length, cards: generatedCards.length }));

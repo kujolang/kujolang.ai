@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — Video skills catalog
+
+- Sync all 135 skills from Kujo Skills v0.7.0, including VideoOps and both HyperFrames video skills.
+- Add setup and style guide links, version-pinned sources, social cards, and generated catalog counts.
+- Preserve and repeat full-site SEO/AI-search checks in seo-audit/2026-09-08.
+
 ## Unreleased
 
 - Update SiteProbe for the native Kujo 0.3.0 release, exact runtime installation, qualified source packages, verification evidence, and current discovery metadata.
