@@ -1,0 +1,6 @@
+crawler,purpose,robots_access,live_status,waf_or_cdn_result,recommended_action,action_taken,evidence
+Googlebot,search discovery,True,200,HTTP header probe only; not verified crawler IP,preserve owner policy,none,baseline-edge-probes.json
+bingbot,search discovery,True,200,HTTP header probe only; not verified crawler IP,preserve owner policy,none,baseline-edge-probes.json
+OAI-SearchBot,search discovery,True,200,HTTP header probe only; not verified crawler IP,preserve owner policy,none,baseline-edge-probes.json
+ChatGPT-User,user-triggered fetch,True,200,HTTP header probe only; not verified crawler IP,preserve owner policy,none,baseline-edge-probes.json
+GPTBot,training,False,200,HTTP header probe only; not verified crawler IP,preserve owner policy,none,baseline-edge-probes.json

@@ -1,0 +1,7 @@
+phase,source_url,source_variant,http_status,target_url,chain_length,final_status,canonical_target,query_preserved,verification,issues
+baseline,http://kujolang.ai/ecosystem/siteprobe/?audit=siteprobe,"HTTP, slashless, or www",301,https://kujolang.ai/ecosystem/siteprobe/?audit=siteprobe,,200,,True,"baseline-edge-probes.json; first and final response, hop count not measured",
+baseline,https://kujolang.ai/ecosystem/siteprobe,"HTTP, slashless, or www",301,https://kujolang.ai/ecosystem/siteprobe/,,200,,not applicable,"baseline-edge-probes.json; first and final response, hop count not measured",
+baseline,https://www.kujolang.ai/ecosystem/siteprobe/?audit=siteprobe,"HTTP, slashless, or www",301,https://kujolang.ai/ecosystem/siteprobe/?audit=siteprobe,,200,,True,"baseline-edge-probes.json; first and final response, hop count not measured",
+after,http://kujolang.ai/ecosystem/siteprobe/?audit=siteprobe,"HTTP, slashless, or www",301,https://kujolang.ai/ecosystem/siteprobe/?audit=siteprobe,,200,,True,"after-edge-probes.json; first and final response, hop count not measured",
+after,https://kujolang.ai/ecosystem/siteprobe,"HTTP, slashless, or www",301,https://kujolang.ai/ecosystem/siteprobe/,,200,,not applicable,"after-edge-probes.json; first and final response, hop count not measured",
+after,https://www.kujolang.ai/ecosystem/siteprobe/?audit=siteprobe,"HTTP, slashless, or www",301,https://kujolang.ai/ecosystem/siteprobe/?audit=siteprobe,,200,,True,"after-edge-probes.json; first and final response, hop count not measured",

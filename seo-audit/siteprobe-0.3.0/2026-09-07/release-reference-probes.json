@@ -1,0 +1,40 @@
+{
+  "retrieved_at": "2026-09-08T02:57:27.101331+00:00",
+  "references": [
+    {
+      "url": "https://docs.kujolang.ai/tools/siteprobe/",
+      "status": 200,
+      "final_url": "https://docs.kujolang.ai/tools/siteprobe/"
+    },
+    {
+      "url": "https://github.com/kujolang/kujo/tree/2be1f04b89dbecd591ef1af0d68974c05586900e",
+      "status": 200,
+      "final_url": "https://github.com/kujolang/kujo/tree/2be1f04b89dbecd591ef1af0d68974c05586900e"
+    },
+    {
+      "url": "https://github.com/kujolang/siteprobe/blob/v0.3.0/docs/audits/repository-hardening.md",
+      "status": 200,
+      "final_url": "https://github.com/kujolang/siteprobe/blob/v0.3.0/docs/audits/repository-hardening.md"
+    },
+    {
+      "url": "https://github.com/kujolang/siteprobe/blob/v0.3.0/docs/release-qualification-0.3.0.md",
+      "status": 200,
+      "final_url": "https://github.com/kujolang/siteprobe/blob/v0.3.0/docs/release-qualification-0.3.0.md"
+    },
+    {
+      "url": "https://github.com/kujolang/siteprobe/releases/tag/v0.3.0",
+      "status": 200,
+      "final_url": "https://github.com/kujolang/siteprobe/releases/tag/v0.3.0"
+    },
+    {
+      "url": "https://github.com/kujolang/siteprobe/tree/v0.3.0",
+      "status": 200,
+      "final_url": "https://github.com/kujolang/siteprobe/tree/v0.3.0"
+    },
+    {
+      "url": "https://kujolang.ai/ecosystem/siteprobe/",
+      "status": 200,
+      "final_url": "https://kujolang.ai/ecosystem/siteprobe/"
+    }
+  ]
+}

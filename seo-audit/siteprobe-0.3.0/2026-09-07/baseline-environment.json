@@ -1,0 +1,15 @@
+{
+  "repository": "kujolang.ai-work",
+  "branch": "main",
+  "starting_sha": "078d3ae77861fef489445dfec0b446e341cbc019",
+  "scope": "SiteProbe v0.3.0 release update; full generated technical crawl, focused editorial and production checks",
+  "origin": "https://kujolang.ai",
+  "kujo_version": "kujo 1.3.1",
+  "kujo_binary_sha256": "319087dd77b69568d80657651c6153513e79ca97a3b76783aa257587b5a436c2",
+  "ssg_sha": "e165dbc1b596ea759a2b9c2ff0b9ca988c333eea",
+  "website_ci_runtime_pin": "7df293865ae7d342b669789d011f607449808b02",
+  "local_runtime_note": "Verified 5dcbfcd runtime (production source identical to 2be1f04). Identical runtime for baseline and after; website hosted CI independently uses its unchanged 7df2938 pin. Older local 1.2.3 baseline was deliberately interrupted before completion; not counted as passing.",
+  "superseded_local_runtime": "kujo 1.2.3",
+  "hosted_baseline_run": 34180933653,
+  "hosted_baseline_source_sha": "078d3ae77861fef489445dfec0b446e341cbc019"
+}

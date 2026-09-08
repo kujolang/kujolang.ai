@@ -1,0 +1,3688 @@
+[
+  {
+    "url": "https://kujolang.ai/ethos/",
+    "status": 200,
+    "title": "The Kujo Ethos | Kujolang.ai",
+    "description": "The working principles behind Kujo: local-first systems, explicit authority, inspectable artifacts, and tools that help people stay in control.",
+    "canonical": "https://kujolang.ai/ethos/",
+    "h1": [
+      "Ethos"
+    ],
+    "json_ld_types": [
+      "AboutPage"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19591,
+    "sha256": "b4228adb7740fe297c59737bb4b4705c03b57b47272ec51f4f2a02753bb6b19d"
+  },
+  {
+    "url": "https://kujolang.ai/contact/",
+    "status": 200,
+    "title": "Contact the Kujo Team | Kujolang.ai",
+    "description": "Talk with the Kujo team about the language, ecosystem, community, partnerships, or technical questions.",
+    "canonical": "https://kujolang.ai/contact/",
+    "h1": [
+      "Contact"
+    ],
+    "json_ld_types": [
+      "ContactPage"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 17276,
+    "sha256": "27413d642e541c86258dfdc10c2d994fe1981fbbd3b37b4e6739c1c1f97c1910"
+  },
+  {
+    "url": "https://kujolang.ai/providers/",
+    "status": 200,
+    "title": "Kujo Providers - Native AI Integrations | Kujolang.ai",
+    "description": "Explore Kujo's native provider packages: one readable interface for local models, hosted inference, cloud AI, and media generation.",
+    "canonical": "https://kujolang.ai/providers/",
+    "h1": [
+      "Kujo Providers"
+    ],
+    "json_ld_types": [
+      "WebPage"
+    ],
+    "json_ld_errors": [],
+    "image_count": 4,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 1,
+    "bytes": 19804,
+    "sha256": "fb307d0bfa53f7eda0c97393eb2c1cb095cfbb12f982694cbdd416c775341856"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-agents-sdk-workflows/",
+    "status": 200,
+    "title": "Agents SDK \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when working on Kujo Agents SDK runtime primitives, examples, offline fixtures, agent runners, tools, approvals, handoffs, tracing, artifact/session/memory stores, retrieval providers, integration adapters, MCP 2026 helpers, budget limits, no-network harnesses, or `agents-sdk` source/test changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-agents-sdk-workflows/",
+    "h1": [
+      "Agents SDK"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21025,
+    "sha256": "f9a7caec8efcc9ec99e6d18e9085d48bd901801770e058db2c3f26fec37b0de3"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-ai-chat-workflows/",
+    "status": 200,
+    "title": "Kujo AI Chat \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when running, configuring, testing, extending, or maintaining the AI Chat local multi-provider chat app: `npm run dev`, `npm run smoke`, SQLite chat state, provider profiles, encrypted API keys, SSE streaming, transcription, `bridge_chat.kujo`, HTTP/API contracts, smoke tests, or `ai-chat` source/docs changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-ai-chat-workflows/",
+    "h1": [
+      "Kujo AI Chat"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21623,
+    "sha256": "181cd6fd787e4f85097ace3c505be268a3a12820997764a2ff5d7e7ce044645f"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-ai-sdk-workflows/",
+    "status": 200,
+    "title": "Kujo AI SDK \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when building, testing, integrating, or maintaining Kujo AI SDK provider primitives: OpenAI-compatible chat/embeddings contracts, provider presets, fixture mode, streaming callbacks, retries/backoff, redaction, live provider smoke tests, telemetry bridge examples, benchmark quality gates, release gates, or `ai-sdk` source/docs changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-ai-sdk-workflows/",
+    "h1": [
+      "Kujo AI SDK"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21553,
+    "sha256": "832460ec121d7560327879da7b90db82d7540e7a1a9c6bb74286c2f2ab3e2646"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-assetworks-workflows/",
+    "status": 200,
+    "title": "Kujo AssetWorks \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when operating or maintaining AssetWorks media production: asset plans, deterministic probes, render/convert/resize adapters, captions, transcripts, thumbnails, accessibility records, provenance, rights references, checksums, manifests, signed exports, FFmpeg/image adapter conformance, or AssetWorks CLI/source/tests.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-assetworks-workflows/",
+    "h1": [
+      "Kujo AssetWorks"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20355,
+    "sha256": "c613634d6a48e21f6c507ac379484ee4ce3f319fbea58aef4c23124e72dbcc47"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-backlog-normalizer/",
+    "status": 200,
+    "title": "Kujo Backlog Normalizer \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when converting Kujo audit findings, drift reports, release blockers, DocGen gaps, Dependabot/security triage, or recurring automation output into fix-ready backlog tasks using Scout, PatchBrief, ChangeBucket, Spec, ShipCheck, DocGen evidence, and RunLedger context.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-backlog-normalizer/",
+    "h1": [
+      "Kujo Backlog Normalizer"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20626,
+    "sha256": "2ed855659b53904ab44f6024d7be3036b7ac12e5fe30ac50e4137ff574e19d27"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-benchmarks-capsule-workflows/",
+    "status": 200,
+    "title": "Kujo Benchmarks Capsule \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when running, validating, comparing, or maintaining the Capsule benchmark tool: `bin/capsule`, `make`, `inspect`, `validate`, `--stable`, `--dry-run`, `capsule.json`, `capsule.md`, `manifest.json`, fixture projects, benchmark evidence, or benchmarks-capsule source/test changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-benchmarks-capsule-workflows/",
+    "h1": [
+      "Kujo Benchmarks Capsule"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21144,
+    "sha256": "c282685d3b038f2a7be30b59a8bbdd9c975063d478294637f3846e0988818f07"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-bluepencil-workflows/",
+    "status": 200,
+    "title": "Kujo BluePencil \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when operating or maintaining BluePencil editorial review and calibration: eight-dimension reviews, blockers, verdicts, reviewer disagreement, style/brand/claims/format/accessibility checks, blind calibration, signed bundles, model-adapter conformance, reports, or BluePencil CLI/source/tests.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-bluepencil-workflows/",
+    "h1": [
+      "Kujo BluePencil"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20205,
+    "sha256": "87f5caa8c02a07f72897f1da25a89385bf7fb3ae9f44e0b75ff23f179acea4d1"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-casefile-workflows/",
+    "status": 200,
+    "title": "Kujo Casefile \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when capturing, reviewing, handing off, cleaning, or maintaining Casefile local failure evidence bundles: `casefile.kujo`, `casefile.toml`, `.casefile/`, `capture`, `show latest`, `list`, `doctor`, `clean`, `--from-log`, `--manual`, `--mirror-exit-code`, redaction, path safety, or Casefile CLI/tests/source changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-casefile-workflows/",
+    "h1": [
+      "Kujo Casefile"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21045,
+    "sha256": "a4c11e28a2ee3cde145f311a2f8f6411a02bad4eb20e81e975050ea6be0f883c"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-changebucket-workflows/",
+    "status": 200,
+    "title": "Kujo ChangeBucket \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when measuring or enforcing code-change footprint with ChangeBucket: `changebucket`, `changebucket check`, `--json`, `--markdown`, `--output`, `--base`, `--head`, `--repo`, budget flags, risk/blast-radius reports, file-category counts, generated markdown reports, or ChangeBucket CLI/tests/source changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-changebucket-workflows/",
+    "h1": [
+      "Kujo ChangeBucket"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20936,
+    "sha256": "561819eff21ac232bc6c710fde4b8ce681a1a9e85cd4a7a5abba117ec584f716"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-cli-contracts/",
+    "status": 200,
+    "title": "Kujo CLI Contracts \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when changing Kujo CLI output, exit codes, diagnostics, `--json` payloads, `--json-runtime-diagnostics`, LSP helper JSON, formatter/linter/docgen JSON, or automation/toolchain compatibility behavior.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-cli-contracts/",
+    "h1": [
+      "Kujo CLI Contracts"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19793,
+    "sha256": "84ec9687f72b19a6c13f9c3b5d2bcd22fa023644427e3803208fd568020de3ff"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-cms-workflows/",
+    "status": 200,
+    "title": "Kujo CMS \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use the Kujo CMS workflow skill for content, identity, SEO, themes, plugins, abilities, connectors, WebMCP, operations, tests, and release gates.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-cms-workflows/",
+    "h1": [
+      "Kujo CMS"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20476,
+    "sha256": "8ba017470e995b649cda2eeb7af9a464ff4134107ad25b25751b296ca4ede9c6"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-concord-workflows/",
+    "status": 200,
+    "title": "Kujo Concord \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when scanning, reporting, triaging, or maintaining Concord artifact-drift checks for Kujo ecosystem repositories: `concord scan`, `check`, `report`, `tasks`, `--format json`, `--output`, CLI/docs drift, Spec/Eval alignment, manifest/docs alignment, version consistency, example validity, source-of-truth findings, `.dogfood/concord/` outputs, or Concord CLI/source/test changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-concord-workflows/",
+    "h1": [
+      "Kujo Concord"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21537,
+    "sha256": "027f6dab928b8fbb3c60379d3bb53507d3cdbd8c711bbb5be8b7047019f59054"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-contentgraph-workflows/",
+    "status": 200,
+    "title": "Kujo ContentGraph \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when building, inspecting, comparing, explaining, analyzing, exporting, or consuming deterministic ContentGraph artifacts, incremental graph caches, link-opportunity reports, GraphML/SARIF exports, or ContentGraph source/tests.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-contentgraph-workflows/",
+    "h1": [
+      "Kujo ContentGraph"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19983,
+    "sha256": "3125f7b8411188a8ec0b670ba6f3be207bc4b9de931e6b10e1e98a59300e9843"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-core-language/",
+    "status": 200,
+    "title": "Kujo Core Language \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when writing, editing, explaining, or reviewing Kujo `.kujo` source code, including syntax, bindings, imports, functions, control flow, collections, truthiness, runtime errors, and VM-first execution defaults.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-core-language/",
+    "h1": [
+      "Kujo Core Language"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20239,
+    "sha256": "a2772d3af688c5a344c0ebed1b34093071146e59f3b395e28f987f0744a693a7"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-cross-repo-dogfood-runner/",
+    "status": 200,
+    "title": "Kujo Cross-Repo Dogfood Runner \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when running recurring cross-repo Kujo dogfood checks, weekly/monthly ecosystem automation, tool interoperability audits, or multi-repo evidence collection using Concord, Fence, Scout, ChangeBucket, PatchBrief, Scent, RunLedger, Casefile, DocGen, and Muzzle.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-cross-repo-dogfood-runner/",
+    "h1": [
+      "Kujo Cross-Repo Dogfood Runner"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20694,
+    "sha256": "d8e5993d0f30fe019728532fd1149ba2a549bc57d2f805b24a0d07a1465a8d8a"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-crud-api-workflows/",
+    "status": 200,
+    "title": "Kujo CRUD API \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when running, testing, extending, or maintaining the CRUD API showcase: `main.kujo`, SQLite item/project APIs, Next.js playground, auth strategies, smoke tests, frontend lint/build, DR/performance drills, API contracts, release checklist, or `crud-api` source/docs changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-crud-api-workflows/",
+    "h1": [
+      "Kujo CRUD API"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20520,
+    "sha256": "75b8161e2197a36ceef2191de1e2de08d73dc5b1b7831d84e39ba3a54333f632"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-dependabot-alert-triage/",
+    "status": 200,
+    "title": "Kujo Dependabot Alert Triage \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when triaging GitHub Dependabot or security alerts across Kujo repos, summarizing affected repositories/packages/severity/status/patched versions/PR state/next actions, creating fix-ready tasks, or maintaining a Strata running list. Do not dismiss alerts or mutate GitHub security state without explicit authorization.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-dependabot-alert-triage/",
+    "h1": [
+      "Kujo Dependabot Alert Triage"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21075,
+    "sha256": "91a7fac90db68033d0b10bf960b2066aae261426a96d357b227a5e49006e5f9d"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-dispatch-workflows/",
+    "status": 200,
+    "title": "Kujo Dispatch \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when running, inspecting, extending, or maintaining Dispatch reliable AI workflow orchestration: `dispatch.kujo`, `kujo run dispatch.kujo`, `demo`, `resume`, `templates`, `runs`, `show`, `inspect`, `doctor`, `cleanup`, `export-run`, `import-run`, workflow templates, declarative workflow files, plugins, approval gates, trace/report/state artifacts, tool policy profiles, bundle signing, offline fixture runs, SDK bridge integration, or Dispatch CLI/tests/source changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-dispatch-workflows/",
+    "h1": [
+      "Kujo Dispatch"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 22127,
+    "sha256": "2ab3c3fc8d22bbefd92a426ca7885bf34591c4c4cefc5c62df73e349003bd5d7"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-docgen-agent-readable/",
+    "status": 200,
+    "title": "Kujo DocGen And DocsGen \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when working on Kujo DocGen/DocsGen (`kujo docgen`), generated documentation, docs-as-contract surfaces, agent-readable JSON/gap outputs, documentation coverage gates, public-only docs gates, link validation, adapter extraction, README/reference alignment, or example smoke policy.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-docgen-agent-readable/",
+    "h1": [
+      "Kujo DocGen And DocsGen"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20757,
+    "sha256": "69f2a92a2e833f17ee09158c2e61d35aca5ece4a518a93c0fee6dd5e38eb72cb"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-docgen-public-docs-refresh/",
+    "status": 200,
+    "title": "Kujo DocGen Public Docs Refresh \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when refreshing Kujo DocGen public docs, generated documentation, agent-readable JSON/gap outputs, coverage gates, README/reference alignment, or example smoke policy after readiness or docs-drift evidence. Use `kujo docgen` and validate before committing; do not publish or deploy without explicit supported authorization.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-docgen-public-docs-refresh/",
+    "h1": [
+      "Kujo DocGen Public Docs Refresh"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21329,
+    "sha256": "f93417e286050529edd1685da4fd2fe2c75234e53b9f4844cba38c8ad299f997"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-docs-drift-auditor/",
+    "status": 200,
+    "title": "Kujo Docs Drift Auditor \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when auditing Kujo documentation drift, README/reference mismatches, generated-doc staleness, CLI/docs drift, example validity, or recurring docs health using Concord, Scout, PatchBrief, Lens, DocGen, and Muzzle evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-docs-drift-auditor/",
+    "h1": [
+      "Kujo Docs Drift Auditor"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20324,
+    "sha256": "67ef97ae0a581df05dec1da69df0a94531ecedf5ce177111996dca8c104598d9"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-dossier-workflows/",
+    "status": 200,
+    "title": "Kujo Dossier \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when operating or maintaining Dossier evidence ledgers: claims, sources, captured support, evidence classification, conflicts, quotations, consent, rights, freshness, verification, packets, reports, exports, encryption/signing adapters, or Dossier CLI/source/tests.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-dossier-workflows/",
+    "h1": [
+      "Kujo Dossier"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19962,
+    "sha256": "30afe56edf8caf139a32d27565a28acd7a814ccd5188da1cb96524c7501afd86"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-ecosystem-launch/",
+    "status": 200,
+    "title": "Kujo Ecosystem Launch \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when releasing a Kujo ecosystem tool, workflow, skill pack, or agent team and synchronizing its verified public web presence: implementation hardening, clean-install proof, version and changelog alignment, ShipCheck and repository gates, GitHub commit/tag/release operations, Kujolang.ai or agents.kujolang.ai catalog pages, Kujo dither heroes or agent portraits, Howl social cards, metadata/schema/sitemap/RSS/robots/llms.txt updates, SEO and AI-search auditing, deployment, live verification, or a release-only/site-only recovery pass.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-ecosystem-launch/",
+    "h1": [
+      "Kujo Ecosystem Launch"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 22077,
+    "sha256": "c9ad4a5833cd77277bec0cd4103912ba5cf3ace84d09334f586d2f91c00d3b74"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-enterprise-automation/",
+    "status": 200,
+    "title": "Kujo Enterprise Automation \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when designing Kujo automation for CI, policy gates, operational workflows, enterprise-safe scripting, audit logs, machine-readable reports, or capability-minimal production runs.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-enterprise-automation/",
+    "h1": [
+      "Kujo Enterprise Automation"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20010,
+    "sha256": "0d417824546220b76abd76c9a8d582a4bd1330387d348cfb164573452b40f009"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-eval-workflows/",
+    "status": 200,
+    "title": "Kujo Eval \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when creating, running, debugging, or maintaining Kujo Eval deterministic evaluation suites: `eval.json`, `kujo run main.kujo run`, `report`, `compare`, `lint`, `list-checks`, `snapshots`, `policy-explain`, `verify-manifest`, snapshot tests, JSON/HTTP/file/command checks, Eval artifacts, policy profiles, CI gates, or Eval CLI/source/test changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-eval-workflows/",
+    "h1": [
+      "Kujo Eval"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20935,
+    "sha256": "58ecf2fabb68d940140d31746769cdb0eb7242651ff7d57629fd10df25b378c0"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-fence-workflows/",
+    "status": 200,
+    "title": "Kujo Fence \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when setting up, running, interpreting, integrating, or maintaining Fence architecture-boundary checks for Kujo ecosystem repositories: `fence.kujo`, `fence.toml`, `fence-baseline.json`, `init`, `validate`, `check`, `explain`, `graph`, `baseline create`, `--changed-only`, `--baseline`, JSON/Markdown/SARIF reports, CI gates, zone rules, import-boundary violations, or Fence CLI/source/test changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-fence-workflows/",
+    "h1": [
+      "Kujo Fence"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21530,
+    "sha256": "e50b396a6a4ec844c24a3344ba598e86e3e11803d24a554cdff00a97110d57ef"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-galleypack-workflows/",
+    "status": 200,
+    "title": "Kujo GalleyPack \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when operating or maintaining GalleyPack production packages: artifact checksums, lineage, evidence/review attachments, package build/freeze, claim comparison, exact-version diff and drift validation, signed trees, archive/object-store adapters, exports, or GalleyPack CLI/source/tests.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-galleypack-workflows/",
+    "h1": [
+      "Kujo GalleyPack"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20163,
+    "sha256": "9d278ab9880656e873997f098a53f06bab5f6a9d8abcdf5ee8e282b18bc788f7"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-howl-workflows/",
+    "status": 200,
+    "title": "Kujo Howl \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when creating, validating, rendering, reviewing, or maintaining Howl showcase artifacts for Kujo examples: `howl init`, `howl validate`, `howl list`, `howl show`, `howl caption`, `howl render`, `howl.json`, `examples/*.kujo`, `dist/howl/`, deterministic SVG/Markdown/HTML cards, static galleries, social captions, or Howl CLI/source/test changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-howl-workflows/",
+    "h1": [
+      "Kujo Howl"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21154,
+    "sha256": "dae34ae56607aa8975e3da305e3a04f03641e9d64bc956ad008ae13582f37a11"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-kennel-workflows/",
+    "status": 200,
+    "title": "Kujo Kennel \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when inspecting, using, validating, or maintaining Kennel package/dependency workflows: `kennel.kujo`, package manifests, lockfiles, file dependencies, static indexes and mirrors, trust policy, source policy, semver range resolution, local hosted-registry lifecycle, install/update/validate behavior, release gates, or `kennel` source/test changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-kennel-workflows/",
+    "h1": [
+      "Kujo Kennel"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21365,
+    "sha256": "a9c975da2f8fce51b1754dd4a3d098bd70ecb058df72d74c38d1fd81efd6e10a"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-language-implementation/",
+    "status": 200,
+    "title": "Kujo Language Implementation \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when contributing to Kujo's Rust implementation: lexer, parser, AST, diagnostics, compiler, VM, interpreter, module loader, native functions, CLI, LSP, DocGen, JIT, or runtime security boundaries.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-language-implementation/",
+    "h1": [
+      "Kujo Language Implementation"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20290,
+    "sha256": "c2755d5e7560eecbfd140c2b622fd5c1c8c54d3e3964d3191a57e3e9e5b40312"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-lens-workflows/",
+    "status": 200,
+    "title": "Kujo Lens \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when setting up, running, interpreting, or maintaining Lens deterministic browser and visual QA workflows: `lens check`, `lens check --quick`, `lens inspect`, `lens flow`, `.lens.toml`, `.lens/runs/`, `lens-report.json`, Agent Repair Briefs, screenshots, accessibility checks, link checks, visual baselines, CI action wiring, RunLedger/Howl output, or Lens source/test changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-lens-workflows/",
+    "h1": [
+      "Kujo Lens"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21297,
+    "sha256": "aaf9512e9e7fee56404cdb94428d55e9037dbdcc56cb05b6dad3f0e19ba116c9"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-loop-engineering-workflows/",
+    "status": 200,
+    "title": "Kujo Loop Engineering \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when an agent should work through a bounded engineering task in an arbitrary repository with the Kujo loop-engineering harness: repo-local `.loop-engineering/` initialization, Markdown checklist classification, scoped local fixes only, deterministic eval gates, per-iteration evidence, structured external blockers, optional small commits/pushes, optional Strata handoff, and a fixed final summary contract.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-loop-engineering-workflows/",
+    "h1": [
+      "Kujo Loop Engineering"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21495,
+    "sha256": "b34b8973c26e8a97d93027ec0ca685fc5616d156ed6bf23da7a44cd7cf08e6b5"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-maintainer-review/",
+    "status": 200,
+    "title": "Kujo Maintainer Review \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when asked to review Kujo code, PRs, patches, examples, docs, CLI changes, native API changes, security boundaries, runtime parity work, or release-readiness changes like a strict Kujo maintainer.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-maintainer-review/",
+    "h1": [
+      "Kujo Maintainer Review"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19918,
+    "sha256": "dc3caa5b672a06432e57d985801492c13e264a46d6e37e60314a10be851740cf"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-mcp-workflows/",
+    "status": 200,
+    "title": "Kujo MCP \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when generating, running, validating, deploying, or maintaining Kujo MCP servers and repo-specific MCP scaffolds: `mcp make`, `kujo run mcp.kujo --interpreter make`, `mcp-server.json`, MCP tool/resource registries, generated `.mcp/` outputs, `mcp.manifest.json`, repo profiles, MCP safety tiers, auth/host/request guardrails, endpoint tests, or MCP source/test changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-mcp-workflows/",
+    "h1": [
+      "Kujo MCP"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21492,
+    "sha256": "8c34cd88b0c96c534c4a36de0f9638d4cb743cc84db1b9c7de13206a287bcb2b"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-muzzle-workflows/",
+    "status": 200,
+    "title": "Kujo Muzzle \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when setting up, running, or reviewing Muzzle quiet workflows for AI-assisted development: `muzzle init`, `.muzzle/workflows/`, `.muzzle/manifests/`, `muzzle run`, `--json`, `--verbose`, `--dry-run`, workflow logs/reports, loop mode, or Muzzle safety and output-contract changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-muzzle-workflows/",
+    "h1": [
+      "Kujo Muzzle"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20727,
+    "sha256": "2e7867c5d2230763496d59d516ab16ba09adf90d23b97ee46ce9aff15dc39e4e"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-packwrite-workflows/",
+    "status": 200,
+    "title": "Kujo PackWrite \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when generating, validating, reviewing, or maintaining PackWrite agent execution packs: `packwrite init`, `validate`, `prompt`, `config`, `doctor`, `packwrite.toml`, `MEGA_PROMPT.md`, generated `agent/` packs, model/provider setup, offline fake-response tests, or PackWrite CLI/source changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-packwrite-workflows/",
+    "h1": [
+      "Kujo PackWrite"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20700,
+    "sha256": "f14c39b0685597749ac10f5886dcdd238147389b97e8089c2497af6524973410"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-patchbrief-workflows/",
+    "status": 200,
+    "title": "Kujo PatchBrief \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when generating, consuming, validating, or maintaining PatchBrief structured git-diff briefs: `patchbrief.kujo`, `summarize`, `suggest-tests`, `handoff`, `--format json`, `--pretty`, implementation handoffs, reviewer notes, changed-file risk summaries, PatchBrief CLI/tests/source changes, or PatchBrief dogfood workflows.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-patchbrief-workflows/",
+    "h1": [
+      "Kujo PatchBrief"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20876,
+    "sha256": "ef2b9dc855fce59f6ed99a73997af6ba514744ca5c48e3a172efc7c38552561a"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-presswire-workflows/",
+    "status": 200,
+    "title": "Kujo PressWire \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when operating or maintaining PressWire approval-gated publication: adapter/capability inspection, preflight, schedule/publish ACT effects, status, corrections, unpublish/compensation, idempotency, reconciliation, receipts, CMS/Git-static/newsletter adapters, exports, or PressWire CLI/source/tests.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-presswire-workflows/",
+    "h1": [
+      "Kujo PressWire"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20216,
+    "sha256": "5632c0701bbde5967ee7bed326d8c0eccd437dbd0711cd2b618cf23593a02900"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-publishing-house-workflows/",
+    "status": 200,
+    "title": "Kujo Publishing House \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when installing, running, inspecting, recovering, integrating, or maintaining the Kujo Publishing House workflow suite: daily desk, governance, commissioning, evidence dossiers, primary pieces, asset production, editorial review, adaptation, format production, approval/publication, post-publication learning, fixture/live modes, capability preflight, exact compatibility locks, agent-step receipts, Dispatch state, or Publishing House workflow source/tests.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-publishing-house-workflows/",
+    "h1": [
+      "Kujo Publishing House"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 22113,
+    "sha256": "bf4f373646f1c227329c8442a19c7803f8305d2997ba198018c307966706dba8"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-rag-workflows/",
+    "status": 200,
+    "title": "Kujo RAG \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when setting up, running, extending, testing, or maintaining the Kujo RAG Starter Kit: `kujo run main.kujo --interpreter ingest|query|serve|demo|bootstrap`, local/offline RAG indexes, namespace isolation, parser/chunking/embedding/retrieval changes, API ingest/query endpoints, OpenAPI/SDK parity, release-evaluation gates, large-corpus benchmarks, index maintenance, bootstrap templates, or RAG security/operations docs.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-rag-workflows/",
+    "h1": [
+      "Kujo RAG"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21602,
+    "sha256": "4bb9550b387eae62ca09dc82a30683edcaa1ed053b81295ba72de63ce1287ea6"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-readersignal-workflows/",
+    "status": 200,
+    "title": "Kujo ReaderSignal \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when operating or maintaining ReaderSignal privacy-bounded audience learning: measurement snapshots, feedback, comparisons, uncertainty/sample-size handling, learning records, follow-up recommendations, deletion/retention receipts, signed publication verification, adapter fixtures, reports, or ReaderSignal CLI/source/tests.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-readersignal-workflows/",
+    "h1": [
+      "Kujo ReaderSignal"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20447,
+    "sha256": "b074156873a607c1b4b30fb4d345329ded587da5e1e876b1ef9cefb18a356ae0"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-readiness-auditor/",
+    "status": 200,
+    "title": "Kujo Readiness Auditor \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when auditing Kujo repositories for recurring readiness posture, release preparedness, production gaps, evidence quality, or weekly/monthly readiness reports across ShipCheck, Fence, Eval, Concord, ChangeBucket, RunLedger, and Casefile outputs.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-readiness-auditor/",
+    "h1": [
+      "Kujo Readiness Auditor"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20514,
+    "sha256": "29c9ef5b970e8daadc2138196a00a22e6664446be1c5b2f66ded2fdfd874b3d5"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-redact-workflows/",
+    "status": 200,
+    "title": "Kujo Redact \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when scanning, sanitizing, verifying, packing, or maintaining Redact local deterministic anonymization workflows: `redact.kujo`, `scan`, `sanitize`, `verify`, `pack`, policy YAML files, `.redact/runs/` audit artifacts, leakage checks, unsafe originals, AI-stub boundaries, or Redact CLI/source/test changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-redact-workflows/",
+    "h1": [
+      "Kujo Redact"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21093,
+    "sha256": "11f4a65e81c4b7dbe02d1b277e2ad26b8e89dfec90321131d8f51fbcb67c1d48"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-relay-workflows/",
+    "status": 200,
+    "title": "Kujo Relay \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when running, validating, inspecting, repairing, or maintaining Relay bounded agent mission workflows: `bin/relay`, `doctor`, `chat`, `models`, `agents`, `missions`, `runs`, fixture/live provider paths, PackWrite/RunLedger/ChangeBucket/Eval evidence, event bundles, tool-result bundles, run indexes, Watchdog route posture, or Relay source/docs changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-relay-workflows/",
+    "h1": [
+      "Kujo Relay"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21775,
+    "sha256": "071875e1286d7b960371c8006b555843360b4877cbe67f18485ebf6721293f63"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-release-gate-runner/",
+    "status": 200,
+    "title": "Kujo Release Gate Runner \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when running Kujo release gates, recurring release-readiness automation, pre-tag checks, blocker triage, or monthly gate evidence collection across ShipCheck, Eval, Fence, ChangeBucket, RunLedger, Casefile, DocGen gates, and Muzzle workflows.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-release-gate-runner/",
+    "h1": [
+      "Kujo Release Gate Runner"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20499,
+    "sha256": "1af3d61e80f59d6efc28037202b8d53c3af39cdeef8bd3dcb07bee790861d68f"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-runledger-workflows/",
+    "status": 200,
+    "title": "Kujo RunLedger \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when recording, comparing, reporting, or maintaining RunLedger receipts for AI-agent build runs: `runledger start`, `finish`, `usage`, `cost`, `note`, `followup`, `list`, `show`, `compare`, `report`, `.runledger/` JSON files, run verdicts, token/cost capture, read-only git metadata receipts, RunLedger reports, or RunLedger CLI/tests/source changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-runledger-workflows/",
+    "h1": [
+      "Kujo RunLedger"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21125,
+    "sha256": "d5126ac10cdba5cc2fe2bd9153f949436a927f556315aeedcbab65b321551415"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-runtime-parity/",
+    "status": 200,
+    "title": "Kujo Runtime Parity \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when investigating VM versus interpreter behavior, deciding runtime flags, adding language/runtime surfaces, updating parity tests, or preventing accidental interpreter-default workflows.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-runtime-parity/",
+    "h1": [
+      "Kujo Runtime Parity"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19851,
+    "sha256": "1610e201849eefd468c64e6bba048f392b6e00dd418693f96ffe1e8a7aa3cf54"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-scent-workflows/",
+    "status": 200,
+    "title": "Kujo Scent \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when creating, previewing, reviewing, or maintaining Scent context packs for agent handoff: `scent pack`, `--dry-run`, `--json`, `--budget`, `--target`, `--include`, `--exclude`, `--changed`, `--staged`, `--unstaged`, `.scent/` or generated pack artifacts, `context.md`, `context.json`, `manifest.json`, `files.json`, `redactions.json`, and Scent CLI/source/test changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-scent-workflows/",
+    "h1": [
+      "Kujo Scent"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21400,
+    "sha256": "808cd7a49f562097f0c5586640f83c6e3509bc4c8fc43f70327513ec3b9fb9ae"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-scout-workflows/",
+    "status": 200,
+    "title": "Kujo Scout \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when running, interpreting, extending, or maintaining Scout, the Kujo-native codebase intelligence tool: `kujo run scout.kujo`, repo context packs, `FILE_TREE.md`, `llms.txt`, `AGENTS.md`, `CHECKLIST.md`, `intelligence.json`, `scan_manifest.json`, security exports, baseline suppression, Kennel metadata, Scout fixtures, snapshots, or Scout regression scripts.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-scout-workflows/",
+    "h1": [
+      "Kujo Scout"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21010,
+    "sha256": "7bb5a4beb9cc0a94c41b68f8620c1ae5d308225d6d51f7a00f97019574efd786"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-searchbridge-workflows/",
+    "status": 200,
+    "title": "Kujo Searchbridge \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when running SearchBridge doctor, capability preflight, fixture providers, normalized evidence reads, batch reads, evidence-query, signed adapters, replay/cache, OpenTelemetry, or explicit ACT submission.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-searchbridge-workflows/",
+    "h1": [
+      "Kujo Searchbridge"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19829,
+    "sha256": "a13dbaf9195ace126747f71b292c5d4cd5ac1e73e7faf26b4e8770a0ccd5d353"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-security-hardening/",
+    "status": 200,
+    "title": "Kujo Security Hardening \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when writing or reviewing Kujo scripts that touch files, processes, shell commands, network, databases, archives, HTML/static serving, AI provider egress, secrets, or untrusted input; it enforces Kujo's conservative native API security posture.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-security-hardening/",
+    "h1": [
+      "Kujo Security Hardening"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20407,
+    "sha256": "c0a35a073703e1f3f72ae7880d129582a1d803f639700e4b755c5d151f4f01e5"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-shipcheck-workflows/",
+    "status": 200,
+    "title": "Kujo ShipCheck \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when running, reviewing, integrating, or maintaining ShipCheck release-readiness workflows for Kujo ecosystem repositories: `shipcheck.kujo`, `scan`, `checklist`, `gate`, `release-note`, `--format json`, CI release gates, markdown/json reports, release check catalogs, gate exit semantics, or ShipCheck CLI/source/test changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-shipcheck-workflows/",
+    "h1": [
+      "Kujo ShipCheck"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21163,
+    "sha256": "b402eee34ffce5bf6b165829dc44395f6397f7a10c98571fdf0a028504deb2ae"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-site-kit-workflows/",
+    "status": 200,
+    "title": "Kujo SiteKit Repository \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when building, validating, consuming, or maintaining SiteKit design-system artifacts in the `site-kit` repository: tokens, component schemas/templates/CSS, generated `dist/sitekit.css`, optional `dist/sitekit.js`, accessibility checks, browser smoke tests, launch checklist, or Workcell evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-site-kit-workflows/",
+    "h1": [
+      "Kujo SiteKit Repository"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20933,
+    "sha256": "4d1b61e060f9c0ae0930c330b7d471836adbe630d9a9d6f0e44349d4242b1af7"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-sitekit-workflows/",
+    "status": 200,
+    "title": "Kujo SiteKit \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when building, validating, consuming, or maintaining SiteKit design-system artifacts: tokens, component schemas/templates/CSS, layout recipes, generated `dist/sitekit.css`, optional `dist/sitekit.js`, `DESIGN.md`, accessibility/semantic standards, examples, snapshots, smoke tests, or SiteKit source/docs changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-sitekit-workflows/",
+    "h1": [
+      "Kujo SiteKit"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21110,
+    "sha256": "16142f41f45822a16cbbe14dd7f3b3c0b1a977460738fcead57e7f3a48207fd0"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-siteprobe-workflows/",
+    "status": 200,
+    "title": "Kujo Siteprobe \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when running, validating, verifying, comparing, reporting, or integrating SiteProbe website-intelligence crawls, signed `.siteprobe` artifacts, deterministic baselines, or SiteProbe source/tests.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-siteprobe-workflows/",
+    "h1": [
+      "Kujo Siteprobe"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19740,
+    "sha256": "f35f34fda0846e6ea953cdf61908f174f52dec88d3c402cdd962b588d53faf50"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-skill-auditor/",
+    "status": 200,
+    "title": "Kujo Skill Auditor \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when reviewing, refreshing, or auditing the Kujo skills pack so each `skills/*/SKILL.md` file matches current Kujo tool behavior, commands, docs, tests, safety boundaries, and repo reality. Use for weekly skill maintenance, stale skill checks, trigger/index updates, or when Kujo tools changed and their agent skills may need synchronization.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-skill-auditor/",
+    "h1": [
+      "Kujo Skill Auditor"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21042,
+    "sha256": "fb13b1b0a0251c0ccb07462cdb33519cae926820929149ffaee88ea68129ee09"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-spec-workflows/",
+    "status": 200,
+    "title": "Kujo Spec \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when creating, validating, exporting, reviewing, or maintaining Kujo Spec task contracts: `.spec.yml`, `.spec.yaml`, `.spec.toml`, `.spec.json`, `spec init`, `validate`, `render`, `export`, `export-agent-context`, `export-eval`, `ci`, `list`, `search`, `status`, `template`, `graph`, safe-write/template-source policy, Spec schema changes, or Spec CLI/tests/source changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-spec-workflows/",
+    "h1": [
+      "Kujo Spec"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21072,
+    "sha256": "ba97eac05b0e7ee482edeb801bd364618533f353ac3d4be755ad2e101c32b897"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-ssg-workflows/",
+    "status": 200,
+    "title": "Kujo SSG \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when building, validating, configuring, testing, or maintaining the Kujo SSG static-site showcase: `build.kujo`, starter content, templates, assets, `kujo-ssg.yml`, feeds, sitemap, robots, `llms.txt`, generated `output/`, CLI flags, parallel shard builds, DocGen docs bridge, reusable docs starter, validation scripts, release gates, or `ssg` source/docs changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-ssg-workflows/",
+    "h1": [
+      "Kujo SSG"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21200,
+    "sha256": "867d54c0fed4846f1146289cd09acffa9561374365c0413a274e87dd757a4d75"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-standard-library/",
+    "status": 200,
+    "title": "Kujo Standard Library \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when using, adding, or reviewing Kujo native standard library functions, including arity, return types, capability gates, JSON/JSONL conversion, filesystem, process, network, database, crypto, strings, URI encoding, arrays, dictionaries, rendering helpers, AI helpers, and collection helper behavior.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-standard-library/",
+    "h1": [
+      "Kujo Standard Library"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20737,
+    "sha256": "be719da5e13adbfa1d215dcb039f1c88df79daeface7f7eb114f71d5f0c4b50a"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-storydesk-workflows/",
+    "status": 200,
+    "title": "Kujo StoryDesk \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when operating or maintaining StoryDesk editorial control: ideas, campaigns, commissions, assignments, claims, dependencies, status/block events, daily/range/resumable packets, handoffs, review queues, JSON or SQLite state, policy transitions, signed exports, adapter conformance, or StoryDesk CLI/source/tests.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-storydesk-workflows/",
+    "h1": [
+      "Kujo StoryDesk"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20288,
+    "sha256": "bceb75d3b38184cf3953b520db4d7a4052328c98cadf3c31351ed98079f5de37"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-testing-release-gates/",
+    "status": 200,
+    "title": "Kujo Testing And Release Gates \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when testing Kujo scripts, examples, docs, security behavior, runtime parity, CLI contracts, or Rust implementation changes, and when preparing or reviewing release-gate readiness.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-testing-release-gates/",
+    "h1": [
+      "Kujo Testing And Release Gates"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20164,
+    "sha256": "83fedc2b66e559cae96ebd8b77b4e9b778b004195e7c3199ff579113dbfc731e"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-tool-building/",
+    "status": 200,
+    "title": "Kujo Tool Building \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when building practical Kujo CLI tools, quality gates, policy checkers, repo scanners, JSON-reporting scripts, or local automation that needs deterministic arguments, output, and exit behavior.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-tool-building/",
+    "h1": [
+      "Kujo Tool Building"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19754,
+    "sha256": "fb48c713f4f8e6664be7ff0091a75dab94da0eca072bc385f933b6f047f39ead"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-tribunal-workflows/",
+    "status": 200,
+    "title": "Kujo Tribunal \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when running, reviewing, integrating, or maintaining Tribunal local decision-evidence workflows: `tribunal review`, `resume`, `compare`, `re-review`, `kill`, `validate`, `audit`, `verify`, bundle/store/provenance commands, signed evidence, trust policies, run artifacts, schemas, release gates, or Tribunal source/docs changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-tribunal-workflows/",
+    "h1": [
+      "Kujo Tribunal"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21184,
+    "sha256": "2d6b8c61b897dd45dcd0804446ced136f1bd576421d041f51bc2cf28849ba76d"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-versionseal-workflows/",
+    "status": 200,
+    "title": "Kujo VersionSeal \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when operating or maintaining VersionSeal exact-version human approval: approval requests, approve/reject/request-changes decisions, revocation, expiry, checksum verification, quorum and separation-of-duties policies, signatures, replication conflicts, exports, or VersionSeal CLI/source/tests.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-versionseal-workflows/",
+    "h1": [
+      "Kujo VersionSeal"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20236,
+    "sha256": "72aa03ae8b5154a569d1ee8c7c992320fc36bc809924fc77dd9e6a5f5f8dd72c"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-watchdog-workflows/",
+    "status": 200,
+    "title": "Kujo Watchdog \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when running, configuring, testing, integrating, or maintaining Watchdog local AI telemetry/proxy workflows: `dashboard_server.kujo`, `/proxy/v1`, `/api/requests`, `/api/proxy-config`, SQLite telemetry, auth modes, redaction, rate limits, dashboard assets, benchmark scripts, AI Chat integration, or `watchdog` source/docs changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-watchdog-workflows/",
+    "h1": [
+      "Kujo Watchdog"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21328,
+    "sha256": "e86393f17b7b4413d5cd9f4112703175cfb7eb1b46dacc862fb81e857a3789ea"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-way-development/",
+    "status": 200,
+    "title": "Kujo Way Development \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when building or substantially reviewing a Kujo-related project that needs cross-ecosystem routing, compact agent-readable code, deterministic AI/offline behavior, and evidence-backed completion. For a narrow syntax question only, prefer kujo-core-language; for one specialized ecosystem tool, prefer its focused workflow skill.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-way-development/",
+    "h1": [
+      "Kujo Way Development"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20511,
+    "sha256": "5c364d462a0129c868a9eeebbc51e3b010aeb4af349394c7f261fc4603c74d3f"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/kujo-workcell-workflows/",
+    "status": 200,
+    "title": "Kujo Workcell \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use this skill when initializing, validating, inspecting, running, verifying, cleaning, or maintaining Workcell local Docker/Podman execution sandboxes: `workcell.json`, `bin/workcell`, `doctor`, `init`, `validate`, `inspect`, `run`, `verify`, `clean`, `.workcell/runs/`, receipts, manifests, artifacts, runtime boundaries, release reports, or Workcell source/docs changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/kujo-workcell-workflows/",
+    "h1": [
+      "Kujo Workcell"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 21554,
+    "sha256": "bbf585ffdf87a38c54eda1bacf5826be14df7647aef3fb860f043cd862630ed0"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/publishing-house-profile-setup/",
+    "status": 200,
+    "title": "Publishing House Profile Setup \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when onboarding or validating a portable Kujo Publishing House: House, Brand, and Audience profiles; owner and approval roles; mission, quality and risk posture; portfolio constraints; voice and terminology; audiences, channels, accessibility; destinations, adapter references, permission defaults, validity dates, or escalation contacts.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/publishing-house-profile-setup/",
+    "h1": [
+      "Publishing House Profile Setup"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20690,
+    "sha256": "8b7601e2e9367882260e75109773e46e29d3d5e6fc5c989f8379d275161f74cc"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/publishing-house-quality-calibration/",
+    "status": 200,
+    "title": "Publishing House Quality Calibration \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when running, reviewing, extending, or maintaining Publishing House premium-quality calibration: the eight-dimension rubric, blinded A/B fixtures, judge protocol/schema, expected judgments, generic-work signals, blocking failures, role coverage, BluePencil calibration records, or calibration corpus validation.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/publishing-house-quality-calibration/",
+    "h1": [
+      "Publishing House Quality Calibration"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20678,
+    "sha256": "96c55d6cfa8190fc349371c3f3ffbddc770898110f224409609c40e8b0d5f2cc"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-accessibility-review/",
+    "status": 200,
+    "title": "WebOps Accessibility Review \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when running repeatable automated accessibility review with explicit manual gaps.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-accessibility-review/",
+    "h1": [
+      "WebOps Accessibility Review"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19094,
+    "sha256": "71d764984380b1aaded16627b713316acce1e708e776d57d10cd9182fc7f68f3"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-ai-search-visibility/",
+    "status": 200,
+    "title": "WebOps AI Search Visibility \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when running repeatable AI/search visibility benchmark suites.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-ai-search-visibility/",
+    "h1": [
+      "WebOps AI Search Visibility"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18984,
+    "sha256": "233b6c4e61590305d9965e77b9079433d4dab8874e3102de560664c87a749d7a"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-analytics-analysis/",
+    "status": 200,
+    "title": "WebOps Analytics Analysis \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when analyzing real website behavior from normalized analytics evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-analytics-analysis/",
+    "h1": [
+      "WebOps Analytics Analysis"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18986,
+    "sha256": "bcd1e0f2cf6b759099ba3ef84f51a2db8dd930810093b54372be624ad95357e7"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-backlink-and-mention-analysis/",
+    "status": 200,
+    "title": "WebOps Backlink And Mention Analysis \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when analyzing new/lost backlinks, linked and unlinked mentions, and evidence-backed link concerns.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-backlink-and-mention-analysis/",
+    "h1": [
+      "WebOps Backlink And Mention Analysis"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19419,
+    "sha256": "88815360dd8f48e403513eca4de4496fd21c9c9af6d81bcd0508d486a9b94c49"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-cannibalization/",
+    "status": 200,
+    "title": "WebOps Cannibalization \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when identifying likely intent competition while separating normal overlap.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-cannibalization/",
+    "h1": [
+      "WebOps Cannibalization"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18936,
+    "sha256": "bff16a584722d50ddc20971bad870e4fb2b47c644b6913bddfe6a59f3a103758"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-capability-preflight/",
+    "status": 200,
+    "title": "WebOps Capability Preflight \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when checking which WebOps website, repository, browser, search, analytics, performance, backlink, keyword, publishing, distribution, or submission capabilities are available.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-capability-preflight/",
+    "h1": [
+      "WebOps Capability Preflight"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19641,
+    "sha256": "aa6e1d9976cd5cd43c9d7737163bd0add272bd327b6df36a9423fd9a105ffeb1"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-competitor-intelligence/",
+    "status": 200,
+    "title": "WebOps Competitor Intelligence \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when monitoring selected public competitors or peers for meaningful change.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-competitor-intelligence/",
+    "h1": [
+      "WebOps Competitor Intelligence"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19110,
+    "sha256": "3c1e3d916c0a90e7b87c20745528b64b9779ccc12d13e077f1b51ee6a0826c4e"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-content-accuracy/",
+    "status": 200,
+    "title": "WebOps Content Accuracy \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when reviewing website claims for outdated or invalid guidance.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-content-accuracy/",
+    "h1": [
+      "WebOps Content Accuracy"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18873,
+    "sha256": "eab1c2268ea6daa1c3378b7833f0be02863920c74d6563a97c3cf3b410e02c4c"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-content-decay/",
+    "status": 200,
+    "title": "WebOps Content Decay \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when identifying content deterioration or staleness without conflating age and decline.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-content-decay/",
+    "h1": [
+      "WebOps Content Decay"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18945,
+    "sha256": "fda3e1faf09cdc47e012bbb4759a9186f6704b8706b0f9abce8dedfca4318376"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-content-gap/",
+    "status": 200,
+    "title": "WebOps Content Gap \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when classifying site coverage against audience/search needs.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-content-gap/",
+    "h1": [
+      "WebOps Content Gap"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18733,
+    "sha256": "a0ba543029168859ec4a60fee6ab281ae9604a747859ae1e7491945ea553e315"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-content-portfolio/",
+    "status": 200,
+    "title": "WebOps Content Portfolio \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when assigning longitudinal content portfolio states.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-content-portfolio/",
+    "h1": [
+      "WebOps Content Portfolio"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18820,
+    "sha256": "059df127ec9434476535fdc4e21ebfc282788360d41ef5717100bf077b2c112a"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-content-pruning/",
+    "status": 200,
+    "title": "WebOps Content Pruning \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when reviewing obsolete or redundant content for keep, refresh, merge, redirect, or retire proposals.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-content-pruning/",
+    "h1": [
+      "WebOps Content Pruning"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19088,
+    "sha256": "04f0a768de3682e97dad3859916aeeca6fb2e87950358551123d5220078a4aab"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-distribution/",
+    "status": 200,
+    "title": "WebOps Distribution \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when creating source-grounded distribution assets and optionally publishing with ACT authority.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-distribution/",
+    "h1": [
+      "WebOps Distribution"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18971,
+    "sha256": "f1f3425263fa120e2420db2d1583931829dc2ed0e2ca0704108cbd288be0f543"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-indexation/",
+    "status": 200,
+    "title": "WebOps Indexation \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when auditing crawlability, local indexability, and confirmed provider index state.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-indexation/",
+    "h1": [
+      "WebOps Indexation"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18848,
+    "sha256": "c8c3d8cf6b693fba2218519783797ab9de1dbecb4c145d0a841ac632ef130563"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-information-architecture/",
+    "status": 200,
+    "title": "WebOps Information Architecture \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when auditing site navigation, hierarchy, taxonomy, URLs, depth, clusters, and discoverability.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-information-architecture/",
+    "h1": [
+      "WebOps Information Architecture"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19266,
+    "sha256": "17d039c42cfd5837e1ab6cc88ab6546a3bde484aee298c68c5399fa5cba722ed"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-internal-linking/",
+    "status": 200,
+    "title": "WebOps Internal Linking \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when analyzing, proposing, or explicitly applying contextual internal links.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-internal-linking/",
+    "h1": [
+      "WebOps Internal Linking"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18960,
+    "sha256": "7d7688236fc5aca40df5a9db165c5328ffd9f6f0848c869bf965d4535a997ec3"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-keyword-opportunity/",
+    "status": 200,
+    "title": "WebOps Keyword Opportunity \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when finding query opportunities while separating measurement, estimates, and public research.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-keyword-opportunity/",
+    "h1": [
+      "WebOps Keyword Opportunity"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19135,
+    "sha256": "5057f3824f984551e84bebdada90e541256a0d5975855936f34a696bef5db0ca"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-link-health/",
+    "status": 200,
+    "title": "WebOps Link Health \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when auditing broken, redirected, malformed, or unexpected links.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-link-health/",
+    "h1": [
+      "WebOps Link Health"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18770,
+    "sha256": "e8fb4d61b0bddde0ec6f3e81c9f0340c096446f0460fe1b49dd06aa4119f77a4"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-longitudinal-findings/",
+    "status": 200,
+    "title": "WebOps Longitudinal Findings \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when creating, comparing, or updating stable WebOps findings, recommendations, actions, outcomes, and recurring-run history.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-longitudinal-findings/",
+    "h1": [
+      "WebOps Longitudinal Findings"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19362,
+    "sha256": "7d4860a975dd14233a44c804ccc6a394fb5fe8bf4fb21b8d2f4e4d7408b01af7"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-reporting/",
+    "status": 200,
+    "title": "WebOps Reporting \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when synthesizing validated specialist evidence into quiet WebOps reports.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-reporting/",
+    "h1": [
+      "WebOps Reporting"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18778,
+    "sha256": "a98a052d86b8c1557aba8ca9353037e54fbacbf4202846c9335b5e0ca45cf641"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-schema-and-metadata/",
+    "status": 200,
+    "title": "WebOps Schema And Metadata \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when auditing structured data and page/social metadata.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-schema-and-metadata/",
+    "h1": [
+      "WebOps Schema And Metadata"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18896,
+    "sha256": "f116a33a8ae18d35ccbc057474228ff2d7e897b9ccf29e3df8c45e9cda6a81ce"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-search-performance/",
+    "status": 200,
+    "title": "WebOps Search Performance \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when analyzing longitudinal measured search performance.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-search-performance/",
+    "h1": [
+      "WebOps Search Performance"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18891,
+    "sha256": "7e635fc3ccdd610901b01a30cf6219a37dcb54036477f29be4e9ea09f45f059c"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-search-standards-watch/",
+    "status": 200,
+    "title": "WebOps Search Standards Watch \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when monitoring authoritative search, indexing, structured-data, analytics, browser, AI-search, and web-standard changes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-search-standards-watch/",
+    "h1": [
+      "WebOps Search Standards Watch"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19383,
+    "sha256": "3d9a8720c60bb8852ecbae861b8dd114030813166b5e77d45bfcbb82a82f3b23"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-search-submission/",
+    "status": 200,
+    "title": "WebOps Search Submission \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when preflighting or performing explicit ACT search submission through supported providers.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-search-submission/",
+    "h1": [
+      "WebOps Search Submission"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19066,
+    "sha256": "aaeb339b064b6761eae7d31abb81270ff6fe2d166db55cb708ee09fac02d35bf"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-site-profile/",
+    "status": 200,
+    "title": "WebOps Site Profile \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when configuring or validating a portable WebOps site profile, repository binding, integration references, permission default, or site identity.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-site-profile/",
+    "h1": [
+      "WebOps Site Profile"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19272,
+    "sha256": "947e75e67ac69ad2b21e75a26dfdaef785a438199187f02e50070edaee3ecde8"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-technical-seo/",
+    "status": 200,
+    "title": "WebOps Technical SEO \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when performing a deterministic technical SEO audit from crawl evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-technical-seo/",
+    "h1": [
+      "WebOps Technical SEO"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18853,
+    "sha256": "c0d995841bedec2260cb20a40bd17fb99942a4d8d7a14765f61f30e46f693e0b"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/webops-web-performance/",
+    "status": 200,
+    "title": "WebOps Web Performance \u2014 Kujo Agent Skill | Kujolang.ai",
+    "description": "Use when analyzing lab and field website performance as distinct evidence classes.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/webops-web-performance/",
+    "h1": [
+      "WebOps Web Performance"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18924,
+    "sha256": "21075eb55543c643aee10ed4fe2c343fd8dc6f3d9bcb2d7b040e5efc5d1052ac"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/skills/",
+    "status": 200,
+    "title": "Skills | Kujolang.ai",
+    "description": "Browse 84 published Kujo Agent Skill pages drawn from current kujo-skills releases, including language, tooling, safety, release, and WebOps guidance.",
+    "canonical": "https://kujolang.ai/ecosystem/skills/",
+    "h1": [
+      "Skills"
+    ],
+    "json_ld_types": [
+      "CollectionPage"
+    ],
+    "json_ld_errors": [],
+    "image_count": 99,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 119964,
+    "sha256": "e1f31f5e56bf1639f5b74440e52f7bc314d4770cdd7ddd2521ec54343cc3d202"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/owned-agent-project/",
+    "status": 200,
+    "title": "Owned Agent Project \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Prove the complete repository-owned Kujo Agent Project lifecycle with inspectable evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/owned-agent-project/",
+    "h1": [
+      "Owned Agent Project"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19590,
+    "sha256": "526c6b3103fc14f8a2dce9c9530c8fc677109e550e07009097c6d013949d902f"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/agency-runner/",
+    "status": 200,
+    "title": "Agency Runner \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Turn an agency task and site profile into a resumable local proof packet.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/agency-runner/",
+    "h1": [
+      "Agency Runner"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19092,
+    "sha256": "c8d73ee2fbbcc317687b4f79ab8f75f0c43d4b175688914ea2d952e52cfb68a0"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/agency-verified-fix-loop/",
+    "status": 200,
+    "title": "Agency Verified Fix Loop \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Demonstrate a deterministic browser-visible fix with staged evidence and handoff.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/agency-verified-fix-loop/",
+    "h1": [
+      "Agency Verified Fix Loop"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19506,
+    "sha256": "e181275ccd9bea053fdfa72ce600c4536eb950ce9023b2ed09e2a376c3097fce"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/ai-sdk-muzzle-benchmark/",
+    "status": 200,
+    "title": "AI SDK Muzzle Benchmark \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Compare raw and Muzzle-mediated AI SDK runs with token and transcript evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/ai-sdk-muzzle-benchmark/",
+    "h1": [
+      "AI SDK Muzzle Benchmark"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19443,
+    "sha256": "faff69495336014f6949d33b1ab9a1fe2ade37a63cc1e860837c9d59498bbbf9"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/ai-sdk-watchdog-showcase/",
+    "status": 200,
+    "title": "AI SDK Watchdog Showcase \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Route AI SDK chat traffic through Watchdog and export telemetry.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/ai-sdk-watchdog-showcase/",
+    "h1": [
+      "AI SDK Watchdog Showcase"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19316,
+    "sha256": "5007f64a552aa35a4f06954ae3e929fd596868aaf1b3a0b7be82c7743787cad6"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/casefile-incident-evidence-packet/",
+    "status": 200,
+    "title": "Casefile Incident Evidence Packet \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Capture a deterministic failure into a redacted incident evidence bundle.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/casefile-incident-evidence-packet/",
+    "h1": [
+      "Casefile Incident Evidence Packet"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19560,
+    "sha256": "44a8a7f17f7f98841f1cb74a1b886131f89dc09fdec666521778200d8fb609a2"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/codebase-cleanup/",
+    "status": 200,
+    "title": "Codebase Cleanup \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Reduce unnecessary repository code and complexity through evidence-classified analysis, reviewer-approved mechanical cleanup, verification rollback, and structured reporting.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/codebase-cleanup/",
+    "h1": [
+      "Codebase Cleanup"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20563,
+    "sha256": "9804e4db9a2b4fde6bde344f11b81ac9ace8e4ac08744ba99c22bb6448c3162a"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/docsgen-repo-contract-runner/",
+    "status": 200,
+    "title": "Docsgen Repo Contract Runner \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Generate a reviewable DocsGen contract packet for a chosen repository.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/docsgen-repo-contract-runner/",
+    "h1": [
+      "Docsgen Repo Contract Runner"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19511,
+    "sha256": "27a2c2bce2528da6846737dc9810b97e9beb0703aea19736ab24e7fb90ccafe8"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/enterprise-dispatch-approval-router/",
+    "status": 200,
+    "title": "Enterprise Dispatch Approval Router \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Run a resumable Dispatch workflow with an explicit approval boundary and diagnostics.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/enterprise-dispatch-approval-router/",
+    "h1": [
+      "Enterprise Dispatch Approval Router"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19757,
+    "sha256": "26c419bc696161db8913f84c83314b5137a00ee69f490f298c8cbcd3148bd866"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/feature-card-workflow/",
+    "status": 200,
+    "title": "Feature Card Workflow \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Convert a developer task card into scoped implementation, verification, evidence and handoff.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/feature-card-workflow/",
+    "h1": [
+      "Feature Card Workflow"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19635,
+    "sha256": "89b40b6c5eb364534df0d35829473ceb6a98342d76ea26e5962e87556dec6110"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/howl-content-factory/",
+    "status": 200,
+    "title": "Howl Content Factory \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Render deterministic content assets from real Kujo examples and a manifest.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/howl-content-factory/",
+    "h1": [
+      "Howl Content Factory"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19320,
+    "sha256": "a0ff638a0cc4ed69cd85d205b56eae8c3f2bbddfcbb19fb5124088559e59d1d4"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/loop-engineering/",
+    "status": 200,
+    "title": "Loop Engineering \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Run a bounded Goal to Context to Act to Evaluate to Record to Stop loop in any repository.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/loop-engineering/",
+    "h1": [
+      "Loop Engineering"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19307,
+    "sha256": "f85c233db86d28b5681abb357caa91fdcabee4ddcb2396c20ad348649ec499e6"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/mcp-agent-gateway-review/",
+    "status": 200,
+    "title": "MCP Agent Gateway Review \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Generate and validate a constrained MCP server scaffold and safety packet for a repository.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/mcp-agent-gateway-review/",
+    "h1": [
+      "MCP Agent Gateway Review"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19565,
+    "sha256": "99e6f5ea48deaecf97b75d19442a7b5822af109d17a5ea41cfdc9f2812e67071"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/publishing-house-adaptation/",
+    "status": 200,
+    "title": "Publishing House Adaptation \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Create a versioned cross-format adaptation plan without expanding approved claim boundaries.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/publishing-house-adaptation/",
+    "h1": [
+      "Publishing House Adaptation"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20023,
+    "sha256": "e081368fdd170634d722b27b9fc6c5eb57e64aacfcfaed0f6d2965ced877a08f"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/publishing-house-approval-publication/",
+    "status": 200,
+    "title": "Publishing House Approval Publication \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Pause for checksum-bound VersionSeal approval and perform only bounded PressWire effects.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/publishing-house-approval-publication/",
+    "h1": [
+      "Publishing House Approval Publication"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20265,
+    "sha256": "9cb2645dd5bbc18455332e5be5804009e08c0fca71313cb2592f71b8045807ff"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/publishing-house-asset-production/",
+    "status": 200,
+    "title": "Publishing House Asset Production \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Plan and package supported accessible media assets with provenance.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/publishing-house-asset-production/",
+    "h1": [
+      "Publishing House Asset Production"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19980,
+    "sha256": "1e558d9b481455315c50cd39d5f4822dedcfa831bb472e15088afdf8f8a5b27d"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/publishing-house-commissioning/",
+    "status": 200,
+    "title": "Publishing House Commissioning \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Create a specific Editorial Brief, assignments, and evidence work order.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/publishing-house-commissioning/",
+    "h1": [
+      "Publishing House Commissioning"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19935,
+    "sha256": "105ba0ded0068f843d5daf942b3f80d20117da3a271623ffedc518ea45d791e1"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/publishing-house-daily-desk/",
+    "status": 200,
+    "title": "Publishing House Daily Desk \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Validate and route a normalized daily editorial packet.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/publishing-house-daily-desk/",
+    "h1": [
+      "Publishing House Daily Desk"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19758,
+    "sha256": "312f1172dab717f07682f9f214eea51ef94d75a0b9b805b1037e9f2a38293826"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/publishing-house-editorial-review/",
+    "status": 200,
+    "title": "Publishing House Editorial Review \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Review exact packages and run a bounded revision loop.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/publishing-house-editorial-review/",
+    "h1": [
+      "Publishing House Editorial Review"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19902,
+    "sha256": "d4d0f6763dd3f425e40adba366ff77609473f488d5d1cc8b4a94e1cf5afe1b7e"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/publishing-house-evidence-dossier/",
+    "status": 200,
+    "title": "Publishing House Evidence Dossier \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Create independently reviewed claim, source, evidence, rights, and packet records.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/publishing-house-evidence-dossier/",
+    "h1": [
+      "Publishing House Evidence Dossier"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20070,
+    "sha256": "04555ab5531f58e2e076d1a8b8754b72b79e47b564c4a586ea716d66d6e92a98"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/publishing-house-format-production/",
+    "status": 200,
+    "title": "Publishing House Format Production \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Produce reviewable newsletter, social, case-study, and video/audio packages from approved lineage.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/publishing-house-format-production/",
+    "h1": [
+      "Publishing House Format Production"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20243,
+    "sha256": "3a49f760b41a225c83c7161b4c03e4cdb7262e10c202ed7c676939132d842707"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/publishing-house-governance/",
+    "status": 200,
+    "title": "Publishing House Governance \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Set a bounded house mandate, portfolio decision, operating priorities, and accountable handoffs.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/publishing-house-governance/",
+    "h1": [
+      "Publishing House Governance"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20037,
+    "sha256": "a6d06fc4ec574f0009f954e1f85673dc83d0db805695e28edb4e48c0febd6de6"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/publishing-house-post-publication/",
+    "status": 200,
+    "title": "Publishing House Post Publication \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Record measurements, feedback, learning, and a non-commissioning follow-up recommendation.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/publishing-house-post-publication/",
+    "h1": [
+      "Publishing House Post Publication"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20118,
+    "sha256": "fdce14f45e31a3d25bba00c0b3c98ecafabf240a71d4fd18ca6a69cd0aafed97"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/publishing-house-primary-piece/",
+    "status": 200,
+    "title": "Publishing House Primary Piece \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Create and package the authoritative evidence-linked primary artifact.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/publishing-house-primary-piece/",
+    "h1": [
+      "Publishing House Primary Piece"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19923,
+    "sha256": "8061f73084e9fd5f601d319895bd8bd4f4222c7be4f0e4d2c67e38c18372e8a0"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/rag-enterprise-knowledge-gate/",
+    "status": 200,
+    "title": "RAG Enterprise Knowledge Gate \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Ingest an approved local corpus and query it with namespace-scoped citations.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/rag-enterprise-knowledge-gate/",
+    "h1": [
+      "RAG Enterprise Knowledge Gate"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19521,
+    "sha256": "50095bc9431db026659f131546ae107b1310361b7fe9e90b5332034cdb4d0eb2"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/relay-lifecycle-handoff/",
+    "status": 200,
+    "title": "Relay Lifecycle Handoff \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Exercise Relay pause/resume, integrity-checked export, and a local persisted handoff receipt.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/relay-lifecycle-handoff/",
+    "h1": [
+      "Relay Lifecycle Handoff"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19740,
+    "sha256": "c5ae4587845bbf0b5cda9da4c1fb41393836e47f6986d67fd5d6e51d5e0fca1d"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/tribunal-decision-gate/",
+    "status": 200,
+    "title": "Tribunal Decision Gate \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Run an advisory Tribunal mock review and emit a verified, versioned decision receipt.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/tribunal-decision-gate/",
+    "h1": [
+      "Tribunal Decision Gate"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19597,
+    "sha256": "66343feb6f8c6bc3a7a914e5430c716d8a7cdac4db6a64914cffb7cfc5297181"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/webops-ai-visibility-benchmark/",
+    "status": 200,
+    "title": "WebOps AI Visibility Benchmark \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Run a fixed longitudinal query suite across explicitly available AI/search surfaces without fabricated availability.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/webops-ai-visibility-benchmark/",
+    "h1": [
+      "WebOps AI Visibility Benchmark"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19939,
+    "sha256": "c1fdf0c139e19c999219142f2d7ea76333e389cd910ed571d3d43e7a9fed0d3a"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/webops-content-refresh/",
+    "status": 200,
+    "title": "WebOps Content Refresh \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Turn decay and accuracy evidence into a Spec, approved update boundary, verification, and future measurement cue.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/webops-content-refresh/",
+    "h1": [
+      "WebOps Content Refresh"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19804,
+    "sha256": "b7321ef40faddee625d6f1c19ce7ae9cb67f5138b66c307a07418878b00eac42"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/webops-finding-to-fix/",
+    "status": 200,
+    "title": "WebOps Finding To Fix \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Move one stable WebOps finding through Spec, proposal, approval, implementation boundary, Eval, Lens, SiteProbe, and receipt evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/webops-finding-to-fix/",
+    "h1": [
+      "WebOps Finding To Fix"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19952,
+    "sha256": "b7dfa0773c85d623be4a96d93288558d9c91aaa10e251b89769eb9646f8b286d"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/webops-monthly-seo-review/",
+    "status": 200,
+    "title": "WebOps Monthly SEO Review \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Synthesize monthly specialist SEO evidence without duplicating specialist analysis.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/webops-monthly-seo-review/",
+    "h1": [
+      "WebOps Monthly SEO Review"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19683,
+    "sha256": "7f65c32fcef977d00658bbbd3d92da8c5eb8ff01c33e63927ada3b2d2aa1dd54"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/webops-post-publish/",
+    "status": 200,
+    "title": "WebOps Post Publish \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Verify newly published content, relationships, rendered quality, optional submission, distribution assets, and receipts.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/webops-post-publish/",
+    "h1": [
+      "WebOps Post Publish"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19804,
+    "sha256": "0f8cfd293a935ded2dcd07ab2b7fa5a3d2ae435fae95cab75bd338b51cbb7ccd"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/webops-quarterly-content-portfolio/",
+    "status": 200,
+    "title": "WebOps Quarterly Content Portfolio \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Classify the content portfolio from graph, search, analytics, decay, pruning, and information-architecture evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/webops-quarterly-content-portfolio/",
+    "h1": [
+      "WebOps Quarterly Content Portfolio"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20129,
+    "sha256": "b92cbf2af8d7148db9bb3a25246032d5d61805ddf4077d34260f9411c010f5d3"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/webops-site-bootstrap/",
+    "status": 200,
+    "title": "WebOps Site Bootstrap \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Establish a credential-free initial website, repository, content-graph, browser, and reporting baseline.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/webops-site-bootstrap/",
+    "h1": [
+      "WebOps Site Bootstrap"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19733,
+    "sha256": "f0234204fe2f32efeac8a554fff60243e10cae4eba0459c1e17bdb8d037e7a56"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/webops-weekly-content-intelligence/",
+    "status": 200,
+    "title": "WebOps Weekly Content Intelligence \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Combine trends, query opportunity, content relationships, gaps, accuracy, and internal-link proposals.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/webops-weekly-content-intelligence/",
+    "h1": [
+      "WebOps Weekly Content Intelligence"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20017,
+    "sha256": "8ec1d89f9ef07724b9d894e31f7bc603df80c03ad0a76b10958d7eae2fe041cc"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/webops-weekly-search-intelligence/",
+    "status": 200,
+    "title": "WebOps Weekly Search Intelligence \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Compare measured search evidence, keyword opportunities, and decay signals with capability-level degradation.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/webops-weekly-search-intelligence/",
+    "h1": [
+      "WebOps Weekly Search Intelligence"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20045,
+    "sha256": "2209e1d44b01b7df946fbd53f5b5562056e7ca76489ea332451ad3f82e21a203"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/webops-weekly-site-health/",
+    "status": 200,
+    "title": "WebOps Weekly Site Health \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Compare weekly crawl and rendered site health, links, performance, accessibility, schema, and metadata.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/webops-weekly-site-health/",
+    "h1": [
+      "WebOps Weekly Site Health"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19822,
+    "sha256": "9b9c326d148f7fb82a9b0762c95ac5da53526bf2808d27c01eb6b6c509c4abd2"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/workcell-execution-gate/",
+    "status": 200,
+    "title": "Workcell Execution Gate \u2014 Kujo Workflow | Kujolang.ai",
+    "description": "Validate, inspect, and attempt bounded Workcell Docker execution with explicit completion evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/workcell-execution-gate/",
+    "h1": [
+      "Workcell Execution Gate"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19766,
+    "sha256": "03c4858ca66024758d6860065b03687cedba6a53d15883497c128720764cf012"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/publishing-house-operator/",
+    "status": 200,
+    "title": "Publishing House Operator | Kujo Workflows | Kujolang.ai",
+    "description": "Run resumable, publication-profile-driven editorial work with durable state, exact-version approvals, bounded effects, and exception-based operation.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/publishing-house-operator/",
+    "h1": [
+      "Publishing House Operator"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 23811,
+    "sha256": "7de5f44775925acac161afc9e30675bfb8f73cc189d643242f74132a6d4c9b7b"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workflows/",
+    "status": 200,
+    "title": "Workflows | Kujolang.ai",
+    "description": "Browse all 38 local-first workflow kits released in kujo-workflows 0.4.0, with explicit inputs, boundaries, evidence, and readiness status.",
+    "canonical": "https://kujolang.ai/ecosystem/workflows/",
+    "h1": [
+      "Workflows"
+    ],
+    "json_ld_types": [
+      "CollectionPage"
+    ],
+    "json_ld_errors": [],
+    "image_count": 42,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 59638,
+    "sha256": "3a763d1ab48f62635bc8f7a954114a7bd8fa65d9a97b217df19dc01711f4846b"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/kujo/",
+    "status": 200,
+    "title": "Kujo \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "The VM-first programming language and runtime for AI-native software, local-first automation, agentic workflows, and practical scripting.",
+    "canonical": "https://kujolang.ai/ecosystem/kujo/",
+    "h1": [
+      "Kujo"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18514,
+    "sha256": "750d29690d5d5b787986d96bb1d138cc6c99aaf30cd5e533db10118f479c1b61"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/kennel/",
+    "status": 200,
+    "title": "Kennel \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Deterministic Kujo package and dependency workflows with manifests, lockfiles, source policy, trust policy, indexes, and mirrors.",
+    "canonical": "https://kujolang.ai/ecosystem/kennel/",
+    "h1": [
+      "Kennel"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18415,
+    "sha256": "076f7fac8bb4df88702b5c4f29bdfe4cfd556831b37e36fe1b619655eddc05d4"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/ai-sdk/",
+    "status": 200,
+    "title": "AI SDK \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Provider-normalized chat and embeddings contracts with presets, fixtures, retries, streaming, redaction, budgets, and telemetry hooks.",
+    "canonical": "https://kujolang.ai/ecosystem/ai-sdk/",
+    "h1": [
+      "AI SDK"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18507,
+    "sha256": "da6f6566002dab7aeb6b00286b9d4cb4042eac88cd5398e31841c55dc0b76847"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/agents-sdk/",
+    "status": 200,
+    "title": "Agents SDK \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Agent runners, tools, approvals, handoffs, tracing, sessions, memory, retrieval, artifact stores, budgets, and offline fixtures.",
+    "canonical": "https://kujolang.ai/ecosystem/agents-sdk/",
+    "h1": [
+      "Agents SDK"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19104,
+    "sha256": "76991c8910817afbcd3adcf3ec34a68032bbb15299da61d315739b77b846b003"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/spec/",
+    "status": 200,
+    "title": "Spec \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Structured task contracts for goals, scope, acceptance criteria, risks, dependencies, approvals, exports, and evaluation requirements.",
+    "canonical": "https://kujolang.ai/ecosystem/spec/",
+    "h1": [
+      "Spec"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18355,
+    "sha256": "70766619c478980ce3ca88076e9a2fefae8415f93215ee96ff348bb4ca2a7107"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/eval/",
+    "status": 200,
+    "title": "Eval \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Deterministic checks for files, commands, HTTP, JSON, snapshots, policy, and workflow artifacts with CI-friendly verdicts.",
+    "canonical": "https://kujolang.ai/ecosystem/eval/",
+    "h1": [
+      "Eval"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18286,
+    "sha256": "d79c5d3681d8566c023dcd24473a25b6aaec905e0e73f3f22b08cba2359d4dd5"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/dispatch/",
+    "status": 200,
+    "title": "Dispatch \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Dispatch 1.2.0 orchestrates resumable, routed, approved, and auditable AI workflows with persisted evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/dispatch/",
+    "h1": [
+      "Dispatch"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18864,
+    "sha256": "c5b75b14afd9611f0c8c6a55005a4d004686ce06aa5998916537f5cac99a4ff2"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/watchdog/",
+    "status": 200,
+    "title": "Watchdog \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "An OpenAI-compatible proxy and dashboard for request, tool, step, audit, cost, latency, error, and redaction telemetry.",
+    "canonical": "https://kujolang.ai/ecosystem/watchdog/",
+    "h1": [
+      "Watchdog"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18422,
+    "sha256": "1ad82e7afe33d062672aca5227d511ac39b5366f1252d005b3aa92c2f912ae1c"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/ability/",
+    "status": 200,
+    "title": "Kujo Ability \u2014 Portable Operation Contracts | Kujolang.ai",
+    "description": "Portable, versioned operation contracts with typed schemas, declared effects, retry semantics, policy gates, approvals, idempotency, and canonical receipts.",
+    "canonical": "https://kujolang.ai/ecosystem/ability/",
+    "h1": [
+      "Ability"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 23941,
+    "sha256": "03aba3ba9297a819c8e0c2701942706a28907baf7c1241db4f5eadd509fe4b21"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/mcp/",
+    "status": 200,
+    "title": "MCP \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A framework and scaffold for MCP servers with tools, resources, path guards, authentication, limits, safety tiers, and multi-root workspaces.",
+    "canonical": "https://kujolang.ai/ecosystem/mcp/",
+    "h1": [
+      "MCP"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20921,
+    "sha256": "226931f6b800641459f966ecd5b2dcd00a394fb29e8579237c66d1676ea3fe12"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/rag/",
+    "status": 200,
+    "title": "RAG \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local retrieval kit for ingest, parsing, chunking, embeddings, hybrid search, namespaces, citations, query APIs, and starter templates.",
+    "canonical": "https://kujolang.ai/ecosystem/rag/",
+    "h1": [
+      "RAG"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18417,
+    "sha256": "6c0fdcf44144fcf94188b94549334ce3d0a4aedab9dac4b25390f46fe14d3ff9"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/leash/",
+    "status": 200,
+    "title": "Leash \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local approval layer for AI coding agents with policy-as-code, mobile decisions, risk classification, adapters, and append-only audit trails.",
+    "canonical": "https://kujolang.ai/ecosystem/leash/",
+    "h1": [
+      "Leash"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 17394,
+    "sha256": "7d26feb750c3209034c2ab9be0b74a2f86bf2c54823158a8d5a7e578025d056d"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/runledger/",
+    "status": 200,
+    "title": "RunLedger \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Durable receipts for tasks, models, providers, git state, changed files, usage, cost, verdicts, follow-ups, comparisons, and reports.",
+    "canonical": "https://kujolang.ai/ecosystem/runledger/",
+    "h1": [
+      "RunLedger"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18459,
+    "sha256": "4371e4e387632cbe22f43ac48753cd13663c95ed5331aaa5826bbe4c53de4d19"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/casefile/",
+    "status": 200,
+    "title": "CaseFile \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Reproducible failure and incident bundles with provenance, redaction, logs, reproduction notes, JSON, Markdown, and handoffs.",
+    "canonical": "https://kujolang.ai/ecosystem/casefile/",
+    "h1": [
+      "CaseFile"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18447,
+    "sha256": "7f9d7f5da752864c72a32538348a472de4379e6018d4c398d8d26709da244a34"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/muzzle/",
+    "status": 200,
+    "title": "Muzzle \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Quiet workflow execution with full disk logs, compact summaries, manifests, loop state, dry runs, and secret redaction.",
+    "canonical": "https://kujolang.ai/ecosystem/muzzle/",
+    "h1": [
+      "Muzzle"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18378,
+    "sha256": "04acbc301f4a6bf7612854a57c8b7cfca2942c5eca24cf65be3dfff4656255e6"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/shipcheck/",
+    "status": 200,
+    "title": "ShipCheck \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Release-readiness scans, checklists, gates, release-note drafts, Markdown and JSON reports, and deterministic verdict semantics.",
+    "canonical": "https://kujolang.ai/ecosystem/shipcheck/",
+    "h1": [
+      "ShipCheck"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18493,
+    "sha256": "e07265a0d4ce191a7261b72336a65863bc7addc21ca277a69d9cdbb5bcb6b12c"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/concord/",
+    "status": 200,
+    "title": "Concord \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Cross-artifact drift checks for code, CLI behavior, docs, examples, specs, evals, schemas, manifests, and sources of truth.",
+    "canonical": "https://kujolang.ai/ecosystem/concord/",
+    "h1": [
+      "Concord"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18382,
+    "sha256": "554d094200675daa33c7b3afa911efadfdf0185b94a662634671709793a407c5"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/patchbrief/",
+    "status": 200,
+    "title": "PatchBrief \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Deterministic git-diff summaries, implementation handoffs, changed-file risk notes, reviewer context, and suggested tests.",
+    "canonical": "https://kujolang.ai/ecosystem/patchbrief/",
+    "h1": [
+      "PatchBrief"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18396,
+    "sha256": "97069f20a9d9a83b547237d03322f06bab3dd59bed1e918bdd7630be52ca860f"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/changebucket/",
+    "status": 200,
+    "title": "ChangeBucket \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Change-footprint and blast-radius reports covering churn, categories, generated files, CI, deletions, dependencies, and budgets.",
+    "canonical": "https://kujolang.ai/ecosystem/changebucket/",
+    "h1": [
+      "ChangeBucket"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18514,
+    "sha256": "1eedd485f7a71840e19ac1f27a84ba1709b42e570b7cf25ba6aec6150bd5b761"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/scent/",
+    "status": 200,
+    "title": "Scent \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Bounded task context packs with Markdown, JSON, manifests, selected files, changed-file focus, token budgets, and redaction records.",
+    "canonical": "https://kujolang.ai/ecosystem/scent/",
+    "h1": [
+      "Scent"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18411,
+    "sha256": "df98219c8727c6809f43436cfe99278343879a691984346609d7370bfceedaea"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/scout/",
+    "status": 200,
+    "title": "Scout \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Repository intelligence packs with trees, languages, dependencies, routes, security signals, llms.txt, checklists, and structured indexes.",
+    "canonical": "https://kujolang.ai/ecosystem/scout/",
+    "h1": [
+      "Scout"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18418,
+    "sha256": "3a47c0362e5b046b5f0801f380b7e8879135efd7f1d6760360fbac08ea8945d6"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/lens/",
+    "status": 200,
+    "title": "Lens \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Deterministic browser checks, screenshots, console and network evidence, accessibility findings, visual baselines, flows, and repair briefs.",
+    "canonical": "https://kujolang.ai/ecosystem/lens/",
+    "h1": [
+      "Lens"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18410,
+    "sha256": "1ed54a1dfab5a8f4c07f29052d9eb55452750bf84032d4bcd10ba0720985ffb1"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/fence/",
+    "status": 200,
+    "title": "Fence \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Architecture-boundary rules, import and layer checks, baselines, graphs, and JSON, Markdown, and SARIF reports.",
+    "canonical": "https://kujolang.ai/ecosystem/fence/",
+    "h1": [
+      "Fence"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18233,
+    "sha256": "c6458e804fa5a03b46ec9ea0aaf51ed2fe834ed924f94dedcb59e103a64b7ba7"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/ward/",
+    "status": 200,
+    "title": "Ward \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local Dependabot security command center for collecting alerts, planning remediation, preparing safe fixes, verifying changes, and generating reports.",
+    "canonical": "https://kujolang.ai/ecosystem/ward/",
+    "h1": [
+      "Ward"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 17470,
+    "sha256": "2fe18ab150b9ca90616dc597d9719849bb6e40add61d7508bf7e9b4641fbe5c6"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/howl/",
+    "status": 200,
+    "title": "Howl \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Deterministic Markdown, HTML, SVG, gallery, card, and caption assets generated from trusted Kujo examples and manifests.",
+    "canonical": "https://kujolang.ai/ecosystem/howl/",
+    "h1": [
+      "Howl"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18261,
+    "sha256": "037ade9f1579bfe23d6eeb8a78b1083c2aec8132cdf08b55be6c468f9d304503"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/packwrite/",
+    "status": 200,
+    "title": "PackWrite \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Compile project intent and bounded repository context into deterministic, validated execution packs for implementation agents and reviewers.",
+    "canonical": "https://kujolang.ai/ecosystem/packwrite/",
+    "h1": [
+      "PackWrite"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 22322,
+    "sha256": "7a9db47dadebf7f5b0a477559b04bce4344834541c45506a0f0440dad6d114cf"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/workcell/",
+    "status": 200,
+    "title": "Workcell \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Run bounded Kujo and agent workflows in disposable workspaces with explicit policy, selective artifact export, and verifiable evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/workcell/",
+    "h1": [
+      "Workcell"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20264,
+    "sha256": "608c0a32c98bedbeffbb590ca6acb0596810337d4647dec59f521cdb15ea5939"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/redact/",
+    "status": 200,
+    "title": "Redact \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Deterministic, local-first redaction for Markdown and text files using explicit policies, pattern detectors, transformations, leakage checks, and audit artifacts.",
+    "canonical": "https://kujolang.ai/ecosystem/redact/",
+    "h1": [
+      "Redact"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19580,
+    "sha256": "276bad0ef6a0b31427acc87b5671e96583f1ec9c2be64eaee4b9f46469b4efdd"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/sitekit/",
+    "status": 200,
+    "title": "SiteKit \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A source-driven design system for accessible, semantic, token-based static websites and web interfaces.",
+    "canonical": "https://kujolang.ai/ecosystem/sitekit/",
+    "h1": [
+      "SiteKit"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19447,
+    "sha256": "a2fcb8ee9a9c2d546e43470970dece0230148d570267d5e826a2fce616738ca6"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/contentgraph/",
+    "status": 200,
+    "title": "ContentGraph \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A deterministic, inspectable network of website content, internal links, topic clusters, overlaps, orphan candidates, and link opportunities.",
+    "canonical": "https://kujolang.ai/ecosystem/contentgraph/",
+    "h1": [
+      "ContentGraph"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19569,
+    "sha256": "d997fdcdd98141fa8d34c23fc125102493afe45a9b2bfa4a6e85b34e05ac734a"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/searchbridge/",
+    "status": 200,
+    "title": "SearchBridge \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A normalized external-data layer for search, analytics, page performance, field data, backlinks, keyword evidence, and explicit index submission.",
+    "canonical": "https://kujolang.ai/ecosystem/searchbridge/",
+    "h1": [
+      "SearchBridge"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20456,
+    "sha256": "ad8884d76eff182174803781de9bfd139d55c7789e1e16dd4eb54f5e86da8d7d"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/ai-chat/",
+    "status": 200,
+    "title": "AI Chat \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local multi-provider chat application with encrypted provider profiles, SQLite history, streaming, comparison, transcription, and fixture smokes.",
+    "canonical": "https://kujolang.ai/ecosystem/ai-chat/",
+    "h1": [
+      "AI Chat"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18505,
+    "sha256": "87c5f4e33ac55899ed7150f580b48731dec715edffb750bae9b23ced60626bf3"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/siteprobe/",
+    "status": 200,
+    "title": "SiteProbe \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A deterministic, bounded website crawler for pages, links, redirects, metadata, structured data, sitemaps, robots evidence, and comparable runs.",
+    "canonical": "https://kujolang.ai/ecosystem/siteprobe/",
+    "h1": [
+      "SiteProbe"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19504,
+    "sha256": "31d843a3a833c9fb8fdbced01304ab6cff08fa0182296fceb7af581b5ed60c8e"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/cms/",
+    "status": 200,
+    "title": "Kujo CMS 1.1.0 \u2014 Agent-Ready Content Management | Kujolang.ai",
+    "description": "Explore Kujo CMS 1.1.0: framework-neutral content, SEO, social sharing, themes, plugins, identities, abilities, MCP, WebMCP, APIs, and CLI workflows.",
+    "canonical": "https://kujolang.ai/ecosystem/cms/",
+    "h1": [
+      "CMS"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 22628,
+    "sha256": "ca6504f69b3e2ef15f5f0984d7cdcbb6621dee856a2521cac883aa8225500e8e"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/crud-api/",
+    "status": 200,
+    "title": "CRUD API Showcase \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "SQLite item and project APIs with a web playground, authentication strategies, contract smokes, disaster recovery, performance, and release patterns.",
+    "canonical": "https://kujolang.ai/ecosystem/crud-api/",
+    "h1": [
+      "CRUD API Showcase"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18658,
+    "sha256": "a88912d2c06ef838ccea904a9bbc267eebd7ad85c86f1233fbbea5728f72a07e"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/ssg/",
+    "status": 200,
+    "title": "SSG \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "Deterministic static publishing for Markdown, templates, taxonomies, metadata, feeds, sitemaps, robots, llms.txt, and starter content.",
+    "canonical": "https://kujolang.ai/ecosystem/ssg/",
+    "h1": [
+      "SSG"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19083,
+    "sha256": "53b37cb82273a2ee2e599e92c3d68d8b7d7016b88658678709a5fb259a57a0d3"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/totalrecall/",
+    "status": 200,
+    "title": "TotalRecall \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local-first ingestion showcase that turns meetings, transcripts, chat exports, Slack threads, and GitHub activity into durable local knowledge.",
+    "canonical": "https://kujolang.ai/ecosystem/totalrecall/",
+    "h1": [
+      "TotalRecall"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 18833,
+    "sha256": "93728b1ceefdcc9d771f9f7de13accd2dbe8a563eb587cd3d4146d8c7abedea5"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/tribunal/",
+    "status": 200,
+    "title": "Tribunal \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local-first decision review engine that turns consequential proposals into adversarial hearings and durable, execution-ready decision evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/tribunal/",
+    "h1": [
+      "Tribunal"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20557,
+    "sha256": "96bb99226a4162b4461cfa9f12751c1ee41db2f2e13330f20cf4a4f82a7696df"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/relay/",
+    "status": 200,
+    "title": "Relay \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local, operator-controlled composition and execution layer for bounded agent missions, policy-checked tools, and verifiable evidence.",
+    "canonical": "https://kujolang.ai/ecosystem/relay/",
+    "h1": [
+      "Relay"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20237,
+    "sha256": "be6cd045ee8ab5accb7718964393307d3a11dec275aa45a65b259d5a07ad1bb1"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/assetworks/",
+    "status": 200,
+    "title": "AssetWorks \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local-first media production ledger for asset planning, immutable provenance, accessibility artifacts, and checksum-backed validation.",
+    "canonical": "https://kujolang.ai/ecosystem/assetworks/",
+    "h1": [
+      "AssetWorks"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19407,
+    "sha256": "c852addf86955e4f07930e01d23da5e06eb765d8f1ee3597be7c41dda382bb93"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/bluepencil/",
+    "status": 200,
+    "title": "BluePencil \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A Kujo-native editorial review and quality-calibration system that preserves independent judgment, blockers, and structured verdicts.",
+    "canonical": "https://kujolang.ai/ecosystem/bluepencil/",
+    "h1": [
+      "BluePencil"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19318,
+    "sha256": "08ef1b88d023fabddbc0b533f9d652620e5545bebe860ab83286976e9fe2b1d2"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/dossier/",
+    "status": 200,
+    "title": "Dossier \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local-first evidence ledger for claims, sources, quotations, conflicts, consent, freshness, and rights.",
+    "canonical": "https://kujolang.ai/ecosystem/dossier/",
+    "h1": [
+      "Dossier"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19089,
+    "sha256": "39e3cde81a7e586dd7d143c6ca79d407157d1311a37c82a11c95580c1207442d"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/galleypack/",
+    "status": 200,
+    "title": "GalleyPack \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A Kujo-native production packager that binds editorial artifacts, lineage, evidence, reviews, and package versions to exact checksums.",
+    "canonical": "https://kujolang.ai/ecosystem/galleypack/",
+    "h1": [
+      "GalleyPack"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19260,
+    "sha256": "39fa5a5667b3bcb0c5224526134734bbcfcaeeb88a20220c36737e49e3cb3481"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/presswire/",
+    "status": 200,
+    "title": "PressWire \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local-first Kujo tool for approval-gated publication effects, receipts, corrections, and idempotent delivery.",
+    "canonical": "https://kujolang.ai/ecosystem/presswire/",
+    "h1": [
+      "PressWire"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19119,
+    "sha256": "3e3f9dc2ddfa7141b74c92266d115dd6e67f791acc774f8b9aa33574b70bbef1"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/readersignal/",
+    "status": 200,
+    "title": "ReaderSignal \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local-first measurement ledger for privacy-bounded audience snapshots, feedback, comparisons, and evidence-linked learning.",
+    "canonical": "https://kujolang.ai/ecosystem/readersignal/",
+    "h1": [
+      "ReaderSignal"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19335,
+    "sha256": "7beedd14ae85eda35c78f9f8742a53dcca594e96bee05a7e66cd189279d87b64"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/storydesk/",
+    "status": 200,
+    "title": "StoryDesk \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local-first editorial control desk for ideas, campaigns, commissions, assignments, dependencies, packets, handoffs, and human review queues.",
+    "canonical": "https://kujolang.ai/ecosystem/storydesk/",
+    "h1": [
+      "StoryDesk"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19373,
+    "sha256": "82c39011b9f728e826097785ec7b0ff3e3661a83beaf05d72588cc78006152c7"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/versionseal/",
+    "status": 200,
+    "title": "VersionSeal \u2014 Kujo Ecosystem | Kujolang.ai",
+    "description": "A local-first approval ledger for exact-version human authorization, explicit scope, revocation, and checksum-backed verification.",
+    "canonical": "https://kujolang.ai/ecosystem/versionseal/",
+    "h1": [
+      "VersionSeal"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 19219,
+    "sha256": "2107b6eb2057d797036ce195e6a8e26a0b69cab14c0e869915bfd10972d87c0f"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/paperclip/",
+    "status": 200,
+    "title": "Kujo for Paperclip \u2014 Context, Review, and Failure Evidence | Kujolang.ai",
+    "description": "Install the Kujo plugin for Paperclip to select focused context, review change scope, and save redacted failure evidence from the current task view.",
+    "canonical": "https://kujolang.ai/ecosystem/paperclip/",
+    "h1": [
+      "Kujo for Paperclip"
+    ],
+    "json_ld_types": [
+      "SoftwareSourceCode"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 20993,
+    "sha256": "9a4da6714dfe7137a19c6abaa8e752e395bed609ff70396c21d72af9ec86e1a0"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/",
+    "status": 200,
+    "title": "Ecosystem | Kujolang.ai",
+    "description": "Explore the Kujo ecosystem of language primitives, local-first tools, and inspectable AI-native application showcases.",
+    "canonical": "https://kujolang.ai/ecosystem/",
+    "h1": [
+      "Ecosystem"
+    ],
+    "json_ld_types": [
+      "CollectionPage"
+    ],
+    "json_ld_errors": [],
+    "image_count": 66,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 84110,
+    "sha256": "6aab7bd6ac56a91e7937c136a811142b93dd1535154a641fe09da8b886f835b5"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/primitives/",
+    "status": 200,
+    "title": "Primitives ecosystem | Kujolang.ai",
+    "description": "Build from the Kujo language, package foundation, runtimes, SDKs, and reusable components designed for explicit, inspectable AI-native software.",
+    "canonical": "https://kujolang.ai/ecosystem/primitives/",
+    "h1": [
+      "Primitives"
+    ],
+    "json_ld_types": [
+      "CollectionPage"
+    ],
+    "json_ld_errors": [],
+    "image_count": 18,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 30680,
+    "sha256": "c68077dfa5e42081f1453604f91a6df5729b7037ac628f68478f393ec75e026b"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/tooling/",
+    "status": 200,
+    "title": "Tooling ecosystem | Kujolang.ai",
+    "description": "Choose focused local-first tools for context, execution, publishing, evidence, safety, interface delivery, architecture, and release readiness.",
+    "canonical": "https://kujolang.ai/ecosystem/tooling/",
+    "h1": [
+      "Tooling"
+    ],
+    "json_ld_types": [
+      "CollectionPage"
+    ],
+    "json_ld_errors": [],
+    "image_count": 29,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 42007,
+    "sha256": "2f743021e425bc5a53884025cd9c42f94c40c0e30164a807915eec697d750e2c"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/showcase/",
+    "status": 200,
+    "title": "Showcase ecosystem | Kujolang.ai",
+    "description": "Explore complete, inspectable applications that demonstrate how Kujo projects fit together across APIs, content systems, retrieval, chat, and agent workflows.",
+    "canonical": "https://kujolang.ai/ecosystem/showcase/",
+    "h1": [
+      "Showcase"
+    ],
+    "json_ld_types": [
+      "CollectionPage"
+    ],
+    "json_ld_errors": [],
+    "image_count": 10,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 23147,
+    "sha256": "ae6c68991d54081a16be38f76b5f55d24b21efb19b9de7c82ce942ca996c31dc"
+  },
+  {
+    "url": "https://kujolang.ai/",
+    "status": 200,
+    "title": "Kujo \u2014 AI-Native Programming Language | Kujolang.ai",
+    "description": "Kujo is the programming language for AI-native software, local-first automation, and agentic workflows.",
+    "canonical": "https://kujolang.ai/",
+    "h1": [
+      "Trust at the speed of AI"
+    ],
+    "json_ld_types": [
+      "WebSite"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 16180,
+    "sha256": "e2bee702ef8be4c5e2bcb866673b315c136896b1409c48ef048b703194828bbe"
+  },
+  {
+    "url": "https://kujolang.ai/writing/",
+    "status": 200,
+    "title": "Writing | Kujolang.ai",
+    "description": "Launch notes, ecosystem deep dives, tutorials, and field reports from Kujo.",
+    "canonical": "https://kujolang.ai/writing/",
+    "h1": [
+      "Writing"
+    ],
+    "json_ld_types": [
+      "CollectionPage"
+    ],
+    "json_ld_errors": [],
+    "image_count": 3,
+    "images_missing_alt": 0,
+    "images_missing_dimensions": 0,
+    "bytes": 15429,
+    "sha256": "a64eb027c3049b417fb302a5bc178b418b9461ec38ec078b87b62674b37e6b59"
+  }
+]

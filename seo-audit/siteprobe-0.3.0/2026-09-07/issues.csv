@@ -1,0 +1,3 @@
+id,phase,category,severity,affected_urls,affected_count,evidence,expected_benefit,confidence,difficulty,recommended_action,owner,status
+SP-WEB-01,after,content,P1,https://kujolang.ai/ecosystem/siteprobe/,1,baseline.csv; source diff; release-reference-probes.json,Accurate release understanding and installation,High,Low,Update native 0.3.0 release facts,website maintainers,Fixed
+SP-WEB-02,after,installation,P1,https://kujolang.ai/ecosystem/siteprobe/,1,baseline.csv; source diff; release-reference-probes.json,Accurate release understanding and installation,High,Low,Explain exact runtime and source packages,website maintainers,Fixed
