@@ -12,7 +12,7 @@ github_url: "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-len
 launch_story: "One of 135 focused, repository-backed skills in the Kujo Skills 0.7.0 technical preview."
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.7.0"
-last_updated: "tag v0.7.0 Tagger: Robert DeVore <deviodigital@gmail.com> Kujo Skills v0.7.0: reusable video styles 2026-09-08"
+last_updated: "2026-09-08"
 keywords: "Kujo Lens, Kujo Agent Skill, kujo-lens-workflows, repository-backed agent guidance"
 seo_title: "Kujo Lens — Kujo Agent Skill"
 seo_description: "Use this skill when setting up, running, interpreting, or maintaining Lens deterministic browser and visual QA workflows: `lens check`, `lens check --quick`, `lens inspect`, `lens flow`, `.lens.toml`, `.lens/runs/`, `lens-report.json`, Agent Repair Briefs, screenshots, accessibility checks, link checks, visual baselines, CI action wiring, RunLedger/Howl output, or Lens source/test changes."
@@ -34,11 +34,7 @@ Run the install command from a new working directory. If you already have the re
 
 ## Release boundary
 
-This page reflects the 0.7.0 technical preview on tag v0.7.0
-Tagger: Robert DeVore <deviodigital@gmail.com>
-
-Kujo Skills v0.7.0: reusable video styles
-2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
+This page reflects the 0.7.0 technical preview on 2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
 
 ## Source
 

@@ -188,7 +188,7 @@ function writePage(dir, order, slug, fields, body) {
 const skillPaths = git(skillsRepo, 'ls-tree', '-r', '--name-only', skillsRef, 'skills')
   .split('\n').filter((file) => /^skills\/[^/]+\/SKILL\.md$/.test(file)).sort();
 const skillVersion = releasedFile(skillsRepo, 'VERSION').trim();
-const skillDate = git(skillsRepo, 'show', '-s', '--format=%cs', skillsRef).trim();
+const skillDate = git(skillsRepo, 'show', '-s', '--format=%cs', `${skillsRef}^{commit}`).trim();
 const skillsDir = path.join(siteRoot, 'content', 'skills');
 fs.rmSync(skillsDir, { recursive: true, force: true });
 

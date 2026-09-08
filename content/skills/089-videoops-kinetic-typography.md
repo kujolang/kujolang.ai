@@ -12,7 +12,7 @@ github_url: "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops
 launch_story: "One of 135 focused, repository-backed skills in the Kujo Skills 0.7.0 technical preview."
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
 version: "0.7.0"
-last_updated: "tag v0.7.0 Tagger: Robert DeVore <deviodigital@gmail.com> Kujo Skills v0.7.0: reusable video styles 2026-09-08"
+last_updated: "2026-09-08"
 keywords: "VideoOps kinetic typography, Kujo Agent Skill, videoops-kinetic-typography, repository-backed agent guidance"
 seo_title: "VideoOps kinetic typography — Kujo Agent Skill"
 seo_description: "Use when implementing readable motion typography in HyperFrames."
@@ -30,11 +30,7 @@ The released skill file defines the authoritative workflow, boundaries, sources,
 
 ## Release boundary
 
-This page reflects the 0.7.0 technical preview on tag v0.7.0
-Tagger: Robert DeVore <deviodigital@gmail.com>
-
-Kujo Skills v0.7.0: reusable video styles
-2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
+This page reflects the 0.7.0 technical preview on 2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
 
 ## Source
 
