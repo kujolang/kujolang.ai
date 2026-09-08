@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-08",
+  "route": "https://kujolang.ai/ecosystem/skills/kujo-video-styles/",
+  "desktop": "CUA screenshot: resolved headline, loaded dither hero, readable installation and source-backed copy",
+  "mobile": {
+    "viewport_width": 390,
+    "scroll_width": 375,
+    "hero_loaded": true,
+    "declared_hero_dimensions": [
+      1916,
+      821
+    ]
+  },
+  "animation": "Heading resolves to Kujo video styles after scramble animation",
+  "webmcp": {
+    "tool": "search_site",
+    "query": "video styles",
+    "result": "skills:kujo-video-styles",
+    "returned_count": 1
+  }
+}

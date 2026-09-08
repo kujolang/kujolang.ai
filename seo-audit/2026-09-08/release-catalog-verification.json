@@ -1,0 +1,12 @@
+{
+  "release": "v0.7.0",
+  "commit": "eb7128b88b904e7fa2a2eb7f093a89db955e1bac",
+  "expected_skills": 135,
+  "actual_skills": 135,
+  "slugs_match": true,
+  "missing_images": [],
+  "workflow_content_changed": false,
+  "repeated_sync": "KUJO_SKILLS_REF=v0.7.0 node scripts/sync-ecosystem-catalogs.mjs --skills-only; git diff --exit-code: passed",
+  "release_dates_verified": 135,
+  "latest_content_commit": "b3d7304c39eecb72fefe287aecb98b4d744166c0"
+}
