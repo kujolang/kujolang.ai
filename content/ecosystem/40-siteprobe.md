@@ -1,26 +1,37 @@
 ---
 title: "SiteProbe"
 custom_url: siteprobe
-description: "A deterministic, bounded website crawler for pages, links, redirects, metadata, structured data, sitemaps, robots evidence, and comparable runs."
+description: "Native Kujo website crawling with bounded same-origin requests, robots enforcement, signed artifacts, and deterministic comparisons."
 featured_image: "/assets/images/ecosystem/siteprobe-website-crawler.webp"
 section: "Tooling"
 tags: [Tool, Website Intelligence]
 order: 360
-install_command: "git clone https://github.com/kujolang/siteprobe.git"
+install_command: "git clone --branch v0.3.0 --depth 1 https://github.com/kujolang/siteprobe.git"
 github_url: "https://github.com/kujolang/siteprobe"
 launch_story: "Model a website as a crawlable information system and preserve the evidence needed to inspect changes over time."
-scope_note: "SiteProbe 0.1 is a read-only crawler for static and server-rendered HTML; it is not a JavaScript renderer, security scanner, or search-engine emulator."
+scope_note: "SiteProbe 0.3.0 is a native Kujo, read-only crawler for static and server-rendered HTML; it is not a JavaScript renderer, security scanner, or search-engine emulator."
 keywords: "SiteProbe, Kujo ecosystem, website crawler, website intelligence, links, redirects, metadata, structured data"
-seo_title: "SiteProbe — Kujo Ecosystem"
+seo_title: "SiteProbe — Native Kujo Website Crawler"
+last_updated: 2026-09-07
 ---
 
 ## What it does
 
-SiteProbe crawls a bounded same-origin surface and records versioned run, page, link, redirect, metadata, structured-data, sitemap, robots, finding, and human-report artifacts. It can inspect a single URL, validate a run, compare two runs, and expose focused link or sitemap inventories.
+SiteProbe 0.3.0 is a native Kujo website crawler. It records versioned run, page, link, redirect, metadata, structured-data, sitemap, robots, finding, and report artifacts. Inspect one URL, validate and digest-verify a run, compare baselines, or read focused link and sitemap inventories without repeating the crawl.
+
+Kujo owns the complete product workflow. Python is used only for maintenance tests, fixture servers, and benchmarks; it is not required by product commands.
 
 ## Bounded crawl evidence
 
-Crawls enforce page, depth, concurrency, timeout, retry, response-byte, artifact-byte, and report-token budgets. Same-origin redirects and robots rules are checked by default, deterministic mode produces comparable fixture reruns, and offline commands fail closed where a live crawl would be required.
+Crawls enforce page, depth, concurrency, timeout, retry, response-byte, artifact-byte, and report budgets. Every redirect is checked against same-origin and robots policy. Isolated async workers overlap requests at the configured concurrency while preserving origin pacing and ordered evidence.
+
+Large artifacts and compressed sitemaps use bounded streaming mechanisms. Runs publish atomically to a new directory, include SHA-256 manifests, and can be signed with HMAC-SHA-256. Existing v1 artifact schemas and CLI contracts remain compatible.
+
+## Install and verify
+
+The [0.3.0 release](https://github.com/kujolang/siteprobe/releases/tag/v0.3.0) provides checksummed source ZIPs qualified on Linux x64, macOS Intel/ARM64, and Windows x64. They do not bundle a runtime. Install the exact Kujo revision in `KUJO_REVISION`, then set `KUJO_BIN` to its executable; an older generic Kujo release may lack required primitives.
+
+Follow the [installation and crawl guide](https://docs.kujolang.ai/tools/siteprobe/) for the pinned build, platform launchers, and validation commands. The [release audit](https://github.com/kujolang/siteprobe/blob/v0.3.0/docs/audits/repository-hardening.md) preserves regression checks and complete native 10,000-page fixtures at concurrency 1, 4, 8, and 16. Those are measured fixtures, not universal throughput guarantees.
 
 ## Why it belongs in Kujo
 
@@ -28,8 +39,8 @@ SiteProbe supplies the website evidence layer for Kujo WebOps. Scout understands
 
 ## Operating boundary
 
-Version 0.1 focuses on static and server-rendered HTML. Near-duplicate signals use deterministic text fingerprints and metadata duplication rather than semantic judgment. SiteProbe never submits forms, publishes content, or performs effecting actions against the target.
+SiteProbe handles static and server-rendered HTML. It is GET-only, blocks private-network targets by default, and never submits forms or publishes content to the target. It is not a JavaScript renderer, security scanner, or search-engine emulator. Near-duplicate signals use deterministic text fingerprints and metadata duplication rather than semantic judgment.
 
 ## Learn more
 
-The repository documents artifact schemas, security boundaries, agent integration, release dogfood, deterministic fixtures, and verification commands for version 0.1.0.
+Read the [versioned command and artifact reference](https://github.com/kujolang/siteprobe/tree/v0.3.0), or continue to the [SiteProbe documentation](https://docs.kujolang.ai/tools/siteprobe/).

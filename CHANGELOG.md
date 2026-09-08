@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Update SiteProbe for the native Kujo 0.3.0 release, exact runtime installation, qualified source packages, verification evidence, and current discovery metadata.
+
 - Update Ability with SDK previews, offline pack verification, fixture tooling, and a documentation guide. Keep the product page free of release numbers.
 - Remove inaccessible private-repository links and installation commands; preserve source-access limits.
 
