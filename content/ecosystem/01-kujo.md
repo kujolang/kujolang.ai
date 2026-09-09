@@ -28,7 +28,7 @@ Kujo is a general-purpose language, not a sandbox. Use capability-minimal execut
 
 ## Install and maintain the runtime
 
-Install the stable Kujo binary with the command above, then verify it with `kujo --version`. The standalone runtime runs Kujo programs without Python, Node.js, or a Rust toolchain. Source builds use Rust, and npm installations use Node.js.
+On Linux and macOS, the ecosystem installer above installs the stable Kujo binary and its default tool group; verify the runtime with `kujo --version`. Windows users can use the release archive or npm. The standalone runtime runs Kujo programs without Python, Node.js, or a Rust toolchain. Source builds use Rust, and npm installations use Node.js.
 
 Kujo v1.4.0 includes isolated tool imports, native filesystem and process operations, bounded web-data processing, and VM/interpreter correctness improvements. Linux and macOS package launchers can use native locks, ownership checks, atomic command links, and exact process replacement. Host capabilities and platform limits remain explicit.
 
