@@ -11,10 +11,12 @@ github_url: "https://github.com/kujolang/cms"
 launch_story: "Give people, developers, integrations, and agents one inspectable content contract without prescribing the frontend stack."
 scope_note: "CMS 1.1.0 is production-oriented backend software, but each deployment still requires environment-specific identity, infrastructure, storage, security, recovery, and governance proof."
 version: "1.1.0"
-last_updated: 2026-08-30
+last_updated: "2026-09-09"
 keywords: "Kujo CMS, open source CMS, agent-ready CMS, WebMCP CMS, MCP content management, headless CMS, theme and plugin packages"
 seo_title: "Kujo CMS 1.1.0 — Agent-Ready Content Management"
 seo_description: "Explore Kujo CMS 1.1.0: framework-neutral content, SEO, social sharing, themes, plugins, identities, abilities, MCP, WebMCP, APIs, and CLI workflows."
+latest_release_url: "https://github.com/kujolang/cms/releases/tag/v1.1.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
 ---
 
 ## What it does

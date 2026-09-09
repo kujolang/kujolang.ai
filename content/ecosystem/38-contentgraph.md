@@ -12,6 +12,10 @@ launch_story: "Turn crawls and source files into a local content graph that expo
 scope_note: "ContentGraph 0.1 uses deterministic lexical relationships; overlaps and opportunities are review candidates, not proof or authorization to change content."
 keywords: "ContentGraph, Kujo ecosystem, content graph, internal links, topic clusters, content intelligence"
 seo_title: "ContentGraph — Kujo Ecosystem"
+version: "0.3.0"
+latest_release_url: "https://github.com/kujolang/contentgraph/releases/tag/v0.3.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

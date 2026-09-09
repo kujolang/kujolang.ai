@@ -12,6 +12,10 @@ launch_story: "An agent-inspectable publishing pipeline where content and genera
 scope_note: "SSG is a generator and showcase, not a hosted deployment service or a guarantee of SEO and accessibility outcomes."
 keywords: "SSG, Kujo ecosystem, Showcase, Publishing"
 seo_title: "SSG — Kujo Ecosystem"
+version: "1.0.0"
+latest_release_url: "https://github.com/kujolang/ssg/releases/tag/v1.0.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

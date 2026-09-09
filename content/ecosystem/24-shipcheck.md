@@ -12,6 +12,10 @@ launch_story: "Turn release preparation into a visible, repeatable gate instead 
 scope_note: "ShipCheck is a confidence gate within declared scope, not a universal production certification."
 keywords: "ShipCheck, Kujo ecosystem, Tool, Release"
 seo_title: "ShipCheck — Kujo Ecosystem"
+version: "1.0.0"
+latest_release_url: "https://github.com/kujolang/shipcheck/releases/tag/v1.0.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

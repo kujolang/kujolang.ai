@@ -12,6 +12,10 @@ launch_story: "Bind a named human approval to an exact package version and verif
 scope_note: "VersionSeal records explicit local approvals and revocations; checksum integrity does not prove identity, custody, legal authority, or external publication."
 keywords: "VersionSeal, Kujo ecosystem, human approval, exact version, revocation, checksum verification, publishing authority"
 seo_title: "VersionSeal — Kujo Ecosystem"
+version: "0.2.0"
+latest_release_url: "https://github.com/kujolang/versionseal/releases/tag/v0.2.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

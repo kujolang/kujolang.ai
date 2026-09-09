@@ -12,7 +12,10 @@ launch_story: "Model a website as a crawlable information system and preserve th
 scope_note: "SiteProbe 0.3.0 is a native Kujo, read-only crawler for static and server-rendered HTML; it is not a JavaScript renderer, security scanner, or search-engine emulator."
 keywords: "SiteProbe, Kujo ecosystem, website crawler, website intelligence, links, redirects, metadata, structured data"
 seo_title: "SiteProbe — Native Kujo Website Crawler"
-last_updated: 2026-09-07
+last_updated: "2026-09-09"
+version: "0.3.0"
+latest_release_url: "https://github.com/kujolang/siteprobe/releases/tag/v0.3.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
 ---
 
 ## What it does

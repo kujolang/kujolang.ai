@@ -11,9 +11,11 @@ github_url: "https://github.com/kujolang/searchbridge"
 launch_story: "Bring optional provider measurements into Kujo WebOps through scoped capabilities, normalized evidence, and explicit effect boundaries."
 scope_note: "SearchBridge 1.0.0 is a released local CLI and SDK with live-qualified Google search, analytics, PageSpeed, and CrUX reads; Cloudflare and IndexNow remain fixture-only pending the v1.1 review."
 version: "1.0.0"
-last_updated: "2026-09-04"
+last_updated: "2026-09-09"
 keywords: "SearchBridge, Kujo ecosystem, search data, analytics, PageSpeed, CrUX, backlinks, IndexNow"
 seo_title: "SearchBridge — Kujo Ecosystem"
+latest_release_url: "https://github.com/kujolang/searchbridge/releases/tag/v1.0.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
 ---
 
 ## What it does

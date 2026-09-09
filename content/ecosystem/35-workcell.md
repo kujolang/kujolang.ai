@@ -9,9 +9,13 @@ order: 310
 install_command: "git clone https://github.com/kujolang/workcell.git"
 github_url: "https://github.com/kujolang/workcell"
 launch_story: "Run agent work inside an explicit execution contract, then export only declared artifacts and durable evidence."
-scope_note: "Workcell trusts the selected container engine and host kernel; it is not microVM isolation, a hosted multi-tenant runner, or compliance certification."
+scope_note: "Workcell 1.1.0 keeps Docker/Podman stable. Portable contracts and E2B, Vercel Sandbox, and Daytona adapters remain alpha pending live certification. Honor its exact runtime pin and run doctor on the target host."
 keywords: "Workcell, Kujo ecosystem, bounded execution, Docker, Podman"
 seo_title: "Workcell — Kujo Ecosystem"
+version: "1.1.0"
+latest_release_url: "https://github.com/kujolang/workcell/releases/tag/v1.1.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does
@@ -38,7 +42,7 @@ Workcell turns execution authority into a visible contract. Kujo governs what a 
 
 ## Operating boundary
 
-Containers are not universal isolation. Higher-risk or multi-tenant workloads need a stronger operator-provided boundary. Image governance, egress controls, key custody, retention, and host hardening remain deployment responsibilities.
+Workcell 1.1.0 keeps Docker/Podman stable. Portable contracts and E2B, Vercel Sandbox, and Daytona adapters remain alpha pending live certification. Honor its exact runtime pin and run doctor on the target host.
 
 ## Learn more
 

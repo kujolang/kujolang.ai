@@ -12,7 +12,10 @@ launch_story: "Define an operation once, then project the same meaning into appl
 scope_note: "Ability is a contract and runtime package, not a hosted gateway, global catalog, identity provider, permission system, or workflow engine."
 keywords: "Kujo Ability, operation contracts, MCP tools, agent tools, typed schemas, policy gates, execution receipts"
 seo_title: "Kujo Ability — Portable Operation Contracts"
-last_updated: 2026-09-04
+last_updated: "2026-09-09"
+version: "1.1.0"
+latest_release_url: "https://github.com/kujolang/ability/releases/tag/v1.1.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
 ---
 
 ## What it does

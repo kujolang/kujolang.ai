@@ -12,6 +12,10 @@ launch_story: "Bind material claims to captured support, classifications, confli
 scope_note: "Dossier records evidence assertions; a URL is not verification, inference is not fact, and a record does not grant consent, rights, or approval."
 keywords: "Dossier, Kujo ecosystem, evidence ledger, claim verification, source provenance, publishing standards"
 seo_title: "Dossier — Kujo Ecosystem"
+version: "0.2.0"
+latest_release_url: "https://github.com/kujolang/dossier/releases/tag/v0.2.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

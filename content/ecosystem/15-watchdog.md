@@ -9,9 +9,13 @@ order: 130
 install_command: "git clone https://github.com/kujolang/watchdog.git"
 github_url: "https://github.com/kujolang/watchdog"
 launch_story: "Make AI application behavior observable without hiding the request path from the operator."
-scope_note: "Production deployment requires explicit TLS, firewall, authentication, retention, and operational policy."
+scope_note: "The published release is 1.0.1. Canonical v2 telemetry and cross-system correlation are newer default-branch work. Direct-provider cost estimates are not invoices; auth, retention, and deployment remain operator-owned."
 keywords: "Watchdog, Kujo ecosystem, Primitive, Observability"
 seo_title: "Watchdog — Kujo Ecosystem"
+version: "1.0.1"
+latest_release_url: "https://github.com/kujolang/watchdog/releases/tag/v1.0.1"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does
@@ -24,7 +28,7 @@ Make AI application behavior observable without hiding the request path from the
 
 ## Operating boundary
 
-Production deployment requires explicit TLS, firewall, authentication, retention, and operational policy.
+The published release is 1.0.1. Canonical v2 telemetry and cross-system correlation are newer default-branch work. Direct-provider cost estimates are not invoices; auth, retention, and deployment remain operator-owned.
 
 ## Learn more
 

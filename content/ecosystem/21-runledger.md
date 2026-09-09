@@ -12,6 +12,10 @@ launch_story: "Preserve proof of agent and build runs so later review starts fro
 scope_note: "Receipts record declared and observable run data; they do not independently certify correctness."
 keywords: "RunLedger, Kujo ecosystem, Tool, Evidence"
 seo_title: "RunLedger — Kujo Ecosystem"
+version: "1.1.0"
+latest_release_url: "https://github.com/kujolang/runledger/releases/tag/v1.1.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

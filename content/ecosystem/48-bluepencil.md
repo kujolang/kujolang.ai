@@ -12,6 +12,10 @@ launch_story: "Review editorial work across eight explicit quality dimensions wi
 scope_note: "BluePencil operates under PROPOSE: it records review evidence but never approves publication or rewrites source artifacts."
 keywords: "BluePencil, Kujo ecosystem, editorial review, quality calibration, publishing workflow, structured verdicts"
 seo_title: "BluePencil — Kujo Ecosystem"
+version: "0.2.0"
+latest_release_url: "https://github.com/kujolang/bluepencil/releases/tag/v0.2.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

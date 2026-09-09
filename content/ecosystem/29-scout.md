@@ -12,6 +12,10 @@ launch_story: "Shorten codebase orientation without turning discovery into an op
 scope_note: "Scout accelerates onboarding; project-specific architecture and security judgment still matter."
 keywords: "Scout, Kujo ecosystem, Tool, Intelligence"
 seo_title: "Scout — Kujo Ecosystem"
+version: "1.0.0"
+latest_release_url: "https://github.com/kujolang/scout/releases/tag/v1.0.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

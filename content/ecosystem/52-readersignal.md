@@ -12,6 +12,10 @@ launch_story: "Capture bounded audience evidence and compare compatible measurem
 scope_note: "ReaderSignal stores privacy-bounded evidence; provider access, identity, consent, interpretation, and consequential decisions remain external responsibilities."
 keywords: "ReaderSignal, Kujo ecosystem, audience measurement, reader feedback, privacy-bounded analytics, publishing intelligence"
 seo_title: "ReaderSignal — Kujo Ecosystem"
+version: "0.2.0"
+latest_release_url: "https://github.com/kujolang/readersignal/releases/tag/v0.2.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

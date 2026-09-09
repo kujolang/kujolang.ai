@@ -12,6 +12,10 @@ launch_story: "Turn verified examples into reusable launch and proof assets."
 scope_note: "Howl renders source material; claims remain limited by the examples and evidence supplied to it."
 keywords: "Howl, Kujo ecosystem, Tool, Assets"
 seo_title: "Howl — Kujo Ecosystem"
+version: "1.1.0"
+latest_release_url: "https://github.com/kujolang/howl/releases/tag/v1.1.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

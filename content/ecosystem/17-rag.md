@@ -9,9 +9,13 @@ order: 80
 install_command: "git clone https://github.com/kujolang/rag.git"
 github_url: "https://github.com/kujolang/rag"
 launch_story: "Ground agent answers in operator-controlled knowledge with inspectable citations."
-scope_note: "This is a local-first starter kit, not a managed retrieval service or a substitute for domain evaluation."
+scope_note: "The published 1.0.0 release provides local retrieval. Newer default-branch work adds documentation example selection, MIME-aware HTTP ingestion, and a private local Kujo-docs snapshot workflow; no public hosted retrieval service is implied."
 keywords: "RAG, Kujo ecosystem, Primitive, Knowledge"
 seo_title: "RAG — Kujo Ecosystem"
+version: "1.0.0"
+latest_release_url: "https://github.com/kujolang/rag/releases/tag/v1.0.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does
@@ -24,7 +28,7 @@ Ground agent answers in operator-controlled knowledge with inspectable citations
 
 ## Operating boundary
 
-This is a local-first starter kit, not a managed retrieval service or a substitute for domain evaluation.
+The published 1.0.0 release provides local retrieval. Newer default-branch work adds documentation example selection, MIME-aware HTTP ingestion, and a private local Kujo-docs snapshot workflow; no public hosted retrieval service is implied.
 
 ## Learn more
 

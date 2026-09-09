@@ -12,7 +12,10 @@ launch_story: "A guarded gateway for exposing useful capabilities to agents thro
 scope_note: "Generated servers still require review of tool authority, data access, authentication, and deployment boundaries."
 keywords: "MCP, Kujo ecosystem, Primitive, Gateway"
 seo_title: "MCP — Kujo Ecosystem"
-last_updated: 2026-09-04
+last_updated: "2026-09-09"
+version: "1.1.1"
+latest_release_url: "https://github.com/kujolang/mcp/releases/tag/v1.1.1"
+release_status: "published GitHub Release; see scope_note for newer source work"
 ---
 
 ## What it does

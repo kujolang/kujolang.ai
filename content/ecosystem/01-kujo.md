@@ -9,9 +9,13 @@ order: 10
 install_command: "curl -fsSL https://kujolang.ai/install.sh | bash"
 github_url: "https://github.com/kujolang/kujo"
 launch_story: "The ecosystem core: readable source, explicit capabilities, deterministic tooling contracts, and strong native APIs."
-scope_note: "Kujo is a general-purpose language, not a sandbox. Use capability-minimal execution for untrusted scripts."
+scope_note: "Kujo 1.4.0 is published with native installer primitives and isolated tool imports. The standalone runtime needs no Python, Node.js, or Rust; individual tools can have their own requirements."
 keywords: "Kujo, Kujo ecosystem, Core, Language"
 seo_title: "Kujo — Kujo Ecosystem"
+version: "1.4.0"
+latest_release_url: "https://github.com/kujolang/kujo/releases/tag/v1.4.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does
@@ -24,7 +28,7 @@ The ecosystem core: readable source, explicit capabilities, deterministic toolin
 
 ## Operating boundary
 
-Kujo is a general-purpose language, not a sandbox. Use capability-minimal execution for untrusted scripts.
+Kujo 1.4.0 is published with native installer primitives and isolated tool imports. The standalone runtime needs no Python, Node.js, or Rust; individual tools can have their own requirements.
 
 ## Install and maintain the runtime
 

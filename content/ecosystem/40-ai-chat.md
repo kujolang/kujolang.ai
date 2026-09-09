@@ -9,9 +9,13 @@ order: 420
 install_command: "git clone https://github.com/kujolang/ai-chat.git"
 github_url: "https://github.com/kujolang/ai-chat"
 launch_story: "Demonstrate provider-gated AI application boundaries in a complete, inspectable local app."
-scope_note: "AI Chat is a public local showcase, not a production-certified hosted chat platform."
+scope_note: "AI Chat 1.2.0 adds durable recovery and documentation-aware chat. Use Node 22.17.0, npm ci, and database/encryption backups. The eight-hour soak remains incomplete; browser execution requires supported OS containment."
 keywords: "AI Chat, Kujo ecosystem, Showcase, AI"
 seo_title: "AI Chat — Kujo Ecosystem"
+version: "1.2.0"
+latest_release_url: "https://github.com/kujolang/ai-chat/releases/tag/v1.2.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does
@@ -24,7 +28,7 @@ Demonstrate provider-gated AI application boundaries in a complete, inspectable 
 
 ## Operating boundary
 
-AI Chat is a public local showcase, not a production-certified hosted chat platform.
+AI Chat 1.2.0 adds durable recovery and documentation-aware chat. Use Node 22.17.0, npm ci, and database/encryption backups. The eight-hour soak remains incomplete; browser execution requires supported OS containment.
 
 ## Learn more
 

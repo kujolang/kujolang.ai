@@ -12,10 +12,12 @@ github_url: "https://github.com/kujolang/paperclip"
 launch_story: "Give Paperclip agents a small, visible workspace for choosing context, reviewing changes, and preserving failure evidence."
 scope_note: "The plugin runs local Kujo components inside Paperclip. It does not execute arbitrary commands, replace repository tests, or claim suggested checks have run."
 version: "0.1.7"
-last_updated: "2026-09-04"
+last_updated: "2026-09-09"
 keywords: "Kujo Paperclip plugin, Paperclip agents, context pack, change review, failure evidence"
 seo_title: "Kujo for Paperclip — Context, Review, and Failure Evidence"
 seo_description: "Install the Kujo plugin for Paperclip to select focused context, review change scope, and save redacted failure evidence from the current task view."
+latest_release_url: "https://github.com/kujolang/paperclip/releases/tag/v0.1.7"
+release_status: "published GitHub Release; see scope_note for newer source work"
 ---
 
 ## What it does

@@ -12,6 +12,10 @@ launch_story: "Detect scope expansion before a focused change becomes an unrevie
 scope_note: "Budgets are policy signals, not proof that a small change is safe or a large change is wrong."
 keywords: "ChangeBucket, Kujo ecosystem, Tool, Scope"
 seo_title: "ChangeBucket — Kujo Ecosystem"
+version: "1.0.0"
+latest_release_url: "https://github.com/kujolang/changebucket/releases/tag/v1.0.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

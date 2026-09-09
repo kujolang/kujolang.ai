@@ -13,7 +13,9 @@ scope_note: "PackWrite compiles planning artifacts locally; it does not implemen
 keywords: "PackWrite, Kujo ecosystem, Tool, Execution Packs"
 seo_title: "PackWrite — Kujo Ecosystem"
 version: "1.1.0"
-last_updated: 2026-09-04
+last_updated: "2026-09-09"
+latest_release_url: "https://github.com/kujolang/packwrite/releases/tag/v1.1.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
 ---
 
 ## What it does

@@ -12,6 +12,10 @@ launch_story: "Make a code change easier to review and easier to hand off."
 scope_note: "PatchBrief summarizes evidence from a diff; it does not replace reading sensitive or high-risk changes."
 keywords: "PatchBrief, Kujo ecosystem, Tool, Review"
 seo_title: "PatchBrief — Kujo Ecosystem"
+version: "1.0.1"
+latest_release_url: "https://github.com/kujolang/patchbrief/releases/tag/v1.0.1"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

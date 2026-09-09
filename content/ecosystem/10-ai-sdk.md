@@ -12,6 +12,10 @@ launch_story: "A provider-gated foundation for AI calls without binding applicat
 scope_note: "Live-provider behavior remains an explicit integration boundary; deterministic fixtures support offline verification."
 keywords: "AI SDK, Kujo ecosystem, Primitive, AI"
 seo_title: "AI SDK — Kujo Ecosystem"
+version: "1.0.0"
+latest_release_url: "https://github.com/kujolang/ai-sdk/releases/tag/v1.0.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

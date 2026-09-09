@@ -12,6 +12,10 @@ launch_story: "Preflight an exact approved package, perform a bounded publicatio
 scope_note: "PressWire performs only explicitly authorized publication effects; optional external destinations require configured adapters and valid approval scope."
 keywords: "PressWire, Kujo ecosystem, approval-gated publishing, publication receipts, corrections, idempotent delivery"
 seo_title: "PressWire — Kujo Ecosystem"
+version: "0.2.0"
+latest_release_url: "https://github.com/kujolang/presswire/releases/tag/v0.2.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

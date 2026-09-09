@@ -9,11 +9,13 @@ order: 60
 install_command: "git clone https://github.com/kujolang/dispatch.git"
 github_url: "https://github.com/kujolang/dispatch"
 launch_story: "Dispatch 1.2.0 routes bounded AI work through policy constraints, approvals, resumable state, and inspectable evidence."
-scope_note: "The local and offline orchestration path is primary; live integrations need environment-specific validation."
+scope_note: "The published 1.2.0 release provides resumable orchestration and routing. Newer default-branch work adds persisted retrieval preferences, RAG documentation integration, and task/retry observations."
 keywords: "Dispatch, Kujo ecosystem, Primitive, Orchestration"
 seo_title: "Dispatch — Kujo Ecosystem"
 version: "1.2.0"
-last_updated: 2026-08-27
+last_updated: "2026-09-09"
+latest_release_url: "https://github.com/kujolang/dispatch/releases/tag/v1.2.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
 ---
 
 ## What it does
@@ -26,7 +28,7 @@ Auditable workflow orchestration for missions that must pause, resume, and prese
 
 ## Operating boundary
 
-The local and offline orchestration path is primary; live integrations need environment-specific validation.
+The published 1.2.0 release provides resumable orchestration and routing. Newer default-branch work adds persisted retrieval preferences, RAG documentation integration, and task/retry observations.
 
 ## Release
 

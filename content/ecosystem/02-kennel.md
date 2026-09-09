@@ -9,9 +9,13 @@ order: 20
 install_command: "git clone https://github.com/kujolang/kennel.git"
 github_url: "https://github.com/kujolang/kennel"
 launch_story: "The package foundation for reproducible local and static dependency workflows."
-scope_note: "Local and static workflows are the mature boundary; public registry behavior has a narrower maturity posture."
+scope_note: "The official first-party static registry is live at https://kennel.kujolang.ai. Latest published client: 1.0.1. Native bootstrap and global tool commands are merged 1.1.0 candidate work awaiting a separate release. Accounts and third-party publishing are future work."
 keywords: "Kennel, Kujo ecosystem, Core, Packages"
 seo_title: "Kennel — Kujo Ecosystem"
+version: "1.0.1"
+latest_release_url: "https://github.com/kujolang/kennel/releases/tag/v1.0.1"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does
@@ -24,7 +28,7 @@ The package foundation for reproducible local and static dependency workflows.
 
 ## Operating boundary
 
-Local and static workflows are the mature boundary; public registry behavior has a narrower maturity posture.
+The official first-party static registry is live at https://kennel.kujolang.ai. Latest published client: 1.0.1. Native bootstrap and global tool commands are merged 1.1.0 candidate work awaiting a separate release. Accounts and third-party publishing are future work.
 
 ## Learn more
 

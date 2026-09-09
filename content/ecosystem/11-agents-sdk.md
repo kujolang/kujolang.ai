@@ -9,9 +9,13 @@ order: 100
 install_command: "git clone https://github.com/kujolang/agents-sdk.git"
 github_url: "https://github.com/kujolang/agents-sdk"
 launch_story: "Composable local-first runtime primitives for building inspectable agents."
-scope_note: "Hosted operations and persistence adapters remain integrator-owned rather than implied managed services."
+scope_note: "The 1.0.0 release provides library-first agent primitives. Newer default-branch work adds bounded lifecycle observations, retrieval preferences, and real MCP tool examples; these are not retroactively in the release archive."
 keywords: "Agents SDK, Kujo ecosystem, Primitive, Agents"
 seo_title: "Agents SDK — Kujo Ecosystem"
+version: "1.0.0"
+latest_release_url: "https://github.com/kujolang/agents-sdk/releases/tag/v1.0.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does
@@ -24,7 +28,7 @@ Composable local-first runtime primitives for building inspectable agents.
 
 ## Operating boundary
 
-Hosted operations and persistence adapters remain integrator-owned rather than implied managed services.
+The 1.0.0 release provides library-first agent primitives. Newer default-branch work adds bounded lifecycle observations, retrieval preferences, and real MCP tool examples; these are not retroactively in the release archive.
 
 ## Ability integration
 

@@ -12,6 +12,10 @@ launch_story: "A conventional application API pattern that makes Kujo integratio
 scope_note: "This is a proof application and architecture reference, not a production-certified application platform."
 keywords: "CRUD API Showcase, Kujo ecosystem, Showcase, API"
 seo_title: "CRUD API Showcase — Kujo Ecosystem"
+version: "1.0.0"
+latest_release_url: "https://github.com/kujolang/crud-api/releases/tag/v1.0.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

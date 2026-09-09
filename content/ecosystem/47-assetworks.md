@@ -12,6 +12,10 @@ launch_story: "Plan publication assets, preserve their lineage, and validate acc
 scope_note: "AssetWorks is a local-first evidence system; hosted identity, distributed coordination, and external media services require operator-provided adapters."
 keywords: "AssetWorks, Kujo ecosystem, publishing assets, media provenance, accessibility artifacts, checksum validation"
 seo_title: "AssetWorks — Kujo Ecosystem"
+version: "0.2.0"
+latest_release_url: "https://github.com/kujolang/assetworks/releases/tag/v0.2.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

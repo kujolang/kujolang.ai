@@ -12,6 +12,10 @@ launch_story: "Compose a bounded mission, run it in a repository or detached wor
 scope_note: "Relay 1.0 is stable for local or operator-controlled use; it is not hosted orchestration, a multi-tenant service, hostile-code isolation, or enterprise certification."
 keywords: "Relay, Kujo ecosystem, agent missions, local orchestration, verifiable evidence"
 seo_title: "Relay — Kujo Ecosystem"
+version: "1.1.0"
+latest_release_url: "https://github.com/kujolang/relay/releases/tag/v1.1.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

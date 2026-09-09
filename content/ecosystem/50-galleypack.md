@@ -12,6 +12,10 @@ launch_story: "Freeze reproducible editorial packages whose artifacts, lineage, 
 scope_note: "GalleyPack packages and verifies exact artifacts; it does not modify source work, interpret review as approval, or publish."
 keywords: "GalleyPack, Kujo ecosystem, editorial packaging, artifact lineage, checksum verification, production workflow"
 seo_title: "GalleyPack — Kujo Ecosystem"
+version: "0.2.0"
+latest_release_url: "https://github.com/kujolang/galleypack/releases/tag/v0.2.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

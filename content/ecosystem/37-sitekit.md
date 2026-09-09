@@ -12,6 +12,10 @@ launch_story: "Give people and agents a stable set of tokens, schemas, semantic 
 scope_note: "SiteKit provides tested source components and distribution assets, not accessibility certification for arbitrary downstream pages or a hosted component service."
 keywords: "SiteKit, Kujo ecosystem, design system, accessible components, static websites"
 seo_title: "SiteKit — Kujo Ecosystem"
+version: "1.0.0"
+latest_release_url: "https://github.com/kujolang/site-kit/releases/tag/v1.0.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

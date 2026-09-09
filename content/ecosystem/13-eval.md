@@ -12,6 +12,10 @@ launch_story: "An independent acceptance layer that makes success criteria execu
 scope_note: "Eval verifies declared checks; it is only as complete as the suite and policies a project defines."
 keywords: "Eval, Kujo ecosystem, Primitive, Verification"
 seo_title: "Eval — Kujo Ecosystem"
+version: "1.0.0"
+latest_release_url: "https://github.com/kujolang/eval/releases/tag/v1.0.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

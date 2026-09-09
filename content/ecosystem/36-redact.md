@@ -12,6 +12,10 @@ launch_story: "Prepare reviewable sharing copies without sending source material
 scope_note: "Redact does not guarantee complete PII detection or compliance; domain-specific privacy and security review is required before sensitive production use."
 keywords: "Redact, Kujo ecosystem, local redaction, privacy, audit"
 seo_title: "Redact — Kujo Ecosystem"
+version: "1.0.0"
+latest_release_url: "https://github.com/kujolang/redact/releases/tag/v1.0.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does

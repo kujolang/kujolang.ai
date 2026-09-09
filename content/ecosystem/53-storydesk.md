@@ -12,6 +12,10 @@ launch_story: "Operate the editorial queue from idea and commission through assi
 scope_note: "StoryDesk coordinates local editorial work; it does not grant publication authority or claim hosted identity and distributed multi-host coordination."
 keywords: "StoryDesk, Kujo ecosystem, editorial operations, commissions, assignments, publishing workflow, human review"
 seo_title: "StoryDesk — Kujo Ecosystem"
+version: "0.2.0"
+latest_release_url: "https://github.com/kujolang/storydesk/releases/tag/v0.2.0"
+release_status: "published GitHub Release; see scope_note for newer source work"
+last_updated: "2026-09-09"
 ---
 
 ## What it does
