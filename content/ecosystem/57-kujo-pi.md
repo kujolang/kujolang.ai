@@ -13,7 +13,7 @@ launch_story: "An opt-in Pi integration for Kujo repository intelligence, checks
 scope_note: "Latest published GitHub Release: 1.0.0. The default branch prepares 1.1.0 with Ability gateway tools and Watchdog v2 telemetry. Requires the Pi host and a separate Kujo runtime; private services and execution remain explicitly configured and permission-gated."
 version: "1.0.0"
 latest_release_url: "https://github.com/kujolang/kujo-pi/releases/tag/v1.0.0"
-release_status: "published GitHub Release; see scope_note for newer source work"
+release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 keywords: "Kujo Pi, Kujo ecosystem, An opt-in Pi integration for Kujo repository intelligence, checks, workflows, retrieval, approvals and receipts."
 seo_title: "Kujo Pi — Kujo Ecosystem"

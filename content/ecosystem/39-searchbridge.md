@@ -15,7 +15,7 @@ last_updated: "2026-09-09"
 keywords: "SearchBridge, Kujo ecosystem, search data, analytics, PageSpeed, CrUX, backlinks, IndexNow"
 seo_title: "SearchBridge — Kujo Ecosystem"
 latest_release_url: "https://github.com/kujolang/searchbridge/releases/tag/v1.0.0"
-release_status: "published GitHub Release; see scope_note for newer source work"
+release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
 ---
 
 ## What it does

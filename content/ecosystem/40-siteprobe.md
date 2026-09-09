@@ -15,7 +15,7 @@ seo_title: "SiteProbe — Native Kujo Website Crawler"
 last_updated: "2026-09-09"
 version: "0.3.0"
 latest_release_url: "https://github.com/kujolang/siteprobe/releases/tag/v0.3.0"
-release_status: "published GitHub Release; see scope_note for newer source work"
+release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
 ---
 
 ## What it does

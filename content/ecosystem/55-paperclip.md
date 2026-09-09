@@ -17,7 +17,7 @@ keywords: "Kujo Paperclip plugin, Paperclip agents, context pack, change review,
 seo_title: "Kujo for Paperclip — Context, Review, and Failure Evidence"
 seo_description: "Install the Kujo plugin for Paperclip to select focused context, review change scope, and save redacted failure evidence from the current task view."
 latest_release_url: "https://github.com/kujolang/paperclip/releases/tag/v0.1.7"
-release_status: "published GitHub Release; see scope_note for newer source work"
+release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
 ---
 
 ## What it does

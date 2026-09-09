@@ -14,7 +14,7 @@ keywords: "GalleyPack, Kujo ecosystem, editorial packaging, artifact lineage, ch
 seo_title: "GalleyPack — Kujo Ecosystem"
 version: "0.2.0"
 latest_release_url: "https://github.com/kujolang/galleypack/releases/tag/v0.2.0"
-release_status: "published GitHub Release; see scope_note for newer source work"
+release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

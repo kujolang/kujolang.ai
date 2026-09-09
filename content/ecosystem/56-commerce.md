@@ -13,7 +13,7 @@ launch_story: "Provider-agnostic commerce for static sites: trusted catalogs, ho
 scope_note: "Pre-1.0 package with frozen v1 wire contracts. Static hosted links need no server; dynamic checkout and verified webhooks need an operator-deployed runtime. Providers own payment and inventory truth."
 version: "0.4.0"
 latest_release_url: "https://github.com/kujolang/commerce/releases/tag/v0.4.0"
-release_status: "published GitHub Release; see scope_note for newer source work"
+release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 keywords: "Commerce, Kujo ecosystem, Provider-agnostic commerce for static sites: trusted catalogs, hosted purchase links, optional checkout and verified webhooks."
 seo_title: "Commerce — Kujo Ecosystem"

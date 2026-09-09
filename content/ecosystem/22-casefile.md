@@ -14,7 +14,7 @@ keywords: "CaseFile, Kujo ecosystem, Tool, Failures"
 seo_title: "CaseFile — Kujo Ecosystem"
 version: "1.0.0"
 latest_release_url: "https://github.com/kujolang/casefile/releases/tag/v1.0.0"
-release_status: "published GitHub Release; see scope_note for newer source work"
+release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 
