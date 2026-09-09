@@ -1,0 +1,8 @@
+{
+  "source_commit": "5e40f6fba6ea6de7a33f5903feac333490a769df",
+  "build_commit": "b3d7304c39eecb72fefe287aecb98b4d744166c0",
+  "workflow_run": 34279154149,
+  "artifact_id": 10077319429,
+  "archive_sha256": "c7620c219b36e4130b7c354538d6b5fb232947d2781f627f9f598fab2bd6facc",
+  "basis": "Untouched site build from successful pinned CI; subsequent source changes only contain prior audit evidence"
+}

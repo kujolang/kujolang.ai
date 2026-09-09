@@ -1,0 +1,16 @@
+{
+  "phrases": {
+    "Get started": true,
+    "v1.4.0": true,
+    "isolated tool imports": true,
+    "without Python": true,
+    "stable Kujo binary": true,
+    "On Linux and macOS": true,
+    "Windows users": true,
+    "default tool group": true
+  },
+  "install_command": [
+    "curl -fsSL https://kujolang.ai/install.sh | bash"
+  ],
+  "source_commit": "1f45a580fa184a7b696d1f435211de45eaf45084"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://kujolang.ai/ecosystem/kujo/",
+    "status": 200,
+    "final_url": "https://kujolang.ai/ecosystem/kujo/",
+    "main_content_matches_verified_artifact": true,
+    "main_content_sha256": "35bf2be072288d485b8c7aa7d9a4e797c6aaebd5a3b7a5220f81104ee308ad34"
+  },
+  {
+    "url": "https://kujolang.ai/.well-known/kujo-site-index.json",
+    "status": 200,
+    "json_parse": "passed"
+  }
+]

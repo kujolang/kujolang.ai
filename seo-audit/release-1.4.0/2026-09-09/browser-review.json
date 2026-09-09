@@ -1,0 +1,22 @@
+{
+  "preview_source": "fb329ab",
+  "route": "/ecosystem/kujo/",
+  "desktop": "CUA accessibility inspection confirms v1.4.0 installation, runtime scope and authoritative links",
+  "mobile": {
+    "viewport_width": 390,
+    "scroll_width": 375,
+    "code_width": 291,
+    "code_scroll_width": 291,
+    "screenshot_reviewed": true
+  },
+  "baseline_mobile": {
+    "viewport_width": 390,
+    "scroll_width": 375
+  },
+  "production_verification": {
+    "url": "https://kujolang.ai/ecosystem/kujo/",
+    "source_commit": "1f45a580fa184a7b696d1f435211de45eaf45084",
+    "CUA_visible_platform_runtime_and_install_command": "passed",
+    "webmcp_get_content": "ecosystem:kujo"
+  }
+}
