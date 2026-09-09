@@ -1,0 +1,14 @@
+{
+  "source_commit": "1f45a580fa184a7b696d1f435211de45eaf45084",
+  "workflow_run": 34365028256,
+  "artifact_id": 10110326405,
+  "archive_sha256": "817286d2eb0448c7e4f1a7d528b495ab3e74f29344355f7239f9f0ec66230483",
+  "runtime_ref": "7df293865ae7d342b669789d011f607449808b02",
+  "build": "Repository-pinned CI build and all site contracts passed",
+  "local_probe": "Slow disposable v1.2.2 and debug v1.4.0 diagnostic builds stopped; not used for deployment",
+  "production": {
+    "branch": "main",
+    "workflow_run": 34365028256,
+    "conclusion": "success"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-09",
+  "production": true,
+  "checks": [
+    {
+      "url": "https://kujolang.ai/ecosystem/workflows/videoops-quality-review/",
+      "viewport_width": 1280,
+      "overflow": false,
+      "broken_images": [],
+      "hero_dimensions": "1916x821",
+      "visual_review": "passed"
+    },
+    {
+      "url": "https://kujolang.ai/ecosystem/workflows/videoops-quality-review/",
+      "viewport_width": 390,
+      "overflow": false,
+      "menu_expanded": true
+    }
+  ],
+  "viewport_restored": true
+}

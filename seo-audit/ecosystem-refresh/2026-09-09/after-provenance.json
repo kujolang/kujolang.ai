@@ -1,0 +1,11 @@
+{
+  "source_commit": "288ae4820f47d79db7eef5c8e237e678a0f00a09",
+  "workflow_run": 34375139800,
+  "artifact_id": 10114229899,
+  "github_artifact_digest": "sha256:99a2a32b2fd3ccbd5e89bf3db64f86a179d889756354415d99162c76e8716907",
+  "artifact_tar_sha256": "20929b5c5774e00362a36e5d0552a9626226f3da044c2716c68c8d70a4ff8023",
+  "runtime_ref": "7df293865ae7d342b669789d011f607449808b02",
+  "status": "success",
+  "deployment": "GitHub Pages main-branch workflow build and deploy passed",
+  "verification": "3 Node tests; full build; 1,140 responsive image variants; 535 rendered responsive images; 241 social-card routes; all site/output contracts passed; 241 canonical production pages HTTP 200. Earlier candidate failed six shared-hero size assertions; the map was fixed and the same contract passed."
+}
