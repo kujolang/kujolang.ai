@@ -6,12 +6,12 @@ featured_image: "/assets/images/ecosystem/workflow-webops-ai-visibility-benchmar
 social_image: "/assets/images/social/webops-ai-visibility-benchmark.jpg"
 section: "experimental"
 order: "280"
-install_command: "git clone https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && webops-ai-visibility-benchmark/scripts/run.sh"
-github_url: "https://github.com/kujolang/kujo-workflows/tree/main/webops-ai-visibility-benchmark"
+install_command: "git clone --branch v0.6.0 --depth 1 https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && webops-ai-visibility-benchmark/scripts/run.sh"
+github_url: "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-ai-visibility-benchmark"
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: experimental. Review the workflow README before live-provider or host-affecting use."
-version: "0.4.0"
-last_updated: "2026-09-02"
+version: "0.6.0"
+last_updated: "2026-09-06"
 keywords: "WebOps AI Visibility Benchmark, Kujo workflow, webops-ai-visibility-benchmark, local-first agent workflow"
 seo_title: "WebOps AI Visibility Benchmark — Kujo Workflow"
 seo_description: "Run a fixed longitudinal query suite across explicitly available AI/search surfaces without fabricated availability."
@@ -48,9 +48,9 @@ state.json records every step; rerun with --resume continues after completed ste
 
 ## Release boundary
 
-Readiness is **experimental** in the 0.4.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
+Readiness is **experimental** in the 0.6.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
 
 ## Source
 
-- [Open the complete webops-ai-visibility-benchmark workflow kit on GitHub](https://github.com/kujolang/kujo-workflows/tree/main/webops-ai-visibility-benchmark)
-- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/main/docs/audit/workflow-catalog.json)
+- [Open the complete webops-ai-visibility-benchmark workflow kit on GitHub](https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-ai-visibility-benchmark)
+- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/v0.6.0/docs/audit/workflow-catalog.json)

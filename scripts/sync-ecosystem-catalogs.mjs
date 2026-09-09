@@ -7,7 +7,9 @@ const reposRoot = process.env.KUJO_REPOS
   ? path.resolve(process.env.KUJO_REPOS)
   : path.resolve(siteRoot, '..');
 const skillsOnly = process.argv.includes('--skills-only');
-const skillsRef = process.env.KUJO_SKILLS_REF || 'origin/main';
+const skillsRef = process.env.KUJO_SKILLS_REF || 'v0.7.0';
+const workflowsRef = process.env.KUJO_WORKFLOWS_REF || 'v0.6.0';
+const workflowsLinkRef = workflowsRef.replace(/^origin\//, '');
 const skillsLinkRef = skillsRef.replace(/^origin\//, '');
 const skillsRepo = path.join(reposRoot, 'kujo-skills');
 const workflowsRepo = path.join(reposRoot, 'kujo-workflows');
@@ -17,7 +19,7 @@ function git(repo, ...args) {
 }
 
 function releasedFile(repo, file) {
-  return git(repo, 'show', `${repo === skillsRepo ? skillsRef : 'origin/main'}:${file}`);
+  return git(repo, 'show', `${repo === skillsRepo ? skillsRef : workflowsRef}:${file}`);
 }
 
 function yamlString(value) {
@@ -247,7 +249,7 @@ let workflows = [];
 if (!skillsOnly) {
 const workflowCatalog = JSON.parse(releasedFile(workflowsRepo, 'docs/audit/workflow-catalog.json'));
 const workflowVersion = releasedFile(workflowsRepo, 'VERSION').trim();
-const workflowDate = git(workflowsRepo, 'show', '-s', '--format=%cs', 'origin/main').trim();
+const workflowDate = git(workflowsRepo, 'show', '-s', '--format=%cs', `${workflowsRef}^{commit}`).trim();
 workflows = workflowCatalog.active_workflows;
 const workflowsDir = path.join(siteRoot, 'content', 'workflows');
 const operatorPageName = fs.existsSync(workflowsDir)
@@ -273,20 +275,28 @@ generatedCards.push({
 
 workflows.forEach((workflow, index) => {
   const slug = workflow.id;
-  const sourceUrl = `https://github.com/kujolang/kujo-workflows/tree/main/${workflow.path}`;
+  if (slug === "publishing-house-operator" && operatorPage) {
+    const preserved = operatorPage.replace(/version: .*/, `version: "${workflowVersion}"`).replace(/last_updated: .*/, `last_updated: "${workflowDate}"`).replaceAll("/tree/main/", `/tree/${workflowsLinkRef}/`).replace("git clone https://github.com/kujolang/kujo-workflows.git", `git clone --branch ${workflowsLinkRef} --depth 1 https://github.com/kujolang/kujo-workflows.git`);
+    fs.writeFileSync(path.join(workflowsDir, `${String(index + 1).padStart(3, "0")}-${slug}.md`), preserved);
+    return;
+  }
+  const sourceUrl = `https://github.com/kujolang/kujo-workflows/tree/${workflowsLinkRef}/${workflow.path}`;
   const title = slug.split('-').map((part) => {
     if (part === 'webops') return 'WebOps';
+    if (part === 'videoops') return 'VideoOps';
+    if (part === 'hyperframes') return 'HyperFrames';
     return /^(ai|sdk|mcp|rag|seo)$/.test(part) ? part.toUpperCase() : part[0].toUpperCase() + part.slice(1);
   }).join(' ');
   const readiness = workflow.production_readiness.replace(/-/g, ' ');
   const list = (items) => items.map((item) => `- ${item}`).join('\n');
-  const body = `## Outcome\n\n${workflow.purpose}\n\n## Inputs\n\n${list(workflow.inputs)}\n\n## Evidence and outputs\n\n${list(workflow.outputs)}\n\nThe workflow's evidence contract is: ${workflow.evidence}.\n\n## Approval boundaries\n\n${list(workflow.approval_boundaries)}\n\n## State and recovery\n\n${workflow.state_and_recovery}\n\n## Release boundary\n\nReadiness is **${readiness}** in the ${workflowVersion} local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.\n\n## Source\n\n- [Open the complete ${slug} workflow kit on GitHub](${sourceUrl})\n- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/main/docs/audit/workflow-catalog.json)`;
-  const heroPath = `assets/images/ecosystem/workflow-${slug}.webp`;
+  const body = `## Outcome\n\n${workflow.purpose}\n\n## Inputs\n\n${list(workflow.inputs)}\n\n## Evidence and outputs\n\n${list(workflow.outputs)}\n\nThe workflow's evidence contract is: ${workflow.evidence.replace(/\.$/, "")}.\n\n## Approval boundaries\n\n${list(workflow.approval_boundaries)}\n\n## State and recovery\n\n${workflow.state_and_recovery}\n\n## Release boundary\n\nReadiness is **${readiness}** in the ${workflowVersion} local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.\n\n## Source\n\n- [Open the complete ${slug} workflow kit on GitHub](${sourceUrl})\n- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/${workflowsLinkRef}/docs/audit/workflow-catalog.json)`;
+  const dedicatedHero = `assets/images/ecosystem/workflow-${slug}.webp`;
+  const heroPath = fs.existsSync(path.join(siteRoot, dedicatedHero)) ? dedicatedHero : "assets/images/ecosystem/workflows-evidence-routing-bench.webp";
   writePage(workflowsDir, index + 1, slug, {
     title, custom_url: slug, description: workflow.purpose,
     featured_image: `/${heroPath}`, social_image: `/assets/images/social/${slug}.jpg`,
     section: readiness, order: (index + 1) * 10,
-    install_command: `git clone https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && ${workflow.entry}`,
+    install_command: `git clone --branch ${workflowsLinkRef} --depth 1 https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && ${workflow.entry}`,
     github_url: sourceUrl,
     launch_story: `A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries.`,
     scope_note: `Current readiness: ${readiness}. Review the workflow README before live-provider or host-affecting use.`,
@@ -302,20 +312,19 @@ workflows.forEach((workflow, index) => {
   });
 });
 
-if (operatorPage) {
-  const operatorOrder = String(workflows.length + 1).padStart(3, '0');
-  fs.writeFileSync(path.join(workflowsDir, `${operatorOrder}-publishing-house-operator.md`), operatorPage);
+if (operatorPage && !workflows.some(workflow => workflow.id === 'publishing-house-operator')) {
+  const preserved = operatorPage.replace(/version: .*/, `version: "${workflowVersion}"`).replace(/last_updated: .*/, `last_updated: "${workflowDate}"`).replaceAll('/tree/main/', `/tree/${workflowsLinkRef}/`).replace('git clone https://github.com/kujolang/kujo-workflows.git', `git clone --branch ${workflowsLinkRef} --depth 1 https://github.com/kujolang/kujo-workflows.git`);
+  fs.writeFileSync(path.join(workflowsDir, `${String(workflows.length + 1).padStart(3, '0')}-publishing-house-operator.md`), preserved);
 }
 
 }
 
 const manifestPath = path.join(siteRoot, 'howl-social.json');
 const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-manifest.cards = manifest.cards.filter((card) => (
-  card.id === 'publishing-house-operator'
-  || !(skillsOnly ? /^kujolang\.ai\/ecosystem\/skills\// : /^kujolang\.ai\/ecosystem\/(skills|workflows)\//).test(card.url || '')
-));
-manifest.cards.push(...generatedCards);
+const generatedById = new Map(generatedCards.map(card => [card.id, card]));
+const originalIds = new Set(manifest.cards.map(card => card.id));
+manifest.cards = manifest.cards.map(card => generatedById.get(card.id) || card);
+manifest.cards.push(...generatedCards.filter(card => !originalIds.has(card.id)));
 fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
 
 if (!skillsOnly) {

@@ -6,12 +6,12 @@ featured_image: "/assets/images/ecosystem/workflow-webops-weekly-content-intelli
 social_image: "/assets/images/social/webops-weekly-content-intelligence.jpg"
 section: "production capable with limitations"
 order: "350"
-install_command: "git clone https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && webops-weekly-content-intelligence/scripts/run.sh"
-github_url: "https://github.com/kujolang/kujo-workflows/tree/main/webops-weekly-content-intelligence"
+install_command: "git clone --branch v0.6.0 --depth 1 https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && webops-weekly-content-intelligence/scripts/run.sh"
+github_url: "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-weekly-content-intelligence"
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
-version: "0.4.0"
-last_updated: "2026-09-02"
+version: "0.6.0"
+last_updated: "2026-09-06"
 keywords: "WebOps Weekly Content Intelligence, Kujo workflow, webops-weekly-content-intelligence, local-first agent workflow"
 seo_title: "WebOps Weekly Content Intelligence — Kujo Workflow"
 seo_description: "Combine trends, query opportunity, content relationships, gaps, accuracy, and internal-link proposals."
@@ -48,9 +48,9 @@ state.json records every step; rerun with --resume continues after completed ste
 
 ## Release boundary
 
-Readiness is **production capable with limitations** in the 0.4.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
+Readiness is **production capable with limitations** in the 0.6.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
 
 ## Source
 
-- [Open the complete webops-weekly-content-intelligence workflow kit on GitHub](https://github.com/kujolang/kujo-workflows/tree/main/webops-weekly-content-intelligence)
-- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/main/docs/audit/workflow-catalog.json)
+- [Open the complete webops-weekly-content-intelligence workflow kit on GitHub](https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-weekly-content-intelligence)
+- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/v0.6.0/docs/audit/workflow-catalog.json)

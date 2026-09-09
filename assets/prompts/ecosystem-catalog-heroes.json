@@ -10,7 +10,7 @@
       "kind": "skills-index",
       "name": "Skills",
       "slug": "skills",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/tree/main/skills",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/tree/v0.7.0/skills",
       "object_description": "agent guidance library with modular field manuals and verification instruments",
       "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
       "social_path": "assets/images/social/skills.jpg"
@@ -19,7 +19,7 @@
       "kind": "skill",
       "name": "Agents SDK",
       "slug": "kujo-agents-sdk-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-agents-sdk-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-agents-sdk-workflows/SKILL.md",
       "object_description": "agents sdk agent orchestration console with bounded handoff trays",
       "hero_path": "assets/images/ecosystem/skill-kujo-agents-sdk-workflows.webp",
       "social_path": "assets/images/social/kujo-agents-sdk-workflows.jpg"
@@ -28,7 +28,7 @@
       "kind": "skill",
       "name": "Kujo AI Chat",
       "slug": "kujo-ai-chat-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ai-chat-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-ai-chat-workflows/SKILL.md",
       "object_description": "ai chat conversation relay desk with paired communication terminals",
       "hero_path": "assets/images/ecosystem/skill-kujo-ai-chat-workflows.webp",
       "social_path": "assets/images/social/kujo-ai-chat-workflows.jpg"
@@ -37,7 +37,7 @@
       "kind": "skill",
       "name": "Kujo AI SDK",
       "slug": "kujo-ai-sdk-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ai-sdk-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-ai-sdk-workflows/SKILL.md",
       "object_description": "ai sdk modular provider patch bay with guarded adapter sockets",
       "hero_path": "assets/images/ecosystem/skill-kujo-ai-sdk-workflows.webp",
       "social_path": "assets/images/social/kujo-ai-sdk-workflows.jpg"
@@ -46,7 +46,7 @@
       "kind": "skill",
       "name": "Kujo AssetWorks",
       "slug": "kujo-assetworks-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-assetworks-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-assetworks-workflows/SKILL.md",
       "object_description": "assetworks media production bench with render adapters checksum manifest and accessibility artifact trays",
       "hero_path": "assets/images/ecosystem/skill-kujo-assetworks-workflows.webp",
       "social_path": "assets/images/social/kujo-assetworks-workflows.jpg"
@@ -55,7 +55,7 @@
       "kind": "skill",
       "name": "Kujo Backlog Normalizer",
       "slug": "kujo-backlog-normalizer",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-backlog-normalizer/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-backlog-normalizer/SKILL.md",
       "object_description": "backlog normalizer maintainer review desk with diff sheets and evidence stamps",
       "hero_path": "assets/images/ecosystem/skill-kujo-backlog-normalizer.webp",
       "social_path": "assets/images/social/kujo-backlog-normalizer.jpg"
@@ -64,7 +64,7 @@
       "kind": "skill",
       "name": "Kujo Benchmarks Capsule",
       "slug": "kujo-benchmarks-capsule-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-benchmarks-capsule-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-benchmarks-capsule-workflows/SKILL.md",
       "object_description": "benchmarks capsule repository guidance desk with source manuals and verification instruments",
       "hero_path": "assets/images/ecosystem/skill-kujo-benchmarks-capsule-workflows.webp",
       "social_path": "assets/images/social/kujo-benchmarks-capsule-workflows.jpg"
@@ -73,7 +73,7 @@
       "kind": "skill",
       "name": "Kujo BluePencil",
       "slug": "kujo-bluepencil-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-bluepencil-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-bluepencil-workflows/SKILL.md",
       "object_description": "bluepencil editorial review desk with eight calibration gauges and blocker verdict stamps",
       "hero_path": "assets/images/ecosystem/skill-kujo-bluepencil-workflows.webp",
       "social_path": "assets/images/social/kujo-bluepencil-workflows.jpg"
@@ -82,7 +82,7 @@
       "kind": "skill",
       "name": "Kujo Casefile",
       "slug": "kujo-casefile-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-casefile-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-casefile-workflows/SKILL.md",
       "object_description": "casefile incident evidence desk with sealed case folders and redaction tools",
       "hero_path": "assets/images/ecosystem/skill-kujo-casefile-workflows.webp",
       "social_path": "assets/images/social/kujo-casefile-workflows.jpg"
@@ -91,7 +91,7 @@
       "kind": "skill",
       "name": "Kujo ChangeBucket",
       "slug": "kujo-changebucket-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-changebucket-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-changebucket-workflows/SKILL.md",
       "object_description": "changebucket change-footprint weighing station with categorized file bins",
       "hero_path": "assets/images/ecosystem/skill-kujo-changebucket-workflows.webp",
       "social_path": "assets/images/social/kujo-changebucket-workflows.jpg"
@@ -100,7 +100,7 @@
       "kind": "skill",
       "name": "Kujo CLI Contracts",
       "slug": "kujo-cli-contracts",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-cli-contracts/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-cli-contracts/SKILL.md",
       "object_description": "cli contracts command console with separate output channels and exit gates",
       "hero_path": "assets/images/ecosystem/skill-kujo-cli-contracts.webp",
       "social_path": "assets/images/social/kujo-cli-contracts.jpg"
@@ -109,7 +109,7 @@
       "kind": "skill",
       "name": "Kujo CMS",
       "slug": "kujo-cms-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-cms-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-cms-workflows/SKILL.md",
       "object_description": "cms content operations room with delivery shelves and migration controls",
       "hero_path": "assets/images/ecosystem/skill-kujo-cms-workflows.webp",
       "social_path": "assets/images/social/kujo-cms-workflows.jpg"
@@ -118,7 +118,7 @@
       "kind": "skill",
       "name": "Kujo Concord",
       "slug": "kujo-concord-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-concord-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-concord-workflows/SKILL.md",
       "object_description": "concord artifact alignment table with synchronized document frames",
       "hero_path": "assets/images/ecosystem/skill-kujo-concord-workflows.webp",
       "social_path": "assets/images/social/kujo-concord-workflows.jpg"
@@ -127,7 +127,7 @@
       "kind": "skill",
       "name": "Kujo ContentGraph",
       "slug": "kujo-contentgraph-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-contentgraph-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-contentgraph-workflows/SKILL.md",
       "object_description": "contentgraph content relationship map with connected document nodes",
       "hero_path": "assets/images/ecosystem/skill-kujo-contentgraph-workflows.webp",
       "social_path": "assets/images/social/kujo-contentgraph-workflows.jpg"
@@ -136,7 +136,7 @@
       "kind": "skill",
       "name": "Kujo Core Language",
       "slug": "kujo-core-language",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-core-language/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-core-language/SKILL.md",
       "object_description": "core language mechanical typesetting bench with modular grammar and runtime blocks",
       "hero_path": "assets/images/ecosystem/skill-kujo-core-language.webp",
       "social_path": "assets/images/social/kujo-core-language.jpg"
@@ -145,7 +145,7 @@
       "kind": "skill",
       "name": "Kujo Cross-Repo Dogfood Runner",
       "slug": "kujo-cross-repo-dogfood-runner",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-cross-repo-dogfood-runner/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-cross-repo-dogfood-runner/SKILL.md",
       "object_description": "cross repo dogfood repository guidance desk with source manuals and verification instruments",
       "hero_path": "assets/images/ecosystem/skill-kujo-cross-repo-dogfood-runner.webp",
       "social_path": "assets/images/social/kujo-cross-repo-dogfood-runner.jpg"
@@ -154,7 +154,7 @@
       "kind": "skill",
       "name": "Kujo CRUD API",
       "slug": "kujo-crud-api-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-crud-api-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-crud-api-workflows/SKILL.md",
       "object_description": "crud api application service bench with database and interface modules",
       "hero_path": "assets/images/ecosystem/skill-kujo-crud-api-workflows.webp",
       "social_path": "assets/images/social/kujo-crud-api-workflows.jpg"
@@ -163,7 +163,7 @@
       "kind": "skill",
       "name": "Kujo Dependabot Alert Triage",
       "slug": "kujo-dependabot-alert-triage",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-dependabot-alert-triage/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-dependabot-alert-triage/SKILL.md",
       "object_description": "dependabot alert triage locked evidence vault with inspection lamp and guarded access panel",
       "hero_path": "assets/images/ecosystem/skill-kujo-dependabot-alert-triage.webp",
       "social_path": "assets/images/social/kujo-dependabot-alert-triage.jpg"
@@ -172,7 +172,7 @@
       "kind": "skill",
       "name": "Kujo Dispatch",
       "slug": "kujo-dispatch-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-dispatch-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-dispatch-workflows/SKILL.md",
       "object_description": "dispatch agent orchestration console with bounded handoff trays",
       "hero_path": "assets/images/ecosystem/skill-kujo-dispatch-workflows.webp",
       "social_path": "assets/images/social/kujo-dispatch-workflows.jpg"
@@ -181,7 +181,7 @@
       "kind": "skill",
       "name": "Kujo DocGen And DocsGen",
       "slug": "kujo-docgen-agent-readable",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-docgen-agent-readable/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-docgen-agent-readable/SKILL.md",
       "object_description": "docgen agent readable documentation press with source pages and generated reference trays",
       "hero_path": "assets/images/ecosystem/skill-kujo-docgen-agent-readable.webp",
       "social_path": "assets/images/social/kujo-docgen-agent-readable.jpg"
@@ -190,7 +190,7 @@
       "kind": "skill",
       "name": "Kujo DocGen Public Docs Refresh",
       "slug": "kujo-docgen-public-docs-refresh",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-docgen-public-docs-refresh/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-docgen-public-docs-refresh/SKILL.md",
       "object_description": "docgen public docs documentation press with source pages and generated reference trays",
       "hero_path": "assets/images/ecosystem/skill-kujo-docgen-public-docs-refresh.webp",
       "social_path": "assets/images/social/kujo-docgen-public-docs-refresh.jpg"
@@ -199,7 +199,7 @@
       "kind": "skill",
       "name": "Kujo Docs Drift Auditor",
       "slug": "kujo-docs-drift-auditor",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-docs-drift-auditor/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-docs-drift-auditor/SKILL.md",
       "object_description": "docs drift auditor maintainer review desk with diff sheets and evidence stamps",
       "hero_path": "assets/images/ecosystem/skill-kujo-docs-drift-auditor.webp",
       "social_path": "assets/images/social/kujo-docs-drift-auditor.jpg"
@@ -208,7 +208,7 @@
       "kind": "skill",
       "name": "Kujo Dossier",
       "slug": "kujo-dossier-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-dossier-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-dossier-workflows/SKILL.md",
       "object_description": "dossier evidence ledger desk linking claim cards to captured source fragments",
       "hero_path": "assets/images/ecosystem/skill-kujo-dossier-workflows.webp",
       "social_path": "assets/images/social/kujo-dossier-workflows.jpg"
@@ -217,7 +217,7 @@
       "kind": "skill",
       "name": "Kujo Ecosystem Launch",
       "slug": "kujo-ecosystem-launch",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ecosystem-launch/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-ecosystem-launch/SKILL.md",
       "object_description": "ecosystem launch repository guidance desk with source manuals and verification instruments",
       "hero_path": "assets/images/ecosystem/skill-kujo-ecosystem-launch.webp",
       "social_path": "assets/images/social/kujo-ecosystem-launch.jpg"
@@ -226,7 +226,7 @@
       "kind": "skill",
       "name": "Kujo Enterprise Automation",
       "slug": "kujo-enterprise-automation",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-enterprise-automation/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-enterprise-automation/SKILL.md",
       "object_description": "enterprise automation enterprise automation control room with isolated job cells",
       "hero_path": "assets/images/ecosystem/skill-kujo-enterprise-automation.webp",
       "social_path": "assets/images/social/kujo-enterprise-automation.jpg"
@@ -235,7 +235,7 @@
       "kind": "skill",
       "name": "Kujo Eval",
       "slug": "kujo-eval-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-eval-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-eval-workflows/SKILL.md",
       "object_description": "eval calibration rig with deterministic pass and failure gates",
       "hero_path": "assets/images/ecosystem/skill-kujo-eval-workflows.webp",
       "social_path": "assets/images/social/kujo-eval-workflows.jpg"
@@ -244,7 +244,7 @@
       "kind": "skill",
       "name": "Kujo Fence",
       "slug": "kujo-fence-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-fence-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-fence-workflows/SKILL.md",
       "object_description": "fence architectural boundary model with guarded dependency crossings",
       "hero_path": "assets/images/ecosystem/skill-kujo-fence-workflows.webp",
       "social_path": "assets/images/social/kujo-fence-workflows.jpg"
@@ -253,7 +253,7 @@
       "kind": "skill",
       "name": "Kujo GalleyPack",
       "slug": "kujo-galleypack-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-galleypack-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-galleypack-workflows/SKILL.md",
       "object_description": "galleypack immutable package press binding artifacts evidence records and review seals",
       "hero_path": "assets/images/ecosystem/skill-kujo-galleypack-workflows.webp",
       "social_path": "assets/images/social/kujo-galleypack-workflows.jpg"
@@ -262,7 +262,7 @@
       "kind": "skill",
       "name": "Kujo Howl",
       "slug": "kujo-howl-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-howl-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-howl-workflows/SKILL.md",
       "object_description": "howl printmaking station rendering social cards from source artifacts",
       "hero_path": "assets/images/ecosystem/skill-kujo-howl-workflows.webp",
       "social_path": "assets/images/social/kujo-howl-workflows.jpg"
@@ -271,7 +271,7 @@
       "kind": "skill",
       "name": "Kujo Kennel",
       "slug": "kujo-kennel-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-kennel-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-kennel-workflows/SKILL.md",
       "object_description": "kennel package registry storeroom with lockboxes and trust checkpoints",
       "hero_path": "assets/images/ecosystem/skill-kujo-kennel-workflows.webp",
       "social_path": "assets/images/social/kujo-kennel-workflows.jpg"
@@ -280,7 +280,7 @@
       "kind": "skill",
       "name": "Kujo Language Implementation",
       "slug": "kujo-language-implementation",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-language-implementation/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-language-implementation/SKILL.md",
       "object_description": "language implementation mechanical typesetting bench with modular grammar and runtime blocks",
       "hero_path": "assets/images/ecosystem/skill-kujo-language-implementation.webp",
       "social_path": "assets/images/social/kujo-language-implementation.jpg"
@@ -289,7 +289,7 @@
       "kind": "skill",
       "name": "Kujo Lens",
       "slug": "kujo-lens-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-lens-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-lens-workflows/SKILL.md",
       "object_description": "lens browser inspection rig with screenshot and accessibility instruments",
       "hero_path": "assets/images/ecosystem/skill-kujo-lens-workflows.webp",
       "social_path": "assets/images/social/kujo-lens-workflows.jpg"
@@ -298,7 +298,7 @@
       "kind": "skill",
       "name": "Kujo Loop Engineering",
       "slug": "kujo-loop-engineering-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-loop-engineering-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-loop-engineering-workflows/SKILL.md",
       "object_description": "loop engineering bounded engineering loop console with evaluation and stop gates",
       "hero_path": "assets/images/ecosystem/skill-kujo-loop-engineering-workflows.webp",
       "social_path": "assets/images/social/kujo-loop-engineering-workflows.jpg"
@@ -307,7 +307,7 @@
       "kind": "skill",
       "name": "Kujo Maintainer Review",
       "slug": "kujo-maintainer-review",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-maintainer-review/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-maintainer-review/SKILL.md",
       "object_description": "maintainer review maintainer review desk with diff sheets and evidence stamps",
       "hero_path": "assets/images/ecosystem/skill-kujo-maintainer-review.webp",
       "social_path": "assets/images/social/kujo-maintainer-review.jpg"
@@ -316,7 +316,7 @@
       "kind": "skill",
       "name": "Kujo MCP",
       "slug": "kujo-mcp-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-mcp-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-mcp-workflows/SKILL.md",
       "object_description": "mcp modular provider patch bay with guarded adapter sockets",
       "hero_path": "assets/images/ecosystem/skill-kujo-mcp-workflows.webp",
       "social_path": "assets/images/social/kujo-mcp-workflows.jpg"
@@ -325,7 +325,7 @@
       "kind": "skill",
       "name": "Kujo Muzzle",
       "slug": "kujo-muzzle-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-muzzle-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-muzzle-workflows/SKILL.md",
       "object_description": "muzzle quiet workflow console with filtered logs and controlled output",
       "hero_path": "assets/images/ecosystem/skill-kujo-muzzle-workflows.webp",
       "social_path": "assets/images/social/kujo-muzzle-workflows.jpg"
@@ -334,7 +334,7 @@
       "kind": "skill",
       "name": "Kujo PackWrite",
       "slug": "kujo-packwrite-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-packwrite-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-packwrite-workflows/SKILL.md",
       "object_description": "packwrite execution-pack assembly desk with prompts and validation seals",
       "hero_path": "assets/images/ecosystem/skill-kujo-packwrite-workflows.webp",
       "social_path": "assets/images/social/kujo-packwrite-workflows.jpg"
@@ -343,7 +343,7 @@
       "kind": "skill",
       "name": "Kujo PatchBrief",
       "slug": "kujo-patchbrief-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-patchbrief-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-patchbrief-workflows/SKILL.md",
       "object_description": "patchbrief git diff briefing table with reviewer handoff folders",
       "hero_path": "assets/images/ecosystem/skill-kujo-patchbrief-workflows.webp",
       "social_path": "assets/images/social/kujo-patchbrief-workflows.jpg"
@@ -352,7 +352,7 @@
       "kind": "skill",
       "name": "Kujo PressWire",
       "slug": "kujo-presswire-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-presswire-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-presswire-workflows/SKILL.md",
       "object_description": "presswire guarded publication switchboard with approval seal and destination adapters",
       "hero_path": "assets/images/ecosystem/skill-kujo-presswire-workflows.webp",
       "social_path": "assets/images/social/kujo-presswire-workflows.jpg"
@@ -361,7 +361,7 @@
       "kind": "skill",
       "name": "Kujo Publishing House",
       "slug": "kujo-publishing-house-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-publishing-house-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-publishing-house-workflows/SKILL.md",
       "object_description": "publishing house editorial lifecycle floor with separated authority desks and receipt handoff trays",
       "hero_path": "assets/images/ecosystem/skill-kujo-publishing-house-workflows.webp",
       "social_path": "assets/images/social/kujo-publishing-house-workflows.jpg"
@@ -370,7 +370,7 @@
       "kind": "skill",
       "name": "Kujo RAG",
       "slug": "kujo-rag-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-rag-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-rag-workflows/SKILL.md",
       "object_description": "rag knowledge retrieval archive with citation drawers and namespace gates",
       "hero_path": "assets/images/ecosystem/skill-kujo-rag-workflows.webp",
       "social_path": "assets/images/social/kujo-rag-workflows.jpg"
@@ -379,7 +379,7 @@
       "kind": "skill",
       "name": "Kujo ReaderSignal",
       "slug": "kujo-readersignal-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-readersignal-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-readersignal-workflows/SKILL.md",
       "object_description": "readersignal privacy-bounded audience measurement console with uncertainty gauges and feedback cards",
       "hero_path": "assets/images/ecosystem/skill-kujo-readersignal-workflows.webp",
       "social_path": "assets/images/social/kujo-readersignal-workflows.jpg"
@@ -388,7 +388,7 @@
       "kind": "skill",
       "name": "Kujo Readiness Auditor",
       "slug": "kujo-readiness-auditor",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-readiness-auditor/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-readiness-auditor/SKILL.md",
       "object_description": "readiness auditor calibration rig with deterministic pass and failure gates",
       "hero_path": "assets/images/ecosystem/skill-kujo-readiness-auditor.webp",
       "social_path": "assets/images/social/kujo-readiness-auditor.jpg"
@@ -397,7 +397,7 @@
       "kind": "skill",
       "name": "Kujo Redact",
       "slug": "kujo-redact-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-redact-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-redact-workflows/SKILL.md",
       "object_description": "redact document sanitization station with blackout tools and audit tray",
       "hero_path": "assets/images/ecosystem/skill-kujo-redact-workflows.webp",
       "social_path": "assets/images/social/kujo-redact-workflows.jpg"
@@ -406,7 +406,7 @@
       "kind": "skill",
       "name": "Kujo Relay",
       "slug": "kujo-relay-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-relay-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-relay-workflows/SKILL.md",
       "object_description": "relay agent orchestration console with bounded handoff trays",
       "hero_path": "assets/images/ecosystem/skill-kujo-relay-workflows.webp",
       "social_path": "assets/images/social/kujo-relay-workflows.jpg"
@@ -415,16 +415,25 @@
       "kind": "skill",
       "name": "Kujo Release Gate Runner",
       "slug": "kujo-release-gate-runner",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-release-gate-runner/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-release-gate-runner/SKILL.md",
       "object_description": "release gate runner calibration rig with deterministic pass and failure gates",
       "hero_path": "assets/images/ecosystem/skill-kujo-release-gate-runner.webp",
       "social_path": "assets/images/social/kujo-release-gate-runner.jpg"
     },
     {
       "kind": "skill",
+      "name": "Kujo release video",
+      "slug": "kujo-release-video",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-release-video/SKILL.md",
+      "object_description": "release video repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/kujo-release-video.jpg"
+    },
+    {
+      "kind": "skill",
       "name": "Kujo RunLedger",
       "slug": "kujo-runledger-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-runledger-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-runledger-workflows/SKILL.md",
       "object_description": "runledger run receipt ledger desk with usage meters and verdict stamps",
       "hero_path": "assets/images/ecosystem/skill-kujo-runledger-workflows.webp",
       "social_path": "assets/images/social/kujo-runledger-workflows.jpg"
@@ -433,7 +442,7 @@
       "kind": "skill",
       "name": "Kujo Runtime Parity",
       "slug": "kujo-runtime-parity",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-runtime-parity/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-runtime-parity/SKILL.md",
       "object_description": "runtime parity mechanical typesetting bench with modular grammar and runtime blocks",
       "hero_path": "assets/images/ecosystem/skill-kujo-runtime-parity.webp",
       "social_path": "assets/images/social/kujo-runtime-parity.jpg"
@@ -442,7 +451,7 @@
       "kind": "skill",
       "name": "Kujo Scent",
       "slug": "kujo-scent-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-scent-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-scent-workflows/SKILL.md",
       "object_description": "scent context packing bench with budget scale and selected file bundles",
       "hero_path": "assets/images/ecosystem/skill-kujo-scent-workflows.webp",
       "social_path": "assets/images/social/kujo-scent-workflows.jpg"
@@ -451,16 +460,16 @@
       "kind": "skill",
       "name": "Kujo Scout",
       "slug": "kujo-scout-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-scout-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-scout-workflows/SKILL.md",
       "object_description": "scout codebase survey table with repository maps and context packets",
       "hero_path": "assets/images/ecosystem/skill-kujo-scout-workflows.webp",
       "social_path": "assets/images/social/kujo-scout-workflows.jpg"
     },
     {
       "kind": "skill",
-      "name": "Kujo Searchbridge",
+      "name": "Kujo SearchBridge",
       "slug": "kujo-searchbridge-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-searchbridge-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-searchbridge-workflows/SKILL.md",
       "object_description": "searchbridge search provider relay console with normalized evidence channels",
       "hero_path": "assets/images/ecosystem/skill-kujo-searchbridge-workflows.webp",
       "social_path": "assets/images/social/kujo-searchbridge-workflows.jpg"
@@ -469,7 +478,7 @@
       "kind": "skill",
       "name": "Kujo Security Hardening",
       "slug": "kujo-security-hardening",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-security-hardening/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-security-hardening/SKILL.md",
       "object_description": "security hardening locked evidence vault with inspection lamp and guarded access panel",
       "hero_path": "assets/images/ecosystem/skill-kujo-security-hardening.webp",
       "social_path": "assets/images/social/kujo-security-hardening.jpg"
@@ -478,7 +487,7 @@
       "kind": "skill",
       "name": "Kujo ShipCheck",
       "slug": "kujo-shipcheck-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-shipcheck-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-shipcheck-workflows/SKILL.md",
       "object_description": "shipcheck release inspection dock with checklist gates and sealed containers",
       "hero_path": "assets/images/ecosystem/skill-kujo-shipcheck-workflows.webp",
       "social_path": "assets/images/social/kujo-shipcheck-workflows.jpg"
@@ -487,7 +496,7 @@
       "kind": "skill",
       "name": "Kujo SiteKit Repository",
       "slug": "kujo-site-kit-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-site-kit-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-site-kit-workflows/SKILL.md",
       "object_description": "site kit interface component drafting table with accessible control samples",
       "hero_path": "assets/images/ecosystem/skill-kujo-site-kit-workflows.webp",
       "social_path": "assets/images/social/kujo-site-kit-workflows.jpg"
@@ -496,7 +505,7 @@
       "kind": "skill",
       "name": "Kujo SiteKit",
       "slug": "kujo-sitekit-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-sitekit-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-sitekit-workflows/SKILL.md",
       "object_description": "sitekit interface component drafting table with accessible control samples",
       "hero_path": "assets/images/ecosystem/skill-kujo-sitekit-workflows.webp",
       "social_path": "assets/images/social/kujo-sitekit-workflows.jpg"
@@ -505,7 +514,7 @@
       "kind": "skill",
       "name": "Kujo Siteprobe",
       "slug": "kujo-siteprobe-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-siteprobe-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-siteprobe-workflows/SKILL.md",
       "object_description": "siteprobe website crawler station scanning linked page structures",
       "hero_path": "assets/images/ecosystem/skill-kujo-siteprobe-workflows.webp",
       "social_path": "assets/images/social/kujo-siteprobe-workflows.jpg"
@@ -514,7 +523,7 @@
       "kind": "skill",
       "name": "Kujo Skill Auditor",
       "slug": "kujo-skill-auditor",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-skill-auditor/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-skill-auditor/SKILL.md",
       "object_description": "skill auditor maintainer review desk with diff sheets and evidence stamps",
       "hero_path": "assets/images/ecosystem/skill-kujo-skill-auditor.webp",
       "social_path": "assets/images/social/kujo-skill-auditor.jpg"
@@ -523,7 +532,7 @@
       "kind": "skill",
       "name": "Kujo Spec",
       "slug": "kujo-spec-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-spec-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-spec-workflows/SKILL.md",
       "object_description": "spec task contract drafting table with acceptance gates and export trays",
       "hero_path": "assets/images/ecosystem/skill-kujo-spec-workflows.webp",
       "social_path": "assets/images/social/kujo-spec-workflows.jpg"
@@ -532,7 +541,7 @@
       "kind": "skill",
       "name": "Kujo SSG",
       "slug": "kujo-ssg-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-ssg-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-ssg-workflows/SKILL.md",
       "object_description": "ssg static site printing press with templates and generated page stacks",
       "hero_path": "assets/images/ecosystem/skill-kujo-ssg-workflows.webp",
       "social_path": "assets/images/social/kujo-ssg-workflows.jpg"
@@ -541,7 +550,7 @@
       "kind": "skill",
       "name": "Kujo Standard Library",
       "slug": "kujo-standard-library",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-standard-library/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-standard-library/SKILL.md",
       "object_description": "standard library mechanical typesetting bench with modular grammar and runtime blocks",
       "hero_path": "assets/images/ecosystem/skill-kujo-standard-library.webp",
       "social_path": "assets/images/social/kujo-standard-library.jpg"
@@ -550,7 +559,7 @@
       "kind": "skill",
       "name": "Kujo StoryDesk",
       "slug": "kujo-storydesk-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-storydesk-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-storydesk-workflows/SKILL.md",
       "object_description": "storydesk editorial planning desk with campaign queues assignment cards and handoff lanes",
       "hero_path": "assets/images/ecosystem/skill-kujo-storydesk-workflows.webp",
       "social_path": "assets/images/social/kujo-storydesk-workflows.jpg"
@@ -559,7 +568,7 @@
       "kind": "skill",
       "name": "Kujo Testing And Release Gates",
       "slug": "kujo-testing-release-gates",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-testing-release-gates/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-testing-release-gates/SKILL.md",
       "object_description": "testing release gates calibration rig with deterministic pass and failure gates",
       "hero_path": "assets/images/ecosystem/skill-kujo-testing-release-gates.webp",
       "social_path": "assets/images/social/kujo-testing-release-gates.jpg"
@@ -568,7 +577,7 @@
       "kind": "skill",
       "name": "Kujo Tool Building",
       "slug": "kujo-tool-building",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-tool-building/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-tool-building/SKILL.md",
       "object_description": "tool building language workshop with compiler gears and a code assembly bench",
       "hero_path": "assets/images/ecosystem/skill-kujo-tool-building.webp",
       "social_path": "assets/images/social/kujo-tool-building.jpg"
@@ -577,7 +586,7 @@
       "kind": "skill",
       "name": "Kujo Tribunal",
       "slug": "kujo-tribunal-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-tribunal-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-tribunal-workflows/SKILL.md",
       "object_description": "tribunal adversarial review chamber with evidence bench and decision seal",
       "hero_path": "assets/images/ecosystem/skill-kujo-tribunal-workflows.webp",
       "social_path": "assets/images/social/kujo-tribunal-workflows.jpg"
@@ -586,16 +595,34 @@
       "kind": "skill",
       "name": "Kujo VersionSeal",
       "slug": "kujo-versionseal-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-versionseal-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-versionseal-workflows/SKILL.md",
       "object_description": "versionseal human approval station sealing an exact checksum to a destination action card",
       "hero_path": "assets/images/ecosystem/skill-kujo-versionseal-workflows.webp",
       "social_path": "assets/images/social/kujo-versionseal-workflows.jpg"
     },
     {
       "kind": "skill",
+      "name": "Kujo video styles",
+      "slug": "kujo-video-styles",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-video-styles/SKILL.md",
+      "object_description": "video styles repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/kujo-video-styles.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "Kujo VideoOps",
+      "slug": "kujo-videoops-workflows",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-videoops-workflows/SKILL.md",
+      "object_description": "videoops repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/kujo-videoops-workflows.jpg"
+    },
+    {
+      "kind": "skill",
       "name": "Kujo Watchdog",
       "slug": "kujo-watchdog-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-watchdog-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-watchdog-workflows/SKILL.md",
       "object_description": "watchdog local telemetry watch station with proxy gauges and alert beacon",
       "hero_path": "assets/images/ecosystem/skill-kujo-watchdog-workflows.webp",
       "social_path": "assets/images/social/kujo-watchdog-workflows.jpg"
@@ -604,7 +631,7 @@
       "kind": "skill",
       "name": "Kujo Way Development",
       "slug": "kujo-way-development",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-way-development/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-way-development/SKILL.md",
       "object_description": "way development engineering workbench with routing map contract cards and verification gates",
       "hero_path": "assets/images/ecosystem/skill-kujo-way-development.webp",
       "social_path": "assets/images/social/kujo-way-development.jpg"
@@ -613,7 +640,7 @@
       "kind": "skill",
       "name": "Kujo Workcell",
       "slug": "kujo-workcell-workflows",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/kujo-workcell-workflows/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-workcell-workflows/SKILL.md",
       "object_description": "workcell sealed execution workcell with operator console and artifact bay",
       "hero_path": "assets/images/ecosystem/skill-kujo-workcell-workflows.webp",
       "social_path": "assets/images/social/kujo-workcell-workflows.jpg"
@@ -622,7 +649,7 @@
       "kind": "skill",
       "name": "Publishing House Profile Setup",
       "slug": "publishing-house-profile-setup",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/publishing-house-profile-setup/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/publishing-house-profile-setup/SKILL.md",
       "object_description": "publishing house profile cabinet holding house brand audience and permission-boundary cards",
       "hero_path": "assets/images/ecosystem/skill-publishing-house-profile-setup.webp",
       "social_path": "assets/images/social/publishing-house-profile-setup.jpg"
@@ -631,16 +658,340 @@
       "kind": "skill",
       "name": "Publishing House Quality Calibration",
       "slug": "publishing-house-quality-calibration",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/publishing-house-quality-calibration/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/publishing-house-quality-calibration/SKILL.md",
       "object_description": "publishing house quality blind editorial comparison bench with eight scoring gauges and a blocker seal",
       "hero_path": "assets/images/ecosystem/skill-publishing-house-quality-calibration.webp",
       "social_path": "assets/images/social/publishing-house-quality-calibration.jpg"
     },
     {
       "kind": "skill",
+      "name": "VideoOps actionable fix writing",
+      "slug": "videoops-actionable-fix-writing",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-actionable-fix-writing/SKILL.md",
+      "object_description": "videoops actionable fix repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-actionable-fix-writing.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps approval decision",
+      "slug": "videoops-approval-decision",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-approval-decision/SKILL.md",
+      "object_description": "videoops approval decision repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-approval-decision.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps asset manifest maintenance",
+      "slug": "videoops-asset-manifest-maintenance",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-asset-manifest-maintenance/SKILL.md",
+      "object_description": "videoops asset manifest repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-asset-manifest-maintenance.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps asset requirement specification",
+      "slug": "videoops-asset-requirement-specification",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-asset-requirement-specification/SKILL.md",
+      "object_description": "videoops asset requirement task contract drafting table with acceptance gates and export trays",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-asset-requirement-specification.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps asset rights triage",
+      "slug": "videoops-asset-rights-triage",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-asset-rights-triage/SKILL.md",
+      "object_description": "videoops asset rights repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-asset-rights-triage.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps audio sync",
+      "slug": "videoops-audio-sync",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-audio-sync/SKILL.md",
+      "object_description": "videoops audio sync repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-audio-sync.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps audio visual review",
+      "slug": "videoops-audio-visual-review",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-audio-visual-review/SKILL.md",
+      "object_description": "videoops audio visual repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-audio-visual-review.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps brand style translation",
+      "slug": "videoops-brand-style-translation",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-brand-style-translation/SKILL.md",
+      "object_description": "videoops brand style repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-brand-style-translation.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps first party asset discovery",
+      "slug": "videoops-first-party-asset-discovery",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-first-party-asset-discovery/SKILL.md",
+      "object_description": "videoops first party repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-first-party-asset-discovery.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps fix list application",
+      "slug": "videoops-fix-list-application",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-fix-list-application/SKILL.md",
+      "object_description": "videoops fix list repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-fix-list-application.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps generated asset manifesting",
+      "slug": "videoops-generated-asset-manifesting",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-generated-asset-manifesting/SKILL.md",
+      "object_description": "videoops generated asset repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-generated-asset-manifesting.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps generated motion production",
+      "slug": "videoops-generated-motion-production",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-generated-motion-production/SKILL.md",
+      "object_description": "videoops generated motion repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-generated-motion-production.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps generated still production",
+      "slug": "videoops-generated-still-production",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-generated-still-production/SKILL.md",
+      "object_description": "videoops generated still repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-generated-still-production.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps generation handoff",
+      "slug": "videoops-generation-handoff",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-generation-handoff/SKILL.md",
+      "object_description": "videoops generation handoff repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-generation-handoff.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps generation variant selection",
+      "slug": "videoops-generation-variant-selection",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-generation-variant-selection/SKILL.md",
+      "object_description": "videoops generation variant repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-generation-variant-selection.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps hyperframes project bootstrap",
+      "slug": "videoops-hyperframes-project-bootstrap",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-hyperframes-project-bootstrap/SKILL.md",
+      "object_description": "videoops hyperframes project repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-hyperframes-project-bootstrap.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps kinetic typography",
+      "slug": "videoops-kinetic-typography",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-kinetic-typography/SKILL.md",
+      "object_description": "videoops kinetic typography repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-kinetic-typography.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps lens product capture",
+      "slug": "videoops-lens-product-capture",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-lens-product-capture/SKILL.md",
+      "object_description": "videoops lens product browser inspection rig with screenshot and accessibility instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-lens-product-capture.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps licensed media research",
+      "slug": "videoops-licensed-media-research",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-licensed-media-research/SKILL.md",
+      "object_description": "videoops licensed media repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-licensed-media-research.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps media compositing",
+      "slug": "videoops-media-compositing",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-media-compositing/SKILL.md",
+      "object_description": "videoops media compositing repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-media-compositing.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps media normalization",
+      "slug": "videoops-media-normalization",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-media-normalization/SKILL.md",
+      "object_description": "videoops media normalization repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-media-normalization.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps media provider execution",
+      "slug": "videoops-media-provider-execution",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-media-provider-execution/SKILL.md",
+      "object_description": "videoops media provider repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-media-provider-execution.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps motion quality review",
+      "slug": "videoops-motion-quality-review",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-motion-quality-review/SKILL.md",
+      "object_description": "videoops motion quality repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-motion-quality-review.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps pacing analysis",
+      "slug": "videoops-pacing-analysis",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-pacing-analysis/SKILL.md",
+      "object_description": "videoops pacing analysis repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-pacing-analysis.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps platform duration planning",
+      "slug": "videoops-platform-duration-planning",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-platform-duration-planning/SKILL.md",
+      "object_description": "videoops platform duration repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-platform-duration-planning.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps render validation",
+      "slug": "videoops-render-validation",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-render-validation/SKILL.md",
+      "object_description": "videoops render validation repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-render-validation.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps shader and transition selection",
+      "slug": "videoops-shader-and-transition-selection",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-shader-and-transition-selection/SKILL.md",
+      "object_description": "videoops shader and repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-shader-and-transition-selection.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps shot context generation",
+      "slug": "videoops-shot-context-generation",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-shot-context-generation/SKILL.md",
+      "object_description": "videoops shot context repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-shot-context-generation.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps shot list to timeline",
+      "slug": "videoops-shot-list-to-timeline",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-shot-list-to-timeline/SKILL.md",
+      "object_description": "videoops shot list repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-shot-list-to-timeline.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps shot planning",
+      "slug": "videoops-shot-planning",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-shot-planning/SKILL.md",
+      "object_description": "videoops shot planning repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-shot-planning.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps technical render review",
+      "slug": "videoops-technical-render-review",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-technical-render-review/SKILL.md",
+      "object_description": "videoops technical render repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-technical-render-review.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps transcript and onscreen copy",
+      "slug": "videoops-transcript-and-onscreen-copy",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-transcript-and-onscreen-copy/SKILL.md",
+      "object_description": "videoops transcript and repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-transcript-and-onscreen-copy.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps video brief synthesis",
+      "slug": "videoops-video-brief-synthesis",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-video-brief-synthesis/SKILL.md",
+      "object_description": "videoops video brief repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-video-brief-synthesis.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps video spec comparison",
+      "slug": "videoops-video-spec-comparison",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-video-spec-comparison/SKILL.md",
+      "object_description": "videoops video spec task contract drafting table with acceptance gates and export trays",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-video-spec-comparison.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps visual hierarchy review",
+      "slug": "videoops-visual-hierarchy-review",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-visual-hierarchy-review/SKILL.md",
+      "object_description": "videoops visual hierarchy repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-visual-hierarchy-review.jpg"
+    },
+    {
+      "kind": "skill",
+      "name": "VideoOps visual reference decomposition",
+      "slug": "videoops-visual-reference-decomposition",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/videoops-visual-reference-decomposition/SKILL.md",
+      "object_description": "videoops visual reference repository guidance desk with source manuals and verification instruments",
+      "hero_path": "assets/images/ecosystem/skills-agent-guidance-library.webp",
+      "social_path": "assets/images/social/videoops-visual-reference-decomposition.jpg"
+    },
+    {
+      "kind": "skill",
       "name": "WebOps Accessibility Review",
       "slug": "webops-accessibility-review",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-accessibility-review/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-accessibility-review/SKILL.md",
       "object_description": "webops accessibility review tactile inspection desk with contrast gauges and navigation controls",
       "hero_path": "assets/images/ecosystem/skill-webops-accessibility-review.webp",
       "social_path": "assets/images/social/webops-accessibility-review.jpg"
@@ -649,7 +1000,7 @@
       "kind": "skill",
       "name": "WebOps AI Search Visibility",
       "slug": "webops-ai-search-visibility",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-ai-search-visibility/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-ai-search-visibility/SKILL.md",
       "object_description": "webops ai search signal observatory with citation lenses and query beacons",
       "hero_path": "assets/images/ecosystem/skill-webops-ai-search-visibility.webp",
       "social_path": "assets/images/social/webops-ai-search-visibility.jpg"
@@ -658,7 +1009,7 @@
       "kind": "skill",
       "name": "WebOps Analytics Analysis",
       "slug": "webops-analytics-analysis",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-analytics-analysis/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-analytics-analysis/SKILL.md",
       "object_description": "webops analytics analysis measurement console with trend reels and evidence meters",
       "hero_path": "assets/images/ecosystem/skill-webops-analytics-analysis.webp",
       "social_path": "assets/images/social/webops-analytics-analysis.jpg"
@@ -667,7 +1018,7 @@
       "kind": "skill",
       "name": "WebOps Backlink And Mention Analysis",
       "slug": "webops-backlink-and-mention-analysis",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-backlink-and-mention-analysis/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-backlink-and-mention-analysis/SKILL.md",
       "object_description": "webops backlink and link-analysis table with connected citation pins and archive trays",
       "hero_path": "assets/images/ecosystem/skill-webops-backlink-and-mention-analysis.webp",
       "social_path": "assets/images/social/webops-backlink-and-mention-analysis.jpg"
@@ -676,7 +1027,7 @@
       "kind": "skill",
       "name": "WebOps Cannibalization",
       "slug": "webops-cannibalization",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-cannibalization/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-cannibalization/SKILL.md",
       "object_description": "webops cannibalization two competing signal transmitters converging on one receiver",
       "hero_path": "assets/images/ecosystem/skill-webops-cannibalization.webp",
       "social_path": "assets/images/social/webops-cannibalization.jpg"
@@ -685,7 +1036,7 @@
       "kind": "skill",
       "name": "WebOps Capability Preflight",
       "slug": "webops-capability-preflight",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-capability-preflight/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-capability-preflight/SKILL.md",
       "object_description": "webops capability preflight preflight inspection bench with sealed capability modules",
       "hero_path": "assets/images/ecosystem/skill-webops-capability-preflight.webp",
       "social_path": "assets/images/social/webops-capability-preflight.jpg"
@@ -694,7 +1045,7 @@
       "kind": "skill",
       "name": "WebOps Competitor Intelligence",
       "slug": "webops-competitor-intelligence",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-competitor-intelligence/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-competitor-intelligence/SKILL.md",
       "object_description": "webops competitor intelligence public intelligence map table with comparison lenses",
       "hero_path": "assets/images/ecosystem/skill-webops-competitor-intelligence.webp",
       "social_path": "assets/images/social/webops-competitor-intelligence.jpg"
@@ -703,7 +1054,7 @@
       "kind": "skill",
       "name": "WebOps Content Accuracy",
       "slug": "webops-content-accuracy",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-content-accuracy/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-content-accuracy/SKILL.md",
       "object_description": "webops content accuracy fact-checking desk with source files and calibration instruments",
       "hero_path": "assets/images/ecosystem/skill-webops-content-accuracy.webp",
       "social_path": "assets/images/social/webops-content-accuracy.jpg"
@@ -712,7 +1063,7 @@
       "kind": "skill",
       "name": "WebOps Content Decay",
       "slug": "webops-content-decay",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-content-decay/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-content-decay/SKILL.md",
       "object_description": "webops content decay archive conservation table with aging documents and review trays",
       "hero_path": "assets/images/ecosystem/skill-webops-content-decay.webp",
       "social_path": "assets/images/social/webops-content-decay.jpg"
@@ -721,7 +1072,7 @@
       "kind": "skill",
       "name": "WebOps Content Gap",
       "slug": "webops-content-gap",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-content-gap/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-content-gap/SKILL.md",
       "object_description": "webops content gap topic map with one clearly missing structural tile",
       "hero_path": "assets/images/ecosystem/skill-webops-content-gap.webp",
       "social_path": "assets/images/social/webops-content-gap.jpg"
@@ -730,7 +1081,7 @@
       "kind": "skill",
       "name": "WebOps Content Portfolio",
       "slug": "webops-content-portfolio",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-content-portfolio/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-content-portfolio/SKILL.md",
       "object_description": "webops content portfolio portfolio sorting table with evidence folders and decision bins",
       "hero_path": "assets/images/ecosystem/skill-webops-content-portfolio.webp",
       "social_path": "assets/images/social/webops-content-portfolio.jpg"
@@ -739,7 +1090,7 @@
       "kind": "skill",
       "name": "WebOps Content Pruning",
       "slug": "webops-content-pruning",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-content-pruning/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-content-pruning/SKILL.md",
       "object_description": "webops content pruning archive conservation table with aging documents and review trays",
       "hero_path": "assets/images/ecosystem/skill-webops-content-pruning.webp",
       "social_path": "assets/images/social/webops-content-pruning.jpg"
@@ -748,7 +1099,7 @@
       "kind": "skill",
       "name": "WebOps Distribution",
       "slug": "webops-distribution",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-distribution/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-distribution/SKILL.md",
       "object_description": "webops distribution publication routing press with outbound channel trays",
       "hero_path": "assets/images/ecosystem/skill-webops-distribution.webp",
       "social_path": "assets/images/social/webops-distribution.jpg"
@@ -757,7 +1108,7 @@
       "kind": "skill",
       "name": "WebOps Indexation",
       "slug": "webops-indexation",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-indexation/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-indexation/SKILL.md",
       "object_description": "webops indexation search index cabinet with crawl gates and canonical drawers",
       "hero_path": "assets/images/ecosystem/skill-webops-indexation.webp",
       "social_path": "assets/images/social/webops-indexation.jpg"
@@ -766,7 +1117,7 @@
       "kind": "skill",
       "name": "WebOps Information Architecture",
       "slug": "webops-information-architecture",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-information-architecture/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-information-architecture/SKILL.md",
       "object_description": "webops information architecture website blueprint table with hierarchical route blocks",
       "hero_path": "assets/images/ecosystem/skill-webops-information-architecture.webp",
       "social_path": "assets/images/social/webops-information-architecture.jpg"
@@ -775,7 +1126,7 @@
       "kind": "skill",
       "name": "WebOps Internal Linking",
       "slug": "webops-internal-linking",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-internal-linking/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-internal-linking/SKILL.md",
       "object_description": "webops internal linking interconnected document table with contextual bridge lines",
       "hero_path": "assets/images/ecosystem/skill-webops-internal-linking.webp",
       "social_path": "assets/images/social/webops-internal-linking.jpg"
@@ -784,7 +1135,7 @@
       "kind": "skill",
       "name": "WebOps Keyword Opportunity",
       "slug": "webops-keyword-opportunity",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-keyword-opportunity/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-keyword-opportunity/SKILL.md",
       "object_description": "webops keyword opportunity query research console with clustered signal tokens",
       "hero_path": "assets/images/ecosystem/skill-webops-keyword-opportunity.webp",
       "social_path": "assets/images/social/webops-keyword-opportunity.jpg"
@@ -793,7 +1144,7 @@
       "kind": "skill",
       "name": "WebOps Link Health",
       "slug": "webops-link-health",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-link-health/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-link-health/SKILL.md",
       "object_description": "webops link health network continuity tester attached to a web of cables",
       "hero_path": "assets/images/ecosystem/skill-webops-link-health.webp",
       "social_path": "assets/images/social/webops-link-health.jpg"
@@ -802,7 +1153,7 @@
       "kind": "skill",
       "name": "WebOps Longitudinal Findings",
       "slug": "webops-longitudinal-findings",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-longitudinal-findings/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-longitudinal-findings/SKILL.md",
       "object_description": "webops longitudinal findings timeline evidence bench with aligned historical measurement reels",
       "hero_path": "assets/images/ecosystem/skill-webops-longitudinal-findings.webp",
       "social_path": "assets/images/social/webops-longitudinal-findings.jpg"
@@ -811,7 +1162,7 @@
       "kind": "skill",
       "name": "WebOps Reporting",
       "slug": "webops-reporting",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-reporting/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-reporting/SKILL.md",
       "object_description": "webops reporting quiet reporting desk with verified evidence trays and summary press",
       "hero_path": "assets/images/ecosystem/skill-webops-reporting.webp",
       "social_path": "assets/images/social/webops-reporting.jpg"
@@ -820,7 +1171,7 @@
       "kind": "skill",
       "name": "WebOps Schema And Metadata",
       "slug": "webops-schema-and-metadata",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-schema-and-metadata/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-schema-and-metadata/SKILL.md",
       "object_description": "webops schema and structured-data drafting table with nested semantic blocks",
       "hero_path": "assets/images/ecosystem/skill-webops-schema-and-metadata.webp",
       "social_path": "assets/images/social/webops-schema-and-metadata.jpg"
@@ -829,7 +1180,7 @@
       "kind": "skill",
       "name": "WebOps Search Performance",
       "slug": "webops-search-performance",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-search-performance/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-search-performance/SKILL.md",
       "object_description": "webops search performance measurement console with trend reels and evidence meters",
       "hero_path": "assets/images/ecosystem/skill-webops-search-performance.webp",
       "social_path": "assets/images/social/webops-search-performance.jpg"
@@ -838,7 +1189,7 @@
       "kind": "skill",
       "name": "WebOps Search Standards Watch",
       "slug": "webops-search-standards-watch",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-search-standards-watch/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-search-standards-watch/SKILL.md",
       "object_description": "webops search standards standards observatory with update signals and source archives",
       "hero_path": "assets/images/ecosystem/skill-webops-search-standards-watch.webp",
       "social_path": "assets/images/social/webops-search-standards-watch.jpg"
@@ -847,7 +1198,7 @@
       "kind": "skill",
       "name": "WebOps Search Submission",
       "slug": "webops-search-submission",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-search-submission/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-search-submission/SKILL.md",
       "object_description": "webops search submission controlled dispatch gate with approved URL packets",
       "hero_path": "assets/images/ecosystem/skill-webops-search-submission.webp",
       "social_path": "assets/images/social/webops-search-submission.jpg"
@@ -856,7 +1207,7 @@
       "kind": "skill",
       "name": "WebOps Site Profile",
       "slug": "webops-site-profile",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-site-profile/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-site-profile/SKILL.md",
       "object_description": "webops site profile portable website identity dossier beside a configuration console",
       "hero_path": "assets/images/ecosystem/skill-webops-site-profile.webp",
       "social_path": "assets/images/social/webops-site-profile.jpg"
@@ -865,7 +1216,7 @@
       "kind": "skill",
       "name": "WebOps Technical SEO",
       "slug": "webops-technical-seo",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-technical-seo/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-technical-seo/SKILL.md",
       "object_description": "webops technical seo crawler diagnostics bench with sitemap and canonical instruments",
       "hero_path": "assets/images/ecosystem/skill-webops-technical-seo.webp",
       "social_path": "assets/images/social/webops-technical-seo.jpg"
@@ -874,7 +1225,7 @@
       "kind": "skill",
       "name": "WebOps Web Performance",
       "slug": "webops-web-performance",
-      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/main/skills/webops-web-performance/SKILL.md",
+      "source_evidence": "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/webops-web-performance/SKILL.md",
       "object_description": "webops web performance performance wind tunnel testing a webpage frame",
       "hero_path": "assets/images/ecosystem/skill-webops-web-performance.webp",
       "social_path": "assets/images/social/webops-web-performance.jpg"
@@ -892,7 +1243,7 @@
       "kind": "workflow",
       "name": "Owned Agent Project",
       "slug": "owned-agent-project",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/owned-agent-project",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/owned-agent-project",
       "object_description": "repository-owned agent project workbench with scaffold frame locked dependency boxes diagnostic instruments and evidence trays",
       "hero_path": "assets/images/ecosystem/workflow-owned-agent-project.webp",
       "social_path": "assets/images/social/owned-agent-project.jpg"
@@ -901,7 +1252,7 @@
       "kind": "workflow",
       "name": "Agency Runner",
       "slug": "agency-runner",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/agency-runner",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/agency-runner",
       "object_description": "agency mission desk with resumable client task packets and proof trays",
       "hero_path": "assets/images/ecosystem/workflow-agency-runner.webp",
       "social_path": "assets/images/social/agency-runner.jpg"
@@ -910,7 +1261,7 @@
       "kind": "workflow",
       "name": "Agency Verified Fix Loop",
       "slug": "agency-verified-fix-loop",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/agency-verified-fix-loop",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/agency-verified-fix-loop",
       "object_description": "verified repair loop bench with browser proof and handoff folders",
       "hero_path": "assets/images/ecosystem/workflow-agency-verified-fix-loop.webp",
       "social_path": "assets/images/social/agency-verified-fix-loop.jpg"
@@ -919,7 +1270,7 @@
       "kind": "workflow",
       "name": "AI SDK Muzzle Benchmark",
       "slug": "ai-sdk-muzzle-benchmark",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/ai-sdk-muzzle-benchmark",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/ai-sdk-muzzle-benchmark",
       "object_description": "dual-lane AI benchmark rig comparing raw and filtered output meters",
       "hero_path": "assets/images/ecosystem/workflow-ai-sdk-muzzle-benchmark.webp",
       "social_path": "assets/images/social/ai-sdk-muzzle-benchmark.jpg"
@@ -928,7 +1279,7 @@
       "kind": "workflow",
       "name": "AI SDK Watchdog Showcase",
       "slug": "ai-sdk-watchdog-showcase",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/ai-sdk-watchdog-showcase",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/ai-sdk-watchdog-showcase",
       "object_description": "AI traffic proxy station with telemetry gauges and export reels",
       "hero_path": "assets/images/ecosystem/workflow-ai-sdk-watchdog-showcase.webp",
       "social_path": "assets/images/social/ai-sdk-watchdog-showcase.jpg"
@@ -937,7 +1288,7 @@
       "kind": "workflow",
       "name": "Casefile Incident Evidence Packet",
       "slug": "casefile-incident-evidence-packet",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/casefile-incident-evidence-packet",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/casefile-incident-evidence-packet",
       "object_description": "incident capture desk with sealed redacted evidence packet",
       "hero_path": "assets/images/ecosystem/workflow-casefile-incident-evidence-packet.webp",
       "social_path": "assets/images/social/casefile-incident-evidence-packet.jpg"
@@ -946,7 +1297,7 @@
       "kind": "workflow",
       "name": "Codebase Cleanup",
       "slug": "codebase-cleanup",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/codebase-cleanup",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/codebase-cleanup",
       "hero_path": "assets/images/ecosystem/workflow-codebase-cleanup.webp",
       "social_path": "assets/images/social/codebase-cleanup.jpg"
     },
@@ -954,7 +1305,7 @@
       "kind": "workflow",
       "name": "Docsgen Repo Contract Runner",
       "slug": "docsgen-repo-contract-runner",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/docsgen-repo-contract-runner",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/docsgen-repo-contract-runner",
       "object_description": "repository documentation press producing contract pages and review packets",
       "hero_path": "assets/images/ecosystem/workflow-docsgen-repo-contract-runner.webp",
       "social_path": "assets/images/social/docsgen-repo-contract-runner.jpg"
@@ -963,7 +1314,7 @@
       "kind": "workflow",
       "name": "Enterprise Dispatch Approval Router",
       "slug": "enterprise-dispatch-approval-router",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/enterprise-dispatch-approval-router",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/enterprise-dispatch-approval-router",
       "object_description": "enterprise dispatch switchboard with a guarded human approval gate",
       "hero_path": "assets/images/ecosystem/workflow-enterprise-dispatch-approval-router.webp",
       "social_path": "assets/images/social/enterprise-dispatch-approval-router.jpg"
@@ -972,7 +1323,7 @@
       "kind": "workflow",
       "name": "Feature Card Workflow",
       "slug": "feature-card-workflow",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/feature-card-workflow",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/feature-card-workflow",
       "object_description": "feature task card moving through implementation proof and reviewer handoff stations",
       "hero_path": "assets/images/ecosystem/workflow-feature-card-workflow.webp",
       "social_path": "assets/images/social/feature-card-workflow.jpg"
@@ -981,7 +1332,7 @@
       "kind": "workflow",
       "name": "Howl Content Factory",
       "slug": "howl-content-factory",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/howl-content-factory",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/howl-content-factory",
       "object_description": "content print factory rendering cards galleries and caption sheets",
       "hero_path": "assets/images/ecosystem/workflow-howl-content-factory.webp",
       "social_path": "assets/images/social/howl-content-factory.jpg"
@@ -990,7 +1341,7 @@
       "kind": "workflow",
       "name": "Loop Engineering",
       "slug": "loop-engineering",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/loop-engineering",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/loop-engineering",
       "object_description": "bounded engineering loop console with context evaluation and stop gates",
       "hero_path": "assets/images/ecosystem/workflow-loop-engineering.webp",
       "social_path": "assets/images/social/loop-engineering.jpg"
@@ -999,7 +1350,7 @@
       "kind": "workflow",
       "name": "MCP Agent Gateway Review",
       "slug": "mcp-agent-gateway-review",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/mcp-agent-gateway-review",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/mcp-agent-gateway-review",
       "object_description": "constrained agent gateway checkpoint with tool manifests and safety inspection",
       "hero_path": "assets/images/ecosystem/workflow-mcp-agent-gateway-review.webp",
       "social_path": "assets/images/social/mcp-agent-gateway-review.jpg"
@@ -1008,7 +1359,7 @@
       "kind": "workflow",
       "name": "Publishing House Adaptation",
       "slug": "publishing-house-adaptation",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-adaptation",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-adaptation",
       "object_description": "versioned adaptation drafting bench with source-lineage spool and format trays",
       "hero_path": "assets/images/ecosystem/workflow-publishing-house-adaptation.webp",
       "social_path": "assets/images/social/publishing-house-adaptation.jpg"
@@ -1017,7 +1368,7 @@
       "kind": "workflow",
       "name": "Publishing House Approval Publication",
       "slug": "publishing-house-approval-publication",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-approval-publication",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-approval-publication",
       "hero_path": "assets/images/ecosystem/workflow-publishing-house-approval-publication.webp",
       "social_path": "assets/images/social/publishing-house-approval-publication.jpg"
     },
@@ -1025,7 +1376,7 @@
       "kind": "workflow",
       "name": "Publishing House Asset Production",
       "slug": "publishing-house-asset-production",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-asset-production",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-asset-production",
       "hero_path": "assets/images/ecosystem/workflow-publishing-house-asset-production.webp",
       "social_path": "assets/images/social/publishing-house-asset-production.jpg"
     },
@@ -1033,7 +1384,7 @@
       "kind": "workflow",
       "name": "Publishing House Commissioning",
       "slug": "publishing-house-commissioning",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-commissioning",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-commissioning",
       "hero_path": "assets/images/ecosystem/workflow-publishing-house-commissioning.webp",
       "social_path": "assets/images/social/publishing-house-commissioning.jpg"
     },
@@ -1041,7 +1392,7 @@
       "kind": "workflow",
       "name": "Publishing House Daily Desk",
       "slug": "publishing-house-daily-desk",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-daily-desk",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-daily-desk",
       "hero_path": "assets/images/ecosystem/workflow-publishing-house-daily-desk.webp",
       "social_path": "assets/images/social/publishing-house-daily-desk.jpg"
     },
@@ -1049,7 +1400,7 @@
       "kind": "workflow",
       "name": "Publishing House Editorial Review",
       "slug": "publishing-house-editorial-review",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-editorial-review",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-editorial-review",
       "hero_path": "assets/images/ecosystem/workflow-publishing-house-editorial-review.webp",
       "social_path": "assets/images/social/publishing-house-editorial-review.jpg"
     },
@@ -1057,7 +1408,7 @@
       "kind": "workflow",
       "name": "Publishing House Evidence Dossier",
       "slug": "publishing-house-evidence-dossier",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-evidence-dossier",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-evidence-dossier",
       "hero_path": "assets/images/ecosystem/workflow-publishing-house-evidence-dossier.webp",
       "social_path": "assets/images/social/publishing-house-evidence-dossier.jpg"
     },
@@ -1065,7 +1416,7 @@
       "kind": "workflow",
       "name": "Publishing House Format Production",
       "slug": "publishing-house-format-production",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-format-production",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-format-production",
       "object_description": "multi-format production press feeding newsletter social case-study and media trays",
       "hero_path": "assets/images/ecosystem/workflow-publishing-house-format-production.webp",
       "social_path": "assets/images/social/publishing-house-format-production.jpg"
@@ -1074,7 +1425,7 @@
       "kind": "workflow",
       "name": "Publishing House Governance",
       "slug": "publishing-house-governance",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-governance",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-governance",
       "object_description": "portfolio decision table with mandate folder priority tokens and accountable handoff trays",
       "hero_path": "assets/images/ecosystem/workflow-publishing-house-governance.webp",
       "social_path": "assets/images/social/publishing-house-governance.jpg"
@@ -1083,7 +1434,7 @@
       "kind": "workflow",
       "name": "Publishing House Post Publication",
       "slug": "publishing-house-post-publication",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-post-publication",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-post-publication",
       "hero_path": "assets/images/ecosystem/workflow-publishing-house-post-publication.webp",
       "social_path": "assets/images/social/publishing-house-post-publication.jpg"
     },
@@ -1091,7 +1442,7 @@
       "kind": "workflow",
       "name": "Publishing House Primary Piece",
       "slug": "publishing-house-primary-piece",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-primary-piece",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-primary-piece",
       "hero_path": "assets/images/ecosystem/workflow-publishing-house-primary-piece.webp",
       "social_path": "assets/images/social/publishing-house-primary-piece.jpg"
     },
@@ -1099,7 +1450,7 @@
       "kind": "workflow",
       "name": "RAG Enterprise Knowledge Gate",
       "slug": "rag-enterprise-knowledge-gate",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/rag-enterprise-knowledge-gate",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/rag-enterprise-knowledge-gate",
       "object_description": "enterprise knowledge archive with namespace gate and citation drawers",
       "hero_path": "assets/images/ecosystem/workflow-rag-enterprise-knowledge-gate.webp",
       "social_path": "assets/images/social/rag-enterprise-knowledge-gate.jpg"
@@ -1108,7 +1459,7 @@
       "kind": "workflow",
       "name": "Relay Lifecycle Handoff",
       "slug": "relay-lifecycle-handoff",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/relay-lifecycle-handoff",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/relay-lifecycle-handoff",
       "object_description": "mission relay station with pause resume export and delivery receipts",
       "hero_path": "assets/images/ecosystem/workflow-relay-lifecycle-handoff.webp",
       "social_path": "assets/images/social/relay-lifecycle-handoff.jpg"
@@ -1117,7 +1468,7 @@
       "kind": "workflow",
       "name": "Tribunal Decision Gate",
       "slug": "tribunal-decision-gate",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/tribunal-decision-gate",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/tribunal-decision-gate",
       "object_description": "adversarial decision chamber with review evidence and verified receipt seal",
       "hero_path": "assets/images/ecosystem/workflow-tribunal-decision-gate.webp",
       "social_path": "assets/images/social/tribunal-decision-gate.jpg"
@@ -1126,7 +1477,7 @@
       "kind": "workflow",
       "name": "WebOps AI Visibility Benchmark",
       "slug": "webops-ai-visibility-benchmark",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-ai-visibility-benchmark",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-ai-visibility-benchmark",
       "object_description": "AI search observatory running fixed queries across citation surfaces",
       "hero_path": "assets/images/ecosystem/workflow-webops-ai-visibility-benchmark.webp",
       "social_path": "assets/images/social/webops-ai-visibility-benchmark.jpg"
@@ -1135,7 +1486,7 @@
       "kind": "workflow",
       "name": "WebOps Content Refresh",
       "slug": "webops-content-refresh",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-content-refresh",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-content-refresh",
       "object_description": "content restoration desk with decay evidence approval gate and updated pages",
       "hero_path": "assets/images/ecosystem/workflow-webops-content-refresh.webp",
       "social_path": "assets/images/social/webops-content-refresh.jpg"
@@ -1144,7 +1495,7 @@
       "kind": "workflow",
       "name": "WebOps Finding To Fix",
       "slug": "webops-finding-to-fix",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-finding-to-fix",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-finding-to-fix",
       "object_description": "website finding moving through proposal approval repair and verification gates",
       "hero_path": "assets/images/ecosystem/workflow-webops-finding-to-fix.webp",
       "social_path": "assets/images/social/webops-finding-to-fix.jpg"
@@ -1153,7 +1504,7 @@
       "kind": "workflow",
       "name": "WebOps Monthly SEO Review",
       "slug": "webops-monthly-seo-review",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-monthly-seo-review",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-monthly-seo-review",
       "object_description": "monthly search review table consolidating specialist evidence packets",
       "hero_path": "assets/images/ecosystem/workflow-webops-monthly-seo-review.webp",
       "social_path": "assets/images/social/webops-monthly-seo-review.jpg"
@@ -1162,7 +1513,7 @@
       "kind": "workflow",
       "name": "WebOps Post Publish",
       "slug": "webops-post-publish",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-post-publish",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-post-publish",
       "object_description": "post-publication control desk checking pages links submissions and receipts",
       "hero_path": "assets/images/ecosystem/workflow-webops-post-publish.webp",
       "social_path": "assets/images/social/webops-post-publish.jpg"
@@ -1171,7 +1522,7 @@
       "kind": "workflow",
       "name": "WebOps Quarterly Content Portfolio",
       "slug": "webops-quarterly-content-portfolio",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-quarterly-content-portfolio",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-quarterly-content-portfolio",
       "object_description": "quarterly content portfolio board with evidence folders and disposition bins",
       "hero_path": "assets/images/ecosystem/workflow-webops-quarterly-content-portfolio.webp",
       "social_path": "assets/images/social/webops-quarterly-content-portfolio.jpg"
@@ -1180,7 +1531,7 @@
       "kind": "workflow",
       "name": "WebOps Site Bootstrap",
       "slug": "webops-site-bootstrap",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-site-bootstrap",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-site-bootstrap",
       "object_description": "website baseline survey station with crawler browser and graph instruments",
       "hero_path": "assets/images/ecosystem/workflow-webops-site-bootstrap.webp",
       "social_path": "assets/images/social/webops-site-bootstrap.jpg"
@@ -1189,7 +1540,7 @@
       "kind": "workflow",
       "name": "WebOps Weekly Content Intelligence",
       "slug": "webops-weekly-content-intelligence",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-weekly-content-intelligence",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-weekly-content-intelligence",
       "object_description": "weekly content intelligence desk connecting trends gaps accuracy and links",
       "hero_path": "assets/images/ecosystem/workflow-webops-weekly-content-intelligence.webp",
       "social_path": "assets/images/social/webops-weekly-content-intelligence.jpg"
@@ -1198,7 +1549,7 @@
       "kind": "workflow",
       "name": "WebOps Weekly Search Intelligence",
       "slug": "webops-weekly-search-intelligence",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-weekly-search-intelligence",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-weekly-search-intelligence",
       "object_description": "weekly search measurement console comparing queries trends and decay signals",
       "hero_path": "assets/images/ecosystem/workflow-webops-weekly-search-intelligence.webp",
       "social_path": "assets/images/social/webops-weekly-search-intelligence.jpg"
@@ -1207,7 +1558,7 @@
       "kind": "workflow",
       "name": "WebOps Weekly Site Health",
       "slug": "webops-weekly-site-health",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/webops-weekly-site-health",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/webops-weekly-site-health",
       "object_description": "weekly website health inspection rig with crawl performance and accessibility gauges",
       "hero_path": "assets/images/ecosystem/workflow-webops-weekly-site-health.webp",
       "social_path": "assets/images/social/webops-weekly-site-health.jpg"
@@ -1216,10 +1567,58 @@
       "kind": "workflow",
       "name": "Workcell Execution Gate",
       "slug": "workcell-execution-gate",
-      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/main/workcell-execution-gate",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/workcell-execution-gate",
       "object_description": "sealed container execution gate with validation console and completion receipt tray",
       "hero_path": "assets/images/ecosystem/workflow-workcell-execution-gate.webp",
       "social_path": "assets/images/social/workcell-execution-gate.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "VideoOps Production",
+      "slug": "videoops-production",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/videoops-production",
+      "hero_path": "assets/images/ecosystem/workflows-evidence-routing-bench.webp",
+      "social_path": "assets/images/social/videoops-production.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "VideoOps Creative Planning",
+      "slug": "videoops-creative-planning",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/videoops-creative-planning",
+      "hero_path": "assets/images/ecosystem/workflows-evidence-routing-bench.webp",
+      "social_path": "assets/images/social/videoops-creative-planning.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "VideoOps Asset Resolution",
+      "slug": "videoops-asset-resolution",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/videoops-asset-resolution",
+      "hero_path": "assets/images/ecosystem/workflows-evidence-routing-bench.webp",
+      "social_path": "assets/images/social/videoops-asset-resolution.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "VideoOps Media Generation",
+      "slug": "videoops-media-generation",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/videoops-media-generation",
+      "hero_path": "assets/images/ecosystem/workflows-evidence-routing-bench.webp",
+      "social_path": "assets/images/social/videoops-media-generation.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "VideoOps HyperFrames Edit",
+      "slug": "videoops-hyperframes-edit",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/videoops-hyperframes-edit",
+      "hero_path": "assets/images/ecosystem/workflows-evidence-routing-bench.webp",
+      "social_path": "assets/images/social/videoops-hyperframes-edit.jpg"
+    },
+    {
+      "kind": "workflow",
+      "name": "VideoOps Quality Review",
+      "slug": "videoops-quality-review",
+      "source_evidence": "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/videoops-quality-review",
+      "hero_path": "assets/images/ecosystem/workflows-evidence-routing-bench.webp",
+      "social_path": "assets/images/social/videoops-quality-review.jpg"
     }
   ]
 }

@@ -6,12 +6,12 @@ featured_image: "/assets/images/ecosystem/workflow-publishing-house-evidence-dos
 social_image: "/assets/images/social/publishing-house-evidence-dossier.jpg"
 section: "production capable with limitations"
 order: "200"
-install_command: "git clone https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && publishing-house-evidence-dossier/bin/run"
-github_url: "https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-evidence-dossier"
+install_command: "git clone --branch v0.6.0 --depth 1 https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && publishing-house-evidence-dossier/bin/run"
+github_url: "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-evidence-dossier"
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
-version: "0.4.0"
-last_updated: "2026-09-02"
+version: "0.6.0"
+last_updated: "2026-09-06"
 keywords: "Publishing House Evidence Dossier, Kujo workflow, publishing-house-evidence-dossier, local-first agent workflow"
 seo_title: "Publishing House Evidence Dossier — Kujo Workflow"
 seo_description: "Create independently reviewed claim, source, evidence, rights, and packet records."
@@ -48,9 +48,9 @@ Kujo-owned state.json with bounded retries, idempotent completed replay, and Dis
 
 ## Release boundary
 
-Readiness is **production capable with limitations** in the 0.4.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
+Readiness is **production capable with limitations** in the 0.6.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
 
 ## Source
 
-- [Open the complete publishing-house-evidence-dossier workflow kit on GitHub](https://github.com/kujolang/kujo-workflows/tree/main/publishing-house-evidence-dossier)
-- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/main/docs/audit/workflow-catalog.json)
+- [Open the complete publishing-house-evidence-dossier workflow kit on GitHub](https://github.com/kujolang/kujo-workflows/tree/v0.6.0/publishing-house-evidence-dossier)
+- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/v0.6.0/docs/audit/workflow-catalog.json)

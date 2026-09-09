@@ -6,12 +6,12 @@ featured_image: "/assets/images/ecosystem/workflow-enterprise-dispatch-approval-
 social_image: "/assets/images/social/enterprise-dispatch-approval-router.jpg"
 section: "production capable with limitations"
 order: "90"
-install_command: "git clone https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && enterprise-dispatch-approval-router/scripts/run-workflow.sh"
-github_url: "https://github.com/kujolang/kujo-workflows/tree/main/enterprise-dispatch-approval-router"
+install_command: "git clone --branch v0.6.0 --depth 1 https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && enterprise-dispatch-approval-router/scripts/run-workflow.sh"
+github_url: "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/enterprise-dispatch-approval-router"
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: production capable with limitations. Review the workflow README before live-provider or host-affecting use."
-version: "0.4.0"
-last_updated: "2026-09-02"
+version: "0.6.0"
+last_updated: "2026-09-06"
 keywords: "Enterprise Dispatch Approval Router, Kujo workflow, enterprise-dispatch-approval-router, local-first agent workflow"
 seo_title: "Enterprise Dispatch Approval Router — Kujo Workflow"
 seo_description: "Run a resumable Dispatch workflow with an explicit approval boundary and diagnostics."
@@ -45,9 +45,9 @@ Dispatch persisted state; paused run resumes by run ID
 
 ## Release boundary
 
-Readiness is **production capable with limitations** in the 0.4.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
+Readiness is **production capable with limitations** in the 0.6.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
 
 ## Source
 
-- [Open the complete enterprise-dispatch-approval-router workflow kit on GitHub](https://github.com/kujolang/kujo-workflows/tree/main/enterprise-dispatch-approval-router)
-- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/main/docs/audit/workflow-catalog.json)
+- [Open the complete enterprise-dispatch-approval-router workflow kit on GitHub](https://github.com/kujolang/kujo-workflows/tree/v0.6.0/enterprise-dispatch-approval-router)
+- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/v0.6.0/docs/audit/workflow-catalog.json)

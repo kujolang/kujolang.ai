@@ -6,12 +6,12 @@ featured_image: "/assets/images/ecosystem/workflow-loop-engineering.webp"
 social_image: "/assets/images/social/loop-engineering.jpg"
 section: "production ready"
 order: "120"
-install_command: "git clone https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && loop-engineering/scripts/run-workflow.sh"
-github_url: "https://github.com/kujolang/kujo-workflows/tree/main/loop-engineering"
+install_command: "git clone --branch v0.6.0 --depth 1 https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && loop-engineering/scripts/run-workflow.sh"
+github_url: "https://github.com/kujolang/kujo-workflows/tree/v0.6.0/loop-engineering"
 launch_story: "A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries."
 scope_note: "Current readiness: production ready. Review the workflow README before live-provider or host-affecting use."
-version: "0.4.0"
-last_updated: "2026-09-02"
+version: "0.6.0"
+last_updated: "2026-09-06"
 keywords: "Loop Engineering, Kujo workflow, loop-engineering, local-first agent workflow"
 seo_title: "Loop Engineering — Kujo Workflow"
 seo_description: "Run a bounded Goal to Context to Act to Evaluate to Record to Stop loop in any repository."
@@ -45,9 +45,9 @@ iteration evidence and structured external blockers
 
 ## Release boundary
 
-Readiness is **production ready** in the 0.4.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
+Readiness is **production ready** in the 0.6.0 local technical preview. Hosted runners, broad live-provider coverage, and enterprise readiness are not implied.
 
 ## Source
 
-- [Open the complete loop-engineering workflow kit on GitHub](https://github.com/kujolang/kujo-workflows/tree/main/loop-engineering)
-- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/main/docs/audit/workflow-catalog.json)
+- [Open the complete loop-engineering workflow kit on GitHub](https://github.com/kujolang/kujo-workflows/tree/v0.6.0/loop-engineering)
+- [Browse the released workflow catalog](https://github.com/kujolang/kujo-workflows/blob/v0.6.0/docs/audit/workflow-catalog.json)

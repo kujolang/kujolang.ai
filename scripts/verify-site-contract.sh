@@ -247,7 +247,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 233 ]] || fail "expected 233 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 241 ]] || fail "expected 241 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -276,10 +276,10 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 48 ]] || fail "expected 48 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 51 ]] || fail "expected 48 project and 3 catalog output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_sources" == 50 ]] || fail "expected 50 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 53 ]] || fail "expected 50 project and 3 catalog output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 15 ]] || fail "expected 15 primitive cards, found ${primitive_count}"
-[[ "$tooling_count" == 26 ]] || fail "expected 26 tooling cards, found ${tooling_count}"
+[[ "$tooling_count" == 28 ]] || fail "expected 28 tooling cards, found ${tooling_count}"
 [[ "$showcase_count" == 7 ]] || fail "expected 7 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
@@ -319,7 +319,7 @@ workflow_sources=$(find "${repo_root}/content/workflows" -maxdepth 1 -type f -na
 skills_outputs=$(find "${output_dir}/ecosystem/skills" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
 workflow_outputs=$(find "${output_dir}/ecosystem/workflows" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
 [[ "$skills_sources" == 135 && "$skills_outputs" == 135 ]] || fail "expected 135 skill source and output routes, found ${skills_sources}/${skills_outputs}"
-[[ "$workflow_sources" == 39 && "$workflow_outputs" == 39 ]] || fail "expected 38 released workflow kits plus the operator control-layer route, found ${workflow_sources}/${workflow_outputs}"
+[[ "$workflow_sources" == 45 && "$workflow_outputs" == 45 ]] || fail "expected 44 workflow kits plus the operator route, found ${workflow_sources}/${workflow_outputs}"
 require_text "${output_dir}/ecosystem/skills/index.html" "${skills_sources} / Released skills"
 require_text "${output_dir}/ecosystem/skills/index.html" "Browse ${skills_sources} Kujo Agent Skills"
 require_file "${output_dir}/ecosystem/skills/kujo-video-styles/index.html"
@@ -330,10 +330,10 @@ require_text "${output_dir}/ecosystem/skills/kujo-video-styles/index.html" "feat
 require_social_meta "${output_dir}/ecosystem/skills/kujo-video-styles/index.html" "kujo-video-styles"
 require_file "${output_dir}/ecosystem/workflows/owned-agent-project/index.html"
 require_file "${output_dir}/ecosystem/workflows/publishing-house-operator/index.html"
-require_text "${output_dir}/ecosystem/workflows/index.html" 'kujo-workflows 0.4.0'
-require_text "${output_dir}/ecosystem/workflows/index.html" '38 / Released workflows'
-require_text "${output_dir}/ecosystem/workflows/index.html" 'Every active workflow in the 0.4.0 release'
-require_text "${output_dir}/ecosystem/workflows/owned-agent-project/index.html" 'in the 0.4.0 local technical preview'
+require_text "${output_dir}/ecosystem/workflows/index.html" 'kujo-workflows 0.6.0'
+require_text "${output_dir}/ecosystem/workflows/index.html" '44 / Released workflows'
+require_text "${output_dir}/ecosystem/workflows/index.html" 'Every active workflow in the 0.6.0 release'
+require_text "${output_dir}/ecosystem/workflows/owned-agent-project/index.html" 'in the 0.6.0 local technical preview'
 require_text "${output_dir}/ecosystem/workflows/publishing-house-operator/index.html" 'Kujo Workflows 0.4.0 release'
 require_social_meta "${output_dir}/ecosystem/workflows/owned-agent-project/index.html" 'owned-agent-project'
 require_social_meta "${output_dir}/ecosystem/workflows/publishing-house-operator/index.html" 'publishing-house-operator'
@@ -499,4 +499,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 48 ecosystem projects, 3 section catalogs, 135 skills, 38 released workflow kits, the Publishing House Operator control layer, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 50 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
