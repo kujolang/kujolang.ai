@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — Scout 1.1.0
+
+- Update the Scout ecosystem page for the published 1.1.0 release, including its
+  Kujo 1.5 runtime floor, bounded scanning and resource contracts, machine-readable
+  diagnostics, corpus-scoped quality evidence, and native Windows verification.
+
 ## Unreleased — Video skills catalog
 
 - Sync all 135 skills from Kujo Skills v0.7.0, including VideoOps and both HyperFrames video skills.
