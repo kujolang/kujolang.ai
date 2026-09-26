@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — Watchdog 1.1.0
+
+- Update the Watchdog ecosystem page for the published 1.1.0 release, including canonical v2 telemetry, lossless JSONL/OTLP projections, Connected Sources management, and named proxy-profile hot reload boundaries.
+
 ## Unreleased — Scout 1.1.0
 
 - Update the Scout ecosystem page for the published 1.1.0 release, including its
