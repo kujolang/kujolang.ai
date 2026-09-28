@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/cms-content-infrastructure.webp"
 section: "Showcase"
 tags: [Showcase, Content, Agents, WebMCP]
 order: 400
-install_command: "git clone https://github.com/kujolang/cms.git"
+install_command: "kennel add cms"
 github_url: "https://github.com/kujolang/cms"
 launch_story: "Give people, developers, integrations, and agents one inspectable content contract without prescribing the frontend stack."
 scope_note: "CMS 1.1.0 is production-oriented backend software, but each deployment still requires environment-specific identity, infrastructure, storage, security, recovery, and governance proof."
@@ -16,7 +16,7 @@ keywords: "Kujo CMS, open source CMS, agent-ready CMS, WebMCP CMS, MCP content m
 seo_title: "Kujo CMS 1.1.0 — Agent-Ready Content Management"
 seo_description: "Explore Kujo CMS 1.1.0: framework-neutral content, SEO, social sharing, themes, plugins, identities, abilities, MCP, WebMCP, APIs, and CLI workflows."
 latest_release_url: "https://github.com/kujolang/cms/releases/tag/v1.1.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
 ## What it does

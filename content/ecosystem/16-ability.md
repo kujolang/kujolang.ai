@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/ability-portable-operation-contracts.w
 section: "Primitives"
 tags: [Primitive, Contracts]
 order: 65
-install_command: "git clone https://github.com/kujolang/ability.git"
+install_command: "kennel add ability"
 github_url: "https://github.com/kujolang/ability"
 launch_story: "Define an operation once, then project the same meaning into applications, agents, and MCP hosts without moving authority into the contract."
 scope_note: "Ability is a contract and runtime package, not a hosted gateway, global catalog, identity provider, permission system, or workflow engine."
@@ -15,7 +15,7 @@ seo_title: "Kujo Ability — Portable Operation Contracts"
 last_updated: "2026-09-09"
 version: "1.1.0"
 latest_release_url: "https://github.com/kujolang/ability/releases/tag/v1.1.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
 ## What it does

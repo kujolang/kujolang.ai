@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/ssg-static-sites.webp"
 section: "Showcase"
 tags: [Showcase, Publishing]
 order: 430
-install_command: "git clone https://github.com/kujolang/ssg.git"
+install_command: "kennel add ssg"
 github_url: "https://github.com/kujolang/ssg"
 launch_story: "An agent-inspectable publishing pipeline where content and generated output remain visible."
 scope_note: "SSG is a generator and showcase, not a hosted deployment service or a guarantee of SEO and accessibility outcomes."
@@ -14,7 +14,7 @@ keywords: "SSG, Kujo ecosystem, Showcase, Publishing"
 seo_title: "SSG — Kujo Ecosystem"
 version: "1.0.0"
 latest_release_url: "https://github.com/kujolang/ssg/releases/tag/v1.0.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

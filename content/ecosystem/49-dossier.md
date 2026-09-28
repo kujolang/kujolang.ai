@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/dossier-evidence-ledger.webp"
 section: "Tooling"
 tags: [Tool, Publishing]
 order: 490
-install_command: "git clone https://github.com/kujolang/dossier.git"
+install_command: "kennel add dossier"
 github_url: "https://github.com/kujolang/dossier"
 launch_story: "Bind material claims to captured support, classifications, conflicts, quotations, consent, and rights evidence."
 scope_note: "Dossier records evidence assertions; a URL is not verification, inference is not fact, and a record does not grant consent, rights, or approval."
@@ -14,7 +14,7 @@ keywords: "Dossier, Kujo ecosystem, evidence ledger, claim verification, source 
 seo_title: "Dossier — Kujo Ecosystem"
 version: "0.2.0"
 latest_release_url: "https://github.com/kujolang/dossier/releases/tag/v0.2.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

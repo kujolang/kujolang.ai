@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/packwrite-execution-pack.webp"
 section: "Tooling"
 tags: [Tool, Agents]
 order: 260
-install_command: "git clone https://github.com/kujolang/packwrite.git"
+install_command: "kennel add packwrite"
 github_url: "https://github.com/kujolang/packwrite"
 launch_story: "Turn one large project brief into a reviewable operating manual that agents can execute phase by phase."
 scope_note: "PackWrite compiles planning artifacts locally; it does not implement the project, host models, deploy code, or replace review."
@@ -15,7 +15,7 @@ seo_title: "PackWrite — Kujo Ecosystem"
 version: "1.1.0"
 last_updated: "2026-09-09"
 latest_release_url: "https://github.com/kujolang/packwrite/releases/tag/v1.1.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
 ## What it does

@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/spec-task-contracts.webp"
 section: "Primitives"
 tags: [Primitive, Contracts]
 order: 30
-install_command: "git clone https://github.com/kujolang/spec.git"
+install_command: "kennel add spec"
 github_url: "https://github.com/kujolang/spec"
 launch_story: "Turn an ambiguous request into an agent-readable contract before execution begins."
 scope_note: "Spec describes and validates work; it does not grant authority to perform the work."
@@ -14,7 +14,7 @@ keywords: "Spec, Kujo ecosystem, Primitive, Contracts"
 seo_title: "Spec — Kujo Ecosystem"
 version: "1.0.1"
 latest_release_url: "https://github.com/kujolang/spec/releases/tag/v1.0.1"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

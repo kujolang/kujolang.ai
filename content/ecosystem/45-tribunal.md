@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/tribunal-adversarial-hearing.webp"
 section: "Showcase"
 tags: [Showcase, Decisions]
 order: 450
-install_command: "git clone https://github.com/kujolang/tribunal.git"
+install_command: "kennel add tribunal"
 github_url: "https://github.com/kujolang/tribunal"
 launch_story: "Replace a disposable model answer with independent testimony, cross-examination, a fatal-flaw pass, an explicit ruling, and a sealed decision packet."
 scope_note: "Tribunal 1.0.1 is stable for local or operator-controlled decision evidence; shared, regulated, or hosted deployments require environment-specific identity, custody, storage, network, and independent security certification."
@@ -14,7 +14,7 @@ keywords: "Tribunal, Kujo ecosystem, decision review, adversarial hearing, seale
 seo_title: "Tribunal — Kujo Ecosystem"
 version: "1.0.1"
 latest_release_url: "https://github.com/kujolang/tribunal/releases/tag/v1.0.1"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

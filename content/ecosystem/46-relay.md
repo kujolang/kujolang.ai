@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/relay-mission-orchestration.webp"
 section: "Showcase"
 tags: [Showcase, Orchestration]
 order: 460
-install_command: "git clone https://github.com/kujolang/relay.git"
+install_command: "kennel add relay"
 github_url: "https://github.com/kujolang/relay"
 launch_story: "Compose a bounded mission, run it in a repository or detached worktree, control its lifecycle, and retain evidence that can be inspected and verified."
 scope_note: "Relay 1.0 is stable for local or operator-controlled use; it is not hosted orchestration, a multi-tenant service, hostile-code isolation, or enterprise certification."
@@ -14,7 +14,7 @@ keywords: "Relay, Kujo ecosystem, agent missions, local orchestration, verifiabl
 seo_title: "Relay — Kujo Ecosystem"
 version: "1.1.0"
 latest_release_url: "https://github.com/kujolang/relay/releases/tag/v1.1.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

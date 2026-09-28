@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/versionseal-version-approval.webp"
 section: "Tooling"
 tags: [Tool, Publishing]
 order: 540
-install_command: "git clone https://github.com/kujolang/versionseal.git"
+install_command: "kennel add versionseal"
 github_url: "https://github.com/kujolang/versionseal"
 launch_story: "Bind a named human approval to an exact package version and verify that neither scope nor bytes have drifted."
 scope_note: "VersionSeal records explicit local approvals and revocations; checksum integrity does not prove identity, custody, legal authority, or external publication."
@@ -14,7 +14,7 @@ keywords: "VersionSeal, Kujo ecosystem, human approval, exact version, revocatio
 seo_title: "VersionSeal — Kujo Ecosystem"
 version: "0.2.0"
 latest_release_url: "https://github.com/kujolang/versionseal/releases/tag/v0.2.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/assetworks-media-provenance.webp"
 section: "Tooling"
 tags: [Tool, Publishing]
 order: 470
-install_command: "git clone https://github.com/kujolang/assetworks.git"
+install_command: "kennel add assetworks"
 github_url: "https://github.com/kujolang/assetworks"
 launch_story: "Plan publication assets, preserve their lineage, and validate accessible production deliverables against exact checksums."
 scope_note: "AssetWorks is a local-first evidence system; hosted identity, distributed coordination, and external media services require operator-provided adapters."
@@ -14,7 +14,7 @@ keywords: "AssetWorks, Kujo ecosystem, publishing assets, media provenance, acce
 seo_title: "AssetWorks — Kujo Ecosystem"
 version: "0.2.0"
 latest_release_url: "https://github.com/kujolang/assetworks/releases/tag/v0.2.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

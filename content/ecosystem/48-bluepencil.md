@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/bluepencil-editorial-calibration.webp"
 section: "Tooling"
 tags: [Tool, Publishing]
 order: 480
-install_command: "git clone https://github.com/kujolang/bluepencil.git"
+install_command: "kennel add bluepencil"
 github_url: "https://github.com/kujolang/bluepencil"
 launch_story: "Review editorial work across eight explicit quality dimensions without averaging away blockers or automating taste."
 scope_note: "BluePencil operates under PROPOSE: it records review evidence but never approves publication or rewrites source artifacts."
@@ -14,7 +14,7 @@ keywords: "BluePencil, Kujo ecosystem, editorial review, quality calibration, pu
 seo_title: "BluePencil — Kujo Ecosystem"
 version: "0.2.0"
 latest_release_url: "https://github.com/kujolang/bluepencil/releases/tag/v0.2.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

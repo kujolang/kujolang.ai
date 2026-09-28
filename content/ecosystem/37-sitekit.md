@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/sitekit-interface-system.webp"
 section: "Tooling"
 tags: [Tool, Design System]
 order: 330
-install_command: "git clone https://github.com/kujolang/site-kit.git"
+install_command: "kennel add sitekit"
 github_url: "https://github.com/kujolang/site-kit"
 launch_story: "Give people and agents a stable set of tokens, schemas, semantic templates, components, and page recipes to build from."
 scope_note: "SiteKit provides tested source components and distribution assets, not accessibility certification for arbitrary downstream pages or a hosted component service."
@@ -14,7 +14,7 @@ keywords: "SiteKit, Kujo ecosystem, design system, accessible components, static
 seo_title: "SiteKit — Kujo Ecosystem"
 version: "1.0.0"
 latest_release_url: "https://github.com/kujolang/site-kit/releases/tag/v1.0.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

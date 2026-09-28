@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/siteprobe-website-crawler.webp"
 section: "Tooling"
 tags: [Tool, Website Intelligence]
 order: 360
-install_command: "git clone --branch v0.3.0 --depth 1 https://github.com/kujolang/siteprobe.git"
+install_command: "kennel add siteprobe@0.3.0"
 github_url: "https://github.com/kujolang/siteprobe"
 launch_story: "Model a website as a crawlable information system and preserve the evidence needed to inspect changes over time."
 scope_note: "SiteProbe 0.3.0 is a native Kujo, read-only crawler for static and server-rendered HTML; it is not a JavaScript renderer, security scanner, or search-engine emulator."
@@ -15,7 +15,7 @@ seo_title: "SiteProbe — Native Kujo Website Crawler"
 last_updated: "2026-09-09"
 version: "0.3.0"
 latest_release_url: "https://github.com/kujolang/siteprobe/releases/tag/v0.3.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command pins that registry release; see scope_note for release boundaries."
 ---
 
 ## What it does

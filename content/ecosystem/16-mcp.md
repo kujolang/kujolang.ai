@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/mcp-tool-connectors.webp"
 section: "Primitives"
 tags: [Primitive, Gateway]
 order: 70
-install_command: "git clone https://github.com/kujolang/mcp.git"
+install_command: "kennel add mcp"
 github_url: "https://github.com/kujolang/mcp"
 launch_story: "A guarded gateway for exposing useful capabilities to agents through explicit contracts."
 scope_note: "Generated servers still require review of tool authority, data access, authentication, and deployment boundaries."
@@ -15,7 +15,7 @@ seo_title: "MCP — Kujo Ecosystem"
 last_updated: "2026-09-09"
 version: "1.1.1"
 latest_release_url: "https://github.com/kujolang/mcp/releases/tag/v1.1.1"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
 ## What it does

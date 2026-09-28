@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/contentgraph-content-network.webp"
 section: "Tooling"
 tags: [Tool, Content Intelligence]
 order: 340
-install_command: "git clone https://github.com/kujolang/contentgraph.git"
+install_command: "kennel add contentgraph"
 github_url: "https://github.com/kujolang/contentgraph"
 launch_story: "Turn crawls and source files into a local content graph that exposes relationships without automating editorial decisions."
 scope_note: "ContentGraph 0.1 uses deterministic lexical relationships; overlaps and opportunities are review candidates, not proof or authorization to change content."
@@ -14,7 +14,7 @@ keywords: "ContentGraph, Kujo ecosystem, content graph, internal links, topic cl
 seo_title: "ContentGraph — Kujo Ecosystem"
 version: "0.3.0"
 latest_release_url: "https://github.com/kujolang/contentgraph/releases/tag/v0.3.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

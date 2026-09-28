@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/muzzle-bounded-workflow.webp"
 section: "Tooling"
 tags: [Tool, Execution]
 order: 200
-install_command: "git clone https://github.com/kujolang/muzzle.git"
+install_command: "kennel add muzzle"
 github_url: "https://github.com/kujolang/muzzle"
 launch_story: "Keep agent context focused while retaining the complete operational record on disk."
 scope_note: "Muzzle controls output shape and workflow contracts; commands retain the authority of the environment running them."
@@ -14,7 +14,7 @@ keywords: "Muzzle, Kujo ecosystem, Tool, Execution"
 seo_title: "Muzzle — Kujo Ecosystem"
 version: "1.1.0"
 latest_release_url: "https://github.com/kujolang/muzzle/releases/tag/v1.1.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

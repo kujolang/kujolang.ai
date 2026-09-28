@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/presswire-publication-dispatch.webp"
 section: "Tooling"
 tags: [Tool, Publishing]
 order: 510
-install_command: "git clone https://github.com/kujolang/presswire.git"
+install_command: "kennel add presswire"
 github_url: "https://github.com/kujolang/presswire"
 launch_story: "Preflight an exact approved package, perform a bounded publication effect, and retain an idempotent delivery receipt."
 scope_note: "PressWire performs only explicitly authorized publication effects; optional external destinations require configured adapters and valid approval scope."
@@ -14,7 +14,7 @@ keywords: "PressWire, Kujo ecosystem, approval-gated publishing, publication rec
 seo_title: "PressWire — Kujo Ecosystem"
 version: "0.2.0"
 latest_release_url: "https://github.com/kujolang/presswire/releases/tag/v0.2.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

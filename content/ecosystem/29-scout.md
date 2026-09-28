@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/scout-codebase-map.webp"
 section: "Primitives"
 tags: [Primitive, Intelligence]
 order: 50
-install_command: "git clone --depth 1 --branch v1.1.0 https://github.com/kujolang/scout.git"
+install_command: "kennel add scout@1.1.0"
 github_url: "https://github.com/kujolang/scout"
 launch_story: "Shorten codebase orientation without turning discovery into an opaque hosted index."
 scope_note: "Scout accelerates onboarding; project-specific architecture and security judgment still matter."
@@ -14,7 +14,7 @@ keywords: "Scout, Kujo ecosystem, Tool, Intelligence"
 seo_title: "Scout — Kujo Ecosystem"
 version: "1.1.0"
 latest_release_url: "https://github.com/kujolang/scout/releases/tag/v1.1.0"
-release_status: "Version and pinned clone command identify the latest published GitHub Release; see scope_note for the product boundary."
+release_status: "Version identifies the published release. The Kennel command pins that registry release; see scope_note for release boundaries."
 last_updated: "2026-09-26"
 ---
 

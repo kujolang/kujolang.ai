@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/storydesk-editorial-control.webp"
 section: "Tooling"
 tags: [Tool, Publishing]
 order: 530
-install_command: "git clone https://github.com/kujolang/storydesk.git"
+install_command: "kennel add storydesk"
 github_url: "https://github.com/kujolang/storydesk"
 launch_story: "Operate the editorial queue from idea and commission through assignment, handoff, packet creation, and human review."
 scope_note: "StoryDesk coordinates local editorial work; it does not grant publication authority or claim hosted identity and distributed multi-host coordination."
@@ -14,7 +14,7 @@ keywords: "StoryDesk, Kujo ecosystem, editorial operations, commissions, assignm
 seo_title: "StoryDesk — Kujo Ecosystem"
 version: "0.2.0"
 latest_release_url: "https://github.com/kujolang/storydesk/releases/tag/v0.2.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

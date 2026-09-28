@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/runledger-run-receipts.webp"
 section: "Tooling"
 tags: [Tool, Evidence]
 order: 210
-install_command: "git clone https://github.com/kujolang/runledger.git"
+install_command: "kennel add runledger"
 github_url: "https://github.com/kujolang/runledger"
 launch_story: "Preserve proof of agent and build runs so later review starts from evidence."
 scope_note: "Receipts record declared and observable run data; they do not independently certify correctness."
@@ -14,7 +14,7 @@ keywords: "RunLedger, Kujo ecosystem, Tool, Evidence"
 seo_title: "RunLedger — Kujo Ecosystem"
 version: "1.1.0"
 latest_release_url: "https://github.com/kujolang/runledger/releases/tag/v1.1.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

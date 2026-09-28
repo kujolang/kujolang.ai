@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/fence-architecture-boundary.webp"
 section: "Primitives"
 tags: [Primitive, Architecture]
 order: 120
-install_command: "git clone https://github.com/kujolang/fence.git"
+install_command: "kennel add fence"
 github_url: "https://github.com/kujolang/fence"
 launch_story: "Make architecture erosion visible as soon as dependency boundaries move."
 scope_note: "Fence is a boundary linter, not an operating-system permissions sandbox."
@@ -14,7 +14,7 @@ keywords: "Fence, Kujo ecosystem, Tool, Architecture"
 seo_title: "Fence — Kujo Ecosystem"
 version: "1.0.0"
 latest_release_url: "https://github.com/kujolang/fence/releases/tag/v1.0.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

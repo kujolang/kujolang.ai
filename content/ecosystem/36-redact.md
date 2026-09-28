@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/redact-document-sanitization.webp"
 section: "Tooling"
 tags: [Tool, Privacy]
 order: 320
-install_command: "git clone https://github.com/kujolang/redact.git"
+install_command: "kennel add redact"
 github_url: "https://github.com/kujolang/redact"
 launch_story: "Prepare reviewable sharing copies without sending source material to an AI provider or network service."
 scope_note: "Redact does not guarantee complete PII detection or compliance; domain-specific privacy and security review is required before sensitive production use."
@@ -14,7 +14,7 @@ keywords: "Redact, Kujo ecosystem, local redaction, privacy, audit"
 seo_title: "Redact — Kujo Ecosystem"
 version: "1.0.0"
 latest_release_url: "https://github.com/kujolang/redact/releases/tag/v1.0.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

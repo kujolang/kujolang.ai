@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/readersignal-measurement-console.webp"
 section: "Tooling"
 tags: [Tool, Publishing]
 order: 520
-install_command: "git clone --branch v0.3.0 https://github.com/kujolang/readersignal.git"
+install_command: "kennel add readersignal@0.3.0"
 github_url: "https://github.com/kujolang/readersignal"
 launch_story: "Capture bounded audience evidence and compare compatible measurements without turning metrics into editorial authority."
 scope_note: "ReaderSignal 0.3.0 requires POSIX Kujo 1.5.0 at d501c2c46c51718ee10c4434f6cf9750bbd81453 or a compatible newer build; 1.5.0 alone does not identify the preview filesystem APIs. Provider access, identity, consent, interpretation, and consequential decisions remain external responsibilities."
@@ -14,7 +14,7 @@ keywords: "ReaderSignal, Kujo ecosystem, audience measurement, reader feedback, 
 seo_title: "ReaderSignal — Kujo Ecosystem"
 version: "0.3.0"
 latest_release_url: "https://github.com/kujolang/readersignal/releases/tag/v0.3.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command pins that registry release; see scope_note for release boundaries."
 last_updated: "2026-09-26"
 ---
 

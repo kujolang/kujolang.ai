@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/rag-knowledge-retrieval.webp"
 section: "Primitives"
 tags: [Primitive, Knowledge]
 order: 80
-install_command: "git clone https://github.com/kujolang/rag.git"
+install_command: "kennel add rag"
 github_url: "https://github.com/kujolang/rag"
 launch_story: "Ground agent answers in operator-controlled knowledge with inspectable citations."
 scope_note: "The published 1.0.0 release provides local retrieval. Newer default-branch work adds documentation example selection, MIME-aware HTTP ingestion, and a private local Kujo-docs snapshot workflow; no public hosted retrieval service is implied."
@@ -14,7 +14,7 @@ keywords: "RAG, Kujo ecosystem, Primitive, Knowledge"
 seo_title: "RAG — Kujo Ecosystem"
 version: "1.0.0"
 latest_release_url: "https://github.com/kujolang/rag/releases/tag/v1.0.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

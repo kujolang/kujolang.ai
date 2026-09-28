@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/dispatch-workflow-orchestration.webp"
 section: "Primitives"
 tags: [Primitive, Orchestration]
 order: 60
-install_command: "git clone https://github.com/kujolang/dispatch.git"
+install_command: "kennel add dispatch"
 github_url: "https://github.com/kujolang/dispatch"
 launch_story: "Dispatch 1.2.0 routes bounded AI work through policy constraints, approvals, resumable state, and inspectable evidence."
 scope_note: "The published 1.2.0 release provides resumable orchestration and routing. Newer default-branch work adds persisted retrieval preferences, RAG documentation integration, and task/retry observations."
@@ -15,7 +15,7 @@ seo_title: "Dispatch — Kujo Ecosystem"
 version: "1.2.0"
 last_updated: "2026-09-09"
 latest_release_url: "https://github.com/kujolang/dispatch/releases/tag/v1.2.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
 ## What it does

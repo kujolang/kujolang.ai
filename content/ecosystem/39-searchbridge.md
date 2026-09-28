@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/searchbridge-provider-relay.webp"
 section: "Tooling"
 tags: [Tool, WebOps Data]
 order: 350
-install_command: "git clone https://github.com/kujolang/searchbridge.git"
+install_command: "kennel add searchbridge"
 github_url: "https://github.com/kujolang/searchbridge"
 launch_story: "Bring optional provider measurements into Kujo WebOps through scoped capabilities, normalized evidence, and explicit effect boundaries."
 scope_note: "SearchBridge 1.0.0 is a released local CLI and SDK with live-qualified Google search, analytics, PageSpeed, and CrUX reads; Cloudflare and IndexNow remain fixture-only pending the v1.1 review."
@@ -15,7 +15,7 @@ last_updated: "2026-09-09"
 keywords: "SearchBridge, Kujo ecosystem, search data, analytics, PageSpeed, CrUX, backlinks, IndexNow"
 seo_title: "SearchBridge — Kujo Ecosystem"
 latest_release_url: "https://github.com/kujolang/searchbridge/releases/tag/v1.0.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
 ## What it does

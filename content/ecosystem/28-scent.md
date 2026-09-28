@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/scent-context-fragments.webp"
 section: "Primitives"
 tags: [Primitive, Context]
 order: 110
-install_command: "git clone https://github.com/kujolang/scent.git"
+install_command: "kennel add scent"
 github_url: "https://github.com/kujolang/scent"
 launch_story: "Give an agent the smallest useful, inspectable context for the job."
 scope_note: "Context selection and redaction remain reviewable decisions; a pack should not be treated as complete by default."
@@ -14,7 +14,7 @@ keywords: "Scent, Kujo ecosystem, Tool, Context"
 seo_title: "Scent — Kujo Ecosystem"
 version: "1.0.0"
 latest_release_url: "https://github.com/kujolang/scent/releases/tag/v1.0.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

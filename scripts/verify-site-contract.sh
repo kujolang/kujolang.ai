@@ -247,7 +247,7 @@ for publishing_tool in assetworks bluepencil dossier galleypack presswire reader
 	reject_text "$tool_page" '--branch=v0.1.0'
 done
 require_text "${output_dir}/ecosystem/readersignal/index.html" 'https://github.com/kujolang/readersignal/releases/tag/v0.3.0'
-require_text "${output_dir}/ecosystem/readersignal/index.html" 'git clone --branch v0.3.0 https://github.com/kujolang/readersignal.git'
+require_text "${output_dir}/ecosystem/readersignal/index.html" 'kennel add readersignal@0.3.0'
 require_text "${output_dir}/ecosystem/readersignal/index.html" 'd501c2c46c51718ee10c4434f6cf9750bbd81453'
 require_social_meta "${output_dir}/ethos/index.html" 'ethos'
 require_social_meta "${output_dir}/writing/index.html" 'writing'

@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/shipcheck-release-containers.webp"
 section: "Tooling"
 tags: [Tool, Release]
 order: 250
-install_command: "git clone https://github.com/kujolang/shipcheck.git"
+install_command: "kennel add shipcheck"
 github_url: "https://github.com/kujolang/shipcheck"
 launch_story: "Turn release preparation into a visible, repeatable gate instead of a last-minute memory test."
 scope_note: "ShipCheck is a confidence gate within declared scope, not a universal production certification."
@@ -14,7 +14,7 @@ keywords: "ShipCheck, Kujo ecosystem, Tool, Release"
 seo_title: "ShipCheck — Kujo Ecosystem"
 version: "1.0.0"
 latest_release_url: "https://github.com/kujolang/shipcheck/releases/tag/v1.0.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

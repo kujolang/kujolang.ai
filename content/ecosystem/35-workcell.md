@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/workcell-contained-execution.webp"
 section: "Tooling"
 tags: [Tool, Execution]
 order: 310
-install_command: "git clone https://github.com/kujolang/workcell.git"
+install_command: "kennel add workcell"
 github_url: "https://github.com/kujolang/workcell"
 launch_story: "Run agent work inside an explicit execution contract, then export only declared artifacts and durable evidence."
 scope_note: "Workcell 1.1.0 keeps Docker/Podman stable. Portable contracts and E2B, Vercel Sandbox, and Daytona adapters remain alpha pending live certification. Honor its exact runtime pin and run doctor on the target host."
@@ -14,7 +14,7 @@ keywords: "Workcell, Kujo ecosystem, bounded execution, Docker, Podman"
 seo_title: "Workcell — Kujo Ecosystem"
 version: "1.1.0"
 latest_release_url: "https://github.com/kujolang/workcell/releases/tag/v1.1.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

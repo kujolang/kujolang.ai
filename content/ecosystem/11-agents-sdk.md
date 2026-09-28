@@ -6,7 +6,7 @@ featured_image: "/assets/images/ecosystem/agents-sdk-human-handoff.webp"
 section: "Primitives"
 tags: [Primitive, Agents]
 order: 100
-install_command: "git clone https://github.com/kujolang/agents-sdk.git"
+install_command: "kennel add agents-sdk"
 github_url: "https://github.com/kujolang/agents-sdk"
 launch_story: "Composable local-first runtime primitives for building inspectable agents."
 scope_note: "The 1.0.0 release provides library-first agent primitives. Newer default-branch work adds bounded lifecycle observations, retrieval preferences, and real MCP tool examples; these are not retroactively in the release archive."
@@ -14,7 +14,7 @@ keywords: "Agents SDK, Kujo ecosystem, Primitive, Agents"
 seo_title: "Agents SDK — Kujo Ecosystem"
 version: "1.0.0"
 latest_release_url: "https://github.com/kujolang/agents-sdk/releases/tag/v1.0.0"
-release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 last_updated: "2026-09-09"
 ---
 

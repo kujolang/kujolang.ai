@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — Kennel ecosystem onboarding
+
+- Replace GitHub clone commands in 41 ecosystem hero panels with verified Kennel package commands, including registered showcases and the `sitekit` package name. Preserve Scout, SiteProbe, and ReaderSignal version pins; keep GitHub commands for unregistered showcases.
+
 ## Unreleased — Watchdog 1.1.0
 
 - Update the Watchdog ecosystem page for the published 1.1.0 release, including canonical v2 telemetry, lossless JSONL/OTLP projections, Connected Sources management, and named proxy-profile hot reload boundaries.
