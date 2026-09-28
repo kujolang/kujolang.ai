@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — Mobile terminal panels
+
+- Stack Get started panel contents on mobile so terminal boxes span the available width consistently across ecosystem, skill, and workflow pages.
+
 ## Unreleased — Kennel ecosystem onboarding
 
 - Replace GitHub clone commands in 41 ecosystem hero panels with verified Kennel package commands, including registered showcases and the `sitekit` package name. Preserve Scout, SiteProbe, and ReaderSignal version pins; keep GitHub commands for unregistered showcases.

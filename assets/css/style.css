@@ -1265,6 +1265,13 @@
       font-size: clamp(2.5rem, 11vw, 3.5rem);
     }
 
+    .tool-install-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      inline-size: 100%;
+      overflow-wrap: anywhere;
+    }
+
     .longform-layout,
     .tool-body {
       grid-template-columns: minmax(0, 1fr);
