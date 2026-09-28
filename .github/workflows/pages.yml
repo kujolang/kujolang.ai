@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  KUJO_REF: 7df293865ae7d342b669789d011f607449808b02
+  KUJO_REF: 44af277848173664f72ca85f2a1b3b98d634ecdd
 
 jobs:
   build:

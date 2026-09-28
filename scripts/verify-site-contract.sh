@@ -501,6 +501,11 @@ PYVERSIONS
 
 require_text "${output_dir}/ecosystem/ability/index.html" "SSG publishes inspect, validate, and approval-gated build definitions."
 
+# Published runtime and experimental companion boundaries stay distinct.
+require_text "${output_dir}/ecosystem/kujo/index.html" "@kujolang/kujo-runtime@1.6.0"
+require_text "${output_dir}/ecosystem/kujo/index.html" "private/unpublished"
+require_text "${output_dir}/ecosystem/kujo/index.html" "Windows x64"
+
 if (( failures > 0 )); then
 	printf 'Site contract failed with %d issue(s).\n' "$failures" >&2
 	exit 1
