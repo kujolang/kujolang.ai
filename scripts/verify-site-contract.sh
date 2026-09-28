@@ -506,6 +506,8 @@ require_text "${output_dir}/ecosystem/kujo/index.html" "@kujolang/kujo-runtime@1
 require_text "${output_dir}/ecosystem/kujo/index.html" "private/unpublished"
 require_text "${output_dir}/ecosystem/kujo/index.html" "Windows x64"
 
+require_text "${output_dir}/ecosystem/kujo/index.html" "<!--email_off-->"
+
 if (( failures > 0 )); then
 	printf 'Site contract failed with %d issue(s).\n' "$failures" >&2
 	exit 1

@@ -15,9 +15,6 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-env:
-  KUJO_REF: 44af277848173664f72ca85f2a1b3b98d634ecdd
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -40,27 +37,10 @@ jobs:
       - name: Run Node.js tests
         run: npm test
 
-      - name: Restore Kujo build cache
-        uses: actions/cache@v4
+      - name: Install reviewed Kujo release
+        uses: kujolang/kujo/.github/actions/setup-kujo@fc53093f35e4236682bbbf5ab1ccc8d2b4df990c
         with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            ${{ runner.temp }}/kujo/target
-          key: kujo-${{ runner.os }}-${{ env.KUJO_REF }}
-
-      - name: Build pinned Kujo runtime
-        shell: bash
-        run: |
-          git init "$RUNNER_TEMP/kujo"
-          git -C "$RUNNER_TEMP/kujo" remote add origin https://github.com/kujolang/kujo.git
-          git -C "$RUNNER_TEMP/kujo" fetch --depth 1 origin "$KUJO_REF"
-          git -C "$RUNNER_TEMP/kujo" checkout --detach "$KUJO_REF"
-          cargo build --release --locked --manifest-path "$RUNNER_TEMP/kujo/Cargo.toml"
-          mkdir -p "$RUNNER_TEMP/bin"
-          cp "$RUNNER_TEMP/kujo/target/release/kujo" "$RUNNER_TEMP/bin/kujo"
-          chmod 755 "$RUNNER_TEMP/bin/kujo"
-          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+          version: v1.6.0
 
       - name: Build and verify site
         shell: bash

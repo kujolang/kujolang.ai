@@ -45,8 +45,9 @@ Read the [installation guide](https://docs.kujolang.ai/install/), [runtime guide
 ```bash
 npm install --global @kujolang/kujo-runtime@1.6.0
 kujo --version
-# kujo 1.6.0
 ```
+
+Expected version output: `kujo 1.6.0`.
 
 The runtime resolver and all five native npm packages are published at 1.6.0. Native archives, checksums and exact-source provenance are attached to the release. Package-manager installs use their original manager for upgrades.
 
