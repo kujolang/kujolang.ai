@@ -44,6 +44,7 @@ The SQLite, Workcell Git CAS and Ability assurance profiles support the bounded
 single-effect required/deny beta domain. Alpha assurance remains compatible.
 Agents SDK, MCP, HTTP, process and external participant integrations carry
 references into Dispatch; they do not become controllers. Participant SDKs remain
-alpha and unpublished. Effect-set diagnostics are read-only and do not authorize
-multi-effect replay. This release does not provide exactly-once effects, universal
+alpha and unpublished. A separate experimental operator API can admit one
+explicitly selected, verified not-started SQLite effect. Assessment stays read-only;
+parent replay and automatic execution of remaining effects are prohibited. This release does not provide exactly-once effects, universal
 rollback, remote participant trust or general machine-loss recovery.
