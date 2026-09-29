@@ -32,7 +32,7 @@ SSG is a generator and showcase, not a hosted deployment service or a guarantee 
 
 ## Release 1.1.0
 
-The September 29, 2026 release adds experimental WebMCP, an executable local Ability pack, and fixes for output cleanup, dates, metadata escaping, numeric ordering, post indexes, image size, and plain sitemap XML.
+[SSG 1.1.0](https://github.com/kujolang/ssg/releases/tag/v1.1.0), released September 29, 2026, adds experimental WebMCP, an executable local Ability pack, and fixes for output cleanup, dates, metadata escaping, numeric ordering, post indexes, image size, and plain sitemap XML.
 
 ### Public browser tools
 
