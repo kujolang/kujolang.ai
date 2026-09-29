@@ -9,7 +9,7 @@ order: 65
 install_command: "kennel add ability"
 github_url: "https://github.com/kujolang/ability"
 launch_story: "Define an operation once, then project the same meaning into applications, agents, and MCP hosts without moving authority into the contract."
-scope_note: "Ability is a contract and runtime package, not a hosted gateway, global catalog, identity provider, permission system, or workflow engine."
+scope_note: "Ability 1.2.0 adds application-owned assurance and controlled HTTP evidence for Kujo 1.6. Wave C beta is opt-in, required/deny and single-effect; HTTP handoffs remain alpha. Applications own identity and authorization; Dispatch owns replay. Ability is not a hosted gateway or workflow engine."
 keywords: "Kujo Ability, operation contracts, MCP tools, agent tools, typed schemas, policy gates, execution receipts"
 seo_title: "Kujo Ability — Portable Operation Contracts"
 last_updated: "2026-09-29"

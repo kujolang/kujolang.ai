@@ -9,7 +9,7 @@ order: 310
 install_command: "kennel add workcell"
 github_url: "https://github.com/kujolang/workcell"
 launch_story: "Run agent work inside an explicit execution contract, then export only declared artifacts and durable evidence."
-scope_note: "Workcell 1.2.0 keeps Docker/Podman stable. Portable contracts and E2B, Vercel Sandbox, and Daytona adapters remain alpha pending live certification. Honor its exact runtime pin and run doctor on the target host."
+scope_note: "Workcell 1.2.0 adds bounded preservation and execution evidence on Kujo 1.6. Docker/Podman remain stable; portable/remote adapters and process handoffs remain alpha. Git assurance beta is opt-in, required/deny and single-effect. Dispatch owns replay. Run doctor on the target host."
 keywords: "Workcell, Kujo ecosystem, bounded execution, Docker, Podman"
 seo_title: "Workcell — Kujo Ecosystem"
 version: "1.2.0"

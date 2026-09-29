@@ -9,7 +9,7 @@ order: 70
 install_command: "kennel add mcp"
 github_url: "https://github.com/kujolang/mcp"
 launch_story: "A guarded gateway for exposing useful capabilities to agents through explicit contracts."
-scope_note: "Generated servers still require review of tool authority, data access, authentication, and deployment boundaries."
+scope_note: "MCP 1.2.0 pins Ability 1.2.0 and adds opt-in controlled STDIO handoffs with one-use admission and completion uncertainty. Handoffs remain alpha; Dispatch owns replay. Review server authority, authentication and deployment boundaries. Historical host certificates retain their exact tested scope."
 keywords: "MCP, Kujo ecosystem, Primitive, Gateway"
 seo_title: "MCP — Kujo Ecosystem"
 last_updated: "2026-09-29"
