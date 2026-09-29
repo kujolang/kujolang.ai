@@ -9,12 +9,12 @@ order: 65
 install_command: "kennel add ability"
 github_url: "https://github.com/kujolang/ability"
 launch_story: "Define an operation once, then project the same meaning into applications, agents, and MCP hosts without moving authority into the contract."
-scope_note: "Ability is a contract and runtime package, not a hosted gateway, global catalog, identity provider, permission system, or workflow engine."
+scope_note: "Ability adds application-owned assurance and controlled HTTP evidence. Wave C beta is opt-in, required/deny and single-effect; HTTP handoffs remain alpha. Applications own identity and authorization; Dispatch owns replay. Ability is not a hosted gateway or workflow engine."
 keywords: "Kujo Ability, operation contracts, MCP tools, agent tools, typed schemas, policy gates, execution receipts"
 seo_title: "Kujo Ability — Portable Operation Contracts"
-last_updated: "2026-09-09"
-version: "1.1.0"
-latest_release_url: "https://github.com/kujolang/ability/releases/tag/v1.1.0"
+last_updated: "2026-09-29"
+version: "1.2.0"
+latest_release_url: "https://github.com/kujolang/ability/releases/tag/v1.2.0"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
@@ -77,3 +77,9 @@ The TypeScript and Python helpers are local previews. The offline pack verifier 
 ## Learn more
 
 The [Ability repository](https://github.com/kujolang/ability) is the source of truth for the contract, runtime, compatibility policy, production-readiness guidance, tests, and release notes. The [Kujo MCP repository](https://github.com/kujolang/mcp) contains the executable projection and portable agent-host package. The separately operated Ability Gateway owns the controlled beta service.
+
+## Controlled execution and evidence
+
+The [current release](https://github.com/kujolang/ability/releases/tag/v1.2.0) targets the reviewed Kujo runtime and exports the portable v2 definition digest through the public API. See the [installation guide](https://docs.kujolang.ai/tools/ability/) for the exact runtime requirement. It includes the experimental application-assurance profile and local HTTP/OpenAPI controlled integration. Applications own authentication and business transactions; Dispatch owns replay. Stable Ability and receipt identities remain unchanged.
+
+Wave C beta remains opt-in in the bounded single-effect required/deny domain, with alpha retained. Wave D handoffs remain alpha under a trusted local host. No remote participant trust or exactly-once guarantee is claimed.

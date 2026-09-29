@@ -9,13 +9,13 @@ order: 310
 install_command: "kennel add workcell"
 github_url: "https://github.com/kujolang/workcell"
 launch_story: "Run agent work inside an explicit execution contract, then export only declared artifacts and durable evidence."
-scope_note: "Workcell 1.1.0 keeps Docker/Podman stable. Portable contracts and E2B, Vercel Sandbox, and Daytona adapters remain alpha pending live certification. Honor its exact runtime pin and run doctor on the target host."
+scope_note: "Workcell 1.2.0 adds bounded preservation and execution evidence on Kujo 1.6. Docker/Podman remain stable; portable/remote adapters and process handoffs remain alpha. Git assurance beta is opt-in, required/deny and single-effect. Dispatch owns replay. Run doctor on the target host."
 keywords: "Workcell, Kujo ecosystem, bounded execution, Docker, Podman"
 seo_title: "Workcell — Kujo Ecosystem"
-version: "1.1.0"
-latest_release_url: "https://github.com/kujolang/workcell/releases/tag/v1.1.0"
+version: "1.2.0"
+latest_release_url: "https://github.com/kujolang/workcell/releases/tag/v1.2.0"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-09-09"
+last_updated: "2026-09-29"
 ---
 
 ## What it does
@@ -42,8 +42,14 @@ Workcell turns execution authority into a visible contract. Kujo governs what a 
 
 ## Operating boundary
 
-Workcell 1.1.0 keeps Docker/Podman stable. Portable contracts and E2B, Vercel Sandbox, and Daytona adapters remain alpha pending live certification. Honor its exact runtime pin and run doctor on the target host.
+Workcell 1.2.0 keeps Docker/Podman stable. Portable contracts and E2B, Vercel Sandbox, and Daytona adapters remain alpha pending live certification. Honor its exact runtime pin and run doctor on the target host.
 
 ## Learn more
 
 The [Workcell repository](https://github.com/kujolang/workcell) includes installation, examples, contract references, security limits, platform compatibility, provider operations, and verified release artifacts.
+
+## Version 1.2.0
+
+Workcell 1.2.0 requires Kujo 1.6.0 and adds bounded preservation, portable execution results, conservative re-execution descriptors and expiry-gated owned cleanup. The Git CAS assurance profile and controlled process participant are experimental; Dispatch decides replay. Stable Docker/Podman scope and remote-adapter alpha boundaries remain unchanged.
+
+Wave C beta remains opt-in in the bounded single-effect required/deny domain, with alpha retained. Wave D handoffs remain alpha under a trusted local host. No remote participant trust or exactly-once guarantee is claimed.

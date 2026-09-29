@@ -9,12 +9,12 @@ order: 70
 install_command: "kennel add mcp"
 github_url: "https://github.com/kujolang/mcp"
 launch_story: "A guarded gateway for exposing useful capabilities to agents through explicit contracts."
-scope_note: "Generated servers still require review of tool authority, data access, authentication, and deployment boundaries."
+scope_note: "MCP 1.2.0 pins Ability 1.2.0 and adds opt-in controlled STDIO handoffs with one-use admission and completion uncertainty. Handoffs remain alpha; Dispatch owns replay. Review server authority, authentication and deployment boundaries. Historical host certificates retain their exact tested scope."
 keywords: "MCP, Kujo ecosystem, Primitive, Gateway"
 seo_title: "MCP — Kujo Ecosystem"
-last_updated: "2026-09-09"
-version: "1.1.1"
-latest_release_url: "https://github.com/kujolang/mcp/releases/tag/v1.1.1"
+last_updated: "2026-09-29"
+version: "1.2.0"
+latest_release_url: "https://github.com/kujolang/mcp/releases/tag/v1.2.0"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
@@ -49,3 +49,9 @@ The portable host artifact is reproducible, includes executable npm launchers pl
 The [MCP repository](https://github.com/kujolang/mcp) is the source of truth for setup, commands, examples, security notes, compatibility, and verification evidence. The Ability Gateway repository owns the managed control-plane implementation and deployment checklist.
 
 The Ability Gateway repository is private; public source access is not available.
+
+## Version 1.2.0
+
+MCP 1.2.0 requires Kujo 1.6.0 and includes experimental controlled local STDIO Ability handoffs, one-use host admission and bounded evidence references. Lost completion remains uncertain until the effect owner verifies it; Dispatch alone decides replay. Standalone MCP behavior remains available.
+
+Wave C beta remains opt-in in the bounded single-effect required/deny domain, with alpha retained. Wave D handoffs remain alpha under a trusted local host. No remote participant trust or exactly-once guarantee is claimed.
