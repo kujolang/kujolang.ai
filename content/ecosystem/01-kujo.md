@@ -9,11 +9,11 @@ order: 10
 install_command: "curl -fsSL https://kujolang.ai/install.sh | bash"
 github_url: "https://github.com/kujolang/kujo"
 launch_story: "The ecosystem core: readable source, explicit capabilities, deterministic tooling contracts, and strong native APIs."
-scope_note: "Kujo 1.6.0 is released for Linux x64/arm64, macOS x64/arm64 and Windows x64 through native archives and npm. It hardens closures, generators, tasks and VM loop/early-return correctness. Wave C beta and Wave D alpha remain experimental; participant SDK packages remain private/unpublished."
+scope_note: "Kujo 1.7.0 is released for Linux x64/arm64, macOS x64/arm64 and Windows x64 through native archives and npm. It adds native absolute-path validation, opt-in Windows child-process lifetime ownership and first-party MCP generation. Wave C beta and Wave D alpha remain experimental; participant SDK packages remain private/unpublished."
 keywords: "Kujo, Kujo ecosystem, Core, Language"
 seo_title: "Kujo — Kujo Ecosystem"
-version: "1.6.0"
-latest_release_url: "https://github.com/kujolang/kujo/releases/tag/v1.6.0"
+version: "1.7.0"
+latest_release_url: "https://github.com/kujolang/kujo/releases/tag/v1.7.0"
 release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
 last_updated: "2026-09-28"
 ---
@@ -28,28 +28,28 @@ The ecosystem core: readable source, explicit capabilities, deterministic toolin
 
 ## Operating boundary
 
-Kujo 1.6.0 is released for Linux x64/arm64, macOS x64/arm64 and Windows x64 through native archives and npm. It hardens closures, generators, tasks and VM loop/early-return correctness. Wave C beta and Wave D alpha remain experimental; participant SDK packages remain private/unpublished.
+Kujo 1.7.0 is released for Linux x64/arm64, macOS x64/arm64 and Windows x64 through native archives and npm. It adds native absolute-path validation, opt-in Windows child-process lifetime ownership and first-party MCP generation. Wave C beta and Wave D alpha remain experimental; participant SDK packages remain private/unpublished.
 
 ## Install and maintain the runtime
 
 On Linux and macOS, the ecosystem installer above installs the stable Kujo binary and its default tool group; verify the runtime with `kujo --version`. Windows users can use the release archive or npm. The standalone runtime runs Kujo programs without Python, Node.js, or a Rust toolchain. Source builds use Rust, and npm installations use Node.js.
 
-Kujo v1.6.0 includes isolated tool imports, native filesystem and process operations, bounded web-data processing, and VM/interpreter correctness improvements. Linux and macOS package launchers can use native locks, ownership checks, atomic command links, and exact process replacement. Host capabilities and platform limits remain explicit.
+Kujo v1.7.0 includes isolated tool imports, native filesystem and process operations, bounded web-data processing, and VM/interpreter correctness improvements. Linux and macOS package launchers can use native locks, ownership checks, atomic command links, and exact process replacement. Host capabilities and platform limits remain explicit.
 
 Use `kujo upgrade --check` to inspect a standalone runtime update, then `kujo upgrade` to install it. Package-manager installations use their original manager. Kennel and other ecosystem tools retain their own release and update workflows.
 
-Read the [installation guide](https://docs.kujolang.ai/install/), [runtime guide](https://docs.kujolang.ai/learn/runtime/), and [Kujo v1.6.0 release](https://github.com/kujolang/kujo/releases/tag/v1.6.0).
+Read the [installation guide](https://docs.kujolang.ai/install/), [runtime guide](https://docs.kujolang.ai/learn/runtime/), and [Kujo v1.7.0 release](https://github.com/kujolang/kujo/releases/tag/v1.7.0).
 
 ## Install from npm
 
 ```bash
-npm install --global @kujolang/kujo-runtime@1.6.0
+npm install --global @kujolang/kujo-runtime@1.7.0
 kujo --version
 ```
 
-Expected version output: `kujo 1.6.0`.
+Expected version output: `kujo 1.7.0`.
 
-The runtime resolver and all five native npm packages are published at 1.6.0. Native archives, checksums and exact-source provenance are attached to the release. Package-manager installs use their original manager for upgrades.
+The runtime resolver and all five native npm packages are published at 1.7.0. Native archives, checksums and exact-source provenance are attached to the release. Package-manager installs use their original manager for upgrades.
 
 ## What changed in 1.6
 

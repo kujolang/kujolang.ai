@@ -5,7 +5,7 @@ set -Eeuo pipefail
 readonly KUJO_INSTALL_VERSION="0.1.0"
 readonly GITHUB_OWNER="${KUJO_GITHUB_OWNER:-kujolang}"
 readonly DEFAULT_REF="${KUJO_ECOSYSTEM_REF:-main}"
-readonly DEFAULT_RELEASE_VERSION="${KUJO_RELEASE_VERSION:-v1.6.0}"
+readonly DEFAULT_RELEASE_VERSION="${KUJO_RELEASE_VERSION:-v1.7.0}"
 readonly DEFAULT_PREFIX="${KUJO_INSTALL_ROOT:-${HOME}/.kujo}"
 readonly DEFAULT_BIN_DIR="${KUJO_BIN_DIR:-${HOME}/.local/bin}"
 
@@ -55,8 +55,8 @@ Examples:
   curl -fsSL https://kujolang.ai/install.sh | bash
   curl -fsSL https://kujolang.ai/install.sh | bash -s -- --all
   bash install.sh --group ai --group quality
-  bash install.sh --repo-ref kujo=v1.6.0 --with-deps
-  bash install.sh --package dispatch --release-manifest ./dispatch-v1.2.0.refs
+  bash install.sh --repo-ref kujo=v1.7.0 --with-deps
+  bash install.sh --package dispatch --release-manifest ./dispatch-v1.3.0.refs
 
 Environment overrides:
   KUJO_ECOSYSTEM_REF, KUJO_RELEASE_VERSION, KUJO_INSTALL_ROOT, KUJO_BIN_DIR, KUJO_GITHUB_OWNER,
@@ -66,7 +66,7 @@ EOF
 
 profile_catalog() {
 	cat <<'EOF'
-core       kujo kennel spec eval scout scent packwrite runledger casefile patchbrief changebucket muzzle kujo-skills kujo-agents kujo-workflows
+core       kujo kennel spec eval scout scent packwrite runledger casefile patchbrief changebucket muzzle mcp kujo-skills kujo-agents kujo-workflows
 ai         ai-sdk agents-sdk dispatch watchdog mcp rag relay
 agent      eval runledger kujo-skills kujo-agents kujo-workflows ai-sdk agents-sdk dispatch watchdog mcp rag relay workcell
 quality    concord shipcheck fence redact lens tribunal workcell howl
@@ -629,6 +629,7 @@ core|casefile|kujo|casefile.kujo|casefile|
 core|patchbrief|kujo|patchbrief.kujo|patchbrief|
 core|changebucket|shell|bin/changebucket|changebucket|
 core|muzzle|kujo|muzzle.kujo|muzzle|
+core|mcp|none|||
 operating|kujo-skills|none|||
 operating|kujo-agents|none|||
 operating|kujo-workflows|none|||
