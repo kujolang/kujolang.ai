@@ -4,7 +4,7 @@ Audit date: 2026-10-03
 
 ## Overall status
 
-PASS WITH RECOMMENDATIONS. The repository and generated site are ready to publish. Production verification of the new route remains post-deployment work.
+PASS WITH RECOMMENDATIONS. The repository and generated site passed verification, and the new route is live in production.
 
 ## Outcome
 
@@ -18,7 +18,7 @@ The generated hero used the fixed Kujo dither contract with the source-backed ob
 
 The final 242-page crawl found no missing or duplicate titles or descriptions, H1 problems, canonical mismatches, broken internal links, orphan pages, missing image alternatives or dimensions, missing responsive candidates, or JSON-LD parse errors. The production build, responsive-image generator, site contract, generated-output validator, social-card contract, sitemap, and contextual links passed.
 
-Production baseline coverage was 241/241 pages at HTTP 200. The new website and documentation routes returned 404 before deployment, as expected. The live presentation examples and GitHub 0.3.0 release returned 200. OAI-SearchBot reached the production home page, and robots.txt allows crawling and names the sitemap.
+Production baseline coverage was 241/241 pages at HTTP 200. After deployment, the new website and documentation routes returned HTTP 200 with the expected canonical metadata, content, cross-site links, and sitemap entries. The GitHub Pages deployment completed successfully. The live presentation examples and GitHub 0.3.0 release also returned 200. OAI-SearchBot reached the production home page, and robots.txt allows crawling and names the sitemap.
 
 ## Measurement limits
 

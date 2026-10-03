@@ -9,3 +9,4 @@ Audit date: 2026-10-03
 - Added and rendered the 1200×630 `presentations.jpg` Howl social card.
 - Updated source, output, Showcase, and social-card count contracts and added page/link assertions.
 - Regenerated 640/960/1280 responsive variants and all derived sitemap, `llms.txt`, metadata, schema, and internal-link output through the normal build.
+- Published the merged `main` branch through GitHub Pages and verified the production route, canonical metadata, cross-site links, and sitemap entry at HTTP 200.

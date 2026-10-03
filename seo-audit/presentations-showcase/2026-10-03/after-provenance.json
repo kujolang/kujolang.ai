@@ -16,5 +16,6 @@
     "height": 630,
     "format": "jpeg"
   },
-  "production_new_route": "404 before deployment; post-deployment verification required"
+  "production_new_route": "HTTP 200 after deployment; canonical metadata, content, cross-site links, and sitemap entry verified 2026-10-03",
+  "production_deployment": "GitHub Pages workflow 37153968527 completed successfully"
 }
