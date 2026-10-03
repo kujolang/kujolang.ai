@@ -1,0 +1,20 @@
+{
+  "runtime": "Kujo 1.7.0 local release binary",
+  "build": "successful local production build after implementation",
+  "canonical_pages": 242,
+  "repository_contracts": "passed",
+  "hero": {
+    "path": "assets/images/ecosystem/presentations-browser-native-decks.webp",
+    "width": 1916,
+    "height": 821,
+    "format": "webp",
+    "channel_values": [0, 255]
+  },
+  "social_card": {
+    "path": "assets/images/social/presentations.jpg",
+    "width": 1200,
+    "height": 630,
+    "format": "jpeg"
+  },
+  "production_new_route": "404 before deployment; post-deployment verification required"
+}

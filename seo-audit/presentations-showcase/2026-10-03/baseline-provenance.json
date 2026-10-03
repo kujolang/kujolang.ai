@@ -1,0 +1,8 @@
+{
+  "source_commit": "029066de787c8df1ec3fbbef58d554e66642bcfe",
+  "runtime": "Kujo 1.7.0 local release binary",
+  "build": "successful untouched local production build",
+  "canonical_pages": 241,
+  "production_200_pages": 241,
+  "raw_baseline": "raw/baseline-build (ignored local evidence)"
+}
