@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — Presentations showcase
+
+- Add Presentations 0.3.0 to the Showcase catalog with a source-backed product page, generated dither hero, social card, live examples, documentation links, and scoped release boundaries.
+
 ## Unreleased — Mobile terminal panels
 
 - Stack Get started panel contents on mobile so terminal boxes span the available width consistently across ecosystem, skill, and workflow pages.

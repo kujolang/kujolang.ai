@@ -197,6 +197,9 @@ require_text "${output_dir}/ecosystem/searchbridge/index.html" 'width="1916" hei
 require_text "${output_dir}/ecosystem/siteprobe/index.html" 'href="https://github.com/kujolang/siteprobe"'
 require_text "${output_dir}/ecosystem/siteprobe/index.html" 'width="1916" height="821"'
 require_text "${output_dir}/ecosystem/cms/index.html" 'Kujo CMS 1.1.0'
+require_text "${output_dir}/ecosystem/presentations/index.html" 'Kujo Presentations turns structured deck source into a browser-native static site.'
+require_text "${output_dir}/ecosystem/presentations/index.html" 'https://presentations.kujolang.ai/'
+require_text "${output_dir}/ecosystem/presentations/index.html" 'https://docs.kujolang.ai/showcases/presentations/'
 require_text "${output_dir}/ecosystem/cms/index.html" 'Abilities API'
 require_text "${output_dir}/ecosystem/cms/index.html" 'WebMCP'
 require_text "${output_dir}/ecosystem/cms/index.html" 'https://github.com/kujolang/cms/releases/tag/v1.1.0'
@@ -254,7 +257,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 241 ]] || fail "expected 241 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 242 ]] || fail "expected 242 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -283,11 +286,11 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 50 ]] || fail "expected 50 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 53 ]] || fail "expected 50 project and 3 catalog output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_sources" == 51 ]] || fail "expected 51 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 54 ]] || fail "expected 51 project and 3 catalog output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 15 ]] || fail "expected 15 primitive cards, found ${primitive_count}"
 [[ "$tooling_count" == 28 ]] || fail "expected 28 tooling cards, found ${tooling_count}"
-[[ "$showcase_count" == 7 ]] || fail "expected 7 showcase cards, found ${showcase_count}"
+[[ "$showcase_count" == 8 ]] || fail "expected 8 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
 	image_path=$(sed -n 's/^featured_image: "\(.*\.webp\)"$/\1/p' "$source_file")
@@ -513,4 +516,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 50 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 51 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

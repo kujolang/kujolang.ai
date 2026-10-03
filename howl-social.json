@@ -517,6 +517,19 @@
       "show_url": false
     },
     {
+      "id": "presentations",
+      "title": "Presentations",
+      "tagline": "Browser-native slide decks built as static sites.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem showcase",
+      "url": "kujolang.ai/ecosystem/presentations/",
+      "background_image": "assets/images/ecosystem/presentations-browser-native-decks.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
       "id": "totalrecall",
       "title": "TotalRecall",
       "tagline": "Durable local knowledge from the tools where work happens.",
