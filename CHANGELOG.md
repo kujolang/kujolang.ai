@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — Kujo 1.8.0
+
+- Promote the public installer and Kujo ecosystem page to the verified 1.8.0
+  native/npm release, including the Smarter, Faster, Tighter release highlights
+  and final publication evidence.
+
 ## Unreleased — Presentations showcase
 
 - Add Presentations 0.3.0 to the Showcase catalog with a source-backed product page, generated dither hero, social card, live examples, documentation links, and scoped release boundaries.
