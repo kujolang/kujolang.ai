@@ -257,6 +257,19 @@
       "show_url": false
     },
     {
+      "id": "kujo-cmd",
+      "title": "Kujo CMD",
+      "tagline": "Run Kujo tools and scoped agents inside Command Code.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem tool",
+      "url": "kujolang.ai/ecosystem/kujo-cmd/",
+      "background_image": "assets/images/ecosystem/mcp-tool-connectors.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
       "id": "rag",
       "title": "RAG",
       "tagline": "Local-first retrieval with explicit provider boundaries.",

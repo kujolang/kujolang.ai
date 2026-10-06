@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — Kujo CMD 0.2.0
+
+- Add Kujo CMD 0.2.0 to the Tooling catalog with the complete Command Code
+  integration surface, exposure profiles, approvals, receipts, scoped agents,
+  Watchdog/RunLedger correlation, and optional Lens browser checks.
+- Document the tagged-GitHub install path while npm publication awaits restored
+  registry authorization.
+
 ## Unreleased — Kujo 1.8.0
 
 - Promote the public installer and Kujo ecosystem page to the verified 1.8.0
