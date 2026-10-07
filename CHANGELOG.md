@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — Tribunal 1.0.2
+
+- Refresh the Tribunal release, hardening summary and explicit tagged installation guidance; retain local/operator-controlled deployment boundaries.
+
 ## Unreleased — Kujo CMD 0.2.0
 
 - Add Kujo CMD 0.2.0 to the Tooling catalog with the complete Command Code
