@@ -8,6 +8,10 @@
 - Document the tagged-GitHub install path while npm publication awaits restored
   registry authorization.
 
+## Unreleased — AI Chat 1.3.0
+
+- Update the AI Chat showcase for the 1.3.0 agent-workspace release, including live diff review, durable supervision, managed worktrees, scoped MCP connections, multi-chat tabs, security fixes, upgrade guidance, and explicit production boundaries.
+
 ## Unreleased — Kujo 1.8.0
 
 - Promote the public installer and Kujo ecosystem page to the verified 1.8.0
