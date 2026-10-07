@@ -6,25 +6,25 @@ featured_image: "/assets/images/ecosystem/tribunal-adversarial-hearing.webp"
 section: "Showcase"
 tags: [Showcase, Decisions]
 order: 450
-install_command: "kennel add tribunal"
+install_command: "git clone --branch v1.0.2 --depth 1 https://github.com/kujolang/tribunal.git"
 github_url: "https://github.com/kujolang/tribunal"
 launch_story: "Replace a disposable model answer with independent testimony, cross-examination, a fatal-flaw pass, an explicit ruling, and a sealed decision packet."
-scope_note: "Tribunal 1.0.1 is stable for local or operator-controlled decision evidence; shared, regulated, or hosted deployments require environment-specific identity, custody, storage, network, and independent security certification."
+scope_note: "Tribunal 1.0.2 is stable for local or operator-controlled decision evidence; shared, regulated, or hosted deployments require environment-specific identity, custody, storage, network, and independent security certification."
 keywords: "Tribunal, Kujo ecosystem, decision review, adversarial hearing, sealed evidence"
 seo_title: "Tribunal — Kujo Ecosystem"
-version: "1.0.1"
-latest_release_url: "https://github.com/kujolang/tribunal/releases/tag/v1.0.1"
-release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-09-09"
+version: "1.0.2"
+latest_release_url: "https://github.com/kujolang/tribunal/releases/tag/v1.0.2"
+release_status: "Version and clone command identify the published GitHub release. Kennel registry package versions are independent; see scope_note for release boundaries."
+last_updated: "2026-10-07"
 ---
 
 ## What it does
 
-Tribunal 1.0.1 runs a consequential proposal through a structured nine-stage hearing: docket opening, scope validation, context construction, blind specialist testimony, cross-examination, an Executioner fatal-flaw pass, a Judge ruling, a decision packet, and durable persistence. Focused, two-model, and five-seat panels support different review depths, while deterministic mock mode remains offline and credential-free.
+Tribunal 1.0.2 runs a consequential proposal through a structured nine-stage hearing: docket opening, scope validation, context construction, blind specialist testimony, cross-examination, an Executioner fatal-flaw pass, a Judge ruling, a decision packet, and durable persistence. Focused, two-model, and five-seat panels support different review depths, while deterministic mock mode remains offline and credential-free.
 
-## Tribunal 1.0.1
+## Tribunal 1.0.2
 
-The [1.0.1 patch release](https://github.com/kujolang/tribunal/releases/tag/v1.0.1) strengthens credential redaction, bridge failure handling, bundle integrity, and coordination of concurrent local index updates. It also reduces repeated prompt and memory work. The v1 library API and evidence formats remain compatible. See the [operator guide](https://docs.kujolang.ai/tools/tribunal/) for installation, verification, and recovery references.
+The [1.0.2 patch release](https://github.com/kujolang/tribunal/releases/tag/v1.0.2) hardens conditional store publication, governance history, event validation, encrypted inventories, and concurrent index locking. Release archives now contain only clean, committed inputs. Existing-directory handling avoids redundant parent traversal. The v1 library API and evidence formats remain compatible. See the [operator guide](https://docs.kujolang.ai/tools/tribunal/) for installation, verification, and recovery references.
 
 ## Durable decision evidence
 
