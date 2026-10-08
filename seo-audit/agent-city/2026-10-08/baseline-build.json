@@ -1,0 +1,7 @@
+{
+  "runtime": "Kujo 1.8.0",
+  "command": "kujo run ./build.kujo -- --site-url https://kujolang.ai && npm run images:responsive",
+  "result": "passed",
+  "buildLog": "raw/baseline-build.log",
+  "captureNote": "An early capture during responsive-image generation was rejected and retained locally in raw/incomplete-before-responsive. Final baseline is from the completed untouched build."
+}

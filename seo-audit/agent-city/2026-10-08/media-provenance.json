@@ -1,0 +1,11 @@
+{
+  "sourceRepository": "kujolang/agent-city",
+  "sourceCommit": "db1d0f2fe2194ebe0370b93383a447c9be5e91de",
+  "frame": "evidence/reviewed-release-tool/repaired/first-frame.png",
+  "sourceFrameSha256": "a0ee291209e54946c05699549a4b83693d78a09d08f460fa82187c84f485b841",
+  "hero": "assets/images/ecosystem/agent-city-live-run.webp",
+  "composition": "Unchanged 768x720 game frame centered at 452,110 on a 1672x941 dark canvas to match existing site image dimensions; no new game imagery.",
+  "social": "Howl manifest agent-city card plus existing social raster pipeline; reviewed at 1200x630",
+  "video": "https://github.com/kujolang/agent-city/blob/main/evidence/reviewed-release-tool/repaired/release-notes-live.mp4",
+  "videoDurationSeconds": 53.05
+}

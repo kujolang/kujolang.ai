@@ -1,0 +1,18 @@
+{
+  "baseline": "243 routes, no generated crawl issues; source and archive pinned in baseline-seal.json",
+  "ciAttempts": [
+    {
+      "run": 37837501661,
+      "result": "cancelled",
+      "reason": "Superseded by image dimensions matching the existing fixed asset contract."
+    },
+    {
+      "run": 37837742704,
+      "result": "failed",
+      "reason": "Four explicit inventory counts still expected the pre-Agent City totals. Responsive images and social metadata passed.",
+      "fixCommit": "dfd5c610e24cab2d129331fa523f40229a262407",
+      "fix": "Update expected social cards 243\u2192244, projects 52\u219253, project/catalog outputs 55\u219256, showcases 8\u21929."
+    }
+  ],
+  "sharedHost": "A temporary disk-full error interrupted a log redirect during MCP verification; redundant generated files were removed, valid baselines preserved, and interrupted checks passed on retry."
+}
