@@ -257,7 +257,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 243 ]] || fail "expected 243 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 244 ]] || fail "expected 244 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -286,11 +286,11 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 52 ]] || fail "expected 52 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 55 ]] || fail "expected 52 project and 3 catalog output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_sources" == 53 ]] || fail "expected 53 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 56 ]] || fail "expected 53 project and 3 catalog output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 15 ]] || fail "expected 15 primitive cards, found ${primitive_count}"
 [[ "$tooling_count" == 29 ]] || fail "expected 29 tooling cards, found ${tooling_count}"
-[[ "$showcase_count" == 8 ]] || fail "expected 8 showcase cards, found ${showcase_count}"
+[[ "$showcase_count" == 9 ]] || fail "expected 9 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
 	image_path=$(sed -n 's/^featured_image: "\(.*\.webp\)"$/\1/p' "$source_file")
@@ -516,4 +516,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 52 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 53 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
