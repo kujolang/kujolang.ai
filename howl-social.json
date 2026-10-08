@@ -3167,6 +3167,19 @@
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
       "show_border": false,
       "show_url": false
+    },
+    {
+      "id": "agent-city",
+      "title": "Agent City",
+      "tagline": "Run tasks. Follow the work. Review the evidence.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem showcase",
+      "url": "kujolang.ai/ecosystem/agent-city/",
+      "show_border": false,
+      "show_url": false,
+      "background_image": "assets/images/ecosystem/agent-city-live-run.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
     }
   ]
 }
