@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased — Commerce 0.5.0
+
+- Update Commerce features, upgrade boundaries, and the verified GitHub tarball install path while npm publication is pending.
+
 ## Unreleased — Tribunal 1.0.2
 
 - Refresh the Tribunal release, hardening summary and explicit tagged installation guidance; retain local/operator-controlled deployment boundaries.
