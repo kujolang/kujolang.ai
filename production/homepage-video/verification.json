@@ -1,0 +1,78 @@
+{
+  "reviewed": "2026-10-12",
+  "artifact": "assets/videos/kujo-intro.mp4",
+  "sha256": "38145f3e64b50370b673d5a4b78b8c34f8f4047638685956d8b7be7ea55f9a31",
+  "media": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "30/1",
+        "nb_frames": "2310",
+        "side_data_list": [
+          {}
+        ]
+      },
+      {
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "avg_frame_rate": "0/0",
+        "nb_frames": "3607"
+      }
+    ],
+    "format": {
+      "duration": "77.014000",
+      "size": "26196023"
+    }
+  },
+  "full_decode_errors": 0,
+  "audio": {
+    "integrated_lufs": -17.83,
+    "true_peak_dbtp": -1.43,
+    "lra_lu": 5.2,
+    "subjective_listening": "not performed; no auditory perception tool available"
+  },
+  "hyperframes": {
+    "version": "0.8.150",
+    "ok": true,
+    "lint_errors": 0,
+    "layout_errors": 0,
+    "layout_warnings": 0,
+    "contrast_passed": 37,
+    "contrast_checked": 37,
+    "known_nonblocking_warnings": [
+      "inherited monolithic scene structure and reused art",
+      "inherited Three.js r152 legacy bundle deprecation"
+    ]
+  },
+  "motion_review": {
+    "native_motion": "Actual encoded scene and transition sheets inspected: progressive reveals, no competing headlines, held close",
+    "gsap_animation_map": "Reviewed; maps only the deterministic Three.js clock, not Motion native WAAPI"
+  },
+  "captions": {
+    "cues": 26,
+    "source": "ElevenLabs character alignment",
+    "format": "WebVTT optional English track"
+  },
+  "node_tests": {
+    "passed": 3,
+    "failed": 0
+  },
+  "site_build": "Homepage-only local production build for integration; full repository gates enforced by .github/workflows/pages.yml on push",
+  "browser": {
+    "duration": 77.014,
+    "width": 1920,
+    "height": 1080,
+    "playing": true,
+    "modalVisible": true,
+    "captionLanguage": "en",
+    "captionCues": 26,
+    "closed": true,
+    "paused": true,
+    "focusRestored": true
+  }
+}

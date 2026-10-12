@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Refresh the homepage introduction with current Kujo capabilities, natural-speed ElevenLabs V4 Siren narration, Motion.dev transitions, and original music and sound design.
+- Add English closed captions and preserve editable, reproducible production sources with claim provenance.
+
 ## Unreleased — SSG 1.2.0
 
 - Publish SSG 1.2.0 release guidance, including pinned parser minification,
