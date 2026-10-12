@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased — SSG 1.2.0
+
+- Publish SSG 1.2.0 release guidance, including pinned parser minification,
+  hardened publication boundaries, and retained DocGen CI evidence.
+
 ## Unreleased — Commerce 0.5.0
 
 - Update Commerce features, upgrade boundaries, and the verified GitHub tarball install path while npm publication is pending.

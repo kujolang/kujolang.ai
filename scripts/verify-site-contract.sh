@@ -511,6 +511,11 @@ require_text "${output_dir}/ecosystem/kujo/index.html" "Windows x64"
 
 require_text "${output_dir}/ecosystem/kujo/index.html" "<!--email_off-->"
 
+# Keep SSG release setup and catalog discovery aligned.
+require_text "${output_dir}/ecosystem/ssg/index.html" "https://github.com/kujolang/ssg/releases/tag/v1.2.0"
+require_text "${output_dir}/ecosystem/ssg/index.html" "npm ci --ignore-scripts"
+require_text "${output_dir}/ecosystem/ssg/index.html" "esbuild 0.28.2"
+
 if (( failures > 0 )); then
 	printf 'Site contract failed with %d issue(s).\n' "$failures" >&2
 	exit 1
