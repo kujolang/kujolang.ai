@@ -207,7 +207,7 @@ require_text "${output_dir}/ecosystem/cms/index.html" 'https://github.com/kujola
 require_text "${output_dir}/ecosystem/ability/index.html" 'Kujo Ability gives'
 require_text "${output_dir}/ecosystem/ability/index.html" 'width="1916" height="821"'
 require_text "${output_dir}/ecosystem/ability/index.html" 'https://docs.kujolang.ai/tools/ability/'
-require_text "${output_dir}/ecosystem/skills/kujo-cms-workflows/index.html" 'CMS 1.1.0 adds framework-neutral sessions'
+require_text "${output_dir}/ecosystem/skills/kujo-cms-workflows/index.html" 'CMS 1.2.0 includes framework-neutral sessions'
 require_text "${output_dir}/llms.txt" 'https://kujolang.ai/ecosystem/cms/'
 require_text "${output_dir}/llms.txt" 'https://kujolang.ai/ecosystem/skills/kujo-cms-workflows/'
 
