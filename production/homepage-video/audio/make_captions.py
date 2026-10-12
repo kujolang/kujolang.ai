@@ -15,6 +15,7 @@ for cue in cfg['cues']:
    blocks.append((cue['start']+chunk[0][1],cue['start']+chunk[-1][2],' '.join(x[0] for x in chunk)));chunk=[]
   chunk.append(t)
  if chunk:blocks.append((cue['start']+chunk[0][1],cue['start']+chunk[-1][2],' '.join(x[0] for x in chunk)))
+blocks=[(s,e,re.sub(r'\s+([.,!?;:])',r'\1',text)) for s,e,text in blocks]
 def tm(t):
  ms=round(t*1000);h,ms=divmod(ms,3600000);m,ms=divmod(ms,60000);s,ms=divmod(ms,1000);return f'{h:02}:{m:02}:{s:02},{ms:03}'
 assert all(s<e<=77 for s,e,t in blocks)
