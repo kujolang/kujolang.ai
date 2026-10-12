@@ -1,0 +1,13 @@
+{
+  "provider": "ElevenLabs",
+  "model_id": "eleven_v4",
+  "voice_id": "eXpIbVcVbLo8ZJQDlDnl",
+  "voice_name": "Siren",
+  "generated_date": "2026-10-12",
+  "subscription_tier": "creator",
+  "subscription_status": "active",
+  "credentials": "environment or existing macOS Keychain; never stored",
+  "music_sfx": "Original deterministic local synthesis, audio/build_score.py; no samples or stock loops",
+  "visuals": "Existing first-party Kujo intro assets and site brand identity",
+  "motion": "Motion 12.23.24 MIT, license retained; HyperFrames 0.8.150"
+}

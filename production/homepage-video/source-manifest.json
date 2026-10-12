@@ -1,0 +1,59 @@
+{
+  "reviewed": "2026-10-12",
+  "repository": "https://github.com/kujolang/kujolang.ai",
+  "source_commit": "2df95c3",
+  "sources": [
+    {
+      "path": "templates/page-home.html",
+      "sha256": "2d3147b75060858d9fa20cd9d08fbdcff19870d952b0108aa283ded009c16b37"
+    },
+    {
+      "path": "content/ecosystem/01-kujo.md",
+      "sha256": "ef172db5083532636c91303e4dbca45c61a69503d904d1e374f36655c8131da6"
+    },
+    {
+      "path": "content/ecosystem/10-ai-sdk.md",
+      "sha256": "35e964d85a250d778b2eb1fe1d95e88ecff657dc364ba61caf9f01293116af4f"
+    },
+    {
+      "path": "content/ecosystem/11-agents-sdk.md",
+      "sha256": "123828a3de06a1645e7350faa275814e911d7e188a6a2ca7bce5fe9b05131485"
+    },
+    {
+      "path": "content/ecosystem/16-ability.md",
+      "sha256": "3e3222059f63486429991d37996d635211ffeb4f512dd2c3bc4d2a71b3695ed4"
+    },
+    {
+      "path": "content/ecosystem/16-mcp.md",
+      "sha256": "f62da5e986d2809df82ba60dfd73246899909230b3a2f11d07afaefbcac16bb0"
+    },
+    {
+      "path": "content/ecosystem/12-spec.md",
+      "sha256": "18154032688b9f306e1088c164541563b9ff22c8f8b201fdaaf9ae5aee99c5b6"
+    },
+    {
+      "path": "content/ecosystem/13-eval.md",
+      "sha256": "fce086be4b43ebda360b8416f4a1942ae445b5ef33c482cb4928328807068205"
+    },
+    {
+      "path": "content/ecosystem/14-dispatch.md",
+      "sha256": "eabbd1f4162185927a979114f18bba02699f68382befe83f14cd72a1780b37db"
+    },
+    {
+      "path": "content/ecosystem/21-runledger.md",
+      "sha256": "ca868010e4ddeb804297b7a4b985f423af783752db13f009ee55dcb7349c1454"
+    },
+    {
+      "path": "content/ecosystem/41-cms.md",
+      "sha256": "2c2cedc21264168c7e7c59fdee3a652bd723c919ad61db0eea4940463b51ebdc"
+    },
+    {
+      "path": "content/ecosystem/43-ssg.md",
+      "sha256": "fa6caa251a7afa4d2c278d558feabc5849a5882a8eb500c3f19fb5c6f08194c0"
+    },
+    {
+      "path": "public/install.sh",
+      "sha256": "34fe2816918a459ec8f41fdc79b6ba0327b37d2f34bf371629bb194723ef9f46"
+    }
+  ]
+}
