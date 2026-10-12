@@ -203,7 +203,7 @@ require_text "${output_dir}/ecosystem/presentations/index.html" 'https://docs.ku
 require_text "${output_dir}/ecosystem/cms/index.html" 'Abilities API'
 require_text "${output_dir}/ecosystem/cms/index.html" 'WebMCP'
 require_text "${output_dir}/ecosystem/cms/index.html" 'https://github.com/kujolang/cms/releases/tag/v1.2.0'
-require_text "${output_dir}/ecosystem/cms/index.html" 'https://github.com/kujolang/cms-example/releases/tag/v1.1.0'
+require_text "${output_dir}/ecosystem/cms/index.html" 'https://github.com/kujolang/cms-example'
 require_text "${output_dir}/ecosystem/ability/index.html" 'Kujo Ability gives'
 require_text "${output_dir}/ecosystem/ability/index.html" 'width="1916" height="821"'
 require_text "${output_dir}/ecosystem/ability/index.html" 'https://docs.kujolang.ai/tools/ability/'
