@@ -72,4 +72,5 @@ Static WebMCP remains a separate public, same-origin, read-only surface. Authent
 - [CMS 1.2.0 release](https://github.com/kujolang/cms/releases/tag/v1.2.0)
 - [CMS repository](https://github.com/kujolang/cms)
 - [CMS Example frontend and Studio](https://github.com/kujolang/cms-example)
+- [Latest published CMS Example release (1.1.0)](https://github.com/kujolang/cms-example/releases/tag/v1.1.0)
 - [Complete CMS documentation](https://docs.kujolang.ai/showcases/cms/)
