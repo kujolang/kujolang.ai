@@ -12,8 +12,8 @@
       "id": "pressure",
       "start": 0.7,
       "must_end": 5.8,
-      "text": "AI can write the code. You still need to trust what happens next.",
-      "spoken_text": "AI can write the code. You still need to trust what happens next."
+      "text": "Your agent can write code. Trust needs proof.",
+      "spoken_text": "Your agent can write code. Trust needs proof."
     },
     {
       "id": "kujo",

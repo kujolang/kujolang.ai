@@ -2,8 +2,8 @@
   {
     "id": "pressure",
     "start": 0.7,
-    "duration": 4.48,
-    "end": 5.180000000000001,
+    "duration": 3.6,
+    "end": 4.3,
     "must_end": 5.8,
     "fits": true,
     "playback_rate": 1.0

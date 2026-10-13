@@ -19,6 +19,9 @@ def tone(f,d,kind='pad'):
  if kind=='pad':
   env=np.minimum(t/.6,1)*np.minimum((d-t)/1.3,1)
   return (np.sin(2*np.pi*f*t)+.24*np.sin(2*np.pi*f*2.002*t)+.08*np.sin(2*np.pi*f*3*t))*env*.11
+ if kind=='pluck':
+  env=(1-np.exp(-t*180))*np.exp(-t*3.2)
+  return (np.sin(2*np.pi*f*t)+.32*np.sin(2*np.pi*f*2*t)+.12*np.sin(2*np.pi*f*3*t))*env*.23
  if kind=='pulse':return np.sin(2*np.pi*(f*t+2*(1-np.exp(-15*t))))*np.exp(-12*t)*np.minimum(t/.005,1)*.17
  if kind=='relay':return (np.sin(2*np.pi*f*t)+.4*rng.normal(size=len(t)))*np.exp(-60*t)*np.minimum(t/.002,1)*.12
  if kind=='air':
@@ -33,6 +36,12 @@ for a,b,notes in [(0,6,[73.416,110]),(6,17,[73.416,110,146.832]),(17,31,[65.406,
 for i,at in enumerate(np.arange(1,68,.7142857)):
  if i%4==0:put(music,tone(48,.5,'pulse'),at,.55)
  if at>17 and i%2==1:put(music,tone(1450+i%3*140,.10,'relay'),at,.14,(-1)**i*.5)
+# Original midrange motif and eighth-note replies translate to laptop speakers.
+for a,b,notes in [(0,17,[293.664,440,349.228,440]),(17,31,[261.626,392,293.664,392]),(31,45,[349.228,523.251,440,523.251]),(45,57,[293.664,440,329.628,440]),(57,69,[261.626,392,293.664,440]),(69,76,[293.664,440,587.328,440])]:
+ for i,at in enumerate(np.arange(a+.12,b-1,.7142857)):
+  if at>69 and i%2:continue
+  put(music,tone(notes[i%4],1.3,'pluck'),at,.65 if i%4==0 else .40,(-1)**i*.35)
+  if 31<at<69 and i%2==0:put(music,tone(notes[(i+2)%4]*2,.65,'pluck'),at+.357,.14,(-1)**i*-.55)
 # Soft motion air lands on each scene change; no stock swoosh library.
 for at in [6,17,31,45,57,69]:
  put(sfx,tone(0,.7,'air'),at-.28,.62,-.2)
@@ -48,5 +57,5 @@ for c in config['cues']:
  put(voice,x,c['start'])
 # Keep sufficient headroom; renderer owns spectral carving and gain automation.
 music*=np.minimum(np.arange(N)/SR/1.2,1)[:,None]*np.minimum((DUR-np.arange(N)/SR)/1.1,1)[:,None]
-write('narration.wav',voice);write('music.wav',music);write('sfx.wav',sfx)
+write('narration.wav',voice);write('music.wav',music);write('sfx.wav',sfx*2.5)
 print('77-second original score, SFX and natural-speed narration written')
