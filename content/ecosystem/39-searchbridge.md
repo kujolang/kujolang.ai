@@ -1,7 +1,7 @@
 ---
 title: "SearchBridge"
 custom_url: searchbridge
-description: "A normalized external-data layer for search, analytics, page performance, field data, backlinks, keyword evidence, and explicit index submission."
+description: "Collect search, analytics, page-performance, backlink, and indexing evidence through one CLI and typed SDKs."
 featured_image: "/assets/images/ecosystem/searchbridge-provider-relay.webp"
 section: "Tooling"
 tags: [Tool, WebOps Data]
@@ -9,18 +9,26 @@ order: 350
 install_command: "kennel add searchbridge"
 github_url: "https://github.com/kujolang/searchbridge"
 launch_story: "Bring optional provider measurements into Kujo WebOps through scoped capabilities, normalized evidence, and explicit effect boundaries."
-scope_note: "SearchBridge 1.0.0 is a released local CLI and SDK with live-qualified Google search, analytics, PageSpeed, and CrUX reads; Cloudflare and IndexNow remain fixture-only pending the v1.1 review."
-version: "1.0.0"
-last_updated: "2026-09-09"
+scope_note: "SearchBridge 1.0.1 fixes replay and budget handling; recollect cached evidence after upgrading. Google search, analytics, PageSpeed, and CrUX remain stable-live. Cloudflare and IndexNow remain fixture-only pending the v1.1 review."
+version: "1.0.1"
+last_updated: "2026-10-13"
 keywords: "SearchBridge, Kujo ecosystem, search data, analytics, PageSpeed, CrUX, backlinks, IndexNow"
 seo_title: "SearchBridge — Kujo Ecosystem"
-latest_release_url: "https://github.com/kujolang/searchbridge/releases/tag/v1.0.0"
+latest_release_url: "https://github.com/kujolang/searchbridge/releases/tag/v1.0.1"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
+## Upgrade to 1.0.1
+
+This patch fixes cache-key collisions, enforces live-call budgets, bounds replay
+and SDK diagnostics, and strengthens release verification. Recollect cached
+evidence after upgrading: new request hashes do not reuse older cache entries.
+Cache record formats and provider support tiers remain unchanged. Submissions
+never use cached receipts. [Read the release notes](https://github.com/kujolang/searchbridge/releases/tag/v1.0.1).
+
 ## What it does
 
-SearchBridge 1.0.0 fetches and normalizes evidence from Google Search Console, Bing Webmaster, Google Analytics 4, PageSpeed Insights, CrUX, Cloudflare, Ahrefs, IndexNow, and other bounded provider contracts. Every result records its provider, capability, retrieval mode, timing, provenance, and normalized rows in a versioned schema without interpreting SEO performance.
+SearchBridge 1.0.1 fetches and normalizes evidence from Google Search Console, Bing Webmaster, Google Analytics 4, PageSpeed Insights, CrUX, Cloudflare, Ahrefs, IndexNow, and other bounded provider contracts. Every result records its provider, capability, retrieval mode, timing, provenance, and normalized rows in a versioned schema without interpreting SEO performance.
 
 ## Capability-scoped providers
 
@@ -30,7 +38,7 @@ The `stable-live` v1.0 tier—Google Search Console, Google Analytics 4, PageSpe
 
 ## Why it belongs in Kujo
 
-SearchBridge gives agents comparable, provenance-rich WebOps measurements while preserving the operator's control over cost-bearing and effecting actions. Deterministic fixtures keep offline work testable, and provider failures stay isolated at the capability level.
+SearchBridge gives agents measurements with clear sources while operators control paid calls and submissions. Deterministic fixtures keep offline work testable, and provider failures stay isolated at the capability level.
 
 ## Operating boundary
 
@@ -38,4 +46,4 @@ Evidence commands are read-only with respect to providers. Submission is separat
 
 ## Learn more
 
-Download the checksum-verified [SearchBridge 1.0.0 release](https://github.com/kujolang/searchbridge/releases/tag/v1.0.0), review its [support matrix](https://github.com/kujolang/searchbridge/blob/v1.0.0/docs/support-matrix.md), or browse the [source repository](https://github.com/kujolang/searchbridge).
+Download the checksum-verified [SearchBridge 1.0.1 release](https://github.com/kujolang/searchbridge/releases/tag/v1.0.1), review its [support matrix](https://github.com/kujolang/searchbridge/blob/v1.0.1/docs/support-matrix.md), or browse the [source repository](https://github.com/kujolang/searchbridge).
