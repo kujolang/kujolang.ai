@@ -1,5 +1,9 @@
 # Changelog
 
+## Content update — 2026-10-13
+
+- Update Agents SDK to 1.1.3 with current installation, hardening, compatibility, and cost-limit guidance.
+
 ## [1.3.1] - 2026-10-12
 
 - Update the MCP product page from 1.2.0 to 1.3.1 with the first-class
