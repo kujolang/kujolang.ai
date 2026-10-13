@@ -258,7 +258,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 244 ]] || fail "expected 244 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 245 ]] || fail "expected 245 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -454,11 +454,11 @@ for scan_path in "${scan_paths[@]}"; do
 done
 
 if command -v rg >/dev/null 2>&1; then
-	obsolete_naming=$(rg -n 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network|Intake' \
+	obsolete_naming=$(rg -n 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network' \
 		"${existing_scan_paths[@]}" \
 		--glob '*.html' --glob '*.md' --glob '*.txt' || true)
 	else
-	obsolete_naming=$(grep -REn 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network|Intake' \
+	obsolete_naming=$(grep -REn 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network' \
 		--include='*.html' --include='*.md' --include='*.txt' \
 		"${existing_scan_paths[@]}" || true)
 fi
@@ -517,12 +517,12 @@ require_text "${output_dir}/ecosystem/ssg/index.html" "https://github.com/kujola
 require_text "${output_dir}/ecosystem/ssg/index.html" "npm ci --ignore-scripts"
 require_text "${output_dir}/ecosystem/ssg/index.html" "esbuild 0.28.2"
 
+require_text "${output_dir}/ecosystem/intake/index.html" "https://github.com/kujolang/intake/releases/tag/v0.2.0"
+require_text "${output_dir}/ecosystem/intake/index.html" "Node.js 20.19"
+
 if (( failures > 0 )); then
 	printf 'Site contract failed with %d issue(s).\n' "$failures" >&2
 	exit 1
 fi
 
-printf 'Site contract passed: 53 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
-
-require_text "${output_dir}/ecosystem/intake/index.html" "https://github.com/kujolang/intake/releases/tag/v0.2.0"
-require_text "${output_dir}/ecosystem/intake/index.html" "Node.js 20.19"
+printf 'Site contract passed: 54 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

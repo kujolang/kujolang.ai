@@ -3,7 +3,6 @@ title: "Intake"
 custom_url: intake
 description: "Collect email, webhooks, files, and manual input into a local work queue with rules, approvals, and recovery."
 featured_image: "/assets/images/ecosystem/showcase-application-gallery.webp"
-social_image: "/assets/images/social/showcase.jpg"
 section: "Showcase"
 tags: [Showcase, Intake, Approvals]
 order: 490

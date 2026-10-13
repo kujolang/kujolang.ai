@@ -3180,6 +3180,19 @@
       "show_url": false,
       "background_image": "assets/images/ecosystem/agent-city-live-run.webp",
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "intake",
+      "title": "Intake",
+      "tagline": "A local work queue for messages, events, and operator review.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "ecosystem showcase",
+      "url": "kujolang.ai/ecosystem/intake/",
+      "background_image": "assets/images/ecosystem/showcase-application-gallery.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
     }
   ]
 }
