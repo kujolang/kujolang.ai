@@ -1,7 +1,7 @@
 {
   "reviewed": "2026-10-12",
   "artifact": "assets/videos/kujo-intro.mp4",
-  "sha256": "38145f3e64b50370b673d5a4b78b8c34f8f4047638685956d8b7be7ea55f9a31",
+  "sha256": "02d081bd6c249c34ed538f9b8ffbfd7a06edbf36901f0ffcc6b430ac99e066d0",
   "media": {
     "programs": [],
     "stream_groups": [],
@@ -25,15 +25,15 @@
       }
     ],
     "format": {
-      "duration": "77.014000",
-      "size": "26196023"
+      "duration": "77.000000",
+      "size": "26251780"
     }
   },
   "full_decode_errors": 0,
   "audio": {
-    "integrated_lufs": -17.83,
-    "true_peak_dbtp": -1.43,
-    "lra_lu": 5.2,
+    "integrated_lufs": -17.93,
+    "true_peak_dbtp": -1.41,
+    "lra_lu": 4.7,
     "subjective_listening": "not performed; no auditory perception tool available"
   },
   "hyperframes": {
@@ -64,7 +64,7 @@
   },
   "site_build": "Homepage-only local production build for integration; full repository gates enforced by .github/workflows/pages.yml on push",
   "browser": {
-    "duration": 77.014,
+    "duration": 77,
     "width": 1920,
     "height": 1080,
     "playing": true,
@@ -74,5 +74,20 @@
     "closed": true,
     "paused": true,
     "focusRestored": true
+  },
+  "revision": {
+    "opening": "Your agent can write code. Trust needs proof.",
+    "voice_take_seconds": 3.6,
+    "eyebrow": {
+      "width": 339.203125,
+      "text": 313.203125,
+      "parent": 1920
+    },
+    "music": "Original sample-free local synthesis: new midrange motif, harmonic movement and stereo replies",
+    "music_gain": 0.25,
+    "carve_strength": 0.15,
+    "maximum_duck_db": 3.6,
+    "sfx_gain_increase_db": 17.86,
+    "visual_review": "First rendered scene inspected; border fits text with 26px padding/border"
   }
 }
