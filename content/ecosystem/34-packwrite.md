@@ -12,15 +12,15 @@ launch_story: "Turn one large project brief into a reviewable operating manual t
 scope_note: "PackWrite compiles planning artifacts locally; it does not implement the project, host models, deploy code, or replace review."
 keywords: "PackWrite, Kujo ecosystem, Tool, Execution Packs"
 seo_title: "PackWrite — Kujo Ecosystem"
-version: "1.1.0"
-last_updated: "2026-09-09"
-latest_release_url: "https://github.com/kujolang/packwrite/releases/tag/v1.1.0"
+version: "1.1.1"
+last_updated: "2026-10-13"
+latest_release_url: "https://github.com/kujolang/packwrite/releases/tag/v1.1.1"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
 ## What it does
 
-PackWrite is an AI-assisted, local-first workflow-pack compiler. Give it a repository-level `MEGA_PROMPT.md`; it collects lightweight, secret-aware repository context, calls an OpenAI-compatible model endpoint, and writes a deterministic `agent/` pack for implementation and independent review.
+PackWrite turns `MEGA_PROMPT.md` into an `agent/` pack with phase plans, acceptance criteria, handoff notes, and review prompts. It sends the brief and a bounded repository summary to an OpenAI-compatible model, then checks the returned files and paths. Review the generated content before using it.
 
 ```text
 strategy AI → MEGA_PROMPT.md → PackWrite → agent/ pack → implementation agent → reviewer
@@ -85,8 +85,8 @@ PackWrite creates plans, prompts, and handoffs. It is not a hosted agent runtime
 
 ## Release
 
-PackWrite 1.1.0 is the current released version. It adds `summary`, JSON and quiet modes, stronger staged-write and endpoint controls, nested output support, bounded diagnostics, a golden offline pack fixture, and the official release checklist.
+PackWrite 1.1.1 fixes configuration, context, validation, and filesystem failure handling while preserving successful CLI and pack formats. It rejects invalid offline fixtures without a live request, detects conflicting generated paths, and preserves the old pack while cleaning staging files after failed overwrite enumeration. The offline suite has 248 unit and 116 CLI assertions.
 
 ## Learn more
 
-The [PackWrite repository](https://github.com/kujolang/packwrite) contains the CLI, complete configuration reference, end-to-end guide, troubleshooting material, tests, and [v1.1.0 release](https://github.com/kujolang/packwrite/releases/tag/v1.1.0).
+The [PackWrite repository](https://github.com/kujolang/packwrite) contains the CLI, complete configuration reference, end-to-end guide, troubleshooting material, tests, and [v1.1.1 release](https://github.com/kujolang/packwrite/releases/tag/v1.1.1).
