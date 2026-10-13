@@ -3,6 +3,8 @@
 ## Content update — 2026-10-13
 
 - Update Agents SDK to 1.1.3 with current installation, hardening, compatibility, and cost-limit guidance.
+- Document PackWrite 1.1.1, including configuration and filesystem fixes, offline validation, and the current release links.
+- Document AI SDK 1.2.0 state persistence, strict accounting, transport controls, and runtime compatibility.
 
 ## [1.3.1] - 2026-10-12
 
