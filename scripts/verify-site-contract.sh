@@ -287,11 +287,11 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 53 ]] || fail "expected 53 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 56 ]] || fail "expected 53 project and 3 catalog output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_sources" == 54 ]] || fail "expected 54 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 57 ]] || fail "expected 54 project and 3 catalog output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 15 ]] || fail "expected 15 primitive cards, found ${primitive_count}"
 [[ "$tooling_count" == 29 ]] || fail "expected 29 tooling cards, found ${tooling_count}"
-[[ "$showcase_count" == 9 ]] || fail "expected 9 showcase cards, found ${showcase_count}"
+[[ "$showcase_count" == 10 ]] || fail "expected 10 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
 	image_path=$(sed -n 's/^featured_image: "\(.*\.webp\)"$/\1/p' "$source_file")
@@ -523,3 +523,6 @@ if (( failures > 0 )); then
 fi
 
 printf 'Site contract passed: 53 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+
+require_text "${output_dir}/ecosystem/intake/index.html" "https://github.com/kujolang/intake/releases/tag/v0.2.0"
+require_text "${output_dir}/ecosystem/intake/index.html" "Node.js 20.19"
