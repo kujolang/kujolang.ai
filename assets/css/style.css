@@ -968,6 +968,9 @@
   }
 
   .tool-install-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    inline-size: 100%;
     min-inline-size: 0;
     border: var(--sk-border-1) solid var(--sk-border-default);
     background: var(--sk-surface-card);
@@ -1266,9 +1269,6 @@
     }
 
     .tool-install-panel {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      inline-size: 100%;
       overflow-wrap: anywhere;
     }
 

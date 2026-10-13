@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Stack Get started labels above full-width terminal boxes on ecosystem, skill, and workflow pages at every screen size.
 - Refresh the homepage introduction with current Kujo capabilities, natural-speed ElevenLabs V4 Siren narration, Motion.dev transitions, and original music and sound design.
 - Add English closed captions and preserve editable, reproducible production sources with claim provenance.
 
