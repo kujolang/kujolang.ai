@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.1] - 2026-10-12
+
+- Update the MCP product page from 1.2.0 to 1.3.1 with the first-class
+  generator, hardened generated-server boundaries, portable host package,
+  current release link, and exact publication/certification boundaries.
+
 ## [1.3.0] - 2026-10-12
 
 - Stack Get started labels above full-width terminal boxes on ecosystem, skill, and workflow pages at every screen size.
