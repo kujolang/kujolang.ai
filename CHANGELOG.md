@@ -1,5 +1,10 @@
 # Changelog
 
+## Ecosystem release alignment — 2026-10-14
+
+- Align published companion versions, Dispatch 1.4.0 requirements and Paperclip 0.2.0 installation, knowledge and approved workflows.
+- Promote the canonical Kujo 1.8.1 installer and retain standalone RAG deployment boundaries.
+
 ## Content update — 2026-10-13
 
 - Update Agents SDK to 1.1.3 with current installation, hardening, compatibility, and cost-limit guidance.

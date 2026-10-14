@@ -9,13 +9,13 @@ order: 20
 install_command: "curl -fsSL https://kennel.kujolang.ai/install.sh -o /tmp/kennel-install.sh && sh /tmp/kennel-install.sh"
 github_url: "https://github.com/kujolang/kennel"
 launch_story: "The package foundation for reproducible local and static dependency workflows."
-scope_note: "The official first-party static registry is live at https://kennel.kujolang.ai. Kennel 1.1.1 provides native bootstrap and global tool commands on macOS/Linux with Kujo 1.4.0 or newer. The patch fixes binary-safe bootstrap downloads and preserves installer modules, reviewed Git dependency identities and package source files. Verified with Kujo 1.6.0; existing releases stay immutable. Official package installation requires no Git or Python. Accounts and third-party publishing are future work."
+scope_note: "The official first-party static registry is live at https://kennel.kujolang.ai. Kennel 1.2.0 provides native bootstrap and global tool commands on macOS/Linux with Kujo 1.4.0 or newer. Offline declaration inspection and canonical registry directory URLs are included. Verified with Kujo 1.8.1; existing releases stay immutable. Official package installation requires no Git or Python. Accounts and third-party publishing are future work."
 keywords: "Kennel, Kujo ecosystem, Core, Packages"
 seo_title: "Kennel — Kujo Ecosystem"
-version: "1.1.1"
-latest_release_url: "https://github.com/kujolang/kennel/releases/tag/v1.1.1"
+version: "1.2.0"
+latest_release_url: "https://github.com/kujolang/kennel/releases/tag/v1.2.0"
 release_status: "Version identifies the published Kennel release. Install Kujo 1.4.0 or newer first; the public installer selects the latest compatible stable Kennel package."
-last_updated: "2026-09-29"
+last_updated: "2026-10-14"
 ---
 
 ## What it does
@@ -28,7 +28,7 @@ The package foundation for reproducible local and static dependency workflows.
 
 ## Operating boundary
 
-The official first-party static registry is live at https://kennel.kujolang.ai. Kennel 1.1.1 provides native bootstrap and global tool commands on macOS/Linux with Kujo 1.4.0 or newer. The patch fixes binary-safe bootstrap downloads and preserves installer modules, reviewed Git dependency identities and package source files. Verified with Kujo 1.6.0; existing releases stay immutable. Official package installation requires no Git or Python. Accounts and third-party publishing are future work.
+The official first-party static registry is live at https://kennel.kujolang.ai. Kennel 1.2.0 provides native bootstrap and global tool commands on macOS/Linux with Kujo 1.4.0 or newer. Offline declaration inspection and canonical registry directory URLs are included. Verified with Kujo 1.8.1; existing releases stay immutable. Official package installation requires no Git or Python. Accounts and third-party publishing are future work.
 
 ## Learn more
 
@@ -46,3 +46,7 @@ shipcheck --help
 ```
 
 Use `kennel self update` to update Kennel and `kennel tool update` to update unpinned global tools. The registry reconciles actual GitHub Releases automatically; scheduled runs may be delayed by GitHub. Browse packages and exact artifact metadata at [kennel.kujolang.ai](https://kennel.kujolang.ai/).
+
+## October 14 release update
+
+Offline declaration-only manifest inspection, preserved optional manifest/lockfile defaults and canonical registry directory URLs improve package workflows. Existing install validation remains enabled. Release verification used published Kujo 1.8.1.

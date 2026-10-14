@@ -12,10 +12,10 @@ launch_story: "Turn release preparation into a visible, repeatable gate instead 
 scope_note: "ShipCheck is a confidence gate within declared scope, not a universal production certification."
 keywords: "ShipCheck, Kujo ecosystem, Tool, Release"
 seo_title: "ShipCheck — Kujo Ecosystem"
-version: "1.0.0"
-latest_release_url: "https://github.com/kujolang/shipcheck/releases/tag/v1.0.0"
+version: "1.0.1"
+latest_release_url: "https://github.com/kujolang/shipcheck/releases/tag/v1.0.1"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-09-09"
+last_updated: "2026-10-14"
 ---
 
 ## What it does
@@ -33,3 +33,7 @@ ShipCheck is a confidence gate within declared scope, not a universal production
 ## Learn more
 
 The repository is the source of truth for current setup, commands, examples, security notes, compatibility, and verification evidence.
+
+## October 14 release update
+
+Readiness false-positive repairs, CLI validation, terminal escaping and bounded portable Git improve release-readiness reports.

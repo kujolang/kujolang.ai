@@ -15,7 +15,7 @@ seo_title: "Scout — Kujo Ecosystem"
 version: "1.1.0"
 latest_release_url: "https://github.com/kujolang/scout/releases/tag/v1.1.0"
 release_status: "Version identifies the published release. The Kennel command pins that registry release; see scope_note for release boundaries."
-last_updated: "2026-09-26"
+last_updated: "2026-10-14"
 ---
 
 ## What it does

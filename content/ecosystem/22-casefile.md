@@ -12,10 +12,10 @@ launch_story: "Package a failure so another person or agent can reproduce and co
 scope_note: "Sensitive inputs still require review; redaction reduces risk but does not replace data-handling policy."
 keywords: "CaseFile, Kujo ecosystem, Tool, Failures"
 seo_title: "CaseFile — Kujo Ecosystem"
-version: "1.0.0"
-latest_release_url: "https://github.com/kujolang/casefile/releases/tag/v1.0.0"
+version: "1.0.1"
+latest_release_url: "https://github.com/kujolang/casefile/releases/tag/v1.0.1"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-09-09"
+last_updated: "2026-10-14"
 ---
 
 ## What it does
@@ -33,3 +33,7 @@ Sensitive inputs still require review; redaction reduces risk but does not repla
 ## Learn more
 
 The repository is the source of truth for current setup, commands, examples, security notes, compatibility, and verification evidence.
+
+## October 14 release update
+
+Contained capture, broader redaction, bounded collection, atomic evidence artifacts and portable Windows path/ACL handling improve failure evidence.

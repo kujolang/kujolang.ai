@@ -12,10 +12,10 @@ launch_story: "A conventional application API pattern that makes Kujo integratio
 scope_note: "This is a proof application and architecture reference, not a production-certified application platform."
 keywords: "CRUD API Showcase, Kujo ecosystem, Showcase, API"
 seo_title: "CRUD API Showcase — Kujo Ecosystem"
-version: "1.0.0"
-latest_release_url: "https://github.com/kujolang/crud-api/releases/tag/v1.0.0"
+version: "1.0.1"
+latest_release_url: "https://github.com/kujolang/crud-api/releases/tag/v1.0.1"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-09-09"
+last_updated: "2026-10-14"
 ---
 
 ## What it does
@@ -33,3 +33,7 @@ This is a proof application and architecture reference, not a production-certifi
 ## Learn more
 
 The repository is the source of truth for current setup, commands, examples, security notes, compatibility, and verification evidence.
+
+## October 14 release update
+
+Authentication and proxy configuration, conflict handling, database indexes and environment handling improve the SQLite API showcase.

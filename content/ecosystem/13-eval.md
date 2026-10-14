@@ -12,10 +12,10 @@ launch_story: "An independent acceptance layer that makes success criteria execu
 scope_note: "Eval verifies declared checks; it is only as complete as the suite and policies a project defines."
 keywords: "Eval, Kujo ecosystem, Primitive, Verification"
 seo_title: "Eval — Kujo Ecosystem"
-version: "1.0.0"
-latest_release_url: "https://github.com/kujolang/eval/releases/tag/v1.0.0"
+version: "1.1.0"
+latest_release_url: "https://github.com/kujolang/eval/releases/tag/v1.1.0"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-09-09"
+last_updated: "2026-10-14"
 ---
 
 ## What it does
@@ -33,3 +33,7 @@ Eval verifies declared checks; it is only as complete as the suite and policies 
 ## Learn more
 
 The repository is the source of truth for current setup, commands, examples, security notes, compatibility, and verification evidence.
+
+## October 14 release update
+
+Portable results and JSON-shape, threshold, snapshot and CLI repairs improve deterministic evaluation; Watchdog correlation preserves observed evidence.
