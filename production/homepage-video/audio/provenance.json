@@ -1,0 +1,14 @@
+{
+  "provider": "ElevenLabs",
+  "model_id": "eleven_v4",
+  "voice_id": "eXpIbVcVbLo8ZJQDlDnl",
+  "voice_name": "Siren",
+  "generated_date": "2026-10-12",
+  "subscription_tier": "creator",
+  "subscription_status": "active",
+  "credentials": "environment or existing macOS Keychain; never stored",
+  "music_sfx": "Original deterministic local synthesis, audio/build_score.py; bespoke midrange plucked motif, harmonic progression, pulses and synchronized Foley; no samples, stock loops, or third-party music royalties",
+  "visuals": "Existing first-party Kujo intro assets and site brand identity",
+  "motion": "Motion 12.23.24 MIT, license retained; HyperFrames 0.8.150",
+  "music_provider_attempt": "ElevenLabs Music request rejected with missing_permissions: music_generation; no output used"
+}

@@ -1,0 +1,61 @@
+{
+  "provider": "ElevenLabs",
+  "model_id": "eleven_v4",
+  "voice_id": "eXpIbVcVbLo8ZJQDlDnl",
+  "voice_name": "Siren - Natural realistic conversational voice",
+  "voice_settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75
+  },
+  "cues": [
+    {
+      "id": "pressure",
+      "start": 0.7,
+      "must_end": 5.8,
+      "text": "Your agent can write code. Trust needs proof.",
+      "spoken_text": "Your agent can write code. Trust needs proof."
+    },
+    {
+      "id": "kujo",
+      "start": 6.7,
+      "must_end": 16.8,
+      "text": "Meet Kujo. An AI-native programming language and local-first toolchain, built to make agent-driven development clear, controlled, and verifiable.",
+      "spoken_text": "Meet Koo-joe. An AI-native programming language and local-first toolchain, built to make agent-driven development clear, controlled, and verifiable."
+    },
+    {
+      "id": "system",
+      "start": 17.7,
+      "must_end": 30.8,
+      "text": "Define the task. Give your agent the context it needs. Check the result, and keep the evidence. From task contracts to evaluation and run receipts, each step stays inspectable.",
+      "spoken_text": "Define the task. Give your agent the context it needs. Check the result, and keep the evidence. From task contracts to evaluation and run receipts, each step stays inspectable."
+    },
+    {
+      "id": "build",
+      "start": 31.7,
+      "must_end": 44.8,
+      "text": "Build with AI and agent SDKs. Share operation contracts through Ability and MCP. Create websites, manage content, or orchestrate agent work, with tools you can run and inspect.",
+      "spoken_text": "Build with AI and agent S D Ks. Share operation contracts through Ability and M C P. Create websites, manage content, or orchestrate agent work, with tools you can run and inspect."
+    },
+    {
+      "id": "ready",
+      "start": 45.7,
+      "must_end": 56.8,
+      "text": "Start with reusable skills, specialist agent roles, and workflow kits. Keep application permissions and approvals explicit, and bring the pieces your project needs.",
+      "spoken_text": "Start with reusable skills, specialist agent roles, and workflow kits. Keep application permissions and approvals explicit, and bring the pieces your project needs."
+    },
+    {
+      "id": "install",
+      "start": 57.7,
+      "must_end": 68.8,
+      "text": "Explore the ecosystem, install the runtime, or let your agent guide the setup. Start small, verify your environment, and keep building.",
+      "spoken_text": "Explore the ecosystem, install the runtime, or let your agent guide the setup. Start small, verify your environment, and keep building."
+    },
+    {
+      "id": "close",
+      "start": 69.7,
+      "must_end": 76.8,
+      "text": "Kujo. Clarity. Context. Control. Trust at the speed of AI.",
+      "spoken_text": "Koo-joe. Clarity. Context. Control. Trust at the speed of AI."
+    }
+  ]
+}

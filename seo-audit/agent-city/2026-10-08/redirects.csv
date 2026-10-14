@@ -1,0 +1,4 @@
+url,userAgent,status,location,error,elapsedMs
+http://kujolang.ai/ecosystem/agent-city/,AgentCityReleaseAudit/1.0,301,https://kujolang.ai/ecosystem/agent-city/,,207
+https://www.kujolang.ai/ecosystem/agent-city/,AgentCityReleaseAudit/1.0,301,https://kujolang.ai/ecosystem/agent-city/,,323
+https://kujolang.ai/ecosystem/agent-city?source=audit,AgentCityReleaseAudit/1.0,301,https://kujolang.ai/ecosystem/agent-city/?source=audit,,129

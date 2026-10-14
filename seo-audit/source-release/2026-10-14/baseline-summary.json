@@ -1,0 +1,16 @@
+{
+  "website_commit": "000b0fb168abb7e58166b36b84eb498687517df3",
+  "runtime": "1.8.0",
+  "pages": 246,
+  "missing_titles": 0,
+  "missing_canonicals": 1,
+  "missing_canonical_route": [
+    "https://kujolang.ai/404.html"
+  ],
+  "schema_errors": 0,
+  "broken_internal_destinations": 0,
+  "build_seconds": 1090.802950708,
+  "docs_pages": 107,
+  "docs_commit": "d7671c40e3c315a8d8c3fea26c140fd64c206d41",
+  "docs_artifact": 11818399351
+}

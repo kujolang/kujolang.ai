@@ -1,0 +1,93 @@
+{
+  "reviewed": "2026-10-12",
+  "artifact": "assets/videos/kujo-intro.mp4",
+  "sha256": "02d081bd6c249c34ed538f9b8ffbfd7a06edbf36901f0ffcc6b430ac99e066d0",
+  "media": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "avg_frame_rate": "30/1",
+        "nb_frames": "2310",
+        "side_data_list": [
+          {}
+        ]
+      },
+      {
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "avg_frame_rate": "0/0",
+        "nb_frames": "3607"
+      }
+    ],
+    "format": {
+      "duration": "77.000000",
+      "size": "26251780"
+    }
+  },
+  "full_decode_errors": 0,
+  "audio": {
+    "integrated_lufs": -17.93,
+    "true_peak_dbtp": -1.41,
+    "lra_lu": 4.7,
+    "subjective_listening": "not performed; no auditory perception tool available"
+  },
+  "hyperframes": {
+    "version": "0.8.150",
+    "ok": true,
+    "lint_errors": 0,
+    "layout_errors": 0,
+    "layout_warnings": 0,
+    "contrast_passed": 37,
+    "contrast_checked": 37,
+    "known_nonblocking_warnings": [
+      "inherited monolithic scene structure and reused art",
+      "inherited Three.js r152 legacy bundle deprecation"
+    ]
+  },
+  "motion_review": {
+    "native_motion": "Actual encoded scene and transition sheets inspected: progressive reveals, no competing headlines, held close",
+    "gsap_animation_map": "Reviewed; maps only the deterministic Three.js clock, not Motion native WAAPI"
+  },
+  "captions": {
+    "cues": 26,
+    "source": "ElevenLabs character alignment",
+    "format": "WebVTT optional English track"
+  },
+  "node_tests": {
+    "passed": 3,
+    "failed": 0
+  },
+  "site_build": "Homepage-only local production build for integration; full repository gates enforced by .github/workflows/pages.yml on push",
+  "browser": {
+    "duration": 77,
+    "width": 1920,
+    "height": 1080,
+    "playing": true,
+    "modalVisible": true,
+    "captionLanguage": "en",
+    "captionCues": 26,
+    "closed": true,
+    "paused": true,
+    "focusRestored": true
+  },
+  "revision": {
+    "opening": "Your agent can write code. Trust needs proof.",
+    "voice_take_seconds": 3.6,
+    "eyebrow": {
+      "width": 339.203125,
+      "text": 313.203125,
+      "parent": 1920
+    },
+    "music": "Original sample-free local synthesis: new midrange motif, harmonic movement and stereo replies",
+    "music_gain": 0.25,
+    "carve_strength": 0.15,
+    "maximum_duck_db": 3.6,
+    "sfx_gain_increase_db": 17.86,
+    "visual_review": "First rendered scene inspected; border fits text with 26px padding/border"
+  }
+}

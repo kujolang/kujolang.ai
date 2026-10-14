@@ -1,0 +1,38 @@
+{
+  "narration": {
+    "input_i": "-24.41",
+    "input_tp": "-2.81",
+    "input_lra": "6.50",
+    "input_thresh": "-35.07",
+    "output_i": "-18.25",
+    "output_tp": "-1.50",
+    "output_lra": "5.70",
+    "output_thresh": "-28.89",
+    "normalization_type": "dynamic",
+    "target_offset": "0.25"
+  },
+  "music": {
+    "input_i": "-22.76",
+    "input_tp": "-11.63",
+    "input_lra": "2.30",
+    "input_thresh": "-32.92",
+    "output_i": "-17.66",
+    "output_tp": "-5.78",
+    "output_lra": "2.50",
+    "output_thresh": "-27.80",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.34"
+  },
+  "sfx": {
+    "input_i": "-27.82",
+    "input_tp": "-10.24",
+    "input_lra": "10.30",
+    "input_thresh": "-38.67",
+    "output_i": "-18.66",
+    "output_tp": "-1.50",
+    "output_lra": "14.20",
+    "output_thresh": "-29.81",
+    "normalization_type": "dynamic",
+    "target_offset": "0.66"
+  }
+}

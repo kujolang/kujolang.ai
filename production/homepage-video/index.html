@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kujo — From Prompt to Proof</title>
+<style>
+  @font-face { font-family: DepartureHF; src: url("assets/fonts/DepartureMono-Regular.woff2") format("woff2"); }
+  @font-face { font-family: PlexMonoHF; src: url("assets/fonts/plexmono-400.woff2") format("woff2"); font-weight: 400; }
+  @font-face { font-family: PlexMonoHF; src: url("assets/fonts/plexmono-500.woff2") format("woff2"); font-weight: 500; }
+
+  :root {
+    --paper: #fff;
+    --ink: #060606;
+    --muted: #5d5d5d;
+    --soft: #dedede;
+    --line: #aaa;
+    --display: DepartureHF, PlexMonoHF, monospace;
+    --mono: PlexMonoHF, Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  #stage {
+    position: relative; width: 100%; height: 100%; overflow: hidden;
+    color: var(--ink); font-family: var(--mono);
+    background: var(--paper);
+  }
+  .scene { position: absolute; inset: 0; z-index: 10; display: flex; flex-direction: column; justify-content: center; padding: 92px 142px; isolation: isolate; }
+  .scene::before { content: ""; position: absolute; inset: 0; z-index: 0; background-image: var(--scene-image); background-size: cover; background-position: right center; opacity: var(--scene-opacity, .16); filter: grayscale(1) contrast(1.18); }
+  .scene::after { content: ""; position: absolute; inset: 0; z-index: 0; background: var(--scene-wash, linear-gradient(90deg, #fff 0%, rgba(255,255,255,.97) 43%, rgba(255,255,255,.72) 70%, rgba(255,255,255,.3) 100%)); }
+  .center { align-items: center; text-align: center; }
+  .eyebrow { width: fit-content; max-width: 100%; display: table; margin-bottom: 30px; padding: 8px 12px; color: var(--muted); background: var(--paper); border: 1px solid var(--ink); font-size: 19px; letter-spacing: 6px; text-transform: uppercase; }
+  .headline { display: table; font-family: var(--display); font-size: 90px; line-height: 1.05; font-weight: 400; background: var(--paper); box-shadow: 0 0 0 14px var(--paper); letter-spacing: -.02em; }
+  .headline + .headline { margin-top: 12px; }
+  .lead { max-width: 840px; margin-top: 30px; padding: 8px 10px; color: var(--muted); background: var(--paper); font-size: 27px; line-height: 1.52; }
+  .ink { color: var(--ink); background: var(--paper); box-shadow: 0 0 0 14px var(--paper); }
+  .art { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+  .art img { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; object-position: right center; }
+  .art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,.98) 38%, rgba(255,255,255,.76) 57%, rgba(255,255,255,.08) 100%); }
+  .scene > *:not(.art) { position: relative; z-index: 2; }
+  .slice { position: absolute; inset: 0; overflow: hidden; }
+  .slice.a { clip-path: inset(0 0 67% 0); }
+  .slice.b { clip-path: inset(33% 0 34% 0); }
+  .slice.c { clip-path: inset(66% 0 0 0); }
+
+  /* scene 1 */
+  #s-pressure .metric { margin-top: 56px; display: flex; align-items: center; gap: 20px; font-size: 23px; letter-spacing: 3px; text-transform: uppercase; }
+  #s-pressure .bar { width: 570px; height: 24px; border: 1px solid var(--ink); background: var(--paper); }
+  #s-pressure .bar span { display: block; width: 0; height: 100%; background: var(--ink); }
+  #s-pressure .review span { background: var(--muted); }
+  #s-pressure::before, #s-pressure::after { display: none; }
+
+  /* scene 2 */
+  #s-kujo { padding-left: 154px; --scene-image: url("assets/art/home-agent-workflow.webp"); --scene-opacity: .7; }
+  #s-kujo .copy { width: 830px; }
+  #core-layer { position: absolute; right: 64px; top: 98px; width: 820px; height: 820px; z-index: 1; }
+  #core-layer canvas { width: 820px; height: 820px; filter: contrast(1.3); }
+  .pill-row { display: flex; gap: 16px; margin-top: 42px; }
+  .pill { padding: 14px 18px; border: 1px solid var(--ink); background: var(--paper); font-size: 18px; letter-spacing: 3px; text-transform: uppercase; }
+
+  /* scene 3 */
+  #s-system { --scene-image: url("assets/art/workflows-evidence-routing-bench.webp"); --scene-opacity: .7; --scene-wash: rgba(255,255,255,.82); }
+  #s-system .headline { font-size: 74px; }
+  .system-flow { position: relative; display: grid; grid-template-columns: repeat(5, 276px); gap: 36px; margin-top: 74px; }
+  .flow-line { position: absolute; z-index: 0; left: 120px; right: 120px; top: 78px; height: 2px; background: var(--ink); transform-origin: left; }
+  .system-node { position: relative; min-height: 156px; padding: 30px 20px; border: 1px solid var(--ink); background: var(--paper); text-align: left; }
+  .system-node::before { content: attr(data-step); display: block; margin-bottom: 22px; color: var(--muted); font-size: 17px; letter-spacing: 3px; }
+  .system-node b { display: block; font-family: var(--display); font-size: 37px; font-weight: 400; }
+  .system-node span { display: block; margin-top: 10px; color: var(--muted); font-size: 17px; line-height: 1.35; }
+  .system-node.active { border-width: 3px; box-shadow: 8px 8px 0 rgba(6,6,6,.1); }
+  .system-proof { margin-top: 42px; color: var(--muted); font-size: 20px; letter-spacing: 4px; text-transform: uppercase; }
+
+  /* scene 4 */
+  #s-teams { --scene-image: url("assets/art/agents-sdk-human-handoff.webp"); --scene-opacity: .68; --scene-wash: rgba(255,255,255,.84); }
+  #s-teams .headline { font-size: 70px; }
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); width: 1636px; gap: 24px; margin-top: 54px; }
+  .team-card { position: relative; height: 400px; overflow: hidden; border: 1px solid var(--ink); background: var(--paper); text-align: left; }
+  .team-card img { width: 100%; height: 230px; object-fit: cover; filter: grayscale(1) contrast(1.22); }
+  .team-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 20%, rgba(255,255,255,.1) 50%, #fff 64%); }
+  .team-card .team-copy { position: absolute; z-index: 2; left: 28px; right: 28px; bottom: 25px; }
+  .team-card b { display: block; font-family: var(--display); font-size: 34px; font-weight: 400; }
+  .team-card span { display: block; margin-top: 9px; color: var(--muted); font-size: 18px; line-height: 1.4; }
+
+  /* scene 5 */
+  #s-ready { --scene-image: url("assets/art/skills-agent-guidance-library.webp"); --scene-opacity: .7; --scene-wash: rgba(255,255,255,.84); }
+  #s-ready .headline { font-size: 68px; }
+  #s-ready .headline + .headline { margin-top: 8px; }
+  .stats { display: flex; gap: 26px; margin-top: 72px; }
+  .stat { position: relative; width: 470px; height: 320px; padding: 48px 38px; overflow: hidden; border: 1px solid var(--ink); background: var(--paper); text-align: left; }
+  .stat img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .16; filter: grayscale(1) contrast(1.4); }
+  .stat strong { position: relative; z-index: 2; display: block; font-family: var(--display); font-size: 116px; line-height: .9; font-weight: 400; }
+  .stat b { position: relative; z-index: 2; display: block; margin-top: 36px; font-size: 20px; letter-spacing: 5px; text-transform: uppercase; }
+
+  /* scene 6 */
+  #s-install { align-items: center; text-align: center; --scene-image: url("assets/art/workflows-evidence-routing-bench.webp"); --scene-opacity: .66; --scene-wash: rgba(255,255,255,.86); }
+  #s-install .headline { font-size: 70px; }
+  .install-grid { display: grid; grid-template-columns: 790px 790px; gap: 30px; margin-top: 46px; text-align: left; }
+  .modal, .terminal { height: 390px; border: 1px solid var(--ink); background: var(--paper); }
+  .modal-head, .terminal-head { display: flex; justify-content: space-between; padding: 18px 22px; border-bottom: 1px solid var(--ink); color: var(--muted); font-size: 17px; letter-spacing: 3px; text-transform: uppercase; }
+  .modal-body { padding: 32px; }
+  .modal-body h3 { font-family: var(--display); font-size: 44px; font-weight: 400; }
+  .modal-body p { margin-top: 18px; color: var(--muted); font-size: 19px; }
+  .copy-field { display: flex; margin-top: 26px; border: 1px solid var(--ink); }
+  .copy-field code { flex: 1; padding: 18px; overflow: hidden; white-space: nowrap; font-size: 16px; }
+  .copy-field button { width: 74px; border: 0; border-left: 1px solid var(--ink); color: var(--paper); background: var(--ink); font: 18px var(--mono); }
+  .agent-link { display: inline-block; margin-top: 24px; border-bottom: 2px solid var(--ink); font-size: 18px; }
+  .terminal pre { padding: 28px; font: 18px/1.75 var(--mono); color: var(--muted); }
+  .terminal .ok { color: var(--ink); font-weight: 500; }
+  .install-note { margin-top: 24px; color: var(--muted); font-size: 17px; letter-spacing: 3px; text-transform: uppercase; }
+
+  /* scene 7 */
+  #s-close { align-items: center; text-align: center; --scene-image: url("assets/art/home-agent-workflow.webp"); --scene-opacity: .72; --scene-wash: radial-gradient(circle at center, rgba(255,255,255,.98) 0%, rgba(255,255,255,.92) 44%, rgba(255,255,255,.6) 100%); }
+  .logo-lockup { display: flex; align-items: center; gap: 28px; }
+  .logo-lockup img { width: 112px; height: 112px; }
+  .logo-lockup span { font-family: var(--display); font-size: 126px; }
+  .payoff { display: flex; gap: 18px; margin-top: 50px; }
+  .payoff span { min-width: 220px; padding: 16px 22px; border: 1px solid var(--ink); background: var(--paper); font-size: 21px; letter-spacing: 4px; text-transform: uppercase; }
+  .tagline { margin-top: 48px; font-family: var(--display); font-size: 68px; line-height: 1.05; }
+  .cta-safe { margin-top: 38px; color: var(--muted); font-size: 17px; letter-spacing: 3px; text-transform: uppercase; }
+
+  .scene { padding:0; background:#fff; }
+  .scene>.scene-content { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; padding:92px 142px; }
+  .center .scene-content,#s-install .scene-content,#s-close .scene-content { align-items:center; text-align:center; }
+  .scene-content>* { position:relative; z-index:2; }
+  .scene-content>.art { position:absolute; z-index:0; }
+  .scene::before,.scene::after { z-index:0; }
+  #s-kujo .headline {font-size:96px;}
+  #s-kujo .lead {max-width:720px; font-size:29px;}
+  #s-pressure .headline {font-size:88px;}
+  #s-teams .headline {font-size:64px;}
+  .stat strong {font-size:76px;}
+  .stat b {font-size:19px; letter-spacing:2px;}
+  .stat {height:270px;}
+  .modal,.terminal {height:300px;}
+  .modal-body h3 {font-size:37px;}
+  .modal-body p {font-size:23px; line-height:1.45;}
+  .destination {font-size:29px; margin-top:28px;}
+  .install-note {font-size:19px;letter-spacing:1px;}
+  .system-node {border-width:2px;}
+  .system-node span {font-size:19px;}
+  .team-card {border-width:2px;}
+  .team-card span {font-size:24px;}
+  .logo-lockup span {font-size:136px;}
+  .cta-safe {font-size:28px;}
+</style>
+</head>
+<body>
+<div data-hf-id="hf-aton" id="stage" data-composition-id="kujo-from-prompt-to-proof" data-start="0" data-width="1920" data-height="1080" data-duration="77">
+  <section data-hf-id="hf-7pbe" id="s-pressure" class="scene clip" data-start="0" data-duration="6.6" data-track-index="1"><div data-hf-id="hf-cn5c" class="scene-content">
+    <div data-hf-id="hf-y0ev" class="art"><div data-hf-id="hf-da73" class="slice a"><img data-hf-id="hf-mscc" data-layout-allow-overflow="" src="assets/art/home-agent-workflow.webp" alt=""></div><div data-hf-id="hf-4mb8" class="slice b"><img data-hf-id="hf-3y44" data-layout-allow-overflow="" src="assets/art/home-agent-workflow.webp" alt=""></div><div data-hf-id="hf-5dz1" class="slice c"><img data-hf-id="hf-2r71" data-layout-allow-overflow="" src="assets/art/home-agent-workflow.webp" alt=""></div></div>
+    <div data-hf-id="hf-sm81" class="eyebrow">the new bottleneck</div>
+    <h1 data-hf-id="hf-m3fm"><span data-hf-id="hf-anbv" class="headline scramble" data-text="FROM OUTPUT TO TRUST"></span></h1>
+    <p data-hf-id="hf-7pm6" class="lead">Your agent can write code. Trust needs proof.</p>
+  </div></section>
+
+  <section data-hf-id="hf-46jf" id="s-kujo" class="scene clip" data-start="6" data-duration="11.6" data-track-index="2"><div data-hf-id="hf-o0eg" class="scene-content">
+    <div data-hf-id="hf-bdx3" class="copy">
+      <div data-hf-id="hf-00jt" class="eyebrow">meet kujo</div>
+      <h2 data-hf-id="hf-2l5r"><span data-hf-id="hf-ryu8" class="headline scramble" data-text="A language."></span><span data-hf-id="hf-67s5" class="headline ink scramble" data-text="A toolchain."></span></h2>
+      <p data-hf-id="hf-1n9k" class="lead">AI-native software. Local-first tools. Clear, controlled, verifiable work.</p>
+      <div data-hf-id="hf-t5je" class="pill-row"><span data-hf-id="hf-vfbu" class="pill">VM-first</span><span data-hf-id="hf-zgnw" class="pill">agent-readable</span><span data-hf-id="hf-jtt9" class="pill">explicit authority</span></div>
+    </div>
+    <div data-hf-id="hf-uoti" id="core-layer" data-layout-allow-overlap="" data-layout-allow-occlusion=""></div>
+  </div></section>
+
+  <section data-hf-id="hf-c8as" id="s-system" class="scene center clip" data-start="17" data-duration="14.6" data-track-index="3"><div data-hf-id="hf-mthd" class="scene-content">
+    <div data-hf-id="hf-wz2c" class="eyebrow">from prompt to proof</div>
+    <h2 data-hf-id="hf-gavz"><span data-hf-id="hf-2yip" class="headline scramble" data-text="From intent to evidence."></span></h2>
+    <div data-hf-id="hf-ohkk" class="system-flow"><div data-hf-id="hf-6phj" class="flow-line"></div>
+      <div data-hf-id="hf-ejaz" class="system-node" data-step="01 / DEFINE"><b data-hf-id="hf-xit2">Goal</b><span data-hf-id="hf-by2y">Scope and acceptance criteria</span></div>
+      <div data-hf-id="hf-sl01" class="system-node" data-step="02 / FOCUS"><b data-hf-id="hf-tlks">Context</b><span data-hf-id="hf-7xsw">Only what the task needs</span></div>
+      <div data-hf-id="hf-escx" class="system-node" data-step="03 / EXECUTE"><b data-hf-id="hf-4yau">Agent</b><span data-hf-id="hf-3937">Explicit tools and approvals</span></div>
+      <div data-hf-id="hf-30ev" class="system-node" data-step="04 / CHECK"><b data-hf-id="hf-1tt0">Verify</b><span data-hf-id="hf-d8od">Deterministic gates</span></div>
+      <div data-hf-id="hf-cjqm" class="system-node" data-step="05 / PRESERVE"><b data-hf-id="hf-846c">Evidence</b><span data-hf-id="hf-b8fv">Receipts and handoff</span></div>
+    </div>
+    <p data-hf-id="hf-if9u" class="system-proof">SPEC · SCOUT · SCENT · EVAL · RUNLEDGER · CASEFILE</p>
+  </div></section>
+
+  <section data-hf-id="hf-pbru" id="s-teams" class="scene center clip" data-start="31" data-duration="14.6" data-track-index="4"><div data-hf-id="hf-n7se" class="scene-content">
+    <div data-hf-id="hf-5vj4" class="eyebrow">build with kujo</div>
+    <h2 data-hf-id="hf-fwky"><span data-hf-id="hf-mn4l" class="headline scramble" data-text="Connected primitives. Real applications."></span></h2>
+    <div data-hf-id="hf-8fg4" class="team-grid">
+      <article data-hf-id="hf-i4i1" class="team-card"><img data-hf-id="hf-dr9t" data-layout-allow-overflow="" src="assets/art/agents-sdk-human-handoff.webp" alt=""><div data-hf-id="hf-3oub" class="team-copy"><b data-hf-id="hf-ybtc">AI + agents</b><span data-hf-id="hf-z8ug">AI SDK · Agents SDK</span></div></article>
+      <article data-hf-id="hf-22wt" class="team-card"><img data-hf-id="hf-rb61" data-layout-allow-overflow="" src="assets/art/workflows-evidence-routing-bench.webp" alt=""><div data-hf-id="hf-mosj" class="team-copy"><b data-hf-id="hf-cwg0">Portable operations</b><span data-hf-id="hf-absc">Ability · MCP</span></div></article>
+      <article data-hf-id="hf-39tw" class="team-card"><img data-hf-id="hf-35i2" data-layout-allow-overflow="" src="assets/art/home-agent-workflow.webp" alt=""><div data-hf-id="hf-mahi" class="team-copy"><b data-hf-id="hf-8kla">Build + orchestrate</b><span data-hf-id="hf-tgv9">SSG · CMS · Dispatch</span></div></article>
+    </div>
+  </div></section>
+
+  <section data-hf-id="hf-obdt" id="s-ready" class="scene center clip" data-start="45" data-duration="12.6" data-track-index="5"><div data-hf-id="hf-m0vb" class="scene-content">
+    <div data-hf-id="hf-xzkm" class="eyebrow">your agents do not start from zero</div>
+    <h2 data-hf-id="hf-fi9x"><span data-hf-id="hf-o2d1" class="headline scramble" data-text="Start with a system."></span><span data-hf-id="hf-mywe" class="headline scramble" data-text="Make it yours."></span></h2>
+    <div data-hf-id="hf-rhep" class="stats">
+      <div data-hf-id="hf-xa0m" class="stat"><img data-hf-id="hf-6zem" data-layout-allow-overflow="" src="assets/art/skills-agent-guidance-library.webp" alt=""><strong data-hf-id="hf-rvnc">Skills</strong><b data-hf-id="hf-xcia">reusable guidance</b></div>
+      <div data-hf-id="hf-tx7e" class="stat"><img data-hf-id="hf-hoed" data-layout-allow-overflow="" src="assets/art/agents-sdk-human-handoff.webp" alt=""><strong data-hf-id="hf-uf0b">Roles</strong><b data-hf-id="hf-qc3m">specialist agents</b></div>
+      <div data-hf-id="hf-ubif" class="stat"><img data-hf-id="hf-qon1" data-layout-allow-overflow="" src="assets/art/workflows-evidence-routing-bench.webp" alt=""><strong data-hf-id="hf-2wz3">Flows</strong><b data-hf-id="hf-s5ew">repeatable workflows</b></div>
+    </div>
+  </div></section>
+
+  <section data-hf-id="hf-onka" id="s-install" class="scene clip" data-start="57" data-duration="12.6" data-track-index="6"><div data-hf-id="hf-mf6c" class="scene-content">
+    <div data-hf-id="hf-8oee" class="eyebrow">start small · keep building</div>
+    <h2 data-hf-id="hf-iaf4"><span data-hf-id="hf-9vow" class="headline scramble" data-text="Your next step starts here."></span></h2>
+    <div data-hf-id="hf-za66" class="install-grid">
+      <div data-hf-id="hf-keer" class="modal">
+        <div data-hf-id="hf-bu2y" class="modal-head"><span data-hf-id="hf-uwow">Explore</span><span data-hf-id="hf-p81i">01</span></div>
+        <div data-hf-id="hf-oxz4" class="modal-body"><h3 data-hf-id="hf-3c2l">Find your tools.</h3><p data-hf-id="hf-oerd">Language, packages, skills, and workflows.</p><div data-hf-id="hf-1d9e" class="destination">kujolang.ai/ecosystem</div></div>
+      </div>
+      <div data-hf-id="hf-1ms0" class="terminal">
+        <div data-hf-id="hf-i5an" class="terminal-head"><span data-hf-id="hf-jkyy">Get started</span><span data-hf-id="hf-pmcj">02</span></div>
+        <div data-hf-id="hf-nqig" class="modal-body"><h3 data-hf-id="hf-djyb">Set up with your agent.</h3><p data-hf-id="hf-5wku">Quick Install includes an onboarding prompt.</p><div data-hf-id="hf-kljp" class="destination">kujolang.ai</div></div>
+      </div>
+    </div>
+    <p data-hf-id="hf-2mz6" class="install-note">Default installer: core + operating · choose optional profiles as needed</p>
+  </div></section>
+
+  <section data-hf-id="hf-cr8e" id="s-close" class="scene clip" data-start="69" data-duration="8" data-track-index="7"><div data-hf-id="hf-l899" class="scene-content">
+    <div data-hf-id="hf-cebo" class="logo-lockup"><img data-hf-id="hf-uu3c" src="assets/kujo-logomark.svg" alt=""><span data-hf-id="hf-e6ay">Kujo</span></div>
+    <div data-hf-id="hf-8dzt" class="payoff"><span data-hf-id="hf-qo53">Clarity.</span><span data-hf-id="hf-0h8y">Context.</span><span data-hf-id="hf-o51o">Control.</span></div>
+    <p data-hf-id="hf-y2el" class="tagline">Trust at the speed of AI.</p>
+    <p data-hf-id="hf-b12k" class="cta-safe">kujolang.ai</p>
+  </div></section>
+
+<audio data-hf-id="hf-omo1" id="narration" src="audio/narration.wav" class="clip" data-start="0" data-duration="77" data-track-index="10" data-volume="1"></audio>
+<audio data-hf-id="hf-uzo0" id="music-bed" src="audio/music.wav" class="clip" data-start="0" data-duration="77" data-track-index="11" data-volume="0.25" data-fx-carve="{&quot;enabled&quot;:true,&quot;sources&quot;:[&quot;narration&quot;],&quot;strength&quot;:0.15}" data-fx-chain="{&quot;version&quot;:1,&quot;nodes&quot;:[{&quot;type&quot;:&quot;peaking&quot;,&quot;id&quot;:&quot;n1&quot;,&quot;fromCarve&quot;:true,&quot;params&quot;:{&quot;frequency&quot;:1600,&quot;gain&quot;:-4.4,&quot;q&quot;:1.28}},{&quot;type&quot;:&quot;peaking&quot;,&quot;id&quot;:&quot;n2&quot;,&quot;fromCarve&quot;:true,&quot;params&quot;:{&quot;frequency&quot;:2500,&quot;gain&quot;:-2.2,&quot;q&quot;:1.28}},{&quot;type&quot;:&quot;gain&quot;,&quot;id&quot;:&quot;n3&quot;,&quot;fromCarve&quot;:true,&quot;params&quot;:{&quot;gain&quot;:0}}]}" data-automation="{&quot;version&quot;:1,&quot;lanes&quot;:[{&quot;target&quot;:&quot;fx.n1.gain&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:0},{&quot;t&quot;:1.775,&quot;v&quot;:0},{&quot;t&quot;:1.968,&quot;v&quot;:-1},{&quot;t&quot;:2.16,&quot;v&quot;:-0.5},{&quot;t&quot;:2.353,&quot;v&quot;:-0.2},{&quot;t&quot;:2.545,&quot;v&quot;:0},{&quot;t&quot;:2.738,&quot;v&quot;:0},{&quot;t&quot;:2.93,&quot;v&quot;:-3.3},{&quot;t&quot;:3.123,&quot;v&quot;:-1.5},{&quot;t&quot;:3.315,&quot;v&quot;:-0.7},{&quot;t&quot;:3.508,&quot;v&quot;:-0.3},{&quot;t&quot;:3.7,&quot;v&quot;:0},{&quot;t&quot;:6.973,&quot;v&quot;:0},{&quot;t&quot;:7.165,&quot;v&quot;:-1.5},{&quot;t&quot;:7.358,&quot;v&quot;:-0.7},{&quot;t&quot;:7.55,&quot;v&quot;:-0.3},{&quot;t&quot;:7.743,&quot;v&quot;:0},{&quot;t&quot;:8.513,&quot;v&quot;:0},{&quot;t&quot;:8.705,&quot;v&quot;:-0.5},{&quot;t&quot;:8.898,&quot;v&quot;:-0.2},{&quot;t&quot;:9.09,&quot;v&quot;:-1.7},{&quot;t&quot;:9.283,&quot;v&quot;:-1.1},{&quot;t&quot;:9.475,&quot;v&quot;:-1.6},{&quot;t&quot;:9.668,&quot;v&quot;:-1.3},{&quot;t&quot;:9.86,&quot;v&quot;:-0.6},{&quot;t&quot;:10.245,&quot;v&quot;:-0.3},{&quot;t&quot;:10.438,&quot;v&quot;:0},{&quot;t&quot;:10.63,&quot;v&quot;:-2.8},{&quot;t&quot;:10.823,&quot;v&quot;:-1.3},{&quot;t&quot;:11.015,&quot;v&quot;:-0.6},{&quot;t&quot;:11.208,&quot;v&quot;:-0.3},{&quot;t&quot;:11.4,&quot;v&quot;:0},{&quot;t&quot;:11.785,&quot;v&quot;:0},{&quot;t&quot;:11.978,&quot;v&quot;:-3.2},{&quot;t&quot;:12.17,&quot;v&quot;:-1.5},{&quot;t&quot;:12.363,&quot;v&quot;:-0.7},{&quot;t&quot;:12.555,&quot;v&quot;:-0.3},{&quot;t&quot;:12.748,&quot;v&quot;:0},{&quot;t&quot;:12.94,&quot;v&quot;:-0.7},{&quot;t&quot;:13.903,&quot;v&quot;:-1.1},{&quot;t&quot;:14.095,&quot;v&quot;:-1.9},{&quot;t&quot;:14.288,&quot;v&quot;:-0.9},{&quot;t&quot;:14.48,&quot;v&quot;:-0.4},{&quot;t&quot;:15.25,&quot;v&quot;:-0.3},{&quot;t&quot;:15.443,&quot;v&quot;:-2.8},{&quot;t&quot;:15.635,&quot;v&quot;:-1.3},{&quot;t&quot;:15.828,&quot;v&quot;:-1},{&quot;t&quot;:16.02,&quot;v&quot;:-0.4},{&quot;t&quot;:18.33,&quot;v&quot;:0},{&quot;t&quot;:18.523,&quot;v&quot;:-2.3},{&quot;t&quot;:18.715,&quot;v&quot;:-1.1},{&quot;t&quot;:18.908,&quot;v&quot;:-0.5},{&quot;t&quot;:19.1,&quot;v&quot;:-0.2},{&quot;t&quot;:19.293,&quot;v&quot;:0},{&quot;t&quot;:19.678,&quot;v&quot;:0},{&quot;t&quot;:19.87,&quot;v&quot;:-1.2},{&quot;t&quot;:20.063,&quot;v&quot;:-0.9},{&quot;t&quot;:20.255,&quot;v&quot;:-0.6},{&quot;t&quot;:20.448,&quot;v&quot;:-0.3},{&quot;t&quot;:20.64,&quot;v&quot;:0},{&quot;t&quot;:21.795,&quot;v&quot;:0},{&quot;t&quot;:21.988,&quot;v&quot;:-2.5},{&quot;t&quot;:22.18,&quot;v&quot;:-2.2},{&quot;t&quot;:22.373,&quot;v&quot;:-2},{&quot;t&quot;:22.565,&quot;v&quot;:-0.9},{&quot;t&quot;:22.758,&quot;v&quot;:-0.4},{&quot;t&quot;:24.683,&quot;v&quot;:0},{&quot;t&quot;:24.875,&quot;v&quot;:-3.9},{&quot;t&quot;:25.068,&quot;v&quot;:-2.2},{&quot;t&quot;:25.26,&quot;v&quot;:-1},{&quot;t&quot;:25.453,&quot;v&quot;:-0.5},{&quot;t&quot;:25.645,&quot;v&quot;:-0.2},{&quot;t&quot;:25.838,&quot;v&quot;:0},{&quot;t&quot;:26.03,&quot;v&quot;:-2.4},{&quot;t&quot;:26.223,&quot;v&quot;:-1.6},{&quot;t&quot;:26.415,&quot;v&quot;:-0.7},{&quot;t&quot;:26.608,&quot;v&quot;:-1.3},{&quot;t&quot;:26.8,&quot;v&quot;:-2},{&quot;t&quot;:26.993,&quot;v&quot;:-1.3},{&quot;t&quot;:27.185,&quot;v&quot;:-0.6},{&quot;t&quot;:27.378,&quot;v&quot;:-0.3},{&quot;t&quot;:27.57,&quot;v&quot;:0},{&quot;t&quot;:28.918,&quot;v&quot;:0},{&quot;t&quot;:29.11,&quot;v&quot;:-0.6},{&quot;t&quot;:29.303,&quot;v&quot;:-0.3},{&quot;t&quot;:29.495,&quot;v&quot;:0},{&quot;t&quot;:32.383,&quot;v&quot;:-0.4},{&quot;t&quot;:32.575,&quot;v&quot;:-3.4},{&quot;t&quot;:32.768,&quot;v&quot;:-1.6},{&quot;t&quot;:32.96,&quot;v&quot;:-0.7},{&quot;t&quot;:33.153,&quot;v&quot;:-0.3},{&quot;t&quot;:33.345,&quot;v&quot;:0},{&quot;t&quot;:34.693,&quot;v&quot;:0},{&quot;t&quot;:34.885,&quot;v&quot;:-2.6},{&quot;t&quot;:35.078,&quot;v&quot;:-2},{&quot;t&quot;:35.27,&quot;v&quot;:-0.9},{&quot;t&quot;:35.463,&quot;v&quot;:-0.4},{&quot;t&quot;:35.655,&quot;v&quot;:-1.6},{&quot;t&quot;:35.848,&quot;v&quot;:-2.5},{&quot;t&quot;:36.04,&quot;v&quot;:-1.2},{&quot;t&quot;:36.618,&quot;v&quot;:-1.4},{&quot;t&quot;:36.81,&quot;v&quot;:-0.6},{&quot;t&quot;:37.003,&quot;v&quot;:-0.3},{&quot;t&quot;:37.195,&quot;v&quot;:0},{&quot;t&quot;:38.158,&quot;v&quot;:0},{&quot;t&quot;:38.35,&quot;v&quot;:-0.5},{&quot;t&quot;:38.543,&quot;v&quot;:-0.2},{&quot;t&quot;:38.735,&quot;v&quot;:0},{&quot;t&quot;:38.928,&quot;v&quot;:-2.9},{&quot;t&quot;:39.12,&quot;v&quot;:-1.4},{&quot;t&quot;:39.313,&quot;v&quot;:-0.6},{&quot;t&quot;:39.505,&quot;v&quot;:-1.8},{&quot;t&quot;:39.698,&quot;v&quot;:-0.8},{&quot;t&quot;:39.89,&quot;v&quot;:-2.6},{&quot;t&quot;:40.083,&quot;v&quot;:-1.2},{&quot;t&quot;:40.275,&quot;v&quot;:-0.6},{&quot;t&quot;:40.468,&quot;v&quot;:-0.3},{&quot;t&quot;:40.66,&quot;v&quot;:-1.3},{&quot;t&quot;:40.853,&quot;v&quot;:-1.3},{&quot;t&quot;:41.045,&quot;v&quot;:-0.6},{&quot;t&quot;:41.238,&quot;v&quot;:-1.1},{&quot;t&quot;:41.43,&quot;v&quot;:-0.5},{&quot;t&quot;:41.623,&quot;v&quot;:-0.2},{&quot;t&quot;:41.815,&quot;v&quot;:-2.3},{&quot;t&quot;:42.008,&quot;v&quot;:-1.1},{&quot;t&quot;:42.2,&quot;v&quot;:-0.5},{&quot;t&quot;:42.585,&quot;v&quot;:-0.2},{&quot;t&quot;:42.778,&quot;v&quot;:0},{&quot;t&quot;:43.163,&quot;v&quot;:0},{&quot;t&quot;:43.355,&quot;v&quot;:-1.7},{&quot;t&quot;:43.548,&quot;v&quot;:-1.2},{&quot;t&quot;:43.74,&quot;v&quot;:-0.5},{&quot;t&quot;:43.933,&quot;v&quot;:-2.8},{&quot;t&quot;:44.125,&quot;v&quot;:-1.3},{&quot;t&quot;:44.318,&quot;v&quot;:-0.6},{&quot;t&quot;:44.51,&quot;v&quot;:-0.3},{&quot;t&quot;:44.703,&quot;v&quot;:0},{&quot;t&quot;:45.858,&quot;v&quot;:0},{&quot;t&quot;:46.05,&quot;v&quot;:-1.5},{&quot;t&quot;:46.243,&quot;v&quot;:-0.7},{&quot;t&quot;:47.013,&quot;v&quot;:-0.4},{&quot;t&quot;:47.205,&quot;v&quot;:0},{&quot;t&quot;:47.59,&quot;v&quot;:0},{&quot;t&quot;:47.783,&quot;v&quot;:-2},{&quot;t&quot;:47.975,&quot;v&quot;:-0.9},{&quot;t&quot;:48.168,&quot;v&quot;:-0.4},{&quot;t&quot;:48.938,&quot;v&quot;:0},{&quot;t&quot;:49.13,&quot;v&quot;:-1.3},{&quot;t&quot;:49.323,&quot;v&quot;:-1.8},{&quot;t&quot;:49.515,&quot;v&quot;:-0.9},{&quot;t&quot;:49.708,&quot;v&quot;:-0.4},{&quot;t&quot;:50.67,&quot;v&quot;:0},{&quot;t&quot;:50.863,&quot;v&quot;:-1.7},{&quot;t&quot;:51.055,&quot;v&quot;:-0.9},{&quot;t&quot;:51.248,&quot;v&quot;:-0.4},{&quot;t&quot;:51.44,&quot;v&quot;:0},{&quot;t&quot;:51.633,&quot;v&quot;:-1.5},{&quot;t&quot;:51.825,&quot;v&quot;:-0.8},{&quot;t&quot;:52.018,&quot;v&quot;:-0.4},{&quot;t&quot;:52.21,&quot;v&quot;:-0.2},{&quot;t&quot;:52.98,&quot;v&quot;:0},{&quot;t&quot;:53.173,&quot;v&quot;:-1.9},{&quot;t&quot;:53.365,&quot;v&quot;:-0.9},{&quot;t&quot;:53.558,&quot;v&quot;:-0.4},{&quot;t&quot;:53.943,&quot;v&quot;:-0.3},{&quot;t&quot;:54.135,&quot;v&quot;:-3.4},{&quot;t&quot;:54.328,&quot;v&quot;:-1.6},{&quot;t&quot;:54.52,&quot;v&quot;:-0.7},{&quot;t&quot;:54.713,&quot;v&quot;:-0.3},{&quot;t&quot;:54.905,&quot;v&quot;:-1.7},{&quot;t&quot;:55.098,&quot;v&quot;:-2.9},{&quot;t&quot;:55.29,&quot;v&quot;:-1.4},{&quot;t&quot;:55.483,&quot;v&quot;:-0.6},{&quot;t&quot;:55.675,&quot;v&quot;:-0.3},{&quot;t&quot;:55.868,&quot;v&quot;:0},{&quot;t&quot;:57.985,&quot;v&quot;:0},{&quot;t&quot;:58.178,&quot;v&quot;:-0.6},{&quot;t&quot;:58.37,&quot;v&quot;:-0.3},{&quot;t&quot;:58.563,&quot;v&quot;:0},{&quot;t&quot;:58.755,&quot;v&quot;:0},{&quot;t&quot;:58.948,&quot;v&quot;:-1.8},{&quot;t&quot;:59.14,&quot;v&quot;:-0.8},{&quot;t&quot;:59.333,&quot;v&quot;:-0.4},{&quot;t&quot;:59.525,&quot;v&quot;:0},{&quot;t&quot;:59.718,&quot;v&quot;:0},{&quot;t&quot;:59.91,&quot;v&quot;:-3.7},{&quot;t&quot;:60.103,&quot;v&quot;:-2.1},{&quot;t&quot;:60.295,&quot;v&quot;:-1.7},{&quot;t&quot;:60.488,&quot;v&quot;:-0.8},{&quot;t&quot;:60.68,&quot;v&quot;:-0.4},{&quot;t&quot;:60.873,&quot;v&quot;:0},{&quot;t&quot;:61.45,&quot;v&quot;:0},{&quot;t&quot;:61.643,&quot;v&quot;:-0.6},{&quot;t&quot;:61.835,&quot;v&quot;:-0.3},{&quot;t&quot;:62.028,&quot;v&quot;:-2.3},{&quot;t&quot;:62.22,&quot;v&quot;:-1.1},{&quot;t&quot;:62.413,&quot;v&quot;:-0.5},{&quot;t&quot;:62.605,&quot;v&quot;:-0.2},{&quot;t&quot;:62.798,&quot;v&quot;:0},{&quot;t&quot;:62.99,&quot;v&quot;:-4.3},{&quot;t&quot;:63.183,&quot;v&quot;:-2},{&quot;t&quot;:63.375,&quot;v&quot;:-1.2},{&quot;t&quot;:63.568,&quot;v&quot;:-0.6},{&quot;t&quot;:63.76,&quot;v&quot;:-0.3},{&quot;t&quot;:63.953,&quot;v&quot;:-1.4},{&quot;t&quot;:64.145,&quot;v&quot;:-0.7},{&quot;t&quot;:64.53,&quot;v&quot;:-0.2},{&quot;t&quot;:64.723,&quot;v&quot;:-3.2},{&quot;t&quot;:64.915,&quot;v&quot;:-1.7},{&quot;t&quot;:65.108,&quot;v&quot;:-0.8},{&quot;t&quot;:65.3,&quot;v&quot;:-0.4},{&quot;t&quot;:65.493,&quot;v&quot;:0},{&quot;t&quot;:69.535,&quot;v&quot;:0},{&quot;t&quot;:69.728,&quot;v&quot;:-1},{&quot;t&quot;:69.92,&quot;v&quot;:-1.6},{&quot;t&quot;:70.113,&quot;v&quot;:-2.2},{&quot;t&quot;:70.305,&quot;v&quot;:-1},{&quot;t&quot;:70.498,&quot;v&quot;:-0.5},{&quot;t&quot;:70.69,&quot;v&quot;:-0.2},{&quot;t&quot;:70.883,&quot;v&quot;:0},{&quot;t&quot;:71.075,&quot;v&quot;:-2.4},{&quot;t&quot;:71.268,&quot;v&quot;:-1.1},{&quot;t&quot;:71.46,&quot;v&quot;:-0.5},{&quot;t&quot;:71.653,&quot;v&quot;:-0.2},{&quot;t&quot;:71.845,&quot;v&quot;:0},{&quot;t&quot;:72.038,&quot;v&quot;:-1.2},{&quot;t&quot;:72.23,&quot;v&quot;:-0.6},{&quot;t&quot;:72.808,&quot;v&quot;:-0.2},{&quot;t&quot;:73,&quot;v&quot;:0},{&quot;t&quot;:73.193,&quot;v&quot;:0},{&quot;t&quot;:73.385,&quot;v&quot;:-0.6},{&quot;t&quot;:73.578,&quot;v&quot;:-0.3},{&quot;t&quot;:73.77,&quot;v&quot;:0},{&quot;t&quot;:74.348,&quot;v&quot;:0},{&quot;t&quot;:74.54,&quot;v&quot;:-4},{&quot;t&quot;:74.733,&quot;v&quot;:-1.9},{&quot;t&quot;:74.925,&quot;v&quot;:-0.9},{&quot;t&quot;:75.118,&quot;v&quot;:-0.4},{&quot;t&quot;:75.888,&quot;v&quot;:-0.4},{&quot;t&quot;:76.08,&quot;v&quot;:-2.3},{&quot;t&quot;:76.273,&quot;v&quot;:-1.1},{&quot;t&quot;:76.465,&quot;v&quot;:-0.5},{&quot;t&quot;:76.658,&quot;v&quot;:-0.2},{&quot;t&quot;:76.85,&quot;v&quot;:0},{&quot;t&quot;:77,&quot;v&quot;:0}]},{&quot;target&quot;:&quot;fx.n2.gain&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:0},{&quot;t&quot;:0.62,&quot;v&quot;:0},{&quot;t&quot;:0.813,&quot;v&quot;:-0.8},{&quot;t&quot;:1.198,&quot;v&quot;:-0.4},{&quot;t&quot;:1.39,&quot;v&quot;:0},{&quot;t&quot;:1.583,&quot;v&quot;:0},{&quot;t&quot;:1.775,&quot;v&quot;:-1.1},{&quot;t&quot;:1.968,&quot;v&quot;:-0.7},{&quot;t&quot;:2.16,&quot;v&quot;:-0.3},{&quot;t&quot;:2.738,&quot;v&quot;:0},{&quot;t&quot;:2.93,&quot;v&quot;:-1.7},{&quot;t&quot;:3.123,&quot;v&quot;:-0.8},{&quot;t&quot;:3.315,&quot;v&quot;:-0.4},{&quot;t&quot;:3.508,&quot;v&quot;:0},{&quot;t&quot;:8.128,&quot;v&quot;:-0.3},{&quot;t&quot;:8.32,&quot;v&quot;:-1.5},{&quot;t&quot;:8.705,&quot;v&quot;:-1.6},{&quot;t&quot;:8.898,&quot;v&quot;:-0.7},{&quot;t&quot;:9.86,&quot;v&quot;:-0.2},{&quot;t&quot;:10.053,&quot;v&quot;:0},{&quot;t&quot;:11.015,&quot;v&quot;:0},{&quot;t&quot;:11.208,&quot;v&quot;:-1.1},{&quot;t&quot;:11.4,&quot;v&quot;:-0.5},{&quot;t&quot;:11.593,&quot;v&quot;:-0.2},{&quot;t&quot;:11.785,&quot;v&quot;:0},{&quot;t&quot;:11.978,&quot;v&quot;:-0.7},{&quot;t&quot;:12.363,&quot;v&quot;:-1.1},{&quot;t&quot;:12.555,&quot;v&quot;:-1.5},{&quot;t&quot;:12.748,&quot;v&quot;:-1.1},{&quot;t&quot;:12.94,&quot;v&quot;:-0.7},{&quot;t&quot;:13.133,&quot;v&quot;:-0.3},{&quot;t&quot;:13.325,&quot;v&quot;:0},{&quot;t&quot;:13.518,&quot;v&quot;:-0.8},{&quot;t&quot;:13.71,&quot;v&quot;:-0.4},{&quot;t&quot;:13.903,&quot;v&quot;:-0.2},{&quot;t&quot;:15.25,&quot;v&quot;:-0.6},{&quot;t&quot;:15.443,&quot;v&quot;:-1.5},{&quot;t&quot;:15.635,&quot;v&quot;:-0.7},{&quot;t&quot;:15.828,&quot;v&quot;:-1.2},{&quot;t&quot;:16.02,&quot;v&quot;:-0.6},{&quot;t&quot;:16.213,&quot;v&quot;:-0.3},{&quot;t&quot;:16.405,&quot;v&quot;:0},{&quot;t&quot;:17.945,&quot;v&quot;:0},{&quot;t&quot;:18.138,&quot;v&quot;:-1.1},{&quot;t&quot;:18.33,&quot;v&quot;:-0.6},{&quot;t&quot;:18.523,&quot;v&quot;:-1.3},{&quot;t&quot;:18.715,&quot;v&quot;:-0.6},{&quot;t&quot;:18.908,&quot;v&quot;:-0.3},{&quot;t&quot;:19.1,&quot;v&quot;:0},{&quot;t&quot;:19.293,&quot;v&quot;:0},{&quot;t&quot;:19.485,&quot;v&quot;:-1.1},{&quot;t&quot;:19.678,&quot;v&quot;:-2.1},{&quot;t&quot;:19.87,&quot;v&quot;:-1.2},{&quot;t&quot;:20.063,&quot;v&quot;:-1.2},{&quot;t&quot;:20.255,&quot;v&quot;:-0.6},{&quot;t&quot;:20.448,&quot;v&quot;:-0.4},{&quot;t&quot;:20.64,&quot;v&quot;:0},{&quot;t&quot;:20.833,&quot;v&quot;:0},{&quot;t&quot;:21.025,&quot;v&quot;:-0.8},{&quot;t&quot;:21.218,&quot;v&quot;:-0.4},{&quot;t&quot;:21.41,&quot;v&quot;:0},{&quot;t&quot;:21.795,&quot;v&quot;:0},{&quot;t&quot;:21.988,&quot;v&quot;:-1.6},{&quot;t&quot;:22.18,&quot;v&quot;:-0.8},{&quot;t&quot;:22.373,&quot;v&quot;:-0.5},{&quot;t&quot;:22.565,&quot;v&quot;:-0.2},{&quot;t&quot;:23.143,&quot;v&quot;:-0.6},{&quot;t&quot;:23.335,&quot;v&quot;:-1.1},{&quot;t&quot;:23.528,&quot;v&quot;:-0.5},{&quot;t&quot;:23.72,&quot;v&quot;:-0.2},{&quot;t&quot;:23.913,&quot;v&quot;:0},{&quot;t&quot;:24.683,&quot;v&quot;:-0.3},{&quot;t&quot;:24.875,&quot;v&quot;:-1.1},{&quot;t&quot;:25.068,&quot;v&quot;:-0.5},{&quot;t&quot;:25.26,&quot;v&quot;:-1.3},{&quot;t&quot;:25.453,&quot;v&quot;:-1},{&quot;t&quot;:25.645,&quot;v&quot;:-0.6},{&quot;t&quot;:26.03,&quot;v&quot;:-1},{&quot;t&quot;:26.223,&quot;v&quot;:-2},{&quot;t&quot;:26.415,&quot;v&quot;:-1.2},{&quot;t&quot;:27.185,&quot;v&quot;:-1.2},{&quot;t&quot;:27.378,&quot;v&quot;:-0.5},{&quot;t&quot;:27.57,&quot;v&quot;:-0.2},{&quot;t&quot;:27.763,&quot;v&quot;:0},{&quot;t&quot;:28.533,&quot;v&quot;:0},{&quot;t&quot;:28.725,&quot;v&quot;:-1.6},{&quot;t&quot;:28.918,&quot;v&quot;:-0.8},{&quot;t&quot;:29.11,&quot;v&quot;:-0.7},{&quot;t&quot;:29.303,&quot;v&quot;:-0.3},{&quot;t&quot;:32.19,&quot;v&quot;:0},{&quot;t&quot;:32.383,&quot;v&quot;:-1.9},{&quot;t&quot;:32.768,&quot;v&quot;:-1.5},{&quot;t&quot;:32.96,&quot;v&quot;:-0.8},{&quot;t&quot;:33.345,&quot;v&quot;:-0.5},{&quot;t&quot;:33.538,&quot;v&quot;:-0.3},{&quot;t&quot;:33.73,&quot;v&quot;:-0.3},{&quot;t&quot;:33.923,&quot;v&quot;:-1.5},{&quot;t&quot;:34.115,&quot;v&quot;:-0.7},{&quot;t&quot;:34.308,&quot;v&quot;:-0.3},{&quot;t&quot;:34.5,&quot;v&quot;:0},{&quot;t&quot;:34.693,&quot;v&quot;:-0.7},{&quot;t&quot;:37.003,&quot;v&quot;:-0.4},{&quot;t&quot;:37.195,&quot;v&quot;:0},{&quot;t&quot;:37.388,&quot;v&quot;:-1},{&quot;t&quot;:37.58,&quot;v&quot;:-1},{&quot;t&quot;:37.773,&quot;v&quot;:-0.4},{&quot;t&quot;:38.158,&quot;v&quot;:0},{&quot;t&quot;:38.35,&quot;v&quot;:-1.6},{&quot;t&quot;:38.543,&quot;v&quot;:-0.7},{&quot;t&quot;:39.12,&quot;v&quot;:-0.4},{&quot;t&quot;:39.313,&quot;v&quot;:0},{&quot;t&quot;:39.505,&quot;v&quot;:-1.8},{&quot;t&quot;:39.698,&quot;v&quot;:-1},{&quot;t&quot;:39.89,&quot;v&quot;:-0.7},{&quot;t&quot;:40.083,&quot;v&quot;:-0.4},{&quot;t&quot;:41.045,&quot;v&quot;:0},{&quot;t&quot;:41.238,&quot;v&quot;:-1.9},{&quot;t&quot;:41.43,&quot;v&quot;:-1.6},{&quot;t&quot;:41.623,&quot;v&quot;:-1.1},{&quot;t&quot;:41.815,&quot;v&quot;:-0.5},{&quot;t&quot;:42.008,&quot;v&quot;:-0.2},{&quot;t&quot;:42.2,&quot;v&quot;:0},{&quot;t&quot;:43.355,&quot;v&quot;:0},{&quot;t&quot;:43.548,&quot;v&quot;:-0.9},{&quot;t&quot;:43.74,&quot;v&quot;:-0.4},{&quot;t&quot;:43.933,&quot;v&quot;:-1.1},{&quot;t&quot;:44.125,&quot;v&quot;:-0.8},{&quot;t&quot;:44.318,&quot;v&quot;:-0.4},{&quot;t&quot;:46.243,&quot;v&quot;:-0.4},{&quot;t&quot;:46.435,&quot;v&quot;:-1.2},{&quot;t&quot;:46.628,&quot;v&quot;:-0.6},{&quot;t&quot;:46.82,&quot;v&quot;:-0.3},{&quot;t&quot;:47.013,&quot;v&quot;:-1.7},{&quot;t&quot;:47.205,&quot;v&quot;:-0.8},{&quot;t&quot;:47.398,&quot;v&quot;:-0.4},{&quot;t&quot;:47.59,&quot;v&quot;:0},{&quot;t&quot;:47.783,&quot;v&quot;:-1.2},{&quot;t&quot;:47.975,&quot;v&quot;:-0.6},{&quot;t&quot;:48.553,&quot;v&quot;:-0.4},{&quot;t&quot;:48.745,&quot;v&quot;:0},{&quot;t&quot;:48.938,&quot;v&quot;:0},{&quot;t&quot;:49.13,&quot;v&quot;:-0.5},{&quot;t&quot;:49.323,&quot;v&quot;:-0.2},{&quot;t&quot;:49.515,&quot;v&quot;:0},{&quot;t&quot;:49.708,&quot;v&quot;:-0.8},{&quot;t&quot;:49.9,&quot;v&quot;:-0.4},{&quot;t&quot;:50.093,&quot;v&quot;:0},{&quot;t&quot;:50.67,&quot;v&quot;:0},{&quot;t&quot;:50.863,&quot;v&quot;:-0.5},{&quot;t&quot;:51.055,&quot;v&quot;:-0.2},{&quot;t&quot;:51.248,&quot;v&quot;:-1.1},{&quot;t&quot;:51.44,&quot;v&quot;:-0.5},{&quot;t&quot;:51.633,&quot;v&quot;:-1.4},{&quot;t&quot;:51.825,&quot;v&quot;:-1},{&quot;t&quot;:52.018,&quot;v&quot;:-0.5},{&quot;t&quot;:52.21,&quot;v&quot;:-0.2},{&quot;t&quot;:52.403,&quot;v&quot;:0},{&quot;t&quot;:53.75,&quot;v&quot;:0},{&quot;t&quot;:53.943,&quot;v&quot;:-0.5},{&quot;t&quot;:54.135,&quot;v&quot;:-1.6},{&quot;t&quot;:54.328,&quot;v&quot;:-0.8},{&quot;t&quot;:54.713,&quot;v&quot;:-0.6},{&quot;t&quot;:54.905,&quot;v&quot;:-0.3},{&quot;t&quot;:55.098,&quot;v&quot;:-1.4},{&quot;t&quot;:55.29,&quot;v&quot;:-1},{&quot;t&quot;:55.483,&quot;v&quot;:-0.6},{&quot;t&quot;:55.675,&quot;v&quot;:-0.3},{&quot;t&quot;:55.868,&quot;v&quot;:0},{&quot;t&quot;:57.6,&quot;v&quot;:0},{&quot;t&quot;:57.793,&quot;v&quot;:-0.8},{&quot;t&quot;:57.985,&quot;v&quot;:-0.3},{&quot;t&quot;:58.178,&quot;v&quot;:0},{&quot;t&quot;:58.37,&quot;v&quot;:-1.1},{&quot;t&quot;:58.563,&quot;v&quot;:-0.5},{&quot;t&quot;:59.14,&quot;v&quot;:-0.3},{&quot;t&quot;:59.333,&quot;v&quot;:0},{&quot;t&quot;:59.718,&quot;v&quot;:0},{&quot;t&quot;:59.91,&quot;v&quot;:-1.6},{&quot;t&quot;:60.103,&quot;v&quot;:-0.9},{&quot;t&quot;:60.488,&quot;v&quot;:-0.6},{&quot;t&quot;:60.68,&quot;v&quot;:-0.3},{&quot;t&quot;:60.873,&quot;v&quot;:0},{&quot;t&quot;:61.065,&quot;v&quot;:-1.1},{&quot;t&quot;:61.643,&quot;v&quot;:-1.1},{&quot;t&quot;:61.835,&quot;v&quot;:-0.5},{&quot;t&quot;:62.22,&quot;v&quot;:-0.4},{&quot;t&quot;:62.413,&quot;v&quot;:0},{&quot;t&quot;:62.798,&quot;v&quot;:0},{&quot;t&quot;:62.99,&quot;v&quot;:-0.9},{&quot;t&quot;:63.183,&quot;v&quot;:-0.4},{&quot;t&quot;:63.76,&quot;v&quot;:0},{&quot;t&quot;:63.953,&quot;v&quot;:-1.5},{&quot;t&quot;:64.145,&quot;v&quot;:-1},{&quot;t&quot;:64.338,&quot;v&quot;:-1.6},{&quot;t&quot;:64.723,&quot;v&quot;:-1.3},{&quot;t&quot;:64.915,&quot;v&quot;:-1},{&quot;t&quot;:65.108,&quot;v&quot;:-0.5},{&quot;t&quot;:65.3,&quot;v&quot;:-0.2},{&quot;t&quot;:65.493,&quot;v&quot;:0},{&quot;t&quot;:65.685,&quot;v&quot;:-0.5},{&quot;t&quot;:65.878,&quot;v&quot;:-0.2},{&quot;t&quot;:66.07,&quot;v&quot;:0},{&quot;t&quot;:69.728,&quot;v&quot;:0},{&quot;t&quot;:69.92,&quot;v&quot;:-1.1},{&quot;t&quot;:70.113,&quot;v&quot;:-0.8},{&quot;t&quot;:70.305,&quot;v&quot;:-0.4},{&quot;t&quot;:70.883,&quot;v&quot;:0},{&quot;t&quot;:71.075,&quot;v&quot;:-2.2},{&quot;t&quot;:71.268,&quot;v&quot;:-1.6},{&quot;t&quot;:71.46,&quot;v&quot;:-0.8},{&quot;t&quot;:71.653,&quot;v&quot;:-0.4},{&quot;t&quot;:71.845,&quot;v&quot;:0},{&quot;t&quot;:72.23,&quot;v&quot;:0},{&quot;t&quot;:72.423,&quot;v&quot;:-0.7},{&quot;t&quot;:72.615,&quot;v&quot;:-0.3},{&quot;t&quot;:72.808,&quot;v&quot;:0},{&quot;t&quot;:73,&quot;v&quot;:0},{&quot;t&quot;:73.193,&quot;v&quot;:-0.7},{&quot;t&quot;:73.578,&quot;v&quot;:-0.3},{&quot;t&quot;:73.77,&quot;v&quot;:0},{&quot;t&quot;:74.348,&quot;v&quot;:0},{&quot;t&quot;:74.54,&quot;v&quot;:-1.8},{&quot;t&quot;:74.733,&quot;v&quot;:-0.8},{&quot;t&quot;:74.925,&quot;v&quot;:-0.4},{&quot;t&quot;:75.118,&quot;v&quot;:0},{&quot;t&quot;:75.31,&quot;v&quot;:-2},{&quot;t&quot;:75.503,&quot;v&quot;:-1.7},{&quot;t&quot;:75.695,&quot;v&quot;:-1.1},{&quot;t&quot;:75.888,&quot;v&quot;:-2.1},{&quot;t&quot;:76.08,&quot;v&quot;:-1.5},{&quot;t&quot;:76.273,&quot;v&quot;:-0.9},{&quot;t&quot;:76.465,&quot;v&quot;:-0.4},{&quot;t&quot;:76.658,&quot;v&quot;:0},{&quot;t&quot;:76.85,&quot;v&quot;:0},{&quot;t&quot;:77,&quot;v&quot;:0}]},{&quot;target&quot;:&quot;fx.n3.gain&quot;,&quot;points&quot;:[{&quot;t&quot;:0,&quot;v&quot;:0},{&quot;t&quot;:0.62,&quot;v&quot;:0},{&quot;t&quot;:0.813,&quot;v&quot;:-1.6},{&quot;t&quot;:1.005,&quot;v&quot;:-3.6},{&quot;t&quot;:2.353,&quot;v&quot;:-3.3},{&quot;t&quot;:2.545,&quot;v&quot;:-3.1},{&quot;t&quot;:2.93,&quot;v&quot;:-2.8},{&quot;t&quot;:3.123,&quot;v&quot;:-3.6},{&quot;t&quot;:4.085,&quot;v&quot;:-3.3},{&quot;t&quot;:4.278,&quot;v&quot;:-3.1},{&quot;t&quot;:4.47,&quot;v&quot;:-2.8},{&quot;t&quot;:4.663,&quot;v&quot;:-2.6},{&quot;t&quot;:5.048,&quot;v&quot;:-2.2},{&quot;t&quot;:5.24,&quot;v&quot;:-2.1},{&quot;t&quot;:5.625,&quot;v&quot;:-1.7},{&quot;t&quot;:5.818,&quot;v&quot;:-1.6},{&quot;t&quot;:6.588,&quot;v&quot;:-1.2},{&quot;t&quot;:6.78,&quot;v&quot;:-3.5},{&quot;t&quot;:11.785,&quot;v&quot;:-3.1},{&quot;t&quot;:11.978,&quot;v&quot;:-3},{&quot;t&quot;:12.17,&quot;v&quot;:-3.6},{&quot;t&quot;:16.213,&quot;v&quot;:-3.3},{&quot;t&quot;:16.405,&quot;v&quot;:-3.1},{&quot;t&quot;:16.598,&quot;v&quot;:-2.8},{&quot;t&quot;:16.79,&quot;v&quot;:-2.6},{&quot;t&quot;:17.175,&quot;v&quot;:-2.2},{&quot;t&quot;:17.368,&quot;v&quot;:-2.1},{&quot;t&quot;:17.753,&quot;v&quot;:-1.7},{&quot;t&quot;:17.945,&quot;v&quot;:-3.6},{&quot;t&quot;:18.908,&quot;v&quot;:-3.3},{&quot;t&quot;:19.1,&quot;v&quot;:-3.1},{&quot;t&quot;:19.293,&quot;v&quot;:-3.6},{&quot;t&quot;:21.41,&quot;v&quot;:-3.3},{&quot;t&quot;:21.603,&quot;v&quot;:-3.1},{&quot;t&quot;:21.795,&quot;v&quot;:-2.8},{&quot;t&quot;:21.988,&quot;v&quot;:-3.6},{&quot;t&quot;:24.105,&quot;v&quot;:-3.3},{&quot;t&quot;:24.298,&quot;v&quot;:-3.1},{&quot;t&quot;:24.49,&quot;v&quot;:-2.8},{&quot;t&quot;:24.683,&quot;v&quot;:-3.6},{&quot;t&quot;:27.57,&quot;v&quot;:-3.3},{&quot;t&quot;:27.763,&quot;v&quot;:-3.1},{&quot;t&quot;:27.955,&quot;v&quot;:-3.6},{&quot;t&quot;:29.688,&quot;v&quot;:-3.3},{&quot;t&quot;:29.88,&quot;v&quot;:-3.1},{&quot;t&quot;:30.073,&quot;v&quot;:-2.8},{&quot;t&quot;:30.265,&quot;v&quot;:-2.6},{&quot;t&quot;:30.65,&quot;v&quot;:-2.2},{&quot;t&quot;:30.843,&quot;v&quot;:-2.1},{&quot;t&quot;:31.228,&quot;v&quot;:-1.7},{&quot;t&quot;:31.42,&quot;v&quot;:-1.6},{&quot;t&quot;:31.613,&quot;v&quot;:-1.5},{&quot;t&quot;:31.805,&quot;v&quot;:-3.6},{&quot;t&quot;:34.308,&quot;v&quot;:-3.3},{&quot;t&quot;:34.5,&quot;v&quot;:-3.1},{&quot;t&quot;:34.693,&quot;v&quot;:-3.6},{&quot;t&quot;:37.965,&quot;v&quot;:-3.3},{&quot;t&quot;:38.158,&quot;v&quot;:-3.1},{&quot;t&quot;:38.35,&quot;v&quot;:-3.6},{&quot;t&quot;:42.008,&quot;v&quot;:-3.3},{&quot;t&quot;:42.2,&quot;v&quot;:-3.1},{&quot;t&quot;:42.393,&quot;v&quot;:-3.6},{&quot;t&quot;:44.125,&quot;v&quot;:-3.3},{&quot;t&quot;:44.318,&quot;v&quot;:-3.1},{&quot;t&quot;:44.51,&quot;v&quot;:-2.8},{&quot;t&quot;:44.703,&quot;v&quot;:-2.6},{&quot;t&quot;:45.088,&quot;v&quot;:-2.2},{&quot;t&quot;:45.28,&quot;v&quot;:-2.1},{&quot;t&quot;:45.665,&quot;v&quot;:-1.7},{&quot;t&quot;:45.858,&quot;v&quot;:-3.6},{&quot;t&quot;:50.285,&quot;v&quot;:-3.3},{&quot;t&quot;:50.478,&quot;v&quot;:-3.1},{&quot;t&quot;:50.67,&quot;v&quot;:-3.6},{&quot;t&quot;:53.558,&quot;v&quot;:-3.3},{&quot;t&quot;:53.75,&quot;v&quot;:-3.1},{&quot;t&quot;:53.943,&quot;v&quot;:-3.6},{&quot;t&quot;:56.06,&quot;v&quot;:-3.3},{&quot;t&quot;:56.253,&quot;v&quot;:-3.1},{&quot;t&quot;:56.445,&quot;v&quot;:-2.8},{&quot;t&quot;:56.638,&quot;v&quot;:-2.6},{&quot;t&quot;:57.023,&quot;v&quot;:-2.2},{&quot;t&quot;:57.215,&quot;v&quot;:-2.1},{&quot;t&quot;:57.6,&quot;v&quot;:-1.7},{&quot;t&quot;:57.793,&quot;v&quot;:-3.6},{&quot;t&quot;:62.413,&quot;v&quot;:-3.3},{&quot;t&quot;:62.605,&quot;v&quot;:-3.1},{&quot;t&quot;:62.798,&quot;v&quot;:-3.6},{&quot;t&quot;:66.455,&quot;v&quot;:-3.3},{&quot;t&quot;:66.648,&quot;v&quot;:-3.1},{&quot;t&quot;:66.84,&quot;v&quot;:-2.8},{&quot;t&quot;:67.033,&quot;v&quot;:-2.6},{&quot;t&quot;:67.418,&quot;v&quot;:-2.2},{&quot;t&quot;:67.61,&quot;v&quot;:-2.1},{&quot;t&quot;:67.995,&quot;v&quot;:-1.7},{&quot;t&quot;:68.188,&quot;v&quot;:-1.6},{&quot;t&quot;:68.958,&quot;v&quot;:-1.2},{&quot;t&quot;:69.15,&quot;v&quot;:-1.1},{&quot;t&quot;:69.535,&quot;v&quot;:-0.9},{&quot;t&quot;:69.728,&quot;v&quot;:-3.5},{&quot;t&quot;:76.658,&quot;v&quot;:-3.1},{&quot;t&quot;:76.85,&quot;v&quot;:-2.8},{&quot;t&quot;:77.235,&quot;v&quot;:-2.4},{&quot;t&quot;:77.428,&quot;v&quot;:-2.2},{&quot;t&quot;:77.813,&quot;v&quot;:-1.9},{&quot;t&quot;:78.005,&quot;v&quot;:-1.7},{&quot;t&quot;:78.775,&quot;v&quot;:-1.3},{&quot;t&quot;:78.968,&quot;v&quot;:-1.2},{&quot;t&quot;:79.93,&quot;v&quot;:-0.8},{&quot;t&quot;:80.123,&quot;v&quot;:-0.7},{&quot;t&quot;:83.203,&quot;v&quot;:-0.2},{&quot;t&quot;:83.395,&quot;v&quot;:0}]}]}"></audio>
+<audio data-hf-id="hf-br4f" id="sfx" src="audio/sfx.wav" class="clip" data-start="0" data-duration="77" data-track-index="12" data-volume="1"></audio>
+</div>
+
+<script src="assets/gsap.min.js"></script>
+<script src="assets/three.min.js"></script>
+<script src="assets/core-scene.js"></script>
+<script src="assets/motion.js"></script>
+<script>
+(function(){
+  const duration=77;
+  // Motion mini creates native WAAPI animations. HyperFrames' WAAPI adapter
+  // seeks absolute composition time; paused, finite animations use fill:both.
+  const motions=[];
+  function move(target, frames, at, duration=.65, ease=[.22,1,.36,1]) {
+    document.querySelectorAll(target).forEach(el=>{
+      const control=MotionMini.animate(el,frames,{delay:at,duration,ease,fill:'both'});
+      control.pause(); motions.push(control);
+    });
+  }
+  const starts=[0,6,17,31,45,57,69], ends=[6,17,31,45,57,69,77];
+  const ids=['pressure','kujo','system','teams','ready','install','close'];
+  document.querySelectorAll('.scramble').forEach(el=>el.textContent=el.dataset.text);
+  ids.forEach((id,i)=>{
+    const q='#s-'+id, at=starts[i];
+    move(q,{opacity:[0,1]},at,.6);
+    move(q+' .scene-content',{transform:['translateX(45px)','translateX(0px)']},at,.75);
+    move(q+' .eyebrow',{opacity:[0,1],transform:['translateY(16px)','translateY(0px)']},at+.62,.4);
+    document.querySelectorAll(q+' .headline').forEach((el,j)=>{el.id=id+'-heading-'+j;move('#'+el.id,{opacity:[0,1],transform:['translateY(35px)','translateY(0px)']},at+.72+j*.18,.7);});
+    move(q+' .lead',{opacity:[0,1],transform:['translateY(18px)','translateY(0px)']},at+1.1,.6);
+  });
+  move('#s-pressure .slice.a',{transform:['translateX(65px)','translateX(-15px)']},0,6,'linear');
+  move('#s-pressure .slice.b',{transform:['translateX(-50px)','translateX(20px)']},0,6,'linear');
+  move('#s-pressure .slice.c',{transform:['translateX(45px)','translateX(-25px)']},0,6,'linear');
+  document.querySelectorAll('.pill').forEach((el,i)=>{el.id='pill-'+i;move('#'+el.id,{opacity:[0,1],transform:['translateY(25px)','translateY(0px)']},8+i*.18,.5);});
+  move('.flow-line',{transform:['scaleX(0)','scaleX(1)']},18.2,7,'linear');
+  document.querySelectorAll('.system-node').forEach((el,i)=>{el.id='node-'+i;move('#'+el.id,{opacity:[0,1],transform:['translateY(42px)','translateY(0px)']},18.3+i*1.5,.65);move('#'+el.id,{backgroundColor:['#fff','#dedede','#fff']},19+i*1.5,1.3);});
+  move('.system-proof',{opacity:[0,1]},26,.6);
+  document.querySelectorAll('.team-card').forEach((el,i)=>{el.id='team-'+i;move('#'+el.id,{opacity:[0,1],transform:['translateY(50px)','translateY(0px)']},32.3+i*2.5,.75);move('#'+el.id+' img',{transform:['scale(1)','scale(1.08)']},32.3+i*2.5,10-i*2.5,'linear');});
+  document.querySelectorAll('.stat').forEach((el,i)=>{el.id='stat-'+i;move('#'+el.id,{opacity:[0,1],transform:['translateY(48px)','translateY(0px)']},46.3+i*.65,.75);});
+  move('.modal',{opacity:[0,1],transform:['translateX(-80px)','translateX(0px)']},58.2,.8);
+  move('.terminal',{opacity:[0,1],transform:['translateX(80px)','translateX(0px)']},59.3,.8);
+  move('.install-note',{opacity:[0,1]},61,.6);
+  move('.logo-lockup',{opacity:[0,1],transform:['scale(.86)','scale(1)']},69.7,.8);
+  document.querySelectorAll('.payoff span').forEach((el,i)=>{el.id='payoff-'+i;move('#'+el.id,{opacity:[0,1],transform:['translateY(24px)','translateY(0px)']},70+i*.5,.5);});
+  move('.tagline',{opacity:[0,1],transform:['translateY(18px)','translateY(0px)']},72,.65);
+  move('.cta-safe',{opacity:[0,1]},73,.5);
+  const tl=gsap.timeline({paused:true}), clock={t:0};
+  if(window.__coreScene){window.__coreScene.init({container:document.getElementById('core-layer')});tl.to(clock,{t:duration,duration,ease:'none',onUpdate:()=>window.__coreScene.setTime(clock.t)},0);}
+  window.__timelines=window.__timelines||{};
+  window.__timelines['kujo-from-prompt-to-proof']=tl;
+  window.__motionControls=motions;
+})();
+</script></body></html>

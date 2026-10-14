@@ -1,0 +1,16 @@
+{
+  "pages_before": 246,
+  "pages_after": 247,
+  "routes_removed": 0,
+  "routes_added": [
+    "https://kujolang.ai/ecosystem/source/"
+  ],
+  "missing_titles": 0,
+  "missing_canonicals": 1,
+  "schema_errors": 0,
+  "broken_internal_destinations": 0,
+  "source_inbound_pages": 3,
+  "docs_routes_retained": 107,
+  "hero_bytes": 48154,
+  "social_bytes": 188551
+}

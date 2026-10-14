@@ -1,0 +1,151 @@
+{
+  "checked_at": "2026-10-14",
+  "content_commit": "4e7110308b9815c254a2fd4bfbc872af0749641b",
+  "build_and_deployment_run": 38597461622,
+  "artifact_id": 11911223490,
+  "result": "passed",
+  "probes": [
+    {
+      "url": "https://kujolang.ai/ecosystem/source/",
+      "status": 200,
+      "effective_url": "https://kujolang.ai/ecosystem/source/",
+      "redirects": 0,
+      "seconds": 0.269103,
+      "bytes": 21083,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "http://kujolang.ai/ecosystem/source/",
+      "status": 200,
+      "effective_url": "https://kujolang.ai/ecosystem/source/",
+      "redirects": 1,
+      "seconds": 0.357709,
+      "bytes": 21083,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "https://www.kujolang.ai/ecosystem/source/",
+      "status": 200,
+      "effective_url": "https://kujolang.ai/ecosystem/source/",
+      "redirects": 1,
+      "seconds": 0.675442,
+      "bytes": 21083,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "https://kujolang.ai/ecosystem/source",
+      "status": 200,
+      "effective_url": "https://kujolang.ai/ecosystem/source/",
+      "redirects": 1,
+      "seconds": 0.928789,
+      "bytes": 21083,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "https://kujolang.ai/ecosystem/source/?release=v0.1.0",
+      "status": 200,
+      "effective_url": "https://kujolang.ai/ecosystem/source/?release=v0.1.0",
+      "redirects": 0,
+      "seconds": 0.235505,
+      "bytes": 21083,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "https://docs.kujolang.ai/tools/source/",
+      "status": 200,
+      "effective_url": "https://docs.kujolang.ai/tools/source/",
+      "redirects": 0,
+      "seconds": 0.835032,
+      "bytes": 11801,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "https://kujolang.ai/robots.txt",
+      "status": 200,
+      "effective_url": "https://kujolang.ai/robots.txt",
+      "redirects": 0,
+      "seconds": 0.386837,
+      "bytes": 65,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "https://kujolang.ai/sitemap.xml",
+      "status": 200,
+      "effective_url": "https://kujolang.ai/sitemap.xml",
+      "redirects": 0,
+      "seconds": 0.347422,
+      "bytes": 38690,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "https://docs.kujolang.ai/robots.txt",
+      "status": 200,
+      "effective_url": "https://docs.kujolang.ai/robots.txt",
+      "redirects": 0,
+      "seconds": 0.324039,
+      "bytes": 70,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "https://docs.kujolang.ai/sitemap.xml",
+      "status": 200,
+      "effective_url": "https://docs.kujolang.ai/sitemap.xml",
+      "redirects": 0,
+      "seconds": 0.735649,
+      "bytes": 7204,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "https://kujolang.ai/assets/images/ecosystem/source-review-evidence-vault.webp",
+      "status": 200,
+      "effective_url": "https://kujolang.ai/assets/images/ecosystem/source-review-evidence-vault.webp",
+      "redirects": 0,
+      "seconds": 0.681558,
+      "bytes": 48154,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "https://kujolang.ai/assets/images/social/source.jpg",
+      "status": 200,
+      "effective_url": "https://kujolang.ai/assets/images/social/source.jpg",
+      "redirects": 0,
+      "seconds": 1.204133,
+      "bytes": 188551,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/source/releases/tag/v0.1.0",
+      "status": 200,
+      "effective_url": "https://github.com/kujolang/source/releases/tag/v0.1.0",
+      "redirects": 0,
+      "seconds": 1.345048,
+      "bytes": 190743,
+      "error": "",
+      "exit_code": 0
+    },
+    {
+      "url": "https://mcp.kujolang.ai/health",
+      "status": 200,
+      "effective_url": "https://mcp.kujolang.ai/health",
+      "redirects": 0,
+      "seconds": 0.660479,
+      "bytes": 216,
+      "error": "",
+      "exit_code": 0
+    }
+  ],
+  "hero_sha256": "093df1e85a7ff8d5cfea4c76325d07cc08998a9aff5ce33d44bdeb1ab96f166d",
+  "social_sha256": "95fcb41008f32ccb8bc85e09174709c68d6b7186d72c32f67b598d044300ee64"
+}

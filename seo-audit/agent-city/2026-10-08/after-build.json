@@ -1,0 +1,9 @@
+{
+  "run": "https://github.com/kujolang/kujolang.ai/actions/runs/37839188002",
+  "sha": "dfd5c610e24cab2d129331fa523f40229a262407",
+  "artifactId": 11577421757,
+  "artifactZipSha256": "664c79f459be9667ab711f53ab27b75b4632d20ffa0deb1467ccba6b781a92de",
+  "extraction": "Unchanged source assets hard-linked to conserve shared disk; generated files extracted separately. No generated files are modified by validation.",
+  "linkedFiles": 495,
+  "generatedFiles": 1615
+}

@@ -1,0 +1,7 @@
+phase,url,user_agent,status,limitations
+baseline,https://kujolang.ai/robots.txt,Googlebot,200,Spoofed UA only; verified crawler IP access not established; owner policy unchanged
+baseline,https://kujolang.ai/robots.txt,OAI-SearchBot,200,Spoofed UA only; verified crawler IP access not established; owner policy unchanged
+baseline,https://kujolang.ai/robots.txt,GPTBot,200,Spoofed UA only; verified crawler IP access not established; owner policy unchanged
+baseline,https://docs.kujolang.ai/robots.txt,Googlebot,200,Spoofed UA only; verified crawler IP access not established; owner policy unchanged
+baseline,https://docs.kujolang.ai/robots.txt,OAI-SearchBot,200,Spoofed UA only; verified crawler IP access not established; owner policy unchanged
+baseline,https://docs.kujolang.ai/robots.txt,GPTBot,200,Spoofed UA only; verified crawler IP access not established; owner policy unchanged

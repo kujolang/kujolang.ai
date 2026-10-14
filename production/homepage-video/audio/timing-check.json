@@ -1,0 +1,65 @@
+[
+  {
+    "id": "pressure",
+    "start": 0.7,
+    "duration": 3.6,
+    "end": 4.3,
+    "must_end": 5.8,
+    "fits": true,
+    "playback_rate": 1.0
+  },
+  {
+    "id": "kujo",
+    "start": 6.7,
+    "duration": 9.6,
+    "end": 16.3,
+    "must_end": 16.8,
+    "fits": true,
+    "playback_rate": 1.0
+  },
+  {
+    "id": "system",
+    "start": 17.7,
+    "duration": 12.0,
+    "end": 29.7,
+    "must_end": 30.8,
+    "fits": true,
+    "playback_rate": 1.0
+  },
+  {
+    "id": "build",
+    "start": 31.7,
+    "duration": 12.72,
+    "end": 44.42,
+    "must_end": 44.8,
+    "fits": true,
+    "playback_rate": 1.0
+  },
+  {
+    "id": "ready",
+    "start": 45.7,
+    "duration": 10.32,
+    "end": 56.02,
+    "must_end": 56.8,
+    "fits": true,
+    "playback_rate": 1.0
+  },
+  {
+    "id": "install",
+    "start": 57.7,
+    "duration": 8.88,
+    "end": 66.58,
+    "must_end": 68.8,
+    "fits": true,
+    "playback_rate": 1.0
+  },
+  {
+    "id": "close",
+    "start": 69.7,
+    "duration": 6.8,
+    "end": 76.5,
+    "must_end": 76.8,
+    "fits": true,
+    "playback_rate": 1.0
+  }
+]

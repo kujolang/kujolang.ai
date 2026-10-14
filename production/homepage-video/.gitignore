@@ -1,0 +1,9 @@
+node_modules/
+.hyperframes/
+*.log
+lint.json
+check.json
+snapshots/
+__pycache__/
+
+.thumbnails/

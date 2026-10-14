@@ -1,0 +1,118 @@
+[
+  {
+    "name": "ecosystem",
+    "device": "desktop",
+    "status": 200,
+    "title": "Source — Git Review for Agent Contributions | Kujolang.ai",
+    "h1": [
+      "Source"
+    ],
+    "width": 1440,
+    "viewport": 1440,
+    "canonical": "https://kujolang.ai/ecosystem/source/",
+    "images": [
+      {
+        "src": "https://kujolang.ai/assets/images/kujo-logomark.svg",
+        "loaded": true,
+        "width": 149,
+        "height": 150
+      },
+      {
+        "src": "https://kujolang.ai/images/source-review-evidence-vault-911fc6626bb9.webp",
+        "loaded": true,
+        "width": 1199,
+        "height": 513
+      },
+      {
+        "src": "https://kujolang.ai/assets/images/kujo-logomark.svg",
+        "loaded": true,
+        "width": 149,
+        "height": 150
+      }
+    ]
+  },
+  {
+    "name": "ecosystem",
+    "device": "mobile",
+    "status": 200,
+    "title": "Source — Git Review for Agent Contributions | Kujolang.ai",
+    "h1": [
+      "Source"
+    ],
+    "width": 390,
+    "viewport": 390,
+    "canonical": "https://kujolang.ai/ecosystem/source/",
+    "images": [
+      {
+        "src": "https://kujolang.ai/assets/images/kujo-logomark.svg",
+        "loaded": true,
+        "width": 149,
+        "height": 150
+      },
+      {
+        "src": "https://kujolang.ai/images/source-review-evidence-vault-911fc6626bb9.webp",
+        "loaded": true,
+        "width": 358,
+        "height": 153
+      },
+      {
+        "src": "https://kujolang.ai/assets/images/kujo-logomark.svg",
+        "loaded": true,
+        "width": 149,
+        "height": 150
+      }
+    ]
+  },
+  {
+    "name": "docs",
+    "device": "desktop",
+    "status": 200,
+    "title": "Source | Kujo Docs",
+    "h1": [
+      "Source"
+    ],
+    "width": 1440,
+    "viewport": 1440,
+    "canonical": "https://docs.kujolang.ai/tools/source/",
+    "images": [
+      {
+        "src": "https://docs.kujolang.ai/assets/img/kujo-logomark-black.svg",
+        "loaded": true,
+        "width": 149,
+        "height": 150
+      },
+      {
+        "src": "https://docs.kujolang.ai/assets/img/kujo-logomark-black.svg",
+        "loaded": true,
+        "width": 149,
+        "height": 150
+      }
+    ]
+  },
+  {
+    "name": "docs",
+    "device": "mobile",
+    "status": 200,
+    "title": "Source | Kujo Docs",
+    "h1": [
+      "Source"
+    ],
+    "width": 390,
+    "viewport": 390,
+    "canonical": "https://docs.kujolang.ai/tools/source/",
+    "images": [
+      {
+        "src": "https://docs.kujolang.ai/assets/img/kujo-logomark-black.svg",
+        "loaded": true,
+        "width": 149,
+        "height": 150
+      },
+      {
+        "src": "https://docs.kujolang.ai/assets/img/kujo-logomark-black.svg",
+        "loaded": true,
+        "width": 149,
+        "height": 150
+      }
+    ]
+  }
+]

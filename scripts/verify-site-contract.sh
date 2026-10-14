@@ -55,6 +55,7 @@ require_file "${output_dir}/writing/index.html"
 require_file "${output_dir}/assets/js/vendor/scramble-decode.js"
 require_file "${output_dir}/assets/prompts/kujo-agent-onboarding.txt"
 require_file "${output_dir}/assets/videos/kujo-intro.mp4"
+require_file "${output_dir}/assets/videos/kujo-intro.vtt"
 require_file "${output_dir}/favicon.ico"
 require_file "${output_dir}/favicon.svg"
 require_file "${output_dir}/favicon-16x16.png"
@@ -196,18 +197,18 @@ require_text "${output_dir}/ecosystem/searchbridge/index.html" 'href="https://gi
 require_text "${output_dir}/ecosystem/searchbridge/index.html" 'width="1916" height="821"'
 require_text "${output_dir}/ecosystem/siteprobe/index.html" 'href="https://github.com/kujolang/siteprobe"'
 require_text "${output_dir}/ecosystem/siteprobe/index.html" 'width="1916" height="821"'
-require_text "${output_dir}/ecosystem/cms/index.html" 'Kujo CMS 1.1.0'
+require_text "${output_dir}/ecosystem/cms/index.html" 'Kujo CMS 1.2.0'
 require_text "${output_dir}/ecosystem/presentations/index.html" 'Kujo Presentations turns structured deck source into a browser-native static site.'
 require_text "${output_dir}/ecosystem/presentations/index.html" 'https://presentations.kujolang.ai/'
 require_text "${output_dir}/ecosystem/presentations/index.html" 'https://docs.kujolang.ai/showcases/presentations/'
 require_text "${output_dir}/ecosystem/cms/index.html" 'Abilities API'
 require_text "${output_dir}/ecosystem/cms/index.html" 'WebMCP'
-require_text "${output_dir}/ecosystem/cms/index.html" 'https://github.com/kujolang/cms/releases/tag/v1.1.0'
-require_text "${output_dir}/ecosystem/cms/index.html" 'https://github.com/kujolang/cms-example/releases/tag/v1.1.0'
+require_text "${output_dir}/ecosystem/cms/index.html" 'https://github.com/kujolang/cms/releases/tag/v1.2.0'
+require_text "${output_dir}/ecosystem/cms/index.html" 'https://github.com/kujolang/cms-example'
 require_text "${output_dir}/ecosystem/ability/index.html" 'Kujo Ability gives'
 require_text "${output_dir}/ecosystem/ability/index.html" 'width="1916" height="821"'
 require_text "${output_dir}/ecosystem/ability/index.html" 'https://docs.kujolang.ai/tools/ability/'
-require_text "${output_dir}/ecosystem/skills/kujo-cms-workflows/index.html" 'CMS 1.1.0 adds framework-neutral sessions'
+require_text "${output_dir}/ecosystem/skills/kujo-cms-workflows/index.html" 'CMS 1.2.0 includes framework-neutral sessions'
 require_text "${output_dir}/llms.txt" 'https://kujolang.ai/ecosystem/cms/'
 require_text "${output_dir}/llms.txt" 'https://kujolang.ai/ecosystem/skills/kujo-cms-workflows/'
 
@@ -257,7 +258,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 243 ]] || fail "expected 243 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 246 ]] || fail "expected 246 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -286,11 +287,11 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 52 ]] || fail "expected 52 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 55 ]] || fail "expected 52 project and 3 catalog output routes, found ${ecosystem_outputs}"
-[[ "$primitive_count" == 15 ]] || fail "expected 15 primitive cards, found ${primitive_count}"
+[[ "$ecosystem_sources" == 55 ]] || fail "expected 55 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 58 ]] || fail "expected 55 project and 3 catalog output routes, found ${ecosystem_outputs}"
+[[ "$primitive_count" == 16 ]] || fail "expected 16 primitive cards, found ${primitive_count}"
 [[ "$tooling_count" == 29 ]] || fail "expected 29 tooling cards, found ${tooling_count}"
-[[ "$showcase_count" == 8 ]] || fail "expected 8 showcase cards, found ${showcase_count}"
+[[ "$showcase_count" == 10 ]] || fail "expected 10 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
 	image_path=$(sed -n 's/^featured_image: "\(.*\.webp\)"$/\1/p' "$source_file")
@@ -453,11 +454,11 @@ for scan_path in "${scan_paths[@]}"; do
 done
 
 if command -v rg >/dev/null 2>&1; then
-	obsolete_naming=$(rg -n 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network|Intake' \
+	obsolete_naming=$(rg -n 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network' \
 		"${existing_scan_paths[@]}" \
 		--glob '*.html' --glob '*.md' --glob '*.txt' || true)
 	else
-	obsolete_naming=$(grep -REn 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network|Intake' \
+	obsolete_naming=$(grep -REn 'K[-–—]U[-–—]J[-–—]O|\bKUJO\b|Security network' \
 		--include='*.html' --include='*.md' --include='*.txt' \
 		"${existing_scan_paths[@]}" || true)
 fi
@@ -511,9 +512,25 @@ require_text "${output_dir}/ecosystem/kujo/index.html" "Windows x64"
 
 require_text "${output_dir}/ecosystem/kujo/index.html" "<!--email_off-->"
 
+# Keep SSG release setup and catalog discovery aligned.
+require_text "${output_dir}/ecosystem/ssg/index.html" "https://github.com/kujolang/ssg/releases/tag/v1.2.0"
+require_text "${output_dir}/ecosystem/ssg/index.html" "npm ci --ignore-scripts"
+require_text "${output_dir}/ecosystem/ssg/index.html" "esbuild 0.28.2"
+
+require_text "${output_dir}/ecosystem/intake/index.html" "https://github.com/kujolang/intake/releases/tag/v0.2.0"
+require_text "${output_dir}/ecosystem/intake/index.html" "Node.js 20.19"
+
+# Source uses Git/npm; its public release and images must remain discoverable.
+require_text "${output_dir}/ecosystem/source/index.html" "https://github.com/kujolang/source/releases/tag/v0.1.0"
+require_text "${output_dir}/ecosystem/source/index.html" "Node.js 22"
+require_text "${output_dir}/ecosystem/source/index.html" "<title>Source — Git Review for Agent Contributions | Kujolang.ai</title>"
+require_text "${output_dir}/ecosystem/source/index.html" "not a Kennel-installable"
+require_text "${output_dir}/ecosystem/source/index.html" '/assets/images/social/source.jpg'
+require_text "${output_dir}/ecosystem/source/index.html" 'width="1916" height="821"'
+
 if (( failures > 0 )); then
 	printf 'Site contract failed with %d issue(s).\n' "$failures" >&2
 	exit 1
 fi
 
-printf 'Site contract passed: 52 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 55 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

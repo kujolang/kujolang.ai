@@ -9,7 +9,7 @@ order: 70
 install_command: "kennel add mcp"
 github_url: "https://github.com/kujolang/mcp"
 launch_story: "A guarded gateway for exposing useful capabilities to agents through explicit contracts."
-scope_note: "MCP 1.3.2 pins Ability 1.3.2 and adds opt-in controlled STDIO handoffs with one-use admission and completion uncertainty. Handoffs remain alpha; Dispatch owns replay. Review server authority, authentication and deployment boundaries. Historical host certificates retain their exact tested scope."
+scope_note: "MCP 1.3.2 targets Kujo 1.7.0 and retains the first-class generator, standard MCP JSON-RPC methods, hardened generated servers, and the portable Ability host package. Controlled handoffs remain alpha; Dispatch owns replay. Review server authority, authentication and deployment boundaries. Historical host certificates retain their exact tested scope."
 keywords: "MCP, Kujo ecosystem, Primitive, Gateway"
 seo_title: "MCP — Kujo Ecosystem"
 last_updated: "2026-10-14"
@@ -52,10 +52,10 @@ The Ability Gateway repository is private; public source access is not available
 
 ## Version 1.3.2
 
-MCP 1.3.2 requires Kujo 1.6.0 and includes experimental controlled local STDIO Ability handoffs, one-use host admission and bounded evidence references. Lost completion remains uncertain until the effect owner verifies it; Dispatch alone decides replay. Standalone MCP behavior remains available.
+MCP 1.3.2 targets Kujo 1.7.0 and retains `kujo mcp make` as a first-class generator command, standard MCP JSON-RPC methods, bounded scans, fail-closed configuration, audit-safe metadata, and a portable `kujo-ability` host package for Codex, Copilot, Cursor, VS Code, and generic MCP clients. Experimental controlled local STDIO Ability handoffs retain one-use host admission and bounded evidence references. Lost completion remains uncertain until the effect owner verifies it; Dispatch alone decides replay.
 
 Wave C beta remains opt-in in the bounded single-effect required/deny domain, with alpha retained. Wave D handoffs remain alpha under a trusted local host. No remote participant trust or exactly-once guarantee is claimed.
 
 ## October 14 release update
 
-Windows canonical path-boundary comparisons now admit valid in-root operations while preserving traversal, sibling-prefix and read-only guards. The framework requires Kujo 1.7.0; the unchanged portable Ability bridge remains 1.3.1.
+Windows canonical path comparisons admit valid in-root operations while preserving traversal, sibling-prefix and read-only guards. Kujo 1.7.0 remains the minimum. The independently packaged portable Ability bridge remains 1.3.1; certification applies only to its recorded hosts and sources.

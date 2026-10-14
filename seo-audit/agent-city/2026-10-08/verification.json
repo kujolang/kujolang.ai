@@ -1,0 +1,21 @@
+{
+  "sourceCommit": "dfd5c610e24cab2d129331fa523f40229a262407",
+  "ciRun": 37839188002,
+  "ciBuild": "success",
+  "ciDeployment": "success",
+  "checks": {
+    "nodeTests": "3 passed",
+    "productionDependencyAudit": "0 vulnerabilities",
+    "siteContract": "53 projects, 3 catalogs, 135 skills, 45 workflows; passed",
+    "generatedHtml": "245 files validated",
+    "Howl": "244 cards validated; Agent City card rendered and visually reviewed",
+    "responsiveImages": "544 rendered images passed",
+    "localAfterAudit": "244 canonical pages; see after-summary.json",
+    "liveCrawl": "248 probes: 247 successful, one deliberate nonexistent route 404",
+    "browser": "1440 and 320 pixels, reduced motion, no overflow or JavaScript errors",
+    "installer": "rendered command matches source exactly",
+    "discovery": "sitemap, llms.txt and WebMCP site index include Agent City",
+    "outboundLinks": "8 new-page external destinations return 200"
+  },
+  "noRankingClaim": true
+}

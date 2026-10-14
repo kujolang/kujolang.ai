@@ -1,0 +1,16 @@
+{
+  "name": "kujo-homepage-film",
+  "private": true,
+  "scripts": {
+    "check": "hyperframes check",
+    "preview": "hyperframes preview --background",
+    "render": "bash build_outputs.sh"
+  },
+  "devDependencies": {
+    "@hyperframes/core": "0.8.150",
+    "@hyperframes/producer": "0.8.150",
+    "esbuild": "0.28.1",
+    "hyperframes": "0.8.150",
+    "motion": "12.23.24"
+  }
+}

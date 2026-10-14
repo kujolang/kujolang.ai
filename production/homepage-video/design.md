@@ -1,0 +1,4 @@
+# From output to trust
+Preserve Kujo's existing monochrome editorial identity: white #ffffff, ink #060606, muted #5d5d5d; local Departure Mono display with Plex Mono body. Large left-aligned language reveal, a sequential evidence chain, staggered application cards, reusable guidance, then a clean two-path onboarding and held brand close. Halftone artwork remains behind white text surfaces. No fake interactive buttons, invented test receipts, or dated inventory counters.
+
+Motion: Motion mini native WAAPI slide/fade entrances; full-scene 600ms overlapping dissolves; staged evidence nodes; slow image push during application holds; deterministic Three.js core. Native animations remain paused and are sought by HyperFrames, with no autonomous clock. Original low-register suspended score, mechanical relays, soft transition air, and a three-note resolving sonic mark. Speech stays centered at 1x; music is spectrally carved around narration.

@@ -2,10 +2,41 @@
 
 ## Ecosystem release alignment — 2026-10-14
 
-- Align published companion versions, Dispatch 1.4.0 runtime and upgrade boundaries, and Paperclip 0.2.0 installation and feature guidance.
-- Keep standalone RAG candidate and hosted deployment qualification boundaries explicit.
+- Align published companion versions, Dispatch 1.4.0 requirements and Paperclip 0.2.0 installation, knowledge and approved workflows.
+- Promote the canonical Kujo 1.8.1 installer and retain standalone RAG deployment boundaries.
 
-## Unreleased — Kujo CMD 0.2.0
+## Content update — 2026-10-13
+
+- Update Agents SDK to 1.1.3 with current installation, hardening, compatibility, and cost-limit guidance.
+- Document PackWrite 1.1.1, including configuration and filesystem fixes, offline validation, and the current release links.
+- Document AI SDK 1.2.0 state persistence, strict accounting, transport controls, and runtime compatibility.
+
+## [1.3.1] - 2026-10-12
+
+- Update the MCP product page from 1.2.0 to 1.3.1 with the first-class
+  generator, hardened generated-server boundaries, portable host package,
+  current release link, and exact publication/certification boundaries.
+
+## [1.3.0] - 2026-10-12
+
+- Stack Get started labels above full-width terminal boxes on ecosystem, skill, and workflow pages at every screen size.
+- Refresh the homepage introduction with current Kujo capabilities, natural-speed ElevenLabs V4 Siren narration, Motion.dev transitions, and original music and sound design.
+- Add English closed captions and preserve editable, reproducible production sources with claim provenance.
+
+### SSG 1.2.0
+
+- Publish SSG 1.2.0 release guidance, including pinned parser minification,
+  hardened publication boundaries, and retained DocGen CI evidence.
+
+### Commerce 0.5.0
+
+- Update Commerce features, upgrade boundaries, and the verified GitHub tarball install path while npm publication is pending.
+
+### Tribunal 1.0.2
+
+- Refresh the Tribunal release, hardening summary and explicit tagged installation guidance; retain local/operator-controlled deployment boundaries.
+
+### Kujo CMD 0.2.0
 
 - Add Kujo CMD 0.2.0 to the Tooling catalog with the complete Command Code
   integration surface, exposure profiles, approvals, receipts, scoped agents,
@@ -13,41 +44,45 @@
 - Document the tagged-GitHub install path while npm publication awaits restored
   registry authorization.
 
-## Unreleased — Kujo 1.8.0
+### AI Chat 1.3.0
+
+- Update the AI Chat showcase for the 1.3.0 agent-workspace release, including live diff review, durable supervision, managed worktrees, scoped MCP connections, multi-chat tabs, security fixes, upgrade guidance, and explicit production boundaries.
+
+### Kujo 1.8.0
 
 - Promote the public installer and Kujo ecosystem page to the verified 1.8.0
   native/npm release, including the Smarter, Faster, Tighter release highlights
   and final publication evidence.
 
-## Unreleased — Presentations showcase
+### Presentations showcase
 
 - Add Presentations 0.3.0 to the Showcase catalog with a source-backed product page, generated dither hero, social card, live examples, documentation links, and scoped release boundaries.
 
-## Unreleased — Mobile terminal panels
+### Mobile terminal panels
 
 - Stack Get started panel contents on mobile so terminal boxes span the available width consistently across ecosystem, skill, and workflow pages.
 
-## Unreleased — Kennel ecosystem onboarding
+### Kennel ecosystem onboarding
 
 - Replace GitHub clone commands in 41 ecosystem hero panels with verified Kennel package commands, including registered showcases and the `sitekit` package name. Preserve Scout, SiteProbe, and ReaderSignal version pins; keep GitHub commands for unregistered showcases.
 
-## Unreleased — Watchdog 1.1.0
+### Watchdog 1.1.0
 
 - Update the Watchdog ecosystem page for the published 1.1.0 release, including canonical v2 telemetry, lossless JSONL/OTLP projections, Connected Sources management, and named proxy-profile hot reload boundaries.
 
-## Unreleased — Scout 1.1.0
+### Scout 1.1.0
 
 - Update the Scout ecosystem page for the published 1.1.0 release, including its
   Kujo 1.5 runtime floor, bounded scanning and resource contracts, machine-readable
   diagnostics, corpus-scoped quality evidence, and native Windows verification.
 
-## Unreleased — Video skills catalog
+### Video skills catalog
 
 - Sync all 135 skills from Kujo Skills v0.7.0, including VideoOps and both HyperFrames video skills.
 - Add setup and style guide links, version-pinned sources, social cards, and generated catalog counts.
 - Preserve and repeat full-site SEO/AI-search checks in seo-audit/2026-09-08.
 
-## Unreleased
+### Additional ecosystem updates
 
 - Document SSG 1.1.0, default-on experimental WebMCP, ten local Ability workflows, independent pack versions, and release boundaries.
 
@@ -59,7 +94,7 @@
 
 All notable changes to Kujolang.ai are documented here. Releases follow semantic versioning.
 
-## Unreleased
+### Workcell
 
 ### Changed
 
