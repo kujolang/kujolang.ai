@@ -9,13 +9,13 @@ tags: [Tool, Agents]
 order: 550
 install_command: "npx paperclipai plugin install @kujolang/paperclip"
 github_url: "https://github.com/kujolang/paperclip"
-launch_story: "Give Paperclip agents a small, visible workspace for choosing context, reviewing changes, and preserving failure evidence."
+launch_story: "Understand repositories, ask local project knowledge questions and run explicitly approved Kujo workflows inside Paperclip."
 scope_note: "Local bundled tools with explicit human approval for execution; offline project knowledge and shipped workflow examples. No custom host fork required."
 version: "0.2.0"
 last_updated: "2026-10-14"
 keywords: "Kujo Paperclip plugin, Paperclip agents, context pack, change review, failure evidence"
-seo_title: "Kujo for Paperclip — Context, Review, and Failure Evidence"
-seo_description: "Install the Kujo plugin for Paperclip to select focused context, review change scope, and save redacted failure evidence from the current task view."
+seo_title: "Kujo for Paperclip — Knowledge, Quality Checks and Approved Workflows"
+seo_description: "Explore private offline project knowledge, repository maps, native quality checks and human-approved Kujo execution in official Paperclip."
 latest_release_url: "https://github.com/kujolang/paperclip/releases/tag/v0.2.0"
 release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
 ---
