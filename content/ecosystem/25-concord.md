@@ -12,10 +12,10 @@ launch_story: "Find when the ecosystem's explanations and contracts stop agreein
 scope_note: "Concord is an early dogfood tool; findings still require project-aware triage."
 keywords: "Concord, Kujo ecosystem, Tool, Drift"
 seo_title: "Concord — Kujo Ecosystem"
-version: "1.0.0"
-latest_release_url: "https://github.com/kujolang/concord/releases/tag/v1.0.0"
+version: "1.1.1"
+latest_release_url: "https://github.com/kujolang/concord/releases/tag/v1.1.1"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-09-09"
+last_updated: "2026-10-14"
 ---
 
 ## What it does
@@ -33,3 +33,7 @@ Concord is an early dogfood tool; findings still require project-aware triage.
 ## Learn more
 
 The repository is the source of truth for current setup, commands, examples, security notes, compatibility, and verification evidence.
+
+## October 14 release update
+
+Six native checks and fixes for drift false positives, reports, CLI/runtime behavior and bounded traversal improve artifact alignment.

@@ -9,12 +9,12 @@ order: 70
 install_command: "kennel add mcp"
 github_url: "https://github.com/kujolang/mcp"
 launch_story: "A guarded gateway for exposing useful capabilities to agents through explicit contracts."
-scope_note: "MCP 1.2.0 pins Ability 1.2.0 and adds opt-in controlled STDIO handoffs with one-use admission and completion uncertainty. Handoffs remain alpha; Dispatch owns replay. Review server authority, authentication and deployment boundaries. Historical host certificates retain their exact tested scope."
+scope_note: "MCP 1.3.2 pins Ability 1.3.2 and adds opt-in controlled STDIO handoffs with one-use admission and completion uncertainty. Handoffs remain alpha; Dispatch owns replay. Review server authority, authentication and deployment boundaries. Historical host certificates retain their exact tested scope."
 keywords: "MCP, Kujo ecosystem, Primitive, Gateway"
 seo_title: "MCP — Kujo Ecosystem"
-last_updated: "2026-09-29"
-version: "1.2.0"
-latest_release_url: "https://github.com/kujolang/mcp/releases/tag/v1.2.0"
+last_updated: "2026-10-14"
+version: "1.3.2"
+latest_release_url: "https://github.com/kujolang/mcp/releases/tag/v1.3.2"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
@@ -50,8 +50,12 @@ The [MCP repository](https://github.com/kujolang/mcp) is the source of truth for
 
 The Ability Gateway repository is private; public source access is not available.
 
-## Version 1.2.0
+## Version 1.3.2
 
-MCP 1.2.0 requires Kujo 1.6.0 and includes experimental controlled local STDIO Ability handoffs, one-use host admission and bounded evidence references. Lost completion remains uncertain until the effect owner verifies it; Dispatch alone decides replay. Standalone MCP behavior remains available.
+MCP 1.3.2 requires Kujo 1.6.0 and includes experimental controlled local STDIO Ability handoffs, one-use host admission and bounded evidence references. Lost completion remains uncertain until the effect owner verifies it; Dispatch alone decides replay. Standalone MCP behavior remains available.
 
 Wave C beta remains opt-in in the bounded single-effect required/deny domain, with alpha retained. Wave D handoffs remain alpha under a trusted local host. No remote participant trust or exactly-once guarantee is claimed.
+
+## October 14 release update
+
+Windows canonical path-boundary comparisons now admit valid in-root operations while preserving traversal, sibling-prefix and read-only guards. The framework requires Kujo 1.7.0; the unchanged portable Ability bridge remains 1.3.1.

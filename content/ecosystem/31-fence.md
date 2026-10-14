@@ -12,10 +12,10 @@ launch_story: "Make architecture erosion visible as soon as dependency boundarie
 scope_note: "Fence is a boundary linter, not an operating-system permissions sandbox."
 keywords: "Fence, Kujo ecosystem, Tool, Architecture"
 seo_title: "Fence — Kujo Ecosystem"
-version: "1.0.0"
-latest_release_url: "https://github.com/kujolang/fence/releases/tag/v1.0.0"
+version: "1.1.0"
+latest_release_url: "https://github.com/kujolang/fence/releases/tag/v1.1.0"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-09-09"
+last_updated: "2026-10-14"
 ---
 
 ## What it does
@@ -33,3 +33,7 @@ Fence is a boundary linter, not an operating-system permissions sandbox.
 ## Learn more
 
 The repository is the source of truth for current setup, commands, examples, security notes, compatibility, and verification evidence.
+
+## October 14 release update
+
+Snapshot inventory analysis, enforcement and cache improvements, governance checks and confined report publication strengthen architecture checks.

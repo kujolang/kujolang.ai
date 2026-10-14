@@ -1,5 +1,10 @@
 # Changelog
 
+## Ecosystem release alignment — 2026-10-14
+
+- Align published companion versions, Dispatch 1.4.0 runtime and upgrade boundaries, and Paperclip 0.2.0 installation and feature guidance.
+- Keep standalone RAG candidate and hosted deployment qualification boundaries explicit.
+
 ## Unreleased — Kujo CMD 0.2.0
 
 - Add Kujo CMD 0.2.0 to the Tooling catalog with the complete Command Code
