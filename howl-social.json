@@ -3193,6 +3193,19 @@
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
       "show_border": false,
       "show_url": false
+    },
+    {
+      "id": "source",
+      "title": "Source",
+      "tagline": "Git changes with evidence and explicit review.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "foundation",
+      "url": "kujolang.ai/ecosystem/source/",
+      "show_border": false,
+      "show_url": false,
+      "background_image": "assets/images/ecosystem/source-review-evidence-vault.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
     }
   ]
 }

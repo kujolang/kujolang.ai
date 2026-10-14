@@ -1,0 +1,3 @@
+url,topic,intent,action
+https://kujolang.ai/ecosystem/source/,Source agent Git review,understand the product,publish factual release overview
+https://docs.kujolang.ai/tools/source/,Source setup and limits,run the release,correct public installation and scope

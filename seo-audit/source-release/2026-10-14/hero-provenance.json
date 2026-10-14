@@ -1,0 +1,102 @@
+{
+  "object": "change review station with evidence trays and a gated archival vault",
+  "source": "kujolang/source v0.1.0 README and review/evidence/decision workflow",
+  "generator": "built-in image_gen",
+  "contract": {
+    "style": "high-contrast abstract dithered black-and-white art",
+    "goal": "suggest the presence of a [OBJECT] using fragmented halftone and dithering, with parts of the subject fading away under soft gradient-like masks so it works as an atmospheric hero background on a white background with a black design",
+    "usage_context": {
+      "intended_use": "website hero section background",
+      "priority": [
+        "visual texture and mood over literal detail",
+        "clear negative space for text and UI elements",
+        "high-contrast but not so busy that it competes with typography",
+        "light, open composition suitable for placement on a white webpage or light hero section"
+      ]
+    },
+    "image_characteristics": {
+      "color_palette": "pure black (#000000) and pure white (#FFFFFF) only, no grays and no color",
+      "background_color": "predominantly white with large areas of clean negative space",
+      "subject_tone": "black and dense halftone dots for the visible fragments of the [OBJECT]",
+      "contrast_level": "strong but with soft transitions created by dithering density",
+      "texture": "fine black dither dots plus occasional coarse black clusters to add grit without overwhelming the white space"
+    },
+    "dithering_method": {
+      "primary": "Floyd\u2013Steinberg or ordered Bayer dithering",
+      "dot_behaviors": {
+        "shadows": "dense black dot clusters that merge into solid black and define the darkest fragments of the [OBJECT]",
+        "midtones": "medium black dot dispersion forming soft, gradient-like transitions against the white background",
+        "highlights": "open white gaps where the subject dissolves into the background",
+        "background": "mostly solid white with subtle black dither noise bands, waves, or fields used sparingly"
+      },
+      "pattern_variation": "combine tight black dot matrices with looser, irregular patches to avoid uniformity"
+    },
+    "subject_treatment": {
+      "subject": "[OBJECT]",
+      "level_of_detail": "low to medium; recognizable but not fully rendered",
+      "silhouette": "partially broken, with edges fading into black dither and white space",
+      "feature_visibility": "only key portions of the [OBJECT] are clearly hinted at; the rest is obscured or dissolved",
+      "visual_priority": "treat the [OBJECT] more as a textured black shape than a fully legible product shot"
+    },
+    "masking_and_abstraction": {
+      "mask_style": "soft, organic gradient-like masks created using black dither density instead of smooth blur",
+      "coverage": "30\u201370% of the [OBJECT] should be hidden, incomplete, or heavily abstracted",
+      "behavior": [
+        "some areas completely disappear into white negative space",
+        "other areas fade from crisp black dither into almost pure white",
+        "occasional stripes or bands where the [OBJECT] seems to glitch or fragment"
+      ],
+      "effect": "the viewer feels the [OBJECT] emerging from and dissolving back into the white background"
+    },
+    "composition": {
+      "framing": "off-center composition, left or right, to leave clean white negative space for hero text",
+      "scale": "large, cropped close; parts of the [OBJECT] may extend beyond the frame",
+      "background": "solid white with subtle black dither gradients, waves, or fields behind and around the scene",
+      "layout_for_hero_use": {
+        "safe_text_zone": "reserve one side, often center-left or center-right, with mostly white space and very little texture",
+        "busy_zone": "concentrate most of the dense black dithered object fragments on the opposite side"
+      }
+    },
+    "lighting": {
+      "type": "dramatic single-direction light translated into black ink density",
+      "effect": "define only some planes of the [OBJECT] with dense black marks, letting the rest fall away into white",
+      "shadow_behavior": "shadows appear as black dither fields that taper into open white space",
+      "highlight_behavior": "highlights are preserved as clean white voids and broken negative-space bands across the subject"
+    },
+    "aesthetic_references": {
+      "inspirations": [
+        "abstract halftone photography",
+        "grainy editorial illustrations",
+        "experimental bitmap gradients",
+        "black ink risograph-style print texture",
+        "minimal brutalist web design with strong white negative space"
+      ],
+      "avoid": [
+        "fully clean, complete representations of the scene",
+        "flat vector graphics",
+        "soft Gaussian blur gradients; all transitions should be via dithering",
+        "overly busy patterns that make text unreadable",
+        "gray tones, color accents, or shaded gradients that are not created through black-and-white dithering",
+        "a predominantly black background"
+      ]
+    },
+    "final_render": {
+      "look": "bright, stark, atmospheric, and semi-abstract \u2014 the [OBJECT] is present but partially erased into white space",
+      "sharpness": "local sharpness only on a few key black edges, with the rest dissolving into dither and white",
+      "noise_level": "moderate; enough to add texture, not so much that it overwhelms UI",
+      "authenticity": "must feel like a high-res scan of an abstract, black-ink dithered print designed for modern white-background hero sections"
+    }
+  },
+  "selected_source": "exec-5d34a2f1-a982-47f7-8743-91b08f89c11a.png",
+  "output": "assets/images/ecosystem/source-review-evidence-vault.webp",
+  "dimensions": [
+    1916,
+    821
+  ],
+  "threshold": 160,
+  "validated_channels": [
+    0,
+    255
+  ],
+  "dependent_social": "assets/images/social/source.jpg"
+}
