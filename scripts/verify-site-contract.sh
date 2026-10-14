@@ -523,6 +523,7 @@ require_text "${output_dir}/ecosystem/intake/index.html" "Node.js 20.19"
 # Source uses Git/npm; its public release and images must remain discoverable.
 require_text "${output_dir}/ecosystem/source/index.html" "https://github.com/kujolang/source/releases/tag/v0.1.0"
 require_text "${output_dir}/ecosystem/source/index.html" "Node.js 22"
+require_text "${output_dir}/ecosystem/source/index.html" "<title>Source — Git Review for Agent Contributions | Kujolang.ai</title>"
 require_text "${output_dir}/ecosystem/source/index.html" "not a Kennel-installable"
 require_text "${output_dir}/ecosystem/source/index.html" '/assets/images/social/source.jpg'
 require_text "${output_dir}/ecosystem/source/index.html" 'width="1916" height="821"'
