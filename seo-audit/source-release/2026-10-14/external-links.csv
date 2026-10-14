@@ -1,1 +1,7 @@
 phase,source_url,destination_url,anchor_text,link_context,http_status,final_url,chain_length,verification,rel,recommended_action
+after,https://kujolang.ai/ecosystem/source/,https://www.kujolang.ai/ecosystem/source/,,,200,https://kujolang.ai/ecosystem/source/,1,curl live GET,,
+after,https://kujolang.ai/ecosystem/source/,https://docs.kujolang.ai/tools/source/,,,200,https://docs.kujolang.ai/tools/source/,0,curl live GET,,
+after,https://kujolang.ai/ecosystem/source/,https://docs.kujolang.ai/robots.txt,,,200,https://docs.kujolang.ai/robots.txt,0,curl live GET,,
+after,https://kujolang.ai/ecosystem/source/,https://docs.kujolang.ai/sitemap.xml,,,200,https://docs.kujolang.ai/sitemap.xml,0,curl live GET,,
+after,https://kujolang.ai/ecosystem/source/,https://github.com/kujolang/source/releases/tag/v0.1.0,,,200,https://github.com/kujolang/source/releases/tag/v0.1.0,0,curl live GET,,
+after,https://kujolang.ai/ecosystem/source/,https://mcp.kujolang.ai/health,,,200,https://mcp.kujolang.ai/health,0,curl live GET,,

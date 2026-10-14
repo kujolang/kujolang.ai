@@ -1,1 +1,2 @@
 phase,url,local_status,production_status,indexable,robots_directives,canonical,canonical_target_status,sitemap_included,sitemap_lastmod,reason
+after,https://kujolang.ai/ecosystem/source/,200,200,True,,https://kujolang.ai/ecosystem/source/,200,True,,public release page

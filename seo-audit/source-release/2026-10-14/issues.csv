@@ -1,5 +1,5 @@
 id,phase,category,severity,affected_urls,affected_count,evidence,expected_benefit,confidence,difficulty,recommended_action,owner,status
-S1,baseline,discovery,P1,https://kujolang.ai/ecosystem/source/,1,raw/baseline-curl.json: 404,Public release discovery,high,low,Publish Source ecosystem page,maintainer,in progress
-S2,baseline,content,P1,https://docs.kujolang.ai/tools/source/,1,content/tools/source.md describes private repository,Accurate public setup instructions,high,low,Replace private status with released setup and boundaries,maintainer,in progress
-S3,baseline,catalog,P1,https://mcp.kujolang.ai/mcp,1,reviewed catalog has no Source record,Read-only agent discovery,high,low,Sync reviewed website record and deploy,maintainer,pending
-S4,baseline,access,P2,multiple hosts,8,urllib 403; curl succeeds on known routes,Understand client access differences,medium,medium,Retain receipts; verify crawler access without changing policy,maintainer,indeterminate
+S1,baseline,discovery,P1,https://kujolang.ai/ecosystem/source/,1,raw/baseline-curl.json: 404,Public release discovery,high,low,Publish Source ecosystem page,maintainer,resolved; production verified
+S2,baseline,content,P1,https://docs.kujolang.ai/tools/source/,1,content/tools/source.md describes private repository,Accurate public setup instructions,high,low,Replace private status with released setup and boundaries,maintainer,resolved; production verified
+S3,baseline,catalog,P1,https://mcp.kujolang.ai/mcp,1,reviewed catalog has no Source record,Read-only agent discovery,high,low,Sync reviewed website record and deploy,maintainer,resolved; production verified
+S4,baseline,access,P2,multiple hosts,8,urllib 403; curl succeeds on known routes,Understand client access differences,medium,medium,Retain receipts; verify crawler access without changing policy,maintainer,measurement limitation; curl and Chrome verified; not a publication blocker

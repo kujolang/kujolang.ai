@@ -1,1 +1,4 @@
 phase,page_url,image_url,alt_text,alt_present,decorative,width,height,loading,format,local_exists,file_bytes,issues
+after,https://kujolang.ai/ecosystem/source/,../../assets/images/kujo-logomark.svg,,True,,28,28,,.svg,True,895,
+after,https://kujolang.ai/ecosystem/source/,../../images/source-review-evidence-vault-911fc6626bb9.webp,Featured image for Source,True,,1916,821,eager,.webp,True,48154,
+after,https://kujolang.ai/ecosystem/source/,../../assets/images/kujo-logomark.svg,,True,,24,24,,.svg,True,895,

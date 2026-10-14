@@ -1,0 +1,20 @@
+[
+  {
+    "path": "assets/images/ecosystem/source-review-evidence-vault.webp",
+    "width": 1916,
+    "height": 821,
+    "bytes": 48154,
+    "sha256": "093df1e85a7ff8d5cfea4c76325d07cc08998a9aff5ce33d44bdeb1ab96f166d",
+    "channels": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "assets/images/social/source.jpg",
+    "width": 1200,
+    "height": 630,
+    "bytes": 188551,
+    "sha256": "95fcb41008f32ccb8bc85e09174709c68d6b7186d72c32f67b598d044300ee64"
+  }
+]

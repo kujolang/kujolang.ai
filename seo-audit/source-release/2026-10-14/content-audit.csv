@@ -1,1 +1,2 @@
 phase,url,source_file,page_type,primary_purpose,search_intent,target_audience,central_entity,primary_query_theme,supporting_topics,h1,heading_structure,word_count,published_date,modified_date,first_hand_signals,content_gap,competing_internal_url,recommended_action
+after,https://kujolang.ai/ecosystem/source/,content/ecosystem/61-source.md,,public release setup and limits,learn and evaluate,developers and agent operators,Source 0.1.0,Source Git review for agents,,Source,,,,2026-10-14,"tagged code, real CI tests, recorded live profile",,,keep limits current with releases

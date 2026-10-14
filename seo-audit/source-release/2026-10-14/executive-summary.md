@@ -1,9 +1,11 @@
 # Source release discovery audit
 
-Scope: Source ecosystem and documentation pages, listing links, sitemap, images and MCP discovery. Baseline website commit `000b0fb168abb7e58166b36b84eb498687517df3`; docs commit `d7671c40e3c315a8d8c3fea26c140fd64c206d41`. Full-site inventories are regression checks, not a claim of exhaustive site-wide review.
+Completed 2026-10-14. Scope: the Source ecosystem/docs pages and their catalog, sitemap, image and MCP discovery paths. Full-site inventories check regressions; this is not an exhaustive audit of every Kujo property.
 
-Before: the ecosystem Source route returned 404, the docs called the repository private, and the MCP catalog lacked Source. The release is now public at GitHub tag `v0.1.0`. This change adds an accurate ecosystem page, original monochrome hero and Howl social image. Docs now describe the public release and operating limits.
+Source v0.1.0 is public. Its ecosystem page now returns 200, its docs describe the released Git/npm setup, and the live read-only MCP catalog returns the Source record. The original generated dither hero and Howl card are published. Kennel does not apply to this Node application.
 
-Baseline: 246 generated website HTML files, zero broken internal destinations and invalid JSON-LD; the recovery 404 page has no canonical. Docs retain 107 routes. Baseline full website build took 1090.803 seconds on this machine; this is not a performance comparison.
+The website retains every baseline route and adds Source: 246→247 HTML files. Docs retain 107. The MCP catalog adds one item: 234→235, with existing entries preserved. Final generated inventories show no missing titles, invalid JSON-LD or broken internal destinations; the existing noindex recovery page remains the sole page without a canonical. Desktop/mobile, image bytes, public metadata, robots/sitemap and redirect checks passed. All 246 social cards are covered by the site gate.
 
-Publication verification is pending the new website CI build and MCP deployment. The final receipt will record generated output and live checks. Rankings, traffic, conversions, verified crawler visits, field Core Web Vitals and AI citation changes are NOT AVAILABLE — DATA ACCESS REQUIRED. No search outcome improvement is claimed.
+Reviewed content commit: 4e7110308b9815c254a2fd4bfbc872af0749641b. Successful build/deployment: 38597461622. Artifact: 11911223490. See verification.md, production-receipt.json, browser-receipt.json and before-after.md. Failed and superseded attempts are distinguished in methodology.md; no checks or timeouts were weakened.
+
+There are no remaining publication blockers from this scope. Search Console, analytics, verified crawler visits, field Core Web Vitals and AI citation outcomes are NOT AVAILABLE — DATA ACCESS REQUIRED. No improvement in those outcomes is claimed; recommendations.md records the follow-up measurement schedule.

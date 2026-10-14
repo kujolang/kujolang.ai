@@ -1,1 +1,6 @@
 phase,source_url,source_variant,http_status,target_url,chain_length,final_status,canonical_target,query_preserved,verification,issues
+after,https://kujolang.ai/ecosystem/source/,,200,https://kujolang.ai/ecosystem/source/,0,200,https://kujolang.ai/ecosystem/source/,,curl redirect trace,none
+after,http://kujolang.ai/ecosystem/source/,,200,https://kujolang.ai/ecosystem/source/,1,200,https://kujolang.ai/ecosystem/source/,,curl redirect trace,none
+after,https://www.kujolang.ai/ecosystem/source/,,200,https://kujolang.ai/ecosystem/source/,1,200,https://kujolang.ai/ecosystem/source/,,curl redirect trace,none
+after,https://kujolang.ai/ecosystem/source,,200,https://kujolang.ai/ecosystem/source/,1,200,https://kujolang.ai/ecosystem/source/,,curl redirect trace,none
+after,https://kujolang.ai/ecosystem/source/?release=v0.1.0,,200,https://kujolang.ai/ecosystem/source/?release=v0.1.0,0,200,https://kujolang.ai/ecosystem/source/,,curl redirect trace,none

@@ -1,1 +1,2 @@
 phase,url,template,run_date,environment,lighthouse_version,html_bytes,css_bytes,js_bytes,image_bytes,font_bytes,requests,lcp_ms,inp_ms,cls,ttfb_ms,source,notes
+after,https://kujolang.ai/ecosystem/source/,,2026-10-14,generated artifact; single live curl probe,,21149,,,,,,,,,,CI artifact and live response,"No performance gain, Lighthouse score, field CWV or latency percentile claimed."
