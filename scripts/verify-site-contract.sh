@@ -287,10 +287,10 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 55 ]] || fail "expected 55 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 58 ]] || fail "expected 55 project and 3 catalog output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_sources" == 56 ]] || fail "expected 56 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 59 ]] || fail "expected 56 project and 3 catalog output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 16 ]] || fail "expected 16 primitive cards, found ${primitive_count}"
-[[ "$tooling_count" == 29 ]] || fail "expected 29 tooling cards, found ${tooling_count}"
+[[ "$tooling_count" == 30 ]] || fail "expected 30 tooling cards, found ${tooling_count}"
 [[ "$showcase_count" == 10 ]] || fail "expected 10 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
@@ -528,9 +528,18 @@ require_text "${output_dir}/ecosystem/source/index.html" "not a Kennel-installab
 require_text "${output_dir}/ecosystem/source/index.html" '/assets/images/social/source.jpg'
 require_text "${output_dir}/ecosystem/source/index.html" 'width="1916" height="821"'
 
+
+require_file "${output_dir}/ecosystem/kujo-opencode/index.html"
+require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'npm install --global @kujolang/kujo-opencode@0.2.0'
+require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'opencode-approval-workbench.webp'
+require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'width="1916" height="821"'
+require_text "${output_dir}/ecosystem/tooling/index.html" 'href="/ecosystem/kujo-opencode/"'
+require_text "${output_dir}/sitemap.xml" '/ecosystem/kujo-opencode/'
+require_social_meta "${output_dir}/ecosystem/kujo-opencode/index.html" 'kujo-opencode'
+
 if (( failures > 0 )); then
 	printf 'Site contract failed with %d issue(s).\n' "$failures" >&2
 	exit 1
 fi
 
-printf 'Site contract passed: 55 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 56 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

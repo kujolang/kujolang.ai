@@ -1,5 +1,10 @@
 # Changelog
 
+## Kujo OpenCode launch — 2026-10-18
+
+- Add OpenCode 0.2.0 to the tooling catalog with installation guidance, supported projects, specialist and approval boundaries, a generated dither hero, and a matching Howl social card.
+
+
 ## Ecosystem release alignment — 2026-10-14
 
 - Align published companion versions, Dispatch 1.4.0 requirements and Paperclip 0.2.0 installation, knowledge and approved workflows.

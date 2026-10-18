@@ -3206,6 +3206,19 @@
       "show_url": false,
       "background_image": "assets/images/ecosystem/source-review-evidence-vault.webp",
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "kujo-opencode",
+      "title": "Kujo OpenCode",
+      "tagline": "Six specialists. Native approvals. Inspectable receipts.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "tooling",
+      "url": "kujolang.ai/ecosystem/kujo-opencode/",
+      "background_image": "assets/images/ecosystem/opencode-approval-workbench.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
     }
   ]
 }
