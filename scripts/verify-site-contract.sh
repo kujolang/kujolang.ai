@@ -258,7 +258,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 246 ]] || fail "expected 246 social cards, found ${social_card_count}"
+[[ "$social_card_count" == 247 ]] || fail "expected 247 social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
@@ -531,7 +531,7 @@ require_text "${output_dir}/ecosystem/source/index.html" 'width="1916" height="8
 
 require_file "${output_dir}/ecosystem/kujo-opencode/index.html"
 require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'npm install --global @kujolang/kujo-opencode@0.2.0'
-require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'opencode-approval-workbench.webp'
+require_text "${output_dir}/ecosystem/kujo-opencode/index.html" '/assets/images/ecosystem/opencode-approval-workbench-'
 require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'width="1916" height="821"'
 require_text "${output_dir}/ecosystem/tooling/index.html" 'href="/ecosystem/kujo-opencode/"'
 require_text "${output_dir}/sitemap.xml" '/ecosystem/kujo-opencode/'
