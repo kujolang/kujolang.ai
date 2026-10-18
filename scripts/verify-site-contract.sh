@@ -531,7 +531,7 @@ require_text "${output_dir}/ecosystem/source/index.html" 'width="1916" height="8
 
 require_file "${output_dir}/ecosystem/kujo-opencode/index.html"
 require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'npm install --global @kujolang/kujo-opencode@0.2.0'
-require_text "${output_dir}/ecosystem/kujo-opencode/index.html" '/assets/images/ecosystem/opencode-approval-workbench-'
+require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'images/opencode-approval-workbench-'
 require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'width="1916" height="821"'
 require_text "${output_dir}/ecosystem/tooling/index.html" 'href="/ecosystem/kujo-opencode/"'
 require_text "${output_dir}/sitemap.xml" '/ecosystem/kujo-opencode/'
