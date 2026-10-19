@@ -151,8 +151,17 @@ def crawler_access(origin: str, phase: str, key_path: str) -> tuple[list[dict], 
     ]
     robots_url = origin + "/robots.txt"
     try:
+        # A blocked generic urllib request is not a robots Disallow rule.
+        # Parse only a successfully fetched body, using the audit's explicit UA.
+        req = urllib.request.Request(robots_url, headers={
+            "User-Agent": "Mozilla/5.0 (compatible; KujolangSEOAudit/1.0)"
+        })
+        with urllib.request.urlopen(req, timeout=15, context=ssl.create_default_context()) as response:
+            if response.status != 200:
+                raise ValueError(f"robots fetch returned {response.status}")
+            body = response.read().decode("utf-8", errors="replace")
         robot_parser = urllib.robotparser.RobotFileParser(robots_url)
-        robot_parser.read()
+        robot_parser.parse(body.splitlines())
     except Exception:
         robot_parser = None
     rows, receipts = [], {}
