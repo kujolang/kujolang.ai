@@ -1,0 +1,28 @@
+{
+  "commit": "8551554e83190703c5eb4f5351d791972dcbad9e",
+  "runtime": "Kujo 1.8.2",
+  "focusedBuild": "raw/baseline-build",
+  "focusedBuildExit": 0,
+  "buildSeconds": 99.507394655,
+  "fullBuildWorkflow": "https://github.com/kujolang/kujolang.ai/actions/runs/39320862640",
+  "artifactId": 12219798730,
+  "sourceHashes": {
+    "howl-social.json": "67ff30d6fe7863508dd118b6f88b5cb0de3a381dff09a852661ac234190199ce",
+    "scripts/probe_site.py": "7d5ee5229fb1e52390c72e3618e904aef218e4e99fac7c7635ab583fffd46ccd",
+    "assets/images/social/compare.jpg": "f9f8c215c1e9ea1fa697eaf473b633d969b7eb842b9b6c5289b77deb46b45c44",
+    "assets/images/social/kujo-vs-bend.jpg": "81bac1f2d77ac737babfc392647b1d659e65b76a3e95f8b13c9a1e86fae60257",
+    "assets/images/social/kujo-vs-baml.jpg": "f720780a665e18f2fc07a3a85f3906d0ade2e79366032f8c5affa08ce7e8bc06",
+    "assets/images/social/kujo-vs-zero.jpg": "3f70d13f0a552b75b85e785a8e894270f061b48f2a8867586f438412cd37d682",
+    "assets/images/social/ai-native-programming-languages.jpg": "5866adafddd01346fdc10a5ff503797c011194fa8e0f15cf80cd897433d095d2",
+    "assets/images/social/programming-languages-for-ai-agents.jpg": "b4ed44ce3f862cc926ce0fce84dbf859bf57ef88eb67194de2024c9d002b9be0",
+    "assets/images/social/ai-code-verification-tools.jpg": "91415b6a3973b1a715770cc91d31d066b1faf759fc00042daa56b44d4d714eeb",
+    "assets/images/social/verify-agent-workflows.jpg": "056e61fc871cb2486b8d1de71f848a7a61a38fa37f70124945941a51cb6da34e"
+  },
+  "artifactArchiveSHA256": "671eeeef3efe2ea3ce5e2271ef62eb9243d3bb30ed71c847b454c5538d8265c4",
+  "fullArtifactDirectory": "work/comparison-ci-baseline",
+  "localFullBuild": "Stopped slow redundant local build; using complete successful pinned CI build at identical source commit for full-site baseline.",
+  "fullArtifactFiles": 2165,
+  "fullArtifactManifest": "raw/baseline-files.sha256",
+  "afterFocusedBuildSeconds": 78.280720915,
+  "afterFocusedAuthorsLookup": "content/authors.yml copied into focused content fixture"
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "compare",
+    "h1": 1,
+    "headings": true,
+    "overflow": false,
+    "tables": 1,
+    "width": 375
+  },
+  {
+    "slug": "kujo-vs-bend",
+    "h1": 1,
+    "headings": true,
+    "overflow": false,
+    "tables": 2,
+    "width": 375
+  },
+  {
+    "slug": "kujo-vs-baml",
+    "h1": 1,
+    "headings": true,
+    "overflow": false,
+    "tables": 2,
+    "width": 375
+  },
+  {
+    "slug": "kujo-vs-zero",
+    "h1": 1,
+    "headings": true,
+    "overflow": false,
+    "tables": 2,
+    "width": 375
+  },
+  {
+    "slug": "ai-native-programming-languages",
+    "h1": 1,
+    "headings": true,
+    "overflow": false,
+    "tables": 2,
+    "width": 375
+  },
+  {
+    "slug": "programming-languages-for-ai-agents",
+    "h1": 1,
+    "headings": true,
+    "overflow": false,
+    "tables": 2,
+    "width": 375
+  },
+  {
+    "slug": "ai-code-verification-tools",
+    "h1": 1,
+    "headings": true,
+    "overflow": false,
+    "tables": 2,
+    "width": 375
+  },
+  {
+    "slug": "verify-agent-workflows",
+    "h1": 1,
+    "headings": true,
+    "overflow": false,
+    "tables": 2,
+    "width": 375
+  }
+]

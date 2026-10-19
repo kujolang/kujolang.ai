@@ -1,0 +1,74 @@
+[
+  {
+    "h1": 1,
+    "headings": true,
+    "images": true,
+    "overflow": false,
+    "tables": 1,
+    "url": "https://kujolang.ai/compare/",
+    "width": 1280
+  },
+  {
+    "h1": 1,
+    "headings": true,
+    "images": true,
+    "overflow": false,
+    "tables": 2,
+    "url": "https://kujolang.ai/compare/kujo-vs-bend/",
+    "width": 1280
+  },
+  {
+    "h1": 1,
+    "headings": true,
+    "images": true,
+    "overflow": false,
+    "tables": 2,
+    "url": "https://kujolang.ai/compare/kujo-vs-baml/",
+    "width": 1280
+  },
+  {
+    "h1": 1,
+    "headings": true,
+    "images": true,
+    "overflow": false,
+    "tables": 2,
+    "url": "https://kujolang.ai/compare/kujo-vs-zero/",
+    "width": 1280
+  },
+  {
+    "h1": 1,
+    "headings": true,
+    "images": true,
+    "overflow": false,
+    "tables": 2,
+    "url": "https://kujolang.ai/compare/ai-native-programming-languages/",
+    "width": 1280
+  },
+  {
+    "h1": 1,
+    "headings": true,
+    "images": true,
+    "overflow": false,
+    "tables": 2,
+    "url": "https://kujolang.ai/compare/programming-languages-for-ai-agents/",
+    "width": 1280
+  },
+  {
+    "h1": 1,
+    "headings": true,
+    "images": true,
+    "overflow": false,
+    "tables": 2,
+    "url": "https://kujolang.ai/compare/ai-code-verification-tools/",
+    "width": 1280
+  },
+  {
+    "h1": 1,
+    "headings": true,
+    "images": true,
+    "overflow": false,
+    "tables": 2,
+    "url": "https://kujolang.ai/compare/verify-agent-workflows/",
+    "width": 1280
+  }
+]

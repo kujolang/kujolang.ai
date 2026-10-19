@@ -1,0 +1,356 @@
+phase,source_url,destination_url,anchor_text,link_context,http_status,final_url,chain_length,verification,rel,recommended_action
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/compare/verify-agent-workflows/,Run the artifact exercise and inspect the receipt ↗,main,200,https://kujolang.ai/compare/verify-agent-workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/compare/ai-native-programming-languages/,"Decision guide AI-native programming languages: a practical comparison A decision guide to AI-native language claims, including Kujo, Bend and BAML, without conflating language safety with workflow evidence. Read the guide ↗",main,200,https://kujolang.ai/compare/ai-native-programming-languages/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/compare/programming-languages-for-ai-agents/,"Decision guide Programming languages for AI agents: choosing the host and tools Choose a language for building and supervising agents by tool contracts, failure handling, deployment and the evidence your workflow needs. Read the guide ↗",main,200,https://kujolang.ai/compare/programming-languages-for-ai-agents/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/compare/verify-agent-workflows/,"Practical walkthrough Verify agent workflows: contracts, checks and reproducible evidence A practical guide to verifying AI-generated code, evaluating coding agents and preserving traceable execution evidence with honest limits. Read the guide ↗",main,200,https://kujolang.ai/compare/verify-agent-workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/compare/kujo-vs-bend/,Kujo vs Bend,nav,200,https://kujolang.ai/compare/kujo-vs-bend/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/compare/kujo-vs-baml/,Kujo vs BAML,nav,200,https://kujolang.ai/compare/kujo-vs-baml/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/compare/kujo-vs-zero/,Kujo vs Zero,nav,200,https://kujolang.ai/compare/kujo-vs-zero/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/compare/,Comparison hub,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/compare/text/ai-code-verification-tools.md,Read as Markdown,nav,200,https://kujolang.ai/compare/text/ai-code-verification-tools.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/compare/editorial-policy.md,Editorial policy,nav,200,https://kujolang.ai/compare/editorial-policy.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-code-verification-tools/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/compare/programming-languages-for-ai-agents/,"Decision guide Programming languages for AI agents: choosing the host and tools Choose a language for building and supervising agents by tool contracts, failure handling, deployment and the evidence your workflow needs. Read the guide ↗",main,200,https://kujolang.ai/compare/programming-languages-for-ai-agents/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/compare/ai-code-verification-tools/,"Decision guide AI code verification tools: what each check can establish Compare static checks, tests, proofs, execution receipts and release gates for AI-generated code, with concrete Kujo ecosystem roles. Read the guide ↗",main,200,https://kujolang.ai/compare/ai-code-verification-tools/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/compare/verify-agent-workflows/,"Practical walkthrough Verify agent workflows: contracts, checks and reproducible evidence A practical guide to verifying AI-generated code, evaluating coding agents and preserving traceable execution evidence with honest limits. Read the guide ↗",main,200,https://kujolang.ai/compare/verify-agent-workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/compare/kujo-vs-bend/,Kujo vs Bend,nav,200,https://kujolang.ai/compare/kujo-vs-bend/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/compare/kujo-vs-baml/,Kujo vs BAML,nav,200,https://kujolang.ai/compare/kujo-vs-baml/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/compare/kujo-vs-zero/,Kujo vs Zero,nav,200,https://kujolang.ai/compare/kujo-vs-zero/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/compare/,Comparison hub,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/compare/text/ai-native-programming-languages.md,Read as Markdown,nav,200,https://kujolang.ai/compare/text/ai-native-programming-languages.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/compare/editorial-policy.md,Editorial policy,nav,200,https://kujolang.ai/compare/editorial-policy.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/ai-native-programming-languages/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/verify-agent-workflows/,Explore the Kujo workflow ↗,article,200,https://kujolang.ai/compare/verify-agent-workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/kujo-vs-bend/,Read Kujo vs Bend ↗,article,200,https://kujolang.ai/compare/kujo-vs-bend/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/kujo-vs-baml/,Read Kujo vs BAML ↗,article,200,https://kujolang.ai/compare/kujo-vs-baml/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/kujo-vs-zero/,Read Kujo vs Zero ↗,article,200,https://kujolang.ai/compare/kujo-vs-zero/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/kujo-vs-bend/,Full comparison and sources ↗,main,200,https://kujolang.ai/compare/kujo-vs-bend/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/kujo-vs-baml/,Full comparison and sources ↗,main,200,https://kujolang.ai/compare/kujo-vs-baml/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/kujo-vs-zero/,Full comparison and sources ↗,main,200,https://kujolang.ai/compare/kujo-vs-zero/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/spec/,Spec,main,200,https://kujolang.ai/ecosystem/spec/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/eval/,Eval,main,200,https://kujolang.ai/ecosystem/eval/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/workcell/,Workcell,main,200,https://kujolang.ai/ecosystem/workcell/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/runledger/,RunLedger,main,200,https://kujolang.ai/ecosystem/runledger/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/shipcheck/,ShipCheck,main,200,https://kujolang.ai/ecosystem/shipcheck/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/verify-agent-workflows/,Follow the verification workflow ↗,main,200,https://kujolang.ai/compare/verify-agent-workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/evidence/README.md,Read the method and run it locally ↗,main,200,https://kujolang.ai/compare/evidence/README.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/evidence/produce.kujo,Producer ↗,main,200,https://kujolang.ai/compare/evidence/produce.kujo,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/evidence/verify.py,Checker ↗,main,200,https://kujolang.ai/compare/evidence/verify.py,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/ai-native-programming-languages/,"01 / Decision guide AI-native programming languages: a practical comparison AI-native describes a design goal, not a safety certification. Compare what each language helps an agent do, which mistakes its tools can reject and what evidence you can inspect after a run. The right choice depends on your application and the guarantees it needs. Read the guide ↗",main,200,https://kujolang.ai/compare/ai-native-programming-languages/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/programming-languages-for-ai-agents/,"02 / Decision guide Programming languages for AI agents: choosing the host and tools Choose an agent’s host language by the tools it must call, the permissions those tools need and the failures it must recover from. The host coordinates the agent; the repository it edits can use another language. Test the interfaces between them before deciding whether any language change is needed. Read the guide ↗",main,200,https://kujolang.ai/compare/programming-languages-for-ai-agents/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/ai-code-verification-tools/,"03 / Decision guide AI code verification tools: what each check can establish Use independent checks tied to clear requirements to verify AI-generated code. A type checker rejects some invalid programs, a test checks selected behavior, and a proof establishes a stated property within its assumptions. An execution record helps show what ran. Build your verification process around the facts you need each tool to establish. Read the guide ↗",main,200,https://kujolang.ai/compare/ai-code-verification-tools/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/verify-agent-workflows/,"04 / Practical walkthrough Verify agent workflows: contracts, checks and reproducible evidence Check an agent’s completion report against the work it produced. Define the requirement first, inspect the output with an independent checker and keep the commands, results and environment details needed to repeat the check. This guide shows how to connect those steps using a small runnable example. Read the guide ↗",main,200,https://kujolang.ai/compare/verify-agent-workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/editorial-policy.md,Editorial policy,nav,200,https://kujolang.ai/compare/editorial-policy.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/text/overview.md,Overview as Markdown,nav,200,https://kujolang.ai/compare/text/overview.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/compare/evidence/README.md,"Method, commands and evidence ↗",main,200,https://kujolang.ai/compare/evidence/README.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/compare/evidence/produce.kujo,Producer,main,200,https://kujolang.ai/compare/evidence/produce.kujo,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/compare/evidence/verify.py,Checker,main,200,https://kujolang.ai/compare/evidence/verify.py,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/compare/kujo-vs-bend/,Kujo vs Bend,nav,200,https://kujolang.ai/compare/kujo-vs-bend/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/compare/kujo-vs-zero/,Kujo vs Zero,nav,200,https://kujolang.ai/compare/kujo-vs-zero/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/compare/,All comparisons,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/compare/verify-agent-workflows/,Verification walkthrough,nav,200,https://kujolang.ai/compare/verify-agent-workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/compare/editorial-policy.md,Editorial policy,footer,200,https://kujolang.ai/compare/editorial-policy.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/compare/text/kujo-vs-baml.md,Read as Markdown,footer,200,https://kujolang.ai/compare/text/kujo-vs-baml.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-baml/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/compare/evidence/README.md,"Method, commands and evidence ↗",main,200,https://kujolang.ai/compare/evidence/README.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/compare/evidence/produce.kujo,Producer,main,200,https://kujolang.ai/compare/evidence/produce.kujo,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/compare/evidence/verify.py,Checker,main,200,https://kujolang.ai/compare/evidence/verify.py,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/compare/kujo-vs-baml/,Kujo vs BAML,nav,200,https://kujolang.ai/compare/kujo-vs-baml/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/compare/kujo-vs-zero/,Kujo vs Zero,nav,200,https://kujolang.ai/compare/kujo-vs-zero/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/compare/,All comparisons,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/compare/verify-agent-workflows/,Verification walkthrough,nav,200,https://kujolang.ai/compare/verify-agent-workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/compare/editorial-policy.md,Editorial policy,footer,200,https://kujolang.ai/compare/editorial-policy.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/compare/text/kujo-vs-bend.md,Read as Markdown,footer,200,https://kujolang.ai/compare/text/kujo-vs-bend.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-bend/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/compare/evidence/README.md,"Method, commands and evidence ↗",main,200,https://kujolang.ai/compare/evidence/README.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/compare/evidence/produce.kujo,Producer,main,200,https://kujolang.ai/compare/evidence/produce.kujo,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/compare/evidence/verify.py,Checker,main,200,https://kujolang.ai/compare/evidence/verify.py,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/compare/kujo-vs-bend/,Kujo vs Bend,nav,200,https://kujolang.ai/compare/kujo-vs-bend/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/compare/kujo-vs-baml/,Kujo vs BAML,nav,200,https://kujolang.ai/compare/kujo-vs-baml/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/compare/,All comparisons,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/compare/verify-agent-workflows/,Verification walkthrough,nav,200,https://kujolang.ai/compare/verify-agent-workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/compare/editorial-policy.md,Editorial policy,footer,200,https://kujolang.ai/compare/editorial-policy.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/compare/text/kujo-vs-zero.md,Read as Markdown,footer,200,https://kujolang.ai/compare/text/kujo-vs-zero.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/kujo-vs-zero/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/compare/ai-native-programming-languages/,"Decision guide AI-native programming languages: a practical comparison A decision guide to AI-native language claims, including Kujo, Bend and BAML, without conflating language safety with workflow evidence. Read the guide ↗",main,200,https://kujolang.ai/compare/ai-native-programming-languages/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/compare/ai-code-verification-tools/,"Decision guide AI code verification tools: what each check can establish Compare static checks, tests, proofs, execution receipts and release gates for AI-generated code, with concrete Kujo ecosystem roles. Read the guide ↗",main,200,https://kujolang.ai/compare/ai-code-verification-tools/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/compare/verify-agent-workflows/,"Practical walkthrough Verify agent workflows: contracts, checks and reproducible evidence A practical guide to verifying AI-generated code, evaluating coding agents and preserving traceable execution evidence with honest limits. Read the guide ↗",main,200,https://kujolang.ai/compare/verify-agent-workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/compare/kujo-vs-bend/,Kujo vs Bend,nav,200,https://kujolang.ai/compare/kujo-vs-bend/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/compare/kujo-vs-baml/,Kujo vs BAML,nav,200,https://kujolang.ai/compare/kujo-vs-baml/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/compare/kujo-vs-zero/,Kujo vs Zero,nav,200,https://kujolang.ai/compare/kujo-vs-zero/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/compare/,Comparison hub,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/compare/text/programming-languages-for-ai-agents.md,Read as Markdown,nav,200,https://kujolang.ai/compare/text/programming-languages-for-ai-agents.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/compare/editorial-policy.md,Editorial policy,nav,200,https://kujolang.ai/compare/editorial-policy.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/primitives/,Primitives,nav,200,https://kujolang.ai/ecosystem/primitives/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/tooling/,Tooling,nav,200,https://kujolang.ai/ecosystem/tooling/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/showcase/,Showcase,nav,200,https://kujolang.ai/ecosystem/showcase/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/skills/,Skills,nav,200,https://kujolang.ai/ecosystem/skills/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/workflows/,Workflows,nav,200,https://kujolang.ai/ecosystem/workflows/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/evidence/produce.kujo,Download producer ↗,main,200,https://kujolang.ai/compare/evidence/produce.kujo,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/evidence/verify.py,Download verifier ↗,main,200,https://kujolang.ai/compare/evidence/verify.py,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/evidence/README.md,Read methodology ↗,main,200,https://kujolang.ai/compare/evidence/README.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/evidence/produce.kujo,produce.kujo,main,200,https://kujolang.ai/compare/evidence/produce.kujo,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/evidence/verify.py,verify.py,main,200,https://kujolang.ai/compare/evidence/verify.py,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/evidence/README.md,methodology,main,200,https://kujolang.ai/compare/evidence/README.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/ai-native-programming-languages/,"Decision guide AI-native programming languages: a practical comparison A decision guide to AI-native language claims, including Kujo, Bend and BAML, without conflating language safety with workflow evidence. Read the guide ↗",main,200,https://kujolang.ai/compare/ai-native-programming-languages/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/programming-languages-for-ai-agents/,"Decision guide Programming languages for AI agents: choosing the host and tools Choose a language for building and supervising agents by tool contracts, failure handling, deployment and the evidence your workflow needs. Read the guide ↗",main,200,https://kujolang.ai/compare/programming-languages-for-ai-agents/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/ai-code-verification-tools/,"Decision guide AI code verification tools: what each check can establish Compare static checks, tests, proofs, execution receipts and release gates for AI-generated code, with concrete Kujo ecosystem roles. Read the guide ↗",main,200,https://kujolang.ai/compare/ai-code-verification-tools/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/kujo-vs-bend/,Kujo vs Bend,nav,200,https://kujolang.ai/compare/kujo-vs-bend/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/kujo-vs-baml/,Kujo vs BAML,nav,200,https://kujolang.ai/compare/kujo-vs-baml/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/kujo-vs-zero/,Kujo vs Zero,nav,200,https://kujolang.ai/compare/kujo-vs-zero/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/,Comparison hub,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/text/verify-agent-workflows.md,Read as Markdown,nav,200,https://kujolang.ai/compare/text/verify-agent-workflows.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/editorial-policy.md,Editorial policy,nav,200,https://kujolang.ai/compare/editorial-policy.md,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/compare/verify-agent-workflows/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none

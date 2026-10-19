@@ -1,0 +1,9 @@
+phase,url,local_status,production_status,robots_directives,canonical,canonical_target_status,sitemap_included,indexable,issues
+after,https://kujolang.ai/compare/ai-code-verification-tools/,200,,"default index,follow",https://kujolang.ai/compare/ai-code-verification-tools/,200,yes,yes,
+after,https://kujolang.ai/compare/ai-native-programming-languages/,200,,"default index,follow",https://kujolang.ai/compare/ai-native-programming-languages/,200,yes,yes,
+after,https://kujolang.ai/compare/,200,,"default index,follow",https://kujolang.ai/compare/,200,yes,yes,
+after,https://kujolang.ai/compare/kujo-vs-baml/,200,,"default index,follow",https://kujolang.ai/compare/kujo-vs-baml/,200,yes,yes,
+after,https://kujolang.ai/compare/kujo-vs-bend/,200,,"default index,follow",https://kujolang.ai/compare/kujo-vs-bend/,200,yes,yes,
+after,https://kujolang.ai/compare/kujo-vs-zero/,200,,"default index,follow",https://kujolang.ai/compare/kujo-vs-zero/,200,yes,yes,
+after,https://kujolang.ai/compare/programming-languages-for-ai-agents/,200,,"default index,follow",https://kujolang.ai/compare/programming-languages-for-ai-agents/,200,yes,yes,
+after,https://kujolang.ai/compare/verify-agent-workflows/,200,,"default index,follow",https://kujolang.ai/compare/verify-agent-workflows/,200,yes,yes,
