@@ -9,13 +9,13 @@ author: "1"
 social_image: "/assets/images/social/verify-agent-workflows.jpg"
 ---
 
-Turn an agent’s completion report into a claim you can check. Freeze the requirement, evaluate the actual artifact with an independent oracle, preserve the command outcomes, and retain enough environment information to repeat the check. This guide covers code verification, agent evaluation, traceability, specifications and reproducible evidence as one workflow.
+Check an agent’s completion report against the work it produced. Define the requirement first, inspect the output with an independent checker and keep the commands, results and environment details needed to repeat the check. This guide shows how to connect those steps using a small runnable example.
 
 Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/verify-agent-workflows/
 
-## Make completion inspectable.
+## Check whether the agent finished the task.
 
-A contract, an independent check, and a trail you can replay.
+Define the requirement, check the result independently and keep the evidence.
 
 Could another reviewer challenge this “done” claim?
 
@@ -23,7 +23,7 @@ Could another reviewer challenge this “done” claim?
 - Oracle: A check that can reject a plausible wrong result.
 - Evidence: The actual revision, environment, commands and outcomes.
 
-## Decision lenses
+## Questions to consider
 
 ### Before implementation: Define an observable contract
 
@@ -33,9 +33,9 @@ Put it into practice: Write at least one valid artifact and one plausible invali
 
 Sources: https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo
 
-### During evaluation: Keep the oracle independent
+### During evaluation: Keep the checker independent
 
-Eval can check commands, files and structured values. The exercise uses a separate Python oracle to isolate the idea: read the producer’s output, parse it and check value and type rather than trusting a success message.
+Eval can check commands, files and structured values. The exercise uses a separate Python checker to isolate the idea: read the producer’s output, parse it and check value and type rather than trusting a success message.
 
 Put it into practice: If an agent can rewrite its own checker, decide whether that is acceptable for your threat model.
 
@@ -57,7 +57,7 @@ Illustrative contract for the public artifact exercise. Expected outcomes are sp
 
 Independent check: Require total to equal 42.
 
-Negative control: Use total 41.
+Deliberately invalid case: Use total 41.
 
 Evidence to keep: Positive and wrong-value verifier exit codes.
 
@@ -67,9 +67,9 @@ Sources: https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa
 
 Independent check: Require an exact integer, not a coerced value.
 
-Negative control: Use a string, boolean or floating-point total.
+Deliberately invalid case: Use a string, boolean or floating-point total.
 
-Evidence to keep: Malformed-control results from the oracle.
+Evidence to keep: Malformed-control results from the checker.
 
 Sources: https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
@@ -77,7 +77,7 @@ Sources: https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa
 
 Independent check: Parse JSON and require the expected object field.
 
-Negative control: Use invalid JSON or an empty object.
+Deliberately invalid case: Use invalid JSON or an empty object.
 
 Evidence to keep: Actual stdout and its SHA-256 hash.
 
@@ -87,7 +87,7 @@ Sources: https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa
 
 Independent check: Require the producer process to exit successfully.
 
-Negative control: For a broader trial, force a process failure.
+Deliberately invalid case: For a broader trial, force a process failure.
 
 Evidence to keep: Command, exit code and stderr.
 
@@ -97,7 +97,7 @@ Sources: https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687
 
 Independent check: Record the pinned runtime and environment.
 
-Negative control: The harness rejects a runtime other than Kujo 1.8.2.
+Deliberately invalid case: The test runner rejects a runtime other than Kujo 1.8.2.
 
 Evidence to keep: Runtime version/hash and Python/platform details.
 
@@ -107,7 +107,7 @@ Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971e
 
 Independent check: Map evidence to the artifact and revision under review.
 
-Negative control: For a repository trial, present results from an older revision.
+Deliberately invalid case: For a repository trial, present results from an older revision.
 
 Evidence to keep: Source/artifact hashes; separately retain Git context for real repository work.
 
@@ -123,7 +123,7 @@ Define the expected integer total and the invalid cases. Download the producer a
 
 ### 2. Run with the pinned runtime
 
-Use Kujo 1.8.2 and Python 3. The command runs the producer and independent oracle, then writes evidence.json in the working directory. It requires no model provider.
+Use Kujo 1.8.2 and Python 3. The command runs the producer and independent checker, then writes evidence.json in the working directory. It requires no model provider.
 
 ### 3. Inspect every outcome
 
@@ -133,7 +133,7 @@ Require producer exit 0, positive verifier exit 0, wrong-value verifier nonzero 
 
 For a repository task, add revision identity, a representative acceptance suite and explicit process-failure cases. For agent evaluation, retain every attempt, configuration and manual intervention.
 
-## Run the smallest complete evidence loop.
+## Run the example and inspect its results.
 
 Runnable artifact exercise, not a language benchmark or agent-success evaluation. The table describes expected results; your evidence.json contains the observations.
 
@@ -141,7 +141,7 @@ Runnable artifact exercise, not a language benchmark or agent-success evaluation
 
 Expected result: kujo 1.8.2
 
-What to inspect: The harness fails early on a different version.
+What to inspect: The test runner fails early on a different version.
 
 ### exitCode / positiveVerifierExit
 
@@ -183,49 +183,49 @@ Read evidence.json and the [methodology](/compare/evidence/README.md).
 
 ## Common interpretation mistakes
 
-### Repeatable command as deterministic system
+### Repeating a command does not guarantee the same result
 
 Pinned inputs help repeat a check. Live APIs, time and model sampling can still change behavior.
 
-### One exercise as agent performance
+### This exercise does not measure agent performance
 
 This deterministic artifact exercise does not use a coding agent or measure a success rate.
 
-### A valid schema as a sufficient requirement
+### A valid task record can still omit a requirement
 
-Task schema validation says the record has the required shape. It does not establish that the criteria cover the user’s intent.
+Schema validation checks the task record’s structure. You must still review whether its criteria cover what the user asked for.
 
 ## 1. Write the acceptance contract before implementation
 
-Describe observable behavior, allowed changes and failure cases. Spec can validate a structured task record, but schema validity does not prove that the requirement is sufficient. For example: a generated JSON artifact must contain an integer total of 42. A file merely existing is weaker than that requirement.
+Describe observable behavior, allowed changes and failure cases before implementation. Spec can validate the structure of a task record, but you must decide whether its requirements are sufficient. For example, require a generated JSON object to contain an integer total of 42, rather than merely requiring a file to exist.
 
 ## 2. Evaluate the artifact independently
 
-Use an oracle that does not simply repeat the agent’s implementation. Read the generated file, parse it, check required fields and values, and reject malformed or incorrect output. Eval provides configurable checks; the small exercise below isolates the same principle with Kujo and a standard-library Python harness. Keep the oracle outside the agent’s write scope when the threat model requires it.
+Use a checker that does not simply repeat the agent’s implementation. Read the generated output, parse it and check its fields and values. Eval provides configurable checks; the example below uses a separate Python checker to show the principle. Keep that checker outside the agent’s write access when your threat model requires it.
 
 ## 3. Test the verifier with a known failure
 
-Run the correct artifact, then deliberately change the expected result and require a nonzero verifier exit. If both pass, the verifier is not useful. This negative control establishes that the selected error is detectable; it does not establish coverage of every possible error or resistance to a malicious agent.
+Run the checker against a correct output, then an intentionally wrong one. Require the wrong output to produce a nonzero verifier exit. If both pass, the checker cannot detect that error. This control shows that one selected failure is detectable, not that every error or malicious change will be caught.
 
 ## 4. Make the run traceable
 
-Record the repository commit, runtime version, exact commands, exit codes and artifact hashes. Keep raw stdout and stderr when useful, with deliberate secret handling and retention. RunLedger can store run metadata and supplied results; Workcell can provide bounded execution receipts. A caller-supplied pass verdict should never be presented as independently observed execution.
+Record the repository commit, runtime version, commands, exit codes and output hashes. Keep useful stdout and stderr while controlling secrets and retention. RunLedger stores metadata and supplied results; Workcell records configured execution. Distinguish caller-supplied pass labels from independently observed results.
 
 ## 5. Separate repeatability from determinism
 
-A pinned command and input make a check easier to repeat. External APIs, model sampling, time and mutable dependencies can still change outcomes. Use offline fixtures for deterministic checks and separately report live runs. Do not label a replayed fixture a fresh provider result.
+Fixed commands and inputs make a check easier to repeat. Live APIs, model sampling, time and changing dependencies can still affect the result. Use offline fixtures for deterministic checks and report live runs separately. A replayed fixture is not a fresh provider response.
 
 ## 6. Decide whether to ship
 
-Review the actual diff and the evidence that maps to each acceptance criterion. ShipCheck can add release-readiness signals, while a human or authorized gate owns the final decision. Missing evidence is an explicit unresolved condition, not a reason to infer success.
+Review the actual diff and map each acceptance criterion to its evidence. ShipCheck can add release checks, while a human or authorized gate makes the decision. Treat missing evidence as unresolved rather than assuming success.
 
 ## Run the artifact verification exercise
 
-Download [produce.kujo](/compare/evidence/produce.kujo) and [verify.py](/compare/evidence/verify.py) into the same directory. Run `KUJO_BIN=/path/to/kujo python3 verify.py`. The harness expects Kujo 1.8.2, checks a correct result, checks an intentionally wrong result, and writes evidence.json with command outcomes, environment details and hashes. It makes no network requests and uses no model credentials. See the [methodology](/compare/evidence/README.md).
+Download [produce.kujo](/compare/evidence/produce.kujo) and [verify.py](/compare/evidence/verify.py) into the same directory. Run `KUJO_BIN=/path/to/kujo python3 verify.py` with Kujo 1.8.2. The test runner checks correct and incorrect outputs, then writes evidence.json with command results, environment details and hashes. It uses no network or model credentials. See the [methodology](/compare/evidence/README.md).
 
 ## Interpret the result narrowly
 
-A successful exercise demonstrates the local artifact-checking pattern on a small deterministic task. It does not compare languages, measure coding-agent quality or prove application correctness. To evaluate an agent, repeat a representative task set, keep the model and harness configuration, report all attempts and include manual interventions. Do not extrapolate this exercise to a universal success rate.
+A pass shows that the checker accepted the correct output and rejected the specified invalid cases for this small task. It does not compare languages, evaluate a coding agent or prove an application correct. To evaluate an agent, use representative tasks, record all attempts and configurations, and report manual intervention. Do not turn this exercise into a general success-rate claim.
 
 ## Frequently asked questions
 

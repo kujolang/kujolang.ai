@@ -9,7 +9,7 @@ author: "1"
 social_image: "/assets/images/social/kujo-vs-zero.jpg"
 ---
 
-This page compares Kujo with the developer-preview language at zero-lang.com, which describes value semantics, deterministic cleanup and structured concurrency. Kujo’s comparison focus is the language plus its workflow accountability tools. The Zero website is identifiable, but this review could not establish its canonical source repository or a numbered release; Zero capability statements below are documentation-level evidence.
+This page compares Kujo with the developer-preview language at zero-lang.com. Zero documents value semantics, deterministic cleanup and structured concurrency. Kujo provides a language and separate tools for checking agent work. We could not establish Zero’s official source repository or a numbered release, so its capabilities here rest on documentation rather than inspected implementation.
 
 Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/kujo-vs-zero/
 
@@ -27,7 +27,7 @@ Repository: Canonical repository not verified from the reviewed official pages.
 
 ### Primary purpose
 
-Kujo — Verified supported (language and first-party ecosystem): A programming language plus separately versioned tools for explicit agent workflow contracts and inspectable outcomes.
+Kujo — Verified supported (language and first-party ecosystem): Kujo provides a language and separate tools for defining agent tasks, checking results and keeping run evidence.
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
@@ -37,7 +37,7 @@ Sources: https://zero-lang.com/
 
 ### Static checks
 
-Kujo — Verified supported (language and first-party ecosystem): Type checking in the runtime; task schema validation and outcome checks belong to Spec and Eval. Passing these checks is not a universal correctness proof.
+Kujo — Verified supported (language and first-party ecosystem): The runtime checks types. Spec validates task records, and Eval checks selected outputs. Passing those checks does not prove arbitrary programs correct.
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
@@ -47,7 +47,7 @@ Sources: https://zero-lang.com/download.html
 
 ### Execution
 
-Kujo — Verified supported (language): The CLI contains bytecode VM, interpreter and optional JIT paths. Backend availability and behavior must be checked for the pinned runtime and target.
+Kujo — Verified supported (language): The CLI includes a bytecode VM, an interpreter and optional JIT paths. Check which backends work with the runtime version and target you choose.
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs
 
@@ -57,7 +57,7 @@ Sources: https://zero-lang.com/download.html
 
 ### Formal proof
 
-Kujo — Unknown / not verified (language): A general dependent-type proof system was not established by this review. Do not interpret the positioning “proves it works” as mathematical verification of arbitrary code.
+Kujo — Unknown / not verified (language): We did not establish a general dependent-type proof system in Kujo. The phrase “proves it works” should not be read as mathematical verification of arbitrary code.
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs
 
@@ -67,7 +67,7 @@ Sources: https://zero-lang.com/
 
 ### Workflow evidence
 
-Kujo — Verified supported (first-party ecosystem): RunLedger stores supplied verdicts, commands and tests alongside Git metadata. Workcell defines execution receipts. Neither a receipt nor a correlation ID independently proves semantic correctness.
+Kujo — Verified supported (first-party ecosystem): RunLedger stores supplied verdicts, commands and tests with Git metadata. Workcell records execution receipts. Follow these records to the underlying checks; a receipt or correlation ID alone does not prove the result correct.
 
 Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
 
@@ -77,11 +77,11 @@ Sources: https://zero-lang.com/, https://zero-lang.com/download.html
 
 ## Technical deep dive
 
-Predictable systems semantics. Reviewable agent outcomes.
+Compare Zero’s systems model with Kujo’s tools for checking agent work.
 
 Which behavior must be predictable: resources, execution, or the delivery process?
 
-### Project identity: A preview with a bounded evidence base
+### Project identity: Check what the preview’s documentation establishes
 
 This comparison identifies Zero by zero-lang.com. A canonical repository and numbered release were not established in the reviewed official pages. That limits independent inspection of implementation and release maturity.
 
@@ -89,7 +89,7 @@ Evaluation implication: Treat source identity and a reproducible compiler versio
 
 Sources: https://zero-lang.com/, https://zero-lang.com/download.html
 
-### Systems model: Cleanup and workflow determinism differ
+### Systems model: Predictable cleanup does not make every outcome repeatable
 
 The website describes value semantics, deterministic cleanup and structured concurrency. Those are programming-model claims, not evidence of reproducible builds, deterministic network responses or a recorded agent workflow.
 
@@ -151,35 +151,35 @@ Test the chosen interpreter, native or generated-code mode on the required platf
 
 ### Add external acceptance checks
 
-Check artifacts and process failures with an independent oracle, retain the toolchain identity, and keep documentation claims distinct from your measured outcomes.
+Check artifacts and process failures with an independent checker, retain the toolchain identity, and keep documentation claims distinct from your measured outcomes.
 
 ## Which Zero is being compared?
 
-Zero is an overloaded project name. This page is scoped exclusively to zero-lang.com and the compiler described by its Install page. It is not a comparison with a database, sync engine or another language named Zero. A canonical repository link was not found in the reviewed homepage, installation page or search results; no guessed GitHub repository is cited.
+This page covers only the language at zero-lang.com and the compiler described on its installation page. It does not cover other languages, databases or sync tools named Zero. The official pages and search results we reviewed did not identify an official repository, so we have not guessed a GitHub link.
 
 ## Technical architecture
 
-Zero’s installation guide documents interpreter, native JIT, standalone native and C++ output modes. It also distinguishes its WebAssembly browser compiler from native-library and native-code generation support. These are documented capabilities, not locally reproduced results. Kujo’s inspected CLI exposes VM and interpreter execution with optional JIT support; the surrounding workflow tools do not change the language’s memory model.
+Zero’s installation guide documents interpreter, native JIT, native executable and C++ output modes. It distinguishes the WebAssembly browser compiler from support for native libraries and code generation. We did not reproduce these capabilities locally. Kujo’s inspected CLI supports VM and interpreter execution with optional JIT paths; its workflow tools do not change the language’s memory model.
 
 ## When to choose Kujo
 
-Evaluate Kujo when your first question is how to express the task, check the deliverables, and retain a reviewable account of an agent run. Its ecosystem gives those concerns named tools. That is a workflow choice, not evidence that Kujo has better numerical performance or memory behavior than Zero.
+Evaluate Kujo when you need to define an agent’s task, check its deliverables and keep a reviewable run record. Its separate tools address those needs. This does not establish an advantage over Zero in numerical performance or memory behavior.
 
 ## When to choose Zero
 
-Try Zero’s preview when value semantics and explicit systems behavior match your workload. Use the browser examples to explore the programming model, then establish source access, supported platforms and release policy before depending on it. Its documented cleanup and concurrency semantics may matter more to your application than an integrated agent workflow.
+Try Zero’s preview if its documented value semantics and systems behavior suit your workload. Explore the browser examples, then establish source access, platform support and release policy before depending on it. Resource cleanup and concurrency behavior may matter more to your application than agent-workflow tools.
 
 ## Can you use both?
 
-A process or artifact boundary is a plausible way to combine languages. No Kujo–Zero integration was tested. Before planning one, obtain a reproducible Zero toolchain and verify the relevant exit-code, data-format and native-library contracts.
+A process or file interface could connect the languages, but we did not test a Kujo–Zero integration. First identify a repeatable Zero toolchain, then check its exit codes, data formats and native-library interfaces.
 
 ## Honest limitations
 
-Zero’s source identity and release version remain unverified here, so this page cannot independently substantiate its implementation, security boundary or maturity. Kujo’s evidence tools also need configuration and independently meaningful checks. Deterministic cleanup is not the same thing as deterministic network responses, reproducible builds or an auditable agent run.
+Without a verified source repository or release version, we cannot independently assess Zero’s implementation, security boundaries or maturity. Kujo’s evidence tools also require configuration and meaningful checks. Deterministic cleanup alone does not make network responses or builds repeatable, or create an auditable agent run.
 
 ## Examples and benchmark evidence
 
-No executable Zero example or comparative benchmark is presented as tested. The official installation page supplies an assertion-based example, but reproducing it responsibly requires an identified compiler revision. This comparison deliberately stops at documented architecture until that evidence is available.
+We did not run a Zero example or comparative benchmark. The official installation page includes an assertion-based example, but reproducing it requires an identified compiler revision. This page therefore describes the documented architecture without presenting it as tested behavior.
 
 ## Frequently asked questions
 

@@ -9,7 +9,7 @@ author: "1"
 social_image: "/assets/images/social/kujo-vs-baml.jpg"
 ---
 
-Current BAML is presented as a language for agents, with a standalone runtime and bridges into other languages. Reducing it to a prompt wrapper would be misleading. Kujo is also a programming language; its separate ecosystem emphasizes explicit task contracts, evaluations and inspectable workflow records. Both deserve a trial on the same application requirement.
+Current BAML is a language for agents, with its own runtime and bridges into other languages. Kujo is also a programming language, with separate tools for defining tasks, checking outputs and recording runs. Compare them on the same application requirement, including the work needed to integrate and maintain each option.
 
 Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/kujo-vs-baml/
 
@@ -27,7 +27,7 @@ Repository: https://github.com/BoundaryML/baml
 
 ### Primary purpose
 
-Kujo — Verified supported (language and first-party ecosystem): A programming language plus separately versioned tools for explicit agent workflow contracts and inspectable outcomes.
+Kujo — Verified supported (language and first-party ecosystem): Kujo provides a language and separate tools for defining agent tasks, checking results and keeping run evidence.
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
@@ -37,7 +37,7 @@ Sources: https://boundaryml.com/
 
 ### Static diagnostics
 
-Kujo — Verified supported (language and first-party ecosystem): Type checking in the runtime; task schema validation and outcome checks belong to Spec and Eval. Passing these checks is not a universal correctness proof.
+Kujo — Verified supported (language and first-party ecosystem): The runtime checks types. Spec validates task records, and Eval checks selected outputs. Passing those checks does not prove arbitrary programs correct.
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
@@ -47,7 +47,7 @@ Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e2
 
 ### Testing and evaluations
 
-Kujo — Verified supported (language and first-party ecosystem): Type checking in the runtime; task schema validation and outcome checks belong to Spec and Eval. Passing these checks is not a universal correctness proof.
+Kujo — Verified supported (language and first-party ecosystem): The runtime checks types. Spec validates task records, and Eval checks selected outputs. Passing those checks does not prove arbitrary programs correct.
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
@@ -57,7 +57,7 @@ Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e2
 
 ### Formal proof
 
-Kujo — Unknown / not verified (language): A general dependent-type proof system was not established by this review. Do not interpret the positioning “proves it works” as mathematical verification of arbitrary code.
+Kujo — Unknown / not verified (language): We did not establish a general dependent-type proof system in Kujo. The phrase “proves it works” should not be read as mathematical verification of arbitrary code.
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs
 
@@ -67,7 +67,7 @@ Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e2
 
 ### Observability
 
-Kujo — Verified supported (first-party ecosystem): RunLedger stores supplied verdicts, commands and tests alongside Git metadata. Workcell defines execution receipts. Neither a receipt nor a correlation ID independently proves semantic correctness.
+Kujo — Verified supported (first-party ecosystem): RunLedger stores supplied verdicts, commands and tests with Git metadata. Workcell records execution receipts. Follow these records to the underlying checks; a receipt or correlation ID alone does not prove the result correct.
 
 Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
 
@@ -77,7 +77,7 @@ Sources: https://boundaryml.com/
 
 ## Technical deep dive
 
-Typed AI application code. Explicit workflow accountability.
+Compare BAML’s AI application tools with Kujo’s workflow checks and records.
 
 Are you adopting an AI component, or governing an entire agent change?
 
@@ -89,11 +89,11 @@ Evaluation implication: Pin the source or release before choosing syntax, exampl
 
 Sources: https://boundaryml.com/, https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
 
-### Tests and outputs: Representation is one layer of correctness
+### Tests and outputs: A valid data type can still contain the wrong answer
 
 The inspected test command loads and runs compiled test sets; result parsing tests are also present. A typed or parsed AI response can still contain the wrong domain answer. The source review establishes implementation presence, not successful execution of a local suite.
 
-Evaluation implication: Pair type/shape checks with an independent domain oracle and known wrong answers.
+Evaluation implication: Pair type/shape checks with an independent domain-specific check and known wrong answers.
 
 Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs, https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
 
@@ -123,13 +123,13 @@ Kujo: Specify domain criteria and evaluate the actual artifact.
 
 BAML: Use language diagnostics and tests, then validate answer semantics.
 
-Evidence to collect: A domain oracle that rejects a well-typed but wrong answer.
+Evidence to collect: An independent check that rejects a well-typed but wrong answer.
 
 ### An agent changes code across a repo
 
 Kujo: Compose task, evaluation and run-record tooling.
 
-BAML: Retain application test and trace results as inputs to review.
+BAML: Retain application test and trace results for review.
 
 Evidence to collect: Commands, versions, failures and evidence tied to the actual revision.
 
@@ -151,31 +151,31 @@ Test exceptions, timeouts and boundary types in your own application. A document
 
 ### Retain the evidence
 
-Store check/test output and the domain oracle result with the code revision. Measure latency or token cost only with a declared model, configuration and repeated-run method.
+Store check/test output and the domain-specific check result with the code revision. Measure latency or token cost only with a declared model, configuration and repeated-run method.
 
 ## Technical architecture
 
-The reviewed BAML repository contains a language compiler, a check command that collects project diagnostics, and a test command that loads and runs compiled test sets. Its current site describes typed AI functions, concurrency and tracing. Those product assertions are not evidence of faster execution than Kujo. Kujo’s runtime owns language execution; its task contracts and run records live in separately versioned tools.
+The BAML source we reviewed contains a compiler, a check command that collects project diagnostics and a test command that runs compiled test sets. Its current website describes typed AI functions, concurrency and tracing. These claims do not establish a speed advantage over Kujo. Kujo handles language execution in its runtime and provides task contracts and run records through separately versioned tools.
 
 ## When to choose Kujo
 
-Consider Kujo when you want to assemble a local workflow around explicit acceptance criteria, file and process checks, and artifacts you can inspect outside a hosted dashboard. Evaluate the maintenance cost of that composition. A ledger entry saying pass must still link to the real check output.
+Consider Kujo when you need explicit acceptance criteria, checks of files and processes, and run evidence you can inspect without a hosted dashboard. Include the cost of configuring and maintaining those tools. A ledger entry marked pass should link to the check output that supports it.
 
 ## When to choose BAML
 
-Consider BAML when typed AI functions and incremental integration into an existing application are the immediate need. Its current quickstart and bridge story are a useful starting point for teams adopting one component at a time. Check the exact host language, runtime version and supported boundary types before committing to an integration.
+Consider BAML when you need typed AI functions within an existing application. Its quickstart and language bridges offer a starting point for adding one component at a time. Before choosing a bridge, check the supported host language, runtime version and data types.
 
 ## Can you use both?
 
-An external process or service interface could connect BAML application code to Kujo workflow tools. This review did not test a direct Kujo bridge. Do not assume that a bridge to another host language implies one exists for Kujo. Use a versioned request/response contract and test failures at the boundary.
+You could connect BAML application code to Kujo workflow tools through a process or service interface. We did not test a direct Kujo bridge, and support for another host language does not imply Kujo support. Define a versioned request/response format and test how failures cross the interface.
 
 ## Honest limitations
 
-BAML’s current website and its older structured-output DSL documentation can describe different generations. Pin a release or source commit before copying examples. Kujo’s surrounding tools require separate configuration and their maturity varies. Neither static types nor successful AI-output parsing establishes that a generated answer is factually correct or that a business requirement was met.
+Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement.
 
 ## Examples and benchmark evidence
 
-No comparative latency, token-cost or reliability numbers are asserted. The BAML check and test implementations were read, including result parsing tests, but were not built here. The linked workflow exercise checks artifact contents with a pinned Kujo runtime; it is an evidence pattern, not a BAML performance comparison.
+We make no comparative latency, token-cost or reliability claims. We read BAML’s check and test implementations, including result parsing tests, but did not build them. The linked Kujo example checks a generated output with an independent Python checker; it does not measure BAML performance.
 
 ## Frequently asked questions
 

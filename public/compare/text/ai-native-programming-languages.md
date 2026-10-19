@@ -1,12 +1,12 @@
 # AI-native programming languages: a practical comparison
 
-AI-native is a design claim, not a standardized safety certification. Compare what a language lets an agent express, which mistakes its tools reject, and what evidence remains after execution. The best choice depends on the workload and the assurance you need; there is no universal winner.
+AI-native describes a design goal, not a safety certification. Compare what each language helps an agent do, which mistakes its tools can reject and what evidence you can inspect after a run. The right choice depends on your application and the guarantees it needs.
 
 Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/ai-native-programming-languages/
 
-## Beyond the AI-native label.
+## Choose a language by what it can do.
 
-Compare the design. Challenge the guarantee.
+Compare each language’s design and the evidence behind its guarantees.
 
 What does “AI-native” need to mean for your project?
 
@@ -14,7 +14,7 @@ What does “AI-native” need to mean for your project?
 - Let agents write code: Diagnostics, clear interfaces and a workable edit–check loop.
 - Trust the result: Independent evidence against your actual requirements.
 
-## Decision lenses
+## Questions to consider
 
 ### Application design: Start with the application boundary
 
@@ -24,7 +24,7 @@ Put it into practice: Trial one real feature inside the existing application bef
 
 Sources: https://boundaryml.com/, https://boundaryml.com/quickstart
 
-### Language assurance: Name the property you want checked
+### Language assurance: Decide exactly what you need to check
 
 Bend’s laws and proofs address formally stated properties. Kujo’s type checking and separate outcome tools answer different questions. Decide whether the requirement is a universal invariant, an observed behavior, or a reviewable delivery process.
 
@@ -32,7 +32,7 @@ Put it into practice: Ask for the exact proposition or assertion, then inspect t
 
 Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
-### Adoption economics: Keep the incumbent in the trial
+### Cost of adoption: Compare against the language you already use
 
 A new language changes more than syntax: build integration, dependencies, debugging and maintenance all matter. Keep Python, TypeScript or Rust in the evaluation when one already supports the application; the AI-native label alone is not a migration case.
 
@@ -40,7 +40,7 @@ Put it into practice: Record integration work and manual repairs alongside succe
 
 Sources: https://docs.python.org/3/, https://www.typescriptlang.org/docs/, https://doc.rust-lang.org/book/
 
-## A shortlist organized by the work.
+## Compare the options for your application.
 
 These are entry points for a trial, not rankings. Sources establish the reviewed scope; the trial criteria are editorial recommendations.
 
@@ -68,7 +68,7 @@ Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34
 
 What to investigate: Agent-oriented application code, AI functions and host integration.
 
-Cost or boundary: Pin the generation and bridge; parsing does not establish domain truth.
+Cost or boundary: Choose a specific language version and bridge; valid data can still contain a wrong answer.
 
 A useful first trial: One typed AI function with malformed and well-typed wrong responses.
 
@@ -100,7 +100,7 @@ What to investigate: The fit of its programming model and deployment constraints
 
 Cost or boundary: Include implementation effort, required libraries and team familiarity in the decision.
 
-A useful first trial: Keep a representative existing component as a baseline, with the same output checks.
+A useful first trial: Compare a representative component in the existing application using the same output checks.
 
 Sources: https://doc.rust-lang.org/book/
 
@@ -124,7 +124,7 @@ Include failed attempts, manual edits, integration time and failing controls. A 
 
 Separate correctness, integration fit and operational cost. A candidate that does not meet a required boundary should not win because an unrelated benchmark looks good.
 
-## Turn an attractive claim into an observable test.
+## Ask for evidence behind each claim.
 
 Proposed questions for a trial. None of these rows reports a measured winner.
 
@@ -132,59 +132,59 @@ Proposed questions for a trial. None of these rows reports a measured winner.
 
 Evidence you should request: A representative task set, all attempts and independent acceptance checks.
 
-What still remains open: Whether the result transfers to your repository, model and maintenance cycle.
+What you still need to check: Whether the result transfers to your repository, model and maintenance cycle.
 
 ### “The output is typed”
 
 Evidence you should request: A malformed response rejected and a valid response accepted.
 
-What still remains open: Whether a valid response is factually or operationally correct.
+What you still need to check: Whether a valid response is factually or operationally correct.
 
 ### “The program is proven”
 
 Evidence you should request: The stated law, checked proof and documented trusted boundary.
 
-What still remains open: Whether the law captures the requirement and external code respects the interface.
+What you still need to check: Whether the law captures the requirement and external code respects the interface.
 
 ### “The workflow is auditable”
 
 Evidence you should request: Commands, inputs, revisions, artifacts and linked raw check outcomes.
 
-What still remains open: Whether supplied pass labels are independently corroborated.
+What you still need to check: Whether supplied pass labels are independently corroborated.
 
 ## Common interpretation mistakes
 
-### Label as certification
+### An AI-native label is not a certification
 
 AI-native has no standardized assurance level in this guide. Ask which mechanism provides the claimed confidence.
 
-### Small demo as productivity result
+### A small demo does not measure productivity
 
 A tiny program can omit packaging, migration, debugging and recovery costs. Evaluate a representative task.
 
-### Unknown as unsupported
+### An unknown capability is not necessarily unsupported
 
 Missing verification is an evidence gap. Preserve it as unknown rather than awarding a negative capability score.
 
 ## Three different questions behind the label
 
-First, is the language designed to implement AI-powered applications? Second, does its tooling help agents write and inspect code? Third, can a reviewer independently check the resulting software? A project can answer one question well without answering all three. Treat these as separate requirements in a trial.
+Ask three questions separately: does the language help you build AI-powered applications, help an agent write and inspect code, or help a reviewer check the result? A project may address one well without addressing the others. Choose which of these matters for your application before starting a trial.
 
 ## A useful shortlist
 
-Kujo combines language execution with tools for task contracts, outcome checks and run records. Current Bend emphasizes laws, proofs and parallel computation. Current BAML emphasizes an agent-oriented language, AI functions and incremental adoption. Zero’s reviewed site emphasizes systems semantics; its inclusion here does not establish an AI-native positioning. Follow the direct comparisons for evidence levels and version boundaries.
+Kujo combines language execution with separate tools for task requirements, output checks and run records. Current Bend emphasizes laws, proofs and parallel computation. Current BAML emphasizes agent-oriented code, AI functions and integration with existing applications. Zero’s reviewed site emphasizes systems behavior; we do not infer an AI-native design goal from its inclusion here. The direct comparisons show the evidence and version limits for each.
 
 ## Keep established languages in the evaluation
 
-Python, TypeScript and Rust are legitimate options for agent-driven development even without an AI-native label. Start from your existing libraries, deployment targets and team expertise. A new language must justify migration costs with a capability you actually need. Tooling around an established language can also produce strong test and execution evidence.
+Keep Python, TypeScript and Rust in the evaluation when their libraries, deployment options and your team’s experience already suit the application. A new language needs to justify the cost of adopting it with a capability you need. Tests and execution records can also support agent-written code in an established language.
 
 ## How to choose the best fit
 
-Use one representative repository task. Freeze the acceptance criteria before an agent starts. Record the runtime, dependencies, checks, outputs and any manual intervention. Include a deliberately wrong output to make sure the verifier rejects it. Judge maintainability and integration effort alongside correctness; do not infer productivity from a tiny syntax example.
+Use one representative repository task and fix its acceptance criteria before the agent starts. Record versions, dependencies, checks, outputs and manual repairs. Include an incorrect output that the checker must reject. Compare maintenance and integration work alongside correctness; a small syntax example cannot establish overall productivity.
 
 ## What this guide does not rank
 
-No market-share, search-volume, speed or agent-success leaderboard is asserted. These pages separate observed implementation from official claims and unknowns. A future performance comparison needs identical workloads, suitable targets and repeated measurements, not vendor headline numbers.
+We do not rank market share, search volume, speed or agent success rates. These pages distinguish inspected implementation from official claims and unknowns. A useful performance comparison would need the same workloads, appropriate targets and repeated measurements.
 
 ## Frequently asked questions
 

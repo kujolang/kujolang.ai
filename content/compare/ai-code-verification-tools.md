@@ -9,13 +9,13 @@ author: "1"
 social_image: "/assets/images/social/ai-code-verification-tools.jpg"
 ---
 
-Verify AI-generated code with independent checks tied to explicit requirements. Different tools establish different facts: a type checker rejects some invalid programs, a test observes selected behavior, a proof establishes a stated property within its assumptions, and a receipt records an execution. None is a substitute for all the others.
+Use independent checks tied to clear requirements to verify AI-generated code. A type checker rejects some invalid programs, a test checks selected behavior, and a proof establishes a stated property within its assumptions. An execution record helps show what ran. Build your verification process around the facts you need each tool to establish.
 
 Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/ai-code-verification-tools/
 
-## Match the check to the claim.
+## Choose checks that catch the failures you care about.
 
-Types, tests, proofs and receipts answer different questions.
+Understand what types, tests, proofs and execution records can each tell you.
 
 What failure would make the deliverable unacceptable?
 
@@ -23,7 +23,7 @@ What failure would make the deliverable unacceptable?
 - During evaluation: Observe behavior against independent acceptance criteria.
 - After execution: Retain evidence and resolve release conditions.
 
-## Decision lenses
+## Questions to consider
 
 ### Static structure: Reject a class of mistakes early
 
@@ -133,7 +133,7 @@ Run a valid case and at least one invalid case against the actual checker. A tes
 
 Map each acceptance criterion to evidence for the current revision. Label missing or inconclusive evidence explicitly before a release decision.
 
-## One JSON field. Several different guarantees.
+## Check the JSON field’s value as well as its type.
 
 The linked Kujo/Python exercise requires an integer total of 42. These expected cases explain why process success, parsing and semantic validation are separate checks.
 
@@ -165,7 +165,7 @@ Reason: The representation is a string, not the required integer.
 
 Expected decision: Reject
 
-Reason: The oracle requires an exact integer type; a boolean or floating-point value is insufficient.
+Reason: The checker requires an exact integer type; a boolean or floating-point value is insufficient.
 
 ### {} or malformed JSON
 
@@ -175,41 +175,41 @@ Reason: The required field or valid representation is missing.
 
 ## Common interpretation mistakes
 
-### File existence as task completion
+### An existing file does not show that the task is complete
 
 An existing file may be empty, stale or incorrect. Inspect its required contents and identity.
 
-### Recorded pass as independently checked pass
+### Check the evidence behind a recorded pass
 
 A stored verdict may be supplied by a caller. Follow it to the actual check output.
 
-### More tests as automatic coverage
+### More tests do not necessarily cover more requirements
 
 Many assertions can repeat the same assumption. Map tests to failure cases and acceptance criteria.
 
 ## Static analysis and architecture checks
 
-Use the target language’s compiler and linter before running the program. Add architecture rules where unwanted imports or dependencies matter. Fence is a Kujo ecosystem tool for configured import boundaries; it is not a general security audit or a theorem prover. Static checks cannot establish every runtime outcome.
+Run the target language’s compiler and linter before executing the program. Add architecture checks when imports or dependencies must follow specific rules. Fence checks configured import boundaries in the Kujo toolset; it is not a general security audit or theorem prover. Static checks leave runtime behavior to other checks.
 
 ## Behavioral tests and evaluations
 
-Eval supports checks against command outcomes, files and structured data. Choose assertions from the requirement, not merely from the implementation an agent happened to produce. A test that only checks whether a file exists cannot establish that its contents are correct. Preserve a failing control to detect permissive or disconnected checks.
+Eval checks command results, files and structured data. Derive assertions from the requirement, rather than copying the agent’s implementation. Checking that a file exists says nothing about whether its contents are correct. Include an incorrect output to confirm that the checker detects the failure you care about.
 
 ## Formal verification has a distinct scope
 
-Bend’s current guide describes laws and proof definitions. This is materially different from running a finite test suite. Proof strength depends on the stated proposition, the checker’s trust boundary and any excluded foreign or unsafe behavior. Do not call ordinary successful tests mathematical proof.
+Bend’s guide describes laws and proof definitions. A checked proof addresses a stated property under the proof system’s assumptions, rather than a finite set of test inputs. Review the proposition, the checker and any excluded unsafe or foreign code. Passing ordinary tests should not be described as mathematical proof.
 
 ## Execution evidence and release gates
 
-Workcell receipts and RunLedger records can support investigation of what ran and what was reported. RunLedger also accepts supplied test results and verdicts, so readers must follow the evidence links. ShipCheck checks release signals and reports blockers; the existence of a test directory is not evidence that all tests passed.
+Workcell receipts and RunLedger records help show what ran and what was reported. RunLedger accepts supplied test results and verdicts, so follow the links to the underlying evidence. ShipCheck checks release signals and reports blockers. A test directory’s presence does not show that its tests ran or passed.
 
 ## Select a stack by the failure you need to catch
 
-For malformed output, validate the schema and values. For an unauthorized effect, test the execution boundary. For a regression, run an independent behavioral suite. For a universal mathematical invariant, investigate a suitable proof system. For an incomplete release, use explicit release gates. Keep the original question visible in every report.
+Choose checks by failure mode. Validate structure and values for malformed output, test execution controls for unauthorized effects, and run behavioral tests for regressions. Investigate a suitable proof system for a universal mathematical invariant. Use explicit gates for release requirements, and state what each result establishes.
 
 ## Adoption without a language rewrite
 
-A verification process can surround a repository in its existing language. Establish a baseline before adding tools, then introduce the smallest check that catches a real failure. The workflow guide supplies a runnable positive and negative artifact check without a model provider or paid service.
+You can add verification around a repository without changing its language. Record a baseline, then add the smallest check that catches a real failure. The workflow guide provides runnable checks of correct and incorrect outputs without a model provider or paid service.
 
 ## Frequently asked questions
 
