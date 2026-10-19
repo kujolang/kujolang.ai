@@ -1,3 +1,4 @@
+import {renderHub,validateHub} from './render-comparison-hub.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -34,6 +35,7 @@ export function validate(c){
   for(const q of p.faq??[])must(q.length===2&&q.every(nonempty),`${p.slug}: invalid FAQ`);
  }
  for(const p of pages)for(const r of p.related??[])must(slugs.has(r)&&r!==p.slug,`${p.slug}: broken related reference ${r}`);
+ validateHub(c);
  if(errors.length)throw new Error(errors.join('\n'));return c;
 }
 const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -67,7 +69,7 @@ export function outputs(c){validate(c);const out=new Map();for(const p of c.page
  out.set(`content/compare/${p.slug}.md`,'---\n'+Object.entries(front).map(([k,v])=>`${k}: ${JSON.stringify(v)}`).join('\n')+'\n---\n\n'+markdown(p,c).replace(/^# [^\n]+\n\n/,''));
  out.set(`templates/compare-content/${p.slug}.html`,body(p,c));
  out.set(`public/compare/text/${p.slug}.md`,markdown(p,c));
- }return out;}
+ }for(const [name,text] of renderHub(c))out.set(name,text);return out;}
 if(process.argv[1]===fileURLToPath(import.meta.url)){
  const c=JSON.parse(fs.readFileSync(path.join(root,'comparison/catalog.json'),'utf8'));const out=outputs(c);let stale=[];
  for(const [name,text]of out){const dest=path.join(root,name);if(process.argv.includes('--check')){if(!fs.existsSync(dest)||fs.readFileSync(dest,'utf8')!==text)stale.push(name);}else{fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,text)}}
