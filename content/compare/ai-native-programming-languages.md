@@ -83,15 +83,15 @@ A useful first trial: One typed AI function with malformed and well-typed wrong 
 
 Sources: https://boundaryml.com/, https://boundaryml.com/quickstart, https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
 
-### Zero preview
+### Vercel Zerolang
 
-What to investigate: Documented value semantics, cleanup and concurrency.
+What to investigate: Graph queries, checked semantic patches and readable source projections.
 
-Cost or boundary: Source repository and numbered release remain unverified; no AI-native positioning is inferred.
+Cost or boundary: Experimental; our runtime review covers small macOS x64 fixtures, not production or cross-target readiness.
 
-A useful first trial: Explore the model, then identify a reproducible compiler before dependency decisions.
+A useful first trial: Reject a stale patch, reject a type mismatch, and make a behavioral test fail.
 
-Sources: https://zero-lang.com/, https://zero-lang.com/download.html
+Sources: https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md, https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
 ### Existing Python / TypeScript
 
@@ -181,7 +181,7 @@ Ask three questions separately: does the language help you build AI-powered appl
 
 ## A useful shortlist
 
-Kujo combines language execution with separate tools for task requirements, output checks and run records. Current Bend emphasizes laws, proofs and parallel computation. Current BAML emphasizes agent-oriented code, AI functions and integration with existing applications. Zero’s reviewed site emphasizes systems behavior; we do not infer an AI-native design goal from its inclusion here. The direct comparisons show the evidence and version limits for each.
+Kujo combines language execution with separate tools for task requirements, output checks and run records. Bend emphasizes laws, proofs and parallel computation. BAML emphasizes AI functions and application integration. Vercel Zerolang gives agents a graph-query and checked-patch interface. The direct comparisons identify the pinned versions, executed checks and remaining limits.
 
 ## Keep established languages in the evaluation
 
@@ -208,10 +208,12 @@ There is no supported universal ranking here. Use Bend’s proof model, BAML’s
 - [Eval scope and implementation](https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo) — implementation inspected; 71e66dff780d6930bcbe093c046bf31aa26411df; reviewed 2026-10-19.
 - [Bend language guide](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md) — official documentation; Stable v2.0.37; guide from a separate pinned source snapshot; reviewed 2026-10-19.
 - [BAML current language overview](https://boundaryml.com/) — product assertions; not independently benchmarked; 648ad5ed10f543c129b51789c7d02e29b64f06f7; reviewed 2026-10-19.
-- [Zero language overview](https://zero-lang.com/) — official documentation; implementation not inspected; Developer preview; release identifier unverified; reviewed 2026-10-19.
+- [Vercel Zerolang graph architecture](https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md) — pinned official documentation; v0.3.4; 5b3a90a7756e48ab449eb16e688044b8decec7a9; reviewed 2026-10-19.
 - [Python documentation](https://docs.python.org/3/) — official documentation; Python 3.15.0 (2026-10-09); rolling documentation, not runtime-tested; reviewed 2026-10-19.
 - [TypeScript documentation](https://www.typescriptlang.org/docs/) — official documentation; TypeScript 7.0.2 (2026-08-20); rolling documentation, not runtime-tested; reviewed 2026-10-19.
 - [The Rust book](https://doc.rust-lang.org/book/) — official documentation; Rust 1.99.1 (2026-10-16); rolling book, not runtime-tested; reviewed 2026-10-19.
+- [Zerolang patch validation implementation](https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c) — implementation inspected; selected release cases executed; v0.3.4; 5b3a90a7756e48ab449eb16e688044b8decec7a9; reviewed 2026-10-19.
+- [Competitor runtime fixtures and raw outcomes](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19) — local execution receipts; bounded fixtures; Bend 2.0.37; BAML 0.22.2; Zerolang 0.3.4; macOS x86_64; reviewed 2026-10-19.
 
 ## Related pages
 

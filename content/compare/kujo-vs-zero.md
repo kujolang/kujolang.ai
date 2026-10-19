@@ -1,27 +1,27 @@
 ---
 template: "comparison-direct"
-title: "Kujo vs Zero: workflow accountability and systems semantics"
-description: "A bounded comparison of Kujo and the Zero developer preview at zero-lang.com, with explicit limits on repository and release verification."
-seo_title: "Kujo vs Zero: workflow accountability and systems semantics"
+title: "Kujo vs Zerolang: workflow evidence and checked graph edits"
+description: "Compare Kujo with Vercel Zerolang: task evidence, graph patches, type checks, executable tests and source projections, with pinned runtime results."
+seo_title: "Kujo vs Zerolang: workflow evidence and checked graph edits"
 custom_url: "kujo-vs-zero"
 date: "2026-10-19"
 author: "1"
 social_image: "/assets/images/social/kujo-vs-zero.jpg"
 ---
 
-This page compares Kujo with the developer-preview language at zero-lang.com. Zero documents value semantics, deterministic cleanup and structured concurrency. Kujo provides a language and separate tools for checking agent work. We could not establish Zero’s official source repository or a numbered release, so its capabilities here rest on documentation rather than inspected implementation.
+Vercel Zerolang makes the program graph the normal compiler input and lets agents submit checked semantic edits. Kujo combines language execution with separate tools for task requirements, output checks and run records. We inspected Zerolang’s repository and exercised release 0.3.4, including rejected patches and failing tests. These approaches address different parts of trusting agent-written software.
 
 Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/kujo-vs-zero/
 
 ## At a glance
 
-Zero: https://zero-lang.com/
+Zerolang: https://zerolang.ai/
 
-Documentation: https://zero-lang.com/download.html
+Documentation: https://zerolang.ai/docs
 
-Version: Developer preview; numbered release not verified
+Version: 0.3.4; latest published release checked 2026-10-19
 
-Repository: Canonical repository not verified from the reviewed official pages.
+Repository: https://github.com/vercel-labs/zerolang
 
 ## Capability matrix
 
@@ -31,9 +31,9 @@ Kujo — Verified supported (language and first-party ecosystem): Kujo provides 
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
-Zero — Partially supported (language): Predictable systems behavior with value semantics and structured concurrency, according to the website.
+Zerolang — Verified supported (language): Graph-native programming for agent queries and checked semantic edits.
 
-Sources: https://zero-lang.com/
+Sources: https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md
 
 ### Static checks
 
@@ -41,9 +41,9 @@ Kujo — Verified supported (language and first-party ecosystem): In Kujo 1.8.2,
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
-Zero — Partially supported (language): The installation guide documents a check-only compiler mode; implementation not inspected.
+Zerolang — Verified supported (toolchain): Stale-hash and wrong-return-type patches were rejected without changing the graph in our 0.3.4 fixtures.
 
-Sources: https://zero-lang.com/download.html
+Sources: https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
 ### Execution
 
@@ -51,9 +51,9 @@ Kujo — Verified supported (language): The CLI includes a bytecode VM, an inter
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs
 
-Zero — Partially supported (language): Interpreter, native JIT, native executable and C++ output modes are documented.
+Zerolang — Verified supported (language): The graph-backed package ran a greeting and an arithmetic test on macOS x64. Other targets were not executed.
 
-Sources: https://zero-lang.com/download.html
+Sources: https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/compile-path.md, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
 ### Formal proof
 
@@ -61,9 +61,9 @@ Kujo — Unknown / not verified (language): We did not establish a general depen
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs
 
-Zero — Unknown / not verified (language): General theorem proving was not verified. Deterministic semantics alone do not establish it.
+Zerolang — Unknown / not verified (language): General theorem proving was not established. Graph validation and executable tests answer narrower questions.
 
-Sources: https://zero-lang.com/
+Sources: https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
 ### Workflow evidence
 
@@ -71,131 +71,140 @@ Kujo — Verified supported (first-party ecosystem): RunLedger stores supplied v
 
 Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
 
-Zero — Unknown / not verified (toolchain): Agent task contracts and a run-receipt system were not verified.
+Zerolang — Verified supported (toolchain): Graph hashes, structured patch outcomes and projection checks provide review evidence. A separate end-to-end run ledger was not assessed.
 
-Sources: https://zero-lang.com/, https://zero-lang.com/download.html
+Sources: https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c, https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/projections.md, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
 ## Technical deep dive
 
-Compare Zero’s systems model with Kujo’s tools for checking agent work.
+Compare compiler-checked graph edits with task checks and retained workflow evidence.
 
-Which behavior must be predictable: resources, execution, or the delivery process?
+Do you need a safer editing interface, evidence of the outcome, or both?
 
-### Project identity: Check what the preview’s documentation establishes
+### Program representation: Agents edit the compiler’s graph
 
-This comparison identifies Zero by zero-lang.com. A canonical repository and numbered release were not established in the reviewed official pages. That limits independent inspection of implementation and release maturity.
+The graph stores program facts rather than treating source text as the only authority. Queries expose semantic handles; patch operations change those facts. The normal package compile path loads zero.graph.
 
-Evaluation implication: Treat source identity and a reproducible compiler version as prerequisites for a production trial.
+Evaluation implication: Evaluate the actual edit and query operations your agent needs; do not infer lower token cost from the architecture alone.
 
-Sources: https://zero-lang.com/, https://zero-lang.com/download.html
+Sources: https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md, https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/compile-path.md
 
-### Systems model: Predictable cleanup does not make every outcome repeatable
+### Patch validation: Reject stale or invalid edits before saving
 
-The website describes value semantics, deterministic cleanup and structured concurrency. Those are programming-model claims, not evidence of reproducible builds, deterministic network responses or a recorded agent workflow.
+The inspected patch implementation checks the expected graph hash and validates graph shape. Executed release fixtures also rejected a Bool return in an i32 function. Both negative cases preserved the stored graph byte for byte.
 
-Evaluation implication: Choose resource-lifetime and cancellation cases that matter to your application; observe them on an identified toolchain.
+Evaluation implication: This verifies two rejection paths, not every patch operation or concurrent-writer scenario.
 
-Sources: https://zero-lang.com/
+Sources: https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
-### Execution targets: Native and browser modes have different scope
+### Human review: Keep projections and graph state consistent
 
-The install page describes interpreter, JIT, native executable and C++ output modes, and distinguishes the WebAssembly browser compiler from native-library and native-code generation support. These capabilities were not reproduced locally.
+Export produces readable .0 text. Verify-projection detects divergence. Pinned documentation also describes automatic refresh when only source text changed, conflict errors when both sides changed, and ZERO_STALE=fail for stricter behavior.
 
-Evaluation implication: Validate your target and required native dependencies before treating a browser example as deployment evidence.
+Evaluation implication: Our export and drift fixtures passed. Automatic refresh, conflict resolution and merge behavior were inspected in documentation but not exercised.
 
-Sources: https://zero-lang.com/download.html
+Sources: https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/projections.md, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
 ## Decision scenarios
 
 Proposed evaluation criteria, not comparative benchmark results.
 
-### Resource-sensitive application
+### Agent changes a function
 
-Kujo: Evaluate the actual runtime behavior separately from workflow tools.
+Kujo: Use external checks to enforce the task’s expected outcome.
 
-Zero: Explore the documented value, cleanup and concurrency model.
+Zerolang: Query graph facts and submit a patch with stale-state protection.
 
-Evidence to collect: An identified compiler plus lifecycle and cancellation observations.
+Evidence to collect: Before/after graph identity, patch result and independent acceptance output.
 
-### Browser experiment to native delivery
+### Human reviews an agent edit
 
-Kujo: Keep artifact and deployment checks explicit for each target.
+Kujo: Retain the artifact and check output in a run record.
 
-Zero: Confirm the difference between browser compiler and native modes.
+Zerolang: Export .0 text and verify projection consistency.
 
-Evidence to collect: Target-specific build and dependency evidence, not just a browser demo.
+Evidence to collect: Readable diff plus a passing projection check; resolve conflicts explicitly.
 
-### Auditable agent changes
+### Release to a new platform
 
-Kujo: Use task, check and execution-evidence tools around deliverables.
+Kujo: Check the chosen deployment environment and isolation configuration.
 
-Zero: A comparable receipt system was not verified in this review.
+Zerolang: Test the required backend, graph shape and target locally.
 
-Evidence to collect: Independent checks and records; unknown support is not an absence claim.
+Evidence to collect: Target-specific build and execution evidence; our review covered macOS x64 only.
 
 ## A focused evaluation plan
 
 Proposed steps; no competitor runtime test is claimed.
 
-### Resolve the baseline
+### Pin the release
 
-Establish the compiler revision, supported platform and source/release provenance before running a dependency decision. This review leaves the repository and numbered release unknown.
+Use Zerolang 0.3.4 and record the downloaded binary hash. Check newer releases independently; do not assume main and a published binary behave identically.
 
-### Choose a lifecycle case
+### Exercise a rejected edit
 
-Use an example involving resource ownership, cleanup or cancellation. Write down the expected behavior before observing the program. This is a proposed evaluation, not a reported result.
+Try a stale graph hash and a wrong return type. Require nonzero exits and verify that zero.graph did not change.
 
-### Verify the deployment target
+### Separate checks from tests
 
-Test the chosen interpreter, native or generated-code mode on the required platform. Validate native-library support independently of browser examples.
+Run one passing assertion, then deliberately change its expected value. Record the failure and test count; a no-tests success is not behavioral coverage.
 
-### Add external acceptance checks
+### Review the same program
 
-Check artifacts and process failures with an independent checker, retain the toolchain identity, and keep documentation claims distinct from your measured outcomes.
+Export and verify the projection, then introduce drift and observe the diagnostic. Add your own task-level acceptance checks before considering deployment.
 
 ## Which Zero is being compared?
 
-This page covers only the language at zero-lang.com and the compiler described on its installation page. It does not cover other languages, databases or sync tools named Zero. The official pages and search results we reviewed did not identify an official repository, so we have not guessed a GitHub link.
+This page covers Vercel’s experimental Zerolang at zerolang.ai and vercel-labs/zerolang. The earlier page covered the unrelated systems-language preview at zero-lang.com. Its C++ and value-semantics descriptions do not describe this repository. We now pin this comparison to published Zerolang 0.3.4, rather than mixing its release behavior with current main.
 
 ## Technical architecture
 
-Zero’s installation guide documents interpreter, native JIT, native executable and C++ output modes. It distinguishes the WebAssembly browser compiler from support for native libraries and code generation. We did not reproduce these capabilities locally. Kujo’s inspected CLI supports VM and interpreter execution with optional JIT paths; its workflow tools do not change the language’s memory model.
+Zerolang stores declarations, types, calls and related facts in zero.graph. Agents query and patch that graph; humans can export readable .0 projections. The normal package compile path consumes the graph. Our stale-hash and wrong-return-type patches failed without changing the stored graph. Kujo’s separate workflow tools check task contracts and observed outcomes; they do not provide this graph-editing model.
 
 ## When to choose Kujo
 
-Evaluate Kujo when you need to define an agent’s task, check its deliverables and keep a reviewable run record. Its separate tools address those needs. This does not establish an advantage over Zero in numerical performance or memory behavior.
+Evaluate Kujo when your main need is to define acceptance criteria, check generated artifacts or process outcomes, and retain evidence across a workflow. Plan the separate tools and their configuration. A successful kujo check in 1.8.2 is not a complete type-correctness guarantee.
 
-## When to choose Zero
+## When to choose Zerolang
 
-Try Zero’s preview if its documented value semantics and systems behavior suit your workload. Explore the browser examples, then establish source access, platform support and release policy before depending on it. Resource cleanup and concurrency behavior may matter more to your application than agent-workflow tools.
+Evaluate Zerolang when compiler-aware agent edits, graph queries and reviewable source projections fit your development process. Its checked patch interface gives agents a narrower editing surface than unrestricted text replacement. Treat it as an experiment: validate the graph shapes, platform and dependencies your application needs before adopting it.
 
 ## Can you use both?
 
-A process or file interface could connect the languages, but we did not test a Kujo–Zero integration. First identify a repeatable Zero toolchain, then check its exit codes, data formats and native-library interfaces.
+A process or file boundary could connect a Zerolang component to external acceptance checks and run records. No direct Kujo integration was tested. Keep the graph hash, compiler version, test output and projection state together so a reviewer can connect a checked edit to the artifact that ran.
 
 ## Honest limitations
 
-Without a verified source repository or release version, we cannot independently assess Zero’s implementation, security boundaries or maturity. Kujo’s evidence tools also require configuration and meaningful checks. Deterministic cleanup alone does not make network responses or builds repeatable, or create an auditable agent run.
+A valid graph can still implement the wrong behavior. Our graph check passed while a deliberately incorrect expected result made zero test fail. We did not establish general theorem proving, production sandbox security, cross-target support or a speed advantage. Runtime capability facts are not a substitute for an operating-system isolation boundary.
 
 ## Examples and benchmark evidence
 
-We did not run a Zero example or comparative benchmark. The official installation page includes an assertion-based example, but reproducing it requires an identified compiler revision. This page therefore describes the documented architecture without presenting it as tested behavior.
+On macOS x86_64, release 0.3.4 initialized a package, applied a valid graph patch and ran a greeting. An addition test passed; changing its expectation failed. Stale and ill-typed patches left the graph unchanged. Projection export and verification passed, and edited projection text failed verification. These are small contract checks, not a workload benchmark or exhaustive compiler audit.
 
 ## Frequently asked questions
 
-### Is Zero an AI-native language?
+### Is Zerolang an AI-native language?
 
-The reviewed Zero homepage emphasizes systems semantics. This page does not infer an AI-agent design goal from its name or from inclusion in a comparison list.
+Vercel explicitly designs Zerolang for agents: they query a compiler-owned graph and submit checked edits. This design goal does not establish better productivity or correctness on every task.
 
-### Why is the repository missing?
+### Is this the Zero language at zero-lang.com?
 
-The official pages reviewed did not establish a canonical repository. Keeping that field unknown is more useful than linking a different project with the same name.
+No. This page now covers zerolang.ai and vercel-labs/zerolang. They are different projects, and the old systems-preview claims should not be carried across.
+
+### Does a checked graph prove the program meets its requirements?
+
+No. Our valid graph passed check while a deliberately wrong test expectation failed. Keep type and structural validation separate from behavioral tests and external acceptance criteria.
 
 ## References
 
-- [Zero language overview](https://zero-lang.com/) — official documentation; implementation not inspected; Developer preview; release identifier unverified; reviewed 2026-10-19.
-- [Zero execution modes](https://zero-lang.com/download.html) — official documentation; implementation not inspected; Documentation snapshot; no release version asserted; reviewed 2026-10-19.
+- [Vercel Zerolang graph architecture](https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md) — pinned official documentation; v0.3.4; 5b3a90a7756e48ab449eb16e688044b8decec7a9; reviewed 2026-10-19.
+- [Zerolang graph compile path](https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/compile-path.md) — pinned official documentation; v0.3.4; 5b3a90a7756e48ab449eb16e688044b8decec7a9; reviewed 2026-10-19.
+- [Zerolang patch validation implementation](https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c) — implementation inspected; selected release cases executed; v0.3.4; 5b3a90a7756e48ab449eb16e688044b8decec7a9; reviewed 2026-10-19.
+- [Zerolang projection synchronization](https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/projections.md) — documentation inspected; export and drift checks executed; v0.3.4; 5b3a90a7756e48ab449eb16e688044b8decec7a9; reviewed 2026-10-19.
+- [Zerolang published release](https://github.com/vercel-labs/zerolang/releases/tag/v0.3.4) — official release metadata; macOS x64 binary exercised; 0.3.4; released 2026-06-13; reviewed 2026-10-19.
+- [Competitor runtime fixtures and raw outcomes](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19) — local execution receipts; bounded fixtures; Bend 2.0.37; BAML 0.22.2; Zerolang 0.3.4; macOS x86_64; reviewed 2026-10-19.
 - [Kujo runtime and CLI source](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs) — implementation inspected; Kujo 1.8.2 source snapshot; reviewed 2026-10-19.
+- [Kujo type checker](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs) — implementation inspected; 549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1; reviewed 2026-10-19.
 - [Spec scope and implementation](https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo) — implementation inspected; 1211f37a09314be7150734bf15a55e9b2ea6504d; reviewed 2026-10-19.
 - [Eval scope and implementation](https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo) — implementation inspected; 71e66dff780d6930bcbe093c046bf31aa26411df; reviewed 2026-10-19.
 - [Runledger scope and implementation](https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo) — implementation inspected; 334ddd4d33c8cb2612c8edab971ee69170824133; reviewed 2026-10-19.

@@ -91,11 +91,11 @@ Sources: https://boundaryml.com/, https://github.com/BoundaryML/baml/blob/648ad5
 
 ### Tests and outputs: A valid data type can still contain the wrong answer
 
-The inspected test command loads and runs compiled test sets; result parsing tests are also present. A typed or parsed AI response can still contain the wrong domain answer. The source review establishes implementation presence, not successful execution of a local suite.
+The inspected test command loads and runs compiled test sets. Our 0.22.2 fixture passed one assertion and failed a deliberately wrong expectation. This exercises a local test set, not the repository’s full suite. A typed or parsed AI response still needs checks for factual and domain correctness.
 
 Evaluation implication: Pair type/shape checks with an independent domain-specific check and known wrong answers.
 
-Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs, https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
+Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs, https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
 ### Integration and tracing: Verify the host boundary independently
 
@@ -171,11 +171,11 @@ You could connect BAML application code to Kujo workflow tools through a process
 
 ## Honest limitations
 
-Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement.
+Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement. In the tested 0.22.2 CLI, Python client setup uses generate add python/pydantic2 followed by generate; do not substitute a command from a newer quickstart without checking the installed help.
 
 ## Examples and benchmark evidence
 
-We make no comparative latency, token-cost or reliability claims. We read BAML’s check and test implementations, including result parsing tests, but did not build them. The linked Kujo example checks a generated output with an independent Python checker; it does not measure BAML performance.
+BAML 0.22.2 ran a local typed function and a passing assertion, rejected a wrong return type and syntax error, and returned nonzero for a failing assertion. Python/Pydantic2 client generation completed. Provider calls, generated-client execution and tracing were not tested. Standalone packaging was blocked by local disk exhaustion. These checks do not measure model quality, latency or token cost.
 
 ## Frequently asked questions
 
@@ -200,6 +200,7 @@ No. Type checks and structured parsing constrain representation. Domain correctn
 - [Runledger scope and implementation](https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo) — implementation inspected; 334ddd4d33c8cb2612c8edab971ee69170824133; reviewed 2026-10-19.
 - [BAML stable language toolchain](https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.2) — official release metadata; 0.22.2; released 2026-10-13; reviewed 2026-10-19.
 - [Kujo stable release](https://github.com/kujolang/kujo/releases/tag/v1.8.2) — official release metadata; 1.8.2; released 2026-10-19; reviewed 2026-10-19.
+- [Competitor runtime fixtures and raw outcomes](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19) — local execution receipts; bounded fixtures; Bend 2.0.37; BAML 0.22.2; Zerolang 0.3.4; macOS x86_64; reviewed 2026-10-19.
 
 ## Related pages
 

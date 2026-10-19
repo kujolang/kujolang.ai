@@ -143,7 +143,7 @@ Write a component law and a separate integration acceptance criterion. Explain w
 
 ### Challenge the proof
 
-Use the pinned Bend guide and negative fixture as starting evidence. In your own trial, deliberately break the law or proof and retain the checker rejection. This review inspected the fixture but did not run Bend.
+Use the pinned guide and negative fixture as starting evidence. Our 2.0.37 trial rejected a broken proof and an unfilled law. Reproduce both on your own toolchain, and distinguish --check-only from the separate --verdict kernel step.
 
 ### Challenge the boundary
 
@@ -175,7 +175,7 @@ Bend excludes unsafe and foreign code from its stronger proof verdict. Its guide
 
 ## Examples and benchmark evidence
 
-We publish no speed ranking or equivalent cross-language benchmark here. A proof covering every natural number answers a different question from a finite set of runtime assertions. We inspected the linked Bend negative fixture and Kujo checker source but did not run Bend. The workflow guide provides a separate, reproducible output-checking example.
+Bend 2.0.37 accepted a valid proof and rejected a broken proof, wrong return type, affine double-use and an unfilled law used as proof. Arithmetic returned 42 through the default evaluator, generated JavaScript and a native executable. The separate --verdict check could not run because Lean 4.34.0 or the built BENDTT kernel was unavailable. We measured no GPU behavior or comparative performance.
 
 ## Frequently asked questions
 
@@ -190,7 +190,7 @@ This review did not establish an equivalent general proof system in Kujo. Kujo�
 ## References
 
 - [Bend language guide](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md) — official documentation; Stable v2.0.37; guide from a separate pinned source snapshot; reviewed 2026-10-19.
-- [Bend rejects an unfilled law used as proof](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend) — test source inspected; not executed; 64230dcb96f2da2cc5a44524e42d5eb34771a6ec; reviewed 2026-10-19.
+- [Bend rejects an unfilled law used as proof](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend) — fixture inspected and executed against release 2.0.37; 64230dcb96f2da2cc5a44524e42d5eb34771a6ec; reviewed 2026-10-19.
 - [Kujo runtime and CLI source](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs) — implementation inspected; Kujo 1.8.2 source snapshot; reviewed 2026-10-19.
 - [Kujo type checker](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs) — implementation inspected; 549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1; reviewed 2026-10-19.
 - [Spec scope and implementation](https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo) — implementation inspected; 1211f37a09314be7150734bf15a55e9b2ea6504d; reviewed 2026-10-19.
@@ -199,6 +199,7 @@ This review did not establish an equivalent general proof system in Kujo. Kujo�
 - [Runledger scope and implementation](https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo) — implementation inspected; 334ddd4d33c8cb2612c8edab971ee69170824133; reviewed 2026-10-19.
 - [Bend stable release](https://github.com/bendlang/bend/releases/tag/v2.0.37) — official release metadata; 2.0.37; released 2026-10-13; reviewed 2026-10-19.
 - [Kujo stable release](https://github.com/kujolang/kujo/releases/tag/v1.8.2) — official release metadata; 1.8.2; released 2026-10-19; reviewed 2026-10-19.
+- [Competitor runtime fixtures and raw outcomes](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19) — local execution receipts; bounded fixtures; Bend 2.0.37; BAML 0.22.2; Zerolang 0.3.4; macOS x86_64; reviewed 2026-10-19.
 
 ## Related pages
 

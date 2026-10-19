@@ -20,7 +20,7 @@ Evaluate for: State a property precisely and check a proof that the program sati
 
 Tradeoff: Allow time to learn affine programming, maintain proofs and review their assumptions.
 
-First trial: Read a law and its proof, then inspect the negative fixture that rejects an open claim.
+First trial: Run a valid proof and a deliberately broken proof; check the separate verdict dependencies.
 
 ## BAML
 
@@ -30,17 +30,17 @@ Evaluate for: Add an AI feature to an application through a defined interface.
 
 Tradeoff: Choose a specific language version, then check the bridge and data types your application needs.
 
-First trial: Inspect the current checker and test runner before adopting an example.
+First trial: Run a typed function, reject a type mismatch and fail an assertion on the selected release.
 
-## Zero
+## Zerolang
 
-Explore documented value semantics and explicit systems behavior.
+Let agents query program facts and submit checked graph edits.
 
-Evaluate for: Build a systems component whose resource cleanup and concurrency behavior matter.
+Evaluate for: Validate semantic edits and keep readable source projections for human review.
 
-Tradeoff: Canonical source repository and numbered release remain unverified here.
+Tradeoff: Experimental release; evaluate your graph shapes, dependencies and deployment target.
 
-First trial: Identify the compiler’s source and version before planning an integration.
+First trial: Reject stale and ill-typed patches, then verify a failing behavioral test.
 
 ## Design focus
 
@@ -72,13 +72,13 @@ partially-supported · language and toolchain: An agent-oriented language with A
 
 https://boundaryml.com/
 
-### Zero
+### Zerolang
 
-Predictable systems semantics
+Agent queries and checked graph edits
 
-partially-supported · language: Predictable systems behavior with value semantics and structured concurrency, according to the website.
+verified-supported · language: Graph-native programming for agent queries and checked semantic edits.
 
-https://zero-lang.com/
+https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md
 
 ## Checks & tests
 
@@ -116,13 +116,14 @@ verified-supported · toolchain: A test runner and result parsing tests exist in
 
 https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs
 
-### Zero
+### Zerolang
 
-Documented check-only compiler mode
+Patch rejection and executable tests
 
-partially-supported · language: The installation guide documents a check-only compiler mode; implementation not inspected.
+verified-supported · toolchain: Stale-hash and wrong-return-type patches were rejected without changing the graph in our 0.3.4 fixtures.
 
-https://zero-lang.com/download.html
+https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
 ## Formal proof
 
@@ -152,13 +153,14 @@ unknown · language: A general dependent-type proof guarantee was not verified i
 
 https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
 
-### Zero
+### Zerolang
 
-General theorem proving not verified
+General theorem proving not established
 
-unknown · language: General theorem proving was not verified. Deterministic semantics alone do not establish it.
+unknown · language: General theorem proving was not established. Graph validation and executable tests answer narrower questions.
 
-https://zero-lang.com/
+https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
 ## Execution model
 
@@ -182,17 +184,20 @@ https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/g
 
 ### BAML
 
-Runtime equivalence not evaluated
+Local function execution tested; provider calls untested
 
-Not assessed; no conclusion about support.
+verified-supported · language: Project diagnostics are implemented by the current check command.
 
-### Zero
+https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
 
-Interpreter, JIT, native and C++ modes documented
+### Zerolang
 
-partially-supported · language: Interpreter, native JIT, native executable and C++ output modes are documented.
+Graph-backed macOS x64 execution tested
 
-https://zero-lang.com/download.html
+verified-supported · language: The graph-backed package ran a greeting and an arithmetic test on macOS x64. Other targets were not executed.
+
+https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/compile-path.md
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
 ## Evidence & tracing
 
@@ -223,14 +228,15 @@ partially-supported · toolchain: The current website describes tracing and prof
 
 https://boundaryml.com/
 
-### Zero
+### Zerolang
 
-Agent run-receipt system not verified
+Graph hashes, patch results and projection checks
 
-unknown · toolchain: Agent task contracts and a run-receipt system were not verified.
+verified-supported · toolchain: Graph hashes, structured patch outcomes and projection checks provide review evidence. A separate end-to-end run ledger was not assessed.
 
-https://zero-lang.com/
-https://zero-lang.com/download.html
+https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c
+https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/projections.md
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
 ## Execution boundary
 
@@ -257,7 +263,7 @@ Isolation not assessed in this comparison
 
 Not assessed; no conclusion about support.
 
-### Zero
+### Zerolang
 
 Isolation not assessed in this comparison
 
@@ -297,25 +303,25 @@ You could connect BAML application code to Kujo workflow tools through a process
 
 ### Honest limitations
 
-Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement.
+Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement. In the tested 0.22.2 CLI, Python client setup uses generate add python/pydantic2 followed by generate; do not substitute a command from a newer quickstart without checking the installed help.
 
-## Zero: technical brief
+## Zerolang: technical brief
 
 ### Technical architecture
 
-Zero’s installation guide documents interpreter, native JIT, native executable and C++ output modes. It distinguishes the WebAssembly browser compiler from support for native libraries and code generation. We did not reproduce these capabilities locally. Kujo’s inspected CLI supports VM and interpreter execution with optional JIT paths; its workflow tools do not change the language’s memory model.
+Zerolang stores declarations, types, calls and related facts in zero.graph. Agents query and patch that graph; humans can export readable .0 projections. The normal package compile path consumes the graph. Our stale-hash and wrong-return-type patches failed without changing the stored graph. Kujo’s separate workflow tools check task contracts and observed outcomes; they do not provide this graph-editing model.
 
-### When to choose Zero
+### When to choose Zerolang
 
-Try Zero’s preview if its documented value semantics and systems behavior suit your workload. Explore the browser examples, then establish source access, platform support and release policy before depending on it. Resource cleanup and concurrency behavior may matter more to your application than agent-workflow tools.
+Evaluate Zerolang when compiler-aware agent edits, graph queries and reviewable source projections fit your development process. Its checked patch interface gives agents a narrower editing surface than unrestricted text replacement. Treat it as an experiment: validate the graph shapes, platform and dependencies your application needs before adopting it.
 
 ### Can you use both?
 
-A process or file interface could connect the languages, but we did not test a Kujo–Zero integration. First identify a repeatable Zero toolchain, then check its exit codes, data formats and native-library interfaces.
+A process or file boundary could connect a Zerolang component to external acceptance checks and run records. No direct Kujo integration was tested. Keep the graph hash, compiler version, test output and projection state together so a reviewer can connect a checked edit to the artifact that ran.
 
 ### Honest limitations
 
-Without a verified source repository or release version, we cannot independently assess Zero’s implementation, security boundaries or maturity. Kujo’s evidence tools also require configuration and meaningful checks. Deterministic cleanup alone does not make network responses or builds repeatable, or create an auditable agent run.
+A valid graph can still implement the wrong behavior. Our graph check passed while a deliberately incorrect expected result made zero test fail. We did not establish general theorem proving, production sandbox security, cross-target support or a speed advantage. Runtime capability facts are not a substitute for an operating-system isolation boundary.
 
 ## Kujo workflow composition
 
@@ -359,6 +365,6 @@ Kujo 1.8.2 computes 6 * 7; Python independently requires an integer total of 42.
 
 - [Kujo vs Bend: workflow evidence and language proofs](https://kujolang.ai/compare/kujo-vs-bend/)
 - [Kujo vs BAML: comparing agent development workflows](https://kujolang.ai/compare/kujo-vs-baml/)
-- [Kujo vs Zero: workflow accountability and systems semantics](https://kujolang.ai/compare/kujo-vs-zero/)
+- [Kujo vs Zerolang: workflow evidence and checked graph edits](https://kujolang.ai/compare/kujo-vs-zero/)
 
 [Artifact exercise](https://kujolang.ai/compare/evidence/README.md) · [Editorial policy](https://kujolang.ai/compare/editorial-policy.md)

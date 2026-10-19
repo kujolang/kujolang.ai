@@ -3261,8 +3261,8 @@
     },
     {
       "id": "kujo-vs-zero",
-      "title": "Kujo vs Zero",
-      "tagline": "Explore workflow checks and Zero’s documented systems semantics.",
+      "title": "Kujo vs Zerolang",
+      "tagline": "Compare workflow evidence with checked graph edits.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "comparison",
