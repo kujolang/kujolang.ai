@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Validate the actual static comparison artifact, not just its source."""
 import argparse,json,pathlib,re,sys,urllib.parse,xml.etree.ElementTree as ET
-parser=argparse.ArgumentParser();parser.add_argument("--origin",default="https://kujolang.ai");origin=parser.parse_args().origin.rstrip("/")
+parser=argparse.ArgumentParser();parser.add_argument("--origin",default="https://kujolang.ai");parser.add_argument("--output",default="output");args=parser.parse_args();origin=args.origin.rstrip("/")
 from html.parser import HTMLParser
-root=pathlib.Path(__file__).resolve().parents[1];out=root/'output';catalog=json.loads((root/'comparison/catalog.json').read_text())
+root=pathlib.Path(__file__).resolve().parents[1];out=root/args.output;catalog=json.loads((root/'comparison/catalog.json').read_text())
 class Page(HTMLParser):
  def __init__(self,text):
   super().__init__();self.meta={};self.links=[];self.ids=set();self.canonical=[];self.h1=0;self.h2=0;self.tables=0;self.schema=[];self.in_json=False;self.buf='';self.feed(text)

@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 const repoRoot = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const manifestPath = path.join(repoRoot, 'howl-social.json');
 const sourceImageDir = path.join(repoRoot, 'assets/images/social');
-const outputDir = path.join(repoRoot, 'output');
+const outputDir = path.resolve(repoRoot, process.argv[2] ?? 'output');
 const outputImageDir = path.join(outputDir, 'assets/images/social');
 const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
 const failures = [];
