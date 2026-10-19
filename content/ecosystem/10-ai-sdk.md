@@ -41,3 +41,7 @@ The full local gate passes 185 Kujo tests on both published 1.5.0 and 1.6.0, plu
 ## Learn more
 
 Read the [1.2.0 release notes](https://github.com/kujolang/ai-sdk/blob/v1.2.0/docs/RELEASE_1_2_0.md), [SDK documentation](https://docs.kujolang.ai/tools/ai-sdk/), or [source repository](https://github.com/kujolang/ai-sdk).
+
+### Runtime for incremental HTTP collection
+
+Kujo 1.8.2 includes `http_stream_collect`, supporting the optional transport-chunk callback. Older published 1.5/1.6 runtime limitations remain historical compatibility boundaries; upgrading the runtime does not change provider credentials or application retry and streaming policy.

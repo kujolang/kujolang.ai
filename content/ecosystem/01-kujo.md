@@ -9,13 +9,13 @@ order: 10
 install_command: "curl -fsSL https://kujolang.ai/install.sh | bash"
 github_url: "https://github.com/kujolang/kujo"
 launch_story: "The ecosystem core: readable source, explicit capabilities, deterministic tooling contracts, and strong native APIs."
-scope_note: "Kujo 1.8.1 is released for Linux x64/arm64, macOS x64/arm64 and Windows x64 through native archives and npm. The 1.8 series adds stronger optional inference and shared editor analysis, measured generator performance improvements, and expanded VM/interpreter parity coverage. Wave C beta and Wave D alpha remain experimental; participant SDK packages remain private/unpublished."
+scope_note: "Kujo 1.8.2 is released for Linux x64/arm64, macOS x64/arm64 and Windows x64 through native archives and npm. The 1.8 series adds stronger optional inference and shared editor analysis, measured generator performance improvements, and expanded VM/interpreter parity coverage. Wave C beta and Wave D alpha remain experimental; participant SDK packages remain private/unpublished."
 keywords: "Kujo, Kujo ecosystem, Core, Language"
 seo_title: "Kujo — Kujo Ecosystem"
-version: "1.8.1"
-latest_release_url: "https://github.com/kujolang/kujo/releases/tag/v1.8.1"
+version: "1.8.2"
+latest_release_url: "https://github.com/kujolang/kujo/releases/tag/v1.8.2"
 release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
-last_updated: "2026-10-04"
+last_updated: "2026-10-19"
 ---
 
 ## What it does
@@ -28,7 +28,7 @@ The ecosystem core: readable source, explicit capabilities, deterministic toolin
 
 ## Operating boundary
 
-Kujo 1.8.1 is released for Linux x64/arm64, macOS x64/arm64 and Windows x64 through native archives and npm. The 1.8 series adds stronger optional inference and shared editor analysis, measured generator performance improvements, and expanded VM/interpreter parity coverage. Wave C beta and Wave D alpha remain experimental; participant SDK packages remain private/unpublished.
+Kujo 1.8.2 is released for Linux x64/arm64, macOS x64/arm64 and Windows x64 through native archives and npm. The 1.8 series adds stronger optional inference and shared editor analysis, measured generator performance improvements, and expanded VM/interpreter parity coverage. Wave C beta and Wave D alpha remain experimental; participant SDK packages remain private/unpublished.
 
 ## Install and maintain the runtime
 
@@ -43,13 +43,13 @@ Read the [installation guide](https://docs.kujolang.ai/install/), [runtime guide
 ## Install from npm
 
 ```bash
-npm install --global @kujolang/kujo-runtime@1.8.1
+npm install --global @kujolang/kujo-runtime@1.8.2
 kujo --version
 ```
 
-Expected version output: `kujo 1.8.1`.
+Expected version output: `kujo 1.8.2`.
 
-The runtime resolver and all five native npm packages are published at 1.8.1. Native archives, deterministic source, checksums and exact-source provenance are attached to the release. Package-manager installs use their original manager for upgrades.
+The runtime resolver and all five native npm packages are published at 1.8.2. Native archives, deterministic source, checksums and exact-source provenance are attached to the release. Package-manager installs use their original manager for upgrades.
 
 ## What changed in 1.8
 
@@ -73,3 +73,9 @@ The repository is the source of truth for current setup, commands, examples, sec
 ## Runtime patch 1.8.1
 
 [Kujo 1.8.1](https://github.com/kujolang/kujo/releases/tag/v1.8.1) is published and is the required runtime for Dispatch 1.4.0 and the Paperclip expansion. See the release for patch details; the 1.8.0 feature overview above remains historical.
+
+## Runtime patch 1.8.2
+
+Kujo 1.8.2 fixes dependency advisories and maintenance warnings, preserves archive and stored-credential behavior, hardens runtime capability boundaries and corrects native dictionary handling. It also provides bounded HTTP stream collection. Kujo programs keep their existing archive API; Rust embedders using `Value::ZipArchive.writer` must follow the [ZIP 9 migration guide](https://github.com/kujolang/kujo/blob/v1.8.2/docs/ZIP_9_RUST_MIGRATION.md).
+
+See the [1.8.2 release notes](https://github.com/kujolang/kujo/blob/main/docs/RELEASE_NOTES_1_8_2.md) for compatibility and verification scope.
