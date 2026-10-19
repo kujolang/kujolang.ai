@@ -17,7 +17,7 @@ Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/kujo-vs-z
 
 Zerolang: https://zerolang.ai/
 
-Documentation: https://zerolang.ai/docs
+Documentation: https://zerolang.ai/getting-started
 
 Version: 0.3.4; latest published release checked 2026-10-19
 

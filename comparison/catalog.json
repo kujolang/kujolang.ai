@@ -761,7 +761,7 @@
         "website": "https://zerolang.ai/",
         "repository": "https://github.com/vercel-labs/zerolang",
         "repositoryNote": "Canonical repository linked by zerolang.ai and its installer; distinct from zero-lang.com.",
-        "documentation": "https://zerolang.ai/docs",
+        "documentation": "https://zerolang.ai/getting-started",
         "version": "0.3.4; latest published release checked 2026-10-19"
       },
       "dimensions": [
