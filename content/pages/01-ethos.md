@@ -66,3 +66,7 @@ These three words are the shortest expression of the Kujo ethos.
 **Control** means explicit authority, local ownership, reversible workflows, and a clear place for human judgment.
 
 The details will evolve. These principles are the test that future details should pass.
+
+## Compare the guarantees
+
+The [language and workflow comparisons](/compare/) distinguish implementation evidence, documented claims and unknowns, including competitor strengths and Kujo limitations.

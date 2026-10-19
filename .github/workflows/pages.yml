@@ -52,6 +52,7 @@ jobs:
           touch output/.nojekyll
           bash scripts/verify-site-contract.sh output
           bash scripts/validate-generated-output.sh output
+          npm run compare:verify
           node --check output/assets/js/site.js
 
       - name: Upload Pages artifact

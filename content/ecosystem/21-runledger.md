@@ -33,3 +33,7 @@ Receipts record declared and observable run data; they do not independently cert
 ## Learn more
 
 The repository is the source of truth for current setup, commands, examples, security notes, compatibility, and verification evidence.
+
+## Put the evidence in context
+
+Read [the agent workflow verification guide](/compare/verify-agent-workflows/) for a contract-to-check example, or [compare verification tools](/compare/ai-code-verification-tools/) by what each result can establish.

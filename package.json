@@ -9,7 +9,10 @@
     "icons:build": "node scripts/build-icons.mjs",
     "vendor:scramble": "scramble-decode copy assets/js/vendor",
     "social:cards": "bash scripts/render-social-cards.sh",
-    "social:verify": "node scripts/verify-social-cards.mjs"
+    "social:verify": "node scripts/verify-social-cards.mjs",
+    "compare:generate": "node scripts/render-comparisons.mjs",
+    "compare:check": "node scripts/render-comparisons.mjs --check",
+    "compare:verify": "python3 scripts/verify-comparisons.py"
   },
   "dependencies": {
     "scramble-decode": "0.1.0"

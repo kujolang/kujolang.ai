@@ -150,3 +150,7 @@ npm run social:cards
 ```
 
 This release contains 135 skills. The sync preserves workflow content, reuses the existing skills-library hero where no dedicated image exists, and keeps curated video examples under `catalog-overrides/skills/`. Rebuild and run the full site contracts after syncing.
+
+## Comparisons and discovery
+
+The `/compare/` collection is generated from `comparison/catalog.json`. Run `npm run compare:generate` after editing records and `npm run compare:verify` after the production build. See [the comparison maintainer guide](comparison/README.md) for editorial standards, research, evidence and measurement.

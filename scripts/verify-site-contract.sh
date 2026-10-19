@@ -258,7 +258,8 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
 require_social_meta "${output_dir}/contact/index.html" 'contact'
 
 social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
-[[ "$social_card_count" == 247 ]] || fail "expected 247 social cards, found ${social_card_count}"
+expected_social_cards=$(node -e 'console.log(JSON.parse(require("fs").readFileSync(process.argv[1], "utf8")).cards.length)' "${repo_root}/howl-social.json")
+[[ "$social_card_count" == "$expected_social_cards" ]] || fail "expected ${expected_social_cards} social cards, found ${social_card_count}"
 
 for social_card in "${repo_root}"/assets/images/social/*.jpg; do
 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
