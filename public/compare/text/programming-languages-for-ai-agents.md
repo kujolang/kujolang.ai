@@ -4,6 +4,168 @@ Choosing a language for AI agents is an application architecture decision. Begin
 
 Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/programming-languages-for-ai-agents/
 
+## Design the agent boundary.
+
+Host, tools, target repository. Three separate decisions.
+
+Which component owns each action, failure and recovery?
+
+- Agent host: Coordinates model requests, tool selection and run state.
+- Tool boundary: Validates requests and controls external effects.
+- Target repository: Keeps its own language, build system and acceptance checks.
+
+## Decision lenses
+
+### Runtime layer: A host is not the edited application
+
+The host chooses how to coordinate model calls and tool results; the target repository can use another language. Kujo’s Agents SDK is a library layer with explicit adapter boundaries and offline fixtures, not a reason to translate every repository it touches.
+
+Put it into practice: Pin both runtimes and verify the data/process boundary between them.
+
+Sources: https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md
+
+### Orchestration layer: Recovery needs explicit state
+
+Dispatch documents workflow orchestration and reviewable run state. Treat interrupted work and replay as application design concerns: know what completed, what remains uncertain and which external effects would be unsafe to repeat.
+
+Put it into practice: Test interruption around a side effect, not only between harmless model calls.
+
+Sources: https://github.com/kujolang/dispatch/blob/71ca927c65598ecfe7c1816068e047cf50b915e0/README.md
+
+### Execution layer: Telemetry and authority differ
+
+Workcell’s execution receipts and Watchdog’s telemetry address different aspects of a run. Recording an attempted operation does not itself prevent it; the configured execution boundary must enforce the intended restriction.
+
+Put it into practice: Observe both the reported denial and the absence of the prohibited effect.
+
+Sources: https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo, https://github.com/kujolang/watchdog/blob/ad6fbc287c626539c1b3a69b4d3d31528b70edaa/README.md
+
+## Choose the host by the interfaces it must own.
+
+Use these criteria to evaluate your actual stack. The failure probes are proposed tests, not claims that a language automatically enforces them.
+
+### Model adapter
+
+Decision to make: Which provider, model and response shape must the host support?
+
+Failure probe: Return malformed or incomplete data from an offline adapter fixture.
+
+Evidence to retain: Pinned adapter version, input, validation outcome and error details.
+
+Sources: https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md
+
+### Tool arguments
+
+Decision to make: Where are names, arguments and domain constraints checked?
+
+Failure probe: Request an unknown tool and a known tool with an invalid argument.
+
+Evidence to retain: Rejected request and confirmation that no tool effect occurred.
+
+Sources: https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md
+
+### Permission boundary
+
+Decision to make: Which actions can run, need approval or must remain denied?
+
+Failure probe: Attempt an operation outside the allowed scope.
+
+Evidence to retain: Policy/configuration, denial result and independently observed side effects.
+
+Sources: https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
+
+### Retry and replay
+
+Decision to make: Which operations are safe to repeat and how are duplicates detected?
+
+Failure probe: Interrupt after an external effect but before its acknowledgement.
+
+Evidence to retain: Operation identity, recovery decision and final effect count.
+
+Sources: https://github.com/kujolang/dispatch/blob/71ca927c65598ecfe7c1816068e047cf50b915e0/README.md
+
+### Target build
+
+Decision to make: How does the host build and inspect a repository in another language?
+
+Failure probe: Return a nonzero build exit and a stale output artifact.
+
+Evidence to retain: Actual revision, command, exit, stdout/stderr and artifact identity.
+
+Sources: https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo, https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo
+
+### Observability
+
+Decision to make: Which run/step/tool identifiers connect the records?
+
+Failure probe: Drop or mismatch a correlation identifier in a fixture.
+
+Evidence to retain: Raw event chain and an explicit incomplete-evidence result.
+
+Sources: https://github.com/kujolang/watchdog/blob/ad6fbc287c626539c1b3a69b4d3d31528b70edaa/README.md, https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md
+
+## Put the decision into practice
+
+Proposed evaluation steps; not reported benchmark results.
+
+### 1. Map the boundaries
+
+Draw the host, model adapter, tools and target repository as separate components. Mark each place where data or execution authority crosses a boundary.
+
+### 2. Prove the offline path
+
+Use deterministic model/tool fixtures and run success, denial, malformed-result and interruption cases. Label those results as fixtures, not live-provider evidence.
+
+### 3. Add one live integration
+
+Use a single required provider and a narrowly scoped tool. Record configuration and limits, then test the error path as well as the successful response.
+
+### 4. Exercise recovery
+
+Introduce timeouts and interrupted effects deliberately. Require an explicit final state and inspect whether retrying produced duplicate work before broadening the deployment.
+
+## A retry can be correct code and the wrong action.
+
+Illustrative scenario: an agent invokes a tool that writes an external record. Design the recovery policy before enabling automatic retries.
+
+### Tool rejects invalid arguments before dispatch
+
+Safe conclusion: This invocation did not reach the effectful operation.
+
+Next evidence needed: A boundary test confirming the underlying operation was not called.
+
+### Tool times out after dispatch
+
+Safe conclusion: Completion is unknown; timeout alone does not prove failure.
+
+Next evidence needed: Operation identity and an external status lookup or other reconciliation method.
+
+### Host retries without reconciling the first attempt
+
+Safe conclusion: A duplicate effect is possible.
+
+Next evidence needed: Idempotency behavior or an explicit review decision before repeating the operation.
+
+### Host records a final success message
+
+Safe conclusion: The host reported success.
+
+Next evidence needed: The resulting external state and independent acceptance checks.
+
+## Common interpretation mistakes
+
+### One language as one trust boundary
+
+Shared syntax does not collapse model, tool, process and deployment boundaries. Test each separately.
+
+### Fixture success as provider reliability
+
+A fixture isolates application logic. It does not measure live service availability or model behavior.
+
+### Trace as enforcement
+
+An event log helps reconstruction. It cannot substitute for a control that actually rejects an action.
+
 ## Separate the agent from the program it edits
 
 An agent host manages model calls and tools. The target repository may use a different language. Rewriting that repository does not follow from choosing a host. Record both runtimes in your evaluation and test the boundary between generated edits and execution.

@@ -894,7 +894,193 @@
         "programming-languages-for-ai-agents",
         "ai-code-verification-tools",
         "verify-agent-workflows"
-      ]
+      ],
+      "guide": {
+        "title": "Beyond the AI-native label.",
+        "lead": "Compare the design. Challenge the guarantee.",
+        "question": "What does “AI-native” need to mean for your project?",
+        "orientation": [
+          [
+            "Build AI features",
+            "Model-facing application code and integration."
+          ],
+          [
+            "Let agents write code",
+            "Diagnostics, clear interfaces and a workable edit–check loop."
+          ],
+          [
+            "Trust the result",
+            "Independent evidence against your actual requirements."
+          ]
+        ],
+        "cards": [
+          [
+            "Application design",
+            "Start with the application boundary",
+            "Typed AI functions, model calls and host-language integration belong to the application design question. BAML’s current positioning is relevant here, but a bridge still needs validation for the host, types and version you plan to ship.",
+            "Trial one real feature inside the existing application before proposing a rewrite.",
+            [
+              "baml",
+              "baml-start"
+            ]
+          ],
+          [
+            "Language assurance",
+            "Name the property you want checked",
+            "Bend’s laws and proofs address formally stated properties. Kujo’s type checking and separate outcome tools answer different questions. Decide whether the requirement is a universal invariant, an observed behavior, or a reviewable delivery process.",
+            "Ask for the exact proposition or assertion, then inspect the assumptions around it.",
+            [
+              "bend",
+              "types",
+              "eval"
+            ]
+          ],
+          [
+            "Adoption economics",
+            "Keep the incumbent in the trial",
+            "A new language changes more than syntax: build integration, dependencies, debugging and maintenance all matter. Keep Python, TypeScript or Rust in the evaluation when one already supports the application; the AI-native label alone is not a migration case.",
+            "Record integration work and manual repairs alongside successful outputs.",
+            [
+              "python",
+              "typescript",
+              "rust"
+            ]
+          ]
+        ],
+        "matrixTitle": "A shortlist organized by the work.",
+        "matrixIntro": "These are entry points for a trial, not rankings. Sources establish the reviewed scope; the trial criteria are editorial recommendations.",
+        "columns": [
+          "Approach",
+          "What to investigate",
+          "Cost or boundary",
+          "A useful first trial"
+        ],
+        "rows": [
+          [
+            "Kujo + workflow tools",
+            "Language execution plus separate task, evaluation and evidence tools.",
+            "Selecting and configuring an ecosystem is part of the adoption cost.",
+            "One repository change with explicit criteria and retained check output.",
+            [
+              "kujo",
+              "spec",
+              "eval",
+              "runledger"
+            ]
+          ],
+          [
+            "Current Bend",
+            "Laws, proof definitions and documented parallel targets.",
+            "A checked law still needs the right specification and a reviewed trust boundary.",
+            "One precise invariant plus a deliberately broken proof or law.",
+            [
+              "bend",
+              "bend-test"
+            ]
+          ],
+          [
+            "Current BAML",
+            "Agent-oriented application code, AI functions and host integration.",
+            "Pin the generation and bridge; parsing does not establish domain truth.",
+            "One typed AI function with malformed and well-typed wrong responses.",
+            [
+              "baml",
+              "baml-start",
+              "baml-check"
+            ]
+          ],
+          [
+            "Zero preview",
+            "Documented value semantics, cleanup and concurrency.",
+            "Source repository and numbered release remain unverified; no AI-native positioning is inferred.",
+            "Explore the model, then identify a reproducible compiler before dependency decisions.",
+            [
+              "zero",
+              "zero-run"
+            ]
+          ],
+          [
+            "Existing Python / TypeScript",
+            "Your application’s libraries, tests and deployment environment.",
+            "An ecosystem name does not guarantee the specific integration you need.",
+            "Use the same task and acceptance criteria as the new-language candidates.",
+            [
+              "python",
+              "typescript"
+            ]
+          ],
+          [
+            "Existing Rust",
+            "The fit of its programming model and deployment constraints.",
+            "Include implementation effort, required libraries and team familiarity in the decision.",
+            "Keep a representative existing component as a baseline, with the same output checks.",
+            [
+              "rust"
+            ]
+          ]
+        ],
+        "steps": [
+          [
+            "Freeze the task",
+            "Choose a real change with a bounded input, expected output and failure cases. Keep the acceptance criteria identical across candidates; do not reward one candidate with an easier workload."
+          ],
+          [
+            "Pin the environment",
+            "Record runtime, source revision, libraries, deployment target and any model configuration. Document unavailable dependencies instead of substituting a different task silently."
+          ],
+          [
+            "Record the whole attempt",
+            "Include failed attempts, manual edits, integration time and failing controls. A small successful syntax demo does not estimate repository-level maintenance effort."
+          ],
+          [
+            "Choose on evidence",
+            "Separate correctness, integration fit and operational cost. A candidate that does not meet a required boundary should not win because an unrelated benchmark looks good."
+          ]
+        ],
+        "exampleTitle": "Turn an attractive claim into an observable test.",
+        "exampleIntro": "Proposed questions for a trial. None of these rows reports a measured winner.",
+        "exampleColumns": [
+          "Claim you hear",
+          "Evidence you should request",
+          "What still remains open"
+        ],
+        "examples": [
+          [
+            "“Agents write it more reliably”",
+            "A representative task set, all attempts and independent acceptance checks.",
+            "Whether the result transfers to your repository, model and maintenance cycle."
+          ],
+          [
+            "“The output is typed”",
+            "A malformed response rejected and a valid response accepted.",
+            "Whether a valid response is factually or operationally correct."
+          ],
+          [
+            "“The program is proven”",
+            "The stated law, checked proof and documented trusted boundary.",
+            "Whether the law captures the requirement and external code respects the interface."
+          ],
+          [
+            "“The workflow is auditable”",
+            "Commands, inputs, revisions, artifacts and linked raw check outcomes.",
+            "Whether supplied pass labels are independently corroborated."
+          ]
+        ],
+        "pitfalls": [
+          [
+            "Label as certification",
+            "AI-native has no standardized assurance level in this guide. Ask which mechanism provides the claimed confidence."
+          ],
+          [
+            "Small demo as productivity result",
+            "A tiny program can omit packaging, migration, debugging and recovery costs. Evaluate a representative task."
+          ],
+          [
+            "Unknown as unsupported",
+            "Missing verification is an evidence gap. Preserve it as unknown rather than awarding a negative capability score."
+          ]
+        ]
+      }
     },
     {
       "slug": "programming-languages-for-ai-agents",
@@ -950,7 +1136,184 @@
         "ai-native-programming-languages",
         "ai-code-verification-tools",
         "verify-agent-workflows"
-      ]
+      ],
+      "guide": {
+        "title": "Design the agent boundary.",
+        "lead": "Host, tools, target repository. Three separate decisions.",
+        "question": "Which component owns each action, failure and recovery?",
+        "orientation": [
+          [
+            "Agent host",
+            "Coordinates model requests, tool selection and run state."
+          ],
+          [
+            "Tool boundary",
+            "Validates requests and controls external effects."
+          ],
+          [
+            "Target repository",
+            "Keeps its own language, build system and acceptance checks."
+          ]
+        ],
+        "cards": [
+          [
+            "Runtime layer",
+            "A host is not the edited application",
+            "The host chooses how to coordinate model calls and tool results; the target repository can use another language. Kujo’s Agents SDK is a library layer with explicit adapter boundaries and offline fixtures, not a reason to translate every repository it touches.",
+            "Pin both runtimes and verify the data/process boundary between them.",
+            [
+              "sdk"
+            ]
+          ],
+          [
+            "Orchestration layer",
+            "Recovery needs explicit state",
+            "Dispatch documents workflow orchestration and reviewable run state. Treat interrupted work and replay as application design concerns: know what completed, what remains uncertain and which external effects would be unsafe to repeat.",
+            "Test interruption around a side effect, not only between harmless model calls.",
+            [
+              "dispatch"
+            ]
+          ],
+          [
+            "Execution layer",
+            "Telemetry and authority differ",
+            "Workcell’s execution receipts and Watchdog’s telemetry address different aspects of a run. Recording an attempted operation does not itself prevent it; the configured execution boundary must enforce the intended restriction.",
+            "Observe both the reported denial and the absence of the prohibited effect.",
+            [
+              "workcell",
+              "watchdog"
+            ]
+          ]
+        ],
+        "matrixTitle": "Choose the host by the interfaces it must own.",
+        "matrixIntro": "Use these criteria to evaluate your actual stack. The failure probes are proposed tests, not claims that a language automatically enforces them.",
+        "columns": [
+          "Boundary",
+          "Decision to make",
+          "Failure probe",
+          "Evidence to retain"
+        ],
+        "rows": [
+          [
+            "Model adapter",
+            "Which provider, model and response shape must the host support?",
+            "Return malformed or incomplete data from an offline adapter fixture.",
+            "Pinned adapter version, input, validation outcome and error details.",
+            [
+              "sdk"
+            ]
+          ],
+          [
+            "Tool arguments",
+            "Where are names, arguments and domain constraints checked?",
+            "Request an unknown tool and a known tool with an invalid argument.",
+            "Rejected request and confirmation that no tool effect occurred.",
+            [
+              "sdk"
+            ]
+          ],
+          [
+            "Permission boundary",
+            "Which actions can run, need approval or must remain denied?",
+            "Attempt an operation outside the allowed scope.",
+            "Policy/configuration, denial result and independently observed side effects.",
+            [
+              "sdk",
+              "workcell"
+            ]
+          ],
+          [
+            "Retry and replay",
+            "Which operations are safe to repeat and how are duplicates detected?",
+            "Interrupt after an external effect but before its acknowledgement.",
+            "Operation identity, recovery decision and final effect count.",
+            [
+              "dispatch"
+            ]
+          ],
+          [
+            "Target build",
+            "How does the host build and inspect a repository in another language?",
+            "Return a nonzero build exit and a stale output artifact.",
+            "Actual revision, command, exit, stdout/stderr and artifact identity.",
+            [
+              "workcell",
+              "runledger"
+            ]
+          ],
+          [
+            "Observability",
+            "Which run/step/tool identifiers connect the records?",
+            "Drop or mismatch a correlation identifier in a fixture.",
+            "Raw event chain and an explicit incomplete-evidence result.",
+            [
+              "watchdog",
+              "sdk"
+            ]
+          ]
+        ],
+        "steps": [
+          [
+            "Map the boundaries",
+            "Draw the host, model adapter, tools and target repository as separate components. Mark each place where data or execution authority crosses a boundary."
+          ],
+          [
+            "Prove the offline path",
+            "Use deterministic model/tool fixtures and run success, denial, malformed-result and interruption cases. Label those results as fixtures, not live-provider evidence."
+          ],
+          [
+            "Add one live integration",
+            "Use a single required provider and a narrowly scoped tool. Record configuration and limits, then test the error path as well as the successful response."
+          ],
+          [
+            "Exercise recovery",
+            "Introduce timeouts and interrupted effects deliberately. Require an explicit final state and inspect whether retrying produced duplicate work before broadening the deployment."
+          ]
+        ],
+        "exampleTitle": "A retry can be correct code and the wrong action.",
+        "exampleIntro": "Illustrative scenario: an agent invokes a tool that writes an external record. Design the recovery policy before enabling automatic retries.",
+        "exampleColumns": [
+          "Observed event",
+          "Safe conclusion",
+          "Next evidence needed"
+        ],
+        "examples": [
+          [
+            "Tool rejects invalid arguments before dispatch",
+            "This invocation did not reach the effectful operation.",
+            "A boundary test confirming the underlying operation was not called."
+          ],
+          [
+            "Tool times out after dispatch",
+            "Completion is unknown; timeout alone does not prove failure.",
+            "Operation identity and an external status lookup or other reconciliation method."
+          ],
+          [
+            "Host retries without reconciling the first attempt",
+            "A duplicate effect is possible.",
+            "Idempotency behavior or an explicit review decision before repeating the operation."
+          ],
+          [
+            "Host records a final success message",
+            "The host reported success.",
+            "The resulting external state and independent acceptance checks."
+          ]
+        ],
+        "pitfalls": [
+          [
+            "One language as one trust boundary",
+            "Shared syntax does not collapse model, tool, process and deployment boundaries. Test each separately."
+          ],
+          [
+            "Fixture success as provider reliability",
+            "A fixture isolates application logic. It does not measure live service availability or model behavior."
+          ],
+          [
+            "Trace as enforcement",
+            "An event log helps reconstruction. It cannot substitute for a control that actually rejects an action."
+          ]
+        ]
+      }
     },
     {
       "slug": "ai-code-verification-tools",
@@ -1004,7 +1367,196 @@
         "ai-native-programming-languages",
         "programming-languages-for-ai-agents",
         "verify-agent-workflows"
-      ]
+      ],
+      "guide": {
+        "title": "Match the check to the claim.",
+        "lead": "Types, tests, proofs and receipts answer different questions.",
+        "question": "What failure would make the deliverable unacceptable?",
+        "orientation": [
+          [
+            "Before execution",
+            "Reject selected invalid programs and unwanted dependencies."
+          ],
+          [
+            "During evaluation",
+            "Observe behavior against independent acceptance criteria."
+          ],
+          [
+            "After execution",
+            "Retain evidence and resolve release conditions."
+          ]
+        ],
+        "cards": [
+          [
+            "Static structure",
+            "Reject a class of mistakes early",
+            "Type diagnostics and configured architecture boundaries catch different structural problems. Fence checks configured import relationships; it is neither a general security audit nor a substitute for running the application.",
+            "Introduce a known type or import-rule violation and require the relevant check to fail.",
+            [
+              "types",
+              "fence"
+            ]
+          ],
+          [
+            "Behavior and proof",
+            "Define what the verdict covers",
+            "Eval checks selected command, file and data outcomes. Bend’s proof model addresses stated laws within a trusted boundary. Finite observed cases and a quantified proposition can complement each other, but should not share an ambiguous “proven” label.",
+            "State the assertion or law next to the result, including inputs and excluded behavior.",
+            [
+              "eval",
+              "bend"
+            ]
+          ],
+          [
+            "Evidence and release",
+            "Follow the pass label to its source",
+            "RunLedger records supplied outcomes and metadata; execution receipts describe recorded runs. ShipCheck adds release signals. None makes a missing raw test result appear, and a release decision still needs coverage of the actual acceptance criteria.",
+            "Tie each verdict to the command, revision and artifact it describes.",
+            [
+              "runledger",
+              "workcell",
+              "shipcheck"
+            ]
+          ]
+        ],
+        "matrixTitle": "A verification stack organized by failure mode.",
+        "matrixIntro": "Layer checks deliberately. Each row names both a useful result and the question it leaves unanswered.",
+        "columns": [
+          "Check layer",
+          "Can help establish",
+          "Does not establish",
+          "Challenge it with"
+        ],
+        "rows": [
+          [
+            "Type / compiler diagnostics",
+            "The program satisfies the selected static rules.",
+            "Domain truth or every runtime outcome.",
+            "A deliberately invalid type use that must be rejected.",
+            [
+              "types"
+            ]
+          ],
+          [
+            "Architecture boundaries",
+            "Imports or dependencies satisfy configured rules.",
+            "Whole-program security or permitted runtime effects.",
+            "An import across a forbidden boundary.",
+            [
+              "fence"
+            ]
+          ],
+          [
+            "Behavioral evaluation",
+            "The tested artifact meets selected assertions under recorded conditions.",
+            "Coverage of every input or an unexpressed requirement.",
+            "A plausible artifact with the wrong value or type.",
+            [
+              "eval"
+            ]
+          ],
+          [
+            "Formal proof",
+            "The stated property is checked within the proof system’s assumptions.",
+            "Correctness of an incomplete specification or excluded external code.",
+            "An invalid proof or unsatisfied law.",
+            [
+              "bend",
+              "bend-test"
+            ]
+          ],
+          [
+            "Run evidence",
+            "Commands, artifacts and supplied outcomes can be traced through a record.",
+            "Independent truth of every supplied pass verdict.",
+            "A verdict with missing or mismatched underlying evidence.",
+            [
+              "runledger",
+              "workcell"
+            ]
+          ],
+          [
+            "Release gate",
+            "Configured readiness conditions have an explicit outcome.",
+            "That any unconfigured requirement was satisfied.",
+            "A required failed check or missing release artifact.",
+            [
+              "shipcheck"
+            ]
+          ]
+        ],
+        "steps": [
+          [
+            "Write the failure first",
+            "Describe the incorrect behavior you need to catch. A concrete counterexample is easier to evaluate than a generic request for more tests."
+          ],
+          [
+            "Choose the narrowest useful layer",
+            "Use static checks for structural rules, behavioral checks for observed outputs and a suitable proof system for precisely stated invariants. Add layers when the requirement crosses boundaries."
+          ],
+          [
+            "Validate the verifier",
+            "Run a valid case and at least one invalid case against the actual checker. A test command that exits successfully without inspecting the deliverable is not sufficient evidence."
+          ],
+          [
+            "Connect coverage to release",
+            "Map each acceptance criterion to evidence for the current revision. Label missing or inconclusive evidence explicitly before a release decision."
+          ]
+        ],
+        "exampleTitle": "One JSON field. Several different guarantees.",
+        "exampleIntro": "The linked Kujo/Python exercise requires an integer total of 42. These expected cases explain why process success, parsing and semantic validation are separate checks.",
+        "exampleColumns": [
+          "Artifact or observation",
+          "Expected decision",
+          "Reason"
+        ],
+        "examples": [
+          [
+            "Producer exits 0",
+            "Insufficient on its own",
+            "The process can succeed while producing the wrong artifact."
+          ],
+          [
+            "{\"total\": 42}",
+            "Accept this criterion",
+            "The parsed field is an integer with the required value."
+          ],
+          [
+            "{\"total\": 41}",
+            "Reject",
+            "Valid JSON and a valid integer can still violate the requirement."
+          ],
+          [
+            "{\"total\": \"42\"}",
+            "Reject",
+            "The representation is a string, not the required integer."
+          ],
+          [
+            "{\"total\": true} or {\"total\": 42.0}",
+            "Reject",
+            "The oracle requires an exact integer type; a boolean or floating-point value is insufficient."
+          ],
+          [
+            "{} or malformed JSON",
+            "Reject",
+            "The required field or valid representation is missing."
+          ]
+        ],
+        "pitfalls": [
+          [
+            "File existence as task completion",
+            "An existing file may be empty, stale or incorrect. Inspect its required contents and identity."
+          ],
+          [
+            "Recorded pass as independently checked pass",
+            "A stored verdict may be supplied by a caller. Follow it to the actual check output."
+          ],
+          [
+            "More tests as automatic coverage",
+            "Many assertions can repeat the same assumption. Map tests to failure cases and acceptance criteria."
+          ]
+        ]
+      }
     },
     {
       "slug": "verify-agent-workflows",
@@ -1069,7 +1621,192 @@
         "ai-native-programming-languages",
         "programming-languages-for-ai-agents",
         "ai-code-verification-tools"
-      ]
+      ],
+      "guide": {
+        "title": "Make completion inspectable.",
+        "lead": "A contract, an independent check, and a trail you can replay.",
+        "question": "Could another reviewer challenge this “done” claim?",
+        "orientation": [
+          [
+            "Contract",
+            "Observable criteria fixed before implementation."
+          ],
+          [
+            "Oracle",
+            "A check that can reject a plausible wrong result."
+          ],
+          [
+            "Evidence",
+            "The actual revision, environment, commands and outcomes."
+          ]
+        ],
+        "cards": [
+          [
+            "Before implementation",
+            "Define an observable contract",
+            "A structured task record can capture allowed changes and acceptance conditions. Spec validates a record’s schema; it cannot decide whether you asked for enough. Turn “generate a report” into explicit fields, values and failure behavior.",
+            "Write at least one valid artifact and one plausible invalid artifact before building the solution.",
+            [
+              "spec"
+            ]
+          ],
+          [
+            "During evaluation",
+            "Keep the oracle independent",
+            "Eval can check commands, files and structured values. The exercise uses a separate Python oracle to isolate the idea: read the producer’s output, parse it and check value and type rather than trusting a success message.",
+            "If an agent can rewrite its own checker, decide whether that is acceptable for your threat model.",
+            [
+              "eval"
+            ]
+          ],
+          [
+            "At review",
+            "Tie the result to the deliverable",
+            "Run records and execution receipts support reconstruction when they retain the actual inputs and outcomes. A run identifier or supplied pass label is not enough to establish what was tested. Match the evidence to the artifact being reviewed.",
+            "Reject stale or mismatched evidence even if the earlier run was successful.",
+            [
+              "runledger",
+              "workcell"
+            ]
+          ]
+        ],
+        "matrixTitle": "An acceptance contract you can audit row by row.",
+        "matrixIntro": "Illustrative contract for the public artifact exercise. Expected outcomes are specified here; the receipt records the outcomes of your actual run.",
+        "columns": [
+          "Criterion",
+          "Independent check",
+          "Negative control",
+          "Evidence to keep"
+        ],
+        "rows": [
+          [
+            "Correct value",
+            "Require total to equal 42.",
+            "Use total 41.",
+            "Positive and wrong-value verifier exit codes.",
+            [
+              "eval"
+            ]
+          ],
+          [
+            "Correct representation",
+            "Require an exact integer, not a coerced value.",
+            "Use a string, boolean or floating-point total.",
+            "Malformed-control results from the oracle.",
+            [
+              "eval"
+            ]
+          ],
+          [
+            "Readable artifact",
+            "Parse JSON and require the expected object field.",
+            "Use invalid JSON or an empty object.",
+            "Actual stdout and its SHA-256 hash.",
+            [
+              "eval"
+            ]
+          ],
+          [
+            "Successful producer",
+            "Require the producer process to exit successfully.",
+            "For a broader trial, force a process failure.",
+            "Command, exit code and stderr.",
+            [
+              "workcell"
+            ]
+          ],
+          [
+            "Identified toolchain",
+            "Record the pinned runtime and environment.",
+            "The harness rejects a runtime other than Kujo 1.8.2.",
+            "Runtime version/hash and Python/platform details.",
+            [
+              "runledger"
+            ]
+          ],
+          [
+            "Release relevance",
+            "Map evidence to the artifact and revision under review.",
+            "For a repository trial, present results from an older revision.",
+            "Source/artifact hashes; separately retain Git context for real repository work.",
+            [
+              "shipcheck",
+              "runledger"
+            ]
+          ]
+        ],
+        "steps": [
+          [
+            "Prepare the contract",
+            "Define the expected integer total and the invalid cases. Download the producer and verifier into the same directory; inspect them before running the exercise."
+          ],
+          [
+            "Run with the pinned runtime",
+            "Use Kujo 1.8.2 and Python 3. The command runs the producer and independent oracle, then writes evidence.json in the working directory. It requires no model provider."
+          ],
+          [
+            "Inspect every outcome",
+            "Require producer exit 0, positive verifier exit 0, wrong-value verifier nonzero and no malformed control accepted. Overall success must preserve all of those conditions."
+          ],
+          [
+            "Extend deliberately",
+            "For a repository task, add revision identity, a representative acceptance suite and explicit process-failure cases. For agent evaluation, retain every attempt, configuration and manual intervention."
+          ]
+        ],
+        "exampleTitle": "Run the smallest complete evidence loop.",
+        "exampleIntro": "Runnable artifact exercise, not a language benchmark or agent-success evaluation. The table describes expected results; your evidence.json contains the observations.",
+        "exampleColumns": [
+          "Receipt field",
+          "Expected result",
+          "What to inspect"
+        ],
+        "examples": [
+          [
+            "version",
+            "kujo 1.8.2",
+            "The harness fails early on a different version."
+          ],
+          [
+            "exitCode / positiveVerifierExit",
+            "0 / 0",
+            "Both producer execution and the positive artifact check succeed."
+          ],
+          [
+            "wrongValueVerifierExit",
+            "Nonzero",
+            "The independently checked wrong-value artifact is rejected."
+          ],
+          [
+            "malformedControlsAccepted",
+            "Every value false",
+            "Missing, malformed and wrong-type controls are not accepted."
+          ],
+          [
+            "sourceSha256 / artifactSha256",
+            "Hashes present",
+            "Identify exactly what ran and what output was checked."
+          ],
+          [
+            "passed",
+            "true only when all required outcomes hold",
+            "Read the constituent outcomes rather than treating the label as standalone proof."
+          ]
+        ],
+        "pitfalls": [
+          [
+            "Repeatable command as deterministic system",
+            "Pinned inputs help repeat a check. Live APIs, time and model sampling can still change behavior."
+          ],
+          [
+            "One exercise as agent performance",
+            "This deterministic artifact exercise does not use a coding agent or measure a success rate."
+          ],
+          [
+            "A valid schema as a sufficient requirement",
+            "Task schema validation says the record has the required shape. It does not establish that the criteria cover the user’s intent."
+          ]
+        ]
+      }
     }
   ],
   "hub": {

@@ -1548,3 +1548,34 @@
 .comparison-direct summary:focus-visible,.direct-scenarios:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
 @media(max-width: 1000px) { .direct-architecture { grid-template-columns: 1fr; } .direct-trial { grid-template-columns: 1fr 1fr; } }
 @media(max-width: 760px) { .direct-choice-grid,.direct-evidence,.direct-trial { grid-template-columns: 1fr; } .direct-evidence { gap: 1.5rem; } .direct-trial li { border-right: 0; } }
+
+/* Decision guides: the comparison field-guide layout with topic-specific content. */
+.guide-hero h1 { font-size: clamp(2.75rem,5.2vw,5rem); }
+.guide-orientation h2 { font-size: clamp(1.4rem,2.5vw,2rem); line-height: 1.4; margin-bottom: 1.75rem; }
+.guide-orientation ol { list-style: none; margin: 0; padding: 0; }
+.guide-orientation li { display: grid; grid-template-columns: 2rem 1fr; gap: .75rem; padding-block: 1.25rem; border-top: 1px solid #666; }
+.guide-orientation li > span { color: #bbb; font-size: .75rem; }
+.guide-orientation li strong { font-size: 1rem; }
+.guide-orientation li p { font-size: .8rem; color: #ccc; margin-top: .5rem; }
+.guide-matrix table { min-width: 1000px; }
+.guide-matrix thead th { font-size: 1rem; }
+.guide-matrix thead th:first-child { width: 20%; }
+.guide-source-note { font-size: .72rem; color: var(--hub-muted); }
+.guide-examples table { min-width: 800px; }
+.guide-examples thead th { font-size: .9rem; }
+.guide-examples thead th:first-child { width: 30%; }
+.guide-examples th[scope="row"] { overflow-wrap: anywhere; }
+.guide-pitfalls { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border: 1px solid var(--hub-line); }
+.guide-pitfalls article { padding: 1.75rem; border-right: 1px solid var(--hub-line); }
+.guide-pitfalls article:last-child { border: 0; }
+.guide-pitfalls h3 { font-size: 1.2rem; line-height: 1.4; margin: 1rem 0; }
+.guide-pitfalls p { font-size: .85rem; }
+.guide-note-body { padding-top: 1.5rem; max-width: 95ch; font-size: .9rem; }
+.guide-run-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; align-items: center; }
+.guide-run-panel h3 { font-size: 1.6rem; line-height: 1.4; margin: 1rem 0; }
+.guide-run-panel > div > p { font-size: .9rem; }
+.guide-run-panel .hub-downloads { flex-wrap: wrap; margin-top: 1.5rem; }
+.guide-run-panel pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.guide-language-links { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-top: 2rem; font-size: .8rem; }
+.comparison-guide summary:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+@media(max-width: 760px) { .guide-pitfalls,.guide-run-panel { grid-template-columns: 1fr; } .guide-pitfalls article { border-right: 0; border-bottom: 1px solid var(--hub-line); } }

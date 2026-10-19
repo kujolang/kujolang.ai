@@ -4,6 +4,188 @@ Turn an agent’s completion report into a claim you can check. Freeze the requi
 
 Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/verify-agent-workflows/
 
+## Make completion inspectable.
+
+A contract, an independent check, and a trail you can replay.
+
+Could another reviewer challenge this “done” claim?
+
+- Contract: Observable criteria fixed before implementation.
+- Oracle: A check that can reject a plausible wrong result.
+- Evidence: The actual revision, environment, commands and outcomes.
+
+## Decision lenses
+
+### Before implementation: Define an observable contract
+
+A structured task record can capture allowed changes and acceptance conditions. Spec validates a record’s schema; it cannot decide whether you asked for enough. Turn “generate a report” into explicit fields, values and failure behavior.
+
+Put it into practice: Write at least one valid artifact and one plausible invalid artifact before building the solution.
+
+Sources: https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo
+
+### During evaluation: Keep the oracle independent
+
+Eval can check commands, files and structured values. The exercise uses a separate Python oracle to isolate the idea: read the producer’s output, parse it and check value and type rather than trusting a success message.
+
+Put it into practice: If an agent can rewrite its own checker, decide whether that is acceptable for your threat model.
+
+Sources: https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+
+### At review: Tie the result to the deliverable
+
+Run records and execution receipts support reconstruction when they retain the actual inputs and outcomes. A run identifier or supplied pass label is not enough to establish what was tested. Match the evidence to the artifact being reviewed.
+
+Put it into practice: Reject stale or mismatched evidence even if the earlier run was successful.
+
+Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
+
+## An acceptance contract you can audit row by row.
+
+Illustrative contract for the public artifact exercise. Expected outcomes are specified here; the receipt records the outcomes of your actual run.
+
+### Correct value
+
+Independent check: Require total to equal 42.
+
+Negative control: Use total 41.
+
+Evidence to keep: Positive and wrong-value verifier exit codes.
+
+Sources: https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+
+### Correct representation
+
+Independent check: Require an exact integer, not a coerced value.
+
+Negative control: Use a string, boolean or floating-point total.
+
+Evidence to keep: Malformed-control results from the oracle.
+
+Sources: https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+
+### Readable artifact
+
+Independent check: Parse JSON and require the expected object field.
+
+Negative control: Use invalid JSON or an empty object.
+
+Evidence to keep: Actual stdout and its SHA-256 hash.
+
+Sources: https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+
+### Successful producer
+
+Independent check: Require the producer process to exit successfully.
+
+Negative control: For a broader trial, force a process failure.
+
+Evidence to keep: Command, exit code and stderr.
+
+Sources: https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
+
+### Identified toolchain
+
+Independent check: Record the pinned runtime and environment.
+
+Negative control: The harness rejects a runtime other than Kujo 1.8.2.
+
+Evidence to keep: Runtime version/hash and Python/platform details.
+
+Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo
+
+### Release relevance
+
+Independent check: Map evidence to the artifact and revision under review.
+
+Negative control: For a repository trial, present results from an older revision.
+
+Evidence to keep: Source/artifact hashes; separately retain Git context for real repository work.
+
+Sources: https://github.com/kujolang/shipcheck/blob/ee4cfd052c0522eebedc0eead223cbb22490b357/src/checks.kujo, https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo
+
+## Put the decision into practice
+
+Proposed evaluation steps; not reported benchmark results.
+
+### 1. Prepare the contract
+
+Define the expected integer total and the invalid cases. Download the producer and verifier into the same directory; inspect them before running the exercise.
+
+### 2. Run with the pinned runtime
+
+Use Kujo 1.8.2 and Python 3. The command runs the producer and independent oracle, then writes evidence.json in the working directory. It requires no model provider.
+
+### 3. Inspect every outcome
+
+Require producer exit 0, positive verifier exit 0, wrong-value verifier nonzero and no malformed control accepted. Overall success must preserve all of those conditions.
+
+### 4. Extend deliberately
+
+For a repository task, add revision identity, a representative acceptance suite and explicit process-failure cases. For agent evaluation, retain every attempt, configuration and manual intervention.
+
+## Run the smallest complete evidence loop.
+
+Runnable artifact exercise, not a language benchmark or agent-success evaluation. The table describes expected results; your evidence.json contains the observations.
+
+### version
+
+Expected result: kujo 1.8.2
+
+What to inspect: The harness fails early on a different version.
+
+### exitCode / positiveVerifierExit
+
+Expected result: 0 / 0
+
+What to inspect: Both producer execution and the positive artifact check succeed.
+
+### wrongValueVerifierExit
+
+Expected result: Nonzero
+
+What to inspect: The independently checked wrong-value artifact is rejected.
+
+### malformedControlsAccepted
+
+Expected result: Every value false
+
+What to inspect: Missing, malformed and wrong-type controls are not accepted.
+
+### sourceSha256 / artifactSha256
+
+Expected result: Hashes present
+
+What to inspect: Identify exactly what ran and what output was checked.
+
+### passed
+
+Expected result: true only when all required outcomes hold
+
+What to inspect: Read the constituent outcomes rather than treating the label as standalone proof.
+
+Download [produce.kujo](/compare/evidence/produce.kujo) and [verify.py](/compare/evidence/verify.py). From their directory, run with Kujo 1.8.2 and Python 3:
+
+```sh
+KUJO_BIN=/absolute/path/to/kujo python3 verify.py
+```
+
+Read evidence.json and the [methodology](/compare/evidence/README.md).
+
+## Common interpretation mistakes
+
+### Repeatable command as deterministic system
+
+Pinned inputs help repeat a check. Live APIs, time and model sampling can still change behavior.
+
+### One exercise as agent performance
+
+This deterministic artifact exercise does not use a coding agent or measure a success rate.
+
+### A valid schema as a sufficient requirement
+
+Task schema validation says the record has the required shape. It does not establish that the criteria cover the user’s intent.
+
 ## 1. Write the acceptance contract before implementation
 
 Describe observable behavior, allowed changes and failure cases. Spec can validate a structured task record, but schema validity does not prove that the requirement is sufficient. For example: a generated JSON artifact must contain an integer total of 42. A file merely existing is weaker than that requirement.
