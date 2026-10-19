@@ -47,7 +47,9 @@ for route in routes:
  if route!='compare/':
   slug=route.strip('/').split('/')[-1];record=next(r for r in catalog['pages'] if r['slug']==slug)
   check(p.h2>=len(record['sections']),slug+': section HTML missing or escaped')
-  if record['kind']=='direct':check(p.tables==1,slug+': semantic matrix missing')
+  if record['kind']=='direct':
+   check(p.tables==2,slug+': capability and decision tables missing')
+   check({'choose','architecture','capabilities','scenarios','evaluation','boundaries','questions','sources'}<=p.ids,slug+': technical section anchors missing')
   check((out/'compare/text'/f'{slug}.md').read_bytes()==(root/'public/compare/text'/f'{slug}.md').read_bytes(),slug+': public text drift')
   check(url in (out/'llms.txt').read_text(),slug+': missing llms entry')
 check(len(titles)==len(set(titles)),'duplicate comparison titles');check(len(descriptions)==len(set(descriptions)),'duplicate comparison descriptions')

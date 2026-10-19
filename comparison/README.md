@@ -41,3 +41,5 @@ No production deployment is authorized. Push only the feature branch; pushing ma
 ## Hub overview
 
 `catalog.hub` owns the four profiles and six comparison dimensions. Each supported matrix cell references an existing catalog fact by `kujo:factName` or `page-slug:dimensionLabel`; the generator rejects stale references. Empty references mean not assessed, never unsupported. `render-comparison-hub.mjs` produces the hub template and public `overview.md`. Technical briefs reuse the direct comparisons; update their sections at the source. SiteKit card, table, feature-grid and native accordion primitives provide the layout without new client JavaScript.
+
+Direct comparison pages also use catalog `deepDive` records for architecture lenses, decision scenarios and proposed evaluation plans. See [direct-redesign.md](direct-redesign.md). Their generated frontmatter selects the field-guide template; do not edit generated HTML or Markdown directly.

@@ -25,3 +25,22 @@ test('hub rejects a missing language cell rather than shifting columns',()=>{
  const c=structuredClone(catalog);c.hub.rows[0].cells.pop();
  assert.throws(()=>validate(c),/Invalid hub row/);
 });
+
+test('direct comparisons reject architecture claims without valid evidence',()=>{
+ const c=structuredClone(catalog);c.pages[0].deepDive.architecture[0][4]=['missing'];
+ assert.throws(()=>validate(c),/invalid architecture evidence/);
+});
+test('direct comparisons reject incomplete decision rows',()=>{
+ const c=structuredClone(catalog);c.pages[1].deepDive.scenarios[0].pop();
+ assert.throws(()=>validate(c),/invalid decision scenario/);
+});
+test('each technical comparison publishes its evaluation plan in HTML and Markdown',()=>{
+ const out=outputs(catalog);
+ for(const p of catalog.pages.filter(p=>p.kind==='direct')){
+  const html=out.get(`templates/compare-content/${p.slug}.html`);
+  const md=out.get(`public/compare/text/${p.slug}.md`);
+  assert.equal((html.match(/<table>/g)||[]).length,2);
+  for(const [title]of p.deepDive.trial){assert.ok(html.includes(title));assert.ok(md.includes(title));}
+  assert.match(out.get(`content/compare/${p.slug}.md`),/template: "comparison-direct"/);
+ }
+});
