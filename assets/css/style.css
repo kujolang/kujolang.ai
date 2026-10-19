@@ -1579,3 +1579,15 @@
 .guide-language-links { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-top: 2rem; font-size: .8rem; }
 .comparison-guide summary:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
 @media(max-width: 760px) { .guide-pitfalls,.guide-run-panel { grid-template-columns: 1fr; } .guide-pitfalls article { border-right: 0; border-bottom: 1px solid var(--hub-line); } }
+
+/* Comparison headings use the site's display face at every heading level. */
+.comparison-hub h1,
+.comparison-hub h2,
+.comparison-hub h3,
+.comparison-hub h4,
+.comparison-hub h5,
+.comparison-hub h6,
+.comparison-hub .hub-intro,
+.comparison-hub .hub-orientation strong {
+  font-family: var(--sk-font-mono);
+}
