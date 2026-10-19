@@ -1,0 +1,354 @@
+[
+  {
+    "name": "kujo",
+    "commit": "acb9107dc38de699c540f5b78d924257def0b95e",
+    "role": "Language runtime, compiler and type checker",
+    "limitation": "Optional backend support varies; no universal proof guarantee established.",
+    "evidence": [
+      {
+        "path": "src/main.rs",
+        "url": "https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/main.rs",
+        "sha256": "5e47c406709af8a5ab3cef9c5d9178a8851d2a7db16f80211f7b983f668531a5",
+        "lines": 3239
+      },
+      {
+        "path": "src/type_checker.rs",
+        "url": "https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs",
+        "sha256": "7722e13c7b68cd3120d8cf400a1545e2eb034996a71e9ab9f328e8ebcc0ebc8e",
+        "lines": 5909
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "spec",
+    "commit": "1211f37a09314be7150734bf15a55e9b2ea6504d",
+    "role": "Task schema and acceptance-contract validation",
+    "limitation": "Schema validity is not implementation correctness.",
+    "evidence": [
+      {
+        "path": "src/validate.kujo",
+        "url": "https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo",
+        "sha256": "691be02b5f3ccb90116c5fb4e606a89ef8370e45444ee4b7bb96420e09a13b2d",
+        "lines": 369
+      },
+      {
+        "path": "tests/run_tests.sh",
+        "url": "https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/tests/run_tests.sh",
+        "sha256": "2240f1ea7b086a21be09885be895d50cf07be0e9837333877537f1d980627d30",
+        "lines": 816
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "eval",
+    "commit": "71e66dff780d6930bcbe093c046bf31aa26411df",
+    "role": "Outcome checks against commands, files and structured data",
+    "limitation": "Coverage depends on configured assertions; command checks are not a sandbox.",
+    "evidence": [
+      {
+        "path": "src/checks.kujo",
+        "url": "https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo",
+        "sha256": "35c8e48c1c7f2fe2f947c8dff89be0b694c5dd19216811d899219792a2ea383f",
+        "lines": 2499
+      },
+      {
+        "path": "tests/contract_tests.kujo",
+        "url": "https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/tests/contract_tests.kujo",
+        "sha256": "a9576b114fa939e4c23e9224e7c45bcf26e980e0dd9f215699873ff630fd925d",
+        "lines": 1728
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "dispatch",
+    "commit": "71ca927c65598ecfe7c1816068e047cf50b915e0",
+    "role": "Workflow routing, persisted run state and approval boundaries",
+    "limitation": "Experimental assurance and participant surfaces are opt-in; correlation is not replay permission.",
+    "evidence": [
+      {
+        "path": "dispatch.kujo",
+        "url": "https://github.com/kujolang/dispatch/blob/71ca927c65598ecfe7c1816068e047cf50b915e0/dispatch.kujo",
+        "sha256": "51d21dadc3203e6671f2e46c862f73cfab99c514a05cdf988e194278d256f690",
+        "lines": 2278
+      },
+      {
+        "path": "tests/graph_attempt_contract_tests.kujo",
+        "url": "https://github.com/kujolang/dispatch/blob/71ca927c65598ecfe7c1816068e047cf50b915e0/tests/graph_attempt_contract_tests.kujo",
+        "sha256": "a82690db59b5cde72e1018a418e1f38d6aca53a155e8bef807bb6f3018f27938",
+        "lines": 22
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "workcell",
+    "commit": "a276a92c6bac9279a8cb36ace9687ade34d5128f",
+    "role": "Bounded execution definitions and structured receipts",
+    "limitation": "Isolation depends on configured container/backend; offline conformance is not provider certification.",
+    "evidence": [
+      {
+        "path": "src/receipts/receipt.kujo",
+        "url": "https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo",
+        "sha256": "ef4cb6c89281cbfe6866bcf2e51bbbcb8bb9e566f3bf5d4034d05e2e53c3cb86",
+        "lines": 166
+      },
+      {
+        "path": "tests/workcell_test.kujo",
+        "url": "https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/tests/workcell_test.kujo",
+        "sha256": "9b17cee70849ed33bf8859d78c93432a65c15077f6555e27ca8bda023bafd2d3",
+        "lines": 706
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "runledger",
+    "commit": "334ddd4d33c8cb2612c8edab971ee69170824133",
+    "role": "Local run records, supplied verdicts and Git metadata",
+    "limitation": "Does not independently run or judge all tests recorded by callers.",
+    "evidence": [
+      {
+        "path": "src/record.kujo",
+        "url": "https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo",
+        "sha256": "0533d0e7a6954c68d3ce051208648eedeecc70bb8df1223680a686edcd480973",
+        "lines": 104
+      },
+      {
+        "path": "tests/runledger_test.kujo",
+        "url": "https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/tests/runledger_test.kujo",
+        "sha256": "d258da636982868b863d601aa5e47f107e28b49e52d6fbc2e9d0b8dc3e65b191",
+        "lines": 326
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "shipcheck",
+    "commit": "ee4cfd052c0522eebedc0eead223cbb22490b357",
+    "role": "Repository release checks and blocking gate",
+    "limitation": "Readiness signals do not certify a release or prove tests passed.",
+    "evidence": [
+      {
+        "path": "src/checks.kujo",
+        "url": "https://github.com/kujolang/shipcheck/blob/ee4cfd052c0522eebedc0eead223cbb22490b357/src/checks.kujo",
+        "sha256": "481be886c5ed3702b948723e24c111c846bda56613cc14e145bfe7e9db6260a6",
+        "lines": 540
+      },
+      {
+        "path": "tests/cli-output-contract.sh",
+        "url": "https://github.com/kujolang/shipcheck/blob/ee4cfd052c0522eebedc0eead223cbb22490b357/tests/cli-output-contract.sh",
+        "sha256": "95825b2302dd53f0b06998c92bd834b11a455375ece2a929328b22632a67a1d0",
+        "lines": 328
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "changebucket",
+    "commit": "030eea63c60449f82c9ba2680227485d318fdb6d",
+    "role": "Git change footprint counts and budgets",
+    "limitation": "Counts are not semantic correctness or a universal risk score.",
+    "evidence": [
+      {
+        "path": "src/analyze.kujo",
+        "url": "https://github.com/kujolang/changebucket/blob/030eea63c60449f82c9ba2680227485d318fdb6d/src/analyze.kujo",
+        "sha256": "69e689de4de6c2dba1131d6ba246c001a44fc996ce7af9536413b5c321a11e48",
+        "lines": 311
+      },
+      {
+        "path": "tests/changebucket_test.kujo",
+        "url": "https://github.com/kujolang/changebucket/blob/030eea63c60449f82c9ba2680227485d318fdb6d/tests/changebucket_test.kujo",
+        "sha256": "f104ba05f6d7a0859f3c800b4d858239d9a5dd04531f56215ad9209ce7d17229",
+        "lines": 530
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "patchbrief",
+    "commit": "34000d62d6dd7d2422e40faecf65120af1a138dc",
+    "role": "Diff summary and suggested tests",
+    "limitation": "Heuristics and bounded diff inspection are not a code correctness review.",
+    "evidence": [
+      {
+        "path": "src/summarize.kujo",
+        "url": "https://github.com/kujolang/patchbrief/blob/34000d62d6dd7d2422e40faecf65120af1a138dc/src/summarize.kujo",
+        "sha256": "cb4d0f96237d402a68cc2af6c15774e63d1d5ab2d5e9ba714ff02ebeb784d8b5",
+        "lines": 309
+      },
+      {
+        "path": "tests/patchbrief_tests.kujo",
+        "url": "https://github.com/kujolang/patchbrief/blob/34000d62d6dd7d2422e40faecf65120af1a138dc/tests/patchbrief_tests.kujo",
+        "sha256": "8d60664c8007bbd32326b195e0d785b38e5fffa5f004aab709335a38df8d845b",
+        "lines": 497
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "casefile",
+    "commit": "3d8da7d76445cb554fe193ea0d3a8b5a557962d7",
+    "role": "Local command/log debugging bundles",
+    "limitation": "Capturing a failed command may itself return success; preserve child outcome.",
+    "evidence": [
+      {
+        "path": "src/capture.kujo",
+        "url": "https://github.com/kujolang/casefile/blob/3d8da7d76445cb554fe193ea0d3a8b5a557962d7/src/capture.kujo",
+        "sha256": "280bd10c9a7a8c907d245983e25e2178cb789889860146a7e28f119873a9492a",
+        "lines": 1
+      },
+      {
+        "path": "tests/casefile_cli_test_v2.kujo",
+        "url": "https://github.com/kujolang/casefile/blob/3d8da7d76445cb554fe193ea0d3a8b5a557962d7/tests/casefile_cli_test_v2.kujo",
+        "sha256": "4209c15e718e994bc9659e384021c4c0d72a7d73352f32d14f7801c37af17dce",
+        "lines": 275
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "fence",
+    "commit": "d3173049b5365af975624fddd48e943d39738c75",
+    "role": "Configured import-boundary checks",
+    "limitation": "Supported import parsing and configured zones limit coverage.",
+    "evidence": [
+      {
+        "path": "fence.kujo",
+        "url": "https://github.com/kujolang/fence/blob/d3173049b5365af975624fddd48e943d39738c75/fence.kujo",
+        "sha256": "49dd228dd97493aba0a2be8f58b96778cb7b4b62ccf59d0ddbdaa4fab9dea390",
+        "lines": 14
+      },
+      {
+        "path": "tests/fence_tests.kujo",
+        "url": "https://github.com/kujolang/fence/blob/d3173049b5365af975624fddd48e943d39738c75/tests/fence_tests.kujo",
+        "sha256": "206e19240a9844a1c148ef5b902b57a96038a01ebe99ad6a20a14ae7d9395d9b",
+        "lines": 670
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "leash",
+    "commit": "56c59c90b81433482683e72a411748ca82a61b24",
+    "role": "Mobile supervision with policy and agent adapters",
+    "limitation": "Mixed Rust/Kujo/Kotlin implementation; no phone/device integration tested here.",
+    "evidence": [
+      {
+        "path": "policy/leash.policy.kujo",
+        "url": "https://github.com/kujolang/leash/blob/56c59c90b81433482683e72a411748ca82a61b24/policy/leash.policy.kujo",
+        "sha256": "011f683b32d69b05b91e5c6abcf80697feda14dfdf5818a16aad11393ef1ff5f",
+        "lines": 494
+      },
+      {
+        "path": "policy/test_runner.kujo",
+        "url": "https://github.com/kujolang/leash/blob/56c59c90b81433482683e72a411748ca82a61b24/policy/test_runner.kujo",
+        "sha256": "8fa9cd00ad73898dd9b49384f4bfa9d7cb0371a9c6066616dc147805a82cd6fb",
+        "lines": 359
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "watchdog",
+    "commit": "ad6fbc287c626539c1b3a69b4d3d31528b70edaa",
+    "role": "Local request telemetry and proxy integration",
+    "limitation": "Telemetry is not authorization; costs are estimates, not invoices.",
+    "evidence": [
+      {
+        "path": "telemetry_native_adapter.kujo",
+        "url": "https://github.com/kujolang/watchdog/blob/ad6fbc287c626539c1b3a69b4d3d31528b70edaa/telemetry_native_adapter.kujo",
+        "sha256": "5e794d993495a16f0d0307f5389ee48fbd8428be5f51ac95be1c1f0732acd858",
+        "lines": 133
+      },
+      {
+        "path": "tests/contract_manifest_check.js",
+        "url": "https://github.com/kujolang/watchdog/blob/ad6fbc287c626539c1b3a69b4d3d31528b70edaa/tests/contract_manifest_check.js",
+        "sha256": "9baecec396a47104f714ae98b5287f91a74dd9508df82862b9ff5f9280b6ca83",
+        "lines": 20
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "mcp",
+    "commit": "90f264f55274a99e0ca0aba079e1c94fd024552d",
+    "role": "MCP server scaffolding and guarded tools/resources",
+    "limitation": "Remote auth, ingress and deployment limits require environment-specific review.",
+    "evidence": [
+      {
+        "path": "server.kujo",
+        "url": "https://github.com/kujolang/mcp/blob/90f264f55274a99e0ca0aba079e1c94fd024552d/server.kujo",
+        "sha256": "9dd19f127ab3ba983e32d0b898e8ce311791f18e0eef1958ac9ad8c3e296a1c9",
+        "lines": 5
+      },
+      {
+        "path": "tests/test_01_permission_checks.kujo",
+        "url": "https://github.com/kujolang/mcp/blob/90f264f55274a99e0ca0aba079e1c94fd024552d/tests/test_01_permission_checks.kujo",
+        "sha256": "279c6dd6d6b2ae2452b055cb96df70c494d87f450f2442fcbfeefbe15b305e5f",
+        "lines": 18
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "agents-sdk",
+    "commit": "5a9d5525e511a293b743b1c44d9ef270fd491f9f",
+    "role": "Library-first agent workflow runtime primitives",
+    "limitation": "Fixture checks do not certify live-provider behavior.",
+    "evidence": [
+      {
+        "path": "src/agents/runner.kujo",
+        "url": "https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/src/agents/runner.kujo",
+        "sha256": "8bbb163c42ee02982f7297f70375e6d9971d5dbafae2373944cb7c14c18d2ffa",
+        "lines": 3520
+      },
+      {
+        "path": "tests/runner_result_event_contract_tests.kujo",
+        "url": "https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/tests/runner_result_event_contract_tests.kujo",
+        "sha256": "716931cc8eceb6426bc2cb7d23347cccf404c697cfc34e161c1586d963645b42",
+        "lines": 121
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  },
+  {
+    "name": "ssg",
+    "commit": "615bdb30abd3aba1b1fdc640e934931327c1e083",
+    "role": "Static content, templates, metadata and machine-readable index",
+    "limitation": "Site vendors a customized SSG; preserve its local conventions.",
+    "evidence": [
+      {
+        "path": "build.kujo",
+        "url": "https://github.com/kujolang/ssg/blob/615bdb30abd3aba1b1fdc640e934931327c1e083/build.kujo",
+        "sha256": "f57fbaf105322eb0756b1ccb99a1461775aabfd19764f0a0939acbba807df88c",
+        "lines": 5217
+      },
+      {
+        "path": "scripts/test-generated-contract.sh",
+        "url": "https://github.com/kujolang/ssg/blob/615bdb30abd3aba1b1fdc640e934931327c1e083/scripts/test-generated-contract.sh",
+        "sha256": "11cf588d0db96d2480e071f77d864f2f4bf03d6b4d6a0a6f4ae1800f6adc580c",
+        "lines": 439
+      }
+    ],
+    "verification": "Source-level review; full project suites not rerun",
+    "date": "2026-10-19"
+  }
+]

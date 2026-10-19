@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://kujolang.ai/",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden",
+    "date": "2026-10-19"
+  },
+  {
+    "url": "https://kujolang.ai/robots.txt",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden",
+    "date": "2026-10-19"
+  },
+  {
+    "url": "https://kujolang.ai/sitemap.xml",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden",
+    "date": "2026-10-19"
+  },
+  {
+    "url": "https://kujolang.ai/llms.txt",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden",
+    "date": "2026-10-19"
+  },
+  {
+    "url": "https://kujolang.ai/compare/",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden",
+    "date": "2026-10-19"
+  },
+  {
+    "url": "https://sitekit.kujolang.ai/",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden",
+    "date": "2026-10-19"
+  }
+]
