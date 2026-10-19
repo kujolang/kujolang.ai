@@ -18,7 +18,7 @@ What failure would make the deliverable unacceptable?
 
 ### Static structure: Reject a class of mistakes early
 
-Type diagnostics and configured architecture boundaries catch different structural problems. Fence checks configured import relationships; it is neither a general security audit nor a substitute for running the application.
+Type diagnostics and configured architecture boundaries catch different structural problems. Kujo 1.8.2 can report interpreter type mismatches as warnings and still exit 0; `kujo check` is a parse/compile check, not a complete type gate. Fence checks configured import relationships; it is neither a general security audit nor a substitute for running the application.
 
 Put it into practice: Introduce a known type or import-rule violation and require the relevant check to fail.
 
@@ -46,7 +46,7 @@ Layer checks deliberately. Each row names both a useful result and the question 
 
 ### Type / compiler diagnostics
 
-Can help establish: The program satisfies the selected static rules.
+Can help establish: The selected checker accepted its own rules. Kujo 1.8.2’s check command does not reject every type mismatch.
 
 Does not establish: Domain truth or every runtime outcome.
 
@@ -213,7 +213,7 @@ It establishes that the suite’s assertions passed under the recorded condition
 - [Kujo type checker](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs) — implementation inspected; 549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1; reviewed 2026-10-19.
 - [Eval scope and implementation](https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo) — implementation inspected; 71e66dff780d6930bcbe093c046bf31aa26411df; reviewed 2026-10-19.
 - [Fence scope and implementation](https://github.com/kujolang/fence/blob/d3173049b5365af975624fddd48e943d39738c75/README.md) — official documentation; d3173049b5365af975624fddd48e943d39738c75; reviewed 2026-10-19.
-- [Bend language guide](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md) — official documentation; Bend website v2.0.37; pinned source snapshot; reviewed 2026-10-19.
+- [Bend language guide](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md) — official documentation; Stable v2.0.37; guide from a separate pinned source snapshot; reviewed 2026-10-19.
 - [Workcell scope and implementation](https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo) — implementation inspected; a276a92c6bac9279a8cb36ace9687ade34d5128f; reviewed 2026-10-19.
 - [Runledger scope and implementation](https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo) — implementation inspected; 334ddd4d33c8cb2612c8edab971ee69170824133; reviewed 2026-10-19.
 - [Shipcheck scope and implementation](https://github.com/kujolang/shipcheck/blob/ee4cfd052c0522eebedc0eead223cbb22490b357/src/checks.kujo) — implementation inspected; ee4cfd052c0522eebedc0eead223cbb22490b357; reviewed 2026-10-19.

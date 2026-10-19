@@ -10,7 +10,7 @@ BAML: https://boundaryml.com/
 
 Documentation: https://boundaryml.com/quickstart
 
-Version: Source 648ad5ed10f543c129b51789c7d02e29b64f06f7; release API observed baml-language-0.22.3-nightly.20261018.a (not runtime-tested)
+Version: Latest stable language toolchain 0.22.2 (2026-10-13). Latest nightly: 0.22.3-nightly.20261018.a (2026-10-19). Source reviewed at 648ad5ed10f543c129b51789c7d02e29b64f06f7 and stable 01f5c412c73c213846ea8cb6ead89d303b053672; neither runtime-tested.
 
 Repository: https://github.com/BoundaryML/baml
 
@@ -28,9 +28,9 @@ Sources: https://boundaryml.com/
 
 ### Static diagnostics
 
-Kujo — Verified supported (language and first-party ecosystem): The runtime checks types. Spec validates task records, and Eval checks selected outputs. Passing those checks does not prove arbitrary programs correct.
+Kujo — Verified supported (language and first-party ecosystem): In Kujo 1.8.2, `kujo check` parses and compiles without executing; it is not a complete type-enforcement gate. Interpreter type diagnostics can be warnings. Spec validates task records, and Eval checks selected outputs; none proves arbitrary programs correct.
 
-Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
 BAML — Verified supported (language): Project diagnostics are implemented by the current check command.
 
@@ -38,9 +38,9 @@ Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e2
 
 ### Testing and evaluations
 
-Kujo — Verified supported (language and first-party ecosystem): The runtime checks types. Spec validates task records, and Eval checks selected outputs. Passing those checks does not prove arbitrary programs correct.
+Kujo — Verified supported (language and first-party ecosystem): In Kujo 1.8.2, `kujo check` parses and compiles without executing; it is not a complete type-enforcement gate. Interpreter type diagnostics can be warnings. Spec validates task records, and Eval checks selected outputs; none proves arbitrary programs correct.
 
-Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
 BAML — Verified supported (toolchain): A test runner and result parsing tests exist in the reviewed source. This review did not execute them.
 
@@ -189,6 +189,8 @@ No. Type checks and structured parsing constrain representation. Domain correctn
 - [Spec scope and implementation](https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo) — implementation inspected; 1211f37a09314be7150734bf15a55e9b2ea6504d; reviewed 2026-10-19.
 - [Eval scope and implementation](https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo) — implementation inspected; 71e66dff780d6930bcbe093c046bf31aa26411df; reviewed 2026-10-19.
 - [Runledger scope and implementation](https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo) — implementation inspected; 334ddd4d33c8cb2612c8edab971ee69170824133; reviewed 2026-10-19.
+- [BAML stable language toolchain](https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.2) — official release metadata; 0.22.2; released 2026-10-13; reviewed 2026-10-19.
+- [Kujo stable release](https://github.com/kujolang/kujo/releases/tag/v1.8.2) — official release metadata; 1.8.2; released 2026-10-19; reviewed 2026-10-19.
 
 ## Related pages
 

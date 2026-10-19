@@ -22,7 +22,7 @@ The host chooses how to coordinate model calls and tool results; the target repo
 
 Put it into practice: Pin both runtimes and verify the data/process boundary between them.
 
-Sources: https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md
+Sources: https://github.com/kujolang/agents-sdk/blob/6c4a54e74855c605eea67253f6808b16b8c63086/README.md
 
 ### Orchestration layer: Recovery needs explicit state
 
@@ -52,7 +52,7 @@ Failure to test: Return malformed or incomplete data from an offline adapter fix
 
 Evidence to keep: Pinned adapter version, input, validation outcome and error details.
 
-Sources: https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md
+Sources: https://github.com/kujolang/agents-sdk/blob/6c4a54e74855c605eea67253f6808b16b8c63086/README.md
 
 ### Tool arguments
 
@@ -62,7 +62,7 @@ Failure to test: Request an unknown tool and a known tool with an invalid argume
 
 Evidence to keep: Rejected request and confirmation that no tool effect occurred.
 
-Sources: https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md
+Sources: https://github.com/kujolang/agents-sdk/blob/6c4a54e74855c605eea67253f6808b16b8c63086/README.md
 
 ### Permission boundary
 
@@ -72,7 +72,7 @@ Failure to test: Attempt an operation outside the allowed scope.
 
 Evidence to keep: Policy/configuration, denial result and independently observed side effects.
 
-Sources: https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
+Sources: https://github.com/kujolang/agents-sdk/blob/6c4a54e74855c605eea67253f6808b16b8c63086/README.md, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
 
 ### Retry and replay
 
@@ -102,7 +102,7 @@ Failure to test: Drop or mismatch a correlation identifier in a fixture.
 
 Evidence to keep: Raw event chain and an explicit incomplete-evidence result.
 
-Sources: https://github.com/kujolang/watchdog/blob/ad6fbc287c626539c1b3a69b4d3d31528b70edaa/README.md, https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md
+Sources: https://github.com/kujolang/watchdog/blob/ad6fbc287c626539c1b3a69b4d3d31528b70edaa/README.md, https://github.com/kujolang/agents-sdk/blob/6c4a54e74855c605eea67253f6808b16b8c63086/README.md
 
 ## Put the decision into practice
 
@@ -176,7 +176,7 @@ List the provider interfaces, application libraries, operating systems and deplo
 
 ## Where Kujo fits
 
-Kujo’s Agents SDK provides workflow primitives as a library. Dispatch adds workflow coordination and reviewable run state. Workcell addresses configured execution boundaries, while Watchdog records telemetry. These are separate projects, not language syntax. Choose the components you need and check what each controls.
+Kujo’s Agents SDK provides workflow primitives as a library. Dispatch adds workflow coordination and reviewable run state. Workcell addresses configured execution boundaries, while Watchdog records telemetry. These are separate projects, not language syntax. Choose the components you need and check what each controls. Agents SDK 1.1.3 uses cooperative budget and cancellation checks; callbacks must enforce their own deadlines. The host supplies provider credentials, permissions and persistence.
 
 ## Where BAML and Bend fit
 
@@ -198,15 +198,15 @@ No. A host can invoke tools that inspect or build another language. Verify the p
 
 ## References
 
-- [Agents-Sdk scope and implementation](https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md) — official documentation; 5a9d5525e511a293b743b1c44d9ef270fd491f9f; reviewed 2026-10-19.
+- [Agents-Sdk scope and implementation](https://github.com/kujolang/agents-sdk/blob/6c4a54e74855c605eea67253f6808b16b8c63086/README.md) — official documentation; Agents SDK 1.1.3; source 6c4a54e74855c605eea67253f6808b16b8c63086; reviewed 2026-10-19.
 - [Dispatch scope and implementation](https://github.com/kujolang/dispatch/blob/71ca927c65598ecfe7c1816068e047cf50b915e0/README.md) — official documentation; 71ca927c65598ecfe7c1816068e047cf50b915e0; reviewed 2026-10-19.
 - [Workcell scope and implementation](https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo) — implementation inspected; a276a92c6bac9279a8cb36ace9687ade34d5128f; reviewed 2026-10-19.
 - [Watchdog scope and implementation](https://github.com/kujolang/watchdog/blob/ad6fbc287c626539c1b3a69b4d3d31528b70edaa/README.md) — official documentation; ad6fbc287c626539c1b3a69b4d3d31528b70edaa; reviewed 2026-10-19.
 - [BAML current language overview](https://boundaryml.com/) — product assertions; not independently benchmarked; 648ad5ed10f543c129b51789c7d02e29b64f06f7; reviewed 2026-10-19.
-- [Bend language guide](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md) — official documentation; Bend website v2.0.37; pinned source snapshot; reviewed 2026-10-19.
-- [Python documentation](https://docs.python.org/3/) — official documentation; Documentation snapshot; no release version asserted; reviewed 2026-10-19.
-- [TypeScript documentation](https://www.typescriptlang.org/docs/) — official documentation; Documentation snapshot; no release version asserted; reviewed 2026-10-19.
-- [The Rust book](https://doc.rust-lang.org/book/) — official documentation; Documentation snapshot; no release version asserted; reviewed 2026-10-19.
+- [Bend language guide](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md) — official documentation; Stable v2.0.37; guide from a separate pinned source snapshot; reviewed 2026-10-19.
+- [Python documentation](https://docs.python.org/3/) — official documentation; Python 3.15.0 (2026-10-09); rolling documentation, not runtime-tested; reviewed 2026-10-19.
+- [TypeScript documentation](https://www.typescriptlang.org/docs/) — official documentation; TypeScript 7.0.2 (2026-08-20); rolling documentation, not runtime-tested; reviewed 2026-10-19.
+- [The Rust book](https://doc.rust-lang.org/book/) — official documentation; Rust 1.99.1 (2026-10-16); rolling book, not runtime-tested; reviewed 2026-10-19.
 
 ## Related pages
 

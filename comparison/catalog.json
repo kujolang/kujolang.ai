@@ -19,7 +19,7 @@
       "label": "Bend language guide",
       "url": "https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md",
       "level": "official documentation",
-      "version": "Bend website v2.0.37; pinned source snapshot",
+      "version": "Stable v2.0.37; guide from a separate pinned source snapshot",
       "verified": "2026-10-19"
     },
     "bend-test": {
@@ -122,9 +122,9 @@
     },
     "sdk": {
       "label": "Agents-Sdk scope and implementation",
-      "url": "https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md",
+      "url": "https://github.com/kujolang/agents-sdk/blob/6c4a54e74855c605eea67253f6808b16b8c63086/README.md",
       "level": "official documentation",
-      "version": "5a9d5525e511a293b743b1c44d9ef270fd491f9f",
+      "version": "Agents SDK 1.1.3; source 6c4a54e74855c605eea67253f6808b16b8c63086",
       "verified": "2026-10-19"
     },
     "watchdog": {
@@ -145,21 +145,21 @@
       "label": "Python documentation",
       "url": "https://docs.python.org/3/",
       "level": "official documentation",
-      "version": "Documentation snapshot; no release version asserted",
+      "version": "Python 3.15.0 (2026-10-09); rolling documentation, not runtime-tested",
       "verified": "2026-10-19"
     },
     "typescript": {
       "label": "TypeScript documentation",
       "url": "https://www.typescriptlang.org/docs/",
       "level": "official documentation",
-      "version": "Documentation snapshot; no release version asserted",
+      "version": "TypeScript 7.0.2 (2026-08-20); rolling documentation, not runtime-tested",
       "verified": "2026-10-19"
     },
     "rust": {
       "label": "The Rust book",
       "url": "https://doc.rust-lang.org/book/",
       "level": "official documentation",
-      "version": "Documentation snapshot; no release version asserted",
+      "version": "Rust 1.99.1 (2026-10-16); rolling book, not runtime-tested",
       "verified": "2026-10-19"
     },
     "vercel": {
@@ -167,6 +167,34 @@
       "url": "https://vercel.com/i/evaluating-ai-coding-agents",
       "level": "official documentation",
       "version": "Documentation snapshot; no release version asserted",
+      "verified": "2026-10-19"
+    },
+    "workcell-boundary": {
+      "label": "Workcell stable and alpha execution boundaries",
+      "url": "https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/README.md",
+      "level": "official documentation; deployment isolation not tested",
+      "version": "Workcell 1.2.0; pinned documentation snapshot",
+      "verified": "2026-10-19"
+    },
+    "kujo-release": {
+      "label": "Kujo stable release",
+      "url": "https://github.com/kujolang/kujo/releases/tag/v1.8.2",
+      "level": "official release metadata",
+      "version": "1.8.2; released 2026-10-19",
+      "verified": "2026-10-19"
+    },
+    "bend-release": {
+      "label": "Bend stable release",
+      "url": "https://github.com/bendlang/bend/releases/tag/v2.0.37",
+      "level": "official release metadata",
+      "version": "2.0.37; released 2026-10-13",
+      "verified": "2026-10-19"
+    },
+    "baml-release": {
+      "label": "BAML stable language toolchain",
+      "url": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.2",
+      "level": "official release metadata",
+      "version": "0.22.2; released 2026-10-13",
       "verified": "2026-10-19"
     }
   },
@@ -182,8 +210,9 @@
       "layer": "language and first-party ecosystem"
     },
     "checks": {
-      "text": "The runtime checks types. Spec validates task records, and Eval checks selected outputs. Passing those checks does not prove arbitrary programs correct.",
+      "text": "In Kujo 1.8.2, `kujo check` parses and compiles without executing; it is not a complete type-enforcement gate. Interpreter type diagnostics can be warnings. Spec validates task records, and Eval checks selected outputs; none proves arbitrary programs correct.",
       "sources": [
+        "kujo",
         "types",
         "spec",
         "eval"
@@ -192,7 +221,7 @@
       "layer": "language and first-party ecosystem"
     },
     "proof": {
-      "text": "We did not establish a general dependent-type proof system in Kujo. The phrase “proves it works” should not be read as mathematical verification of arbitrary code.",
+      "text": "We did not establish a general dependent-type proof system in Kujo. The phrase \u201cproves it works\u201d should not be read as mathematical verification of arbitrary code.",
       "sources": [
         "types"
       ],
@@ -217,9 +246,10 @@
       "layer": "first-party ecosystem"
     },
     "isolation": {
-      "text": "Workcell uses configured Docker/Podman execution boundaries. A normal Kujo process is not automatically a container sandbox.",
+      "text": "Workcell 1.2.0\u2019s stable execution boundary uses configured Docker/Podman containers. Its provider-neutral and remote-adapter contracts remain alpha. A normal Kujo process is not automatically a container sandbox; host and daemon security remain outside this guarantee.",
       "sources": [
-        "workcell"
+        "workcell",
+        "workcell-boundary"
       ],
       "status": "verified-supported",
       "layer": "first-party ecosystem"
@@ -229,12 +259,12 @@
     {
       "slug": "kujo-vs-bend",
       "title": "Kujo vs Bend: workflow evidence and language proofs",
-      "description": "Compare Kujo’s language and workflow tools with current Bend’s laws, proofs and parallel execution, including scope and limitations.",
+      "description": "Compare Kujo\u2019s language and workflow tools with current Bend\u2019s laws, proofs and parallel execution, including scope and limitations.",
       "summary": "Kujo and Bend check agent-written software at different levels. Bend lets you state laws and check proofs in the language. Kujo combines language checks with separate tools for task requirements, output checks and execution records. Choose based on what you need to verify, and consider using both when the requirement spans these levels.",
       "sections": [
         {
           "heading": "Technical architecture",
-          "body": "Bend’s guide describes a pure, affine, dependently typed language with explicit IO. It documents native CPU and GPU execution, while its JavaScript target runs parallel calls sequentially. Bend pairs laws with proof definitions; the negative fixture we inspected rejects an unfinished claim used as a proof. Kujo provides runtime execution and type diagnostics. Spec, Eval and Workcell are separate tools that check other parts of the workflow."
+          "body": "Bend\u2019s guide describes a pure, affine, dependently typed language with explicit IO. It documents native CPU and GPU execution, while its JavaScript target runs parallel calls sequentially. Bend pairs laws with proof definitions; the negative fixture we inspected rejects an unfinished claim used as a proof. Kujo provides runtime execution and type diagnostics, but a successful `kujo check` does not establish type correctness in 1.8.2. Spec, Eval and Workcell are separate tools that check other parts of the workflow."
         },
         {
           "heading": "When to choose Kujo",
@@ -246,11 +276,11 @@
         },
         {
           "heading": "Can you use both?",
-          "body": "You could place a Bend component behind a process or file interface and check the surrounding workflow with other tools. We did not test a Kujo–Bend adapter. Keep proof results separate from integration tests: a proof about the component does not show that the application calls it correctly."
+          "body": "You could place a Bend component behind a process or file interface and check the surrounding workflow with other tools. We did not test a Kujo\u2013Bend adapter. Keep proof results separate from integration tests: a proof about the component does not show that the application calls it correctly."
         },
         {
           "heading": "Honest limitations",
-          "body": "Bend excludes unsafe and foreign code from its stronger proof verdict. Its guide also says that translation into the small kernel is not itself proven. Kujo’s output checks cover the assertions and runs you define, rather than every possible input. In either case, review whether the specification expresses the requirement fully."
+          "body": "Bend excludes unsafe and foreign code from its stronger proof verdict. Its guide also says that translation into the small kernel is not itself proven. Kujo\u2019s output checks cover the assertions and runs you define, rather than every possible input. In either case, review whether the specification expresses the requirement fully."
         },
         {
           "heading": "Examples and benchmark evidence",
@@ -265,7 +295,9 @@
         "spec",
         "eval",
         "workcell",
-        "runledger"
+        "runledger",
+        "bend-release",
+        "kujo-release"
       ],
       "verified": "2026-10-19",
       "kind": "direct",
@@ -277,7 +309,7 @@
         "website": "https://bend-lang.org/",
         "repository": "https://github.com/bendlang/bend",
         "documentation": "https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md",
-        "version": "Website v2.0.37; source 64230dcb96f2da2cc5a44524e42d5eb34771a6ec"
+        "version": "Latest stable v2.0.37 (2026-10-13; release commit 4ff8545f19b09b7d2b8ca2303668100eac8efd66). Guide reviewed at 64230dcb96f2da2cc5a44524e42d5eb34771a6ec; not a runtime test of that release."
       },
       "dimensions": [
         [
@@ -349,7 +381,7 @@
         ],
         [
           "Does Kujo offer the same proof guarantee?",
-          "This review did not establish an equivalent general proof system in Kujo. Kujo’s task and outcome checks should be judged by the concrete conditions they validate."
+          "This review did not establish an equivalent general proof system in Kujo. Kujo\u2019s task and outcome checks should be judged by the concrete conditions they validate."
         ]
       ],
       "related": [
@@ -358,7 +390,7 @@
         "verify-agent-workflows"
       ],
       "deepDive": {
-        "focus": "Compare what Bend can prove with what Kujo’s workflow checks can verify.",
+        "focus": "Compare what Bend can prove with what Kujo\u2019s workflow checks can verify.",
         "question": "Is the requirement a mathematical property, an observed outcome, or both?",
         "architecture": [
           [
@@ -454,11 +486,11 @@
         },
         {
           "heading": "Honest limitations",
-          "body": "Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement."
+          "body": "Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo\u2019s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement."
         },
         {
           "heading": "Examples and benchmark evidence",
-          "body": "We make no comparative latency, token-cost or reliability claims. We read BAML’s check and test implementations, including result parsing tests, but did not build them. The linked Kujo example checks a generated output with an independent Python checker; it does not measure BAML performance."
+          "body": "We make no comparative latency, token-cost or reliability claims. We read BAML\u2019s check and test implementations, including result parsing tests, but did not build them. The linked Kujo example checks a generated output with an independent Python checker; it does not measure BAML performance."
         }
       ],
       "sources": [
@@ -470,7 +502,9 @@
         "types",
         "spec",
         "eval",
-        "runledger"
+        "runledger",
+        "baml-release",
+        "kujo-release"
       ],
       "verified": "2026-10-19",
       "kind": "direct",
@@ -482,7 +516,7 @@
         "website": "https://boundaryml.com/",
         "repository": "https://github.com/BoundaryML/baml",
         "documentation": "https://boundaryml.com/quickstart",
-        "version": "Source 648ad5ed10f543c129b51789c7d02e29b64f06f7; release API observed baml-language-0.22.3-nightly.20261018.a (not runtime-tested)"
+        "version": "Latest stable language toolchain 0.22.2 (2026-10-13). Latest nightly: 0.22.3-nightly.20261018.a (2026-10-19). Source reviewed at 648ad5ed10f543c129b51789c7d02e29b64f06f7 and stable 01f5c412c73c213846ea8cb6ead89d303b053672; neither runtime-tested."
       },
       "dimensions": [
         [
@@ -562,7 +596,7 @@
         "verify-agent-workflows"
       ],
       "deepDive": {
-        "focus": "Compare BAML’s AI application tools with Kujo’s workflow checks and records.",
+        "focus": "Compare BAML\u2019s AI application tools with Kujo\u2019s workflow checks and records.",
         "question": "Are you adopting an AI component, or governing an entire agent change?",
         "architecture": [
           [
@@ -640,7 +674,7 @@
       "slug": "kujo-vs-zero",
       "title": "Kujo vs Zero: workflow accountability and systems semantics",
       "description": "A bounded comparison of Kujo and the Zero developer preview at zero-lang.com, with explicit limits on repository and release verification.",
-      "summary": "This page compares Kujo with the developer-preview language at zero-lang.com. Zero documents value semantics, deterministic cleanup and structured concurrency. Kujo provides a language and separate tools for checking agent work. We could not establish Zero’s official source repository or a numbered release, so its capabilities here rest on documentation rather than inspected implementation.",
+      "summary": "This page compares Kujo with the developer-preview language at zero-lang.com. Zero documents value semantics, deterministic cleanup and structured concurrency. Kujo provides a language and separate tools for checking agent work. We could not establish Zero\u2019s official source repository or a numbered release, so its capabilities here rest on documentation rather than inspected implementation.",
       "sections": [
         {
           "heading": "Which Zero is being compared?",
@@ -648,23 +682,23 @@
         },
         {
           "heading": "Technical architecture",
-          "body": "Zero’s installation guide documents interpreter, native JIT, native executable and C++ output modes. It distinguishes the WebAssembly browser compiler from support for native libraries and code generation. We did not reproduce these capabilities locally. Kujo’s inspected CLI supports VM and interpreter execution with optional JIT paths; its workflow tools do not change the language’s memory model."
+          "body": "Zero\u2019s installation guide documents interpreter, native JIT, native executable and C++ output modes. It distinguishes the WebAssembly browser compiler from support for native libraries and code generation. We did not reproduce these capabilities locally. Kujo\u2019s inspected CLI supports VM and interpreter execution with optional JIT paths; its workflow tools do not change the language\u2019s memory model."
         },
         {
           "heading": "When to choose Kujo",
-          "body": "Evaluate Kujo when you need to define an agent’s task, check its deliverables and keep a reviewable run record. Its separate tools address those needs. This does not establish an advantage over Zero in numerical performance or memory behavior."
+          "body": "Evaluate Kujo when you need to define an agent\u2019s task, check its deliverables and keep a reviewable run record. Its separate tools address those needs. This does not establish an advantage over Zero in numerical performance or memory behavior."
         },
         {
           "heading": "When to choose Zero",
-          "body": "Try Zero’s preview if its documented value semantics and systems behavior suit your workload. Explore the browser examples, then establish source access, platform support and release policy before depending on it. Resource cleanup and concurrency behavior may matter more to your application than agent-workflow tools."
+          "body": "Try Zero\u2019s preview if its documented value semantics and systems behavior suit your workload. Explore the browser examples, then establish source access, platform support and release policy before depending on it. Resource cleanup and concurrency behavior may matter more to your application than agent-workflow tools."
         },
         {
           "heading": "Can you use both?",
-          "body": "A process or file interface could connect the languages, but we did not test a Kujo–Zero integration. First identify a repeatable Zero toolchain, then check its exit codes, data formats and native-library interfaces."
+          "body": "A process or file interface could connect the languages, but we did not test a Kujo\u2013Zero integration. First identify a repeatable Zero toolchain, then check its exit codes, data formats and native-library interfaces."
         },
         {
           "heading": "Honest limitations",
-          "body": "Without a verified source repository or release version, we cannot independently assess Zero’s implementation, security boundaries or maturity. Kujo’s evidence tools also require configuration and meaningful checks. Deterministic cleanup alone does not make network responses or builds repeatable, or create an auditable agent run."
+          "body": "Without a verified source repository or release version, we cannot independently assess Zero\u2019s implementation, security boundaries or maturity. Kujo\u2019s evidence tools also require configuration and meaningful checks. Deterministic cleanup alone does not make network responses or builds repeatable, or create an auditable agent run."
         },
         {
           "heading": "Examples and benchmark evidence",
@@ -772,12 +806,12 @@
         "verify-agent-workflows"
       ],
       "deepDive": {
-        "focus": "Compare Zero’s systems model with Kujo’s tools for checking agent work.",
+        "focus": "Compare Zero\u2019s systems model with Kujo\u2019s tools for checking agent work.",
         "question": "Which behavior must be predictable: resources, execution, or the delivery process?",
         "architecture": [
           [
             "Project identity",
-            "Check what the preview’s documentation establishes",
+            "Check what the preview\u2019s documentation establishes",
             "This comparison identifies Zero by zero-lang.com. A canonical repository and numbered release were not established in the reviewed official pages. That limits independent inspection of implementation and release maturity.",
             "Treat source identity and a reproducible compiler version as prerequisites for a production trial.",
             [
@@ -856,11 +890,11 @@
         },
         {
           "heading": "A useful shortlist",
-          "body": "Kujo combines language execution with separate tools for task requirements, output checks and run records. Current Bend emphasizes laws, proofs and parallel computation. Current BAML emphasizes agent-oriented code, AI functions and integration with existing applications. Zero’s reviewed site emphasizes systems behavior; we do not infer an AI-native design goal from its inclusion here. The direct comparisons show the evidence and version limits for each."
+          "body": "Kujo combines language execution with separate tools for task requirements, output checks and run records. Current Bend emphasizes laws, proofs and parallel computation. Current BAML emphasizes agent-oriented code, AI functions and integration with existing applications. Zero\u2019s reviewed site emphasizes systems behavior; we do not infer an AI-native design goal from its inclusion here. The direct comparisons show the evidence and version limits for each."
         },
         {
           "heading": "Keep established languages in the evaluation",
-          "body": "Keep Python, TypeScript and Rust in the evaluation when their libraries, deployment options and your team’s experience already suit the application. A new language needs to justify the cost of adopting it with a capability you need. Tests and execution records can also support agent-written code in an established language."
+          "body": "Keep Python, TypeScript and Rust in the evaluation when their libraries, deployment options and your team\u2019s experience already suit the application. A new language needs to justify the cost of adopting it with a capability you need. Tests and execution records can also support agent-written code in an established language."
         },
         {
           "heading": "How to choose the best fit",
@@ -887,7 +921,7 @@
       "faq": [
         [
           "What is the best AI-native programming language?",
-          "There is no supported universal ranking here. Use Bend’s proof model, BAML’s current application and bridge model, or Kujo’s workflow tools when they fit a concrete requirement, then test that requirement on the pinned toolchain."
+          "There is no supported universal ranking here. Use Bend\u2019s proof model, BAML\u2019s current application and bridge model, or Kujo\u2019s workflow tools when they fit a concrete requirement, then test that requirement on the pinned toolchain."
         ]
       ],
       "related": [
@@ -897,8 +931,8 @@
       ],
       "guide": {
         "title": "Choose a language by what it can do.",
-        "lead": "Compare each language’s design and the evidence behind its guarantees.",
-        "question": "What does “AI-native” need to mean for your project?",
+        "lead": "Compare each language\u2019s design and the evidence behind its guarantees.",
+        "question": "What does \u201cAI-native\u201d need to mean for your project?",
         "orientation": [
           [
             "Build AI features",
@@ -906,7 +940,7 @@
           ],
           [
             "Let agents write code",
-            "Diagnostics, clear interfaces and a workable edit–check loop."
+            "Diagnostics, clear interfaces and a workable edit\u2013check loop."
           ],
           [
             "Trust the result",
@@ -917,7 +951,7 @@
           [
             "Application design",
             "Start with the application boundary",
-            "Typed AI functions, model calls and host-language integration belong to the application design question. BAML’s current positioning is relevant here, but a bridge still needs validation for the host, types and version you plan to ship.",
+            "Typed AI functions, model calls and host-language integration belong to the application design question. BAML\u2019s current positioning is relevant here, but a bridge still needs validation for the host, types and version you plan to ship.",
             "Trial one real feature inside the existing application before proposing a rewrite.",
             [
               "baml",
@@ -927,7 +961,7 @@
           [
             "Language assurance",
             "Decide exactly what you need to check",
-            "Bend’s laws and proofs address formally stated properties. Kujo’s type checking and separate outcome tools answer different questions. Decide whether the requirement is a universal invariant, an observed behavior, or a reviewable delivery process.",
+            "Bend\u2019s laws and proofs address formally stated properties. Kujo\u2019s compiler checks, non-fatal interpreter type diagnostics and separate outcome tools answer different questions. Decide whether the requirement is a universal invariant, an observed behavior, or a reviewable delivery process.",
             "Ask for the exact proposition or assertion, then inspect the assumptions around it.",
             [
               "bend",
@@ -1001,7 +1035,7 @@
           ],
           [
             "Existing Python / TypeScript",
-            "Your application’s libraries, tests and deployment environment.",
+            "Your application\u2019s libraries, tests and deployment environment.",
             "An ecosystem name does not guarantee the specific integration you need.",
             "Use the same task and acceptance criteria as the new-language candidates.",
             [
@@ -1046,22 +1080,22 @@
         ],
         "examples": [
           [
-            "“Agents write it more reliably”",
+            "\u201cAgents write it more reliably\u201d",
             "A representative task set, all attempts and independent acceptance checks.",
             "Whether the result transfers to your repository, model and maintenance cycle."
           ],
           [
-            "“The output is typed”",
+            "\u201cThe output is typed\u201d",
             "A malformed response rejected and a valid response accepted.",
             "Whether a valid response is factually or operationally correct."
           ],
           [
-            "“The program is proven”",
+            "\u201cThe program is proven\u201d",
             "The stated law, checked proof and documented trusted boundary.",
             "Whether the law captures the requirement and external code respects the interface."
           ],
           [
-            "“The workflow is auditable”",
+            "\u201cThe workflow is auditable\u201d",
             "Commands, inputs, revisions, artifacts and linked raw check outcomes.",
             "Whether supplied pass labels are independently corroborated."
           ]
@@ -1086,7 +1120,7 @@
       "slug": "programming-languages-for-ai-agents",
       "title": "Programming languages for AI agents: choosing the host and tools",
       "description": "Choose a language for building and supervising agents by tool contracts, failure handling, deployment and the evidence your workflow needs.",
-      "summary": "Choose an agent’s host language by the tools it must call, the permissions those tools need and the failures it must recover from. The host coordinates the agent; the repository it edits can use another language. Test the interfaces between them before deciding whether any language change is needed.",
+      "summary": "Choose an agent\u2019s host language by the tools it must call, the permissions those tools need and the failures it must recover from. The host coordinates the agent; the repository it edits can use another language. Test the interfaces between them before deciding whether any language change is needed.",
       "sections": [
         {
           "heading": "Choose the agent host separately from the code it edits",
@@ -1098,11 +1132,11 @@
         },
         {
           "heading": "Where Kujo fits",
-          "body": "Kujo’s Agents SDK provides workflow primitives as a library. Dispatch adds workflow coordination and reviewable run state. Workcell addresses configured execution boundaries, while Watchdog records telemetry. These are separate projects, not language syntax. Choose the components you need and check what each controls."
+          "body": "Kujo\u2019s Agents SDK provides workflow primitives as a library. Dispatch adds workflow coordination and reviewable run state. Workcell addresses configured execution boundaries, while Watchdog records telemetry. These are separate projects, not language syntax. Choose the components you need and check what each controls. Agents SDK 1.1.3 uses cooperative budget and cancellation checks; callbacks must enforce their own deadlines. The host supplies provider credentials, permissions and persistence."
         },
         {
           "heading": "Where BAML and Bend fit",
-          "body": "BAML describes typed AI functions and bridges into existing applications. Bend’s laws and proofs may suit a component with precisely stated invariants. Either option still requires controls on external tools, validation of their outputs and a plan for failed or interrupted operations."
+          "body": "BAML describes typed AI functions and bridges into existing applications. Bend\u2019s laws and proofs may suit a component with precisely stated invariants. Either option still requires controls on external tools, validation of their outputs and a plan for failed or interrupted operations."
         },
         {
           "heading": "An agent-host acceptance checklist",
@@ -1159,7 +1193,7 @@
           [
             "Runtime layer",
             "The host and application can use different languages",
-            "The host chooses how to coordinate model calls and tool results; the target repository can use another language. Kujo’s Agents SDK is a library layer with explicit adapter boundaries and offline fixtures, not a reason to translate every repository it touches.",
+            "The host chooses how to coordinate model calls and tool results; the target repository can use another language. Kujo\u2019s Agents SDK is a library layer with explicit adapter boundaries and offline fixtures, not a reason to translate every repository it touches.",
             "Pin both runtimes and verify the data/process boundary between them.",
             [
               "sdk"
@@ -1177,7 +1211,7 @@
           [
             "Execution layer",
             "Telemetry and authority differ",
-            "Workcell’s execution receipts and Watchdog’s telemetry address different aspects of a run. Recording an attempted operation does not itself prevent it; the configured execution boundary must enforce the intended restriction.",
+            "Workcell\u2019s execution receipts and Watchdog\u2019s telemetry address different aspects of a run. Recording an attempted operation does not itself prevent it; the configured execution boundary must enforce the intended restriction.",
             "Observe both the reported denial and the absence of the prohibited effect.",
             [
               "workcell",
@@ -1323,19 +1357,19 @@
       "sections": [
         {
           "heading": "Static analysis and architecture checks",
-          "body": "Run the target language’s compiler and linter before executing the program. Add architecture checks when imports or dependencies must follow specific rules. Fence checks configured import boundaries in the Kujo toolset; it is not a general security audit or theorem prover. Static checks leave runtime behavior to other checks."
+          "body": "Run the target language\u2019s compiler and linter before executing the program. Add architecture checks when imports or dependencies must follow specific rules. Fence checks configured import boundaries in the Kujo toolset; it is not a general security audit or theorem prover. Static checks leave runtime behavior to other checks."
         },
         {
           "heading": "Behavioral tests and evaluations",
-          "body": "Eval checks command results, files and structured data. Derive assertions from the requirement, rather than copying the agent’s implementation. Checking that a file exists says nothing about whether its contents are correct. Include an incorrect output to confirm that the checker detects the failure you care about."
+          "body": "Eval checks command results, files and structured data. Derive assertions from the requirement, rather than copying the agent\u2019s implementation. Checking that a file exists says nothing about whether its contents are correct. Include an incorrect output to confirm that the checker detects the failure you care about."
         },
         {
           "heading": "Formal verification has a distinct scope",
-          "body": "Bend’s guide describes laws and proof definitions. A checked proof addresses a stated property under the proof system’s assumptions, rather than a finite set of test inputs. Review the proposition, the checker and any excluded unsafe or foreign code. Passing ordinary tests should not be described as mathematical proof."
+          "body": "Bend\u2019s guide describes laws and proof definitions. A checked proof addresses a stated property under the proof system\u2019s assumptions, rather than a finite set of test inputs. Review the proposition, the checker and any excluded unsafe or foreign code. Passing ordinary tests should not be described as mathematical proof."
         },
         {
           "heading": "Execution evidence and release gates",
-          "body": "Workcell receipts and RunLedger records help show what ran and what was reported. RunLedger accepts supplied test results and verdicts, so follow the links to the underlying evidence. ShipCheck checks release signals and reports blockers. A test directory’s presence does not show that its tests ran or passed."
+          "body": "Workcell receipts and RunLedger records help show what ran and what was reported. RunLedger accepts supplied test results and verdicts, so follow the links to the underlying evidence. ShipCheck checks release signals and reports blockers. A test directory\u2019s presence does not show that its tests ran or passed."
         },
         {
           "heading": "Select a stack by the failure you need to catch",
@@ -1360,7 +1394,7 @@
       "faq": [
         [
           "Can a passing test suite prove an agent finished the task?",
-          "It establishes that the suite’s assertions passed under the recorded conditions. Completion also requires the suite to cover the acceptance criteria, to execute against the actual deliverable, and to preserve failures rather than hiding them."
+          "It establishes that the suite\u2019s assertions passed under the recorded conditions. Completion also requires the suite to cover the acceptance criteria, to execute against the actual deliverable, and to preserve failures rather than hiding them."
         ]
       ],
       "related": [
@@ -1390,7 +1424,7 @@
           [
             "Static structure",
             "Reject a class of mistakes early",
-            "Type diagnostics and configured architecture boundaries catch different structural problems. Fence checks configured import relationships; it is neither a general security audit nor a substitute for running the application.",
+            "Type diagnostics and configured architecture boundaries catch different structural problems. Kujo 1.8.2 can report interpreter type mismatches as warnings and still exit 0; `kujo check` is a parse/compile check, not a complete type gate. Fence checks configured import relationships; it is neither a general security audit nor a substitute for running the application.",
             "Introduce a known type or import-rule violation and require the relevant check to fail.",
             [
               "types",
@@ -1400,7 +1434,7 @@
           [
             "Behavior and proof",
             "Define what the verdict covers",
-            "Eval checks selected command, file and data outcomes. Bend’s proof model addresses stated laws within a trusted boundary. Finite observed cases and a quantified proposition can complement each other, but should not share an ambiguous “proven” label.",
+            "Eval checks selected command, file and data outcomes. Bend\u2019s proof model addresses stated laws within a trusted boundary. Finite observed cases and a quantified proposition can complement each other, but should not share an ambiguous \u201cproven\u201d label.",
             "State the assertion or law next to the result, including inputs and excluded behavior.",
             [
               "eval",
@@ -1430,7 +1464,7 @@
         "rows": [
           [
             "Type / compiler diagnostics",
-            "The program satisfies the selected static rules.",
+            "The selected checker accepted its own rules. Kujo 1.8.2\u2019s check command does not reject every type mismatch.",
             "Domain truth or every runtime outcome.",
             "A deliberately invalid type use that must be rejected.",
             [
@@ -1457,7 +1491,7 @@
           ],
           [
             "Formal proof",
-            "The stated property is checked within the proof system’s assumptions.",
+            "The stated property is checked within the proof system\u2019s assumptions.",
             "Correctness of an incomplete specification or excluded external code.",
             "An invalid proof or unsatisfied law.",
             [
@@ -1503,7 +1537,7 @@
             "Map each acceptance criterion to evidence for the current revision. Label missing or inconclusive evidence explicitly before a release decision."
           ]
         ],
-        "exampleTitle": "Check the JSON field’s value as well as its type.",
+        "exampleTitle": "Check the JSON field\u2019s value as well as its type.",
         "exampleIntro": "The linked Kujo/Python exercise requires an integer total of 42. These expected cases explain why process success, parsing and semantic validation are separate checks.",
         "exampleColumns": [
           "Artifact or observation",
@@ -1562,7 +1596,7 @@
       "slug": "verify-agent-workflows",
       "title": "Verify agent workflows: contracts, checks and reproducible evidence",
       "description": "A practical guide to verifying AI-generated code, evaluating coding agents and preserving traceable execution evidence with honest limits.",
-      "summary": "Check an agent’s completion report against the work it produced. Define the requirement first, inspect the output with an independent checker and keep the commands, results and environment details needed to repeat the check. This guide shows how to connect those steps using a small runnable example.",
+      "summary": "Check an agent\u2019s completion report against the work it produced. Define the requirement first, inspect the output with an independent checker and keep the commands, results and environment details needed to repeat the check. This guide shows how to connect those steps using a small runnable example.",
       "sections": [
         {
           "heading": "1. Write the acceptance contract before implementation",
@@ -1570,7 +1604,7 @@
         },
         {
           "heading": "2. Evaluate the artifact independently",
-          "body": "Use a checker that does not simply repeat the agent’s implementation. Read the generated output, parse it and check its fields and values. Eval provides configurable checks; the example below uses a separate Python checker to show the principle. Keep that checker outside the agent’s write access when your threat model requires it."
+          "body": "Use a checker that does not simply repeat the agent\u2019s implementation. Read the generated output, parse it and check its fields and values. Eval provides configurable checks; the example below uses a separate Python checker to show the principle. Keep that checker outside the agent\u2019s write access when your threat model requires it."
         },
         {
           "heading": "3. Test the verifier with a known failure",
@@ -1625,7 +1659,7 @@
       "guide": {
         "title": "Check whether the agent finished the task.",
         "lead": "Define the requirement, check the result independently and keep the evidence.",
-        "question": "Could another reviewer challenge this “done” claim?",
+        "question": "Could another reviewer challenge this \u201cdone\u201d claim?",
         "orientation": [
           [
             "Contract",
@@ -1644,7 +1678,7 @@
           [
             "Before implementation",
             "Define an observable contract",
-            "A structured task record can capture allowed changes and acceptance conditions. Spec validates a record’s schema; it cannot decide whether you asked for enough. Turn “generate a report” into explicit fields, values and failure behavior.",
+            "A structured task record can capture allowed changes and acceptance conditions. Spec validates a record\u2019s schema; it cannot decide whether you asked for enough. Turn \u201cgenerate a report\u201d into explicit fields, values and failure behavior.",
             "Write at least one valid artifact and one plausible invalid artifact before building the solution.",
             [
               "spec"
@@ -1653,7 +1687,7 @@
           [
             "During evaluation",
             "Keep the checker independent",
-            "Eval can check commands, files and structured values. The exercise uses a separate Python checker to isolate the idea: read the producer’s output, parse it and check value and type rather than trusting a success message.",
+            "Eval can check commands, files and structured values. The exercise uses a separate Python checker to isolate the idea: read the producer\u2019s output, parse it and check value and type rather than trusting a success message.",
             "If an agent can rewrite its own checker, decide whether that is acceptable for your threat model.",
             [
               "eval"
@@ -1803,7 +1837,7 @@
           ],
           [
             "A valid task record can still omit a requirement",
-            "Schema validation checks the task record’s structure. You must still review whether its criteria cover what the user asked for."
+            "Schema validation checks the task record\u2019s structure. You must still review whether its criteria cover what the user asked for."
           ]
         ]
       }
@@ -1845,11 +1879,11 @@
       {
         "name": "Zero",
         "slug": "kujo-vs-zero",
-        "category": "Systems language · developer preview",
+        "category": "Systems language \u00b7 developer preview",
         "summary": "Explore documented value semantics and explicit systems behavior.",
         "focus": "Build a systems component whose resource cleanup and concurrency behavior matter.",
         "tradeoff": "Canonical source repository and numbered release remain unverified here.",
-        "trial": "Identify the compiler’s source and version before planning an integration.",
+        "trial": "Identify the compiler\u2019s source and version before planning an integration.",
         "url": "/compare/kujo-vs-zero/"
       }
     ],
@@ -1889,7 +1923,7 @@
         "question": "Which errors can a check expose?",
         "cells": [
           {
-            "summary": "Types, task schemas and outcome checks",
+            "summary": "Compiler checks, task schemas and outcome checks",
             "refs": [
               "kujo:checks"
             ]

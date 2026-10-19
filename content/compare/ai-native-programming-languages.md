@@ -35,7 +35,7 @@ Sources: https://boundaryml.com/, https://boundaryml.com/quickstart
 
 ### Language assurance: Decide exactly what you need to check
 
-Bend’s laws and proofs address formally stated properties. Kujo’s type checking and separate outcome tools answer different questions. Decide whether the requirement is a universal invariant, an observed behavior, or a reviewable delivery process.
+Bend’s laws and proofs address formally stated properties. Kujo’s compiler checks, non-fatal interpreter type diagnostics and separate outcome tools answer different questions. Decide whether the requirement is a universal invariant, an observed behavior, or a reviewable delivery process.
 
 Put it into practice: Ask for the exact proposition or assertion, then inspect the assumptions around it.
 
@@ -206,12 +206,12 @@ There is no supported universal ranking here. Use Bend’s proof model, BAML’s
 - [Kujo runtime and CLI source](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs) — implementation inspected; Kujo 1.8.2 source snapshot; reviewed 2026-10-19.
 - [Spec scope and implementation](https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo) — implementation inspected; 1211f37a09314be7150734bf15a55e9b2ea6504d; reviewed 2026-10-19.
 - [Eval scope and implementation](https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo) — implementation inspected; 71e66dff780d6930bcbe093c046bf31aa26411df; reviewed 2026-10-19.
-- [Bend language guide](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md) — official documentation; Bend website v2.0.37; pinned source snapshot; reviewed 2026-10-19.
+- [Bend language guide](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md) — official documentation; Stable v2.0.37; guide from a separate pinned source snapshot; reviewed 2026-10-19.
 - [BAML current language overview](https://boundaryml.com/) — product assertions; not independently benchmarked; 648ad5ed10f543c129b51789c7d02e29b64f06f7; reviewed 2026-10-19.
 - [Zero language overview](https://zero-lang.com/) — official documentation; implementation not inspected; Developer preview; release identifier unverified; reviewed 2026-10-19.
-- [Python documentation](https://docs.python.org/3/) — official documentation; Documentation snapshot; no release version asserted; reviewed 2026-10-19.
-- [TypeScript documentation](https://www.typescriptlang.org/docs/) — official documentation; Documentation snapshot; no release version asserted; reviewed 2026-10-19.
-- [The Rust book](https://doc.rust-lang.org/book/) — official documentation; Documentation snapshot; no release version asserted; reviewed 2026-10-19.
+- [Python documentation](https://docs.python.org/3/) — official documentation; Python 3.15.0 (2026-10-09); rolling documentation, not runtime-tested; reviewed 2026-10-19.
+- [TypeScript documentation](https://www.typescriptlang.org/docs/) — official documentation; TypeScript 7.0.2 (2026-08-20); rolling documentation, not runtime-tested; reviewed 2026-10-19.
+- [The Rust book](https://doc.rust-lang.org/book/) — official documentation; Rust 1.99.1 (2026-10-16); rolling book, not runtime-tested; reviewed 2026-10-19.
 
 ## Related pages
 
