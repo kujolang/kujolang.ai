@@ -1,0 +1,202 @@
+[
+  {
+    "field": "$.hub.rows[1].cells[0].summary",
+    "before": "Types, task schemas and outcome checks",
+    "after": "Compiler checks, task schemas and outcome checks"
+  },
+  {
+    "field": "$.kujoFacts.checks.sources",
+    "before": [
+      "types",
+      "spec",
+      "eval"
+    ],
+    "after": [
+      "kujo",
+      "types",
+      "spec",
+      "eval"
+    ]
+  },
+  {
+    "field": "$.kujoFacts.checks.text",
+    "before": "The runtime checks types. Spec validates task records, and Eval checks selected outputs. Passing those checks does not prove arbitrary programs correct.",
+    "after": "In Kujo 1.8.2, `kujo check` parses and compiles without executing; it is not a complete type-enforcement gate. Interpreter type diagnostics can be warnings. Spec validates task records, and Eval checks selected outputs; none proves arbitrary programs correct."
+  },
+  {
+    "field": "$.kujoFacts.isolation.sources",
+    "before": [
+      "workcell"
+    ],
+    "after": [
+      "workcell",
+      "workcell-boundary"
+    ]
+  },
+  {
+    "field": "$.kujoFacts.isolation.text",
+    "before": "Workcell uses configured Docker/Podman execution boundaries. A normal Kujo process is not automatically a container sandbox.",
+    "after": "Workcell 1.2.0’s stable execution boundary uses configured Docker/Podman containers. Its provider-neutral and remote-adapter contracts remain alpha. A normal Kujo process is not automatically a container sandbox; host and daemon security remain outside this guarantee."
+  },
+  {
+    "field": "$.pages[0].sections[0].body",
+    "before": "Bend’s guide describes a pure, affine, dependently typed language with explicit IO. It documents native CPU and GPU execution, while its JavaScript target runs parallel calls sequentially. Bend pairs laws with proof definitions; the negative fixture we inspected rejects an unfinished claim used as a proof. Kujo provides runtime execution and type diagnostics. Spec, Eval and Workcell are separate tools that check other parts of the workflow.",
+    "after": "Bend’s guide describes a pure, affine, dependently typed language with explicit IO. It documents native CPU and GPU execution, while its JavaScript target runs parallel calls sequentially. Bend pairs laws with proof definitions; the negative fixture we inspected rejects an unfinished claim used as a proof. Kujo provides runtime execution and type diagnostics, but a successful `kujo check` does not establish type correctness in 1.8.2. Spec, Eval and Workcell are separate tools that check other parts of the workflow."
+  },
+  {
+    "field": "$.pages[0].sources",
+    "before": [
+      "bend",
+      "bend-test",
+      "kujo",
+      "types",
+      "spec",
+      "eval",
+      "workcell",
+      "runledger"
+    ],
+    "after": [
+      "bend",
+      "bend-test",
+      "kujo",
+      "types",
+      "spec",
+      "eval",
+      "workcell",
+      "runledger",
+      "bend-release",
+      "kujo-release"
+    ]
+  },
+  {
+    "field": "$.pages[0].technology.version",
+    "before": "Website v2.0.37; source 64230dcb96f2da2cc5a44524e42d5eb34771a6ec",
+    "after": "Latest stable v2.0.37 (2026-10-13; release commit 4ff8545f19b09b7d2b8ca2303668100eac8efd66). Guide reviewed at 64230dcb96f2da2cc5a44524e42d5eb34771a6ec; not a runtime test of that release."
+  },
+  {
+    "field": "$.pages[1].sources",
+    "before": [
+      "baml",
+      "baml-check",
+      "baml-test",
+      "baml-start",
+      "kujo",
+      "types",
+      "spec",
+      "eval",
+      "runledger"
+    ],
+    "after": [
+      "baml",
+      "baml-check",
+      "baml-test",
+      "baml-start",
+      "kujo",
+      "types",
+      "spec",
+      "eval",
+      "runledger",
+      "baml-release",
+      "kujo-release"
+    ]
+  },
+  {
+    "field": "$.pages[1].technology.version",
+    "before": "Source 648ad5ed10f543c129b51789c7d02e29b64f06f7; release API observed baml-language-0.22.3-nightly.20261018.a (not runtime-tested)",
+    "after": "Latest stable language toolchain 0.22.2 (2026-10-13). Latest nightly: 0.22.3-nightly.20261018.a (2026-10-19). Source reviewed at 648ad5ed10f543c129b51789c7d02e29b64f06f7 and stable 01f5c412c73c213846ea8cb6ead89d303b053672; neither runtime-tested."
+  },
+  {
+    "field": "$.pages[3].guide.cards[1][2]",
+    "before": "Bend’s laws and proofs address formally stated properties. Kujo’s type checking and separate outcome tools answer different questions. Decide whether the requirement is a universal invariant, an observed behavior, or a reviewable delivery process.",
+    "after": "Bend’s laws and proofs address formally stated properties. Kujo’s compiler checks, non-fatal interpreter type diagnostics and separate outcome tools answer different questions. Decide whether the requirement is a universal invariant, an observed behavior, or a reviewable delivery process."
+  },
+  {
+    "field": "$.pages[4].sections[2].body",
+    "before": "Kujo’s Agents SDK provides workflow primitives as a library. Dispatch adds workflow coordination and reviewable run state. Workcell addresses configured execution boundaries, while Watchdog records telemetry. These are separate projects, not language syntax. Choose the components you need and check what each controls.",
+    "after": "Kujo’s Agents SDK provides workflow primitives as a library. Dispatch adds workflow coordination and reviewable run state. Workcell addresses configured execution boundaries, while Watchdog records telemetry. These are separate projects, not language syntax. Choose the components you need and check what each controls. Agents SDK 1.1.3 uses cooperative budget and cancellation checks; callbacks must enforce their own deadlines. The host supplies provider credentials, permissions and persistence."
+  },
+  {
+    "field": "$.pages[5].guide.cards[0][2]",
+    "before": "Type diagnostics and configured architecture boundaries catch different structural problems. Fence checks configured import relationships; it is neither a general security audit nor a substitute for running the application.",
+    "after": "Type diagnostics and configured architecture boundaries catch different structural problems. Kujo 1.8.2 can report interpreter type mismatches as warnings and still exit 0; `kujo check` is a parse/compile check, not a complete type gate. Fence checks configured import relationships; it is neither a general security audit nor a substitute for running the application."
+  },
+  {
+    "field": "$.pages[5].guide.rows[0][1]",
+    "before": "The program satisfies the selected static rules.",
+    "after": "The selected checker accepted its own rules. Kujo 1.8.2’s check command does not reject every type mismatch."
+  },
+  {
+    "field": "$.sources.baml-release",
+    "before": null,
+    "after": {
+      "label": "BAML stable language toolchain",
+      "url": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.2",
+      "level": "official release metadata",
+      "version": "0.22.2; released 2026-10-13",
+      "verified": "2026-10-19"
+    }
+  },
+  {
+    "field": "$.sources.bend.version",
+    "before": "Bend website v2.0.37; pinned source snapshot",
+    "after": "Stable v2.0.37; guide from a separate pinned source snapshot"
+  },
+  {
+    "field": "$.sources.bend-release",
+    "before": null,
+    "after": {
+      "label": "Bend stable release",
+      "url": "https://github.com/bendlang/bend/releases/tag/v2.0.37",
+      "level": "official release metadata",
+      "version": "2.0.37; released 2026-10-13",
+      "verified": "2026-10-19"
+    }
+  },
+  {
+    "field": "$.sources.kujo-release",
+    "before": null,
+    "after": {
+      "label": "Kujo stable release",
+      "url": "https://github.com/kujolang/kujo/releases/tag/v1.8.2",
+      "level": "official release metadata",
+      "version": "1.8.2; released 2026-10-19",
+      "verified": "2026-10-19"
+    }
+  },
+  {
+    "field": "$.sources.python.version",
+    "before": "Documentation snapshot; no release version asserted",
+    "after": "Python 3.15.0 (2026-10-09); rolling documentation, not runtime-tested"
+  },
+  {
+    "field": "$.sources.rust.version",
+    "before": "Documentation snapshot; no release version asserted",
+    "after": "Rust 1.99.1 (2026-10-16); rolling book, not runtime-tested"
+  },
+  {
+    "field": "$.sources.sdk.url",
+    "before": "https://github.com/kujolang/agents-sdk/blob/5a9d5525e511a293b743b1c44d9ef270fd491f9f/README.md",
+    "after": "https://github.com/kujolang/agents-sdk/blob/6c4a54e74855c605eea67253f6808b16b8c63086/README.md"
+  },
+  {
+    "field": "$.sources.sdk.version",
+    "before": "5a9d5525e511a293b743b1c44d9ef270fd491f9f",
+    "after": "Agents SDK 1.1.3; source 6c4a54e74855c605eea67253f6808b16b8c63086"
+  },
+  {
+    "field": "$.sources.typescript.version",
+    "before": "Documentation snapshot; no release version asserted",
+    "after": "TypeScript 7.0.2 (2026-08-20); rolling documentation, not runtime-tested"
+  },
+  {
+    "field": "$.sources.workcell-boundary",
+    "before": null,
+    "after": {
+      "label": "Workcell stable and alpha execution boundaries",
+      "url": "https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/README.md",
+      "level": "official documentation; deployment isolation not tested",
+      "version": "Workcell 1.2.0; pinned documentation snapshot",
+      "verified": "2026-10-19"
+    }
+  }
+]

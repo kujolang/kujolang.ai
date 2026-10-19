@@ -1,0 +1,39 @@
+[
+  {
+    "command": [
+      "check",
+      "invalid-type.kujo"
+    ],
+    "exit": 0,
+    "stdout": "check passed: invalid-type.kujo\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "run",
+      "invalid-type.kujo"
+    ],
+    "exit": 0,
+    "stdout": "wrong\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "run",
+      "invalid-type.kujo",
+      "--interpreter"
+    ],
+    "exit": 0,
+    "stdout": "wrong\n",
+    "stderr": "Type checking warnings:\n  [KUJORUN001] [runtime] Type Error: Return type mismatch: expected Int but got String\n  --> 0:0\n   = help: Make sure the return value matches the function's declared return type\n   = note: Function expects to return Int\n\n\n"
+  },
+  {
+    "command": [
+      "check",
+      "invalid-syntax.kujo"
+    ],
+    "exit": 3,
+    "stdout": "",
+    "stderr": "[KUJOPARSE001] [parser] error: Expected ')' to close function parameter list but found Punctuation('{')\n  --> invalid-syntax.kujo:1:14\n  = help: Fix the parse error and rerun Kujo.\n[KUJOPARSE001] [parser] error: Expected '}' to close dictionary literal but found Eof\n  --> invalid-syntax.kujo:2:1\n  = help: Fix the parse error and rerun Kujo.\n"
+  }
+]

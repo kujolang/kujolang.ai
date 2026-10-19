@@ -1,0 +1,32 @@
+{
+  "scope": "Artifact verification exercise; not comparative performance or agent evaluation",
+  "version": "kujo 1.8.2",
+  "environment": {
+    "system": "Darwin",
+    "machine": "x86_64",
+    "release": "25.6.0",
+    "python": "3.10.5"
+  },
+  "command": [
+    "/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/runtime-1.8.2/kujo",
+    "run",
+    "/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/site/tmp/fact-exercise/produce.kujo"
+  ],
+  "exitCode": 0,
+  "stdout": "{\"total\":42}\n",
+  "stderr": "",
+  "runtimeSha256": "e46ac33e49197cca6d30ef2f375e54022d1e1634623556acf4a147167f35c269",
+  "sourceSha256": "37feafccc21f41628cd7ccbf8a3f1ab36470c4acc463d30199e36989946a128f",
+  "artifactSha256": "248ebeb0b683f0d77a826b33eaba67543c4f4d89e9b3495565300dae105fb838",
+  "positiveVerifierExit": 0,
+  "wrongValueVerifierExit": 1,
+  "malformedControlsAccepted": {
+    "{}": false,
+    "not json": false,
+    "{\"total\":true}": false,
+    "{\"total\":\"42\"}": false,
+    "{\"total\":42.0}": false
+  },
+  "repetitions": 1,
+  "passed": true
+}

@@ -1,0 +1,26 @@
+{
+  "repo": "kujolang/dispatch",
+  "retrieved": "2026-10-19T22:34:58.488914+00:00",
+  "head": "71ca927c65598ecfe7c1816068e047cf50b915e0",
+  "releases": [
+    {
+      "tag_name": "v1.4.0",
+      "published_at": "2026-10-14T21:03:04Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/dispatch/releases/tag/v1.4.0",
+      "target_commitish": "main"
+    },
+    {
+      "tag_name": "v1.3.0",
+      "published_at": "2026-09-29T15:27:38Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/dispatch/releases/tag/v1.3.0",
+      "target_commitish": "main"
+    }
+  ],
+  "stable": {
+    "tag_name": "v1.4.0",
+    "published_at": "2026-10-14T21:03:04Z",
+    "html_url": "https://github.com/kujolang/dispatch/releases/tag/v1.4.0"
+  }
+}

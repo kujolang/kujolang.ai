@@ -1,0 +1,26 @@
+{
+  "repo": "kujolang/shipcheck",
+  "retrieved": "2026-10-19T22:34:57.439010+00:00",
+  "head": "ee4cfd052c0522eebedc0eead223cbb22490b357",
+  "releases": [
+    {
+      "tag_name": "v1.0.1",
+      "published_at": "2026-10-14T16:53:59Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/shipcheck/releases/tag/v1.0.1",
+      "target_commitish": "main"
+    },
+    {
+      "tag_name": "v1.0.0",
+      "published_at": "2026-08-08T07:02:07Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/shipcheck/releases/tag/v1.0.0",
+      "target_commitish": "main"
+    }
+  ],
+  "stable": {
+    "tag_name": "v1.0.1",
+    "published_at": "2026-10-14T16:53:59Z",
+    "html_url": "https://github.com/kujolang/shipcheck/releases/tag/v1.0.1"
+  }
+}

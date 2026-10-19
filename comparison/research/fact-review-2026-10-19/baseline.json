@@ -1,0 +1,46 @@
+{
+  "commit": "21b8e66b5c7f6b3a6e4f33447e0351162190810c",
+  "retrieved": "2026-10-19T22:36:33.961391+00:00",
+  "pages": [
+    {
+      "url": "https://kujolang.ai/compare/",
+      "sha256": "5643ebba84d0ad68569a7ee1db7a2e280b7b4ee71781360725d951d3519af7c0",
+      "bytes": 46721
+    },
+    {
+      "url": "https://kujolang.ai/compare/kujo-vs-bend/",
+      "sha256": "dbbf86ef3a8d3ebf39a35d75e4203b75727af38a419dd5743cd91b9cd1c951a6",
+      "bytes": 37914
+    },
+    {
+      "url": "https://kujolang.ai/compare/kujo-vs-baml/",
+      "sha256": "10adc282c8f548720309cb0d4d8d9f9dd4653c246f53a9ab2e9100bc55499121",
+      "bytes": 38603
+    },
+    {
+      "url": "https://kujolang.ai/compare/kujo-vs-zero/",
+      "sha256": "b0d0975dddf48b2d85f1a4a5a027c92ecd8c4f812d293b4759cdd9c85cc859c5",
+      "bytes": 37305
+    },
+    {
+      "url": "https://kujolang.ai/compare/ai-native-programming-languages/",
+      "sha256": "5ce061feec3380d92eb4b7ed1e6ad05c9cc0d6ee194090d8a53283bc7284da9f",
+      "bytes": 39234
+    },
+    {
+      "url": "https://kujolang.ai/compare/programming-languages-for-ai-agents/",
+      "sha256": "a1927f291dea2de6487c9c4cb68c2f06a6dc52a5fa82e2df2c1ab6c1efb82306",
+      "bytes": 37902
+    },
+    {
+      "url": "https://kujolang.ai/compare/ai-code-verification-tools/",
+      "sha256": "2974c631c7f40613f2f183ba4c806e3b31995fe4b4aea7ed7139025d6da56e5e",
+      "bytes": 38103
+    },
+    {
+      "url": "https://kujolang.ai/compare/verify-agent-workflows/",
+      "sha256": "9b39a9732424eeb50ba0a84bd0d930da6d1ad71c7981ba622966fd8c8dc9225a",
+      "bytes": 38936
+    }
+  ]
+}

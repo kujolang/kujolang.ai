@@ -1,0 +1,26 @@
+{
+  "repo": "kujolang/eval",
+  "retrieved": "2026-10-19T22:34:56.298896+00:00",
+  "head": "71e66dff780d6930bcbe093c046bf31aa26411df",
+  "releases": [
+    {
+      "tag_name": "v1.1.0",
+      "published_at": "2026-10-14T18:12:06Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/eval/releases/tag/v1.1.0",
+      "target_commitish": "main"
+    },
+    {
+      "tag_name": "v1.0.0",
+      "published_at": "2026-08-08T07:01:34Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/eval/releases/tag/v1.0.0",
+      "target_commitish": "main"
+    }
+  ],
+  "stable": {
+    "tag_name": "v1.1.0",
+    "published_at": "2026-10-14T18:12:06Z",
+    "html_url": "https://github.com/kujolang/eval/releases/tag/v1.1.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "repo": "bendlang/bend",
+  "retrieved": "2026-10-19T22:34:55.884736+00:00",
+  "head": "881cb2e5823260927380eb5c9c7129cbe9a1a42c",
+  "releases": [
+    {
+      "tag_name": "v2.0.37",
+      "published_at": "2026-10-13T10:13:41Z",
+      "prerelease": false,
+      "html_url": "https://github.com/bendlang/bend/releases/tag/v2.0.37",
+      "target_commitish": "4ff8545f19b09b7d2b8ca2303668100eac8efd66"
+    },
+    {
+      "tag_name": "v2.0.36",
+      "published_at": "2026-10-07T04:53:15Z",
+      "prerelease": false,
+      "html_url": "https://github.com/bendlang/bend/releases/tag/v2.0.36",
+      "target_commitish": "ae1101ca7d15364f9274fa6b1367d175884a7da7"
+    }
+  ],
+  "stable": {
+    "tag_name": "v2.0.37",
+    "published_at": "2026-10-13T10:13:41Z",
+    "html_url": "https://github.com/bendlang/bend/releases/tag/v2.0.37"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "repo": "kujolang/fence",
+  "retrieved": "2026-10-19T22:34:57.840881+00:00",
+  "head": "d3173049b5365af975624fddd48e943d39738c75",
+  "releases": [
+    {
+      "tag_name": "v1.1.0",
+      "published_at": "2026-10-14T18:13:27Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/fence/releases/tag/v1.1.0",
+      "target_commitish": "main"
+    },
+    {
+      "tag_name": "v1.0.0",
+      "published_at": "2026-08-08T06:59:26Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/fence/releases/tag/v1.0.0",
+      "target_commitish": "main"
+    }
+  ],
+  "stable": {
+    "tag_name": "v1.1.0",
+    "published_at": "2026-10-14T18:13:27Z",
+    "html_url": "https://github.com/kujolang/fence/releases/tag/v1.1.0"
+  }
+}

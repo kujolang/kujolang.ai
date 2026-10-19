@@ -1,0 +1,26 @@
+{
+  "repo": "kujolang/watchdog",
+  "retrieved": "2026-10-19T22:34:59.015300+00:00",
+  "head": "ad6fbc287c626539c1b3a69b4d3d31528b70edaa",
+  "releases": [
+    {
+      "tag_name": "v1.2.1",
+      "published_at": "2026-10-12T16:12:20Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/watchdog/releases/tag/v1.2.1",
+      "target_commitish": "main"
+    },
+    {
+      "tag_name": "v1.2.0",
+      "published_at": "2026-09-29T18:18:45Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/watchdog/releases/tag/v1.2.0",
+      "target_commitish": "fafea3abb594638e442127496ca6ac4c9bcd5390"
+    }
+  ],
+  "stable": {
+    "tag_name": "v1.2.1",
+    "published_at": "2026-10-12T16:12:20Z",
+    "html_url": "https://github.com/kujolang/watchdog/releases/tag/v1.2.1"
+  }
+}

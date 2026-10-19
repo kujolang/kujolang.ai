@@ -1,0 +1,26 @@
+{
+  "repo": "kujolang/workcell",
+  "retrieved": "2026-10-19T22:34:58.802719+00:00",
+  "head": "a276a92c6bac9279a8cb36ace9687ade34d5128f",
+  "releases": [
+    {
+      "tag_name": "v1.2.0",
+      "published_at": "2026-09-29T12:32:12Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/workcell/releases/tag/v1.2.0",
+      "target_commitish": "main"
+    },
+    {
+      "tag_name": "v1.1.0",
+      "published_at": "2026-09-04T20:29:42Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/workcell/releases/tag/v1.1.0",
+      "target_commitish": "main"
+    }
+  ],
+  "stable": {
+    "tag_name": "v1.2.0",
+    "published_at": "2026-09-29T12:32:12Z",
+    "html_url": "https://github.com/kujolang/workcell/releases/tag/v1.2.0"
+  }
+}

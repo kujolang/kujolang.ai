@@ -1,0 +1,26 @@
+{
+  "repo": "kujolang/kujo",
+  "retrieved": "2026-10-19T22:34:55.357115+00:00",
+  "head": "46670dc0954b6d36ac959b63c19107e07fb8ecd9",
+  "releases": [
+    {
+      "tag_name": "v1.8.2",
+      "published_at": "2026-10-19T19:34:42Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/kujo/releases/tag/v1.8.2",
+      "target_commitish": "main"
+    },
+    {
+      "tag_name": "v1.8.1",
+      "published_at": "2026-10-10T17:24:02Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/kujo/releases/tag/v1.8.1",
+      "target_commitish": "main"
+    }
+  ],
+  "stable": {
+    "tag_name": "v1.8.2",
+    "published_at": "2026-10-19T19:34:42Z",
+    "html_url": "https://github.com/kujolang/kujo/releases/tag/v1.8.2"
+  }
+}

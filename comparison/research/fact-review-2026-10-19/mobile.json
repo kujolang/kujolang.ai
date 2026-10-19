@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "",
+    "eyebrows": 0,
+    "font": "\"Departure Mono\", SFMono-Regular, \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+    "overflow": false,
+    "width": 360
+  },
+  {
+    "slug": "kujo-vs-bend",
+    "eyebrows": 0,
+    "font": "\"Departure Mono\", SFMono-Regular, \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+    "overflow": false,
+    "width": 360
+  },
+  {
+    "slug": "kujo-vs-baml",
+    "eyebrows": 0,
+    "font": "\"Departure Mono\", SFMono-Regular, \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+    "overflow": false,
+    "width": 360
+  },
+  {
+    "slug": "kujo-vs-zero",
+    "eyebrows": 0,
+    "font": "\"Departure Mono\", SFMono-Regular, \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+    "overflow": false,
+    "width": 360
+  },
+  {
+    "slug": "ai-native-programming-languages",
+    "eyebrows": 0,
+    "font": "\"Departure Mono\", SFMono-Regular, \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+    "overflow": false,
+    "width": 360
+  },
+  {
+    "slug": "programming-languages-for-ai-agents",
+    "eyebrows": 0,
+    "font": "\"Departure Mono\", SFMono-Regular, \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+    "overflow": false,
+    "width": 360
+  },
+  {
+    "slug": "ai-code-verification-tools",
+    "eyebrows": 0,
+    "font": "\"Departure Mono\", SFMono-Regular, \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+    "overflow": false,
+    "width": 360
+  },
+  {
+    "slug": "verify-agent-workflows",
+    "eyebrows": 0,
+    "font": "\"Departure Mono\", SFMono-Regular, \"Cascadia Code\", \"Roboto Mono\", \"Liberation Mono\", Menlo, Consolas, monospace",
+    "overflow": false,
+    "width": 360
+  }
+]

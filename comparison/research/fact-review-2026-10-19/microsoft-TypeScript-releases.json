@@ -1,0 +1,26 @@
+{
+  "repo": "microsoft/TypeScript",
+  "retrieved": "2026-10-19T22:34:57.569696+00:00",
+  "head": "d7d39da5c42779c4b7c9d9b997a86fef20808973",
+  "releases": [
+    {
+      "tag_name": "vscode-typescript/v1.0.1",
+      "published_at": "2026-09-30T19:10:03Z",
+      "prerelease": false,
+      "html_url": "https://github.com/microsoft/TypeScript/releases/tag/vscode-typescript/v1.0.1",
+      "target_commitish": "main"
+    },
+    {
+      "tag_name": "v7.0.2",
+      "published_at": "2026-08-20T18:09:49Z",
+      "prerelease": false,
+      "html_url": "https://github.com/microsoft/TypeScript/releases/tag/v7.0.2",
+      "target_commitish": "main"
+    }
+  ],
+  "stable": {
+    "tag_name": "v7.0.2",
+    "published_at": "2026-08-20T18:09:49Z",
+    "html_url": "https://github.com/microsoft/TypeScript/releases/tag/v7.0.2"
+  }
+}

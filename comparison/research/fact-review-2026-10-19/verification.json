@@ -1,0 +1,21 @@
+{
+  "status": "local checks passed; deployment pending",
+  "contentCommit": "042aef2",
+  "nodeTests": 22,
+  "pythonTests": 4,
+  "generation": "7 records / 23 projections match",
+  "focusedBuildSeconds": 59.066640081,
+  "comparisonGraph": {
+    "routes": 8,
+    "internalLinksChecked": 435,
+    "errors": [],
+    "passed": true
+  },
+  "graphCaveat": "Fresh comparison output overlaid on prior full-site artifact; full fresh build will run in release CI. Direct focused-output full-site checks initially failed because unrelated routes are absent.",
+  "social": "255 cards verified on complete graph; eight-card Howl manifest valid; no changed social claim",
+  "siteContract": "passed",
+  "generatedHTML": "256 files passed",
+  "mobile": "8 routes, 360px content width within 375px frame; no overflow; Departure Mono; zero hero eyebrows",
+  "exercise": "positive and all negative controls passed",
+  "competitorExecution": "not performed"
+}

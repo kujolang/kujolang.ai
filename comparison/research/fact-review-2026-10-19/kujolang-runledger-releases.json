@@ -1,0 +1,26 @@
+{
+  "repo": "kujolang/runledger",
+  "retrieved": "2026-10-19T22:34:56.781321+00:00",
+  "head": "334ddd4d33c8cb2612c8edab971ee69170824133",
+  "releases": [
+    {
+      "tag_name": "v1.2.0",
+      "published_at": "2026-09-28T22:55:44Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/runledger/releases/tag/v1.2.0",
+      "target_commitish": "88fb37c81567bb94e1e341037514fe37cbafa76f"
+    },
+    {
+      "tag_name": "v1.1.0",
+      "published_at": "2026-08-31T00:49:32Z",
+      "prerelease": false,
+      "html_url": "https://github.com/kujolang/runledger/releases/tag/v1.1.0",
+      "target_commitish": "main"
+    }
+  ],
+  "stable": {
+    "tag_name": "v1.2.0",
+    "published_at": "2026-09-28T22:55:44Z",
+    "html_url": "https://github.com/kujolang/runledger/releases/tag/v1.2.0"
+  }
+}

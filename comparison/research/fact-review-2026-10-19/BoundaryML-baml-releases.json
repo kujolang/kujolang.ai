@@ -1,0 +1,26 @@
+{
+  "repo": "BoundaryML/baml",
+  "retrieved": "2026-10-19T22:35:06.755555+00:00",
+  "head": "648ad5ed10f543c129b51789c7d02e29b64f06f7",
+  "releases": [
+    {
+      "tag_name": "baml-language-0.22.3-nightly.20261018.a",
+      "published_at": "2026-10-19T08:24:25Z",
+      "prerelease": false,
+      "html_url": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.3-nightly.20261018.a",
+      "target_commitish": "481d074234fce9df31ee0ab0da5f29c5d5fe1e4d"
+    },
+    {
+      "tag_name": "baml-language-0.22.3-nightly.20261016.a",
+      "published_at": "2026-10-17T08:13:24Z",
+      "prerelease": false,
+      "html_url": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.3-nightly.20261016.a",
+      "target_commitish": "13e20f5771467e61a1d8b257f4434b9379d80f7d"
+    }
+  ],
+  "stable": {
+    "tag_name": "baml-language-0.22.2",
+    "published_at": "2026-10-13T06:48:36Z",
+    "html_url": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.2"
+  }
+}
