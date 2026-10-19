@@ -166,5 +166,77 @@
     "status": 200,
     "sha256": "81af20b998b6806fdd2ef524fa68cea7c58ad55bc0f7b728ae65f7fe71b7dc4d",
     "retrieved": "2026-10-19T22:34:43.334068+00:00"
+  },
+  {
+    "id": "kujo-tag",
+    "url": "https://api.github.com/repos/kujolang/kujo/commits/v1.8.2",
+    "status": 200,
+    "sha256": "f3c9d586b3324598f77a1ed93737794ce76b4d096fc3de0809385db8768155fd",
+    "retrieved": "2026-10-19",
+    "review": "Supplementary release, current documentation or stable-source inspection"
+  },
+  {
+    "id": "bend-tag",
+    "url": "https://api.github.com/repos/bendlang/bend/commits/v2.0.37",
+    "status": 200,
+    "sha256": "d5de4d32387c6d6470406fc8fc5e8e17f8430b2efeb075a45d9ecb0817990923",
+    "retrieved": "2026-10-19",
+    "review": "Supplementary release, current documentation or stable-source inspection"
+  },
+  {
+    "id": "baml-stable",
+    "url": "https://api.github.com/repos/BoundaryML/baml/releases/tags/baml-language-0.22.2",
+    "status": 200,
+    "sha256": "f84619d92b0587e0393a5845c8a8fe523e576d75e4678997a5077248002173ff",
+    "retrieved": "2026-10-19",
+    "review": "Supplementary release, current documentation or stable-source inspection"
+  },
+  {
+    "id": "bend-current",
+    "url": "https://raw.githubusercontent.com/bendlang/bend/881cb2e5823260927380eb5c9c7129cbe9a1a42c/guide/GUIDE.md",
+    "status": 200,
+    "sha256": "5a280b67371eb37362a372af6a3faf54c3f5d0542329d2f4b3984671ab80d4fb",
+    "retrieved": "2026-10-19",
+    "review": "Supplementary release, current documentation or stable-source inspection"
+  },
+  {
+    "id": "sdk-current",
+    "url": "https://raw.githubusercontent.com/kujolang/agents-sdk/6c4a54e74855c605eea67253f6808b16b8c63086/README.md",
+    "status": 200,
+    "sha256": "243e2190e64743e94f64249a710ecf3ecd7a9cdd35bb53e357bab3bf4ba84d9d",
+    "retrieved": "2026-10-19",
+    "review": "Supplementary release, current documentation or stable-source inspection"
+  },
+  {
+    "id": "python-release",
+    "url": "https://www.python.org/downloads/release/python-3150/",
+    "status": 200,
+    "sha256": "98cbd7f5ee4f14b4af413666b20d404d5862ae91940bc1e704b9f51877609855",
+    "retrieved": "2026-10-19",
+    "review": "Supplementary release, current documentation or stable-source inspection"
+  },
+  {
+    "id": "workcell-readme",
+    "url": "https://raw.githubusercontent.com/kujolang/workcell/a276a92c6bac9279a8cb36ace9687ade34d5128f/README.md",
+    "status": 200,
+    "sha256": "043733907551241eb1e030ec5ef09094fe95b4ce93be1e8bab97faff03bf9d32",
+    "retrieved": "2026-10-19",
+    "review": "Supplementary release, current documentation or stable-source inspection"
+  },
+  {
+    "id": "baml-stable-check",
+    "url": "https://raw.githubusercontent.com/BoundaryML/baml/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/check_command.rs",
+    "status": 200,
+    "sha256": "2a840592ff17906518ba6bd8a047c4657d6e07e2f19651bfd9437b2f6dfc3ca0",
+    "retrieved": "2026-10-19",
+    "review": "Supplementary release, current documentation or stable-source inspection"
+  },
+  {
+    "id": "baml-stable-test",
+    "url": "https://raw.githubusercontent.com/BoundaryML/baml/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/test_command.rs",
+    "status": 200,
+    "sha256": "dec36776d50b17d4c0ec15d9daf7f75a59a7c5b2c3aeab0958b773b16da585cc",
+    "retrieved": "2026-10-19",
+    "review": "Supplementary release, current documentation or stable-source inspection"
   }
 ]

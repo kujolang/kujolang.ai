@@ -58,10 +58,16 @@ No winner was assigned. Bend's proof model, BAML's typed AI/application integrat
 
 ## Search, presentation and maintenance
 
-This is a factual follow-up to `seo-audit/comparison-quality/2026-10-19`, not a new ranking audit. Preserve canonicals, metadata, visible-content schema parity, Markdown parity, Departure Mono headings, the eyebrow-free heroes and the header without Compare. Howl cards carry no affected version/type-enforcement claims, so their copy and JPEGs do not require replacement. Validate the existing cards and output contracts after regeneration.
+This is a factual follow-up to `seo-audit/comparison-quality/2026-10-19`, not a new ranking audit. Preserve canonicals, metadata, visible-content schema parity, Markdown parity, Departure Mono headings, the eyebrow-free heroes and the header without Compare. Howl cards carry no affected version/type-enforcement claims, so their copy and JPEGs do not require replacement. All eight Howl show/caption/X-caption/render checks passed; all SVG hashes match the prior render.
 
 Rankings, indexing, traffic, AI citations, field Core Web Vitals and search-console outcomes: **NOT AVAILABLE — DATA ACCESS REQUIRED**. Crawl access is not evidence of indexing. Official guidance remains [Google AI features](https://developers.google.com/search/docs/appearance/ai-features); no special AI ranking guarantee is added.
 
 Recheck on language/tool releases, documentation-generation changes, new bridges or proof-boundary changes; otherwise review quarterly. Watch the official release URLs in `version-matrix.csv`. Resolve tags to commits, reject nightly/preview/editor-extension tags when selecting a stable language, record source and runtime separately, rerun negative controls, review every affected catalog reference, regenerate, run contracts and verify live output. Do not automatically refresh review dates or create schedules.
 
 Verification and publication receipts are recorded in `verification.json` after completion.
+
+## Completed validation and release
+
+Content commit `042aef2`; research/release commit `503efec`. [Production workflow 39336691742](https://github.com/kujolang/kujolang.ai/actions/runs/39336691742) passed the fresh pinned build and deployment. Local checks passed 22 Node tests, 4 Python tests, 23 generated projections, 435 internal links, 255 social-card routes and 256 HTML files on the complete graph. All eight mobile views had no horizontal overflow and retained Departure Mono and eyebrow-free heroes. Live verification at 2026-10-19T22:51:04.121673+00:00 checked eight comparison routes and 48 unique URLs with no errors, including exact Markdown parity and presence of the corrected claims. Browser verification confirmed the BAML stable/nightly distinction.
+
+The unresolved runtime-contract finding was retained in SignalBox: Capture `cap_243257f1-b19f-4ecf-be93-1c8679d77a6a`, Signal `sig_90ac7fa0-4dfa-4839-8a84-70511ba0d735`, project `kujo`. Exact-ID and concept retrieval passed. No duplicate was found; routine completed work and existing Zero uncertainty were not captured.

@@ -1,0 +1,274 @@
+[
+  {
+    "id": "compare",
+    "svgSha256": "b7f75d995a372063531bc694c7731b3a9f94fa1a1c556f962184b21554090c46",
+    "checks": [
+      {
+        "command": [
+          "show",
+          "compare"
+        ],
+        "exit": 0,
+        "output": "id:       compare\ntitle:    Compare languages.\ntagline:  Compare languages, their checks and the evidence behind each claim.\nfile:     social-card.txt\nlanguage: kujo\n\n--- code preview ---\nKujolang.ai social card source. The social variant renders manifest metadata and embedded local assets.\n\n"
+      },
+      {
+        "command": [
+          "caption",
+          "compare"
+        ],
+        "exit": 0,
+        "output": "Compare languages.\n\nCompare languages, their checks and the evidence behind each claim.\n\nKujo: Programming language for AI-native software\n"
+      },
+      {
+        "command": [
+          "caption",
+          "compare",
+          "--platform",
+          "x"
+        ],
+        "exit": 0,
+        "output": "Compare languages.\n\nCompare languages, their checks and the evidence behind each claim.\n\nKujo: Programming language for AI-native software\n"
+      }
+    ],
+    "priorRenderPresent": true,
+    "matchesPriorRender": true
+  },
+  {
+    "id": "kujo-vs-bend",
+    "svgSha256": "4ae5e7874bc544a65322de15b8ee392beebb421e80776df7ade78eb91d5d013f",
+    "checks": [
+      {
+        "command": [
+          "show",
+          "kujo-vs-bend"
+        ],
+        "exit": 0,
+        "output": "id:       kujo-vs-bend\ntitle:    Kujo vs Bend\ntagline:  Compare workflow evidence with language-level proofs.\nfile:     social-card.txt\nlanguage: kujo\n\n--- code preview ---\nKujolang.ai social card source. The social variant renders manifest metadata and embedded local assets.\n\n"
+      },
+      {
+        "command": [
+          "caption",
+          "kujo-vs-bend"
+        ],
+        "exit": 0,
+        "output": "Kujo vs Bend.\n\nCompare workflow evidence with language-level proofs.\n\nKujo: Programming language for AI-native software\n"
+      },
+      {
+        "command": [
+          "caption",
+          "kujo-vs-bend",
+          "--platform",
+          "x"
+        ],
+        "exit": 0,
+        "output": "Kujo vs Bend.\n\nCompare workflow evidence with language-level proofs.\n\nKujo: Programming language for AI-native software\n"
+      }
+    ],
+    "priorRenderPresent": true,
+    "matchesPriorRender": true
+  },
+  {
+    "id": "kujo-vs-baml",
+    "svgSha256": "458a734cc6cbfd050730e4a8ca5a153fdc03f4674e0465cf45057ebfeba4c10f",
+    "checks": [
+      {
+        "command": [
+          "show",
+          "kujo-vs-baml"
+        ],
+        "exit": 0,
+        "output": "id:       kujo-vs-baml\ntitle:    Kujo vs BAML\ntagline:  Compare typed AI functions and agent development workflows.\nfile:     social-card.txt\nlanguage: kujo\n\n--- code preview ---\nKujolang.ai social card source. The social variant renders manifest metadata and embedded local assets.\n\n"
+      },
+      {
+        "command": [
+          "caption",
+          "kujo-vs-baml"
+        ],
+        "exit": 0,
+        "output": "Kujo vs BAML.\n\nCompare typed AI functions and agent development workflows.\n\nKujo: Programming language for AI-native software\n"
+      },
+      {
+        "command": [
+          "caption",
+          "kujo-vs-baml",
+          "--platform",
+          "x"
+        ],
+        "exit": 0,
+        "output": "Kujo vs BAML.\n\nCompare typed AI functions and agent development workflows.\n\nKujo: Programming language for AI-native software\n"
+      }
+    ],
+    "priorRenderPresent": true,
+    "matchesPriorRender": true
+  },
+  {
+    "id": "kujo-vs-zero",
+    "svgSha256": "af60bc5705ba25abcdd3da9f409d42f49fe169ba71c83756500dcbccbf36ad1c",
+    "checks": [
+      {
+        "command": [
+          "show",
+          "kujo-vs-zero"
+        ],
+        "exit": 0,
+        "output": "id:       kujo-vs-zero\ntitle:    Kujo vs Zero\ntagline:  Explore workflow checks and Zero\u2019s documented systems semantics.\nfile:     social-card.txt\nlanguage: kujo\n\n--- code preview ---\nKujolang.ai social card source. The social variant renders manifest metadata and embedded local assets.\n\n"
+      },
+      {
+        "command": [
+          "caption",
+          "kujo-vs-zero"
+        ],
+        "exit": 0,
+        "output": "Kujo vs Zero.\n\nExplore workflow checks and Zero\u2019s documented systems semantics.\n\nKujo: Programming language for AI-native software\n"
+      },
+      {
+        "command": [
+          "caption",
+          "kujo-vs-zero",
+          "--platform",
+          "x"
+        ],
+        "exit": 0,
+        "output": "Kujo vs Zero.\n\nExplore workflow checks and Zero\u2019s documented systems semantics.\n\nKujo: Programming language for AI-native software\n"
+      }
+    ],
+    "priorRenderPresent": true,
+    "matchesPriorRender": true
+  },
+  {
+    "id": "ai-native-programming-languages",
+    "svgSha256": "34a67660c653d3c128192f3f042585516594d6c54e2669bc7185dde48838fdad",
+    "checks": [
+      {
+        "command": [
+          "show",
+          "ai-native-programming-languages"
+        ],
+        "exit": 0,
+        "output": "id:       ai-native-programming-languages\ntitle:    AI-native programming languages\ntagline:  Compare language capabilities, limits and evidence.\nfile:     social-card.txt\nlanguage: kujo\n\n--- code preview ---\nKujolang.ai social card source. The social variant renders manifest metadata and embedded local assets.\n\n"
+      },
+      {
+        "command": [
+          "caption",
+          "ai-native-programming-languages"
+        ],
+        "exit": 0,
+        "output": "AI-native programming languages.\n\nCompare language capabilities, limits and evidence.\n\nKujo: Programming language for AI-native software\n"
+      },
+      {
+        "command": [
+          "caption",
+          "ai-native-programming-languages",
+          "--platform",
+          "x"
+        ],
+        "exit": 0,
+        "output": "AI-native programming languages.\n\nCompare language capabilities, limits and evidence.\n\nKujo: Programming language for AI-native software\n"
+      }
+    ],
+    "priorRenderPresent": true,
+    "matchesPriorRender": true
+  },
+  {
+    "id": "programming-languages-for-ai-agents",
+    "svgSha256": "8376780609a0ee02eb7b70680a91f426b4f83164f26f7b12d102f0a1ebd89dd4",
+    "checks": [
+      {
+        "command": [
+          "show",
+          "programming-languages-for-ai-agents"
+        ],
+        "exit": 0,
+        "output": "id:       programming-languages-for-ai-agents\ntitle:    Languages for AI agents\ntagline:  Choose how your agent runs, calls tools and handles failure.\nfile:     social-card.txt\nlanguage: kujo\n\n--- code preview ---\nKujolang.ai social card source. The social variant renders manifest metadata and embedded local assets.\n\n"
+      },
+      {
+        "command": [
+          "caption",
+          "programming-languages-for-ai-agents"
+        ],
+        "exit": 0,
+        "output": "Languages for AI agents.\n\nChoose how your agent runs, calls tools and handles failure.\n\nKujo: Programming language for AI-native software\n"
+      },
+      {
+        "command": [
+          "caption",
+          "programming-languages-for-ai-agents",
+          "--platform",
+          "x"
+        ],
+        "exit": 0,
+        "output": "Languages for AI agents.\n\nChoose how your agent runs, calls tools and handles failure.\n\nKujo: Programming language for AI-native software\n"
+      }
+    ],
+    "priorRenderPresent": true,
+    "matchesPriorRender": true
+  },
+  {
+    "id": "ai-code-verification-tools",
+    "svgSha256": "9bfdfa36ac9f45e5420868fcdb4d9a0f40d7735df4dc298598a81044ede8904b",
+    "checks": [
+      {
+        "command": [
+          "show",
+          "ai-code-verification-tools"
+        ],
+        "exit": 0,
+        "output": "id:       ai-code-verification-tools\ntitle:    AI code verification tools\ntagline:  Understand what types, tests, proofs and run records can establish.\nfile:     social-card.txt\nlanguage: kujo\n\n--- code preview ---\nKujolang.ai social card source. The social variant renders manifest metadata and embedded local assets.\n\n"
+      },
+      {
+        "command": [
+          "caption",
+          "ai-code-verification-tools"
+        ],
+        "exit": 0,
+        "output": "AI code verification tools.\n\nUnderstand what types, tests, proofs and run records can establish.\n\nKujo: Programming language for AI-native software\n"
+      },
+      {
+        "command": [
+          "caption",
+          "ai-code-verification-tools",
+          "--platform",
+          "x"
+        ],
+        "exit": 0,
+        "output": "AI code verification tools.\n\nUnderstand what types, tests, proofs and run records can establish.\n\nKujo: Programming language for AI-native software\n"
+      }
+    ],
+    "priorRenderPresent": true,
+    "matchesPriorRender": true
+  },
+  {
+    "id": "verify-agent-workflows",
+    "svgSha256": "9225526d375e4ac8b03805aacc8b719a6c7cbfaf4ad696369f858b76cf3df631",
+    "checks": [
+      {
+        "command": [
+          "show",
+          "verify-agent-workflows"
+        ],
+        "exit": 0,
+        "output": "id:       verify-agent-workflows\ntitle:    Verify agent workflows\ntagline:  Check the output against the task and keep evidence you can reproduce.\nfile:     social-card.txt\nlanguage: kujo\n\n--- code preview ---\nKujolang.ai social card source. The social variant renders manifest metadata and embedded local assets.\n\n"
+      },
+      {
+        "command": [
+          "caption",
+          "verify-agent-workflows"
+        ],
+        "exit": 0,
+        "output": "Verify agent workflows.\n\nCheck the output against the task and keep evidence you can reproduce.\n\nKujo: Programming language for AI-native software\n"
+      },
+      {
+        "command": [
+          "caption",
+          "verify-agent-workflows",
+          "--platform",
+          "x"
+        ],
+        "exit": 0,
+        "output": "Verify agent workflows.\n\nCheck the output against the task and keep evidence you can reproduce.\n\nKujo: Programming language for AI-native software\n"
+      }
+    ],
+    "priorRenderPresent": true,
+    "matchesPriorRender": true
+  }
+]

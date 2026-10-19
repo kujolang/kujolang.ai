@@ -1,0 +1,4 @@
+func wrong() -> int {
+    return "wrong"
+}
+print(wrong())

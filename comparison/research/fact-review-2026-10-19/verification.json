@@ -1,5 +1,5 @@
 {
-  "status": "local checks passed; deployment pending",
+  "status": "passed; deployed and independently verified live",
   "contentCommit": "042aef2",
   "nodeTests": 22,
   "pythonTests": 4,
@@ -17,5 +17,433 @@
   "generatedHTML": "256 files passed",
   "mobile": "8 routes, 360px content width within 375px frame; no overflow; Departure Mono; zero hero eyebrows",
   "exercise": "positive and all negative controls passed",
-  "competitorExecution": "not performed"
+  "competitorExecution": "not performed",
+  "deploymentCommit": "503efec0d10088db842a13d0c1d9440d4592dc3f",
+  "workflowRun": "https://github.com/kujolang/kujolang.ai/actions/runs/39336691742",
+  "fullBuild": "Fresh pinned Kujo 1.8.2 build, Node tests, responsive images, site/HTML/comparison contracts and GitHub Pages deployment passed",
+  "live": {
+    "verifiedAtUTC": "2026-10-19T22:51:04.121673+00:00",
+    "deploymentCommit": "503efec0d10088db842a13d0c1d9440d4592dc3f",
+    "workflowRun": "https://github.com/kujolang/kujolang.ai/actions/runs/39336691742",
+    "origin": "https://kujolang.ai",
+    "comparisonRoutes": 8,
+    "uniqueURLsChecked": 48,
+    "errors": [],
+    "passed": true,
+    "receipts": [
+      {
+        "path": "/compare/",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/"
+      },
+      {
+        "path": "/compare/kujo-vs-bend/",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/kujo-vs-bend/"
+      },
+      {
+        "path": "/compare/kujo-vs-baml/",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/kujo-vs-baml/"
+      },
+      {
+        "path": "/compare/kujo-vs-zero/",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/kujo-vs-zero/"
+      },
+      {
+        "path": "/compare/ai-native-programming-languages/",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/ai-native-programming-languages/"
+      },
+      {
+        "path": "/compare/programming-languages-for-ai-agents/",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/programming-languages-for-ai-agents/"
+      },
+      {
+        "path": "/compare/ai-code-verification-tools/",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/ai-code-verification-tools/"
+      },
+      {
+        "path": "/compare/verify-agent-workflows/",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/verify-agent-workflows/"
+      },
+      {
+        "path": "/sitemap.xml",
+        "status": 200,
+        "url": "https://kujolang.ai/sitemap.xml"
+      },
+      {
+        "path": "/llms.txt",
+        "status": 200,
+        "url": "https://kujolang.ai/llms.txt"
+      },
+      {
+        "path": "/robots.txt",
+        "status": 200,
+        "url": "https://kujolang.ai/robots.txt"
+      },
+      {
+        "path": "/",
+        "status": 200,
+        "url": "https://kujolang.ai/"
+      },
+      {
+        "path": "/ethos/",
+        "status": 200,
+        "url": "https://kujolang.ai/ethos/"
+      },
+      {
+        "path": "/ecosystem/spec/",
+        "status": 200,
+        "url": "https://kujolang.ai/ecosystem/spec/"
+      },
+      {
+        "path": "/ecosystem/runledger/",
+        "status": 200,
+        "url": "https://kujolang.ai/ecosystem/runledger/"
+      },
+      {
+        "path": "/compare/text/kujo-vs-bend.md",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/text/kujo-vs-bend.md"
+      },
+      {
+        "path": "/compare/text/kujo-vs-baml.md",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/text/kujo-vs-baml.md"
+      },
+      {
+        "path": "/compare/text/kujo-vs-zero.md",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/text/kujo-vs-zero.md"
+      },
+      {
+        "path": "/compare/text/ai-native-programming-languages.md",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/text/ai-native-programming-languages.md"
+      },
+      {
+        "path": "/compare/text/programming-languages-for-ai-agents.md",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/text/programming-languages-for-ai-agents.md"
+      },
+      {
+        "path": "/compare/text/ai-code-verification-tools.md",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/text/ai-code-verification-tools.md"
+      },
+      {
+        "path": "/compare/text/verify-agent-workflows.md",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/text/verify-agent-workflows.md"
+      },
+      {
+        "path": "/compare/text/overview.md",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/text/overview.md"
+      },
+      {
+        "path": "/compare/editorial-policy.md",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/editorial-policy.md"
+      },
+      {
+        "path": "/compare/evidence/README.md",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/evidence/README.md"
+      },
+      {
+        "path": "/compare/evidence/produce.kujo",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/evidence/produce.kujo"
+      },
+      {
+        "path": "/compare/evidence/verify.py",
+        "status": 200,
+        "url": "https://kujolang.ai/compare/evidence/verify.py"
+      },
+      {
+        "path": "/compare/",
+        "checks": {
+          "status": true,
+          "canonical": true,
+          "oneH1": true,
+          "sitemap": true,
+          "description": true,
+          "ogURL": true,
+          "breadcrumbSchema": true,
+          "indexable": true,
+          "noUnexpandedTemplate": true,
+          "headerCompareRemoved": true,
+          "sixDimensionMatrix": true,
+          "fourProfiles": true,
+          "threeTechnicalBriefs": true
+        }
+      },
+      {
+        "path": "/compare/kujo-vs-bend/",
+        "checks": {
+          "status": true,
+          "canonical": true,
+          "oneH1": true,
+          "sitemap": true,
+          "description": true,
+          "ogURL": true,
+          "breadcrumbSchema": true,
+          "indexable": true,
+          "noUnexpandedTemplate": true,
+          "headerCompareRemoved": true,
+          "descriptionMatchesSource": true,
+          "llmsIndex": true,
+          "semanticTables": true,
+          "deepDive": true,
+          "evaluationPlan": true,
+          "currentRuntime": true,
+          "markdownMatchesSource": true
+        }
+      },
+      {
+        "path": "/compare/kujo-vs-baml/",
+        "checks": {
+          "status": true,
+          "canonical": true,
+          "oneH1": true,
+          "sitemap": true,
+          "description": true,
+          "ogURL": true,
+          "breadcrumbSchema": true,
+          "indexable": true,
+          "noUnexpandedTemplate": true,
+          "headerCompareRemoved": true,
+          "descriptionMatchesSource": true,
+          "llmsIndex": true,
+          "semanticTables": true,
+          "deepDive": true,
+          "evaluationPlan": true,
+          "currentRuntime": true,
+          "markdownMatchesSource": true
+        }
+      },
+      {
+        "path": "/compare/kujo-vs-zero/",
+        "checks": {
+          "status": true,
+          "canonical": true,
+          "oneH1": true,
+          "sitemap": true,
+          "description": true,
+          "ogURL": true,
+          "breadcrumbSchema": true,
+          "indexable": true,
+          "noUnexpandedTemplate": true,
+          "headerCompareRemoved": true,
+          "descriptionMatchesSource": true,
+          "llmsIndex": true,
+          "semanticTables": true,
+          "deepDive": true,
+          "evaluationPlan": true,
+          "currentRuntime": true,
+          "markdownMatchesSource": true
+        }
+      },
+      {
+        "path": "/compare/ai-native-programming-languages/",
+        "checks": {
+          "status": true,
+          "canonical": true,
+          "oneH1": true,
+          "sitemap": true,
+          "description": true,
+          "ogURL": true,
+          "breadcrumbSchema": true,
+          "indexable": true,
+          "noUnexpandedTemplate": true,
+          "headerCompareRemoved": true,
+          "descriptionMatchesSource": true,
+          "llmsIndex": true,
+          "guideTables": true,
+          "decisionLenses": true,
+          "guideSteps": true,
+          "guideTitle": true,
+          "markdownMatchesSource": true
+        }
+      },
+      {
+        "path": "/compare/programming-languages-for-ai-agents/",
+        "checks": {
+          "status": true,
+          "canonical": true,
+          "oneH1": true,
+          "sitemap": true,
+          "description": true,
+          "ogURL": true,
+          "breadcrumbSchema": true,
+          "indexable": true,
+          "noUnexpandedTemplate": true,
+          "headerCompareRemoved": true,
+          "descriptionMatchesSource": true,
+          "llmsIndex": true,
+          "guideTables": true,
+          "decisionLenses": true,
+          "guideSteps": true,
+          "guideTitle": true,
+          "markdownMatchesSource": true
+        }
+      },
+      {
+        "path": "/compare/ai-code-verification-tools/",
+        "checks": {
+          "status": true,
+          "canonical": true,
+          "oneH1": true,
+          "sitemap": true,
+          "description": true,
+          "ogURL": true,
+          "breadcrumbSchema": true,
+          "indexable": true,
+          "noUnexpandedTemplate": true,
+          "headerCompareRemoved": true,
+          "descriptionMatchesSource": true,
+          "llmsIndex": true,
+          "guideTables": true,
+          "decisionLenses": true,
+          "guideSteps": true,
+          "guideTitle": true,
+          "markdownMatchesSource": true
+        }
+      },
+      {
+        "path": "/compare/verify-agent-workflows/",
+        "checks": {
+          "status": true,
+          "canonical": true,
+          "oneH1": true,
+          "sitemap": true,
+          "description": true,
+          "ogURL": true,
+          "breadcrumbSchema": true,
+          "indexable": true,
+          "noUnexpandedTemplate": true,
+          "headerCompareRemoved": true,
+          "descriptionMatchesSource": true,
+          "llmsIndex": true,
+          "guideTables": true,
+          "decisionLenses": true,
+          "guideSteps": true,
+          "guideTitle": true,
+          "markdownMatchesSource": true
+        }
+      },
+      {
+        "path": "/assets/images/social/ai-code-verification-tools.jpg",
+        "status": 200,
+        "url": "https://kujolang.ai/assets/images/social/ai-code-verification-tools.jpg"
+      },
+      {
+        "path": "/assets/images/social/ai-native-programming-languages.jpg",
+        "status": 200,
+        "url": "https://kujolang.ai/assets/images/social/ai-native-programming-languages.jpg"
+      },
+      {
+        "path": "/assets/images/social/compare.jpg",
+        "status": 200,
+        "url": "https://kujolang.ai/assets/images/social/compare.jpg"
+      },
+      {
+        "path": "/assets/images/social/kujo-vs-baml.jpg",
+        "status": 200,
+        "url": "https://kujolang.ai/assets/images/social/kujo-vs-baml.jpg"
+      },
+      {
+        "path": "/assets/images/social/kujo-vs-bend.jpg",
+        "status": 200,
+        "url": "https://kujolang.ai/assets/images/social/kujo-vs-bend.jpg"
+      },
+      {
+        "path": "/assets/images/social/kujo-vs-zero.jpg",
+        "status": 200,
+        "url": "https://kujolang.ai/assets/images/social/kujo-vs-zero.jpg"
+      },
+      {
+        "path": "/assets/images/social/programming-languages-for-ai-agents.jpg",
+        "status": 200,
+        "url": "https://kujolang.ai/assets/images/social/programming-languages-for-ai-agents.jpg"
+      },
+      {
+        "path": "/assets/images/social/verify-agent-workflows.jpg",
+        "status": 200,
+        "url": "https://kujolang.ai/assets/images/social/verify-agent-workflows.jpg"
+      },
+      {
+        "path": "/assets/prompts/kujo-agent-onboarding.txt",
+        "status": 200,
+        "url": "https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt"
+      },
+      {
+        "path": "/contact/",
+        "status": 200,
+        "url": "https://kujolang.ai/contact/"
+      },
+      {
+        "path": "/ecosystem/",
+        "status": 200,
+        "url": "https://kujolang.ai/ecosystem/"
+      },
+      {
+        "path": "/ecosystem/eval/",
+        "status": 200,
+        "url": "https://kujolang.ai/ecosystem/eval/"
+      },
+      {
+        "path": "/ecosystem/primitives/",
+        "status": 200,
+        "url": "https://kujolang.ai/ecosystem/primitives/"
+      },
+      {
+        "path": "/ecosystem/shipcheck/",
+        "status": 200,
+        "url": "https://kujolang.ai/ecosystem/shipcheck/"
+      },
+      {
+        "path": "/ecosystem/showcase/",
+        "status": 200,
+        "url": "https://kujolang.ai/ecosystem/showcase/"
+      },
+      {
+        "path": "/ecosystem/skills/",
+        "status": 200,
+        "url": "https://kujolang.ai/ecosystem/skills/"
+      },
+      {
+        "path": "/ecosystem/tooling/",
+        "status": 200,
+        "url": "https://kujolang.ai/ecosystem/tooling/"
+      },
+      {
+        "path": "/ecosystem/workcell/",
+        "status": 200,
+        "url": "https://kujolang.ai/ecosystem/workcell/"
+      },
+      {
+        "path": "/ecosystem/workflows/",
+        "status": 200,
+        "url": "https://kujolang.ai/ecosystem/workflows/"
+      },
+      {
+        "path": "/providers/",
+        "status": 200,
+        "url": "https://kujolang.ai/providers/"
+      },
+      {
+        "path": "/writing/",
+        "status": 200,
+        "url": "https://kujolang.ai/writing/"
+      }
+    ]
+  },
+  "howl": "All eight show/caption/X-caption/render checks passed; SVG hashes match prior render"
 }

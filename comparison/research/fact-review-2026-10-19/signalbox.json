@@ -1,0 +1,9 @@
+{
+  "project": "kujo",
+  "captureId": "cap_243257f1-b19f-4ecf-be93-1c8679d77a6a",
+  "signalId": "sig_90ac7fa0-4dfa-4839-8a84-70511ba0d735",
+  "finding": "Review Kujo check type-enforcement contract",
+  "deduplication": "No match for exact release commit or check/type mismatch concept",
+  "retrieval": "Exact capture, exact signal and type-enforcement search passed",
+  "skipped": "Routine verification/completed content corrections not captured; existing Zero uncertainty not duplicated"
+}

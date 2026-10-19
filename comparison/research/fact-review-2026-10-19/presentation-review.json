@@ -1,0 +1,90 @@
+{
+  "review_date": "2026-10-19",
+  "hub_generator": "scripts/render-comparison-hub.mjs",
+  "reviewed_generator_claims": [
+    {
+      "section": "hero and profile framing",
+      "verdict": "not applicable",
+      "reason": "Editorial orientation; no superiority claim."
+    },
+    {
+      "section": "04 languages / 06 dimensions / 03 deep dives",
+      "verdict": "verified",
+      "evidence": "catalog has four hub profiles, six rows and three direct comparisons."
+    },
+    {
+      "section": "workflow Spec/Eval/Workcell/RunLedger/ShipCheck",
+      "verdict": "verified",
+      "evidence": "Pinned implementations and boundary documentation in catalog; separate tools and no automatic pipeline stated."
+    },
+    {
+      "section": "artifact exercise and producer snippet",
+      "verdict": "verified",
+      "evidence": "artifact-evidence.json; exact integer and invalid controls rerun."
+    },
+    {
+      "section": "editorial footer",
+      "verdict": "verified",
+      "evidence": "Competitor suites and benchmarks were not executed; Zero identity gap remains disclosed."
+    }
+  ],
+  "social_cards": [
+    {
+      "id": "compare",
+      "title": "Compare languages.",
+      "tagline": "Compare languages, their checks and the evidence behind each claim.",
+      "verdict": "not applicable",
+      "reason": "Editorial topic description; no changed factual assertion or version. Existing JPEG retained."
+    },
+    {
+      "id": "kujo-vs-bend",
+      "title": "Kujo vs Bend",
+      "tagline": "Compare workflow evidence with language-level proofs.",
+      "verdict": "not applicable",
+      "reason": "Editorial topic description; no changed factual assertion or version. Existing JPEG retained."
+    },
+    {
+      "id": "kujo-vs-baml",
+      "title": "Kujo vs BAML",
+      "tagline": "Compare typed AI functions and agent development workflows.",
+      "verdict": "not applicable",
+      "reason": "Editorial topic description; no changed factual assertion or version. Existing JPEG retained."
+    },
+    {
+      "id": "kujo-vs-zero",
+      "title": "Kujo vs Zero",
+      "tagline": "Explore workflow checks and Zero’s documented systems semantics.",
+      "verdict": "not applicable",
+      "reason": "Editorial topic description; no changed factual assertion or version. Existing JPEG retained."
+    },
+    {
+      "id": "ai-native-programming-languages",
+      "title": "AI-native programming languages",
+      "tagline": "Compare language capabilities, limits and evidence.",
+      "verdict": "not applicable",
+      "reason": "Editorial topic description; no changed factual assertion or version. Existing JPEG retained."
+    },
+    {
+      "id": "programming-languages-for-ai-agents",
+      "title": "Languages for AI agents",
+      "tagline": "Choose how your agent runs, calls tools and handles failure.",
+      "verdict": "not applicable",
+      "reason": "Editorial topic description; no changed factual assertion or version. Existing JPEG retained."
+    },
+    {
+      "id": "ai-code-verification-tools",
+      "title": "AI code verification tools",
+      "tagline": "Understand what types, tests, proofs and run records can establish.",
+      "verdict": "not applicable",
+      "reason": "Editorial topic description; no changed factual assertion or version. Existing JPEG retained."
+    },
+    {
+      "id": "verify-agent-workflows",
+      "title": "Verify agent workflows",
+      "tagline": "Check the output against the task and keep evidence you can reproduce.",
+      "verdict": "not applicable",
+      "reason": "Editorial topic description; no changed factual assertion or version. Existing JPEG retained."
+    }
+  ],
+  "metadata": "Generated titles/descriptions and JSON-LD derive from reviewed catalog. No new version or performance guarantee in schema."
+}
