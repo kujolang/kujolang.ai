@@ -12,8 +12,8 @@ def valid(text):
 def main():
     kujo=os.environ.get('KUJO_BIN','kujo')
     version=subprocess.run([kujo,'--version'],capture_output=True,text=True,check=True).stdout.strip()
-    if version!='kujo 1.8.1':
-        raise SystemExit('This exercise is pinned to kujo 1.8.1; observed '+version)
+    if version!='kujo 1.8.2':
+        raise SystemExit('This exercise is pinned to kujo 1.8.2; observed '+version)
     source=pathlib.Path(__file__).with_name('produce.kujo')
     command=[kujo,'run',str(source.resolve())]
     result=subprocess.run(command,capture_output=True,text=True,timeout=30)

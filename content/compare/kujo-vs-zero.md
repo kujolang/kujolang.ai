@@ -29,7 +29,7 @@ Repository: Canonical repository not verified from the reviewed official pages.
 
 Kujo — Verified supported (language and first-party ecosystem): A programming language plus separately versioned tools for explicit agent workflow contracts and inspectable outcomes.
 
-Sources: https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/main.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
 Zero — Partially supported (language): Predictable systems behavior with value semantics and structured concurrency, according to the website.
 
@@ -39,7 +39,7 @@ Sources: https://zero-lang.com/
 
 Kujo — Verified supported (language and first-party ecosystem): Type checking in the runtime; task schema validation and outcome checks belong to Spec and Eval. Passing these checks is not a universal correctness proof.
 
-Sources: https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
 Zero — Partially supported (language): The installation guide documents a check-only compiler mode; implementation not inspected.
 
@@ -49,7 +49,7 @@ Sources: https://zero-lang.com/download.html
 
 Kujo — Verified supported (language): The CLI contains bytecode VM, interpreter and optional JIT paths. Backend availability and behavior must be checked for the pinned runtime and target.
 
-Sources: https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/main.rs
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs
 
 Zero — Partially supported (language): Interpreter, native JIT, native executable and C++ output modes are documented.
 
@@ -59,7 +59,7 @@ Sources: https://zero-lang.com/download.html
 
 Kujo — Unknown / not verified (language): A general dependent-type proof system was not established by this review. Do not interpret the positioning “proves it works” as mathematical verification of arbitrary code.
 
-Sources: https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs
 
 Zero — Unknown / not verified (language): General theorem proving was not verified. Deterministic semantics alone do not establish it.
 
@@ -195,7 +195,7 @@ The official pages reviewed did not establish a canonical repository. Keeping th
 
 - [Zero language overview](https://zero-lang.com/) — official documentation; implementation not inspected; Developer preview; release identifier unverified; reviewed 2026-10-19.
 - [Zero execution modes](https://zero-lang.com/download.html) — official documentation; implementation not inspected; Documentation snapshot; no release version asserted; reviewed 2026-10-19.
-- [Kujo runtime and CLI source](https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/main.rs) — implementation inspected; Kujo 1.8.1 source snapshot; reviewed 2026-10-19.
+- [Kujo runtime and CLI source](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs) — implementation inspected; Kujo 1.8.2 source snapshot; reviewed 2026-10-19.
 - [Spec scope and implementation](https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo) — implementation inspected; 1211f37a09314be7150734bf15a55e9b2ea6504d; reviewed 2026-10-19.
 - [Eval scope and implementation](https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo) — implementation inspected; 71e66dff780d6930bcbe093c046bf31aa26411df; reviewed 2026-10-19.
 - [Runledger scope and implementation](https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo) — implementation inspected; 334ddd4d33c8cb2612c8edab971ee69170824133; reviewed 2026-10-19.

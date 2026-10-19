@@ -52,7 +52,7 @@ Task-to-outcome workflow
 
 verified-supported · language and first-party ecosystem: A programming language plus separately versioned tools for explicit agent workflow contracts and inspectable outcomes.
 
-https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/main.rs
+https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs
 https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo
 https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
@@ -90,7 +90,7 @@ Types, task schemas and outcome checks
 
 verified-supported · language and first-party ecosystem: Type checking in the runtime; task schema validation and outcome checks belong to Spec and Eval. Passing these checks is not a universal correctness proof.
 
-https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs
+https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs
 https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo
 https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
@@ -133,7 +133,7 @@ General proof system not established
 
 unknown · language: A general dependent-type proof system was not established by this review. Do not interpret the positioning “proves it works” as mathematical verification of arbitrary code.
 
-https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs
+https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs
 
 ### Bend
 
@@ -169,7 +169,7 @@ VM, interpreter and optional JIT paths
 
 verified-supported · language: The CLI contains bytecode VM, interpreter and optional JIT paths. Backend availability and behavior must be checked for the pinned runtime and target.
 
-https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/main.rs
+https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs
 
 ### Bend
 
@@ -351,7 +351,7 @@ https://kujolang.ai/ecosystem/shipcheck/
 
 ## Artifact exercise
 
-Kujo 1.8.1 computes 6 * 7; Python independently requires an integer total of 42. Wrong values, malformed JSON, missing fields and wrong types must fail. One repetition; no cross-language benchmark or universal proof.
+Kujo 1.8.2 computes 6 * 7; Python independently requires an integer total of 42. Wrong values, malformed JSON, missing fields and wrong types must fail. One repetition; no cross-language benchmark or universal proof.
 
 ## Technical deep dives
 

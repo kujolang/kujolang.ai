@@ -40,7 +40,7 @@ jobs:
       - name: Install reviewed Kujo release
         uses: kujolang/kujo/.github/actions/setup-kujo@a91702682e2969a66938b561b8059034ab2bc717
         with:
-          version: v1.8.0
+          version: v1.8.2
 
       - name: Build and verify site
         shell: bash
