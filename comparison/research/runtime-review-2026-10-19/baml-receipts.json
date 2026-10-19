@@ -1,0 +1,111 @@
+{
+  "platform": "macOS-26.6.2-x86_64-i386-64bit",
+  "machine": "x86_64",
+  "binary_sha256": "7f91b9853b56b6532735e11f8f07831f7b001452ff0fac31240a93575fea16dd",
+  "archive_sha256": "a13b4c004ee011b334bfed31439ba8fb61278e4850b0277774328873deb47ddc",
+  "checksumVerified": true,
+  "cases": [
+    {
+      "args": [
+        "check"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nwarning: no baml skill is installed; set it up with `baml agent install`\n    Checking 1 file(s)\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[csv.baml:402:13]\n 402 \u2502             root.sys.panic(\"unreachable: Reader.next loop ended\")\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[csv.baml:435:9]\n 435 \u2502         root.sys.panic(\"unreachable: Reader.headers loop ended\")\n     \u00b7         \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[csv.baml:632:13]\n 632 \u2502             root.sys.panic(\"unreachable: Rows.next loop ended\")\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[iter.baml:800:13]\n 800 \u2502             Done {}\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[iter.baml:846:13]\n 846 \u2502             Done {}\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[iter.baml:907:13]\n 907 \u2502             Done {}\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[iter.baml:964:13]\n 964 \u2502             Done {}\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[stream.baml:593:9]\n 593 \u2502         baml.sys.panic(\"unreachable\")\n     \u00b7         \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[stream.baml:721:9]\n 721 \u2502         baml.sys.panic(\"unreachable\")\n     \u00b7         \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n    \u256d\u2500[ns_internal/wire.baml:31:5]\n 31 \u2502     out\n    \u00b7     \u2500\u2500\u2500\n    \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[ns_mcp/mcp.baml:134:13]\n 134 \u2502 \u256d\u2500\u25b6             throw root.errors.NetworkFailure { status_code: null,\n 135 \u2502 \u2502                   provider: `mcp/${self.server_name}`,\n 136 \u2502 \u2502                   detail: `no response for ${method}`,\n 137 \u2502 \u2502                   raw_body: null,\n 138 \u2502 \u2570\u2500\u25b6             }\n     \u2570\u2500\u2500\u2500\u2500\n\n    Finished checked 1 file(s) in 1s\n",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "run",
+        "total"
+      ],
+      "exit": 0,
+      "stdout": "42\n",
+      "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nwarning: no baml skill is installed; set it up with `baml agent install`\nwarning: code is unformatted; run `baml fmt`\n",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "test"
+      ],
+      "exit": 0,
+      "stdout": "PASS root::review::correct total (0ms)\n",
+      "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nwarning: no baml skill is installed; set it up with `baml agent install`\n Discovering tests\n    Finished 1 passed, 0 failed, 1 total in 0s\n",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "test"
+      ],
+      "exit": 2,
+      "stdout": "FAIL root::review::correct total (0ms)\nAGGREGATE FAIL [outcome=fail]\n",
+      "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nwarning: no baml skill is installed; set it up with `baml agent install`\n Discovering tests\n  => assertion failed: left = 42, right = 41\nerror: test failures \u2014 0 passed, 1 failed, 1 total\n",
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "check"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nwarning: no baml skill is installed; set it up with `baml agent install`\n    Checking 1 file(s)\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[csv.baml:402:13]\n 402 \u2502             root.sys.panic(\"unreachable: Reader.next loop ended\")\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[csv.baml:435:9]\n 435 \u2502         root.sys.panic(\"unreachable: Reader.headers loop ended\")\n     \u00b7         \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[csv.baml:632:13]\n 632 \u2502             root.sys.panic(\"unreachable: Rows.next loop ended\")\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[iter.baml:800:13]\n 800 \u2502             Done {}\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[iter.baml:846:13]\n 846 \u2502             Done {}\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[iter.baml:907:13]\n 907 \u2502             Done {}\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[iter.baml:964:13]\n 964 \u2502             Done {}\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[stream.baml:593:9]\n 593 \u2502         baml.sys.panic(\"unreachable\")\n     \u00b7         \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[stream.baml:721:9]\n 721 \u2502         baml.sys.panic(\"unreachable\")\n     \u00b7         \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n    \u256d\u2500[ns_internal/wire.baml:31:5]\n 31 \u2502     out\n    \u00b7     \u2500\u2500\u2500\n    \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[ns_mcp/mcp.baml:134:13]\n 134 \u2502 \u256d\u2500\u25b6             throw root.errors.NetworkFailure { status_code: null,\n 135 \u2502 \u2502                   provider: `mcp/${self.server_name}`,\n 136 \u2502 \u2502                   detail: `no response for ${method}`,\n 137 \u2502 \u2502                   raw_body: null,\n 138 \u2502 \u2570\u2500\u25b6             }\n     \u2570\u2500\u2500\u2500\u2500\n\nE0001\n\n  \u00d7 mismatched types\n   \u256d\u2500[main.baml:1:25]\n 1 \u2502 function total() -> int { \"wrong\" }\n   \u00b7                         \u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\n   \u00b7                              \u2570\u2500\u2500 expected `int`, found `\"wrong\"`\n   \u2570\u2500\u2500\u2500\u2500\n\n",
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "check"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nwarning: no baml skill is installed; set it up with `baml agent install`\n    Checking 1 file(s)\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[csv.baml:402:13]\n 402 \u2502             root.sys.panic(\"unreachable: Reader.next loop ended\")\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[csv.baml:435:9]\n 435 \u2502         root.sys.panic(\"unreachable: Reader.headers loop ended\")\n     \u00b7         \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[csv.baml:632:13]\n 632 \u2502             root.sys.panic(\"unreachable: Rows.next loop ended\")\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[iter.baml:800:13]\n 800 \u2502             Done {}\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[iter.baml:846:13]\n 846 \u2502             Done {}\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[iter.baml:907:13]\n 907 \u2502             Done {}\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[iter.baml:964:13]\n 964 \u2502             Done {}\n     \u00b7             \u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[stream.baml:593:9]\n 593 \u2502         baml.sys.panic(\"unreachable\")\n     \u00b7         \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[stream.baml:721:9]\n 721 \u2502         baml.sys.panic(\"unreachable\")\n     \u00b7         \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n     \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n    \u256d\u2500[ns_internal/wire.baml:31:5]\n 31 \u2502     out\n    \u00b7     \u2500\u2500\u2500\n    \u2570\u2500\u2500\u2500\u2500\n\nE0146\n\n  \u26a0 unreachable code: 1 statement(s) after diverging statement\n     \u256d\u2500[ns_mcp/mcp.baml:134:13]\n 134 \u2502 \u256d\u2500\u25b6             throw root.errors.NetworkFailure { status_code: null,\n 135 \u2502 \u2502                   provider: `mcp/${self.server_name}`,\n 136 \u2502 \u2502                   detail: `no response for ${method}`,\n 137 \u2502 \u2502                   raw_body: null,\n 138 \u2502 \u2570\u2500\u25b6             }\n     \u2570\u2500\u2500\u2500\u2500\n\nE0107\n\n  \u00d7 parameter in function `total` is missing a name\n   \u256d\u2500[main.baml:1:16]\n 1 \u2502 function total( {\n   \u00b7                \u25b2\n   \u00b7                \u2570\u2500\u2500 expected a parameter name\n   \u2570\u2500\u2500\u2500\u2500\n\nE0010\n\n  \u00d7 unexpected token\n   \u256d\u2500[main.baml:1:17]\n 1 \u2502 function total( {\n   \u00b7                 \u252c\n   \u00b7                 \u2570\u2500\u2500 expected `parameter name`, found `'{'`\n   \u2570\u2500\u2500\u2500\u2500\n\nE0010\n\n  \u00d7 unexpected token\n   \u256d\u2500[main.baml:1:18]\n 1 \u2502 function total( {\n   \u00b7                  \u25b2\n   \u00b7                  \u2570\u2500\u2500 expected `'}'`, found `EOF`\n   \u2570\u2500\u2500\u2500\u2500\n\n",
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "generate",
+        "add",
+        "python/pydantic2"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nwarning: no baml skill is installed; set it up with `baml agent install`\n       Added generator.client1 to /Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/baml-cases/baml.toml in 0s\n",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "generate"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nwarning: no baml skill is installed; set it up with `baml agent install`\n  Generating clients with CLI version: 0.22.2\n   Resolving [generator] sections in baml.toml\n   Compiling 1 file(s)\n  Generating client1\n   Generated client1 (143 file(s), 0 identifier renames \u2192 /Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/baml-cases/./baml_sdk)\n    Finished generated 143 file(s) in 6s\n",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "help",
+        "pack"
+      ],
+      "exit": 0,
+      "stdout": "Package one or more BAML targets as a standalone executable.\n\nA positional target produces a single-entry executable. One or more `--function` flags produce an\nexecutable whose generated CLI has one subcommand per function. Function parameters are derived from\nBAML types.\n\nUsage: baml pack [OPTIONS] [FUNCTION]\n\nExamples:\n  Package one function:\n    baml pack main\n\n  Choose the executable path:\n    baml pack main --output ./my-tool\n\n  Package multiple functions as subcommands:\n    baml pack --function Extract --function Classify --output ./baml-tools\n\n  Package a function from a standalone file:\n    baml pack --file script.baml main\n\nArguments:\n  [FUNCTION]\n          Function to package as the executable's only entry point.\n          \n          Mutually exclusive with `--function`.\n\nTelemetry options:\n      --embed-telemetry\n          Mint and embed a public ingestion credential for this build\n\n      --telemetry-environment <NAME>\n          Existing environment to bind the embedded credential to\n\nCompiler options:\n  -F, --features <FEATURES>\n          Enable compiler features; repeatable or comma-separated [possible values: beta,\n          display_all_warnings]\n\nTarget options:\n  -f, --function <NAME>\n          Add a function as a generated executable subcommand. Repeatable.\n          \n          Even one `--function` creates a subcommand. Use a positional `<TARGET>` to produce an\n          executable with no subcommand layer.\n\nProject options:\n      --file <PATH>\n          Load one standalone source file instead of discovering a project.\n          \n          Mutually exclusive with `--project`.\n\nBuild options:\n  -o, --output <OUTPUT>\n          Path for the packaged executable.\n          \n          Defaults to `[package].name`, the project directory name, or the source file stem,\n          depending on the project mode.\n\n      --target <TRIPLE>\n          Target triple for the packaged executable.\n          \n          Defaults to the host platform. Cross-compilation downloads the matching pack host from the\n          BAML release artifacts.\n\nRuntime options:\n      --output-format <FORMAT>\n          Format returned values [default: json] [possible values: debug, json]\n\nGlobal options:\n  -q, --quiet...\n          Suppress nonessential output\n\n  -v, --verbose...\n          Increase diagnostic verbosity. Repeatable\n\n      --color <WHEN>\n          Control ANSI colors [possible values: auto, always, never]\n\n      --no-progress\n          Disable progress output\n\n      --directory <PATH>\n          Change to this directory before running the command\n\n      --project <PATH>\n          Discover the BAML project from this path\n\n      --output-preset <PRESET>\n          Select output defaults [default: auto] [possible values: auto, human, agent]\n\n      --hyperlinks <WHEN>\n          Control terminal hyperlinks [possible values: auto, always, never]\n\n      --diagnostic-format <FORMAT>\n          Select the diagnostic format [possible values: human, agent, concise]\n\n      --agent-skill-check <MODE>\n          Control BAML agent skill validation [default: auto] [possible values: auto, require, warn,\n          off]\n\n  -h, --help\n          Display concise help for this command\n",
+      "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\n",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "pack",
+        "total",
+        "--output",
+        "./total-packed"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nwarning: no baml skill is installed; set it up with `baml agent install`\nwarning: code is unformatted; run `baml fmt`\n   Packaging total\nerror: failed to parse Mach-O binary\n\ncaused by:\n    0: I/O error: No space left on device (os error 28)\n"
+    },
+    {
+      "args": [],
+      "exit": 71,
+      "stdout": "",
+      "stderr": "sandbox-exec: execvp() of '/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/baml-cases/total-packed' failed: Permission denied\n"
+    }
+  ]
+}

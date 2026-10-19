@@ -1,0 +1,156 @@
+{
+  "platform": "macOS-26.6.2-x86_64-i386-64bit",
+  "machine": "x86_64",
+  "binary_sha256": "eb296abd280b84cb2b2c2c226297d5be3390e3c4db85835602be137aa0365df0",
+  "archive_sha256": "93eea3f54b7b91f28ea15a1b9f2d825afa58c1fcd417c11024a62f8c3506b813",
+  "sandbox": "(version 1)\n(allow default)\n(deny network*)\n(deny file-read* (subpath \"/Users\"))\n(allow file-read* (subpath \"/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes\"))\n(deny file-write*)\n(allow file-write* (subpath \"/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes\") (subpath \"/private/tmp\"))\n(allow file-read-metadata)\n",
+  "cases": [
+    {
+      "args": [
+        "version"
+      ],
+      "exit": 0,
+      "stdout": "bend 2.0.37\n",
+      "stderr": "",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "good-proof.bend",
+        "--check-only"
+      ],
+      "exit": 0,
+      "stdout": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n",
+      "stderr": "",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "bad-proof.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : {0n == 0n : Nat}\n- observed : Nat\nLocation: add_zero\n13 |     case 0n:\n14>|       0n\n   |       ^^\n15 |     case 1n+p:\n",
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "arithmetic.bend",
+        "--check-only"
+      ],
+      "exit": 0,
+      "stdout": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n",
+      "stderr": "",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "bad-type.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : U32\n- observed : String\nLocation: main\n3 | def main() -> U32:\n4>|   \"wrong\"\n  |   ^^^^^^^\n5 | \n",
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "bad-affine.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : x\n- observed : x (consumed more than once)\nLocation: twice\n2 | \n3>| def twice(x: U32) -> U32:\n  |           ^\n4 |   (x + x : U32)\n",
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "good-proof.bend",
+        "--verdict"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Error: BendTT infrastructure: the kernel did not build (lean: Executable not found in $PATH: \"lean\"); --verdict needs Lean v4.34.0 (elan toolchain leanprover/lean4:v4.34.0), or $BENDTT set to a built kernel\n",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "bad-proof.bend",
+        "--verdict"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : {0n == 0n : Nat}\n- observed : Nat\nLocation: add_zero\n13 |     case 0n:\n14>|       0n\n   |       ^^\n15 |     case 1n+p:\n",
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "arithmetic.bend"
+      ],
+      "exit": 0,
+      "stdout": "42\n",
+      "stderr": "",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "arithmetic.bend",
+        "-o",
+        "arithmetic.js"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "arithmetic.bend",
+        "-o",
+        "arithmetic-native"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "expected_exit": 0
+    },
+    {
+      "args": [],
+      "exit": 0,
+      "stdout": "42\n",
+      "stderr": "",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "open-law.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : a filled definition (an unfilled law is a dead claim: live code cannot use it)\n- observed : EVIL_ADD_HOM\nLocation: use\n14 | def use():\n15>|   EVIL_ADD_HOM\n   |   ^^^^^^^^^^^^\n16 | \n",
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "arithmetic.js"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "node:fs:3315\n      const stats = binding.lstat(base, true, undefined, true /* throwIfNoEntry */);\n                            ^\n\nError: EPERM: operation not permitted, lstat '/Users'\n    at Object.realpathSync (node:fs:3315:29)\n    at toRealPath (node:internal/modules/helpers:70:13)\n    at Module._findPath (node:internal/modules/cjs/loader:855:22)\n    at resolveMainPath (node:internal/modules/run_main:35:21)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:146:20)\n    at node:internal/main/run_main_module:33:47 {\n  errno: -1,\n  code: 'EPERM',\n  syscall: 'lstat',\n  path: '/Users'\n}\n\nNode.js v26.7.0\n",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "node",
+        "arithmetic.js"
+      ],
+      "exit": 0,
+      "stdout": "42\n",
+      "stderr": "",
+      "note": "Retry with ancestor metadata readable; user file content remains denied",
+      "expected_exit": 0
+    }
+  ]
+}

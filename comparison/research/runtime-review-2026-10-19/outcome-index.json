@@ -1,0 +1,402 @@
+{
+  "bend": [
+    {
+      "args": [
+        "version"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "good-proof.bend",
+        "--check-only"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "bad-proof.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "arithmetic.bend",
+        "--check-only"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "bad-type.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "bad-affine.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "good-proof.bend",
+        "--verdict"
+      ],
+      "exit": 1,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "bad-proof.bend",
+        "--verdict"
+      ],
+      "exit": 1,
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "arithmetic.bend"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "arithmetic.bend",
+        "-o",
+        "arithmetic.js"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "arithmetic.bend",
+        "-o",
+        "arithmetic-native"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "open-law.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "arithmetic.js"
+      ],
+      "exit": 1,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "node",
+        "arithmetic.js"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    }
+  ],
+  "baml": [
+    {
+      "args": [
+        "check"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "run",
+        "total"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "test"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "test"
+      ],
+      "exit": 2,
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "check"
+      ],
+      "exit": 4,
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "check"
+      ],
+      "exit": 4,
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "generate",
+        "add",
+        "python/pydantic2"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "generate"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "help",
+        "pack"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "pack",
+        "total",
+        "--output",
+        "./total-packed"
+      ],
+      "exit": 4
+    },
+    {
+      "args": [],
+      "exit": 71
+    }
+  ],
+  "zero": [
+    {
+      "args": [
+        "--version",
+        "--json"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "init",
+        "--json"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "patch",
+        "--op",
+        "addMain",
+        "--op",
+        "addCheckWrite fn=\"main\" text=\"hello from zero\\n\"",
+        "--json"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "check",
+        "--json"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "test"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "run"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "export",
+        "--json"
+      ],
+      "exit": 1,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "verify-projection",
+        "--json"
+      ],
+      "exit": 1,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "patch",
+        "--op",
+        "help"
+      ],
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "patch",
+        "--json",
+        "--op",
+        "expect graphHash \"graph:0000000000000000\"",
+        "--op",
+        "addCheckWrite fn=\"main\" text=\"must not write\""
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "graphUnchanged": true
+    },
+    {
+      "args": [
+        "patch",
+        "--json",
+        "--op",
+        "addFunction name=\"bad\" ret=\"i32\"",
+        "--op",
+        "addReturnExpr fn=\"bad\" expr=\"\"wrong\"\""
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "graphUnchanged": true
+    },
+    {
+      "args": [
+        "patch",
+        "--json",
+        "--op",
+        "addFunction name=\"add\" ret=\"i32\"",
+        "--op",
+        "addParam fn=\"add\" name=\"left\" type=\"i32\"",
+        "--op",
+        "addParam fn=\"add\" name=\"right\" type=\"i32\"",
+        "--op",
+        "addReturnBinary fn=\"add\" name=\"+\" left=\"left\" right=\"right\" type=\"i32\"",
+        "--op",
+        "addTest name=\"addition works\" call=\"add\" arg0=\"40\" arg1=\"2\" expect=\"42\" type=\"i32\""
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "graphUnchanged": false
+    },
+    {
+      "args": [
+        "test"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "graphUnchanged": true
+    },
+    {
+      "args": [
+        "patch",
+        "--json",
+        "--op",
+        "addTest name=\"wrong expectation\" call=\"add\" arg0=\"40\" arg1=\"2\" expect=\"41\" type=\"i32\""
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "graphUnchanged": false
+    },
+    {
+      "args": [
+        "test"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "graphUnchanged": true
+    },
+    {
+      "args": [
+        "export",
+        "--json"
+      ],
+      "exit": 1,
+      "expected_exit": 0,
+      "graphUnchanged": true
+    },
+    {
+      "args": [
+        "check",
+        "--json"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "graphUnchanged": true
+    },
+    {
+      "args": [
+        "patch",
+        "--json",
+        "--op",
+        "addFunction name=\"bad\" ret=\"i32\"",
+        "--op",
+        "addReturnExpr fn=\"bad\" expr=\"true\""
+      ],
+      "exit": 1,
+      "graphUnchanged": true
+    },
+    {
+      "args": [
+        "export",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "verify-projection",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "verify-projection",
+        "--json"
+      ],
+      "exit": 1
+    }
+  ]
+}

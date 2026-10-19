@@ -1,0 +1,190 @@
+{
+  "sha": "5b3a90a7756e48ab449eb16e688044b8decec7a9",
+  "node_id": "C_kwDOSejWrNoAKDViM2E5MGE3NzU2ZTQ4YWI0NDllYjE2ZTY4ODA0NGI4ZGVjZWM3YTk",
+  "commit": {
+    "author": {
+      "name": "Chris Tate",
+      "email": "chris@ctate.dev",
+      "date": "2026-06-13T16:48:19Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-06-13T16:48:19Z"
+    },
+    "message": "Merge pull request #411 from vercel-labs/ctate/v0.3.4\n\nPrepare v0.3.4 release",
+    "tree": {
+      "sha": "5ba11ca7204e651bc3282aa4f08f91df1255e315",
+      "url": "https://api.github.com/repos/vercel-labs/zerolang/git/trees/5ba11ca7204e651bc3282aa4f08f91df1255e315"
+    },
+    "url": "https://api.github.com/repos/vercel-labs/zerolang/git/commits/5b3a90a7756e48ab449eb16e688044b8decec7a9",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqLYnTCRC1aQ7uu5UhlAAAY0MQAAzeyTg7x4JEHOL1IfuFuzgy\ny1eq0YL28M+m1f0qsgeMoVBGHJrU6QjYDFhj0H1o1O2YSw1Vtn32JjoQSlZHvPRe\na4zen8TxLVyJvUk2qoxEVCMLgzNrH6vXHgV05ypC4pKyFJZReiFRgvilNSTMzTgR\nUlezt2XaJSjfCB9xD5y1ak2NhdVzPs8G/Ng6VGYAUO4VFc2GCmyh+1TYa4VlGvnu\n3fKKhJWkLW3sD7os0HgOAVEp2BQWBuM4+EnYBSJrp2TuMi9CSWNIuFOpjyvKxAP4\nvmnrWp1RJz0stZvmf3KGyH1kvTNPoWLx30yt+pBddTLQTfNB0DzTzn79DDx3u7Dh\nD1GUKph07Zq1D3QNNiQ+TR08yrMBfAGD0Nt3VLkEYxe5MUyg6yQmXge+4G/ALag0\n7RRukw3kgEL0lzi84CT6Sjnzaxm4+0ECf9OzfO4copttjImdsiF3izjwVcR1Unl2\nb/HW3Ljx0YJLpqrNBQToror+Udp2SRdVYuMfE+lkNDObAPBSVw76MrP0tbkGWZPB\nh+iona1JMcA02ZLHLZunVPM2OtcgduraLuN+HXMDlFyW+Nw7Byg38GxUJObJqEkF\nUSqyeLnj8rQ3RR0vD7Djqf78uy0O7yWbiypTX6hEa5YaMMExeRzjHB74kMjn5J4N\nzakoYLpWfE25Ub0GHBRd\n=YzBJ\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 5ba11ca7204e651bc3282aa4f08f91df1255e315\nparent 0b9aa867f975928ae6bb264afcd65faa85ef89d5\nparent 06033df4035960161fb82e37f36b15d630ec2fa6\nauthor Chris Tate <chris@ctate.dev> 1781369299 -0500\ncommitter GitHub <noreply@github.com> 1781369299 -0500\n\nMerge pull request #411 from vercel-labs/ctate/v0.3.4\n\nPrepare v0.3.4 release",
+      "verified_at": "2026-06-13T16:48:19Z"
+    }
+  },
+  "url": "https://api.github.com/repos/vercel-labs/zerolang/commits/5b3a90a7756e48ab449eb16e688044b8decec7a9",
+  "html_url": "https://github.com/vercel-labs/zerolang/commit/5b3a90a7756e48ab449eb16e688044b8decec7a9",
+  "comments_url": "https://api.github.com/repos/vercel-labs/zerolang/commits/5b3a90a7756e48ab449eb16e688044b8decec7a9/comments",
+  "author": {
+    "login": "ctate",
+    "id": 366502,
+    "node_id": "MDQ6VXNlcjM2NjUwMg==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/366502?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/ctate",
+    "html_url": "https://github.com/ctate",
+    "followers_url": "https://api.github.com/users/ctate/followers",
+    "following_url": "https://api.github.com/users/ctate/following{/other_user}",
+    "gists_url": "https://api.github.com/users/ctate/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/ctate/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/ctate/subscriptions",
+    "organizations_url": "https://api.github.com/users/ctate/orgs",
+    "repos_url": "https://api.github.com/users/ctate/repos",
+    "events_url": "https://api.github.com/users/ctate/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/ctate/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "0b9aa867f975928ae6bb264afcd65faa85ef89d5",
+      "url": "https://api.github.com/repos/vercel-labs/zerolang/commits/0b9aa867f975928ae6bb264afcd65faa85ef89d5",
+      "html_url": "https://github.com/vercel-labs/zerolang/commit/0b9aa867f975928ae6bb264afcd65faa85ef89d5"
+    },
+    {
+      "sha": "06033df4035960161fb82e37f36b15d630ec2fa6",
+      "url": "https://api.github.com/repos/vercel-labs/zerolang/commits/06033df4035960161fb82e37f36b15d630ec2fa6",
+      "html_url": "https://github.com/vercel-labs/zerolang/commit/06033df4035960161fb82e37f36b15d630ec2fa6"
+    }
+  ],
+  "stats": {
+    "total": 37,
+    "additions": 25,
+    "deletions": 12
+  },
+  "files": [
+    {
+      "sha": "86dd38fac132b3b030d4843923825b2db4f5f69c",
+      "filename": "CHANGELOG.md",
+      "status": "modified",
+      "additions": 16,
+      "deletions": 3,
+      "changes": 19,
+      "blob_url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/CHANGELOG.md",
+      "raw_url": "https://github.com/vercel-labs/zerolang/raw/5b3a90a7756e48ab449eb16e688044b8decec7a9/CHANGELOG.md",
+      "contents_url": "https://api.github.com/repos/vercel-labs/zerolang/contents/CHANGELOG.md?ref=5b3a90a7756e48ab449eb16e688044b8decec7a9",
+      "patch": "@@ -1,9 +1,24 @@\n # Changelog\n \n-## 0.3.3\n+## 0.3.4\n \n <!-- release:start -->\n \n+- Makes graph patching the primary agent edit loop with stdin patch bodies, `--replace-in-fn`, expression replacement by handle, structural rewrites, declaration-level edits, helper/test patch ops, and inline handle diagnostics across view, query, and patch commands.\n+- Improves graph/source reconciliation with patch-specific stale-refresh tips, once-per-state notes, accepted whole-file rewrites when function sets are preserved, and clearer unsupported graph-test and non-entry `World` helper diagnostics.\n+- Speeds up graph workflows with memoized repository store loads, adjacency orders, semantic check verdicts, static const classification, pre-merge MIR cache keys, and reusable runtime object cache artifacts.\n+- Reduces direct backend output and broadens native coverage with constant array-fill loop lowering, COFF x64 HTTP request-body extraction, chunked file reads via `std.fs.readBytesAt`, and total-file-size reporting for fixed-buffer reads.\n+- Refreshes bundled skills, CLI help, docs, command contracts, conformance fixtures, compiler metrics, and validation guidance around the patch-first agent workflow.\n+- Hardens release checks with runtime object cache cleanup, graph patch routing coverage, examples gate teardown retries, and additional package cache/version assertions.\n+\n+### Contributors\n+\n+- @ctate\n+\n+<!-- release:end -->\n+\n+## 0.3.3\n+\n - Makes package graph stores refresh from edited projections across compiler commands, classifies source/store sync by content instead of mtimes, and gives stale, diverged, and ambiguous reconcile states deterministic diagnostics and repairs.\n - Improves agent-facing inspection and edit loops with scoped `zero query` output, `zero view --fn`, `zero diff --fn`, `zero patch --replace-fn --body-file`, focused command help, and smaller version-matched skill topics with section-scoped stdlib fetches.\n - Expands standard-library coverage with `std.regex`, `std.inet`, `std.unicode`, and RFC 3339 helpers in `std.time`, including docs, skill references, and runtime conformance fixtures.\n@@ -15,8 +30,6 @@\n \n - @ctate\n \n-<!-- release:end -->\n-\n ## 0.3.2\n \n - Adds `break` and `continue` support to the direct backend and `zero test`, lowering both through typed MIR and all direct emitters with conformance coverage and required runtime checks."
+    },
+    {
+      "sha": "47920edf72929ea72c2b1e3fb39364baf3c5fc2a",
+      "filename": "conformance/run.mjs",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/conformance%2Frun.mjs",
+      "raw_url": "https://github.com/vercel-labs/zerolang/raw/5b3a90a7756e48ab449eb16e688044b8decec7a9/conformance%2Frun.mjs",
+      "contents_url": "https://api.github.com/repos/vercel-labs/zerolang/contents/conformance%2Frun.mjs?ref=5b3a90a7756e48ab449eb16e688044b8decec7a9",
+      "patch": "@@ -4750,7 +4750,7 @@ assert.equal(depGraphBody.package.resolver.deterministic, true);\n assert.match(depGraphBody.package.lockfile.path, /\\.zero\\/package-locks\\/[0-9a-f]+\\.lock\\.json/);\n assert(depGraphBody.package.dependencies.some((item) => item.name === \"dep-lib\" && item.status === \"path-resolved\" && item.targetCompatible === true));\n assert(depGraphBody.package.dependencies.some((item) => item.name === \"remote-tools\" && item.status === \"registry-reference\" && item.version === \"1.2.3\"));\n-assert.equal(depGraphBody.packageCache.cacheKeyInputs.compilerVersion, \"0.3.3\");\n+assert.equal(depGraphBody.packageCache.cacheKeyInputs.compilerVersion, \"0.3.4\");\n assert.equal(depGraphBody.packageCache.cacheKeyInputs.packageVersion, \"0.1.0\");\n assert.match(depGraphBody.packageCache.cacheKeyInputs.dependencyGraphHash, /^[0-9a-f]{16}$/);\n const depDoc = await execFileAsync(zero, [\"doc\", \"--json\", \"conformance/packages/dep-app\"]);"
+    },
+    {
+      "sha": "4b8ab18fe21d7f44a5202a6dfc05a735dd9113dd",
+      "filename": "docs/package.json",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs%2Fpackage.json",
+      "raw_url": "https://github.com/vercel-labs/zerolang/raw/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs%2Fpackage.json",
+      "contents_url": "https://api.github.com/repos/vercel-labs/zerolang/contents/docs%2Fpackage.json?ref=5b3a90a7756e48ab449eb16e688044b8decec7a9",
+      "patch": "@@ -1,7 +1,7 @@\n {\n   \"name\": \"zero-docs\",\n   \"private\": true,\n-  \"version\": \"0.3.3\",\n+  \"version\": \"0.3.4\",\n   \"type\": \"module\",\n   \"packageManager\": \"pnpm@11.1.3\",\n   \"engines\": {"
+    },
+    {
+      "sha": "ec6f1fed8859fae5caf3f51f440c7b6327961628",
+      "filename": "extensions/vscode/package.json",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/extensions%2Fvscode%2Fpackage.json",
+      "raw_url": "https://github.com/vercel-labs/zerolang/raw/5b3a90a7756e48ab449eb16e688044b8decec7a9/extensions%2Fvscode%2Fpackage.json",
+      "contents_url": "https://api.github.com/repos/vercel-labs/zerolang/contents/extensions%2Fvscode%2Fpackage.json?ref=5b3a90a7756e48ab449eb16e688044b8decec7a9",
+      "patch": "@@ -3,7 +3,7 @@\n   \"displayName\": \"Zero Language\",\n   \"description\": \"Syntax highlighting for the Zero programming language.\",\n   \"publisher\": \"zero-lang\",\n-  \"version\": \"0.3.3\",\n+  \"version\": \"0.3.4\",\n   \"private\": true,\n   \"type\": \"module\",\n   \"categories\": ["
+    },
+    {
+      "sha": "24a0f81b70d9945b1510ebebc6c99873d74a5e67",
+      "filename": "native/zero-c/include/zero.h",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native%2Fzero-c%2Finclude%2Fzero.h",
+      "raw_url": "https://github.com/vercel-labs/zerolang/raw/5b3a90a7756e48ab449eb16e688044b8decec7a9/native%2Fzero-c%2Finclude%2Fzero.h",
+      "contents_url": "https://api.github.com/repos/vercel-labs/zerolang/contents/native%2Fzero-c%2Finclude%2Fzero.h?ref=5b3a90a7756e48ab449eb16e688044b8decec7a9",
+      "patch": "@@ -6,7 +6,7 @@\n \n #include \"zero_contracts.h\"\n \n-#define ZERO_VERSION \"0.3.3\"\n+#define ZERO_VERSION \"0.3.4\"\n \n #ifndef ZERO_BUILD_HASH\n #define ZERO_BUILD_HASH \"unknown\""
+    },
+    {
+      "sha": "f9a9f498a1d7bfec86d7f9916565f6bd5704e939",
+      "filename": "package.json",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/package.json",
+      "raw_url": "https://github.com/vercel-labs/zerolang/raw/5b3a90a7756e48ab449eb16e688044b8decec7a9/package.json",
+      "contents_url": "https://api.github.com/repos/vercel-labs/zerolang/contents/package.json?ref=5b3a90a7756e48ab449eb16e688044b8decec7a9",
+      "patch": "@@ -1,7 +1,7 @@\n {\n   \"name\": \"zero-lang-workspace\",\n   \"description\": \"Workspace for the Zero language docs, native compiler, examples, and editor tooling.\",\n-  \"version\": \"0.3.3\",\n+  \"version\": \"0.3.4\",\n   \"private\": true,\n   \"license\": \"Apache-2.0\",\n   \"packageManager\": \"pnpm@11.1.3\","
+    },
+    {
+      "sha": "0637fb1cf4608417e55f40bd264938171430b03a",
+      "filename": "scripts/snapshot-command-contracts.mts",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "blob_url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/scripts%2Fsnapshot-command-contracts.mts",
+      "raw_url": "https://github.com/vercel-labs/zerolang/raw/5b3a90a7756e48ab449eb16e688044b8decec7a9/scripts%2Fsnapshot-command-contracts.mts",
+      "contents_url": "https://api.github.com/repos/vercel-labs/zerolang/contents/scripts%2Fsnapshot-command-contracts.mts?ref=5b3a90a7756e48ab449eb16e688044b8decec7a9",
+      "patch": "@@ -894,11 +894,11 @@ function directExeEmitterForTarget(target: string) {\n \n const generatedCBytesBeforeReadOnlyCommands = json([\"size\", \"--json\", \"examples/memory-package\"]).body.generatedCBytes;\n \n-assert.match(zero([\"--version\"]).stdout, /^zero 0\\.3\\.3 \\(build (?:[0-9a-f]{7,40}|unknown)\\)\\n$/);\n+assert.match(zero([\"--version\"]).stdout, /^zero 0\\.3\\.4 \\(build (?:[0-9a-f]{7,40}|unknown)\\)\\n$/);\n \n const version = json([\"--version\", \"--json\"]).body;\n assert.equal(version.schemaVersion, 1);\n-assert.equal(version.version, \"0.3.3\");\n+assert.equal(version.version, \"0.3.4\");\n assert.match(version.commit, /^(?:[0-9a-f]{7,40}|unknown)$/);\n assert.equal(version.backend, \"zero-c\");\n assert.equal(typeof version.host, \"string\");\n@@ -7669,7 +7669,7 @@ assert.equal(depDoc.package.name, \"dep-app\");\n assert.equal(depDoc.publicationGate.requiresExamplesForPublicApi, true);\n const depBuild = json([\"build\", \"--json\", \"--target\", \"linux-musl-x64\", \"conformance/packages/dep-app\", \"--out\", join(outDir, \"dep-app\")]).body;\n assert.equal(depBuild.packageCache.invalidationReasons.includes(\"dependency graph changed\"), true);\n-assert.equal(depBuild.compilerCaches.every((item) => item.compilerVersion === \"0.3.3\" && item.packageVersion === \"0.1.0\"), true);\n+assert.equal(depBuild.compilerCaches.every((item) => item.compilerVersion === \"0.3.4\" && item.packageVersion === \"0.1.0\"), true);\n const depDevTrace = json([\"dev\", \"--json\", \"--trace\", \"--target\", \"linux-musl-x64\", \"conformance/packages/dep-app\"]).body;\n assert.equal(depDevTrace.trace.requested, true);\n assert.equal(depDevTrace.partialDiagnostics.stable, true);"
+    },
+    {
+      "sha": "d9023e312f7eff7043b7d8616715d5187841648a",
+      "filename": "tests/zero-cli.test.ts",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/tests%2Fzero-cli.test.ts",
+      "raw_url": "https://github.com/vercel-labs/zerolang/raw/5b3a90a7756e48ab449eb16e688044b8decec7a9/tests%2Fzero-cli.test.ts",
+      "contents_url": "https://api.github.com/repos/vercel-labs/zerolang/contents/tests%2Fzero-cli.test.ts?ref=5b3a90a7756e48ab449eb16e688044b8decec7a9",
+      "patch": "@@ -62,7 +62,7 @@ async function collectSkillMdFiles(dir: string): Promise<string[]> {\n \n describe(\"native zero CLI\", () => {\n   it(\"prints a terse plain version with the build hash\", async () => {\n-    const versionPattern = /^zero 0\\.3\\.3 \\(build (?:[0-9a-f]{7,40}|unknown)\\)\\n$/;\n+    const versionPattern = /^zero 0\\.3\\.4 \\(build (?:[0-9a-f]{7,40}|unknown)\\)\\n$/;\n     assert.match((await runZero([\"--version\"])).stdout, versionPattern);\n     assert.match((await runNativeZero([\"--version\"])).stdout, versionPattern);\n   });"
+    }
+  ]
+}

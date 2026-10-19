@@ -1,0 +1,119 @@
+{
+  "platform": "macOS-26.6.2-x86_64-i386-64bit",
+  "machine": "x86_64",
+  "binary_sha256": "eb296abd280b84cb2b2c2c226297d5be3390e3c4db85835602be137aa0365df0",
+  "archive_sha256": "93eea3f54b7b91f28ea15a1b9f2d825afa58c1fcd417c11024a62f8c3506b813",
+  "sandbox": "(version 1)\n(allow default)\n(deny network*)\n(deny file-read* (subpath \"/Users\"))\n(allow file-read* (subpath \"/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes\"))\n(deny file-write*)\n(allow file-write* (subpath \"/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes\") (subpath \"/private/tmp\"))\n",
+  "cases": [
+    {
+      "args": [
+        "version"
+      ],
+      "exit": 0,
+      "stdout": "bend 2.0.37\n",
+      "stderr": "",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "good-proof.bend",
+        "--check-only"
+      ],
+      "exit": 0,
+      "stdout": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n",
+      "stderr": "",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "bad-proof.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : {0n == 0n : Nat}\n- observed : Nat\nLocation: add_zero\n13 |     case 0n:\n14>|       0n\n   |       ^^\n15 |     case 1n+p:\n",
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "arithmetic.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- message  : a type for this operator (write (a * b : Nat))\nLocation:\n3 | def main() -> U32:\n4>|   6 * 7\n  |     ^\n5 | \nNote: we broke this after launch, sorry. Until 2.0.16 a bare operator meant Nat.\nThat was a bug: operators demand annotation. Wrap the expression and it'll work again.\n",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "bad-type.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : U32\n- observed : String\nLocation: main\n3 | def main() -> U32:\n4>|   \"wrong\"\n  |   ^^^^^^^\n5 | \n",
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "bad-affine.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- message  : a type for this operator (write (a + b : Nat))\nLocation:\n3 | def twice(x: U32) -> U32:\n4>|   x + x\n  |     ^\n5 | \nNote: we broke this after launch, sorry. Until 2.0.16 a bare operator meant Nat.\nThat was a bug: operators demand annotation. Wrap the expression and it'll work again.\n",
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "good-proof.bend",
+        "--verdict"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Error: BendTT infrastructure: the kernel did not build (lean: Executable not found in $PATH: \"lean\"); --verdict needs Lean v4.34.0 (elan toolchain leanprover/lean4:v4.34.0), or $BENDTT set to a built kernel\n",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "bad-proof.bend",
+        "--verdict"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : {0n == 0n : Nat}\n- observed : Nat\nLocation: add_zero\n13 |     case 0n:\n14>|       0n\n   |       ^^\n15 |     case 1n+p:\n",
+      "expected_exit": 1
+    },
+    {
+      "args": [
+        "arithmetic.bend"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- message  : a type for this operator (write (a * b : Nat))\nLocation:\n3 | def main() -> U32:\n4>|   6 * 7\n  |     ^\n5 | \nNote: we broke this after launch, sorry. Until 2.0.16 a bare operator meant Nat.\nThat was a bug: operators demand annotation. Wrap the expression and it'll work again.\n",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "arithmetic.bend",
+        "-o",
+        "arithmetic.js"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- message  : a type for this operator (write (a * b : Nat))\nLocation:\n3 | def main() -> U32:\n4>|   6 * 7\n  |     ^\n5 | \nNote: we broke this after launch, sorry. Until 2.0.16 a bare operator meant Nat.\nThat was a bug: operators demand annotation. Wrap the expression and it'll work again.\n",
+      "expected_exit": 0
+    },
+    {
+      "args": [
+        "arithmetic.bend",
+        "-o",
+        "arithmetic-native"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- message  : a type for this operator (write (a * b : Nat))\nLocation:\n3 | def main() -> U32:\n4>|   6 * 7\n  |     ^\n5 | \nNote: we broke this after launch, sorry. Until 2.0.16 a bare operator meant Nat.\nThat was a bug: operators demand annotation. Wrap the expression and it'll work again.\n",
+      "expected_exit": 0
+    }
+  ]
+}

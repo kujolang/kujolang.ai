@@ -1,0 +1,84 @@
+[
+  {
+    "sha": "7e1a64d27cc37671df31c6370890bce86f5135e1",
+    "node_id": "C_kwDOSejWrNoAKDdlMWE2NGQyN2NjMzc2NzFkZjMxYzYzNzA4OTBiY2U4NmY1MTM1ZTE",
+    "commit": {
+      "author": {
+        "name": "Railly Hugo",
+        "email": "51397083+Railly@users.noreply.github.com",
+        "date": "2026-09-16T20:39:30Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2026-09-16T20:39:30Z"
+      },
+      "message": "Add Labs status badges to README (#433)\n\n* docs(readme): add Labs status badges\n\n* docs(readme): split Labs label and status",
+      "tree": {
+        "sha": "336d8f09f90aac8fdb4d485de0279f40b616e923",
+        "url": "https://api.github.com/repos/vercel-labs/zerolang/git/trees/336d8f09f90aac8fdb4d485de0279f40b616e923"
+      },
+      "url": "https://api.github.com/repos/vercel-labs/zerolang/git/commits/7e1a64d27cc37671df31c6370890bce86f5135e1",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqqv6CCRC1aQ7uu5UhlAAAuzUQABsCnOFqYs2AvjqzBisefnSv\nSs1QyjdD640YQUdOv6PVGOtGj6hqJEyLoc0Qgoi/bm70kimUdD8s91NSColV8D3M\n+/HAoRAYbMBmZyziZQtJB+/GZBX9Gw7F7lwvpgrNO5alQvfGSGNCXNykQ1ehyp0r\n6H0vKEViblFbEZMlHpB0DIvUCOo0JHXSjLjrk7KbDOpREYsDbYa6uXs6EZCQcPCm\nk18CccPGQwPVCaNuiHyCwmU480y/j6OeoPeI3hIgiDfwRGh/mg9L2o5XSY09fNSq\nz6Tdez7nqfIV3GzvzWSlWu8rPrID3y1GhcCxSIismqy/omihpX5ylTxKGbdEv4F2\nMfOVAFBnCbdJOEVJrmYsU+56t1JbLrwWKcIUtw0TqiHC+PyPQIKey+iVn1oeJVD+\nO1Kua7W81sFK8TFzjsx97jz5a0MELN5y6C5/hx8/wunZYx4h+9inDw5as57l9A+Q\nivLeBpjf0mPCxM7rCqu6k13oyTWspiIh8LIyn5327qQ8zQm/Bh/rcbANwGnyU41+\nEv1X04DldzCM/k80AJbEAK00CH8l1AYkEBE6AQb83uXUaSMRFQ0gaMCqzehUHSw4\nVj5rGZCkIONGpUFMGwCgQRNmWMbabVEaEkO6igZolRrywRTT9qzJ8aPkGEx41P/w\nZ2v0IUAjB0UM5nQHUzgv\n=kc8G\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 336d8f09f90aac8fdb4d485de0279f40b616e923\nparent eb2ed6c22fe3f6e3152efa0c0d05ffcf1ff4a2c7\nauthor Railly Hugo <51397083+Railly@users.noreply.github.com> 1789591170 -0300\ncommitter GitHub <noreply@github.com> 1789591170 -0300\n\nAdd Labs status badges to README (#433)\n\n* docs(readme): add Labs status badges\n\n* docs(readme): split Labs label and status",
+        "verified_at": "2026-09-16T20:39:31Z"
+      }
+    },
+    "url": "https://api.github.com/repos/vercel-labs/zerolang/commits/7e1a64d27cc37671df31c6370890bce86f5135e1",
+    "html_url": "https://github.com/vercel-labs/zerolang/commit/7e1a64d27cc37671df31c6370890bce86f5135e1",
+    "comments_url": "https://api.github.com/repos/vercel-labs/zerolang/commits/7e1a64d27cc37671df31c6370890bce86f5135e1/comments",
+    "author": {
+      "login": "Railly",
+      "id": 51397083,
+      "node_id": "MDQ6VXNlcjUxMzk3MDgz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51397083?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Railly",
+      "html_url": "https://github.com/Railly",
+      "followers_url": "https://api.github.com/users/Railly/followers",
+      "following_url": "https://api.github.com/users/Railly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Railly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Railly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Railly/subscriptions",
+      "organizations_url": "https://api.github.com/users/Railly/orgs",
+      "repos_url": "https://api.github.com/users/Railly/repos",
+      "events_url": "https://api.github.com/users/Railly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Railly/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "eb2ed6c22fe3f6e3152efa0c0d05ffcf1ff4a2c7",
+        "url": "https://api.github.com/repos/vercel-labs/zerolang/commits/eb2ed6c22fe3f6e3152efa0c0d05ffcf1ff4a2c7",
+        "html_url": "https://github.com/vercel-labs/zerolang/commit/eb2ed6c22fe3f6e3152efa0c0d05ffcf1ff4a2c7"
+      }
+    ]
+  }
+]
