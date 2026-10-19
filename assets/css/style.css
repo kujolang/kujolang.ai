@@ -1500,3 +1500,7 @@
 .hub-matrix td > p { font-size: .875rem; }
 .hub-matrix details, .hub-citations { font-size: .75rem; }
 .hub-status { font-size: .65rem; }
+/* Keep the first breadcrumb clear of the shared fixed header. */
+.comparison-hub { padding-block-start: calc(var(--site-header-block) + 2 * var(--sk-space-4)); }
+.comparison-hub .comparison-breadcrumbs { margin-block: .75rem; }
+.hub-hero { padding-block-start: 0; }

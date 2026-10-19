@@ -15,6 +15,6 @@ Hub profiles and matrix summaries live in `comparison/catalog.json` under `hub`.
 - Generated HTML validation passed for the focused output. Canonicals, sitemap entries, JSON-LD, one H1, section anchors and public Markdown checked for all eight comparison routes.
 - 37 unique internal destinations checked. Unchanged ecosystem/marketing destinations resolved against the previously validated full build; exact fallback list is in `research/hub-redesign-validation.json`.
 - Desktop table fits its container. Mobile page width equals the 375px content viewport; the 1040px table scrolls within a 333px region, with row labels kept visible. Keyboard table scrolling and native disclosure activation passed.
-- Section anchors clear the fixed navigation. Matrix cells expose evidence and source scope; technical disclosures expose four subsections each.
+- A final spacing rebuild passed in 84.000558112 seconds. The breadcrumb starts at 124px, below the fixed header ending at 112px. Section anchors clear the fixed navigation. Matrix cells expose evidence and source scope; technical disclosures expose four subsections each.
 
 The full repository build and site contract run in the Pages deployment workflow. Local checks above are deliberately described as focused, not a fresh full-site build. Deployment and live verification receipts belong to the release handoff.
