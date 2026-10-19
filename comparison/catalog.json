@@ -356,7 +356,79 @@
         "ai-native-programming-languages",
         "ai-code-verification-tools",
         "verify-agent-workflows"
-      ]
+      ],
+      "deepDive": {
+        "focus": "A proof about the program. Evidence about the workflow.",
+        "question": "Is the requirement a mathematical property, an observed outcome, or both?",
+        "architecture": [
+          [
+            "Programming model",
+            "Pure, affine, explicitly effectful",
+            "Bend separates pure computation from explicit IO. Affine values constrain reuse; copyable data and annotations affect how functions are written. A team coming from ordinary imperative code should trial the data model before estimating migration effort.",
+            "A proof-friendly component still needs an IO boundary and tests for its callers.",
+            [
+              "bend"
+            ]
+          ],
+          [
+            "Assurance boundary",
+            "A law is only as useful as its statement",
+            "Bend checks proof definitions against type-level laws. The inspected negative fixture rejects an open claim offered as a proof. Unsafe and foreign code sit outside the stronger guarantee, and the guide identifies an unproven translation into the small kernel.",
+            "Review the law and trusted boundary as carefully as the generated implementation.",
+            [
+              "bend",
+              "bend-test"
+            ]
+          ],
+          [
+            "Execution model",
+            "Parallel structure needs suitable work",
+            "The guide documents CPU and GPU execution, with sequential JavaScript output. Parallel calls suit independent, balanced work; target choice and workload shape belong in the evaluation. No relative speed measurement was performed here.",
+            "Keep correctness evidence separate from target-specific latency and throughput measurements.",
+            [
+              "bend"
+            ]
+          ]
+        ],
+        "scenarios": [
+          [
+            "Invariant-heavy component",
+            "Use workflow checks to verify integration artifacts and retain the run.",
+            "Evaluate a precisely stated law and its checked proof.",
+            "A proof verdict plus tests of serialization, callers and IO."
+          ],
+          [
+            "Agent edits a repository",
+            "Compose task criteria, file/process checks and retained evidence.",
+            "A component proof can support one part of the change.",
+            "A failing control, artifact checks and a reviewed diff."
+          ],
+          [
+            "Parallel numerical workload",
+            "Measure the actual Kujo workload on the intended runtime.",
+            "Trial the documented native CPU/GPU target and balanced work.",
+            "Identical inputs, target/hardware versions, outputs and timing method."
+          ]
+        ],
+        "trial": [
+          [
+            "State two contracts",
+            "Write a component law and a separate integration acceptance criterion. Explain which inputs the law quantifies over and which external effects remain outside it."
+          ],
+          [
+            "Challenge the proof",
+            "Use the pinned Bend guide and negative fixture as starting evidence. In your own trial, deliberately break the law or proof and retain the checker rejection. This review inspected the fixture but did not run Bend."
+          ],
+          [
+            "Challenge the boundary",
+            "Feed a known wrong artifact to an independent check. Exercise the caller and serialization path so that a valid component cannot hide a broken integration."
+          ],
+          [
+            "Keep distinct verdicts",
+            "Record the proof result, integration result and performance measurement separately. Accept only the guarantee each check actually establishes."
+          ]
+        ]
+      }
     },
     {
       "slug": "kujo-vs-baml",
@@ -488,7 +560,81 @@
         "ai-native-programming-languages",
         "ai-code-verification-tools",
         "verify-agent-workflows"
-      ]
+      ],
+      "deepDive": {
+        "focus": "Typed AI application code. Explicit workflow accountability.",
+        "question": "Are you adopting an AI component, or governing an entire agent change?",
+        "architecture": [
+          [
+            "Language and compiler",
+            "Check the generation you are adopting",
+            "The pinned BAML source includes compiler diagnostics and a check command. Its current positioning includes an agent language and standalone runtime, so older prompt-DSL examples are not sufficient evidence for the current toolchain.",
+            "Pin the source or release before choosing syntax, examples and integration assumptions.",
+            [
+              "baml",
+              "baml-check"
+            ]
+          ],
+          [
+            "Tests and outputs",
+            "Representation is one layer of correctness",
+            "The inspected test command loads and runs compiled test sets; result parsing tests are also present. A typed or parsed AI response can still contain the wrong domain answer. The source review establishes implementation presence, not successful execution of a local suite.",
+            "Pair type/shape checks with an independent domain oracle and known wrong answers.",
+            [
+              "baml-test",
+              "baml-check"
+            ]
+          ],
+          [
+            "Integration and tracing",
+            "Verify the host boundary independently",
+            "The current quickstart presents incremental adoption and host-language bridges; the website describes tracing and profiling. This review did not measure their completeness or overhead, and did not verify a direct Kujo bridge.",
+            "Test the exact host language, supported boundary types, failure propagation and retained trace data.",
+            [
+              "baml-start",
+              "baml"
+            ]
+          ]
+        ],
+        "scenarios": [
+          [
+            "One AI feature in an existing app",
+            "Use external acceptance checks around the application output.",
+            "Evaluate typed AI functions and the documented host bridge.",
+            "A pinned host/runtime pair plus valid and invalid response fixtures."
+          ],
+          [
+            "A generated answer must be correct",
+            "Specify domain criteria and evaluate the actual artifact.",
+            "Use language diagnostics and tests, then validate answer semantics.",
+            "A domain oracle that rejects a well-typed but wrong answer."
+          ],
+          [
+            "An agent changes code across a repo",
+            "Compose task, evaluation and run-record tooling.",
+            "Retain application test and trace results as inputs to review.",
+            "Commands, versions, failures and evidence tied to the actual revision."
+          ]
+        ],
+        "trial": [
+          [
+            "Pin the integration",
+            "Choose one AI function and the exact host language/runtime versions. Check the current quickstart against the pinned source; do not mix generations of examples."
+          ],
+          [
+            "Separate failure classes",
+            "Prepare malformed data, well-shaped but incorrect data, and a valid answer. Use the first to challenge representation checks and the second to challenge domain assertions."
+          ],
+          [
+            "Exercise the host boundary",
+            "Test exceptions, timeouts and boundary types in your own application. A documented bridge is not evidence that every required type or failure mode works for your chosen combination."
+          ],
+          [
+            "Retain the evidence",
+            "Store check/test output and the domain oracle result with the code revision. Measure latency or token cost only with a declared model, configuration and repeated-run method."
+          ]
+        ]
+      }
     },
     {
       "slug": "kujo-vs-zero",
@@ -624,7 +770,79 @@
         "ai-native-programming-languages",
         "ai-code-verification-tools",
         "verify-agent-workflows"
-      ]
+      ],
+      "deepDive": {
+        "focus": "Predictable systems semantics. Reviewable agent outcomes.",
+        "question": "Which behavior must be predictable: resources, execution, or the delivery process?",
+        "architecture": [
+          [
+            "Project identity",
+            "A preview with a bounded evidence base",
+            "This comparison identifies Zero by zero-lang.com. A canonical repository and numbered release were not established in the reviewed official pages. That limits independent inspection of implementation and release maturity.",
+            "Treat source identity and a reproducible compiler version as prerequisites for a production trial.",
+            [
+              "zero",
+              "zero-run"
+            ]
+          ],
+          [
+            "Systems model",
+            "Cleanup and workflow determinism differ",
+            "The website describes value semantics, deterministic cleanup and structured concurrency. Those are programming-model claims, not evidence of reproducible builds, deterministic network responses or a recorded agent workflow.",
+            "Choose resource-lifetime and cancellation cases that matter to your application; observe them on an identified toolchain.",
+            [
+              "zero"
+            ]
+          ],
+          [
+            "Execution targets",
+            "Native and browser modes have different scope",
+            "The install page describes interpreter, JIT, native executable and C++ output modes, and distinguishes the WebAssembly browser compiler from native-library and native-code generation support. These capabilities were not reproduced locally.",
+            "Validate your target and required native dependencies before treating a browser example as deployment evidence.",
+            [
+              "zero-run"
+            ]
+          ]
+        ],
+        "scenarios": [
+          [
+            "Resource-sensitive application",
+            "Evaluate the actual runtime behavior separately from workflow tools.",
+            "Explore the documented value, cleanup and concurrency model.",
+            "An identified compiler plus lifecycle and cancellation observations."
+          ],
+          [
+            "Browser experiment to native delivery",
+            "Keep artifact and deployment checks explicit for each target.",
+            "Confirm the difference between browser compiler and native modes.",
+            "Target-specific build and dependency evidence, not just a browser demo."
+          ],
+          [
+            "Auditable agent changes",
+            "Use task, check and execution-evidence tools around deliverables.",
+            "A comparable receipt system was not verified in this review.",
+            "Independent checks and records; unknown support is not an absence claim."
+          ]
+        ],
+        "trial": [
+          [
+            "Resolve the baseline",
+            "Establish the compiler revision, supported platform and source/release provenance before running a dependency decision. This review leaves the repository and numbered release unknown."
+          ],
+          [
+            "Choose a lifecycle case",
+            "Use an example involving resource ownership, cleanup or cancellation. Write down the expected behavior before observing the program. This is a proposed evaluation, not a reported result."
+          ],
+          [
+            "Verify the deployment target",
+            "Test the chosen interpreter, native or generated-code mode on the required platform. Validate native-library support independently of browser examples."
+          ],
+          [
+            "Add external acceptance checks",
+            "Check artifacts and process failures with an independent oracle, retain the toolchain identity, and keep documentation claims distinct from your measured outcomes."
+          ]
+        ]
+      }
     },
     {
       "slug": "ai-native-programming-languages",

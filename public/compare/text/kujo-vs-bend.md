@@ -66,6 +66,84 @@ Bend — Unknown / not verified (toolchain): A Kujo-style cross-tool receipt sys
 
 Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
 
+## Technical deep dive
+
+A proof about the program. Evidence about the workflow.
+
+Is the requirement a mathematical property, an observed outcome, or both?
+
+### Programming model: Pure, affine, explicitly effectful
+
+Bend separates pure computation from explicit IO. Affine values constrain reuse; copyable data and annotations affect how functions are written. A team coming from ordinary imperative code should trial the data model before estimating migration effort.
+
+Evaluation implication: A proof-friendly component still needs an IO boundary and tests for its callers.
+
+Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+
+### Assurance boundary: A law is only as useful as its statement
+
+Bend checks proof definitions against type-level laws. The inspected negative fixture rejects an open claim offered as a proof. Unsafe and foreign code sit outside the stronger guarantee, and the guide identifies an unproven translation into the small kernel.
+
+Evaluation implication: Review the law and trusted boundary as carefully as the generated implementation.
+
+Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md, https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend
+
+### Execution model: Parallel structure needs suitable work
+
+The guide documents CPU and GPU execution, with sequential JavaScript output. Parallel calls suit independent, balanced work; target choice and workload shape belong in the evaluation. No relative speed measurement was performed here.
+
+Evaluation implication: Keep correctness evidence separate from target-specific latency and throughput measurements.
+
+Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+
+## Decision scenarios
+
+Proposed evaluation criteria, not comparative benchmark results.
+
+### Invariant-heavy component
+
+Kujo: Use workflow checks to verify integration artifacts and retain the run.
+
+Bend: Evaluate a precisely stated law and its checked proof.
+
+Evidence to collect: A proof verdict plus tests of serialization, callers and IO.
+
+### Agent edits a repository
+
+Kujo: Compose task criteria, file/process checks and retained evidence.
+
+Bend: A component proof can support one part of the change.
+
+Evidence to collect: A failing control, artifact checks and a reviewed diff.
+
+### Parallel numerical workload
+
+Kujo: Measure the actual Kujo workload on the intended runtime.
+
+Bend: Trial the documented native CPU/GPU target and balanced work.
+
+Evidence to collect: Identical inputs, target/hardware versions, outputs and timing method.
+
+## A focused evaluation plan
+
+Proposed steps; no competitor runtime test is claimed.
+
+### State two contracts
+
+Write a component law and a separate integration acceptance criterion. Explain which inputs the law quantifies over and which external effects remain outside it.
+
+### Challenge the proof
+
+Use the pinned Bend guide and negative fixture as starting evidence. In your own trial, deliberately break the law or proof and retain the checker rejection. This review inspected the fixture but did not run Bend.
+
+### Challenge the boundary
+
+Feed a known wrong artifact to an independent check. Exercise the caller and serialization path so that a valid component cannot hide a broken integration.
+
+### Keep distinct verdicts
+
+Record the proof result, integration result and performance measurement separately. Accept only the guarantee each check actually establishes.
+
 ## Technical architecture
 
 Bend’s guide describes a pure, affine, dependently typed language with explicit IO. It documents native CPU/GPU execution and a JavaScript target whose parallel calls run sequentially. Its proof workflow pairs laws with definitions; the reviewed negative fixture rejects an unfilled claim used as a proof. Kujo’s CLI and type checker provide execution and static diagnostics, while Spec, Eval and Workcell are separate projects. These are complementary layers, not interchangeable guarantees.

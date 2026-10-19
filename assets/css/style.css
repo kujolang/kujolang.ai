@@ -1504,3 +1504,47 @@
 .comparison-hub { padding-block-start: calc(var(--site-header-block) + 2 * var(--sk-space-4)); }
 .comparison-hub .comparison-breadcrumbs { margin-block: .75rem; }
 .hub-hero { padding-block-start: 0; }
+
+/* Direct technical comparisons share the hub's SiteKit field-guide vocabulary. */
+.direct-hero h1 { font-size: clamp(3rem, 6.5vw, 6.5rem); }
+.direct-hero h1 span { color: #666; font-size: .55em; }
+.direct-orientation h2 { font-size: clamp(1.35rem,2.4vw,2rem); line-height: 1.35; margin-bottom: 1.5rem; }
+.direct-orientation dt { font-size: .65rem; text-transform: uppercase; color: #bbb; padding-top: 1rem; border-top: 1px solid #666; }
+.direct-orientation dd { font-size: .8rem; line-height: 1.7; margin: .5rem 0 1rem; overflow-wrap: anywhere; }
+.direct-choice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.direct-choice,.direct-architecture > article { padding: clamp(1.25rem,2.5vw,2rem); border-color: var(--hub-line); }
+.direct-choice h3 { font-size: 2rem; margin: 1rem 0; }
+.direct-choice p,.direct-architecture p { font-size: .9rem; }
+.direct-architecture { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; }
+.direct-architecture > article { display: flex; flex-direction: column; }
+.direct-architecture h3 { font-size: 1.4rem; line-height: 1.35; margin: 1rem 0; }
+.direct-implication { border-top: 1px solid var(--hub-line); margin-top: 1.5rem; padding-top: 1.25rem; }
+.direct-implication strong { font-size: .65rem; text-transform: uppercase; }
+.direct-implication p { margin-top: .75rem; }
+.direct-architecture .hub-citations { margin-top: auto; padding-top: 1.5rem; font-size: .72rem; }
+.direct-context { border-left: 3px solid #111; padding: .5rem 1.5rem; margin-top: 2rem; max-width: 100ch; }
+.direct-context h3 { font-size: .8rem; text-transform: uppercase; margin-bottom: .75rem; }
+.direct-context p { font-size: .9rem; }
+.direct-matrix table { min-width: 740px; }
+.direct-matrix thead th:first-child { width: 22%; }
+.direct-scenarios table { min-width: 900px; }
+.direct-scenarios thead th { font-size: .9rem; }
+.direct-trial { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.direct-trial p { font-size: .85rem; }
+.direct-evidence { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; align-items: center; }
+.direct-evidence h3 { font-size: 1.7rem; margin: 1rem 0; }
+.direct-evidence > div > p { font-size: .9rem; margin-bottom: 1rem; }
+.direct-evidence a { font-size: .8rem; }
+.direct-boundaries { padding-block: 0; }
+.direct-boundaries section { border-top: 1px solid var(--hub-line); padding-top: 1.5rem; }
+.direct-boundaries p,.direct-answer { font-size: .9rem; }
+.direct-answer { margin-top: 1.5rem; max-width: 90ch; }
+.direct-provenance { font-size: .85rem; margin-bottom: 1.5rem; overflow-wrap: anywhere; }
+.direct-provenance p + p { margin-top: .75rem; }
+.direct-sources { padding-left: 1.25rem; }
+.direct-sources li { margin-top: 1.5rem; font-size: .85rem; }
+.direct-sources p { font-size: .75rem; color: var(--hub-muted); margin-top: .5rem; }
+.comparison-direct .hub-editorial > p { margin-top: 2rem; }
+.comparison-direct summary:focus-visible,.direct-scenarios:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+@media(max-width: 1000px) { .direct-architecture { grid-template-columns: 1fr; } .direct-trial { grid-template-columns: 1fr 1fr; } }
+@media(max-width: 760px) { .direct-choice-grid,.direct-evidence,.direct-trial { grid-template-columns: 1fr; } .direct-evidence { gap: 1.5rem; } .direct-trial li { border-right: 0; } }

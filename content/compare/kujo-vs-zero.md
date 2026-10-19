@@ -1,4 +1,5 @@
 ---
+template: "comparison-direct"
 title: "Kujo vs Zero: workflow accountability and systems semantics"
 description: "A bounded comparison of Kujo and the Zero developer preview at zero-lang.com, with explicit limits on repository and release verification."
 seo_title: "Kujo vs Zero: workflow accountability and systems semantics"
@@ -73,6 +74,84 @@ Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971e
 Zero — Unknown / not verified (toolchain): Agent task contracts and a run-receipt system were not verified.
 
 Sources: https://zero-lang.com/, https://zero-lang.com/download.html
+
+## Technical deep dive
+
+Predictable systems semantics. Reviewable agent outcomes.
+
+Which behavior must be predictable: resources, execution, or the delivery process?
+
+### Project identity: A preview with a bounded evidence base
+
+This comparison identifies Zero by zero-lang.com. A canonical repository and numbered release were not established in the reviewed official pages. That limits independent inspection of implementation and release maturity.
+
+Evaluation implication: Treat source identity and a reproducible compiler version as prerequisites for a production trial.
+
+Sources: https://zero-lang.com/, https://zero-lang.com/download.html
+
+### Systems model: Cleanup and workflow determinism differ
+
+The website describes value semantics, deterministic cleanup and structured concurrency. Those are programming-model claims, not evidence of reproducible builds, deterministic network responses or a recorded agent workflow.
+
+Evaluation implication: Choose resource-lifetime and cancellation cases that matter to your application; observe them on an identified toolchain.
+
+Sources: https://zero-lang.com/
+
+### Execution targets: Native and browser modes have different scope
+
+The install page describes interpreter, JIT, native executable and C++ output modes, and distinguishes the WebAssembly browser compiler from native-library and native-code generation support. These capabilities were not reproduced locally.
+
+Evaluation implication: Validate your target and required native dependencies before treating a browser example as deployment evidence.
+
+Sources: https://zero-lang.com/download.html
+
+## Decision scenarios
+
+Proposed evaluation criteria, not comparative benchmark results.
+
+### Resource-sensitive application
+
+Kujo: Evaluate the actual runtime behavior separately from workflow tools.
+
+Zero: Explore the documented value, cleanup and concurrency model.
+
+Evidence to collect: An identified compiler plus lifecycle and cancellation observations.
+
+### Browser experiment to native delivery
+
+Kujo: Keep artifact and deployment checks explicit for each target.
+
+Zero: Confirm the difference between browser compiler and native modes.
+
+Evidence to collect: Target-specific build and dependency evidence, not just a browser demo.
+
+### Auditable agent changes
+
+Kujo: Use task, check and execution-evidence tools around deliverables.
+
+Zero: A comparable receipt system was not verified in this review.
+
+Evidence to collect: Independent checks and records; unknown support is not an absence claim.
+
+## A focused evaluation plan
+
+Proposed steps; no competitor runtime test is claimed.
+
+### Resolve the baseline
+
+Establish the compiler revision, supported platform and source/release provenance before running a dependency decision. This review leaves the repository and numbered release unknown.
+
+### Choose a lifecycle case
+
+Use an example involving resource ownership, cleanup or cancellation. Write down the expected behavior before observing the program. This is a proposed evaluation, not a reported result.
+
+### Verify the deployment target
+
+Test the chosen interpreter, native or generated-code mode on the required platform. Validate native-library support independently of browser examples.
+
+### Add external acceptance checks
+
+Check artifacts and process failures with an independent oracle, retain the toolchain identity, and keep documentation claims distinct from your measured outcomes.
 
 ## Which Zero is being compared?
 

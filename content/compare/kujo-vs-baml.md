@@ -1,4 +1,5 @@
 ---
+template: "comparison-direct"
 title: "Kujo vs BAML: comparing agent development workflows"
 description: "Compare current BAML and Kujo across type checking, evaluations, execution evidence, adoption and the boundaries of each toolchain."
 seo_title: "Kujo vs BAML: comparing agent development workflows"
@@ -73,6 +74,84 @@ Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971e
 BAML — Partially supported (toolchain): The current website describes tracing and profiling. Completeness and overhead were not measured here.
 
 Sources: https://boundaryml.com/
+
+## Technical deep dive
+
+Typed AI application code. Explicit workflow accountability.
+
+Are you adopting an AI component, or governing an entire agent change?
+
+### Language and compiler: Check the generation you are adopting
+
+The pinned BAML source includes compiler diagnostics and a check command. Its current positioning includes an agent language and standalone runtime, so older prompt-DSL examples are not sufficient evidence for the current toolchain.
+
+Evaluation implication: Pin the source or release before choosing syntax, examples and integration assumptions.
+
+Sources: https://boundaryml.com/, https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
+
+### Tests and outputs: Representation is one layer of correctness
+
+The inspected test command loads and runs compiled test sets; result parsing tests are also present. A typed or parsed AI response can still contain the wrong domain answer. The source review establishes implementation presence, not successful execution of a local suite.
+
+Evaluation implication: Pair type/shape checks with an independent domain oracle and known wrong answers.
+
+Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs, https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
+
+### Integration and tracing: Verify the host boundary independently
+
+The current quickstart presents incremental adoption and host-language bridges; the website describes tracing and profiling. This review did not measure their completeness or overhead, and did not verify a direct Kujo bridge.
+
+Evaluation implication: Test the exact host language, supported boundary types, failure propagation and retained trace data.
+
+Sources: https://boundaryml.com/quickstart, https://boundaryml.com/
+
+## Decision scenarios
+
+Proposed evaluation criteria, not comparative benchmark results.
+
+### One AI feature in an existing app
+
+Kujo: Use external acceptance checks around the application output.
+
+BAML: Evaluate typed AI functions and the documented host bridge.
+
+Evidence to collect: A pinned host/runtime pair plus valid and invalid response fixtures.
+
+### A generated answer must be correct
+
+Kujo: Specify domain criteria and evaluate the actual artifact.
+
+BAML: Use language diagnostics and tests, then validate answer semantics.
+
+Evidence to collect: A domain oracle that rejects a well-typed but wrong answer.
+
+### An agent changes code across a repo
+
+Kujo: Compose task, evaluation and run-record tooling.
+
+BAML: Retain application test and trace results as inputs to review.
+
+Evidence to collect: Commands, versions, failures and evidence tied to the actual revision.
+
+## A focused evaluation plan
+
+Proposed steps; no competitor runtime test is claimed.
+
+### Pin the integration
+
+Choose one AI function and the exact host language/runtime versions. Check the current quickstart against the pinned source; do not mix generations of examples.
+
+### Separate failure classes
+
+Prepare malformed data, well-shaped but incorrect data, and a valid answer. Use the first to challenge representation checks and the second to challenge domain assertions.
+
+### Exercise the host boundary
+
+Test exceptions, timeouts and boundary types in your own application. A documented bridge is not evidence that every required type or failure mode works for your chosen combination.
+
+### Retain the evidence
+
+Store check/test output and the domain oracle result with the code revision. Measure latency or token cost only with a declared model, configuration and repeated-run method.
 
 ## Technical architecture
 

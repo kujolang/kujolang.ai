@@ -1,3 +1,4 @@
+import {renderDirect,validateDirect,directMarkdown} from './render-comparison-direct.mjs';
 import {renderHub,validateHub} from './render-comparison-hub.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -24,6 +25,7 @@ export function validate(c){
   must(Array.isArray(p.sections)&&p.sections.length>0,`${p.slug}: missing sections`);
   for(const s of p.sections??[])must(nonempty(s.heading)&&nonempty(s.body),`${p.slug}: incomplete section`);
   if(p.kind==='direct'){
+   validateDirect(p,c);
    const t=p.technology??{};for(const f of ['name','website','documentation','version'])must(nonempty(t[f]),`${p.slug}: missing technology ${f}`);
    must(nonempty(t.repository)||nonempty(t.repositoryNote),`${p.slug}: missing repository provenance`);
    must(Array.isArray(t.aliases),`${p.slug}: missing aliases`);
@@ -45,6 +47,7 @@ const labels={'verified-supported':'Verified supported','verified-unsupported':'
 function sourceLinks(ids,c){return ids.map(id=>link(c.sources[id].url,c.sources[id].label)).join('; ')}
 function cell(f,c){return `<p class="comparison-status">${labels[f.status]} · ${esc(f.layer)}</p><p>${esc(f.text)}</p><p class="comparison-sources">${sourceLinks(f.sources,c)}</p>`}
 function body(p,c){
+ if(p.kind==='direct')return renderDirect(p,c);
  let h=`<p class="comparison-answer">${esc(p.summary)}</p>\n<p class="comparison-review">Last reviewed: <time datetime="${p.verified}">${p.verified}</time>. Written from Kujo’s perspective. ${link('/compare/editorial-policy.md','Editorial policy')} · ${link(`/compare/text/${p.slug}.md`,'Read as Markdown')}</p>`;
  if(p.technology){const t=p.technology;h+=`<section aria-label="Technology identity"><h2>At a glance</h2><dl><dt>Compared project</dt><dd>${link(t.website,t.name)} · ${link(t.documentation,'Documentation')}</dd><dt>Reviewed version</dt><dd>${esc(t.version)}</dd><dt>Repository</dt><dd>${t.repository?link(t.repository,'Canonical source'):esc(t.repositoryNote)}</dd><dt>Kujo baseline</dt><dd>Kujo 1.8.1 runtime and pinned ecosystem sources; no universal proof or performance claim.</dd></dl></section>`;
  h+=`<h2>Capability matrix</h2><p>Statuses describe the evidence reviewed, not a score. “Partially supported” includes documentation-only support without local reproduction; “unknown” never means unsupported. Language and ecosystem layers are named separately.</p><div class="comparison-table" role="region" aria-label="Scrollable capability comparison" tabindex="0"><table><caption>Kujo and ${esc(t.name)}: scope, evidence and limitations</caption><thead><tr><th scope="col">Dimension</th><th scope="col">Kujo</th><th scope="col">${esc(t.name)}</th></tr></thead><tbody>`;
@@ -60,12 +63,13 @@ function body(p,c){
 }
 function markdown(p,c){let m=`# ${p.title}\n\n${p.summary}\n\nLast reviewed: ${p.verified}. Canonical page: https://kujolang.ai/compare/${p.slug}/\n\n`;
  if(p.technology){const t=p.technology;m+=`## At a glance\n\n${t.name}: ${t.website}\n\nDocumentation: ${t.documentation}\n\nVersion: ${t.version}\n\nRepository: ${t.repository??t.repositoryNote}\n\n## Capability matrix\n\n`;for(const[label,id,f]of p.dimensions){m+=`### ${label}\n\n`;for(const[n,v]of [['Kujo',c.kujoFacts[id]],[t.name,f]])m+=`${n} — ${labels[v.status]} (${v.layer}): ${v.text}\n\nSources: ${v.sources.map(s=>c.sources[s].url).join(', ')}\n\n`;}}
+ if(p.kind==='direct')m+=directMarkdown(p,c);
  for(const s of p.sections)m+=`## ${s.heading}\n\n${s.body}\n\n`;m+='## Frequently asked questions\n\n';for(const[q,a]of p.faq)m+=`### ${q}\n\n${a}\n\n`;
  m+='## References\n\n';for(const id of p.sources){const s=c.sources[id];m+=`- [${s.label}](${s.url}) — ${s.level}; ${s.version}; reviewed ${s.verified}.\n`;}
  m+='\n## Related pages\n\n'+p.related.map(s=>`- [${c.pages.find(p=>p.slug===s).title}](https://kujolang.ai/compare/${s}/)`).join('\n')+'\n\n[Editorial policy](https://kujolang.ai/compare/editorial-policy.md) · [Report inaccuracies](https://github.com/kujolang/kujolang.ai/issues/new)\n';return m;
 }
 export function outputs(c){validate(c);const out=new Map();for(const p of c.pages){
- const front={title:p.title,description:p.description,seo_title:p.title,custom_url:p.slug,date:p.verified,author:'1',social_image:`/assets/images/social/${p.slug}.jpg`};
+ const front={...(p.kind==='direct'?{template:'comparison-direct'}:{}),title:p.title,description:p.description,seo_title:p.title,custom_url:p.slug,date:p.verified,author:'1',social_image:`/assets/images/social/${p.slug}.jpg`};
  out.set(`content/compare/${p.slug}.md`,'---\n'+Object.entries(front).map(([k,v])=>`${k}: ${JSON.stringify(v)}`).join('\n')+'\n---\n\n'+markdown(p,c).replace(/^# [^\n]+\n\n/,''));
  out.set(`templates/compare-content/${p.slug}.html`,body(p,c));
  out.set(`public/compare/text/${p.slug}.md`,markdown(p,c));
