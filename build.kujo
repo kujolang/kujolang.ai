@@ -4737,7 +4737,9 @@ func build_site(settings) {
 
 		listing_navigation := build_navigation(pages_data, custom_collections, listing_route, settings["blog_slug"])
 		listing_description := settings["site_tagline"]
+		listing_seo_title := collection_title
 		if collection_slug == "compare" {
+			listing_seo_title = "Compare Kujo, Bend, BAML and Zero"
 			listing_description = "Compare Kujo, Bend, BAML and Zero through source-backed language and workflow evidence, with guides to verifying agent-generated software."
 		} else if collection_slug == "ecosystem" {
 			listing_description = "Explore the Kujo ecosystem of language primitives, local-first tools, and inspectable AI-native application showcases."
@@ -4755,7 +4757,7 @@ func build_site(settings) {
 			listing_navigation,
 			listing_content,
 			{
-				"seo_title": collection_title,
+				"seo_title": listing_seo_title,
 				"seo_description": listing_description,
 				"lang": "en",
 				"social_image": "/assets/images/social/" + collection_slug + ".jpg"
