@@ -1,0 +1,29 @@
+{
+  "phase": "after",
+  "generated_at": "2026-10-19T18:24:54.501643+00:00",
+  "origin": "https://kujolang.ai",
+  "canonical_pages": 255,
+  "production_200_pages": 0,
+  "indexable_pages": 255,
+  "sitemap_urls": 255,
+  "missing_titles": 0,
+  "duplicate_titles": 0,
+  "missing_descriptions": 0,
+  "duplicate_descriptions": 0,
+  "h1_issues": 1,
+  "missing_canonicals": 0,
+  "canonical_mismatches": 0,
+  "broken_internal_links": 0,
+  "orphan_pages": 0,
+  "pages_deeper_than_three_clicks": 0,
+  "images": 1064,
+  "missing_alt": 0,
+  "missing_dimensions": 0,
+  "responsive_images": 553,
+  "missing_responsive_candidates": 0,
+  "schema_parse_errors": 0,
+  "schema_coverage_pages": 255,
+  "issue_counts": {
+    "h1 count 2": 1
+  }
+}

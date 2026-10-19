@@ -1,0 +1,34 @@
+{
+  "productionBuild": {
+    "runtime": "Kujo 1.8.0 macOS x64",
+    "exitCode": 0,
+    "reportedSeconds": 2074.473751285
+  },
+  "unitTests": {
+    "passed": 14,
+    "failed": 0
+  },
+  "comparisonVerifier": {
+    "routes": 8,
+    "internalLinksChecked": 342,
+    "errors": []
+  },
+  "htmlValidation": {
+    "files": 256,
+    "passed": true
+  },
+  "siteContract": {
+    "passed": true,
+    "socialCards": 255,
+    "responsiveRenderedImages": 553
+  },
+  "responsiveImageVariants": 1167,
+  "sourceURLsHTTP200": 24,
+  "routeDelta": {
+    "added": 8,
+    "removed": 0
+  },
+  "newSEOIssues": 0,
+  "preexistingH1Issues": 1,
+  "productionDeployed": false
+}

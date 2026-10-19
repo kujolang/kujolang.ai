@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "kujo-vs-bend",
+    "pageWidth": 375,
+    "viewport": 375
+  },
+  {
+    "slug": "kujo-vs-baml",
+    "pageWidth": 375,
+    "viewport": 375
+  },
+  {
+    "slug": "kujo-vs-zero",
+    "pageWidth": 375,
+    "viewport": 375
+  },
+  {
+    "slug": "ai-native-programming-languages",
+    "pageWidth": 375,
+    "viewport": 375
+  },
+  {
+    "slug": "programming-languages-for-ai-agents",
+    "pageWidth": 375,
+    "viewport": 375
+  },
+  {
+    "slug": "ai-code-verification-tools",
+    "pageWidth": 375,
+    "viewport": 375
+  },
+  {
+    "slug": "verify-agent-workflows",
+    "pageWidth": 375,
+    "viewport": 375
+  },
+  {
+    "slug": "compare",
+    "pageWidth": 375,
+    "viewport": 375
+  }
+]
