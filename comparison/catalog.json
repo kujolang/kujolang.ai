@@ -3,16 +3,16 @@
   "sources": {
     "kujo": {
       "label": "Kujo runtime and CLI source",
-      "url": "https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/main.rs",
+      "url": "https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs",
       "level": "implementation inspected",
-      "version": "Kujo 1.8.1 source snapshot",
+      "version": "Kujo 1.8.2 source snapshot",
       "verified": "2026-10-19"
     },
     "types": {
       "label": "Kujo type checker",
-      "url": "https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs",
+      "url": "https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs",
       "level": "implementation inspected",
-      "version": "acb9107dc38de699c540f5b78d924257def0b95e",
+      "version": "549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1",
       "verified": "2026-10-19"
     },
     "bend": {
@@ -820,7 +820,7 @@
         },
         {
           "heading": "Run the artifact verification exercise",
-          "body": "Download [produce.kujo](/compare/evidence/produce.kujo) and [verify.py](/compare/evidence/verify.py) into the same directory. Run `KUJO_BIN=/path/to/kujo python3 verify.py`. The harness expects Kujo 1.8.1, checks a correct result, checks an intentionally wrong result, and writes evidence.json with command outcomes, environment details and hashes. It makes no network requests and uses no model credentials. See the [methodology](/compare/evidence/README.md)."
+          "body": "Download [produce.kujo](/compare/evidence/produce.kujo) and [verify.py](/compare/evidence/verify.py) into the same directory. Run `KUJO_BIN=/path/to/kujo python3 verify.py`. The harness expects Kujo 1.8.2, checks a correct result, checks an intentionally wrong result, and writes evidence.json with command outcomes, environment details and hashes. It makes no network requests and uses no model credentials. See the [methodology](/compare/evidence/README.md)."
         },
         {
           "heading": "Interpret the result narrowly",

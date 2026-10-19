@@ -4,7 +4,7 @@ Reviewed 2026-10-19. This is a reproducibility exercise, not a cross-language be
 
 ## Workload and conditions
 
-Kujo 1.8.1 computes 6 × 7 and writes a JSON object to stdout. Python 3 independently parses that artifact and requires an integer `total` equal to 42. A wrong-value control plus malformed, missing-field and wrong-type controls must fail. No model, provider credentials, network or additional dependencies are used.
+Kujo 1.8.2 computes 6 × 7 and writes a JSON object to stdout. Python 3 independently parses that artifact and requires an integer `total` equal to 42. A wrong-value control plus malformed, missing-field and wrong-type controls must fail. No model, provider credentials, network or additional dependencies are used.
 
 Download `produce.kujo` and `verify.py` into one directory, then run:
 
@@ -12,7 +12,7 @@ Download `produce.kujo` and `verify.py` into one directory, then run:
 KUJO_BIN=/absolute/path/to/kujo python3 verify.py
 ```
 
-The runner requires `kujo --version` to report `kujo 1.8.1`. Expected overall exit: 0. A failed producer or incorrectly accepted negative control makes the exercise fail. `evidence.json` records actual environment, commands, exit codes, output and SHA-256 hashes. Each invocation is one repetition. Do not publish timing conclusions from this exercise.
+The runner requires `kujo --version` to report `kujo 1.8.2`. Expected overall exit: 0. A failed producer or incorrectly accepted negative control makes the exercise fail. `evidence.json` records actual environment, commands, exit codes, output and SHA-256 hashes. Each invocation is one repetition. Do not publish timing conclusions from this exercise.
 
 ## Interpretation
 

@@ -28,7 +28,7 @@ Repository: https://github.com/BoundaryML/baml
 
 Kujo — Verified supported (language and first-party ecosystem): A programming language plus separately versioned tools for explicit agent workflow contracts and inspectable outcomes.
 
-Sources: https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/main.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
 BAML — Partially supported (language and toolchain): An agent-oriented language with AI functions and incremental host-language adoption.
 
@@ -38,7 +38,7 @@ Sources: https://boundaryml.com/
 
 Kujo — Verified supported (language and first-party ecosystem): Type checking in the runtime; task schema validation and outcome checks belong to Spec and Eval. Passing these checks is not a universal correctness proof.
 
-Sources: https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
 BAML — Verified supported (language): Project diagnostics are implemented by the current check command.
 
@@ -48,7 +48,7 @@ Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e2
 
 Kujo — Verified supported (language and first-party ecosystem): Type checking in the runtime; task schema validation and outcome checks belong to Spec and Eval. Passing these checks is not a universal correctness proof.
 
-Sources: https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
 BAML — Verified supported (toolchain): A test runner and result parsing tests exist in the reviewed source. This review did not execute them.
 
@@ -58,7 +58,7 @@ Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e2
 
 Kujo — Unknown / not verified (language): A general dependent-type proof system was not established by this review. Do not interpret the positioning “proves it works” as mathematical verification of arbitrary code.
 
-Sources: https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs
 
 BAML — Unknown / not verified (language): A general dependent-type proof guarantee was not verified in the reviewed sources.
 
@@ -114,8 +114,8 @@ No. Type checks and structured parsing constrain representation. Domain correctn
 - [BAML check command](https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs) — implementation inspected; 648ad5ed10f543c129b51789c7d02e29b64f06f7; reviewed 2026-10-19.
 - [BAML test runner and result tests](https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs) — implementation and tests inspected; not executed; 648ad5ed10f543c129b51789c7d02e29b64f06f7; reviewed 2026-10-19.
 - [BAML quickstart](https://boundaryml.com/quickstart) — official documentation; Documentation snapshot; no release version asserted; reviewed 2026-10-19.
-- [Kujo runtime and CLI source](https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/main.rs) — implementation inspected; Kujo 1.8.1 source snapshot; reviewed 2026-10-19.
-- [Kujo type checker](https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs) — implementation inspected; acb9107dc38de699c540f5b78d924257def0b95e; reviewed 2026-10-19.
+- [Kujo runtime and CLI source](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs) — implementation inspected; Kujo 1.8.2 source snapshot; reviewed 2026-10-19.
+- [Kujo type checker](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs) — implementation inspected; 549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1; reviewed 2026-10-19.
 - [Spec scope and implementation](https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo) — implementation inspected; 1211f37a09314be7150734bf15a55e9b2ea6504d; reviewed 2026-10-19.
 - [Eval scope and implementation](https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo) — implementation inspected; 71e66dff780d6930bcbe093c046bf31aa26411df; reviewed 2026-10-19.
 - [Runledger scope and implementation](https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo) — implementation inspected; 334ddd4d33c8cb2612c8edab971ee69170824133; reviewed 2026-10-19.

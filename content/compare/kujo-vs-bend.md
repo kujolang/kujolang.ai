@@ -28,7 +28,7 @@ Repository: https://github.com/bendlang/bend
 
 Kujo — Verified supported (language and first-party ecosystem): A programming language plus separately versioned tools for explicit agent workflow contracts and inspectable outcomes.
 
-Sources: https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/main.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
 Bend — Verified supported (language): Laws and proof checking for agent-authored programs, with parallel execution.
 
@@ -38,7 +38,7 @@ Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34
 
 Kujo — Verified supported (language and first-party ecosystem): Type checking in the runtime; task schema validation and outcome checks belong to Spec and Eval. Passing these checks is not a universal correctness proof.
 
-Sources: https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
 Bend — Verified supported (language): Type-level laws paired with proof definitions; open claims are rejected when used as proof.
 
@@ -48,7 +48,7 @@ Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34
 
 Kujo — Unknown / not verified (language): A general dependent-type proof system was not established by this review. Do not interpret the positioning “proves it works” as mathematical verification of arbitrary code.
 
-Sources: https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs
 
 Bend — Verified supported (language): Dependent types and an optional second kernel verdict, subject to documented trust boundaries.
 
@@ -58,7 +58,7 @@ Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34
 
 Kujo — Verified supported (language): The CLI contains bytecode VM, interpreter and optional JIT paths. Backend availability and behavior must be checked for the pinned runtime and target.
 
-Sources: https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/main.rs
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs
 
 Bend — Verified supported (language): Native CPU/GPU and JavaScript targets; the JavaScript target is sequential.
 
@@ -112,8 +112,8 @@ This review did not establish an equivalent general proof system in Kujo. Kujo�
 
 - [Bend language guide](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md) — official documentation; Bend website v2.0.37; pinned source snapshot; reviewed 2026-10-19.
 - [Bend rejects an unfilled law used as proof](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend) — test source inspected; not executed; 64230dcb96f2da2cc5a44524e42d5eb34771a6ec; reviewed 2026-10-19.
-- [Kujo runtime and CLI source](https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/main.rs) — implementation inspected; Kujo 1.8.1 source snapshot; reviewed 2026-10-19.
-- [Kujo type checker](https://github.com/kujolang/kujo/blob/acb9107dc38de699c540f5b78d924257def0b95e/src/type_checker.rs) — implementation inspected; acb9107dc38de699c540f5b78d924257def0b95e; reviewed 2026-10-19.
+- [Kujo runtime and CLI source](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs) — implementation inspected; Kujo 1.8.2 source snapshot; reviewed 2026-10-19.
+- [Kujo type checker](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs) — implementation inspected; 549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1; reviewed 2026-10-19.
 - [Spec scope and implementation](https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo) — implementation inspected; 1211f37a09314be7150734bf15a55e9b2ea6504d; reviewed 2026-10-19.
 - [Eval scope and implementation](https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo) — implementation inspected; 71e66dff780d6930bcbe093c046bf31aa26411df; reviewed 2026-10-19.
 - [Workcell scope and implementation](https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo) — implementation inspected; a276a92c6bac9279a8cb36ace9687ade34d5128f; reviewed 2026-10-19.

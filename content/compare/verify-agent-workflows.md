@@ -38,7 +38,7 @@ Review the actual diff and the evidence that maps to each acceptance criterion. 
 
 ## Run the artifact verification exercise
 
-Download [produce.kujo](/compare/evidence/produce.kujo) and [verify.py](/compare/evidence/verify.py) into the same directory. Run `KUJO_BIN=/path/to/kujo python3 verify.py`. The harness expects Kujo 1.8.1, checks a correct result, checks an intentionally wrong result, and writes evidence.json with command outcomes, environment details and hashes. It makes no network requests and uses no model credentials. See the [methodology](/compare/evidence/README.md).
+Download [produce.kujo](/compare/evidence/produce.kujo) and [verify.py](/compare/evidence/verify.py) into the same directory. Run `KUJO_BIN=/path/to/kujo python3 verify.py`. The harness expects Kujo 1.8.2, checks a correct result, checks an intentionally wrong result, and writes evidence.json with command outcomes, environment details and hashes. It makes no network requests and uses no model credentials. See the [methodology](/compare/evidence/README.md).
 
 ## Interpret the result narrowly
 
