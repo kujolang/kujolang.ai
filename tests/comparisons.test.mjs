@@ -11,6 +11,7 @@ for(const [name,mutate]of [
  ['unknown Kujo fact',c=>c.pages[0].dimensions[0][1]='missing'],
  ['broken related page',c=>c.pages[0].related=['missing']],
  ['path traversal',c=>c.pages[0].slug='../escape'],
+ ['social card path traversal',c=>c.pages[0].socialCard='../escape'],
  ['missing competitor recommendation',c=>c.pages[0].sections=c.pages[0].sections.filter(s=>s.heading!=='When to choose Bend')],
  ['missing identity provenance',c=>{c.pages[2].technology.repository=null;delete c.pages[2].technology.repositoryNote}],
  ['duplicate route',c=>c.pages.push(c.pages[0])],

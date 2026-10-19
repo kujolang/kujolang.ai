@@ -923,7 +923,8 @@
             "Export and verify the projection, then introduce drift and observe the diagnostic. Add your own task-level acceptance checks before considering deployment."
           ]
         ]
-      }
+      },
+      "socialCard": "kujo-vs-zerolang"
     },
     {
       "slug": "ai-native-programming-languages",

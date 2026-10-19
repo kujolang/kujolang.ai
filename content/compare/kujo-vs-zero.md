@@ -6,7 +6,7 @@ seo_title: "Kujo vs Zerolang: workflow evidence and checked graph edits"
 custom_url: "kujo-vs-zero"
 date: "2026-10-19"
 author: "1"
-social_image: "/assets/images/social/kujo-vs-zero.jpg"
+social_image: "/assets/images/social/kujo-vs-zerolang.jpg"
 ---
 
 Vercel Zerolang makes the program graph the normal compiler input and lets agents submit checked semantic edits. Kujo combines language execution with separate tools for task requirements, output checks and run records. We inspected Zerolang’s repository and exercised release 0.3.4, including rejected patches and failing tests. These approaches address different parts of trusting agent-written software.

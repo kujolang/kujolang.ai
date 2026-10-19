@@ -21,6 +21,7 @@ export function validate(c){
  for(const [id,f] of Object.entries(c.kujoFacts??{}))fact(f,id);
  for(const p of pages){
   must(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p.slug??''),`invalid slug ${p.slug}`);must(!slugs.has(p.slug),`duplicate slug ${p.slug}`);slugs.add(p.slug);
+  must(p.socialCard===undefined||/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p.socialCard),`${p.slug}: invalid social card id`);
   for(const field of ['title','description','summary'])must(nonempty(p[field]),`${p.slug}: missing ${field}`);
   must(date(p.verified),`${p.slug}: invalid verified date`);must(['direct','discovery','guide'].includes(p.kind),`${p.slug}: invalid kind`);refs(p.sources,p.slug);
   must(Array.isArray(p.sections)&&p.sections.length>0,`${p.slug}: missing sections`);
@@ -52,7 +53,7 @@ function markdown(p,c){let m=`# ${p.title}\n\n${p.summary}\n\nLast reviewed: ${p
  m+='\n## Related pages\n\n'+p.related.map(s=>`- [${c.pages.find(p=>p.slug===s).title}](https://kujolang.ai/compare/${s}/)`).join('\n')+'\n\n[Editorial policy](https://kujolang.ai/compare/editorial-policy.md) · [Report inaccuracies](https://github.com/kujolang/kujolang.ai/issues/new)\n';return m;
 }
 export function outputs(c){validate(c);const out=new Map();for(const p of c.pages){
- const front={template:p.kind==='direct'?'comparison-direct':'comparison-guide',title:p.title,description:p.description,seo_title:p.title,custom_url:p.slug,date:p.verified,author:'1',social_image:`/assets/images/social/${p.slug}.jpg`};
+ const front={template:p.kind==='direct'?'comparison-direct':'comparison-guide',title:p.title,description:p.description,seo_title:p.title,custom_url:p.slug,date:p.verified,author:'1',social_image:`/assets/images/social/${p.socialCard??p.slug}.jpg`};
  out.set(`content/compare/${p.slug}.md`,'---\n'+Object.entries(front).map(([k,v])=>`${k}: ${JSON.stringify(v)}`).join('\n')+'\n---\n\n'+markdown(p,c).replace(/^# [^\n]+\n\n/,''));
  out.set(`templates/compare-content/${p.slug}.html`,body(p,c));
  out.set(`public/compare/text/${p.slug}.md`,markdown(p,c));
