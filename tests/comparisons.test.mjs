@@ -16,3 +16,12 @@ for(const [name,mutate]of [
  ['duplicate route',c=>c.pages.push(c.pages[0])],
  ['invalid review date',c=>c.pages[0].verified='yesterday']
 ])test(`reject ${name}`,()=>{const c=structuredClone(catalog);mutate(c);assert.throws(()=>validate(c))});
+
+test('hub rejects a stale fact reference before publication',()=>{
+ const c=structuredClone(catalog);c.hub.rows[0].cells[1].refs=['kujo-vs-bend:99'];
+ assert.throws(()=>validate(c),/Unknown hub fact/);
+});
+test('hub rejects a missing language cell rather than shifting columns',()=>{
+ const c=structuredClone(catalog);c.hub.rows[0].cells.pop();
+ assert.throws(()=>validate(c),/Invalid hub row/);
+});

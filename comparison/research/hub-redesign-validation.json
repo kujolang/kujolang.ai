@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "comparisonRoutes": 8,
+  "uniqueInternalDestinations": 37,
+  "unchangedRoutesResolvedAgainstPriorFullBuild": [
+    "/contact/",
+    "/ecosystem/",
+    "/ecosystem/eval/",
+    "/ecosystem/primitives/",
+    "/ecosystem/runledger/",
+    "/ecosystem/shipcheck/",
+    "/ecosystem/showcase/",
+    "/ecosystem/skills/",
+    "/ecosystem/spec/",
+    "/ecosystem/tooling/",
+    "/ecosystem/workcell/",
+    "/ecosystem/workflows/",
+    "/ethos/",
+    "/providers/"
+  ],
+  "hubLanguages": 4,
+  "matrixDimensions": 6,
+  "matrixCells": 24,
+  "technicalBriefs": 3,
+  "mobileViewport": 375,
+  "mobilePageWidth": 375,
+  "mobileMatrixViewport": 333,
+  "mobileMatrixWidth": 1040,
+  "unitTestsPassed": 16,
+  "focusedBuildSeconds": 90.29580231099999
+}

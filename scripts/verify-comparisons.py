@@ -40,6 +40,10 @@ for route in routes:
   if target.is_dir():target=target/'index.html'
   check(target.is_file(),route+': broken internal link '+link)
   if u.fragment and target.is_file() and target.suffix=='.html':check(u.fragment in Page(target.read_text()).ids,route+': missing anchor '+link)
+ if route=='compare/':
+  check(p.tables==1,'hub: expected four-language matrix')
+  check({'choose','capabilities','architecture','workflow','evidence','guides'}<=p.ids,'hub: missing section anchors')
+  check((out/'compare/text/overview.md').read_bytes()==(root/'public/compare/text/overview.md').read_bytes(),'hub: public overview drift')
  if route!='compare/':
   slug=route.strip('/').split('/')[-1];record=next(r for r in catalog['pages'] if r['slug']==slug)
   check(p.h2>=len(record['sections']),slug+': section HTML missing or escaped')
