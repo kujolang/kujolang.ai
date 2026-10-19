@@ -44,3 +44,25 @@ test('each technical comparison publishes its evaluation plan in HTML and Markdo
   assert.match(out.get(`content/compare/${p.slug}.md`),/template: "comparison-direct"/);
  }
 });
+
+test('guides reject unsourced architecture cards and matrix claims',()=>{
+ for(const key of ['cards','rows']){
+  const c=structuredClone(catalog);c.pages.find(p=>p.kind!=='direct').guide[key][0][4]=['missing'];
+  assert.throws(()=>validate(c),/invalid guide .* evidence/);
+ }
+});
+test('guides reject incomplete examples instead of shifting table columns',()=>{
+ const c=structuredClone(catalog);c.pages.find(p=>p.kind==='guide').guide.examples[0].pop();
+ assert.throws(()=>validate(c),/invalid guide example/);
+});
+test('every guide preserves its detailed criteria and examples in HTML and Markdown',()=>{
+ const out=outputs(catalog);
+ for(const p of catalog.pages.filter(p=>p.kind!=='direct')){
+  const html=out.get(`templates/compare-content/${p.slug}.html`);
+  const md=out.get(`public/compare/text/${p.slug}.md`);
+  assert.equal((html.match(/<table>/g)||[]).length,2);
+  for(const rows of [p.guide.steps,p.guide.cards,p.guide.rows,p.guide.examples])for(const row of rows){assert.ok(md.includes(row[0]),p.slug);}
+  for(const s of p.sections)assert.ok(html.includes(s.heading),p.slug);
+  assert.match(out.get(`content/compare/${p.slug}.md`),/template: "comparison-guide"/);
+ }
+});

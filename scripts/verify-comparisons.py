@@ -50,6 +50,9 @@ for route in routes:
   if record['kind']=='direct':
    check(p.tables==2,slug+': capability and decision tables missing')
    check({'choose','architecture','capabilities','scenarios','evaluation','boundaries','questions','sources'}<=p.ids,slug+': technical section anchors missing')
+  else:
+   check(p.tables==2,slug+': decision and example tables missing')
+   check({'lenses','decision','practice','example','mistakes','detail','questions','sources','continue'}<=p.ids,slug+': guide anchors missing')
   check((out/'compare/text'/f'{slug}.md').read_bytes()==(root/'public/compare/text'/f'{slug}.md').read_bytes(),slug+': public text drift')
   check(url in (out/'llms.txt').read_text(),slug+': missing llms entry')
 check(len(titles)==len(set(titles)),'duplicate comparison titles');check(len(descriptions)==len(set(descriptions)),'duplicate comparison descriptions')

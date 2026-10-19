@@ -36,10 +36,12 @@ The public Markdown and HTML share catalog facts. HTML uses an accessible horizo
 
 See `research/implementation-inventory.md`, `research/ecosystem-inventory.json`, `research/research-report.md`, `research/opportunities.csv`, `research/source-checks.json`, `measurement.md` and `validation.md`. The public editorial policy is `public/compare/editorial-policy.md`. The artifact exercise is public, runnable and deliberately not a cross-language benchmark.
 
-No production deployment is authorized. Push only the feature branch; pushing main triggers GitHub Pages.
+Pushing main triggers GitHub Pages. The user authorized comparison releases and live verification in this session; preserve the required checks before publishing.
 
 ## Hub overview
 
 `catalog.hub` owns the four profiles and six comparison dimensions. Each supported matrix cell references an existing catalog fact by `kujo:factName` or `page-slug:dimensionLabel`; the generator rejects stale references. Empty references mean not assessed, never unsupported. `render-comparison-hub.mjs` produces the hub template and public `overview.md`. Technical briefs reuse the direct comparisons; update their sections at the source. SiteKit card, table, feature-grid and native accordion primitives provide the layout without new client JavaScript.
 
 Direct comparison pages also use catalog `deepDive` records for architecture lenses, decision scenarios and proposed evaluation plans. See [direct-redesign.md](direct-redesign.md). Their generated frontmatter selects the field-guide template; do not edit generated HTML or Markdown directly.
+
+Discovery and workflow guides use catalog `guide` data for cited decision lenses and matrices, evaluation steps, worked examples and interpretation pitfalls. `render-comparison-guide.mjs` projects them into the shared field-guide template and public Markdown. See [guide-redesign.md](guide-redesign.md).
