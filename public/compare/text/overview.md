@@ -122,10 +122,11 @@ https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-ga
 
 Patch rejection and executable tests
 
-verified-supported · toolchain: Stale-hash and wrong-return-type patches were rejected without changing the graph in our 0.3.4 fixtures.
+verified-supported · toolchain: Stale hashes, ill-typed patches and conflicting graph/source edits were rejected. The tested patch failures and merge conflicts preserved stored fixture files.
 
 https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c
 https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/zerolang-contract-review-2026-10-20
 
 ## Formal proof
 
@@ -237,11 +238,12 @@ https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-ga
 
 Graph hashes, patch results and projection checks
 
-verified-supported · toolchain: Graph hashes, structured patch outcomes and projection checks provide review evidence. A separate end-to-end run ledger was not assessed.
+verified-supported · toolchain: Graph hashes, patch outcomes, no-write projection checks and explicit conflict diagnostics provide review evidence. Import/export and three-way merge behavior were exercised; a separate end-to-end run ledger was not assessed.
 
 https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c
 https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/projections.md
 https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/zerolang-contract-review-2026-10-20
 
 ## Execution boundary
 
@@ -314,7 +316,7 @@ BAML’s type declarations, generated Python signatures, Pydantic models and mod
 
 ### Technical architecture
 
-Zerolang stores declarations, types, calls and related facts in zero.graph. Agents query and patch that graph; humans can export readable .0 projections. The normal package compile path consumes the graph. Our stale-hash and wrong-return-type patches failed without changing the stored graph. Kujo’s separate workflow tools check task contracts and observed outcomes; they do not provide this graph-editing model.
+Zerolang stores declarations, types, calls and related facts in zero.graph. Agents query and patch that graph; humans can export readable .0 projections. In our 0.3.4 fixtures, source-only edits refreshed the graph before execution, graph-only edits ran from the graph, and conflicting edits stopped with RGP006. Kujo’s separate workflow tools check task contracts and observed outcomes; they do not provide this graph-editing model.
 
 ### When to choose Zerolang
 
@@ -326,7 +328,7 @@ A process or file boundary could connect a Zerolang component to external accept
 
 ### Honest limitations
 
-A valid graph can still implement the wrong behavior. Our graph check passed while a deliberately incorrect expected result made zero test fail. We did not establish general theorem proving, production sandbox security, cross-target support or a speed advantage. Runtime capability facts are not a substitute for an operating-system isolation boundary.
+A valid graph can still implement the wrong behavior: our graph check passed while an incorrect expected result made zero test fail. Import and export resolve source/graph conflicts by selecting a side; they do not combine both intentions. We did not test simultaneous writers, interrupted writes, complex multi-file merges or other runtime targets. Runtime capability facts are not a substitute for an operating-system isolation boundary.
 
 ## Kujo workflow composition
 
