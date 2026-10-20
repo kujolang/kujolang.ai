@@ -1,0 +1,22 @@
+{
+  "README.md": "6d205a3baed9336c0d80053bf1c60199b99d432c01b3210e17d108b4462dbbc2",
+  "bad.baml": "9a838560e49e25407a9d081722f5e240fb6c38c318f5d4b66c7a62dbd940d7d6",
+  "baml.toml": "ac5d4c5403caff671e0e1bcc4c92be8d300531b5d61d41c9bc6060ec45a2928a",
+  "compiler-results.json": "ecdfd5d95571d65060d5003519c5d5a498533b325a6e60421c0f3fdf229b1cf0",
+  "followup-results.json": "968cc675c872d40f008ede77f34f4b63095c6f823561bb48be529ae12525bace",
+  "followup.py": "a3a4f9bc2826b1feaaa752e89f1a6a39e7e9c27c11af27ddf738ef2b5af8b3dd",
+  "generated-__init__.py": "c3e29fcf2fb15f394270170fd29a93cebb86be279a528d95da1929405b0e8772",
+  "generated-__init__.pyi": "8a09777294be5835d04863bb5f5bd6cd38ef4bd018776225f6a4efc49c489807",
+  "good.baml": "72c1b65848711c5c25272ca10a9ef9135b985038eaf73d5ad3707b45527a9d47",
+  "main.baml": "d4e454cea7c3f46bb292dfdcb077972a93498734df16c12c5d2c3c988840981c",
+  "mypy-invalid.txt": "8952d4e9a55bd3f7ba8c372ad3d387fc837040d2544d3569c270d60d0cfc4826",
+  "mypy-valid.txt": "5d4b6d285b77932e3d08212c3b4974d0a803f98ec60408ac6ccf6a063fa6c19e",
+  "probe-results.json": "2277c848a4660e46cf8bb6589ad662becab85024682fa8b972f9f27ad5b3fe81",
+  "probe.py": "23ea9211c0e9a969a43a86bb63138186744ff0665d4ed1f96fa533f827f7018f",
+  "requirements-observed.txt": "164eba5de9ad54087999bd2e7bd1f187eb47a52ca22c302180e6bd627d239ed7",
+  "run-probes.py": "df0fb2b6969acc1edc5cf0f919108ca35479d1bf289b5d08b7df34bb0cd92862",
+  "source-provenance.json": "5ef03fea64af7c79bf8c26c4f9cd352689d92ee390e75e1ea2d3be8a2dea4a0c",
+  "typecheck-invalid.py": "25b6f1848cf752cd09a0a3056bbf2d1025719d10b18f87c3cb91b9a622717c9f",
+  "typecheck-valid.py": "1683d0c52969836fc96165dd43764c38a9d9ec9dbd12f86b38270832de1310e9",
+  "verify-evidence.py": "6324553862fcfa91f3c6b7c441437d06d1cc70ccbfbbf5acd0734e7a49b08a93"
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/src/baml_bridge/__init__.py",
+    "sha256": "cb699eaae91b832224ebf498a1f8190ba15931acb1a5685523f68317622e5a2c"
+  },
+  {
+    "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/src/baml_bridge/proto.py",
+    "sha256": "030a1c1ca85490793354ff6a43f790d136f93024440c34ef3922cb07d36b4c97"
+  },
+  {
+    "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/bex_engine/src/conversion.rs",
+    "sha256": "dbbe0c270dca61912212ceab19b08754f1dc28d726fbc983d0bb55d1544bcf43"
+  },
+  {
+    "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/README.md",
+    "sha256": "ab418465d40c2f734f910ed65471448dc20931122d5ace42285f296c69fdd8e9"
+  }
+]

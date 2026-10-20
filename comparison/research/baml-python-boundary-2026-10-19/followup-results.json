@@ -1,0 +1,49 @@
+[
+  {
+    "name": "valid-unsandboxed",
+    "code": "import baml_sdk as s; print(s.plus(41))",
+    "exit": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  },
+  {
+    "name": "crash-unsandboxed",
+    "code": "import baml_sdk as s; print(s.plus(\"bad\"))",
+    "exit": -11,
+    "stdout": "",
+    "stderr": "Fatal Python error: Segmentation fault\n\nThread 0x00007ff847aa8c40 (most recent call first):\n  File \"/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/gap-review/venv/lib/python3.10/site-packages/baml_bridge/__init__.py\", line 452 in _sync\n  File \"<string>\", line 1 in <module>\n\nExtension modules: google._upb._message (total: 1)\n"
+  },
+  {
+    "name": "mutated-field",
+    "code": "import baml_sdk as s; a=s.Answer(value=42); a.value=\"bad\"; print(repr(s.field(a)))",
+    "exit": 0,
+    "stdout": "'bad'\n",
+    "stderr": ""
+  },
+  {
+    "name": "mutated-class-return",
+    "code": "import baml_sdk as s; a=s.Answer(value=42); a.value=\"bad\"; print(s.answer(a))",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/gap-review/venv/lib/python3.10/site-packages/baml_bridge/__init__.py\", line 453, in _sync\n    return decode_call_result(result_bytes)\n  File \"/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/gap-review/venv/lib/python3.10/site-packages/baml_bridge/proto.py\", line 1555, in decode_call_result\n    return decode_value(result.ok, type_map)\n  File \"/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/gap-review/venv/lib/python3.10/site-packages/baml_bridge/proto.py\", line 1407, in decode_value\n    return _decode_class(holder.class_value, type_map, ownership)\n  File \"/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/gap-review/venv/lib/python3.10/site-packages/baml_bridge/proto.py\", line 1088, in _decode_class\n    instance = parameterized.model_validate(field_dict)\n  File \"/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/gap-review/venv/lib/python3.10/site-packages/pydantic/main.py\", line 790, in model_validate\n    return cls.__pydantic_validator__.validate_python(\npydantic_core._pydantic_core.ValidationError: 1 validation error for Answer\nvalue\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='bad', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing\n"
+  },
+  {
+    "name": "strict-wrapper-valid",
+    "code": "import baml_sdk as s; from pydantic import TypeAdapter; print(s.plus(TypeAdapter(int).validate_python(41,strict=True)))",
+    "exit": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  },
+  {
+    "name": "baml-check-good",
+    "exit": 2,
+    "stdout": "",
+    "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nerror: unexpected argument '--file' found\n\nUsage: baml check [OPTIONS]\n\nFor more information, try '--help'.\n"
+  },
+  {
+    "name": "baml-check-bad",
+    "exit": 2,
+    "stdout": "",
+    "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nerror: unexpected argument '--file' found\n\nUsage: baml check [OPTIONS]\n\nFor more information, try '--help'.\n"
+  }
+]
