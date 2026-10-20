@@ -17,7 +17,7 @@ Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/kujo-vs-b
 
 Bend: https://bend-lang.org/
 
-Documentation: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+Documentation: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md
 
 Version: Stable v2.0.37 (2026-10-13; release commit 4ff8545f19b09b7d2b8ca2303668100eac8efd66). Release binaries tested on macOS and Linux x86_64; independent kernel built with Lean 4.34.0.
 
@@ -33,7 +33,7 @@ Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c6
 
 Bend — Verified supported (language): Laws and proof checking for agent-authored programs, with parallel execution.
 
-Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md
 
 ### Correctness checks
 
@@ -43,7 +43,7 @@ Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c6
 
 Bend — Verified supported (language): Type-level laws paired with proof definitions; open claims are rejected when used as proof.
 
-Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md, https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend
+Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md, https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend
 
 ### Formal proof
 
@@ -53,7 +53,7 @@ Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c6
 
 Bend — Verified supported (language): The independent BendTT kernel accepted a valid exported proof and rejected a corrupted proof body. Its guarantee still depends on the documented trust boundaries.
 
-Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
+Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### Execution
 
@@ -63,7 +63,7 @@ Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c6
 
 Bend — Verified supported (language): Native CPU and sequential JavaScript results tested, including fork-join syntax. GPU support is documented but was not executed; no speedup was measured.
 
-Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
+Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### Workflow receipts
 
@@ -73,7 +73,7 @@ Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971e
 
 Bend — Unknown / not verified (toolchain): A Kujo-style cross-tool receipt system was not verified. Proof-checker output has a different scope.
 
-Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md
 
 ## Technical deep dive
 
@@ -87,7 +87,7 @@ Bend separates pure computation from explicit IO. Affine values constrain reuse;
 
 Evaluation implication: A proof-friendly component still needs an IO boundary and tests for its callers.
 
-Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md
 
 ### Assurance boundary: Review what the law actually promises
 
@@ -95,7 +95,7 @@ Bend checks proof definitions against type-level laws. The inspected negative fi
 
 Evaluation implication: Review the law and trusted boundary as carefully as the generated implementation.
 
-Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md, https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend
+Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md, https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend
 
 ### Execution model: Match the workload to the parallel target
 
@@ -103,7 +103,7 @@ The guide documents CPU and GPU execution, with sequential JavaScript output. Pa
 
 Evaluation implication: Keep correctness evidence separate from target-specific latency and throughput measurements.
 
-Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md
 
 ## Decision scenarios
 
@@ -189,7 +189,7 @@ This review did not establish an equivalent general proof system in Kujo. Kujo�
 
 ## References
 
-- [Bend language guide](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md) — official documentation; Stable v2.0.37; guide from a separate pinned source snapshot; reviewed 2026-10-19.
+- [Bend language guide](https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md) — official documentation; Bend v2.0.37; release commit 4ff8545f19b09b7d2b8ca2303668100eac8efd66; reviewed 2026-10-19.
 - [Bend rejects an unfilled law used as proof](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend) — fixture inspected and executed against release 2.0.37; 64230dcb96f2da2cc5a44524e42d5eb34771a6ec; reviewed 2026-10-19.
 - [Kujo runtime and CLI source](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs) — implementation inspected; Kujo 1.8.2 source snapshot; reviewed 2026-10-19.
 - [Kujo type checker](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs) — implementation inspected; 549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1; reviewed 2026-10-19.

@@ -43,7 +43,7 @@ Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c6
 
 BAML — Verified supported (language): Project diagnostics are implemented by the current check command.
 
-Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
+Sources: https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/check_command.rs
 
 ### Testing and evaluations
 
@@ -53,7 +53,17 @@ Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c6
 
 BAML — Verified supported (toolchain): Local assertions passed and failed as expected. Mock-provider response parsing accepted a valid object and rejected an invalid field; the full upstream suite was not run.
 
-Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
+Sources: https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/test_command.rs, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
+
+### Execution
+
+Kujo — Verified supported (language): The CLI includes a bytecode VM, an interpreter and optional JIT paths. Check which backends work with the runtime version and target you choose.
+
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs
+
+BAML — Verified supported (toolchain and Python bridge): The 0.22.2 Python client passed sync/async calls, a packed executable returned 42, and loopback-provider response fixtures passed. Hosted models and other packaging targets were not tested.
+
+Sources: https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### Formal proof
 
@@ -63,7 +73,7 @@ Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c6
 
 BAML — Unknown / not verified (language): A general dependent-type proof guarantee was not verified in the reviewed sources.
 
-Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
+Sources: https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/check_command.rs
 
 ### Observability
 
@@ -87,7 +97,7 @@ The pinned BAML source includes compiler diagnostics and a check command. Its cu
 
 Evaluation implication: Pin the source or release before choosing syntax, examples and integration assumptions.
 
-Sources: https://boundaryml.com/, https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
+Sources: https://boundaryml.com/, https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/check_command.rs
 
 ### Tests and outputs: A valid data type can still contain the wrong answer
 
@@ -95,7 +105,7 @@ The inspected test command loads and runs compiled test sets. Our 0.22.2 fixture
 
 Evaluation implication: Pair type/shape checks with an independent domain-specific check and known wrong answers.
 
-Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs, https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
+Sources: https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/test_command.rs, https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/check_command.rs, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 
 ### Integration and tracing: Verify the host boundary independently
 
@@ -185,7 +195,7 @@ You could connect BAML application code to Kujo workflow tools through a process
 
 ## Honest limitations
 
-BAML’s type declarations, generated Python signatures, Pydantic models and model-response parser validate different parts of a call. In 0.22.2, an int identity function returned an invalid Python string unchanged, while an int-addition function given that string crashed an isolated Python process. Optional values and class decoding rejected other invalid fixtures. Use static checking and explicit validation for untrusted host inputs; the table below records exactly which paths we tested. These results do not establish behavior in other releases, bridges or operating systems.
+BAML’s type declarations, generated Python signatures, Pydantic models and model-response parser validate different parts of a call. In 0.22.2, an int identity function returned an invalid Python string unchanged, while an int-addition function given that string crashed an isolated Python process. Optional values and class decoding rejected other invalid fixtures. Use static checking and explicit validation for untrusted host inputs; the dedicated Python boundary review records which paths we tested. These results do not establish behavior in other releases, bridges or operating systems.
 
 ## Examples and benchmark evidence
 
@@ -207,10 +217,10 @@ No. In our 0.22.2 fixtures, static checking caught a wrong argument, but a direc
 
 ## References
 
-- [BAML current language overview](https://boundaryml.com/) — product assertions; not independently benchmarked; 648ad5ed10f543c129b51789c7d02e29b64f06f7; reviewed 2026-10-19.
-- [BAML check command](https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs) — implementation inspected; 648ad5ed10f543c129b51789c7d02e29b64f06f7; reviewed 2026-10-19.
-- [BAML test runner and result tests](https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs) — implementation and tests inspected; not executed; 648ad5ed10f543c129b51789c7d02e29b64f06f7; reviewed 2026-10-19.
-- [BAML quickstart](https://boundaryml.com/quickstart) — official documentation; Documentation snapshot; no release version asserted; reviewed 2026-10-19.
+- [BAML current language overview](https://boundaryml.com/) — product assertions; not independently benchmarked; Rolling official website; release-specific behavior is documented separately; reviewed 2026-10-19.
+- [BAML check command](https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/check_command.rs) — implementation inspected; BAML 0.22.2; release commit 01f5c412c73c213846ea8cb6ead89d303b053672; reviewed 2026-10-19.
+- [BAML test runner and result tests](https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/test_command.rs) — implementation and tests inspected; not executed; BAML 0.22.2; release commit 01f5c412c73c213846ea8cb6ead89d303b053672; reviewed 2026-10-19.
+- [BAML quickstart](https://boundaryml.com/quickstart) — official documentation; Rolling official website; release-specific behavior is documented separately; reviewed 2026-10-19.
 - [Kujo runtime and CLI source](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs) — implementation inspected; Kujo 1.8.2 source snapshot; reviewed 2026-10-19.
 - [Kujo type checker](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs) — implementation inspected; 549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1; reviewed 2026-10-19.
 - [Spec scope and implementation](https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo) — implementation inspected; 1211f37a09314be7150734bf15a55e9b2ea6504d; reviewed 2026-10-19.

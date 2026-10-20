@@ -30,7 +30,7 @@ Bend’s laws and proofs address formally stated properties. Kujo’s compiler c
 
 Put it into practice: Ask for the exact proposition or assertion, then inspect the assumptions around it.
 
-Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
 ### Cost of adoption: Compare against the language you already use
 
@@ -62,17 +62,17 @@ Cost or boundary: A checked law still needs the right specification and a review
 
 A useful first trial: One precise invariant plus a deliberately broken proof or law.
 
-Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md, https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend
+Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md, https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend
 
 ### Current BAML
 
 What to investigate: Agent-oriented application code, AI functions and host integration.
 
-Cost or boundary: Choose a specific language version and bridge; valid data can still contain a wrong answer.
+Cost or boundary: Generated signatures, dynamic host inputs and parsed model outputs have different validation paths. Test each separately; a valid value can still be wrong.
 
 A useful first trial: One typed AI function with malformed and well-typed wrong responses.
 
-Sources: https://boundaryml.com/, https://boundaryml.com/quickstart, https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
+Sources: https://boundaryml.com/, https://boundaryml.com/quickstart, https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/check_command.rs, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19
 
 ### Vercel Zerolang
 
@@ -197,14 +197,15 @@ There is no supported universal ranking here. Use Bend’s proof model, BAML’s
 - [Kujo runtime and CLI source](https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs) — implementation inspected; Kujo 1.8.2 source snapshot; reviewed 2026-10-19.
 - [Spec scope and implementation](https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo) — implementation inspected; 1211f37a09314be7150734bf15a55e9b2ea6504d; reviewed 2026-10-19.
 - [Eval scope and implementation](https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo) — implementation inspected; 71e66dff780d6930bcbe093c046bf31aa26411df; reviewed 2026-10-19.
-- [Bend language guide](https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md) — official documentation; Stable v2.0.37; guide from a separate pinned source snapshot; reviewed 2026-10-19.
-- [BAML current language overview](https://boundaryml.com/) — product assertions; not independently benchmarked; 648ad5ed10f543c129b51789c7d02e29b64f06f7; reviewed 2026-10-19.
+- [Bend language guide](https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md) — official documentation; Bend v2.0.37; release commit 4ff8545f19b09b7d2b8ca2303668100eac8efd66; reviewed 2026-10-19.
+- [BAML current language overview](https://boundaryml.com/) — product assertions; not independently benchmarked; Rolling official website; release-specific behavior is documented separately; reviewed 2026-10-19.
 - [Vercel Zerolang graph architecture](https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md) — pinned official documentation; v0.3.4; 5b3a90a7756e48ab449eb16e688044b8decec7a9; reviewed 2026-10-19.
 - [Python documentation](https://docs.python.org/3/) — official documentation; Python 3.15.0 (2026-10-09); rolling documentation, not runtime-tested; reviewed 2026-10-19.
 - [TypeScript documentation](https://www.typescriptlang.org/docs/) — official documentation; TypeScript 7.0.2 (2026-08-20); rolling documentation, not runtime-tested; reviewed 2026-10-19.
 - [The Rust book](https://doc.rust-lang.org/book/) — official documentation; Rust 1.99.1 (2026-10-16); rolling book, not runtime-tested; reviewed 2026-10-19.
 - [Zerolang patch validation implementation](https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c) — implementation inspected; selected release cases executed; v0.3.4; 5b3a90a7756e48ab449eb16e688044b8decec7a9; reviewed 2026-10-19.
 - [Competitor runtime fixtures and raw outcomes](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19) — local execution receipts; bounded fixtures; Bend 2.0.37; BAML 0.22.2; Zerolang 0.3.4; macOS x86_64; reviewed 2026-10-19.
+- [Python type-boundary fixtures and results](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19) — release-specific static, runtime, parsing and crash-control tests; BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64; reviewed 2026-10-19.
 
 ## Related pages
 

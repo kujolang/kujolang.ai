@@ -17,9 +17,9 @@
     },
     "bend": {
       "label": "Bend language guide",
-      "url": "https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md",
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md",
       "level": "official documentation",
-      "version": "Stable v2.0.37; guide from a separate pinned source snapshot",
+      "version": "Bend v2.0.37; release commit 4ff8545f19b09b7d2b8ca2303668100eac8efd66",
       "verified": "2026-10-19"
     },
     "bend-test": {
@@ -33,28 +33,28 @@
       "label": "BAML current language overview",
       "url": "https://boundaryml.com/",
       "level": "product assertions; not independently benchmarked",
-      "version": "648ad5ed10f543c129b51789c7d02e29b64f06f7",
+      "version": "Rolling official website; release-specific behavior is documented separately",
       "verified": "2026-10-19"
     },
     "baml-check": {
       "label": "BAML check command",
-      "url": "https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs",
+      "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/check_command.rs",
       "level": "implementation inspected",
-      "version": "648ad5ed10f543c129b51789c7d02e29b64f06f7",
+      "version": "BAML 0.22.2; release commit 01f5c412c73c213846ea8cb6ead89d303b053672",
       "verified": "2026-10-19"
     },
     "baml-test": {
       "label": "BAML test runner and result tests",
-      "url": "https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs",
+      "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/test_command.rs",
       "level": "implementation and tests inspected; not executed",
-      "version": "648ad5ed10f543c129b51789c7d02e29b64f06f7",
+      "version": "BAML 0.22.2; release commit 01f5c412c73c213846ea8cb6ead89d303b053672",
       "verified": "2026-10-19"
     },
     "baml-start": {
       "label": "BAML quickstart",
       "url": "https://boundaryml.com/quickstart",
       "level": "official documentation",
-      "version": "Documentation snapshot; no release version asserted",
+      "version": "Rolling official website; release-specific behavior is documented separately",
       "verified": "2026-10-19"
     },
     "zero": {
@@ -280,6 +280,13 @@
       "level": "release-specific static, runtime, parsing and crash-control tests",
       "version": "BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64",
       "verified": "2026-10-19"
+    },
+    "artifact-checker": {
+      "label": "Runnable artifact checker and negative controls",
+      "url": "https://kujolang.ai/compare/evidence/verify.py",
+      "level": "implementation inspected and executed; independent Python checker, not Eval",
+      "version": "Kujo 1.8.2 producer; Python 3 checker",
+      "verified": "2026-10-19"
     }
   },
   "kujoFacts": {
@@ -394,7 +401,7 @@
         ],
         "website": "https://bend-lang.org/",
         "repository": "https://github.com/bendlang/bend",
-        "documentation": "https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md",
+        "documentation": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md",
         "version": "Stable v2.0.37 (2026-10-13; release commit 4ff8545f19b09b7d2b8ca2303668100eac8efd66). Release binaries tested on macOS and Linux x86_64; independent kernel built with Lean 4.34.0."
       },
       "dimensions": [
@@ -574,7 +581,7 @@
         },
         {
           "heading": "Honest limitations",
-          "body": "BAML’s type declarations, generated Python signatures, Pydantic models and model-response parser validate different parts of a call. In 0.22.2, an int identity function returned an invalid Python string unchanged, while an int-addition function given that string crashed an isolated Python process. Optional values and class decoding rejected other invalid fixtures. Use static checking and explicit validation for untrusted host inputs; the table below records exactly which paths we tested. These results do not establish behavior in other releases, bridges or operating systems."
+          "body": "BAML’s type declarations, generated Python signatures, Pydantic models and model-response parser validate different parts of a call. In 0.22.2, an int identity function returned an invalid Python string unchanged, while an int-addition function given that string crashed an isolated Python process. Optional values and class decoding rejected other invalid fixtures. Use static checking and explicit validation for untrusted host inputs; the dedicated Python boundary review records which paths we tested. These results do not establish behavior in other releases, bridges or operating systems."
         },
         {
           "heading": "Examples and benchmark evidence",
@@ -652,6 +659,18 @@
             ],
             "status": "verified-supported",
             "layer": "toolchain"
+          }
+        ],
+        [
+          "Execution",
+          "run",
+          {
+            "status": "verified-supported",
+            "text": "The 0.22.2 Python client passed sync/async calls, a packed executable returned 42, and loopback-provider response fixtures passed. Hosted models and other packaging targets were not tested.",
+            "layer": "toolchain and Python bridge",
+            "sources": [
+              "runtime-gap-review"
+            ]
           }
         ],
         [
@@ -1117,7 +1136,8 @@
         "typescript",
         "rust",
         "zero-patch",
-        "runtime-review"
+        "runtime-review",
+        "baml-boundary-review"
       ],
       "verified": "2026-10-19",
       "kind": "discovery",
@@ -1218,12 +1238,13 @@
           [
             "Current BAML",
             "Agent-oriented application code, AI functions and host integration.",
-            "Choose a specific language version and bridge; valid data can still contain a wrong answer.",
+            "Generated signatures, dynamic host inputs and parsed model outputs have different validation paths. Test each separately; a valid value can still be wrong.",
             "One typed AI function with malformed and well-typed wrong responses.",
             [
               "baml",
               "baml-start",
-              "baml-check"
+              "baml-check",
+              "baml-boundary-review"
             ]
           ],
           [
@@ -1336,11 +1357,11 @@
         },
         {
           "heading": "Where Kujo fits",
-          "body": "Kujo’s Agents SDK provides workflow primitives as a library. Dispatch adds workflow coordination and reviewable run state. Workcell addresses configured execution boundaries, while Watchdog records telemetry. These are separate projects, not language syntax. Choose the components you need and check what each controls. Agents SDK 1.1.3 uses cooperative budget and cancellation checks; callbacks must enforce their own deadlines. The host supplies provider credentials, permissions and persistence."
+          "body": "Kujo’s Agents SDK provides workflow primitives as a library. Dispatch adds workflow coordination and reviewable run state. Workcell addresses configured execution boundaries, while Watchdog records telemetry. These are separate projects, not language syntax. Choose the components you need and check what each controls. Agents SDK 1.1.3 uses cooperative budget and cancellation checks; callbacks must enforce their own deadlines. The host supplies provider credentials, permissions and persistence. Check each tool’s own runtime pin: Workcell 1.2.0 documents Kujo 1.6.0, so the site’s Kujo 1.8.2 baseline is not a tested compatibility claim for every tool."
         },
         {
           "heading": "Where BAML and Bend fit",
-          "body": "BAML describes typed AI functions and bridges into existing applications. Bend’s laws and proofs may suit a component with precisely stated invariants. Either option still requires controls on external tools, validation of their outputs and a plan for failed or interrupted operations."
+          "body": "BAML describes typed AI functions and bridges into existing applications. Bend’s laws and proofs may suit a component with precisely stated invariants. Either option still requires controls on external tools, validation of their outputs and a plan for failed or interrupted operations. BAML’s Python boundary review distinguishes static checks from dynamic input validation and model-response parsing."
         },
         {
           "heading": "An agent-host acceptance checklist",
@@ -1360,7 +1381,9 @@
         "bend",
         "python",
         "typescript",
-        "rust"
+        "rust",
+        "baml-boundary-review",
+        "workcell-boundary"
       ],
       "verified": "2026-10-19",
       "kind": "discovery",
@@ -1591,7 +1614,8 @@
         "bend",
         "workcell",
         "runledger",
-        "shipcheck"
+        "shipcheck",
+        "artifact-checker"
       ],
       "verified": "2026-10-19",
       "kind": "discovery",
@@ -1841,7 +1865,8 @@
         "runledger",
         "workcell",
         "shipcheck",
-        "vercel"
+        "vercel",
+        "artifact-checker"
       ],
       "verified": "2026-10-19",
       "kind": "guide",
@@ -1923,7 +1948,7 @@
             "Use total 41.",
             "Positive and wrong-value verifier exit codes.",
             [
-              "eval"
+              "artifact-checker"
             ]
           ],
           [
@@ -1932,7 +1957,7 @@
             "Use a string, boolean or floating-point total.",
             "Malformed-control results from the checker.",
             [
-              "eval"
+              "artifact-checker"
             ]
           ],
           [
@@ -1941,7 +1966,7 @@
             "Use invalid JSON or an empty object.",
             "Actual stdout and its SHA-256 hash.",
             [
-              "eval"
+              "artifact-checker"
             ]
           ],
           [
@@ -1950,7 +1975,7 @@
             "For a broader trial, force a process failure.",
             "Command, exit code and stderr.",
             [
-              "workcell"
+              "artifact-checker"
             ]
           ],
           [
@@ -1959,7 +1984,7 @@
             "The test runner rejects a runtime other than Kujo 1.8.2.",
             "Runtime version/hash and Python/platform details.",
             [
-              "runledger"
+              "artifact-checker"
             ]
           ],
           [
@@ -2077,7 +2102,7 @@
         "summary": "Evaluate typed AI functions and incremental adoption inside an existing application.",
         "focus": "Add an AI feature to an application through a defined interface.",
         "tradeoff": "Choose a specific language version, then check the bridge and data types your application needs.",
-        "trial": "Run a typed function, reject a type mismatch and fail an assertion on the selected release.",
+        "trial": "Reject a type mismatch in checked BAML source, fail an assertion, and test dynamic host inputs separately.",
         "url": "/compare/kujo-vs-baml/"
       },
       {
@@ -2202,7 +2227,7 @@
           {
             "summary": "Python client, packed binary and mock-provider responses tested",
             "refs": [
-              "kujo-vs-baml:Static diagnostics"
+              "kujo-vs-baml:Execution"
             ]
           },
           {

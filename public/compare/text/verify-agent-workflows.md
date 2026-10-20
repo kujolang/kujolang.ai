@@ -52,7 +52,7 @@ Deliberately invalid case: Use total 41.
 
 Evidence to keep: Positive and wrong-value verifier exit codes.
 
-Sources: https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://kujolang.ai/compare/evidence/verify.py
 
 ### Correct representation
 
@@ -62,7 +62,7 @@ Deliberately invalid case: Use a string, boolean or floating-point total.
 
 Evidence to keep: Malformed-control results from the checker.
 
-Sources: https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://kujolang.ai/compare/evidence/verify.py
 
 ### Readable artifact
 
@@ -72,7 +72,7 @@ Deliberately invalid case: Use invalid JSON or an empty object.
 
 Evidence to keep: Actual stdout and its SHA-256 hash.
 
-Sources: https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://kujolang.ai/compare/evidence/verify.py
 
 ### Successful producer
 
@@ -82,7 +82,7 @@ Deliberately invalid case: For a broader trial, force a process failure.
 
 Evidence to keep: Command, exit code and stderr.
 
-Sources: https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
+Sources: https://kujolang.ai/compare/evidence/verify.py
 
 ### Identified toolchain
 
@@ -92,7 +92,7 @@ Deliberately invalid case: The test runner rejects a runtime other than Kujo 1.8
 
 Evidence to keep: Runtime version/hash and Python/platform details.
 
-Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo
+Sources: https://kujolang.ai/compare/evidence/verify.py
 
 ### Release relevance
 
@@ -236,6 +236,7 @@ Specifications, output evaluation, traceability and reproducibility are successi
 - [Workcell scope and implementation](https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo) — implementation inspected; a276a92c6bac9279a8cb36ace9687ade34d5128f; reviewed 2026-10-19.
 - [Shipcheck scope and implementation](https://github.com/kujolang/shipcheck/blob/ee4cfd052c0522eebedc0eead223cbb22490b357/src/checks.kujo) — implementation inspected; ee4cfd052c0522eebedc0eead223cbb22490b357; reviewed 2026-10-19.
 - [Evaluating coding agents](https://vercel.com/i/evaluating-ai-coding-agents) — official documentation; Documentation snapshot; no release version asserted; reviewed 2026-10-19.
+- [Runnable artifact checker and negative controls](https://kujolang.ai/compare/evidence/verify.py) — implementation inspected and executed; independent Python checker, not Eval; Kujo 1.8.2 producer; Python 3 checker; reviewed 2026-10-19.
 
 ## Related pages
 

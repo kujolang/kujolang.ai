@@ -30,7 +30,7 @@ Evaluate for: Add an AI feature to an application through a defined interface.
 
 Tradeoff: Choose a specific language version, then check the bridge and data types your application needs.
 
-First trial: Run a typed function, reject a type mismatch and fail an assertion on the selected release.
+First trial: Reject a type mismatch in checked BAML source, fail an assertion, and test dynamic host inputs separately.
 
 ## Zerolang
 
@@ -62,7 +62,7 @@ Laws, proofs and parallel programs
 
 verified-supported · language: Laws and proof checking for agent-authored programs, with parallel execution.
 
-https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md
 
 ### BAML
 
@@ -101,7 +101,7 @@ Type-level laws and proof definitions
 
 verified-supported · language: Type-level laws paired with proof definitions; open claims are rejected when used as proof.
 
-https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md
 https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend
 
 ### BAML
@@ -110,11 +110,11 @@ Project diagnostics and a test runner
 
 verified-supported · language: Project diagnostics are implemented by the current check command.
 
-https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
+https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/check_command.rs
 
 verified-supported · toolchain: Local assertions passed and failed as expected. Mock-provider response parsing accepted a valid object and rejected an invalid field; the full upstream suite was not run.
 
-https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs
+https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/test_command.rs
 https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
 https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
@@ -145,7 +145,7 @@ Dependent types; bounded proof guarantees
 
 verified-supported · language: The independent BendTT kernel accepted a valid exported proof and rejected a corrupted proof body. Its guarantee still depends on the documented trust boundaries.
 
-https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md
 https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### BAML
@@ -154,7 +154,7 @@ General theorem proving not verified
 
 unknown · language: A general dependent-type proof guarantee was not verified in the reviewed sources.
 
-https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
+https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/check_command.rs
 
 ### Zerolang
 
@@ -183,16 +183,16 @@ CPU/GPU and sequential JavaScript target
 
 verified-supported · language: Native CPU and sequential JavaScript results tested, including fork-join syntax. GPU support is documented but was not executed; no speedup was measured.
 
-https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md
 https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### BAML
 
 Python client, packed binary and mock-provider responses tested
 
-verified-supported · language: Project diagnostics are implemented by the current check command.
+verified-supported · toolchain and Python bridge: The 0.22.2 Python client passed sync/async calls, a packed executable returned 42, and loopback-provider response fixtures passed. Hosted models and other packaging targets were not tested.
 
-https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### Zerolang
 
@@ -222,7 +222,7 @@ Proof output; broader run ledger unverified
 
 unknown · toolchain: A Kujo-style cross-tool receipt system was not verified. Proof-checker output has a different scope.
 
-https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md
 
 ### BAML
 
@@ -308,7 +308,7 @@ You could connect BAML application code to Kujo workflow tools through a process
 
 ### Honest limitations
 
-BAML’s type declarations, generated Python signatures, Pydantic models and model-response parser validate different parts of a call. In 0.22.2, an int identity function returned an invalid Python string unchanged, while an int-addition function given that string crashed an isolated Python process. Optional values and class decoding rejected other invalid fixtures. Use static checking and explicit validation for untrusted host inputs; the table below records exactly which paths we tested. These results do not establish behavior in other releases, bridges or operating systems.
+BAML’s type declarations, generated Python signatures, Pydantic models and model-response parser validate different parts of a call. In 0.22.2, an int identity function returned an invalid Python string unchanged, while an int-addition function given that string crashed an isolated Python process. Optional values and class decoding rejected other invalid fixtures. Use static checking and explicit validation for untrusted host inputs; the dedicated Python boundary review records which paths we tested. These results do not establish behavior in other releases, bridges or operating systems.
 
 ## Zerolang: technical brief
 

@@ -81,3 +81,10 @@ test('boundary results survive both projections and HTML escapes fixture text',(
  assert.ok(out.get(`public/compare/text/${p.slug}.md`).includes('value < 42 \\| string'));
  for(const row of p.boundaryReview.rows)assert.ok(out.get(`public/compare/text/${p.slug}.md`).includes(row[0]));
 });
+
+test('BAML hub execution points to runtime evidence, not compiler diagnostics',()=>{
+ const row=catalog.hub.rows.find(r=>r.label==='Execution model');
+ assert.deepEqual(row.cells[2].refs,['kujo-vs-baml:Execution']);
+ const page=catalog.pages.find(p=>p.slug==='kujo-vs-baml');
+ assert.ok(page.dimensions.find(r=>r[0]==='Execution')[2].sources.includes('runtime-gap-review'));
+});
