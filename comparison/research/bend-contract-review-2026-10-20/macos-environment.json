@@ -1,0 +1,6 @@
+{
+  "platform": "macOS-26.6.2-x86_64-i386-64bit",
+  "machine": "x86_64",
+  "kernelRequested": false,
+  "node": "v26.7.0"
+}

@@ -1,0 +1,104 @@
+{
+  "checked": "2026-10-20",
+  "release": "v2.0.37",
+  "releaseURL": "https://github.com/bendlang/bend/releases/tag/v2.0.37",
+  "commit": "4ff8545f19b09b7d2b8ca2303668100eac8efd66",
+  "macosArchiveSHA256": "93eea3f54b7b91f28ea15a1b9f2d825afa58c1fcd417c11024a62f8c3506b813",
+  "macosBinarySHA256": "eb296abd280b84cb2b2c2c226297d5be3390e3c4db85835602be137aa0365df0",
+  "linuxArchiveSHA256": "84c32465a39bc9ac315eade23f470cb8db03153dc860f89564fcfec153c3e445",
+  "leanArchiveSHA256": "caaa98356098c85dc0fcbbd28e1ec66f39eb6551829972b752ff20e1286b646b",
+  "leanVersion": "4.34.0",
+  "runtimeWorkflow": "https://github.com/kujolang/kujolang.ai/actions/runs/39447902948",
+  "runtimeCommit": "53aedaacb58aea7f77cc6e8fb4866fb12425cea7",
+  "artifactID": 12276738240,
+  "sources": [
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/README.md",
+      "sha256": "0b19923bb4c19de850fa080ea6cc29b1e102cfcdb41e1cdf48cd14c1d8465c18"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/WONTFIX.txt",
+      "sha256": "24f90b9d14f2ecf93de4a496acb71c3ff6337615e182898c26a57f92208716b1"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/bend2/bend.ts",
+      "sha256": "6c1df3eb304fe085070aa4797928f70243b80d4635389e3d5d8a49fdfbb3051e"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/bend2/comp.ts",
+      "sha256": "56d5727049bc3ef528ef84d3b4712a41a0a8ce0a06437b29d881e71107638c70"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/bend2/main.ts",
+      "sha256": "38f77e7f1c2b0239cd8ed4a6baad90439c1d2610b2014573590ec7cf6ad04497"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/bend2/safe.ts",
+      "sha256": "8d7f64b073b43b6872283efad43ddf718163c147fc6512816efff6835e2650e7"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/demos/proof_numerics/PROOF.bend",
+      "sha256": "a743d07f44fb8e02831e6b9b45729e130efddd7d0a845f6144d266790c413dec"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/check/unsafe_forward_safe.bend",
+      "sha256": "8e12bfa4e8e35029ed20b4c24c095ff02abe4401f8168bbdf6b6d51fa78e3596"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/check/unsafe_relies.bend",
+      "sha256": "8ba0160d150f9fea76953f8da493b1644326ad68a14cdd539d413324c23539df"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/main_foreign.bend",
+      "sha256": "32aa7c013e1d7a8b0f30c1ff05ed2e6deff5617c1b86b248429aa5db63bde1c9"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/main_foreign.c",
+      "sha256": "bfa8e54e371586a88aa70f439f38fd007d21c445546e30983b4313e0c4e67a5f"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/main_foreign.js",
+      "sha256": "f994bcfc5efe35647d8c49e6e268226dc8ca56685312b403a41d9eee1a8421ae"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/marshal_nat_number.bend",
+      "sha256": "097595ff0f45ee3e586106fd6001daa5b56f37459f485de19c8be0ad49654f01"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/marshal_nat_number.js",
+      "sha256": "c1f3a9466359c4d0347923244b3d234b5c85aae31c0f6024ce21eae1607ccbd9"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/marshal_u32_integer.bend",
+      "sha256": "e6977979e1c9d31c866a9decb283b75478a2ea6fc48f75354a5a50132a077e4d"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/marshal_u32_integer.js",
+      "sha256": "d382691e1f5a25cd3db3f11e2e36b7a7a26aabc68f1c386d563c508bce5c77e6"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/nat_host_bounds.bend",
+      "sha256": "ac177c09c35e842ef22dafa0bffc0e592bf4ec523d321b19b7671b9ec0057ed8"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/nat_host_bounds.js",
+      "sha256": "ec810e65157f64e2f0feed83b93dae7da128c07ff4a4ba8c75befc59dd1e49ee"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/nat_host_export.bend",
+      "sha256": "5e5b1f8bb91916e57b31f9ddeb22588cd2f3f13ab3d49b59b76334892d426818"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/nat_host_export.js",
+      "sha256": "4644bc4dd16e1500c180a342db8819f949a45c5f4d4653e4da48ff7033bb6b9c"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/nat_host_neg.c",
+      "sha256": "d6c1c25e71d561dee7c3d196d7f8c03fcd5af80fa155359758333532ee005c00"
+    },
+    {
+      "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/tests/io/quiet_exit.bend",
+      "sha256": "70d759d75dd643fa5dcd49fd1cc32896f9df57eda33ffb45ac786953da8029d7"
+    }
+  ]
+}

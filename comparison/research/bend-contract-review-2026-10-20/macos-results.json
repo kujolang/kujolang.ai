@@ -1,0 +1,840 @@
+[
+  {
+    "name": "version",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "version"
+    ],
+    "exit": 0,
+    "stdout": "bend 2.0.37\n",
+    "stderr": ""
+  },
+  {
+    "name": "check-good-proof",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/good-proof.bend",
+      "--check-only"
+    ],
+    "exit": 0,
+    "stdout": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n",
+    "stderr": ""
+  },
+  {
+    "name": "check-bad-proof",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/bad-proof.bend",
+      "--check-only"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "SOME PROOFS FAIL\nError:\n- expected : {0n == 0n : Nat}\n- observed : Nat\nLocation: add_zero\n13 |     case 0n:\n14>|       0n\n   |       ^^\n15 |     case 1n+p:\n"
+  },
+  {
+    "name": "check-open-law",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/open-law.bend",
+      "--check-only"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "SOME PROOFS FAIL\nError: 1 TODO found.\nThe code is incomplete, and not a valid proof yet.\n"
+  },
+  {
+    "name": "check-unsafe",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/unsafe.bend",
+      "--check-only"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "SOME PROOFS FAIL\nError: 3 defs rely on unsafe or foreign code:\n- raw\n- wrapper\n- main\n"
+  },
+  {
+    "name": "check-nondecreasing",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/nondecreasing.bend",
+      "--check-only"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "SOME PROOFS FAIL\nError:\n- expected : a decreasing self-call (arguments are read left to right: each passed unchanged until one shrinks)\n- observed : loop\nContext:\n- n : Nat\nLocation: loop\n3 | def loop(n: Nat) -> Nat:\n4>|   loop(n)\n  |   ^^^^\n5 | \n"
+  },
+  {
+    "name": "check-copy-valid",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/copy-valid.bend",
+      "--check-only"
+    ],
+    "exit": 0,
+    "stdout": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n",
+    "stderr": ""
+  },
+  {
+    "name": "check-affine-invalid",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/affine-invalid.bend",
+      "--check-only"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "SOME PROOFS FAIL\nError:\n- expected : x\n- observed : x (consumed more than once)\nLocation: twice\n2 | \n3>| def twice(x: U32) -> U32:\n  |           ^\n4 |   (x + x : U32)\n"
+  },
+  {
+    "name": "check-foreign",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/foreign.bend",
+      "--check-only"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "SOME PROOFS FAIL\nError: 2 defs rely on unsafe or foreign code:\n- host_value\n- main\n"
+  },
+  {
+    "name": "check-missing-import/PROOF",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/missing-import/PROOF.bend",
+      "--check-only"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "SOME PROOFS FAIL\nError: PROOF.bend must import ./LAWS.bend\n"
+  },
+  {
+    "name": "check-filled/PROOF",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/filled/PROOF.bend",
+      "--check-only"
+    ],
+    "exit": 0,
+    "stdout": "ALL PROOFS CHECK\nUse --verdict for mathematical validity.\n",
+    "stderr": ""
+  },
+  {
+    "name": "eval-copy-valid",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/copy-valid.bend"
+    ],
+    "exit": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-js-copy-valid",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/copy-valid.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/copy-valid.js"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-js-copy-valid",
+    "args": [
+      "node",
+      "$WORKSPACE/work/bend-deep-review/local-verified/copy-valid.js"
+    ],
+    "exit": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-native-copy-valid",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/copy-valid.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/copy-valid"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-native-copy-valid",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/local-verified/copy-valid"
+    ],
+    "exit": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  },
+  {
+    "name": "eval-overflow",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/overflow.bend"
+    ],
+    "exit": 0,
+    "stdout": "0\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-js-overflow",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/overflow.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/overflow.js"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-js-overflow",
+    "args": [
+      "node",
+      "$WORKSPACE/work/bend-deep-review/local-verified/overflow.js"
+    ],
+    "exit": 0,
+    "stdout": "0\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-native-overflow",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/overflow.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/overflow"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-native-overflow",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/local-verified/overflow"
+    ],
+    "exit": 0,
+    "stdout": "0\n",
+    "stderr": ""
+  },
+  {
+    "name": "eval-underflow",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/underflow.bend"
+    ],
+    "exit": 0,
+    "stdout": "4294967295\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-js-underflow",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/underflow.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/underflow.js"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-js-underflow",
+    "args": [
+      "node",
+      "$WORKSPACE/work/bend-deep-review/local-verified/underflow.js"
+    ],
+    "exit": 0,
+    "stdout": "4294967295\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-native-underflow",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/underflow.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/underflow"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-native-underflow",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/local-verified/underflow"
+    ],
+    "exit": 0,
+    "stdout": "4294967295\n",
+    "stderr": ""
+  },
+  {
+    "name": "eval-parallel",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/parallel.bend"
+    ],
+    "exit": 0,
+    "stdout": "4096\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-js-parallel",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/parallel.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/parallel.js"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-js-parallel",
+    "args": [
+      "node",
+      "$WORKSPACE/work/bend-deep-review/local-verified/parallel.js"
+    ],
+    "exit": 0,
+    "stdout": "4096\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-native-parallel",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/parallel.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/parallel"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-native-parallel",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/local-verified/parallel"
+    ],
+    "exit": 0,
+    "stdout": "4096\n",
+    "stderr": ""
+  },
+  {
+    "name": "eval-unsafe",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/unsafe.bend"
+    ],
+    "exit": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-js-unsafe",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/unsafe.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/unsafe.js"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-js-unsafe",
+    "args": [
+      "node",
+      "$WORKSPACE/work/bend-deep-review/local-verified/unsafe.js"
+    ],
+    "exit": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-native-unsafe",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/unsafe.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/unsafe"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-native-unsafe",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/local-verified/unsafe"
+    ],
+    "exit": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  },
+  {
+    "name": "eval-foreign",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/foreign.bend"
+    ],
+    "exit": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-js-foreign",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/foreign.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/foreign.js"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-js-foreign",
+    "args": [
+      "node",
+      "$WORKSPACE/work/bend-deep-review/local-verified/foreign.js"
+    ],
+    "exit": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-native-foreign",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/foreign.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/foreign"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-native-foreign",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/local-verified/foreign"
+    ],
+    "exit": 0,
+    "stdout": "42\n",
+    "stderr": ""
+  },
+  {
+    "name": "build-js-exit-0",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/exit-0.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-0.js"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-js-exit-0",
+    "args": [
+      "node",
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-0.js"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "build-native-exit-0",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/exit-0.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-0"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-native-exit-0",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-0"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "build-js-exit-7",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/exit-7.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-7.js"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-js-exit-7",
+    "args": [
+      "node",
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-7.js"
+    ],
+    "exit": 7,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "build-native-exit-7",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/exit-7.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-7"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-native-exit-7",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-7"
+    ],
+    "exit": 7,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "build-js-exit-255",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/exit-255.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-255.js"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-js-exit-255",
+    "args": [
+      "node",
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-255.js"
+    ],
+    "exit": 255,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "build-native-exit-255",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/exit-255.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-255"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-native-exit-255",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-255"
+    ],
+    "exit": 255,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "build-js-exit-256",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/exit-256.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-256.js"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-js-exit-256",
+    "args": [
+      "node",
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-256.js"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "bend: exit code must be in 0..255\n"
+  },
+  {
+    "name": "build-native-exit-256",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/exit-256.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-256"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "run-native-exit-256",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/local-verified/exit-256"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "bend: exit code must be in 0..255\n"
+  },
+  {
+    "name": "build-host",
+    "args": [
+      "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+      "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/host.bend",
+      "-o",
+      "$WORKSPACE/work/bend-deep-review/local-verified/host.mjs"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "name": "nat-valid",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.identity(42); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"return\",\"type\":\"number\",\"value\":42}\n",
+    "stderr": ""
+  },
+  {
+    "name": "nat-zero",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.identity(0); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"return\",\"type\":\"number\",\"value\":0}\n",
+    "stderr": ""
+  },
+  {
+    "name": "nat-limit",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.identity(2**53); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"return\",\"type\":\"number\",\"value\":9007199254740992}\n",
+    "stderr": ""
+  },
+  {
+    "name": "nat-negative",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.identity(-1); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"error\",\"type\":\"string\",\"message\":\"bend: a Nat past the largest immediate 2^48-1\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "nat-fraction",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.identity(1.5); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"error\",\"type\":\"string\",\"message\":\"bend: a Nat past the largest immediate 2^48-1\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "nat-bigint",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.identity(1n); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"error\",\"type\":\"string\",\"message\":\"bend: a Nat past the largest immediate 2^48-1\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "nat-above-limit",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.identity(2**53+2); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"error\",\"type\":\"string\",\"message\":\"bend: a Nat past the largest immediate 2^48-1\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "nat-string",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.identity(\"42\"); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"error\",\"type\":\"string\",\"message\":\"bend: a Nat past the largest immediate 2^48-1\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "nat-null",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.identity(null); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"error\",\"type\":\"string\",\"message\":\"bend: a Nat past the largest immediate 2^48-1\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "nat-nan",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.identity(NaN); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"error\",\"type\":\"string\",\"message\":\"bend: a Nat past the largest immediate 2^48-1\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "nat-infinity",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.identity(Infinity); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"error\",\"type\":\"string\",\"message\":\"bend: a Nat past the largest immediate 2^48-1\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "inc-valid",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.inc(41); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"return\",\"type\":\"number\",\"value\":42}\n",
+    "stderr": ""
+  },
+  {
+    "name": "curried-valid",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.add(2)(3); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"return\",\"type\":\"number\",\"value\":5}\n",
+    "stderr": ""
+  },
+  {
+    "name": "curried-invalid",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.add(1)(-1); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"error\",\"type\":\"string\",\"message\":\"bend: a Nat past the largest immediate 2^48-1\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "word-valid",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.word(42); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"return\",\"type\":\"number\",\"value\":42}\n",
+    "stderr": ""
+  },
+  {
+    "name": "word-negative",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.word(-1); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"return\",\"type\":\"number\",\"value\":-1}\n",
+    "stderr": ""
+  },
+  {
+    "name": "word-overflow",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.word(2**32); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"return\",\"type\":\"number\",\"value\":4294967296}\n",
+    "stderr": ""
+  },
+  {
+    "name": "word-string",
+    "args": [
+      "node",
+      "--input-type=module",
+      "-e",
+      "import lib from \"file://$WORKSPACE/work/bend-deep-review/local-verified/host.mjs\";try { const v=lib.word(\"42\"); console.log(JSON.stringify({kind:\"return\",type:typeof v,value:v})); } catch(e) { console.log(JSON.stringify({kind:\"error\",type:typeof e,message:String(e)})); }"
+    ],
+    "exit": 0,
+    "stdout": "{\"kind\":\"return\",\"type\":\"string\",\"value\":\"42\"}\n",
+    "stderr": ""
+  }
+]

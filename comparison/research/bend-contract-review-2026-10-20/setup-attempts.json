@@ -1,0 +1,40 @@
+{
+  "excludedFromFinalCounts": true,
+  "reason": "Initial fixture syntax and missing native import were corrected. These are test-author setup errors, not competitor defects. First CI run 39447752847 was cancelled; corrected run 39447902948 passed.",
+  "cases": [
+    {
+      "name": "check-foreign",
+      "args": [
+        "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+        "$WORKSPACE/work/bend-deep-review/fixtures/foreign.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : a foreign definition returning base IO(...) directly (return type aliases are not unfolded)\n- observed : host_value\nLocation: host_value\n2 | \n3>| def host_value() -> U32:\n  |                     ^^^\n4 |   import \"./host_value.js\"\n"
+    },
+    {
+      "name": "check-filled/PROOF",
+      "args": [
+        "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+        "$WORKSPACE/work/bend-deep-review/fixtures/filled/PROOF.bend",
+        "--check-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : '('\n- observed : ':'\nLocation:\n3 | \n4>| def Laws.identity:\n  |                  ^\n5 |   {{==}}\n"
+    },
+    {
+      "name": "build-native-foreign",
+      "args": [
+        "$WORKSPACE/work/bend-deep-review/bend/bin/bend",
+        "$WORKSPACE/work/site/comparison/research/bend-contract-review-2026-10-20/fixtures/foreign.bend",
+        "-o",
+        "$WORKSPACE/work/bend-deep-review/final-local/foreign"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Error: no .c import: host_value\n"
+    }
+  ]
+}
