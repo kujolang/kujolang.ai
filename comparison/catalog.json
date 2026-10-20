@@ -287,6 +287,13 @@
       "level": "implementation inspected and executed; independent Python checker, not Eval",
       "version": "Kujo 1.8.2 producer; Python 3 checker",
       "verified": "2026-10-19"
+    },
+    "baml-crash-nightly-review": {
+      "label": "BAML stable and nightly crash retest",
+      "url": "https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-crash-nightly-2026-10-20",
+      "level": "32 boundary cases, isolated crash controls, official source and native crash reports",
+      "version": "CLI 0.22.2 / bridge 0.22.2 and CLI 0.22.3-nightly.20261018.a / bridge 0.22.3.dev2026101800; macOS x86_64; Python 3.10",
+      "verified": "2026-10-20"
     }
   },
   "kujoFacts": {
@@ -608,9 +615,10 @@
         "baml-bridge-docs",
         "baml-function-docs",
         "pydantic-strict",
-        "baml-boundary-review"
+        "baml-boundary-review",
+        "baml-crash-nightly-review"
       ],
-      "verified": "2026-10-19",
+      "verified": "2026-10-20",
       "kind": "direct",
       "technology": {
         "name": "BAML",
@@ -620,7 +628,7 @@
         "website": "https://boundaryml.com/",
         "repository": "https://github.com/BoundaryML/baml",
         "documentation": "https://boundaryml.com/quickstart",
-        "version": "Stable language toolchain and Python bridge 0.22.2 (toolchain released 2026-10-13; commit 01f5c412c73c213846ea8cb6ead89d303b053672). Runtime and generated Python client tested on macOS x86_64. The nightly channel was not tested."
+        "version": "Stable language toolchain and Python bridge 0.22.2 (toolchain released 2026-10-13; commit 01f5c412c73c213846ea8cb6ead89d303b053672). Runtime and generated Python client tested on macOS x86_64. Retested on 2026-10-20 with CLI 0.22.3-nightly.20261018.a and Python bridge 0.22.3.dev2026101800: all 32 boundary outcomes matched stable, including the invalid-arithmetic crash."
       },
       "dimensions": [
         [
@@ -797,7 +805,7 @@
       },
       "boundaryReview": {
         "title": "What the Python boundary validates",
-        "intro": "These are separate checks, not one blanket type-safety guarantee. We tested the 0.22.2 CLI and Python bridge on macOS x86_64 with Python 3.10 and Pydantic 2.14.1. Each risky call ran in its own process. Official bridge docs describe type mappings and execution; the pinned source and fixtures establish the narrower behavior below.",
+        "intro": "These are separate checks, not one blanket type-safety guarantee. We tested the 0.22.2 CLI and Python bridge on macOS x86_64 with Python 3.10 and Pydantic 2.14.1. The 2026-10-20 retest used CLI 0.22.3-nightly.20261018.a and bridge 0.22.3.dev2026101800; all 32 boundary outcomes matched stable. Each risky call ran in its own process. Official bridge docs describe type mappings and execution; the pinned source and fixtures establish the narrower behavior below.",
         "rows": [
           [
             "Static checks",
@@ -854,10 +862,11 @@
           [
             "Invalid values used in arithmetic",
             "Call plus(value: int) -> int { value + 1 } with 41 and then \"bad\".",
-            "41 returned 42. The string caused SIGSEGV in separate processes, both with and without the sandbox.",
-            "This is a confirmed release/platform-specific failure, not a caught validation exception. Its native root cause and behavior on other targets remain unverified.",
+            "41 returned 42. The string caused SIGSEGV in stable 0.22.2 and nightly 0.22.3-nightly.20261018.a with its matching Python bridge. The nightly reproduced all 32 boundary outcomes; separate runs without Python’s signal handler also crashed.",
+            "The tested nightly does not fix this failure. Source and crash reports support a missing type check before optimized integer arithmetic. Live debugger attachment was unavailable; the exact source-to-machine path remains inferred. Other platforms and bridges were not tested.",
             [
-              "baml-boundary-review"
+              "baml-boundary-review",
+              "baml-crash-nightly-review"
             ]
           ],
           [
