@@ -1,0 +1,10 @@
+(lldb) target create "work/baml-crash-review/venv/lib/python3.10/site-packages/baml_bridge/baml_py.abi3.so"
+Current executable set to '$WORKSPACE/work/baml-crash-review/venv/lib/python3.10/site-packages/baml_bridge/baml_py.abi3.so' (x86_64).
+(lldb) disassemble --start-address 0x9da78c --count 6
+baml_py.abi3.so`___lldb_unnamed_symbol11815:
+baml_py.abi3.so[0x9da78c] <+1612>: movq   (%r12), %rax
+baml_py.abi3.so[0x9da790] <+1616>: leaq   0x2325(%rip), %rcx        ; <+10620>
+baml_py.abi3.so[0x9da797] <+1623>: movslq (%rcx,%rax,4), %rax
+baml_py.abi3.so[0x9da79b] <+1627>: addq   %rcx, %rax
+baml_py.abi3.so[0x9da79e] <+1630>: jmpq   *%rax
+baml_py.abi3.so[0x9da7a0] <+1632>: movq   %rdx, -0x58(%rbp)

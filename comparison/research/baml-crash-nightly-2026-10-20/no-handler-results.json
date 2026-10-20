@@ -1,0 +1,14 @@
+[
+  {
+    "version": "stable",
+    "exit": -11,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "version": "nightly",
+    "exit": -11,
+    "stdout": "",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,10 @@
+(lldb) target create "work/competitor-runtimes/gap-review/venv/lib/python3.10/site-packages/baml_bridge/baml_py.abi3.so"
+Current executable set to '$WORKSPACE/work/competitor-runtimes/gap-review/venv/lib/python3.10/site-packages/baml_bridge/baml_py.abi3.so' (x86_64).
+(lldb) disassemble --start-address 0x9d608e --count 6
+baml_py.abi3.so`___lldb_unnamed_symbol11920:
+baml_py.abi3.so[0x9d608e] <+1198>: movq   (%r12), %rax
+baml_py.abi3.so[0x9d6092] <+1202>: leaq   0x249f(%rip), %rcx        ; <+10584>
+baml_py.abi3.so[0x9d6099] <+1209>: movslq (%rcx,%rax,4), %rax
+baml_py.abi3.so[0x9d609d] <+1213>: addq   %rcx, %rax
+baml_py.abi3.so[0x9d60a0] <+1216>: jmpq   *%rax
+baml_py.abi3.so[0x9d60a2] <+1218>: movq   %r8, -0x60(%rbp)

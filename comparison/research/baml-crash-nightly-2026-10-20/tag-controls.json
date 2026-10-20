@@ -1,0 +1,44 @@
+[
+  {
+    "version": "stable",
+    "input": "null",
+    "exit": 0,
+    "stdout": "False\n",
+    "stderr": ""
+  },
+  {
+    "version": "stable",
+    "input": "false",
+    "exit": 0,
+    "stdout": "True\n",
+    "stderr": ""
+  },
+  {
+    "version": "stable",
+    "input": "true",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"$WORKSPACE/work/competitor-runtimes/gap-review/venv/lib/python3.10/site-packages/baml_bridge/__init__.py\", line 453, in _sync\n    return decode_call_result(result_bytes)\n  File \"$WORKSPACE/work/competitor-runtimes/gap-review/venv/lib/python3.10/site-packages/baml_bridge/proto.py\", line 1515, in decode_call_result\n    raise attach_baml_traceback(err)\nTypeError: internal omitted argument escaped to external conversion\n"
+  },
+  {
+    "version": "nightly",
+    "input": "null",
+    "exit": 0,
+    "stdout": "False\n",
+    "stderr": ""
+  },
+  {
+    "version": "nightly",
+    "input": "false",
+    "exit": 0,
+    "stdout": "True\n",
+    "stderr": ""
+  },
+  {
+    "version": "nightly",
+    "input": "true",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"$WORKSPACE/work/baml-crash-review/venv/lib/python3.10/site-packages/baml_bridge/__init__.py\", line 453, in _sync\n    return decode_call_result(result_bytes)\n  File \"$WORKSPACE/work/baml-crash-review/venv/lib/python3.10/site-packages/baml_bridge/proto.py\", line 1515, in decode_call_result\n    raise attach_baml_traceback(err)\nTypeError: internal omitted argument escaped to external conversion\n"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "checked": "2026-10-20",
+  "platform": "macOS x86_64; Python 3.10; Pydantic 2.14.1",
+  "nightlyTag": "baml-language-0.22.3-nightly.20261018.a",
+  "nightlyCommit": "481d074234fce9df31ee0ab0da5f29c5d5fe1e4d",
+  "releaseURL": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.3-nightly.20261018.a",
+  "published": "2026-10-19T08:24:25Z",
+  "apiPrerelease": false,
+  "nightlyBridge": "0.22.3.dev2026101800",
+  "wheel": {
+    "filename": "baml_bridge-0.22.3.dev2026101800-cp310-abi3-macosx_10_12_x86_64.whl",
+    "url": "https://files.pythonhosted.org/packages/a2/8a/b6b07309b9b4f0e4bdc057cfb4e3bb668ea2f745b5b81535846e56dc53d7/baml_bridge-0.22.3.dev2026101800-cp310-abi3-macosx_10_12_x86_64.whl",
+    "digests": {
+      "blake2b_256": "a28ab6b07309b9b4f0e4bdc057cfb4e3bb668ea2f745b5b81535846e56dc53d7",
+      "md5": "988f454685ffd4cc3ebeb81a60cbba64",
+      "sha256": "f18cb5183870b1267baf88a0fa02f9c483a5c3cafdaf3527146d5f81caa0b092"
+    }
+  },
+  "archiveSHA256": "a9fec4671cae0500b6427fd34c0c76a1ef43b63a81735236e1a12e330651d34d",
+  "cliSHA256": "424765924f9954b6223d35e766bccb7945982ddf2c1ebe866f6b34e2dadc1396",
+  "nativeSHA256": {
+    "stable": "e0100a232c6c2795b8260c78e2f9ba75f4c3761e8a866915ac0d005b9132db20",
+    "nightly": "b8d3fa7e7f02945d658ee167b23de855f0537dcbba94d6909bfc1caa42e4209f"
+  },
+  "sourceHashes": {
+    "nightly-bex_vm_types_src_types_value.rs": "d8c9effa25d98b6c2b34ab50d28c19f03b4b0e7c5d6610ecc0aa5730087e61f1",
+    "stable-bex_vm_src_package_baml_ops_math.rs": "1dd9f74fd12a0170bce7be0e934c953a818fdaacbb7edf914ccf1ea915728196",
+    "stable-bex_vm_src_vm.rs": "43e923b28de603741406b19172c91e64070a3237a95a309c283df92930fb8480",
+    "nightly-bex_vm_src_package_baml_ops_math.rs": "1dd9f74fd12a0170bce7be0e934c953a818fdaacbb7edf914ccf1ea915728196",
+    "nightly-bex_engine_src_conversion.rs": "db5e8d06118b81661d1e6af3d907bfef5c1f9bbbe03dbd352c5bf29def4d2f4d",
+    "stable-bex_engine_src_conversion.rs": "dbbe0c270dca61912212ceab19b08754f1dc28d726fbc983d0bb55d1544bcf43",
+    "stable-bex_vm_types_src_types_value.rs": "d8c9effa25d98b6c2b34ab50d28c19f03b4b0e7c5d6610ecc0aa5730087e61f1",
+    "nightly-bex_vm_src_vm.rs": "180fe6f9d83c64a1bf4b0ca820ef058164224fb182f9d692ac421e011548df73"
+  },
+  "debugger": "Live LLDB launch denied by macOS attach policy; offline binary disassembly succeeded. No debug symbols or patched build."
+}

@@ -1,0 +1,5 @@
+[package]
+name = "type-boundary"
+[generator.client]
+output_type = "python/pydantic"
+naming_convention = "preserve-case"

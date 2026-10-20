@@ -1,0 +1,336 @@
+[
+  {
+    "version": "stable",
+    "exception": {
+      "codes": "0x000000000000000d, 0x0000000000000000",
+      "rawCodes": [
+        13,
+        0
+      ],
+      "type": "EXC_BAD_ACCESS",
+      "signal": "SIGSEGV",
+      "subtype": "UNKNOWN_0xD at 0x0000000000000000"
+    },
+    "threadName": "tokio-rt-worker",
+    "threadState": {
+      "r13": {
+        "value": 140342041410392
+      },
+      "rax": {
+        "value": 216172782113783808
+      },
+      "rflags": {
+        "value": 66070
+      },
+      "cpu": {
+        "value": 2
+      },
+      "r14": {
+        "value": 0
+      },
+      "rsi": {
+        "value": 140342001684496
+      },
+      "r8": {
+        "value": 0
+      },
+      "cr2": {
+        "value": 0
+      },
+      "rdx": {
+        "value": 140342105149442
+      },
+      "r10": {
+        "value": 140342001891840
+      },
+      "r9": {
+        "value": 140342041414050
+      },
+      "r15": {
+        "value": 0
+      },
+      "rbx": {
+        "value": 140342041409537
+      },
+      "trap": {
+        "value": 13
+      },
+      "err": {
+        "value": 0
+      },
+      "r11": {
+        "value": 1
+      },
+      "rip": {
+        "value": 4487352473,
+        "matchesCrashFrame": 1
+      },
+      "rbp": {
+        "value": 123145504498688
+      },
+      "rsp": {
+        "value": 123145504497424
+      },
+      "r12": {
+        "value": 140342105149442
+      },
+      "rcx": {
+        "value": 4487361848
+      },
+      "flavor": "x86_THREAD_STATE",
+      "rdi": {
+        "value": 123145504504416
+      }
+    },
+    "frames": [
+      {
+        "imageOffset": 10313881,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 12939604,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 12891916,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 12881212,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 12851075,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 13251382,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 13372911,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 269099,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 259415,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 205407,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 24056308,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 24049155,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 24042809,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 23966320,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 24006474,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 21594200,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 23881,
+        "symbol": "_pthread_start",
+        "symbolLocation": 115,
+        "imageIndex": 38
+      },
+      {
+        "imageOffset": 6191,
+        "symbol": "thread_start",
+        "symbolLocation": 15,
+        "imageIndex": 38
+      }
+    ],
+    "image": {
+      "name": "baml_py.abi3.so",
+      "base": 4477038592,
+      "uuid": "94ae91b9-794e-3caa-9c0c-3f876cacf84d",
+      "size": 33542144
+    },
+    "sourceReport": "Python-2026-10-20-080130.ips"
+  },
+  {
+    "version": "nightly",
+    "exception": {
+      "codes": "0x000000000000000d, 0x0000000000000000",
+      "rawCodes": [
+        13,
+        0
+      ],
+      "type": "EXC_BAD_ACCESS",
+      "signal": "SIGSEGV",
+      "subtype": "UNKNOWN_0xD at 0x0000000000000000"
+    },
+    "threadName": "tokio-rt-worker",
+    "threadState": {
+      "r13": {
+        "value": 140582655845208
+      },
+      "rax": {
+        "value": 216172782113783808
+      },
+      "rflags": {
+        "value": 66070
+      },
+      "cpu": {
+        "value": 6
+      },
+      "r14": {
+        "value": 0
+      },
+      "rsi": {
+        "value": 140582655461392
+      },
+      "r8": {
+        "value": 140582655798800
+      },
+      "cr2": {
+        "value": 0
+      },
+      "rdx": {
+        "value": 0
+      },
+      "r10": {
+        "value": 8520
+      },
+      "r9": {
+        "value": 140582655820288
+      },
+      "r15": {
+        "value": 140582655798800
+      },
+      "rbx": {
+        "value": 140582655844353
+      },
+      "trap": {
+        "value": 13
+      },
+      "err": {
+        "value": 0
+      },
+      "r11": {
+        "value": 140582651428864
+      },
+      "rip": {
+        "value": 4460300183,
+        "matchesCrashFrame": 1
+      },
+      "rbp": {
+        "value": 123145517744752
+      },
+      "rsp": {
+        "value": 123145517743392
+      },
+      "r12": {
+        "value": 140582724419586
+      },
+      "rcx": {
+        "value": 4460309180
+      },
+      "flavor": "x86_THREAD_STATE",
+      "rdi": {
+        "value": 123145517750528
+      }
+    },
+    "frames": [
+      {
+        "imageOffset": 10332055,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 13017674,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 12969996,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 12966604,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 13408373,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 13445279,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 266523,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 256823,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 202879,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 24359204,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 24352051,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 24345705,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 24269216,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 24309370,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 21914600,
+        "imageIndex": 17
+      },
+      {
+        "imageOffset": 23881,
+        "symbol": "_pthread_start",
+        "symbolLocation": 115,
+        "imageIndex": 38
+      },
+      {
+        "imageOffset": 6191,
+        "symbol": "thread_start",
+        "symbolLocation": 15,
+        "imageIndex": 38
+      }
+    ],
+    "image": {
+      "name": "baml_py.abi3.so",
+      "base": 4449968128,
+      "uuid": "814776b0-c54a-3380-afee-f66fb5ec20c3",
+      "size": 33984512
+    },
+    "sourceReport": "Python-2026-10-20-080130.000.ips"
+  }
+]
