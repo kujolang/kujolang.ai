@@ -5,6 +5,7 @@ on:
     paths:
       - .github/workflows/comparison-runtimes.yml
       - comparison/research/runtime-gap-review-2026-10-19/run-bend.py
+      - comparison/research/bend-contract-review-2026-10-20/**
   workflow_dispatch:
 permissions:
   contents: read
@@ -36,6 +37,11 @@ jobs:
           CC: /usr/bin/clang
           EVIDENCE_DIR: ${{ runner.temp }}/runtime-evidence
         run: python3 comparison/research/runtime-gap-review-2026-10-19/run-bend.py
+      - name: Exercise Bend proof and host boundary contracts
+        env:
+          BEND_NO_TELEMETRY: '1'
+          CC: /usr/bin/clang
+        run: python3 comparison/research/bend-contract-review-2026-10-20/reproduce.py --output "$RUNNER_TEMP/runtime-evidence/bend-deep" --kernel
       - uses: actions/upload-artifact@v4
         if: always()
         with:
