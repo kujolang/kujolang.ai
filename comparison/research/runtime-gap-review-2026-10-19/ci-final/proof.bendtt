@@ -1,0 +1,14 @@
+add_zero : ∀x0 : Nat -> {(Nat.add x0 (.Zero, ())) == x0 : Nat} =
+  λ{(,): λ{.Zero: λ{(): {==}; λ{}}; λ{.Succ: λ{(,): λx0 => λ{(): %(add_zero x0) : x1, x2 => {(.Succ, ((Nat.add x0 (.Zero, ())), ())) == (.Succ, (x1, ())) : Nat}; {==}; λ{}}}; λ{}}}}
+
+main : {(Nat.add (.Succ, ((.Succ, ((.Zero, ()), ())), ())) (.Zero, ())) == (.Succ, ((.Succ, ((.Zero, ()), ())), ())) : Nat} =
+  (add_zero (.Succ, ((.Succ, ((.Zero, ()), ())), ())))
+
+Nat.add : ∀x0 : Nat -> ∀x1 : Nat -> Nat =
+  λ{(,): λ{.Zero: λ{(): λx0 => x0; λ{}}; λ{.Succ: λ{(,): λx0 => λ{(): λx1 => (.Succ, ((Nat.add x0 x1), ())); λ{}}}; λ{}}}}
+
+Nat.arms : ∀x0 : <Zero, Succ> -> *(.Q2) =
+  λ{.Zero: <()>; λ{.Succ: Σx0 : Nat -> <()>; λ{}}}
+
+Nat : *(.Q2) =
+  Σx0 : <Zero, Succ> -> (Nat.arms x0)

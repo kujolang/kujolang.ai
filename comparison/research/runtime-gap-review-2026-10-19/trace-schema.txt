@@ -1,0 +1,72 @@
+processes: One row per process that ran BAML: every engine it started shares the row.
+  process_id                 text         32 hex digits; a recording from before process IDs is its own process
+  baml_source_code_content_id text         CAS id of the BAML sources it ran: the root blob of a map<path, content> whose large files are blobs of their own; NULL when not recorded
+  baml_version               text       
+  host                       text         what ran BAML: baml (the CLI), lsp, pack, python, ...
+  command                    text         the process's arguments, space-separated; debugging only
+  context_distinct_id        text         immutable launch identity; NULL when absent or unavailable
+  context_metadata           baml_value   immutable launch metadata; unavailable in older recordings
+  status                     text         running, success, error, panicked, or unknown (the host did not report the OS process's exit outcome)
+  status_history             baml_value   [{status, timestamp}]: running from the process's start, then its reported completion or exit outcome
+  last_updated               text         when it ended, else the newest recording file indexed
+
+profiler: One row per calling-context tree node of each process whose host reported completion, merged over its call sites, threads and engines. Empty until completion is recorded; the OS process's exit outcome can remain unknown.
+  profiler_node_id           text         16 hex digits; the same code path has the same ID in every process
+  process_id                 text       
+  parent_profiler_node_id    text         NULL for a top-level call
+  node_type                  text         future for a spawned future (its children are what it ran), else function
+  function_name              text         fully qualified, package included; for a future, the function it runs. NULL when not recorded
+  total_time                 integer      nanoseconds in completed invocations; direct recursion counted once. A future's runs from when it began running, not from when it was scheduled
+  self_time                  integer      total_time minus the synchronous callees' total_time
+  io_total_time              integer      nanoseconds in sysops (baml.fs.read, baml.http.send, ...), callees included
+  io_self_time               integer      nanoseconds in sysops this node called itself
+  invocation_count           integer      return_count + error_count + future_cancel_count + missing_count
+  return_count               integer    
+  future_cancel_count        integer      futures cancelled (or unwound by baml.sys.exit); 0 for a function
+  error_count                integer      panic_error_count + nonpanic_error_count
+  panic_error_count          integer      ended by a panic (cancellations excluded); NULL for recordings from before panics were recorded
+  nonpanic_error_count       integer      ended by a thrown error
+  missing_count              integer      functions that never finished: interrupted by a cancellation or baml.sys.exit; 0 for a future
+
+spans: One row per completed span: a retained function call (LLM functions, $trace spans, promoted calls), a future (a spawned future, or a host's root call), or a network span (an HTTP request the runtime made).
+  span_id                    text         <recording_id>:<n>
+  span_type                  text         function, future or network_span
+  span_name                  text         the function's fully qualified name; for a future its name, else the function it runs; for a network span its method and URL, with query values hashed
+  process_id                 text       
+  future_id                  text         the future a function or network span ran on; for a future, the future that spawned it
+  profiler_node_id           text         its node in the process's profiler (for a network span, the function that made the request); NULL while a function on its path is unknown
+  parent_span_id             text         the enclosing span; NULL for a root call
+  status                     text         return, user_error, panic_error (a panic other than a cancellation), or cancel_error (cancelled, or unwound by baml.sys.exit)
+  scheduled_time             text         RFC 3339 UTC; futures only: when it was spawned, before it waited to start (a Limit). NULL for a function, and for futures recorded before this was recorded
+  start_time                 text         RFC 3339 UTC; for a future, when it began running (when it was cancelled, if it never ran)
+  end_time                   text         RFC 3339 UTC
+  duration                   integer      nanoseconds, start_time to end_time
+  type_args                  baml_value   the type arguments a generic function was called with, by type-parameter name: type_args['T'] is {"$type": {"type": "class", "name": "user.Resume"}}, and a list of them {"$type": {"type": "list", "item": …}}. A method's include its class's (Box<int>.map<string>: {T: int, U: string}), an interface method's its Self, a lambda's its enclosing function's. Captured exactly when input_args is. NULL for a non-generic function, a span whose inputs aren't captured, a future or a network span
+  input_args                 baml_value   captured arguments by name or position: input_args['customer'], input_args[0]; for a network span the request, {request: {method, url, headers, body}}; NULL for futures
+  output_value               baml_value   captured return value of a span that returned; NULL for a network span, whose response is in its events
+  network_event_values       baml_value   [{event_name, payload, timestamp}] in time order. connection: {status, headers}. data: a whole body, or one server-sent event as {event, data, id}; null when bodies are not recorded. end (the stream ended on the wire), await (the program finished reading), close (it closed the stream early) and drop: null. Other names are other protocols' events. network_event_values[0]['payload'] reads only that payload. NULL for functions and futures
+  error_value                baml_value   the baml.errors.Context of a failed span: error_value['error'], error_value['stack_trace'], error_value['cause']
+  context_distinct_id        text         entry-time identity; NULL when absent or unavailable
+  context_metadata           baml_value   entry-time metadata; explicit empty context is an empty map, unknown context is unavailable
+  temporary_projections      baml_value   model usage: model_name, model_calls (model turns), input_tokens (full-rate), output_tokens, cache_read_tokens, cache_write_tokens, reasoning_tokens, cost (dollars; NULL for an unpriced model). On a network span, what the provider's response reported (Anthropic, OpenAI chat and responses, Gemini and Vertex, Bedrock, Jev); on a function or future span, the model calls recorded against it, unless a request under it is priced from its response. NULL without usage
+  span_reason                text         policy_promoted (recorded only after it finished, by a policy) or other
+
+span_announcements: One row per span known to have started, finished or not.
+  span_id                    text         <recording_id>:<n>
+  span_type                  text         function, future or network_span
+  span_name                  text         as in spans
+  process_id                 text       
+  future_id                  text         as in spans
+  profiler_node_id           text         as in spans
+  parent_span_id             text         as in spans
+  start_time                 text         RFC 3339 UTC
+  type_args                  baml_value   as in spans
+  input_args                 baml_value   as in spans
+  network_event_values       baml_value   as in spans; an unfinished request's events so far
+  context_distinct_id        text         announcement-time identity; NULL when absent or unavailable
+  context_metadata           baml_value   announcement-time metadata; unavailable without an announcement
+  is_complete                integer      1 once spans has the span's completion
+
+BAML value functions:
+  baml_value_state(v)  present, null, missing, omitted, no_value, or why the value is unavailable (cas_missing, value_truncated, capture_pending, ...)
+  baml_kind(v)         null, bool, int, float, string, bigint, enum, json (structured), missing, unavailable

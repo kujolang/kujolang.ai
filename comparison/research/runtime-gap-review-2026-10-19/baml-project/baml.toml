@@ -1,0 +1,5 @@
+[package]
+name = "runtime-gap-review"
+[generator.client1]
+output_type = "python/pydantic"
+naming_convention = "preserve-case"

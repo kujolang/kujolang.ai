@@ -21,11 +21,13 @@ jobs:
           mkdir -p "$RUNNER_TEMP/runtime-evidence" "$RUNNER_TEMP/bend"
           curl -fL https://github.com/bendlang/bend/releases/download/v2.0.37/bend-2.0.37-linux-x64.tar.gz -o "$RUNNER_TEMP/bend.tgz"
           sha256sum "$RUNNER_TEMP/bend.tgz" | tee "$RUNNER_TEMP/runtime-evidence/bend-archive.sha256"
+          echo "84c32465a39bc9ac315eade23f470cb8db03153dc860f89564fcfec153c3e445  $RUNNER_TEMP/bend.tgz" | sha256sum --check
           tar -xzf "$RUNNER_TEMP/bend.tgz" -C "$RUNNER_TEMP/bend"
           echo "$RUNNER_TEMP/bend/bend/bin" >> "$GITHUB_PATH"
           echo "BEND_HOME=$RUNNER_TEMP/bend/bend" >> "$GITHUB_ENV"
           curl -fL https://github.com/leanprover/lean4/releases/download/v4.34.0/lean-4.34.0-linux.tar.zst -o "$RUNNER_TEMP/lean.tar.zst"
           sha256sum "$RUNNER_TEMP/lean.tar.zst" | tee "$RUNNER_TEMP/runtime-evidence/lean-archive.sha256"
+          echo "caaa98356098c85dc0fcbbd28e1ec66f39eb6551829972b752ff20e1286b646b  $RUNNER_TEMP/lean.tar.zst" | sha256sum --check
           tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
           echo "$RUNNER_TEMP/lean-4.34.0-linux/bin" >> "$GITHUB_PATH"
       - name: Exercise proof kernel and execution targets

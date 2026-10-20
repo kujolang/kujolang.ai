@@ -1,0 +1,10 @@
+(version 1)
+(allow default)
+(deny network*)
+(deny file-read* (subpath "/Users"))
+(allow file-read* (subpath "/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes"))
+(deny file-write*)
+(allow file-write* (subpath "/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes") (subpath "/private/tmp"))
+(allow file-read-metadata)
+
+(allow network* (local ip "localhost:*") (remote ip "localhost:*"))

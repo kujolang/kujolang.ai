@@ -13,7 +13,8 @@ run("independent-kernel-valid",["bend","good-proof.bend","--verdict"],contains="
 for n in ["bad-proof","bad-type","bad-affine"]:run(n,["bend",n+".bend","--verdict"],exit=1)
 run("emit-kernel-input",["bend","good-proof.bend","-o",str(out/"proof.bendtt")])
 kernels=list((pathlib.Path.home()/".bend/bendtt").glob("*/bendtt"))
-if kernels and (out/"proof.bendtt").exists():
+assert len(kernels) == 1 and (out/"proof.bendtt").exists(), "expected one freshly built independent kernel and proof input"
+if kernels:
  kernel=str(kernels[0]);run("kernel-direct-valid",[kernel,str(out/"proof.bendtt")],contains="ALL PROOFS CHECK")
  lines=(out/"proof.bendtt").read_text().splitlines()
  index=next(i for i,line in enumerate(lines) if line.startswith("main :"))

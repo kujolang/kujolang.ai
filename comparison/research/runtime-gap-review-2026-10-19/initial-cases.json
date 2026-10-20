@@ -1,0 +1,26 @@
+[
+  {
+    "name": "python-client",
+    "command": [
+      "/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/gap-review/venv/bin/python",
+      "-c",
+      "import asyncio,baml_sdk; print(\"sync\",baml_sdk.total()); print(\"async\",asyncio.run(baml_sdk.total_async()))"
+    ],
+    "exit": 0,
+    "stdout": "sync 42\nasync 42\n",
+    "stderr": ""
+  },
+  {
+    "name": "pack",
+    "command": [
+      "/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/baml/bin/baml-cli",
+      "pack",
+      "total",
+      "--output",
+      "/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/gap-review/total-packed"
+    ],
+    "exit": 4,
+    "stdout": "",
+    "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nwarning: no baml skill is installed; set it up with `baml agent install`\nwarning: code is unformatted; run `baml fmt`\n   Packaging total\nerror: failed to build Mach-O binary\n\ncaused by:\n    0: I/O error: No space left on device (os error 28)\n"
+  }
+]

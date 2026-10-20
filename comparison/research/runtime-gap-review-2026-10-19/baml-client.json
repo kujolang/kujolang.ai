@@ -1,0 +1,116 @@
+{
+  "platform": "macOS-26.6.2-x86_64-64bit",
+  "cases": [
+    {
+      "name": "python-sync",
+      "passed": true,
+      "result": "42"
+    },
+    {
+      "name": "python-async",
+      "passed": true,
+      "result": "42"
+    },
+    {
+      "name": "typed-argument",
+      "passed": true,
+      "result": "37"
+    },
+    {
+      "name": "host-type-boundary-observed",
+      "passed": true,
+      "result": "wrong"
+    },
+    {
+      "name": "declared-error",
+      "passed": true,
+      "result": "BamlError: str: 'review failure'"
+    },
+    {
+      "name": "trace-context",
+      "passed": true,
+      "result": "{'review': 'fixture'}"
+    },
+    {
+      "name": "trace-context-isolation",
+      "passed": true,
+      "result": "{}"
+    },
+    {
+      "name": "provider-typed-output",
+      "passed": true,
+      "result": "42"
+    },
+    {
+      "name": "provider-request-shape",
+      "passed": true,
+      "result": "True"
+    },
+    {
+      "name": "provider-schema-rejection",
+      "passed": true,
+      "result": "BamlError: ai.errors.ParseFailed: ParseFailed(provider='openai-chat/review-fixture', raw_output='{\"value\":\"not-an-integer\"}', message=None)"
+    },
+    {
+      "name": "provider-http-rejection",
+      "passed": true,
+      "result": "BamlError: ai.errors.InvalidRequest: InvalidRequest(provider='openai-chat', status_code=401, detail='http 401', raw_body='{\"error\": {\"message\": \"fixture unauthorized\", \"type\": \"authentication_error\"}}')"
+    }
+  ],
+  "requests": [
+    {
+      "path": "/chat/completions",
+      "body": {
+        "model": "review-fixture",
+        "messages": [
+          {
+            "role": "system",
+            "content": [
+              {
+                "type": "text",
+                "text": "Return a JSON object with value 42."
+              }
+            ]
+          }
+        ]
+      },
+      "authorization": "Bearer local-fixture-only"
+    },
+    {
+      "path": "/chat/completions",
+      "body": {
+        "model": "review-fixture",
+        "messages": [
+          {
+            "role": "system",
+            "content": [
+              {
+                "type": "text",
+                "text": "Return a JSON object with value 42."
+              }
+            ]
+          }
+        ]
+      },
+      "authorization": "Bearer local-fixture-only"
+    },
+    {
+      "path": "/chat/completions",
+      "body": {
+        "model": "review-fixture",
+        "messages": [
+          {
+            "role": "system",
+            "content": [
+              {
+                "type": "text",
+                "text": "Return a JSON object with value 42."
+              }
+            ]
+          }
+        ]
+      },
+      "authorization": "Bearer local-fixture-only"
+    }
+  ]
+}

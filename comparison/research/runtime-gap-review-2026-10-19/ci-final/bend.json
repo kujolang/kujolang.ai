@@ -1,0 +1,146 @@
+{
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "cases": [
+    {
+      "name": "version",
+      "args": [
+        "bend",
+        "version"
+      ],
+      "exit": 0,
+      "stdout": "bend 2.0.37\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "independent-kernel-valid",
+      "args": [
+        "bend",
+        "good-proof.bend",
+        "--verdict"
+      ],
+      "exit": 0,
+      "stdout": "ALL PROOFS CHECK\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "bad-proof",
+      "args": [
+        "bend",
+        "bad-proof.bend",
+        "--verdict"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : {0n == 0n : Nat}\n- observed : Nat\nLocation: add_zero\n13 |     case 0n:\n14>|       0n\n   |       ^^\n15 |     case 1n+p:\n",
+      "passed": true
+    },
+    {
+      "name": "bad-type",
+      "args": [
+        "bend",
+        "bad-type.bend",
+        "--verdict"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : U32\n- observed : String\nLocation: main\n3 | def main() -> U32:\n4>|   \"wrong\"\n  |   ^^^^^^^\n5 | \n",
+      "passed": true
+    },
+    {
+      "name": "bad-affine",
+      "args": [
+        "bend",
+        "bad-affine.bend",
+        "--verdict"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "SOME PROOFS FAIL\nError:\n- expected : x\n- observed : x (consumed more than once)\nLocation: twice\n2 | \n3>| def twice(x: U32) -> U32:\n  |           ^\n4 |   (x + x : U32)\n",
+      "passed": true
+    },
+    {
+      "name": "emit-kernel-input",
+      "args": [
+        "bend",
+        "good-proof.bend",
+        "-o",
+        "/home/runner/work/_temp/runtime-evidence/proof.bendtt"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "kernel-direct-valid",
+      "args": [
+        "/home/runner/.bend/bendtt/b9f3e0253abffb11/bendtt",
+        "/home/runner/work/_temp/runtime-evidence/proof.bendtt"
+      ],
+      "exit": 0,
+      "stdout": "ALL PROOFS CHECK\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "kernel-direct-corrupted-proof",
+      "args": [
+        "/home/runner/.bend/bendtt/b9f3e0253abffb11/bendtt",
+        "/home/runner/work/_temp/runtime-evidence/corrupted.bendtt"
+      ],
+      "exit": 1,
+      "stdout": "SOME PROOFS FAIL\nIn main:\nexpected: an enum\nobserved: {((Nat.add (.Succ, ((.Succ, ((.Zero, ()), ())), ()))) (.Zero, ())) == (.Succ, ((.Succ, ((.Zero, ()), ())), ())) : Nat}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "parallel-native-build",
+      "args": [
+        "bend",
+        "parallel.bend",
+        "-o",
+        "/home/runner/work/_temp/runtime-evidence/parallel"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "parallel-native-result",
+      "args": [
+        "/home/runner/work/_temp/runtime-evidence/parallel"
+      ],
+      "exit": 0,
+      "stdout": "4096\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "parallel-js-build",
+      "args": [
+        "bend",
+        "parallel.bend",
+        "-o",
+        "/home/runner/work/_temp/runtime-evidence/parallel.js"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "parallel-js-result",
+      "args": [
+        "node",
+        "/home/runner/work/_temp/runtime-evidence/parallel.js"
+      ],
+      "exit": 0,
+      "stdout": "4096\n",
+      "stderr": "",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "",
+  "stderr": "warning: using the internal BAML toolchain binary directly is not recommended. Use `baml` instead.\nwarning: no baml skill is installed; set it up with `baml agent install`\nwarning: code is unformatted; run `baml fmt`\n   Packaging total\n    Finished /Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/gap-review/total-packed [total, x86_64-apple-darwin] in 1s\n"
+}
