@@ -1,0 +1,37 @@
+{
+  "nodeTests": 26,
+  "pythonTests": 4,
+  "projectionFiles": 23,
+  "routes": 8,
+  "internalLinksChecked": 443,
+  "socialRoutes": 255,
+  "htmlFiles": 256,
+  "responsiveImages": 553,
+  "passed": true,
+  "buildScope": "Focused comparison build, followed by full-site graph checks against refreshed comparison output and retained immutable baseline. Fresh full production build tracked separately.",
+  "mobile": [
+    {
+      "page": "baml",
+      "viewport": 375,
+      "bodyWidth": 360,
+      "scrollWidth": 360,
+      "capabilityRows": 6,
+      "font": "Departure Mono"
+    },
+    {
+      "page": "hub",
+      "viewport": 375,
+      "bodyWidth": 360,
+      "scrollWidth": 360,
+      "staleTableReference": false
+    },
+    {
+      "page": "agent-host-guide",
+      "viewport": 375,
+      "bodyWidth": 360,
+      "scrollWidth": 360,
+      "headingsUseDeparture": true,
+      "runtimePinClarification": true
+    }
+  ]
+}
