@@ -2,7 +2,7 @@
 
 Kujo and Bend check agent-written software at different levels. Bend lets you state laws and check proofs in the language. Kujo combines language checks with separate tools for task requirements, output checks and execution records. Choose based on what you need to verify, and consider using both when the requirement spans these levels.
 
-Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/kujo-vs-bend/
+Last reviewed: 2026-10-20. Canonical page: https://kujolang.ai/compare/kujo-vs-bend/
 
 ## At a glance
 
@@ -82,11 +82,11 @@ Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100ea
 
 ### Assurance boundary: Review what the law actually promises
 
-Bend checks proof definitions against type-level laws. The inspected negative fixture rejects an open claim offered as a proof. Unsafe and foreign code sit outside the stronger guarantee, and the guide identifies an unproven translation into the small kernel.
+Bend checks proof definitions against type-level laws. Valid and invalid controls exercised the independent kernel verdict. Unsafe and foreign dependencies are rejected by the proof gate, while ordinary execution permits them. The guide identifies an unproven translation into the small kernel.
 
 Evaluation implication: Review the law and trusted boundary as carefully as the generated implementation.
 
-Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md, https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend
+Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md, https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/bend-contract-review-2026-10-20
 
 ### Execution model: Match the workload to the parallel target
 
@@ -144,6 +144,20 @@ Feed a known wrong artifact to an independent check. Exercise the caller and ser
 
 Record the proof result, integration result and performance measurement separately. Accept only the guarantee each check actually establishes.
 
+## What Bend checks at each boundary
+
+We tested Bend 2.0.37 on macOS and Linux, recording 76 and 83 command observations respectively. Linux also reran 12 kernel controls. These counts include builds and controls. The results distinguish proof acceptance, ordinary execution and values supplied by a JavaScript caller.
+
+| Validation layer | Fixture | Observed result | Limit and evidence |
+| --- | --- | --- | --- |
+| Proof definitions | Valid and broken proofs; open and filled laws | Valid proofs and a filled imported law passed. Broken proofs, open laws and a missing LAWS import failed. | Check-only and the independent kernel verdict are separate steps; invalid input may fail before reaching the kernel. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/bend-contract-review-2026-10-20, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19 |
+| Unsafe and foreign code | Transitive unsafe calls and a foreign IO function | The proof gate rejected both fixtures. Evaluation, JavaScript and native execution still returned 42. | The stronger verdict excludes these dependencies; ordinary execution permits them. This does not mean every Base IO effect fails proof checking. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/bend-contract-review-2026-10-20, https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md |
+| Termination and reuse | Nondecreasing recursion; affine U32 used twice | Both failed checking. Explicit copy permission allowed reuse and returned 42. | These controls exercise specific restrictions, not every termination or ownership rule. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/bend-contract-review-2026-10-20 |
+| JavaScript Nat inputs | Invalid values, identity and curried calls | Negative, fractional, BigInt, string, null, NaN, infinite and above-limit inputs were rejected. Identity accepted 2**53. | The export guard accepts integer Numbers from zero through 2**53. Internal Nat operations have separate limits; identity acceptance does not establish arithmetic support across that range. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/bend-contract-review-2026-10-20 |
+| JavaScript U32 inputs | Identity called with -1, 2**32 and a string | All three values returned unchanged, including the string. | Official source and tests treat this host boundary as trusted. Validate external U32 inputs before calling; a declared type is not a universal JavaScript argument validator. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/bend-contract-review-2026-10-20 |
+| Execution targets | U32 wraparound, explicit copying and fork-join | Evaluation, JavaScript and native CPU agreed on these fixtures on both systems; fork-join returned 4096. | Finite output checks do not establish general backend equivalence, GPU behavior or parallel speedup. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/bend-contract-review-2026-10-20, https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md |
+| Process exit | Compiled JavaScript and native IO.exit | Statuses 0, 7 and 255 were preserved. Input 256 failed with status 1 and a range diagnostic. | This checks exit handling, not every IO effect. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/bend-contract-review-2026-10-20 |
+
 ## Technical architecture
 
 Bend’s guide describes a pure, affine, dependently typed language with explicit IO. It documents native CPU and GPU execution, while its JavaScript target runs parallel calls sequentially. Bend pairs laws with proof definitions; the negative fixture we inspected rejects an unfinished claim used as a proof. Kujo provides runtime execution and type diagnostics, but a successful `kujo check` does not establish type correctness in 1.8.2. Spec, Eval and Workcell are separate tools that check other parts of the workflow.
@@ -162,11 +176,11 @@ You could place a Bend component behind a process or file interface and check th
 
 ## Honest limitations
 
-Bend excludes unsafe and foreign code from its stronger proof verdict. Its guide also says that translation into the small kernel is not itself proven. Kujo’s output checks cover the assertions and runs you define, rather than every possible input. In either case, review whether the specification expresses the requirement fully.
+Bend excludes unsafe and foreign dependencies from its stronger proof verdict, and its guide says translation into the small kernel is not itself proven. JavaScript exports guard Nat inputs but trust U32 callers; our U32 identity fixture returned invalid host values unchanged. Kujo’s output checks cover the assertions and runs you define. In either case, review the specification and validate external inputs.
 
 ## Examples and benchmark evidence
 
-Bend 2.0.37 accepted a valid proof through --verdict with its independent BendTT kernel built using Lean 4.34.0. Calling that kernel directly accepted the exported proof and rejected a corrupted proof body. Broken proof, type and affine-use fixtures also failed. A fork-join example returned 4096 through native CPU and sequential JavaScript targets. These tests check results, not parallel speedup, GPU execution or the unproven translation into the kernel.
+Bend 2.0.37 passed valid proof controls through --verdict with its independent BendTT kernel built using Lean 4.34.0. Direct kernel calls accepted an exported proof and rejected its corrupted body. The expanded macOS and Linux tests exercised laws, unsafe and foreign dependencies, termination, affine reuse, JavaScript arguments, arithmetic and process exits. GPU execution and parallel speedup remain untested.
 
 ## Frequently asked questions
 
@@ -192,6 +206,7 @@ This review did not establish an equivalent general proof system in Kujo. Kujo�
 - [Kujo stable release](https://github.com/kujolang/kujo/releases/tag/v1.8.2) — official release metadata; 1.8.2; released 2026-10-19; reviewed 2026-10-19.
 - [Competitor runtime fixtures and raw outcomes](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19) — local execution receipts; bounded fixtures; Bend 2.0.37; BAML 0.22.2; Zerolang 0.3.4; macOS x86_64; reviewed 2026-10-19.
 - [Bend kernel and BAML integration runtime tests](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19) — release binaries executed; positive and negative fixtures; local mock provider; Bend 2.0.37 with Lean 4.34.0 on Linux x86_64; BAML and Python bridge 0.22.2 on macOS x86_64; reviewed 2026-10-19.
+- [Bend proof gates and JavaScript boundary tests](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/bend-contract-review-2026-10-20) — 76 macOS and 83 Linux command observations; 12 independent-kernel controls; pinned official source; Bend 2.0.37; Lean 4.34.0; macOS and Linux x86_64; reviewed 2026-10-20.
 
 ## Related pages
 

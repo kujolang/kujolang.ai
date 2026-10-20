@@ -292,7 +292,7 @@ You could place a Bend component behind a process or file interface and check th
 
 ### Honest limitations
 
-Bend excludes unsafe and foreign code from its stronger proof verdict. Its guide also says that translation into the small kernel is not itself proven. Kujo’s output checks cover the assertions and runs you define, rather than every possible input. In either case, review whether the specification expresses the requirement fully.
+Bend excludes unsafe and foreign dependencies from its stronger proof verdict, and its guide says translation into the small kernel is not itself proven. JavaScript exports guard Nat inputs but trust U32 callers; our U32 identity fixture returned invalid host values unchanged. Kujo’s output checks cover the assertions and runs you define. In either case, review the specification and validate external inputs.
 
 ## BAML: technical brief
 
