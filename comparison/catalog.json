@@ -294,6 +294,13 @@
       "level": "32 boundary cases, isolated crash controls, official source and native crash reports",
       "version": "CLI 0.22.2 / bridge 0.22.2 and CLI 0.22.3-nightly.20261018.a / bridge 0.22.3.dev2026101800; macOS x86_64; Python 3.10",
       "verified": "2026-10-20"
+    },
+    "baml-upstream-5332": {
+      "label": "Follow upstream BAML issue #5332",
+      "url": "https://github.com/BoundaryML/baml/issues/5332",
+      "level": "upstream bug report; follow the issue for maintainer updates and resolution",
+      "version": "Reported against CLI/bridge 0.22.2 and CLI 0.22.3-nightly.20261018.a / bridge 0.22.3.dev2026101800",
+      "verified": "2026-10-20"
     }
   },
   "kujoFacts": {
@@ -616,7 +623,8 @@
         "baml-function-docs",
         "pydantic-strict",
         "baml-boundary-review",
-        "baml-crash-nightly-review"
+        "baml-crash-nightly-review",
+        "baml-upstream-5332"
       ],
       "verified": "2026-10-20",
       "kind": "direct",
@@ -863,10 +871,11 @@
             "Invalid values used in arithmetic",
             "Call plus(value: int) -> int { value + 1 } with 41 and then \"bad\".",
             "41 returned 42. The string caused SIGSEGV in stable 0.22.2 and nightly 0.22.3-nightly.20261018.a with its matching Python bridge. The nightly reproduced all 32 boundary outcomes; separate runs without Python’s signal handler also crashed.",
-            "The tested nightly does not fix this failure. Source and crash reports support a missing type check before optimized integer arithmetic. Live debugger attachment was unavailable; the exact source-to-machine path remains inferred. Other platforms and bridges were not tested.",
+            "The tested nightly does not fix this failure. Source and crash reports support a missing type check before optimized integer arithmetic. Live debugger attachment was unavailable; the exact source-to-machine path remains inferred. Other platforms and bridges were not tested. We reported this as BAML issue #5332; follow the linked upstream issue for its current status.",
             [
               "baml-boundary-review",
-              "baml-crash-nightly-review"
+              "baml-crash-nightly-review",
+              "baml-upstream-5332"
             ]
           ],
           [
