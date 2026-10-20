@@ -1,0 +1,22 @@
+[
+  {
+    "id": "bend-release-guide",
+    "url": "https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100eac8efd66/guide/GUIDE.md",
+    "sha256": "5a280b67371eb37362a372af6a3faf54c3f5d0542329d2f4b3984671ab80d4fb"
+  },
+  {
+    "id": "baml-release-check",
+    "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/check_command.rs",
+    "sha256": "2a840592ff17906518ba6bd8a047c4657d6e07e2f19651bfd9437b2f6dfc3ca0"
+  },
+  {
+    "id": "baml-release-test",
+    "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/baml_cli/src/test_command.rs",
+    "sha256": "dec36776d50b17d4c0ec15d9daf7f75a59a7c5b2c3aeab0958b773b16da585cc"
+  },
+  {
+    "id": "python-release",
+    "url": "https://www.python.org/downloads/release/python-3150/",
+    "sha256": "98cbd7f5ee4f14b4af413666b20d404d5862ae91940bc1e704b9f51877609855"
+  }
+]

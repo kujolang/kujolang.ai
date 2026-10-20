@@ -1,0 +1,94 @@
+[
+  {
+    "route": "compare/",
+    "reviewed": [
+      "four project identities",
+      "six matrix dimensions",
+      "technical briefs",
+      "workflow composition",
+      "artifact exercise"
+    ],
+    "disposition": "Corrected the BAML execution evidence reference, separated checked-source rejection from dynamic host inputs, and removed an inapplicable below-table reference."
+  },
+  {
+    "route": "compare/kujo-vs-bend/",
+    "reviewed": [
+      "affine programming and explicit IO",
+      "laws and proof trust boundary",
+      "BendTT positive and corrupted-proof receipts",
+      "CPU/JS versus untested GPU",
+      "integration limits"
+    ],
+    "disposition": "Pinned the guide to tested v2.0.37; its content is byte-identical to the previously cited snapshot. No additional runtime capability asserted."
+  },
+  {
+    "route": "compare/kujo-vs-baml/",
+    "reviewed": [
+      "stable versus nightly channel",
+      "compiler diagnostics",
+      "Python static/dynamic/classes/parser layers",
+      "packed executable",
+      "BTEL and mock provider",
+      "known SIGSEGV"
+    ],
+    "disposition": "Added a distinct execution dimension and pinned compiler/test sources to 0.22.2. Existing crash remains bounded to the tested host/release."
+  },
+  {
+    "route": "compare/kujo-vs-zero/",
+    "reviewed": [
+      "Vercel identity and v0.3.4",
+      "graph-first compile path",
+      "stale/type rejection receipts",
+      "projection drift",
+      "unexecuted targets and refresh/conflicts"
+    ],
+    "disposition": "No correction required. Official pinned docs and retained receipts support the bounded claims; documented refresh/conflict paths remain explicitly unexecuted."
+  },
+  {
+    "route": "compare/ai-native-programming-languages/",
+    "reviewed": [
+      "candidate purposes",
+      "type/test/proof distinctions",
+      "adoption costs as recommendations",
+      "no performance ranking",
+      "established language versions"
+    ],
+    "disposition": "Clarified BAML static signatures versus dynamic values and parser checks; linked the boundary evidence."
+  },
+  {
+    "route": "compare/programming-languages-for-ai-agents/",
+    "reviewed": [
+      "host versus edited repository",
+      "Agents SDK cooperative limits",
+      "Dispatch recovery",
+      "Workcell/Watchdog authority versus telemetry",
+      "proposed failure probes"
+    ],
+    "disposition": "Added BAML boundary reference and Workcell 1.2.0 documented Kujo 1.6.0 pin; no blanket compatibility with site Kujo 1.8.2 baseline claimed."
+  },
+  {
+    "route": "compare/ai-code-verification-tools/",
+    "reviewed": [
+      "Kujo check limitation",
+      "Fence configured imports",
+      "Eval selected outcomes",
+      "Bend proofs",
+      "RunLedger supplied verdicts",
+      "ShipCheck presence checks",
+      "exact JSON int controls"
+    ],
+    "disposition": "Added direct citation to the actual public Python checker; checked retained source supports each tool scope."
+  },
+  {
+    "route": "compare/verify-agent-workflows/",
+    "reviewed": [
+      "Spec schema scope",
+      "independent checker",
+      "positive/negative cases",
+      "runtime version and hashes",
+      "traceability limits",
+      "editorial evaluation procedure"
+    ],
+    "disposition": "Replaced unrelated tool citations on exercise-specific rows with the actual public runner; reran the exercise successfully."
+  }
+]

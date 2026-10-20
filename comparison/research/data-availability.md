@@ -1,4 +1,6 @@
-# Data availability — 2026-10-19
+# Data availability — initial audit snapshot, 2026-10-19
+
+**Historical evidence, not current status.** Subsequent runtime reviews established Vercel Zerolang’s identity and executed competitor fixtures; live HTTP verification also succeeded. See [the current recheck](comparison-recheck-2026-10-19/README.md) and its linked runtime reports. The original observations below are retained to preserve the audit history.
 
 - Local website source, pinned ecosystem source snapshots, public competitor documentation and source: available.
 - Local baseline and final generated artifacts: retained outside generated output; summarized by the repository SEO crawler.

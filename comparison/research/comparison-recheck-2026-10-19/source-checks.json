@@ -1,0 +1,325 @@
+{
+  "retrievedAt": "2026-10-20T02:27:06.211668+00:00",
+  "sources": [
+    {
+      "id": "kujo",
+      "url": "https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs",
+      "fetchedURL": "https://raw.githubusercontent.com/kujolang/kujo/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs",
+      "sha256": "5e47c406709af8a5ab3cef9c5d9178a8851d2a7db16f80211f7b983f668531a5",
+      "bytes": 121186,
+      "ok": true
+    },
+    {
+      "id": "types",
+      "url": "https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs",
+      "fetchedURL": "https://raw.githubusercontent.com/kujolang/kujo/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs",
+      "sha256": "7722e13c7b68cd3120d8cf400a1545e2eb034996a71e9ab9f328e8ebcc0ebc8e",
+      "bytes": 228050,
+      "ok": true
+    },
+    {
+      "id": "bend",
+      "url": "https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md",
+      "fetchedURL": "https://raw.githubusercontent.com/bendlang/bend/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md",
+      "sha256": "5a280b67371eb37362a372af6a3faf54c3f5d0542329d2f4b3984671ab80d4fb",
+      "bytes": 28441,
+      "ok": true
+    },
+    {
+      "id": "bend-test",
+      "url": "https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend",
+      "fetchedURL": "https://raw.githubusercontent.com/bendlang/bend/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/tests/check/axiom_import_warn.bend",
+      "sha256": "3c9ce65e4f264c0875fd68f1d0b9b1b1087644eb70aac64cf3745f1075a5173f",
+      "bytes": 687,
+      "ok": true
+    },
+    {
+      "id": "baml",
+      "url": "https://boundaryml.com/",
+      "fetchedURL": "https://boundaryml.com/",
+      "sha256": "f3d5fc5b5886de4309a0ad0931f1d4761d168dc6cbf1cd5577cf5c73211e3a12",
+      "bytes": 2786,
+      "ok": true
+    },
+    {
+      "id": "baml-check",
+      "url": "https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs",
+      "fetchedURL": "https://raw.githubusercontent.com/BoundaryML/baml/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs",
+      "sha256": "83ef1a12eb7b247af045d4dfb6e1799a4a1490ff2dda1ef247ceffa1692d3e26",
+      "bytes": 8892,
+      "ok": true
+    },
+    {
+      "id": "baml-test",
+      "url": "https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs",
+      "fetchedURL": "https://raw.githubusercontent.com/BoundaryML/baml/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs",
+      "sha256": "dec36776d50b17d4c0ec15d9daf7f75a59a7c5b2c3aeab0958b773b16da585cc",
+      "bytes": 54029,
+      "ok": true
+    },
+    {
+      "id": "baml-start",
+      "url": "https://boundaryml.com/quickstart",
+      "fetchedURL": "https://boundaryml.com/quickstart",
+      "sha256": "2ada5c8ffd8c7895c50bf27076e16e6e0fee0b9e7339fe6f8ea7cb56519d50f1",
+      "bytes": 3479,
+      "ok": true
+    },
+    {
+      "id": "zero",
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md",
+      "fetchedURL": "https://raw.githubusercontent.com/vercel-labs/zerolang/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md",
+      "sha256": "00d78d6f76487cef943390ab1c0c2619436fef1170e442c739024b0d28ca0b81",
+      "bytes": 4915,
+      "ok": true
+    },
+    {
+      "id": "zero-run",
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/compile-path.md",
+      "fetchedURL": "https://raw.githubusercontent.com/vercel-labs/zerolang/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/compile-path.md",
+      "sha256": "6560ce8369959c7a5e3ad3d9376186f238dab96491be9c44da98a82ec5f2cea1",
+      "bytes": 4947,
+      "ok": true
+    },
+    {
+      "id": "spec",
+      "url": "https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo",
+      "fetchedURL": "https://raw.githubusercontent.com/kujolang/spec/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo",
+      "sha256": "691be02b5f3ccb90116c5fb4e606a89ef8370e45444ee4b7bb96420e09a13b2d",
+      "bytes": 13528,
+      "ok": true
+    },
+    {
+      "id": "eval",
+      "url": "https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo",
+      "fetchedURL": "https://raw.githubusercontent.com/kujolang/eval/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo",
+      "sha256": "35c8e48c1c7f2fe2f947c8dff89be0b694c5dd19216811d899219792a2ea383f",
+      "bytes": 87130,
+      "ok": true
+    },
+    {
+      "id": "runledger",
+      "url": "https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo",
+      "fetchedURL": "https://raw.githubusercontent.com/kujolang/runledger/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo",
+      "sha256": "0533d0e7a6954c68d3ce051208648eedeecc70bb8df1223680a686edcd480973",
+      "bytes": 3056,
+      "ok": true
+    },
+    {
+      "id": "shipcheck",
+      "url": "https://github.com/kujolang/shipcheck/blob/ee4cfd052c0522eebedc0eead223cbb22490b357/src/checks.kujo",
+      "fetchedURL": "https://raw.githubusercontent.com/kujolang/shipcheck/ee4cfd052c0522eebedc0eead223cbb22490b357/src/checks.kujo",
+      "sha256": "481be886c5ed3702b948723e24c111c846bda56613cc14e145bfe7e9db6260a6",
+      "bytes": 15974,
+      "ok": true
+    },
+    {
+      "id": "workcell",
+      "url": "https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo",
+      "fetchedURL": "https://raw.githubusercontent.com/kujolang/workcell/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo",
+      "sha256": "ef4cb6c89281cbfe6866bcf2e51bbbcb8bb9e566f3bf5d4034d05e2e53c3cb86",
+      "bytes": 8037,
+      "ok": true
+    },
+    {
+      "id": "fence",
+      "url": "https://github.com/kujolang/fence/blob/d3173049b5365af975624fddd48e943d39738c75/README.md",
+      "fetchedURL": "https://raw.githubusercontent.com/kujolang/fence/d3173049b5365af975624fddd48e943d39738c75/README.md",
+      "sha256": "eab9cc4f5cf175bb0fdfc3b9580986493eee6f5799b977052fda8c06b31bf242",
+      "bytes": 9502,
+      "ok": true
+    },
+    {
+      "id": "dispatch",
+      "url": "https://github.com/kujolang/dispatch/blob/71ca927c65598ecfe7c1816068e047cf50b915e0/README.md",
+      "fetchedURL": "https://raw.githubusercontent.com/kujolang/dispatch/71ca927c65598ecfe7c1816068e047cf50b915e0/README.md",
+      "sha256": "f31e8f4f6ed479d0bfb44c6aa1de8efae639359befa0d89a0aa9d15d13ab4adc",
+      "bytes": 43026,
+      "ok": true
+    },
+    {
+      "id": "sdk",
+      "url": "https://github.com/kujolang/agents-sdk/blob/6c4a54e74855c605eea67253f6808b16b8c63086/README.md",
+      "fetchedURL": "https://raw.githubusercontent.com/kujolang/agents-sdk/6c4a54e74855c605eea67253f6808b16b8c63086/README.md",
+      "sha256": "243e2190e64743e94f64249a710ecf3ecd7a9cdd35bb53e357bab3bf4ba84d9d",
+      "bytes": 8206,
+      "ok": true
+    },
+    {
+      "id": "watchdog",
+      "url": "https://github.com/kujolang/watchdog/blob/ad6fbc287c626539c1b3a69b4d3d31528b70edaa/README.md",
+      "fetchedURL": "https://raw.githubusercontent.com/kujolang/watchdog/ad6fbc287c626539c1b3a69b4d3d31528b70edaa/README.md",
+      "sha256": "e8b27dd78d9ff4c9ec2b787a33326faaa8a003d630a7a3afab7db228fe78f0ae",
+      "bytes": 37871,
+      "ok": true
+    },
+    {
+      "id": "google",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "fetchedURL": "https://developers.google.com/search/docs/appearance/ai-features",
+      "sha256": "b123637db48268193b795e370565d6d4e5a210356bc63e42d99771f150dfd4ff",
+      "bytes": 179810,
+      "ok": true
+    },
+    {
+      "id": "python",
+      "url": "https://docs.python.org/3/",
+      "fetchedURL": "https://docs.python.org/3/",
+      "sha256": "2feca0d635dba5bb629fb1f553e01fee62e280e7b3653e5410ea319b3b72f566",
+      "bytes": 19625,
+      "ok": true
+    },
+    {
+      "id": "typescript",
+      "url": "https://www.typescriptlang.org/docs/",
+      "fetchedURL": "https://www.typescriptlang.org/docs/",
+      "sha256": "48566bbfa37f06df72426ca19216421df7e08de8664cfcfda100726823d8d598",
+      "bytes": 170589,
+      "ok": true
+    },
+    {
+      "id": "rust",
+      "url": "https://doc.rust-lang.org/book/",
+      "fetchedURL": "https://doc.rust-lang.org/book/",
+      "sha256": "b9b470ca1dbc606e033d2a1e0cdc30d479f482039dbd2ecee2f825c0df65cc71",
+      "bytes": 22496,
+      "ok": true
+    },
+    {
+      "id": "vercel",
+      "url": "https://vercel.com/i/evaluating-ai-coding-agents",
+      "fetchedURL": "https://vercel.com/i/evaluating-ai-coding-agents",
+      "sha256": "e055fd450fd0dd9570c3511e7ad23324ef1b717b90982f4ee17cd41ef8cf2575",
+      "bytes": 876465,
+      "ok": true
+    },
+    {
+      "id": "workcell-boundary",
+      "url": "https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/README.md",
+      "fetchedURL": "https://raw.githubusercontent.com/kujolang/workcell/a276a92c6bac9279a8cb36ace9687ade34d5128f/README.md",
+      "sha256": "043733907551241eb1e030ec5ef09094fe95b4ce93be1e8bab97faff03bf9d32",
+      "bytes": 16391,
+      "ok": true
+    },
+    {
+      "id": "kujo-release",
+      "url": "https://github.com/kujolang/kujo/releases/tag/v1.8.2",
+      "fetchedURL": "https://github.com/kujolang/kujo/releases/tag/v1.8.2",
+      "sha256": "530257dc82f06ef386e9ef3d177307cf4eb0a096834866771a7acaec96fdf791",
+      "bytes": 195696,
+      "ok": true
+    },
+    {
+      "id": "bend-release",
+      "url": "https://github.com/bendlang/bend/releases/tag/v2.0.37",
+      "fetchedURL": "https://github.com/bendlang/bend/releases/tag/v2.0.37",
+      "sha256": "965af5554c9012d51872a4e63acffb8cd938baff22ed29ef89a627631e1125f5",
+      "bytes": 224254,
+      "ok": true
+    },
+    {
+      "id": "baml-release",
+      "url": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.2",
+      "fetchedURL": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.2",
+      "sha256": "26e91552148bd15d3b4f04212113cfda22fd7f48fc0e074e8c28c4b07b531985",
+      "bytes": 192455,
+      "ok": true
+    },
+    {
+      "id": "zero-patch",
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c",
+      "fetchedURL": "https://raw.githubusercontent.com/vercel-labs/zerolang/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c",
+      "sha256": "6327cb24ceeffc56451182c4f55a05bbbd23e30b451c5c3088bf65106986225e",
+      "bytes": 52386,
+      "ok": true
+    },
+    {
+      "id": "zero-projection",
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/projections.md",
+      "fetchedURL": "https://raw.githubusercontent.com/vercel-labs/zerolang/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/projections.md",
+      "sha256": "6415b1ff8a0c0c9ca351bd6afd9472123e007a69b6b3b0668fa1a0d8d089a1ca",
+      "bytes": 3927,
+      "ok": true
+    },
+    {
+      "id": "zero-release",
+      "url": "https://github.com/vercel-labs/zerolang/releases/tag/v0.3.4",
+      "fetchedURL": "https://github.com/vercel-labs/zerolang/releases/tag/v0.3.4",
+      "sha256": "735776e94ff102b07b458983cd6e0ab1baa4f794dbe164d32b7eed761ae66471",
+      "bytes": 197119,
+      "ok": true
+    },
+    {
+      "id": "runtime-review",
+      "url": "https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19",
+      "fetchedURL": "https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19",
+      "sha256": "7d9316659c39f83c5edc8b7069790b004d38544dab5d0be1107fb3ea7565eab5",
+      "bytes": 334021,
+      "ok": true
+    },
+    {
+      "id": "runtime-gap-review",
+      "url": "https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19",
+      "fetchedURL": "https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19",
+      "sha256": "9e9f745715f027e44421af30ae3b59b5e19727e682d230201383bbe82aaebfb9",
+      "bytes": 339413,
+      "ok": true
+    },
+    {
+      "id": "baml-python-contract",
+      "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/README.md",
+      "fetchedURL": "https://raw.githubusercontent.com/BoundaryML/baml/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/README.md",
+      "sha256": "ab418465d40c2f734f910ed65471448dc20931122d5ace42285f296c69fdd8e9",
+      "bytes": 2296,
+      "ok": true
+    },
+    {
+      "id": "baml-python-conversion",
+      "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/src/baml_bridge/proto.py",
+      "fetchedURL": "https://raw.githubusercontent.com/BoundaryML/baml/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/src/baml_bridge/proto.py",
+      "sha256": "030a1c1ca85490793354ff6a43f790d136f93024440c34ef3922cb07d36b4c97",
+      "bytes": 62674,
+      "ok": true
+    },
+    {
+      "id": "baml-engine-conversion",
+      "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/bex_engine/src/conversion.rs",
+      "fetchedURL": "https://raw.githubusercontent.com/BoundaryML/baml/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/bex_engine/src/conversion.rs",
+      "sha256": "dbbe0c270dca61912212ceab19b08754f1dc28d726fbc983d0bb55d1544bcf43",
+      "bytes": 296108,
+      "ok": true
+    },
+    {
+      "id": "baml-bridge-docs",
+      "url": "https://developer.boundaryml.com/baml/bridges",
+      "fetchedURL": "https://developer.boundaryml.com/baml/bridges",
+      "sha256": "f4e14002285c138f4c3a5660286cce09a3199d0a03e6cc4103d9865b2acb3dc4",
+      "bytes": 69839,
+      "ok": true
+    },
+    {
+      "id": "baml-function-docs",
+      "url": "https://developer.boundaryml.com/baml/language/functions",
+      "fetchedURL": "https://developer.boundaryml.com/baml/language/functions",
+      "sha256": "bcaa60cbf7e2fb98d730b315c3f9163b6c9484e0d9a36a1cfa4c7c7f66387641",
+      "bytes": 97970,
+      "ok": true
+    },
+    {
+      "id": "pydantic-strict",
+      "url": "https://docs.pydantic.dev/latest/concepts/strict_mode/",
+      "fetchedURL": "https://pydantic.dev/docs/validation/latest/concepts/strict_mode/",
+      "sha256": "c3c1c57916ac8093b7192fa5969696dac68b50942a6198e18683d5c802f4452f",
+      "bytes": 92805,
+      "ok": true
+    },
+    {
+      "id": "baml-boundary-review",
+      "url": "https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19",
+      "fetchedURL": "https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19",
+      "sha256": "7dc86d8a581a7c166dc720604cc0b1073d18480f4df41e4bc6b47cdf874eab56",
+      "bytes": 311891,
+      "ok": true
+    }
+  ]
+}
