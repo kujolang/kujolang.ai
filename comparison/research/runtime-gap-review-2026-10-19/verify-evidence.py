@@ -6,8 +6,9 @@ def check(name,value):
  checks.append({'name':name,'passed':bool(value)})
  if not value:raise AssertionError(name)
 for name,digest in json.loads((p/'sha256.json').read_text()).items():check(name,hashlib.sha256((p/name).read_bytes()).hexdigest()==digest)
-for name in ['ci-final/bend.json','baml-client.json']:
+for name in ['ci-final/bend.json','ci-pinned/bend.json','baml-client.json']:
  for c in json.loads((p/name).read_text())['cases']:check(c['name'],c['passed'])
+x=json.loads((p/'packed-isolation.json').read_text());check('standalone source denied',x['passed'] and x['sourceDenialControl']['exit']!=0)
 check('pack succeeded',json.loads((p/'pack-retry.json').read_text())['exit']==0)
 x=json.loads((p/'packed-execution.json').read_text());check('standalone result',x['exit']==0 and x['stdout'].strip()=='42')
 for name in ['processes','profiler','spans']:

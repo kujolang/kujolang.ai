@@ -1,0 +1,18 @@
+{
+  "nodeTests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "pythonTests": {
+    "passed": 4,
+    "failed": 0
+  },
+  "runtimeEvidenceChecks": 83,
+  "mobileLayouts": 3,
+  "preview": "Focused Kujo 1.8.2 build; source assets served separately; full CI required for complete fresh build",
+  "evidence": "runtime-gap-evidence-verification.json",
+  "siteContractPassed": true,
+  "htmlFiles": 256,
+  "socialCardRoutes": 255,
+  "comparisonLinks": 435
+}

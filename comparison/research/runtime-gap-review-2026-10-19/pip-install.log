@@ -1,0 +1,23 @@
+Collecting baml-bridge==0.22.2
+  Downloading baml_bridge-0.22.2-cp310-abi3-macosx_10_12_x86_64.whl (15.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.3/15.3 MB 1.6 MB/s eta 0:00:00
+Collecting pydantic
+  Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 488.1/488.1 KB 1.6 MB/s eta 0:00:00
+Collecting protobuf>=6.31.1
+  Downloading protobuf-7.36.2-cp310-abi3-macosx_10_9_universal2.whl (456 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 456.0/456.0 KB 2.9 MB/s eta 0:00:00
+Collecting typing-extensions>=4.14.0
+  Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 KB 4.6 MB/s eta 0:00:00
+Collecting annotated-types>=0.6.0
+  Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Collecting typing-inspection>=0.4.4
+  Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Collecting pydantic-core==2.50.1
+  Downloading pydantic_core-2.50.1-cp310-cp310-macosx_10_12_x86_64.whl (2.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 2.1 MB/s eta 0:00:00
+Installing collected packages: typing-extensions, protobuf, annotated-types, typing-inspection, pydantic-core, baml-bridge, pydantic
+Successfully installed annotated-types-0.8.0 baml-bridge-0.22.2 protobuf-7.36.2 pydantic-2.14.1 pydantic-core-2.50.1 typing-extensions-4.16.0 typing-inspection-0.4.4
+WARNING: You are using pip version 22.0.4; however, version 26.2.1 is available.
+You should consider upgrading via the '/Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/gap-review/venv/bin/python3 -m pip install --upgrade pip' command.

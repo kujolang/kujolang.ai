@@ -1,0 +1,13 @@
+{
+  "releaseCommit": "2775d0f6c5317170162db218a5360c2f796e4974",
+  "workflow": "https://github.com/kujolang/kujolang.ai/actions/runs/39350205176",
+  "conclusion": "success",
+  "liveVerified": "2026-10-20T01:03:46.695065+00:00",
+  "routes": 8,
+  "urls": 48,
+  "runtimeWorkflow": "https://github.com/kujolang/kujolang.ai/actions/runs/39350052674",
+  "nodeTests": 23,
+  "pythonTests": 4,
+  "retainedEvidenceChecks": 83,
+  "signalbox": "no captures warranted"
+}

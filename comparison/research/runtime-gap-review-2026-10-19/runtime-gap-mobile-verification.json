@@ -1,0 +1,13 @@
+{
+  "mode": "375px iframe; content width 360px",
+  "pages": [
+    "hub",
+    "bend",
+    "baml"
+  ],
+  "noHorizontalOverflow": true,
+  "departureMono": true,
+  "heroEyebrows": 0,
+  "newEvidenceVisible": true,
+  "scope": "Updated copy preview; final observability status label verified by CI/live checks"
+}

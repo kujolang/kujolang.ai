@@ -17,7 +17,7 @@ This adds execution evidence to the immutable earlier `runtime-review-2026-10-19
 | BAML response failures | Invalid integer field; HTTP 401 | `ai.errors.ParseFailed`; `ai.errors.InvalidRequest` | Exact error categories checked |
 | BAML tracing | Per-call metadata; following plain call | Metadata reached invocation; next call had empty metadata | Context propagation and isolation |
 | BAML local recording | Success and thrown-error CLI runs, then `query --local --verify` | Sealed records; success/error process outcomes; profiler counts 1/0 and 0/1; success span | CLI BTEL recording/query verified, not cloud delivery |
-| BAML standalone packaging | `pack total`, then execute from outside project with PATH `/usr/bin:/bin` | Packed executable printed 42, exit 0 | No BAML CLI or Python interpreter on PATH; no network allowed |
+| BAML standalone packaging | `pack total`, then execute from outside project with PATH `/usr/bin:/bin` | Packed executable printed 42, exit 0 | No BAML CLI or Python interpreter on PATH; source and CLI reads denied; no network allowed |
 
 The first Python run expected a wrong host type to fail. It did not. `baml-client-initial.json` preserves that result. The final test names this observed boundary explicitly instead of claiming type enforcement. The model response parser separately rejected the invalid integer field.
 
@@ -25,7 +25,8 @@ The first Python run expected a wrong host type to fail. It did not. `baml-clien
 
 - Bend source/release: https://github.com/bendlang/bend/tree/4ff8545f19b09b7d2b8ca2303668100eac8efd66
 - Passing Linux job: https://github.com/kujolang/kujolang.ai/actions/runs/39349715512 (script commit `7cdf73a`). `ci-final/` contains its raw receipts and exported proof inputs.
-- Initial Linux job: https://github.com/kujolang/kujolang.ai/actions/runs/39349536295. Kernel tests passed. Native compilation failed because Lean's bundled clang shadowed the host compiler and lacked the needed standard header path. Setting `CC=/usr/bin/clang` resolved it; `ci-attempt1/` preserves the failure.
+- Hash-pinned repeat: https://github.com/kujolang/kujolang.ai/actions/runs/39350052674, 12 passing cases; `ci-pinned/bend.json`.
+- Initial Linux job: https://github.com/kujolang/kujolang.ai/actions/runs/39349536295. Kernel tests passed. Native compilation failed with `stdbool.h` missing when Lean's bin directory was first on PATH. Selecting the host compiler with `CC=/usr/bin/clang` resolved it; `ci-attempt1/` preserves the failure.
 - Workflow `.github/workflows/comparison-runtimes.yml` installs fixed Bend/Lean releases and pins archive hashes recorded in the successful job. It can be rerun manually.
 - BAML release: https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.2, commit `01f5c412c73c213846ea8cb6ead89d303b053672`.
 - BAML macOS archive SHA-256: `a13b4c004ee011b334bfed31439ba8fb61278e4850b0277774328873deb47ddc`, matched the prior publisher-checksummed archive. `binary-hashes.json` records CLI, pack host and packed output hashes.
@@ -56,3 +57,7 @@ The captured run used the extracted internal `baml-cli`, which warns that the pu
 ## Remaining limits
 
 No GPU hardware execution, parallel utilization/speed benchmark, full upstream suite, hosted model request, cloud telemetry delivery, exhaustive tracing coverage, or cross-platform BAML packaging test. The independent kernel test does not prove Bend's source-to-kernel translation. Unsafe and foreign-code exclusions remain. The Python type-boundary result means applications should validate host inputs and use static checking; it does not negate the separately tested model-response parser. No new comparison speed, cost, quality or universal-correctness claim is justified.
+
+## Publication verification
+
+Release `2775d0f6c5317170162db218a5360c2f796e4974` passed the full build and deployment at https://github.com/kujolang/kujolang.ai/actions/runs/39350205176. Live verification at 2026-10-20T01:03:46.695065+00:00 passed all eight comparison routes and 48 URLs, source-parity Markdown, metadata and existing social-image bytes. Local checks passed 23 Node tests, four Python tests, 435 links, 255 social routes, 256 HTML files and three changed mobile layouts. The retained runtime evidence checker passed 83 integrity/outcome checks; these include hashes and repeated CI receipts, not 83 unique language tests. Production CI independently built the complete site.

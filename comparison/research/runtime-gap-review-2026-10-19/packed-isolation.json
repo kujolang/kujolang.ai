@@ -1,0 +1,12 @@
+{
+  "exit": 0,
+  "stdout": "42\n",
+  "stderr": "",
+  "sourceAndCliReadDenied": true,
+  "networkDenied": true,
+  "passed": true,
+  "sourceDenialControl": {
+    "exit": 1,
+    "stderr": "cat: /Users/robertdevore/Documents/Codex/2026-10-19/https-robertdevore-com-courses-https-robertdevore/work/competitor-runtimes/gap-review/baml-project/baml_src/main.baml: Operation not permitted\n"
+  }
+}
