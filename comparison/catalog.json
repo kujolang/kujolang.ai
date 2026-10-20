@@ -224,6 +224,13 @@
       "level": "local execution receipts; bounded fixtures",
       "version": "Bend 2.0.37; BAML 0.22.2; Zerolang 0.3.4; macOS x86_64",
       "verified": "2026-10-19"
+    },
+    "runtime-gap-review": {
+      "label": "Bend kernel and BAML integration runtime tests",
+      "url": "https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19",
+      "level": "release binaries executed; positive and negative fixtures; local mock provider",
+      "version": "Bend 2.0.37 with Lean 4.34.0 on Linux x86_64; BAML and Python bridge 0.22.2 on macOS x86_64",
+      "verified": "2026-10-19"
     }
   },
   "kujoFacts": {
@@ -312,7 +319,7 @@
         },
         {
           "heading": "Examples and benchmark evidence",
-          "body": "Bend 2.0.37 accepted a valid proof and rejected a broken proof, wrong return type, affine double-use and an unfilled law used as proof. Arithmetic returned 42 through the default evaluator, generated JavaScript and a native executable. The separate --verdict check could not run because Lean 4.34.0 or the built BENDTT kernel was unavailable. We measured no GPU behavior or comparative performance."
+          "body": "Bend 2.0.37 accepted a valid proof through --verdict with its independent BendTT kernel built using Lean 4.34.0. Calling that kernel directly accepted the exported proof and rejected a corrupted proof body. Broken proof, type and affine-use fixtures also failed. A fork-join example returned 4096 through native CPU and sequential JavaScript targets. These tests check results, not parallel speedup, GPU execution or the unproven translation into the kernel."
         }
       ],
       "sources": [
@@ -326,7 +333,8 @@
         "runledger",
         "bend-release",
         "kujo-release",
-        "runtime-review"
+        "runtime-review",
+        "runtime-gap-review"
       ],
       "verified": "2026-10-19",
       "kind": "direct",
@@ -338,7 +346,7 @@
         "website": "https://bend-lang.org/",
         "repository": "https://github.com/bendlang/bend",
         "documentation": "https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md",
-        "version": "Latest stable v2.0.37 (2026-10-13; release commit 4ff8545f19b09b7d2b8ca2303668100eac8efd66). Guide reviewed at 64230dcb96f2da2cc5a44524e42d5eb34771a6ec; not a runtime test of that release."
+        "version": "Stable v2.0.37 (2026-10-13; release commit 4ff8545f19b09b7d2b8ca2303668100eac8efd66). Release binaries tested on macOS and Linux x86_64; independent kernel built with Lean 4.34.0."
       },
       "dimensions": [
         [
@@ -370,9 +378,10 @@
           "Formal proof",
           "proof",
           {
-            "text": "Dependent types and an optional second kernel verdict, subject to documented trust boundaries.",
+            "text": "The independent BendTT kernel accepted a valid exported proof and rejected a corrupted proof body. Its guarantee still depends on the documented trust boundaries.",
             "sources": [
-              "bend"
+              "bend",
+              "runtime-gap-review"
             ],
             "status": "verified-supported",
             "layer": "language"
@@ -382,9 +391,10 @@
           "Execution",
           "run",
           {
-            "text": "Native CPU/GPU and JavaScript targets; the JavaScript target is sequential.",
+            "text": "Native CPU and sequential JavaScript results tested, including fork-join syntax. GPU support is documented but was not executed; no speedup was measured.",
             "sources": [
-              "bend"
+              "bend",
+              "runtime-gap-review"
             ],
             "status": "verified-supported",
             "layer": "language"
@@ -515,11 +525,11 @@
         },
         {
           "heading": "Honest limitations",
-          "body": "Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement. In the tested 0.22.2 CLI, Python client setup uses generate add python/pydantic2 followed by generate; do not substitute a command from a newer quickstart without checking the installed help."
+          "body": "Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement. In the tested 0.22.2 CLI, Python client setup uses generate add python/pydantic2 followed by generate; do not substitute a command from a newer quickstart without checking the installed help. The generated Python bridge returned a string passed to an int identity function in our fixture. Do not assume generated type hints enforce every host argument at runtime; validate the boundary separately."
         },
         {
           "heading": "Examples and benchmark evidence",
-          "body": "BAML 0.22.2 ran a local typed function and a passing assertion, rejected a wrong return type and syntax error, and returned nonzero for a failing assertion. Python/Pydantic2 client generation completed. Provider calls, generated-client execution and tracing were not tested. Standalone packaging was blocked by local disk exhaustion. These checks do not measure model quality, latency or token cost."
+          "body": "BAML 0.22.2 passed local function and assertion tests and rejected invalid source. Its generated Python client returned 42 synchronously and asynchronously; a standalone packed executable also returned 42. A local mock provider returned a typed object, while an invalid field and HTTP 401 produced distinct errors. Local trace queries recovered successful and failed runs with matching profiler counts. These fixtures do not test hosted models, cloud trace delivery, model quality or performance."
         }
       ],
       "sources": [
@@ -534,7 +544,8 @@
         "runledger",
         "baml-release",
         "kujo-release",
-        "runtime-review"
+        "runtime-review",
+        "runtime-gap-review"
       ],
       "verified": "2026-10-19",
       "kind": "direct",
@@ -546,7 +557,7 @@
         "website": "https://boundaryml.com/",
         "repository": "https://github.com/BoundaryML/baml",
         "documentation": "https://boundaryml.com/quickstart",
-        "version": "Latest stable language toolchain 0.22.2 (2026-10-13). Latest nightly: 0.22.3-nightly.20261018.a (2026-10-19). Source reviewed at 648ad5ed10f543c129b51789c7d02e29b64f06f7 and stable 01f5c412c73c213846ea8cb6ead89d303b053672; neither runtime-tested."
+        "version": "Stable language toolchain and Python bridge 0.22.2 (toolchain released 2026-10-13; commit 01f5c412c73c213846ea8cb6ead89d303b053672). Runtime and generated Python client tested on macOS x86_64. The nightly channel was not tested."
       },
       "dimensions": [
         [
@@ -577,9 +588,11 @@
           "Testing and evaluations",
           "checks",
           {
-            "text": "A test runner and result parsing tests exist in the reviewed source. This review did not execute them.",
+            "text": "Local assertions passed and failed as expected. Mock-provider response parsing accepted a valid object and rejected an invalid field; the full upstream suite was not run.",
             "sources": [
-              "baml-test"
+              "baml-test",
+              "runtime-review",
+              "runtime-gap-review"
             ],
             "status": "verified-supported",
             "layer": "toolchain"
@@ -601,9 +614,10 @@
           "Observability",
           "evidence",
           {
-            "text": "The current website describes tracing and profiling. Completeness and overhead were not measured here.",
+            "text": "Local BTEL recordings and SQL queries recovered success/error outcomes and profiler counts. Trace context reached a generated-client call without leaking into the next call. Cloud delivery and overhead remain untested.",
             "sources": [
-              "baml"
+              "baml",
+              "runtime-gap-review"
             ],
             "status": "partially-supported",
             "layer": "toolchain"
@@ -653,11 +667,12 @@
           [
             "Integration and tracing",
             "Verify the host boundary independently",
-            "The current quickstart presents incremental adoption and host-language bridges; the website describes tracing and profiling. This review did not measure their completeness or overhead, and did not verify a direct Kujo bridge.",
+            "The Python bridge passed synchronous and asynchronous calls and propagated a declared error. Trace context stayed within its invocation, and CLI recordings exposed success/error outcomes through local SQL queries. Host type hints did not reject a string passed to an int identity function. Cloud delivery, tracing overhead and a direct Kujo bridge remain untested.",
             "Test the exact host language, supported boundary types, failure propagation and retained trace data.",
             [
               "baml-start",
-              "baml"
+              "baml",
+              "runtime-gap-review"
             ]
           ]
         ],
@@ -2047,7 +2062,7 @@
             ]
           },
           {
-            "summary": "Local function execution tested; provider calls untested",
+            "summary": "Python client, packed binary and mock-provider responses tested",
             "refs": [
               "kujo-vs-baml:Static diagnostics"
             ]
@@ -2077,7 +2092,7 @@
             ]
           },
           {
-            "summary": "Tracing advertised; overhead not measured",
+            "summary": "Local trace queries tested; cloud delivery untested",
             "refs": [
               "kujo-vs-baml:Observability"
             ]

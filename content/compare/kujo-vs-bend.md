@@ -19,7 +19,7 @@ Bend: https://bend-lang.org/
 
 Documentation: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
 
-Version: Latest stable v2.0.37 (2026-10-13; release commit 4ff8545f19b09b7d2b8ca2303668100eac8efd66). Guide reviewed at 64230dcb96f2da2cc5a44524e42d5eb34771a6ec; not a runtime test of that release.
+Version: Stable v2.0.37 (2026-10-13; release commit 4ff8545f19b09b7d2b8ca2303668100eac8efd66). Release binaries tested on macOS and Linux x86_64; independent kernel built with Lean 4.34.0.
 
 Repository: https://github.com/bendlang/bend
 
@@ -51,9 +51,9 @@ Kujo — Unknown / not verified (language): We did not establish a general depen
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs
 
-Bend — Verified supported (language): Dependent types and an optional second kernel verdict, subject to documented trust boundaries.
+Bend — Verified supported (language): The independent BendTT kernel accepted a valid exported proof and rejected a corrupted proof body. Its guarantee still depends on the documented trust boundaries.
 
-Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### Execution
 
@@ -61,9 +61,9 @@ Kujo — Verified supported (language): The CLI includes a bytecode VM, an inter
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs
 
-Bend — Verified supported (language): Native CPU/GPU and JavaScript targets; the JavaScript target is sequential.
+Bend — Verified supported (language): Native CPU and sequential JavaScript results tested, including fork-join syntax. GPU support is documented but was not executed; no speedup was measured.
 
-Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+Sources: https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### Workflow receipts
 
@@ -175,7 +175,7 @@ Bend excludes unsafe and foreign code from its stronger proof verdict. Its guide
 
 ## Examples and benchmark evidence
 
-Bend 2.0.37 accepted a valid proof and rejected a broken proof, wrong return type, affine double-use and an unfilled law used as proof. Arithmetic returned 42 through the default evaluator, generated JavaScript and a native executable. The separate --verdict check could not run because Lean 4.34.0 or the built BENDTT kernel was unavailable. We measured no GPU behavior or comparative performance.
+Bend 2.0.37 accepted a valid proof through --verdict with its independent BendTT kernel built using Lean 4.34.0. Calling that kernel directly accepted the exported proof and rejected a corrupted proof body. Broken proof, type and affine-use fixtures also failed. A fork-join example returned 4096 through native CPU and sequential JavaScript targets. These tests check results, not parallel speedup, GPU execution or the unproven translation into the kernel.
 
 ## Frequently asked questions
 
@@ -200,6 +200,7 @@ This review did not establish an equivalent general proof system in Kujo. Kujo�
 - [Bend stable release](https://github.com/bendlang/bend/releases/tag/v2.0.37) — official release metadata; 2.0.37; released 2026-10-13; reviewed 2026-10-19.
 - [Kujo stable release](https://github.com/kujolang/kujo/releases/tag/v1.8.2) — official release metadata; 1.8.2; released 2026-10-19; reviewed 2026-10-19.
 - [Competitor runtime fixtures and raw outcomes](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19) — local execution receipts; bounded fixtures; Bend 2.0.37; BAML 0.22.2; Zerolang 0.3.4; macOS x86_64; reviewed 2026-10-19.
+- [Bend kernel and BAML integration runtime tests](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19) — release binaries executed; positive and negative fixtures; local mock provider; Bend 2.0.37 with Lean 4.34.0 on Linux x86_64; BAML and Python bridge 0.22.2 on macOS x86_64; reviewed 2026-10-19.
 
 ## Related pages
 

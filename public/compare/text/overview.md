@@ -112,9 +112,11 @@ verified-supported · language: Project diagnostics are implemented by the curre
 
 https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/check_command.rs
 
-verified-supported · toolchain: A test runner and result parsing tests exist in the reviewed source. This review did not execute them.
+verified-supported · toolchain: Local assertions passed and failed as expected. Mock-provider response parsing accepted a valid object and rejected an invalid field; the full upstream suite was not run.
 
 https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### Zerolang
 
@@ -141,9 +143,10 @@ https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/s
 
 Dependent types; bounded proof guarantees
 
-verified-supported · language: Dependent types and an optional second kernel verdict, subject to documented trust boundaries.
+verified-supported · language: The independent BendTT kernel accepted a valid exported proof and rejected a corrupted proof body. Its guarantee still depends on the documented trust boundaries.
 
 https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### BAML
 
@@ -178,13 +181,14 @@ https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/s
 
 CPU/GPU and sequential JavaScript target
 
-verified-supported · language: Native CPU/GPU and JavaScript targets; the JavaScript target is sequential.
+verified-supported · language: Native CPU and sequential JavaScript results tested, including fork-join syntax. GPU support is documented but was not executed; no speedup was measured.
 
 https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/guide/GUIDE.md
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### BAML
 
-Local function execution tested; provider calls untested
+Python client, packed binary and mock-provider responses tested
 
 verified-supported · language: Project diagnostics are implemented by the current check command.
 
@@ -222,11 +226,12 @@ https://github.com/bendlang/bend/blob/64230dcb96f2da2cc5a44524e42d5eb34771a6ec/g
 
 ### BAML
 
-Tracing advertised; overhead not measured
+Local trace queries tested; cloud delivery untested
 
-partially-supported · toolchain: The current website describes tracing and profiling. Completeness and overhead were not measured here.
+partially-supported · toolchain: Local BTEL recordings and SQL queries recovered success/error outcomes and profiler counts. Trace context reached a generated-client call without leaking into the next call. Cloud delivery and overhead remain untested.
 
 https://boundaryml.com/
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### Zerolang
 
@@ -303,7 +308,7 @@ You could connect BAML application code to Kujo workflow tools through a process
 
 ### Honest limitations
 
-Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement. In the tested 0.22.2 CLI, Python client setup uses generate add python/pydantic2 followed by generate; do not substitute a command from a newer quickstart without checking the installed help.
+Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement. In the tested 0.22.2 CLI, Python client setup uses generate add python/pydantic2 followed by generate; do not substitute a command from a newer quickstart without checking the installed help. The generated Python bridge returned a string passed to an int identity function in our fixture. Do not assume generated type hints enforce every host argument at runtime; validate the boundary separately.
 
 ## Zerolang: technical brief
 

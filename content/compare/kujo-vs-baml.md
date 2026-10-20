@@ -19,7 +19,7 @@ BAML: https://boundaryml.com/
 
 Documentation: https://boundaryml.com/quickstart
 
-Version: Latest stable language toolchain 0.22.2 (2026-10-13). Latest nightly: 0.22.3-nightly.20261018.a (2026-10-19). Source reviewed at 648ad5ed10f543c129b51789c7d02e29b64f06f7 and stable 01f5c412c73c213846ea8cb6ead89d303b053672; neither runtime-tested.
+Version: Stable language toolchain and Python bridge 0.22.2 (toolchain released 2026-10-13; commit 01f5c412c73c213846ea8cb6ead89d303b053672). Runtime and generated Python client tested on macOS x86_64. The nightly channel was not tested.
 
 Repository: https://github.com/BoundaryML/baml
 
@@ -51,9 +51,9 @@ Kujo — Verified supported (language and first-party ecosystem): In Kujo 1.8.2,
 
 Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
 
-BAML — Verified supported (toolchain): A test runner and result parsing tests exist in the reviewed source. This review did not execute them.
+BAML — Verified supported (toolchain): Local assertions passed and failed as expected. Mock-provider response parsing accepted a valid object and rejected an invalid field; the full upstream suite was not run.
 
-Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs
+Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e29b64f06f7/baml_language/crates/baml_cli/src/test_command.rs, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ### Formal proof
 
@@ -71,9 +71,9 @@ Kujo — Verified supported (first-party ecosystem): RunLedger stores supplied v
 
 Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
 
-BAML — Partially supported (toolchain): The current website describes tracing and profiling. Completeness and overhead were not measured here.
+BAML — Partially supported (toolchain): Local BTEL recordings and SQL queries recovered success/error outcomes and profiler counts. Trace context reached a generated-client call without leaking into the next call. Cloud delivery and overhead remain untested.
 
-Sources: https://boundaryml.com/
+Sources: https://boundaryml.com/, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ## Technical deep dive
 
@@ -99,11 +99,11 @@ Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e2
 
 ### Integration and tracing: Verify the host boundary independently
 
-The current quickstart presents incremental adoption and host-language bridges; the website describes tracing and profiling. This review did not measure their completeness or overhead, and did not verify a direct Kujo bridge.
+The Python bridge passed synchronous and asynchronous calls and propagated a declared error. Trace context stayed within its invocation, and CLI recordings exposed success/error outcomes through local SQL queries. Host type hints did not reject a string passed to an int identity function. Cloud delivery, tracing overhead and a direct Kujo bridge remain untested.
 
 Evaluation implication: Test the exact host language, supported boundary types, failure propagation and retained trace data.
 
-Sources: https://boundaryml.com/quickstart, https://boundaryml.com/
+Sources: https://boundaryml.com/quickstart, https://boundaryml.com/, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
 
 ## Decision scenarios
 
@@ -171,11 +171,11 @@ You could connect BAML application code to Kujo workflow tools through a process
 
 ## Honest limitations
 
-Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement. In the tested 0.22.2 CLI, Python client setup uses generate add python/pydantic2 followed by generate; do not substitute a command from a newer quickstart without checking the installed help.
+Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement. In the tested 0.22.2 CLI, Python client setup uses generate add python/pydantic2 followed by generate; do not substitute a command from a newer quickstart without checking the installed help. The generated Python bridge returned a string passed to an int identity function in our fixture. Do not assume generated type hints enforce every host argument at runtime; validate the boundary separately.
 
 ## Examples and benchmark evidence
 
-BAML 0.22.2 ran a local typed function and a passing assertion, rejected a wrong return type and syntax error, and returned nonzero for a failing assertion. Python/Pydantic2 client generation completed. Provider calls, generated-client execution and tracing were not tested. Standalone packaging was blocked by local disk exhaustion. These checks do not measure model quality, latency or token cost.
+BAML 0.22.2 passed local function and assertion tests and rejected invalid source. Its generated Python client returned 42 synchronously and asynchronously; a standalone packed executable also returned 42. A local mock provider returned a typed object, while an invalid field and HTTP 401 produced distinct errors. Local trace queries recovered successful and failed runs with matching profiler counts. These fixtures do not test hosted models, cloud trace delivery, model quality or performance.
 
 ## Frequently asked questions
 
@@ -201,6 +201,7 @@ No. Type checks and structured parsing constrain representation. Domain correctn
 - [BAML stable language toolchain](https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.2) — official release metadata; 0.22.2; released 2026-10-13; reviewed 2026-10-19.
 - [Kujo stable release](https://github.com/kujolang/kujo/releases/tag/v1.8.2) — official release metadata; 1.8.2; released 2026-10-19; reviewed 2026-10-19.
 - [Competitor runtime fixtures and raw outcomes](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19) — local execution receipts; bounded fixtures; Bend 2.0.37; BAML 0.22.2; Zerolang 0.3.4; macOS x86_64; reviewed 2026-10-19.
+- [Bend kernel and BAML integration runtime tests](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19) — release binaries executed; positive and negative fixtures; local mock provider; Bend 2.0.37 with Lean 4.34.0 on Linux x86_64; BAML and Python bridge 0.22.2 on macOS x86_64; reviewed 2026-10-19.
 
 ## Related pages
 
