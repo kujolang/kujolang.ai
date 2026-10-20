@@ -1,6 +1,7 @@
 import Base
 
 def host_value() -> IO(U32):
+  import "./host_value.c"
   import "./host_value.js"
 
 def main() -> IO(Unit):
