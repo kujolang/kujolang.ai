@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "nodeTests": 25,
+  "pythonTests": 4,
+  "projectionFiles": 23,
+  "comparisonRoutes": 8,
+  "internalLinks": 436,
+  "socialRoutes": 255,
+  "htmlFiles": 256,
+  "buildScope": "Focused comparison build; full-site graph checks used immutable baseline with refreshed comparison output. Full fresh production build tracked separately.",
+  "mobile": {
+    "viewport": 375,
+    "bodyWidth": 360,
+    "bodyScrollWidth": 360,
+    "boundaryRows": 7,
+    "headingFont": "Departure Mono",
+    "anchorOffsetPixels": 128
+  },
+  "desktop": {
+    "bodyWidth": 1265,
+    "bodyScrollWidth": 1265,
+    "boundaryRows": 7,
+    "headingFont": "Departure Mono"
+  }
+}
