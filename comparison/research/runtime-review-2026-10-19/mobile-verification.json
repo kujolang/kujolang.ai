@@ -1,0 +1,77 @@
+{
+  "method": "CUA browser, 375px iframe with 360px content viewport; unminified local source assets served to avoid disk copies; production minified assets verified separately",
+  "rows": [
+    {
+      "slug": "",
+      "width": 360,
+      "scroll": 360,
+      "font": "Departure Mono",
+      "eyebrows": 0,
+      "tables": 1,
+      "stale": false
+    },
+    {
+      "slug": "kujo-vs-bend",
+      "width": 360,
+      "scroll": 360,
+      "font": "Departure Mono",
+      "eyebrows": 0,
+      "tables": 2,
+      "stale": false
+    },
+    {
+      "slug": "kujo-vs-baml",
+      "width": 360,
+      "scroll": 360,
+      "font": "Departure Mono",
+      "eyebrows": 0,
+      "tables": 2,
+      "stale": false
+    },
+    {
+      "slug": "kujo-vs-zero",
+      "width": 360,
+      "scroll": 360,
+      "font": "Departure Mono",
+      "eyebrows": 0,
+      "tables": 2,
+      "stale": false
+    },
+    {
+      "slug": "ai-native-programming-languages",
+      "width": 360,
+      "scroll": 360,
+      "font": "Departure Mono",
+      "eyebrows": 0,
+      "tables": 2,
+      "stale": false
+    },
+    {
+      "slug": "programming-languages-for-ai-agents",
+      "width": 360,
+      "scroll": 360,
+      "font": "Departure Mono",
+      "eyebrows": 0,
+      "tables": 2,
+      "stale": false
+    },
+    {
+      "slug": "ai-code-verification-tools",
+      "width": 360,
+      "scroll": 360,
+      "font": "Departure Mono",
+      "eyebrows": 0,
+      "tables": 2,
+      "stale": false
+    },
+    {
+      "slug": "verify-agent-workflows",
+      "width": 360,
+      "scroll": 360,
+      "font": "Departure Mono",
+      "eyebrows": 0,
+      "tables": 2,
+      "stale": false
+    }
+  ]
+}

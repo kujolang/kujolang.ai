@@ -1,0 +1,31 @@
+{
+  "nodeTests": 23,
+  "pythonTests": 4,
+  "generatedRecords": 7,
+  "generatedFiles": 23,
+  "comparisonRoutes": 8,
+  "internalLinks": 435,
+  "socialRoutes": 255,
+  "htmlFiles": 256,
+  "mobileLayouts": 8,
+  "evidenceChecks": 125,
+  "localBuild": "Pinned Kujo 1.8.2 focused build with source assets served separately; local disk constrained",
+  "fullGraph": "Fresh comparison output over immutable prior CI baseline using hardlinks; replaced files unlinked first",
+  "howl": "Zero card validate/list/show/default and X captions/render/raster/visual inspection passed; eight-card prior audit retained",
+  "production": {
+    "id": 39344498247,
+    "head_sha": "4dd5dc11c0c5343ddeabe349d5b7c44b6e0710bf",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1
+  },
+  "socialAsset": "kujo-vs-zerolang.jpg; new metadata URL bypasses stale prior asset cache",
+  "live": {
+    "verifiedAtUTC": "2026-10-20T00:05:04.625584+00:00",
+    "comparisonRoutes": 8,
+    "uniqueURLsChecked": 48,
+    "passed": true,
+    "errors": []
+  },
+  "status": "PASS with documented runtime coverage limits"
+}

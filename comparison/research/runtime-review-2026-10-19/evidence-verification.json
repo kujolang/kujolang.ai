@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "checks": 125,
+  "failures": [],
+  "scope": "Captured evidence integrity and bounded reported outcomes; not a runtime rerun."
+}

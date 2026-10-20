@@ -1,0 +1,52 @@
+[
+  {
+    "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md",
+    "status": 200,
+    "final": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/graph-architecture.md"
+  },
+  {
+    "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/compile-path.md",
+    "status": 200,
+    "final": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/compile-path.md"
+  },
+  {
+    "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c",
+    "status": 200,
+    "final": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c"
+  },
+  {
+    "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/projections.md",
+    "status": 200,
+    "final": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/projections.md"
+  },
+  {
+    "url": "https://github.com/vercel-labs/zerolang/releases/tag/v0.3.4",
+    "status": 200,
+    "final": "https://github.com/vercel-labs/zerolang/releases/tag/v0.3.4"
+  },
+  {
+    "url": "https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19",
+    "status": 200,
+    "final": "https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19"
+  },
+  {
+    "url": "https://zerolang.ai/",
+    "status": 200,
+    "final": "https://zerolang.ai/"
+  },
+  {
+    "url": "https://zerolang.ai/docs",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://github.com/vercel-labs/zerolang",
+    "status": 200,
+    "final": "https://github.com/vercel-labs/zerolang"
+  },
+  {
+    "url": "https://zerolang.ai/getting-started",
+    "status": 200,
+    "final": "https://zerolang.ai/getting-started",
+    "corrects": "Initial /docs link returned 404; catalog now uses this official homepage-linked route."
+  }
+]

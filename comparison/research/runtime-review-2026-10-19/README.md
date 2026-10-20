@@ -57,3 +57,19 @@ Run the base review scripts, then the negative and completion scripts in order. 
 Updated the hub, three direct comparisons and AI-native discovery page; regenerated all eight routes' projections through the shared catalog. Preserved typography, hero wording/no eyebrows and the removed header link. The source links and FAQ now distinguish project identity, source inspection, executed fixtures and untested claims. Search ranking, traffic and AI citation measurements: **NOT AVAILABLE — DATA ACCESS REQUIRED**. Existing SEO baseline and earlier eight-card Howl review remain preserved; the changed Zerolang card is regenerated in this follow-up.
 
 Website build/deployment/live receipts are recorded separately after validation. No claim of complete runtime coverage is made.
+
+## Evidence self-check
+
+Run `python3 verify-evidence.py` in this directory. It verifies 102 retained file hashes and 23 bounded outcome assertions (125 checks total). This checks the captured record, not a fresh runtime execution. The user subsequently confirmed Vercel Labs Zerolang as the intended competitor.
+
+## Delivery corrections
+
+The first complete build at `f75d24f` passed. Its Pages deployment initially returned HTTP 500; retrying only the failed deployment job succeeded. All eight live pages then matched the updated content, but Cloudflare still returned the old social-image bytes at the unchanged `kujo-vs-zero.jpg` URL. A versioned request returned the correct new bytes. Captured headers reported a cache HIT and `max-age=14400`; this was a delivery-cache difference, not an incorrect build artifact.
+
+Commit `4dd5dc1` gives the card the fresh `kujo-vs-zerolang.jpg` URL, with matching Howl card ID and page metadata. The comparison route stays unchanged. The generator supports a validated optional `socialCard` ID; its new path-traversal rejection test brings the Node suite to 23 passing tests. Final live verification checks the exact new metadata asset URL without a cache-busting query. No cache settings or DNS policy were changed.
+
+## Final verification
+
+Website release `4dd5dc11c0c5343ddeabe349d5b7c44b6e0710bf` passed the fresh pinned Kujo 1.8.2 build, tests, site/HTML/comparison contracts and GitHub Pages deployment: https://github.com/kujolang/kujolang.ai/actions/runs/39344498247. Live verification at 2026-10-20T00:05:04.625584+00:00 passed all eight comparison routes and 48 unique URLs, exact Markdown parity, current social metadata and the exact new Zerolang image bytes. No cache-busting query was needed for the final image check. Local checks: 23 Node tests, four Python tests, 435 internal links, 255 social routes, 256 HTML files, eight mobile layouts and 125 evidence assertions/hash checks.
+
+The host disk interrupted earlier full local asset copies, so the successful scoped preview served source assets separately and was checked against an immutable prior CI graph. Production CI independently built the full site. Runtime coverage limits above remain; website delivery has no unresolved blocker. SignalBox: no captures warranted for this completed follow-up.
