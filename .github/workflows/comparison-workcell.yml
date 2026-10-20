@@ -1,0 +1,37 @@
+name: Comparison Workcell evidence
+on:
+  push:
+    branches: [research/competitor-runtime-verification]
+    paths:
+      - .github/workflows/comparison-workcell.yml
+      - comparison/research/all-page-gap-review-2026-10-20/workcell-live.py
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  workcell:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: kujolang/workcell
+          ref: a276a92c6bac9279a8cb36ace9687ade34d5128f
+          path: review-workcell
+      - uses: kujolang/kujo/.github/actions/setup-kujo@fc53093f35e4236682bbbf5ab1ccc8d2b4df990c
+        id: kujo
+        with:
+          version: v1.6.0
+      - run: docker build --tag kujolang/workcell-base:local review-workcell/docker/
+      - name: Execute positive and negative controls
+        env:
+          KUJO: ${{ steps.kujo.outputs.kujo-path }}
+          WORKCELL_REVIEW_SOURCE: review-workcell
+          WORKCELL_REVIEW_OUTPUT: review-evidence
+        run: python3 comparison/research/all-page-gap-review-2026-10-20/workcell-live.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: comparison-workcell-evidence
+          path: review-evidence
