@@ -1525,6 +1525,7 @@
 .direct-context { border-left: 3px solid #111; padding: .5rem 1.5rem; margin-top: 2rem; max-width: 100ch; }
 .direct-context h3 { font-size: .8rem; text-transform: uppercase; margin-bottom: .75rem; }
 .direct-context p { font-size: .9rem; }
+.direct-boundary-review h3 { scroll-margin-top: 8rem; }
 .direct-matrix table { min-width: 740px; }
 .direct-matrix thead th:first-child { width: 22%; }
 .direct-scenarios table { min-width: 900px; }

@@ -99,11 +99,11 @@ Sources: https://github.com/BoundaryML/baml/blob/648ad5ed10f543c129b51789c7d02e2
 
 ### Integration and tracing: Verify the host boundary independently
 
-The Python bridge passed synchronous and asynchronous calls and propagated a declared error. Trace context stayed within its invocation, and CLI recordings exposed success/error outcomes through local SQL queries. Host type hints did not reject a string passed to an int identity function. Cloud delivery, tracing overhead and a direct Kujo bridge remain untested.
+The Python bridge passed synchronous and asynchronous calls and propagated a declared error. Local tracing recorded outcomes and kept invocation context separate. Our deeper type-boundary tests distinguish static signatures, call argument checks, Pydantic class validation and model-response parsing. They also found a process crash for an invalid string passed to integer arithmetic in 0.22.2; valid arithmetic returned 42.
 
 Evaluation implication: Test the exact host language, supported boundary types, failure propagation and retained trace data.
 
-Sources: https://boundaryml.com/quickstart, https://boundaryml.com/, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19
+Sources: https://boundaryml.com/quickstart, https://boundaryml.com/, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19
 
 ## Decision scenarios
 
@@ -135,7 +135,7 @@ Evidence to collect: Commands, versions, failures and evidence tied to the actua
 
 ## A focused evaluation plan
 
-Proposed steps; no competitor runtime test is claimed.
+Proposed steps for your own evaluation; executed fixtures are recorded separately.
 
 ### Pin the integration
 
@@ -152,6 +152,20 @@ Test exceptions, timeouts and boundary types in your own application. A document
 ### Retain the evidence
 
 Store check/test output and the domain-specific check result with the code revision. Measure latency or token cost only with a declared model, configuration and repeated-run method.
+
+## What the Python boundary validates
+
+These are separate checks, not one blanket type-safety guarantee. We tested the 0.22.2 CLI and Python bridge on macOS x86_64 with Python 3.10 and Pydantic 2.14.1. Each risky call ran in its own process. Official bridge docs describe type mappings and execution; the pinned source and fixtures establish the narrower behavior below.
+
+| Validation layer | Fixture | Observed result | Limit and evidence |
+| --- | --- | --- | --- |
+| Static checks | Call echo(value: int) with a string in BAML source and typed Python. | BAML check rejected the call; mypy 2.4.0 rejected the generated Python call. Valid integer controls passed. | Static checks help when callers are checked. They do not automatically validate arbitrary values received at runtime. https://developer.boundaryml.com/baml/language/functions, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19 |
+| Call shape and representation | Omit an argument, duplicate it, add an unknown name, pass an unsupported object or an oversized integer. | These fixtures raised errors. | Argument names, serialization and numeric range checks are not a complete check of the declared parameter type. https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/README.md, https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/src/baml_bridge/proto.py, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19 |
+| Plain values and collections | Pass a string to int identity functions, or a mixed list to int[]. | Sync and async identity calls returned the string. The mixed list also returned unchanged. An int? fixture rejected the string. | Validation varies by type and operation. The declared primitive return type did not enforce the observed result; do not generalize this to optional or class paths. https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/bex_engine/src/conversion.rs, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19 |
+| Generated classes | Construct Answer(value="bad"), or return a class with an invalid field. | Pydantic raised ValidationError. Answer(value="42") became Answer(value=42); strict validation rejected that string. | Class construction and decoding validate fields. A deliberately bypassed or later-mutated model could still yield a bad primitive field value. https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/src/baml_bridge/proto.py, https://docs.pydantic.dev/latest/concepts/strict_mode/, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19 |
+| Model-response parsing | Parse objects containing value 42, "bad", "42" and 41 through the generated function specification. | 42 passed; "bad" raised ParseError; "42" was coerced to 42; 41 also passed. | Schema-aligned parsing can repair or coerce data. A structurally valid value is not proof that the answer meets a business requirement. These parser tests made no model request. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19 |
+| Invalid values used in arithmetic | Call plus(value: int) -> int { value + 1 } with 41 and then "bad". | 41 returned 42. The string caused SIGSEGV in separate processes, both with and without the sandbox. | This is a confirmed release/platform-specific failure, not a caught validation exception. Its native root cause and behavior on other targets remain unverified. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19 |
+| Application validation | Validate the input with TypeAdapter(int).validate_python(value, strict=True) before calling BAML. | The numeric string was rejected; validated integer arithmetic returned 42. | This is an application-side guard tested for int. Validate the full input schema and retain domain-specific assertions; do not assume this one wrapper covers every BAML type. https://docs.pydantic.dev/latest/concepts/strict_mode/, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19 |
 
 ## Technical architecture
 
@@ -171,7 +185,7 @@ You could connect BAML application code to Kujo workflow tools through a process
 
 ## Honest limitations
 
-Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement. In the tested 0.22.2 CLI, Python client setup uses generate add python/pydantic2 followed by generate; do not substitute a command from a newer quickstart without checking the installed help. The generated Python bridge returned a string passed to an int identity function in our fixture. Do not assume generated type hints enforce every host argument at runtime; validate the boundary separately.
+BAML’s type declarations, generated Python signatures, Pydantic models and model-response parser validate different parts of a call. In 0.22.2, an int identity function returned an invalid Python string unchanged, while an int-addition function given that string crashed an isolated Python process. Optional values and class decoding rejected other invalid fixtures. Use static checking and explicit validation for untrusted host inputs; the table below records exactly which paths we tested. These results do not establish behavior in other releases, bridges or operating systems.
 
 ## Examples and benchmark evidence
 
@@ -186,6 +200,10 @@ That description does not match the current project. The reviewed repository con
 ### Does typed output prove an AI answer is right?
 
 No. Type checks and structured parsing constrain representation. Domain correctness needs assertions, reference data or another suitable validation method.
+
+### Does the generated Python signature validate every runtime value?
+
+No. In our 0.22.2 fixtures, static checking caught a wrong argument, but a direct Python identity call returned the wrong primitive type unchanged. Pydantic class decoding, optional values and model-response parsing had separate validation behavior. An invalid arithmetic input crashed the process. Validate untrusted host inputs explicitly and test the exact bridge version.
 
 ## References
 
@@ -202,6 +220,13 @@ No. Type checks and structured parsing constrain representation. Domain correctn
 - [Kujo stable release](https://github.com/kujolang/kujo/releases/tag/v1.8.2) — official release metadata; 1.8.2; released 2026-10-19; reviewed 2026-10-19.
 - [Competitor runtime fixtures and raw outcomes](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19) — local execution receipts; bounded fixtures; Bend 2.0.37; BAML 0.22.2; Zerolang 0.3.4; macOS x86_64; reviewed 2026-10-19.
 - [Bend kernel and BAML integration runtime tests](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19) — release binaries executed; positive and negative fixtures; local mock provider; Bend 2.0.37 with Lean 4.34.0 on Linux x86_64; BAML and Python bridge 0.22.2 on macOS x86_64; reviewed 2026-10-19.
+- [BAML Python bridge package contract](https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/README.md) — official release documentation; BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64; reviewed 2026-10-19.
+- [BAML Python encoding and class validation](https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/src/baml_bridge/proto.py) — official release source; installed file matched byte for byte; BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64; reviewed 2026-10-19.
+- [BAML runtime argument and return conversions](https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/bex_engine/src/conversion.rs) — official release source; targeted runtime fixtures; BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64; reviewed 2026-10-19.
+- [BAML current language bridge documentation](https://developer.boundaryml.com/baml/bridges) — rolling official documentation; not a promise of universal runtime argument rejection; BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64; reviewed 2026-10-19.
+- [BAML function declarations and expected types](https://developer.boundaryml.com/baml/language/functions) — rolling official documentation; BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64; reviewed 2026-10-19.
+- [Pydantic coercion and strict validation](https://docs.pydantic.dev/latest/concepts/strict_mode/) — official documentation; Pydantic 2.14.1 fixtures; BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64; reviewed 2026-10-19.
+- [Python type-boundary fixtures and results](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19) — release-specific static, runtime, parsing and crash-control tests; BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64; reviewed 2026-10-19.
 
 ## Related pages
 

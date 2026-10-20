@@ -308,7 +308,7 @@ You could connect BAML application code to Kujo workflow tools through a process
 
 ### Honest limitations
 
-Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement. In the tested 0.22.2 CLI, Python client setup uses generate add python/pydantic2 followed by generate; do not substitute a command from a newer quickstart without checking the installed help. The generated Python bridge returned a string passed to an int identity function in our fixture. Do not assume generated type hints enforce every host argument at runtime; validate the boundary separately.
+BAML’s type declarations, generated Python signatures, Pydantic models and model-response parser validate different parts of a call. In 0.22.2, an int identity function returned an invalid Python string unchanged, while an int-addition function given that string crashed an isolated Python process. Optional values and class decoding rejected other invalid fixtures. Use static checking and explicit validation for untrusted host inputs; the table below records exactly which paths we tested. These results do not establish behavior in other releases, bridges or operating systems.
 
 ## Zerolang: technical brief
 

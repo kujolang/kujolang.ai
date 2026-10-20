@@ -231,6 +231,55 @@
       "level": "release binaries executed; positive and negative fixtures; local mock provider",
       "version": "Bend 2.0.37 with Lean 4.34.0 on Linux x86_64; BAML and Python bridge 0.22.2 on macOS x86_64",
       "verified": "2026-10-19"
+    },
+    "baml-python-contract": {
+      "label": "BAML Python bridge package contract",
+      "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/README.md",
+      "level": "official release documentation",
+      "version": "BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64",
+      "verified": "2026-10-19"
+    },
+    "baml-python-conversion": {
+      "label": "BAML Python encoding and class validation",
+      "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/src/baml_bridge/proto.py",
+      "level": "official release source; installed file matched byte for byte",
+      "version": "BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64",
+      "verified": "2026-10-19"
+    },
+    "baml-engine-conversion": {
+      "label": "BAML runtime argument and return conversions",
+      "url": "https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/bex_engine/src/conversion.rs",
+      "level": "official release source; targeted runtime fixtures",
+      "version": "BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64",
+      "verified": "2026-10-19"
+    },
+    "baml-bridge-docs": {
+      "label": "BAML current language bridge documentation",
+      "url": "https://developer.boundaryml.com/baml/bridges",
+      "level": "rolling official documentation; not a promise of universal runtime argument rejection",
+      "version": "BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64",
+      "verified": "2026-10-19"
+    },
+    "baml-function-docs": {
+      "label": "BAML function declarations and expected types",
+      "url": "https://developer.boundaryml.com/baml/language/functions",
+      "level": "rolling official documentation",
+      "version": "BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64",
+      "verified": "2026-10-19"
+    },
+    "pydantic-strict": {
+      "label": "Pydantic coercion and strict validation",
+      "url": "https://docs.pydantic.dev/latest/concepts/strict_mode/",
+      "level": "official documentation; Pydantic 2.14.1 fixtures",
+      "version": "BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64",
+      "verified": "2026-10-19"
+    },
+    "baml-boundary-review": {
+      "label": "Python type-boundary fixtures and results",
+      "url": "https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19",
+      "level": "release-specific static, runtime, parsing and crash-control tests",
+      "version": "BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64",
+      "verified": "2026-10-19"
     }
   },
   "kujoFacts": {
@@ -525,7 +574,7 @@
         },
         {
           "heading": "Honest limitations",
-          "body": "Current BAML material and older structured-output DSL tutorials may describe different generations. Choose a release or source commit before copying examples. Kujo’s separate tools also need configuration and vary in maturity. Type checking and successful parsing constrain data structure; they do not show that an AI answer is true or meets a business requirement. In the tested 0.22.2 CLI, Python client setup uses generate add python/pydantic2 followed by generate; do not substitute a command from a newer quickstart without checking the installed help. The generated Python bridge returned a string passed to an int identity function in our fixture. Do not assume generated type hints enforce every host argument at runtime; validate the boundary separately."
+          "body": "BAML’s type declarations, generated Python signatures, Pydantic models and model-response parser validate different parts of a call. In 0.22.2, an int identity function returned an invalid Python string unchanged, while an int-addition function given that string crashed an isolated Python process. Optional values and class decoding rejected other invalid fixtures. Use static checking and explicit validation for untrusted host inputs; the table below records exactly which paths we tested. These results do not establish behavior in other releases, bridges or operating systems."
         },
         {
           "heading": "Examples and benchmark evidence",
@@ -545,7 +594,14 @@
         "baml-release",
         "kujo-release",
         "runtime-review",
-        "runtime-gap-review"
+        "runtime-gap-review",
+        "baml-python-contract",
+        "baml-python-conversion",
+        "baml-engine-conversion",
+        "baml-bridge-docs",
+        "baml-function-docs",
+        "pydantic-strict",
+        "baml-boundary-review"
       ],
       "verified": "2026-10-19",
       "kind": "direct",
@@ -632,6 +688,10 @@
         [
           "Does typed output prove an AI answer is right?",
           "No. Type checks and structured parsing constrain representation. Domain correctness needs assertions, reference data or another suitable validation method."
+        ],
+        [
+          "Does the generated Python signature validate every runtime value?",
+          "No. In our 0.22.2 fixtures, static checking caught a wrong argument, but a direct Python identity call returned the wrong primitive type unchanged. Pydantic class decoding, optional values and model-response parsing had separate validation behavior. An invalid arithmetic input crashed the process. Validate untrusted host inputs explicitly and test the exact bridge version."
         ]
       ],
       "related": [
@@ -667,12 +727,13 @@
           [
             "Integration and tracing",
             "Verify the host boundary independently",
-            "The Python bridge passed synchronous and asynchronous calls and propagated a declared error. Trace context stayed within its invocation, and CLI recordings exposed success/error outcomes through local SQL queries. Host type hints did not reject a string passed to an int identity function. Cloud delivery, tracing overhead and a direct Kujo bridge remain untested.",
+            "The Python bridge passed synchronous and asynchronous calls and propagated a declared error. Local tracing recorded outcomes and kept invocation context separate. Our deeper type-boundary tests distinguish static signatures, call argument checks, Pydantic class validation and model-response parsing. They also found a process crash for an invalid string passed to integer arithmetic in 0.22.2; valid arithmetic returned 42.",
             "Test the exact host language, supported boundary types, failure propagation and retained trace data.",
             [
               "baml-start",
               "baml",
-              "runtime-gap-review"
+              "runtime-gap-review",
+              "baml-boundary-review"
             ]
           ]
         ],
@@ -712,6 +773,83 @@
           [
             "Retain the evidence",
             "Store check/test output and the domain-specific check result with the code revision. Measure latency or token cost only with a declared model, configuration and repeated-run method."
+          ]
+        ]
+      },
+      "boundaryReview": {
+        "title": "What the Python boundary validates",
+        "intro": "These are separate checks, not one blanket type-safety guarantee. We tested the 0.22.2 CLI and Python bridge on macOS x86_64 with Python 3.10 and Pydantic 2.14.1. Each risky call ran in its own process. Official bridge docs describe type mappings and execution; the pinned source and fixtures establish the narrower behavior below.",
+        "rows": [
+          [
+            "Static checks",
+            "Call echo(value: int) with a string in BAML source and typed Python.",
+            "BAML check rejected the call; mypy 2.4.0 rejected the generated Python call. Valid integer controls passed.",
+            "Static checks help when callers are checked. They do not automatically validate arbitrary values received at runtime.",
+            [
+              "baml-function-docs",
+              "baml-boundary-review"
+            ]
+          ],
+          [
+            "Call shape and representation",
+            "Omit an argument, duplicate it, add an unknown name, pass an unsupported object or an oversized integer.",
+            "These fixtures raised errors.",
+            "Argument names, serialization and numeric range checks are not a complete check of the declared parameter type.",
+            [
+              "baml-python-contract",
+              "baml-python-conversion",
+              "baml-boundary-review"
+            ]
+          ],
+          [
+            "Plain values and collections",
+            "Pass a string to int identity functions, or a mixed list to int[].",
+            "Sync and async identity calls returned the string. The mixed list also returned unchanged. An int? fixture rejected the string.",
+            "Validation varies by type and operation. The declared primitive return type did not enforce the observed result; do not generalize this to optional or class paths.",
+            [
+              "baml-engine-conversion",
+              "baml-boundary-review"
+            ]
+          ],
+          [
+            "Generated classes",
+            "Construct Answer(value=\"bad\"), or return a class with an invalid field.",
+            "Pydantic raised ValidationError. Answer(value=\"42\") became Answer(value=42); strict validation rejected that string.",
+            "Class construction and decoding validate fields. A deliberately bypassed or later-mutated model could still yield a bad primitive field value.",
+            [
+              "baml-python-conversion",
+              "pydantic-strict",
+              "baml-boundary-review"
+            ]
+          ],
+          [
+            "Model-response parsing",
+            "Parse objects containing value 42, \"bad\", \"42\" and 41 through the generated function specification.",
+            "42 passed; \"bad\" raised ParseError; \"42\" was coerced to 42; 41 also passed.",
+            "Schema-aligned parsing can repair or coerce data. A structurally valid value is not proof that the answer meets a business requirement. These parser tests made no model request.",
+            [
+              "baml-boundary-review",
+              "runtime-gap-review"
+            ]
+          ],
+          [
+            "Invalid values used in arithmetic",
+            "Call plus(value: int) -> int { value + 1 } with 41 and then \"bad\".",
+            "41 returned 42. The string caused SIGSEGV in separate processes, both with and without the sandbox.",
+            "This is a confirmed release/platform-specific failure, not a caught validation exception. Its native root cause and behavior on other targets remain unverified.",
+            [
+              "baml-boundary-review"
+            ]
+          ],
+          [
+            "Application validation",
+            "Validate the input with TypeAdapter(int).validate_python(value, strict=True) before calling BAML.",
+            "The numeric string was rejected; validated integer arithmetic returned 42.",
+            "This is an application-side guard tested for int. Validate the full input schema and retain domain-specific assertions; do not assume this one wrapper covers every BAML type.",
+            [
+              "pydantic-strict",
+              "baml-boundary-review"
+            ]
           ]
         ]
       }

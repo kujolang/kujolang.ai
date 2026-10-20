@@ -40,7 +40,7 @@ test('each technical comparison publishes its evaluation plan in HTML and Markdo
  for(const p of catalog.pages.filter(p=>p.kind==='direct')){
   const html=out.get(`templates/compare-content/${p.slug}.html`);
   const md=out.get(`public/compare/text/${p.slug}.md`);
-  assert.equal((html.match(/<table>/g)||[]).length,2);
+  assert.equal((html.match(/<table>/g)||[]).length,2+Number(Boolean(p.boundaryReview)));
   for(const [title]of p.deepDive.trial){assert.ok(html.includes(title));assert.ok(md.includes(title));}
   assert.match(out.get(`content/compare/${p.slug}.md`),/template: "comparison-direct"/);
  }
@@ -66,4 +66,18 @@ test('every guide preserves its detailed criteria and examples in HTML and Markd
   for(const s of p.sections)assert.ok(html.includes(s.heading),p.slug);
   assert.match(out.get(`content/compare/${p.slug}.md`),/template: "comparison-guide"/);
  }
+});
+
+test('boundary table rejects missing evidence and malformed rows',()=>{
+ for(const mutate of [b=>b.rows[0][4]=['missing'],b=>b.rows[0].pop()]){
+  const c=structuredClone(catalog);mutate(c.pages.find(p=>p.boundaryReview).boundaryReview);
+  assert.throws(()=>validate(c),/invalid boundary review evidence/);
+ }
+});
+test('boundary results survive both projections and HTML escapes fixture text',()=>{
+ const c=structuredClone(catalog),p=c.pages.find(p=>p.boundaryReview);
+ p.boundaryReview.rows[0][1]='value < 42 | string';const out=outputs(c);
+ assert.ok(out.get(`templates/compare-content/${p.slug}.html`).includes('value &lt; 42 | string'));
+ assert.ok(out.get(`public/compare/text/${p.slug}.md`).includes('value < 42 \\| string'));
+ for(const row of p.boundaryReview.rows)assert.ok(out.get(`public/compare/text/${p.slug}.md`).includes(row[0]));
 });

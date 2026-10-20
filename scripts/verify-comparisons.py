@@ -48,7 +48,7 @@ for route in routes:
   slug=route.strip('/').split('/')[-1];record=next(r for r in catalog['pages'] if r['slug']==slug)
   check(p.h2>=len(record['sections']),slug+': section HTML missing or escaped')
   if record['kind']=='direct':
-   check(p.tables==2,slug+': capability and decision tables missing')
+   check(p.tables==2+bool(record.get('boundaryReview')),slug+': capability, decision or boundary table missing')
    check({'choose','architecture','capabilities','scenarios','evaluation','boundaries','questions','sources'}<=p.ids,slug+': technical section anchors missing')
   else:
    check(p.tables==2,slug+': decision and example tables missing')

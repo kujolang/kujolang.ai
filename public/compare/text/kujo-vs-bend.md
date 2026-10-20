@@ -126,7 +126,7 @@ Evidence to collect: Identical inputs, target/hardware versions, outputs and tim
 
 ## A focused evaluation plan
 
-Proposed steps; no competitor runtime test is claimed.
+Proposed steps for your own evaluation; executed fixtures are recorded separately.
 
 ### State two contracts
 

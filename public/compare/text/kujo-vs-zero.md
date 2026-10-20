@@ -126,7 +126,7 @@ Evidence to collect: Target-specific build and execution evidence; our review co
 
 ## A focused evaluation plan
 
-Proposed steps; no competitor runtime test is claimed.
+Proposed steps for your own evaluation; executed fixtures are recorded separately.
 
 ### Pin the release
 
