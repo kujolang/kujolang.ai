@@ -1,0 +1,41 @@
+[
+  {
+    "args": [
+      "init",
+      "--json"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"project\": \".\",\n  \"compilerInput\": \"repository-graph\",\n  \"writes\": [\"./zero.toml\", \"./zero.graph\"],\n  \"sourceProjection\": {\"path\": \"src/main.0\", \"materialized\": false},\n  \"next\": [\"cd . && zero patch --op 'addMain'\"]\n}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "patch",
+      "--json",
+      "--op",
+      "addMain",
+      "--op",
+      "addCheckWrite fn=\"main\" text=\"baseline\\n\"",
+      "--op",
+      "addFunction name=\"add\" ret=\"i32\"",
+      "--op",
+      "addParam fn=\"add\" name=\"left\" type=\"i32\"",
+      "--op",
+      "addParam fn=\"add\" name=\"right\" type=\"i32\"",
+      "--op",
+      "addReturnBinary fn=\"add\" name=\"+\" left=\"left\" right=\"right\" type=\"i32\""
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<inline>\",\n  \"checkOnly\": false,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:b71cd59fbb11d8b9\",\n  \"patchedGraphHash\": \"graph:dcc932d9a732cd90\",\n  \"operationCount\": 6,\n  \"operations\": [{\"index\": 0, \"line\": 2, \"op\": \"addMain\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": null, \"name\": null, \"type\": null, \"path\": null, \"function\": null, \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}, {\"index\": 1, \"line\": 3, \"op\": \"addCheckWrite\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": \"baseline\\n\", \"name\": null, \"type\": null, \"path\": null, \"function\": \"main\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}, {\"index\": 2, \"line\": 4, \"op\": \"addFunction\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": null, \"name\": \"add\", \"type\": \"i32\", \"path\": null, \"function\": null, \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}, {\"index\": 3, \"line\": 5, \"op\": \"addParam\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": null, \"name\": \"left\", \"type\": \"i32\", \"path\": null, \"function\": \"add\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}, {\"index\": 4, \"line\": 6, \"op\": \"addParam\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": null, \"name\": \"right\", \"type\": \"i32\", \"path\": null, \"function\": \"add\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}, {\"index\": 5, \"line\": 7, \"op\": \"addReturnBinary\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": null, \"name\": \"+\", \"type\": \"i32\", \"path\": null, \"function\": \"add\", \"left\": \"left\", \"right\": \"right\", \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": {\"functions\":[\"main\",\"add\"],\"tests\":[]},\n  \"diagnostic\": null,\n  \"saved\": {\"path\": \"./zero.graph\", \"byteStable\": true}\n}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "export",
+      "--json"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"export\",\n  \"writes\": true,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:dcc932d9a732cd90\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":15,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [\"./src/main.0\"],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": ""
+  }
+]

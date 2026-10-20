@@ -1,0 +1,7 @@
+pub fn main(world: World) -> Void raises {
+    check world.out.write("baseline\n")
+}
+
+fn add(left: i32, right: i32) -> i32 {
+    return left + right
+}

@@ -1,0 +1,1166 @@
+[
+  {
+    "name": "clean-status",
+    "args": [
+      "status",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"status\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:dcc932d9a732cd90\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":15,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "clean-verify",
+    "args": [
+      "verify-projection",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"verify-projection\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:dcc932d9a732cd90\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":15,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "clean-run",
+    "args": [
+      "run"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "baseline\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "source-edit-status",
+    "args": [
+      "status",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"status\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"source-stale\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"stale\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:dcc932d9a732cd90\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"stale\",\"checked\":true,\"current\":false},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":15,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "source-edit-verify-no-write",
+    "args": [
+      "verify-projection",
+      "--json"
+    ],
+    "env": {},
+    "exit": 1,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": false,\n  \"mode\": \"verify-projection\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"source-stale\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"stale\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:dcc932d9a732cd90\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"stale\",\"checked\":true,\"current\":false},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":15,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"diagnostics\": [{\"severity\":\"error\",\"code\":\"RGP006\",\"message\":\"source projection differs from repository graph\",\"path\":\".\",\"line\":1,\"column\":1,\"length\":1,\"expected\":\"checked-in .0 source text matching zero.graph projection\",\"actual\":\"source projection differs\",\"help\":\"review the diff, then run zero import if the .0 projection is authoritative or zero export if zero.graph is authoritative\",\"fixSafety\":\"requires-human-review\",\"repair\":{\"id\":\"inspect-repository-graph-status\",\"summary\":\"Inspect projection state before choosing import or export.\"},\"related\":[]}],\n  \"repairCommands\": [\"zero import .\", \"zero export .\"]\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "source-edit-check-refresh",
+    "args": [
+      "check",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"sourceFile\": \"./zero.graph\",\n  \"graph\": {\"artifact\":\"./zero.graph\",\"canonicalSource\":false,\"moduleIdentity\":\"package:baseline@0.1.0\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"lowering\":\"graph-native-check\",\"sourceProjectionState\":\"clean\"},\n  \"package\": {\"name\":\"baseline\",\"version\":\"0.1.0\",\"root\":\".\",\"manifestPath\":\"./zero.toml\",\"manifestHash\":\"bccfc689022d0d22\",\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfile\":{\"format\":\"zero-lock-v1\",\"path\":\".zero/package-locks/94159b0148bf9f10.lock.json\",\"hash\":\"232ebffb569d82dc\",\"generated\":true},\"resolver\":{\"deterministic\":true,\"registryReadyMetadata\":true,\"remoteFetch\":false,\"versionSolver\":\"exact-version-or-path\"},\"dependencies\":[]},\n  \"packageCache\": {\"cacheKeyInputs\":{\"compilerVersion\":\"0.3.4\",\"target\":\"darwin-x64\",\"packageVersion\":\"0.1.0\",\"dependencyGraphHash\":\"94159b0148bf9f10\",\"manifestHash\":\"bccfc689022d0d22\",\"lockfileHash\":\"232ebffb569d82dc\"},\"invalidationReasons\":[\"source changed\",\"manifest changed\",\"dependency graph changed\",\"target changed\",\"profile changed\",\"compiler version changed\"],\"profile\":\"release\"},\n  \"diagnostics\": [],\n  \"compileTime\": {\"deterministic\":true,\"releaseMetadataDefault\":false,\"sandbox\":{\"filesystem\":\"denied\",\"network\":\"denied\",\"ambientEnv\":\"denied\",\"process\":\"denied\"},\"limits\":{\"maxDepth\":64,\"maxSteps\":1024,\"stringBytes\":127,\"memory\":\"bounded-evaluator-state-only\",\"time\":\"step-counted\"},\"cacheKeyInputs\":{\"algorithm\":\"fnv1a64-zero-meta-v1\",\n    \"sourceHash\": \"acbb858f31af2771\",\n    \"targetHash\": \"845766a1eed8fb33\",\n    \"manifestHash\": \"bccfc689022d0d22\",\"compilerVersion\":\"0.3.4\",\"declaredInputs\":[\"source\",\"target\",\"compilerVersion\",\"manifest\",\"targetFacts\"]},\"meta\":{\"supportedFacts\":[\"literal arithmetic\",\"literal comparisons\",\"Bool logic\",\"target.os\",\"target.arch\",\"target.abi\",\"target.libc\",\"target.objectFormat\",\"target.endian\",\"target.pointerWidth\",\"target.hasCapability\",\"fieldCount\",\"hasField\",\"fieldType\",\"enumCaseCount\",\"hasEnumCase\",\"choiceCaseCount\",\"hasChoiceCase\"],\"unsupportedEffects\":[\"filesystem\",\"network\",\"process\",\"ambient environment\"],\"cycleDiagnostic\":\"MET001\",\"safetyLimitDiagnostic\":\"MET001\"},\"reflection\":{\"typed\":true,\"compileTimeOnly\":true,\"releaseMetadataRetained\":false,\"facts\":[\"target\",\"shape fields\",\"enum cases\",\"choice cases\"]},\"staticValues\":{\"supported\":[\"integer\",\"Bool\",\"enum\"],\"concreteSpecializations\":true,\"runtimeRegistries\":false,\"reflectionTables\":false,\"mismatchesDiagnostic\":\"STC003\"},\"typedBuilders\":{\"status\":\"limited-v1\",\"supported\":[\"shape literals\",\"enum case values\",\"choice constructors\"],\"rawTokenStrings\":false,\"compileTimeOnly\":true,\"runtimeBuilderRegistry\":false},\"programSurface\":{\"shapeCount\":0,\"enumCount\":0,\"choiceCount\":0}},\n  \"targetReadiness\": {\"schemaVersion\":1,\"ok\":true,\"languageOk\":true,\"buildable\":true,\"target\":\"darwin-x64\",\"emit\":\"exe\",\"objectFormat\":\"macho\",\"backend\":\"zero-macho-x64-exe\",\"stage\":\"ready\",\"diagnostics\":[]},\n  \"safetyFacts\": {\"schemaVersion\":1,\"profile\":\"release-small\",\"profileKey\":\"small\",\"coverage\":\"checker-mir-direct-backends\",\"bounds\":{\"policy\":\"checked\",\"staticDiagnostics\":true,\"runtimeTraps\":true,\"trapRuntime\":\"pay-as-used\",\"optimizerElision\":false,\"unchecked\":false},\"overflow\":{\"policy\":\"literal-range-checked-runtime-unchecked\",\"integerLiterals\":\"range-checked\",\"staticValues\":\"range-checked\",\"runtimeArithmetic\":\"unchecked-machine-wrap\",\"unchecked\":true},\"initialization\":{\"locals\":\"initializer-required\",\"fields\":\"explicit-or-default-required\",\"fixedArrays\":\"literal-or-repeat-required\",\"maybePayloadReads\":\"guard-checked\",\"unchecked\":false},\"aliasing\":{\"mutableAliases\":\"diagnostic\",\"sharedWhileMutable\":\"diagnostic\",\"references\":\"provenance-checked\"},\"lifetimes\":{\"escapedLocalBorrow\":\"diagnostic\",\"returnedLocalBorrow\":\"diagnostic\",\"borrowedStdlibResults\":\"provenance-checked\"},\"ownership\":{\"moves\":\"checked\",\"useAfterMove\":\"diagnostic\",\"ownedResourceDrop\":\"explicit\"},\"spans\":{\"construction\":\"type-and-mutability-checked\",\"indexing\":\"bounds-checked\",\"slicing\":\"order-and-bounds-checked\"},\"mir\":{\"contracts\":\"verified-before-direct-emission\",\"localLayout\":true,\"localIndexBounds\":true,\"memoryOpWidths\":true,\"invalidMemoryContractsBlockEmission\":true},\"uncheckedSurfaces\":[{\"surface\":\"C imports\",\"policy\":\"externally-trusted\"},{\"surface\":\"host filesystem/process/network effects\",\"policy\":\"capability-gated-not-sandboxed\"}]},\n  \"graphCompiler\": {\"schemaVersion\":1,\"input\":\"repository-graph-store\",\"graphStoreLoaded\":true,\"sourceProjectionRequiredForCompilerInput\":false,\"sourceProjectionState\":\"clean\",\"graphNativeCheckerUsed\":true,\"graphHirToMirUsed\":true,\"unsupportedGraphFacts\":{\"count\":0,\"facts\":[]},\"timings\":{\"loadMs\":1,\"validateMs\":0,\"resolveMs\":0,\"checkMs\":1,\"lowerMs\":1,\"cacheMs\":3,\"validationInLoad\":true},\"defaultReadiness\":{\"schemaVersion\":1,\"compilerInputReady\":true,\"claim\":\"ready-for-repository-graph-input\",\"sourceFreeCompile\":true,\"sourceProjectionRequired\":false,\"sourceProjectionState\":\"clean\",\"targetReadinessOk\":true,\"targetReadinessReportedIn\":\"targetReadiness\",\"graphMir\":{\"used\":true},\"unsupportedGraphFacts\":{\"count\":0,\"facts\":[]},\"performance\":{\"withinBudget\":true,\"unit\":\"ms\",\"validationInLoad\":true,\"budgets\":{\"loadMs\":50,\"validateMs\":50,\"resolveMs\":50,\"checkMs\":50,\"lowerMs\":100,\"cacheMs\":25},\"timings\":{\"loadMs\":1,\"validateMs\":0,\"resolveMs\":0,\"checkMs\":1,\"lowerMs\":1,\"cacheMs\":3}},\"cacheInvalidation\":{\"sourceKind\":\"program-graph\",\"parserArtifactsInKey\":false,\"keyedBy\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"modulePaths\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"profile\",\"compilerVersion\",\"packageDependencies\"]}},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":11,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"resolution\":{\"state\":\"resolved-graph-facts\",\"ok\":true,\"references\":9,\"diagnostics\":0},\"checking\":{\"state\":\"checked-graph-readiness-facts\",\"ok\":true,\"scope\":\"resolution-package-target-and-graph-mir-readiness\",\"semanticDiagnosticsEnforced\":false,\"semanticDiagnosticsAuthority\":\"stored-typed-graph-facts\",\"authority\":\"ProgramGraphStore\",\"sourceTextAuthority\":false},\"semanticFacts\":{\"state\":\"typed-facts\",\"ok\":true,\"counts\":{\"typedNodes\":11,\"functions\":2,\"calls\":1,\"fallibleCalls\":1,\"effects\":2,\"contracts\":1,\"ownership\":2,\"borrowing\":0,\"resources\":3,\"targetRequirements\":1,\"repairs\":1,\"diagnostics\":0},\"types\":[{\"node\":\"#fn_main\",\"kind\":\"Function\",\"name\":\"main\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":8},\"end\":{\"line\":1,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#param_main_world\",\"kind\":\"Param\",\"name\":\"world\",\"type\":\"World\",\"typeId\":\"type:3660b802c5c23502\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":13},\"end\":{\"line\":1,\"column\":18},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_main_world_type\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"World\",\"typeId\":\"type:3660b802c5c23502\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":20},\"end\":{\"line\":1,\"column\":25},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_main_returnType\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr_232cdca6\",\"kind\":\"Literal\",\"name\":\"\",\"type\":\"String\",\"typeId\":\"type:0c7be574dddec83b\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":27},\"end\":{\"line\":2,\"column\":41},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#fn_add\",\"kind\":\"Function\",\"name\":\"add\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":4},\"end\":{\"line\":5,\"column\":7},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#param_add_left\",\"kind\":\"Param\",\"name\":\"left\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":8},\"end\":{\"line\":5,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_left_type\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":14},\"end\":{\"line\":5,\"column\":17},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#param_add_right\",\"kind\":\"Param\",\"name\":\"right\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":19},\"end\":{\"line\":5,\"column\":24},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_right_type\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":26},\"end\":{\"line\":5,\"column\":29},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_add_returnType\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":34},\"end\":{\"line\":5,\"column\":37},\"columnUnit\":\"utf8-byte\"}}],\"functions\":[{\"node\":\"#fn_main\",\"name\":\"main\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.main\",\"returnType\":\"Void\",\"returnTypeId\":\"type:b30331c589d91166\",\"public\":true,\"fallible\":true,\"exportC\":false,\"params\":[{\"node\":\"#param_main_world\",\"name\":\"world\",\"type\":\"World\",\"typeId\":\"type:3660b802c5c23502\",\"mutable\":false,\"static\":false,\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":13},\"end\":{\"line\":1,\"column\":18},\"columnUnit\":\"utf8-byte\"}}],\"effects\":[{\"node\":\"#effect_main_error\",\"name\":\"error\",\"effectId\":\"effect:d1c6cb38f134cbfc\"}],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":8},\"end\":{\"line\":1,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#fn_add\",\"name\":\"add\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.add\",\"returnType\":\"i32\",\"returnTypeId\":\"type:107347fb7f47c5c0\",\"public\":false,\"fallible\":false,\"exportC\":false,\"params\":[{\"node\":\"#param_add_left\",\"name\":\"left\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"mutable\":false,\"static\":false,\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":8},\"end\":{\"line\":5,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#param_add_right\",\"name\":\"right\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"mutable\":false,\"static\":false,\"order\":1,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":19},\"end\":{\"line\":5,\"column\":24},\"columnUnit\":\"utf8-byte\"}}],\"effects\":[],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":4},\"end\":{\"line\":5,\"column\":7},\"columnUnit\":\"utf8-byte\"}}],\"calls\":[{\"node\":\"#expr_main_write_call_0\",\"kind\":\"MethodCall\",\"name\":\"write\",\"qualifiedName\":\"world.out.write\",\"returnType\":\"Void\",\"returnTypeId\":\"\",\"receiver\":null,\"args\":[{\"node\":\"#expr_232cdca6\",\"kind\":\"Literal\",\"type\":\"String\",\"typeId\":\"type:0c7be574dddec83b\",\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":27},\"end\":{\"line\":2,\"column\":41},\"columnUnit\":\"utf8-byte\"}}],\"contract\":{\"kind\":\"worldStreamWrite\",\"fallible\":true,\"checked\":true,\"requiresCheck\":false,\"targetNode\":\"#param_main_world\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.main/param.world\",\"returnType\":\"Void\",\"capability\":\"io\",\"targetSupport\":\"world-io\",\"allocation\":\"\",\"sourceModule\":\"\",\"expectedArgCount\":null,\"expectedArgTypes\":[],\"errors\":[],\"repair\":{\"id\":\"check-fallible-call\",\"appliesWhen\":\"alreadyChecked\",\"summary\":\"wrap this fallible call in check or rescue before using its value\"}},\"resolution\":{\"referenceKind\":\"call\",\"qualifiedName\":\"world.out.write\",\"resolved\":true,\"ambiguous\":false,\"targetKind\":\"member\",\"targetNode\":\"#param_main_world\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.main/param.world\"},\"fallible\":true,\"checked\":true,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":21},\"end\":{\"line\":2,\"column\":26},\"columnUnit\":\"utf8-byte\"}}],\"effects\":[{\"node\":\"#fn_main\",\"kind\":\"Function\",\"fallible\":true,\"effects\":[{\"node\":\"#effect_main_error\",\"name\":\"error\",\"effectId\":\"effect:d1c6cb38f134cbfc\"}],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":8},\"end\":{\"line\":1,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#stmt_main_check_write_0\",\"kind\":\"Check\",\"fallible\":false,\"effects\":[],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":5},\"end\":{\"line\":2,\"column\":10},\"columnUnit\":\"utf8-byte\"}}],\"ownership\":[{\"node\":\"#param_main_world\",\"kind\":\"Param\",\"name\":\"world\",\"type\":\"World\",\"ownership\":\"resource-handle\",\"mutable\":false,\"resource\":true,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":13},\"end\":{\"line\":1,\"column\":18},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_main_world_type\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"World\",\"ownership\":\"resource-handle\",\"mutable\":false,\"resource\":true,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":20},\"end\":{\"line\":1,\"column\":25},\"columnUnit\":\"utf8-byte\"}}],\"borrowing\":[],\"resources\":[{\"node\":\"#param_main_world\",\"kind\":\"binding\",\"resourceKind\":\"world-io\",\"type\":\"World\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":13},\"end\":{\"line\":1,\"column\":18},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_main_world_type\",\"kind\":\"binding\",\"resourceKind\":\"world-io\",\"type\":\"World\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":20},\"end\":{\"line\":1,\"column\":25},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr_main_write_call_0\",\"kind\":\"capabilityUse\",\"resourceKind\":\"world-io\",\"capability\":\"io\",\"qualifiedName\":\"world.out.write\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":21},\"end\":{\"line\":2,\"column\":26},\"columnUnit\":\"utf8-byte\"}}],\"targetRequirements\":[{\"node\":\"#expr_main_write_call_0\",\"qualifiedName\":\"world.out.write\",\"contractKind\":\"worldStreamWrite\",\"capability\":\"io\",\"targetSupport\":\"world-io\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":21},\"end\":{\"line\":2,\"column\":26},\"columnUnit\":\"utf8-byte\"}}],\"repairs\":[{\"node\":\"#expr_main_write_call_0\",\"qualifiedName\":\"world.out.write\",\"requiresCheck\":false,\"repair\":{\"id\":\"check-fallible-call\",\"appliesWhen\":\"alreadyChecked\",\"summary\":\"wrap this fallible call in check or rescue before using its value\"},\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":21},\"end\":{\"line\":2,\"column\":26},\"columnUnit\":\"utf8-byte\"}}],\"diagnostics\":[]}},\n  \"compilerPhases\": [{\"name\":\"resolve\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"parse\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"interface\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"check\",\"elapsedMs\":1,\"cacheable\":true}, {\"name\":\"lower\",\"elapsedMs\":1,\"cacheable\":true}, {\"name\":\"codegen\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"object\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"link\",\"elapsedMs\":0,\"cacheable\":false}],\n  \"compilerCaches\": [{\"name\":\"parseTree\",\"key\":\"9d6ab49a1cdc9c9d\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"compilerVersion\",\"packageDependencies\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input\"}, {\"name\":\"interface\",\"key\":\"9e5283c7211c9b5d\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"modulePaths\",\"symbolFacts\",\"importGraph\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"graph public symbols/import graph\"}, {\"name\":\"checkedBody\",\"key\":\"9a53d3d4e85c85b7\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"compilerVersion\",\"packageDependencies\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input or target\"}, {\"name\":\"specialization\",\"key\":\"d8d6bfb914196994\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"profile\",\"compilerVersion\",\"packageDependencies\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input, target, or profile\"}, {\"name\":\"mappedFinalMir\",\"key\":\"861b1424131210fa\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"compilerVersion\",\"packageDependencies\",\"emitKind\",\"backend\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input, target, emit kind, backend, or compiler version\",\"path\":\"./.zero/cache/native/mir-d8a0783685717fe7.zmir\",\"byteLength\":910,\"memoryMapped\":true,\"borrowedStorage\":true,\"written\":true,\"codegenImmediate\":false,\"programReconstructed\":false}, {\"name\":\"emittedObject\",\"key\":\"48e5fe9368c59db3\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"profile\",\"compilerVersion\",\"packageDependencies\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input, target, profile, or backend\"}],\n  \"interfaceFingerprints\": {\"schemaVersion\":1,\"algorithm\":\"fnv1a64-zero-interface-v1\",\"targetFactsHash\":\"807f6e2986500abe\",\"importedPackageMetadataHash\":\"09954160c49c6474\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"modules\":[{\"name\":\"main\",\"path\":\"src/main.0\",\"sourceHash\":\"b969f4c6d033800d\",\"publicInterfaceHash\":\"687c142e2bf9b02a\",\"publicSymbolCount\":1,\"publicSymbols\":[{\"name\":\"main\",\"kind\":\"function\"}],\"imports\":[]}]},\n  \"incrementalInvalidation\": {\"moduleDependencies\":[],\"targetDependency\":\"darwin-x64\",\"profileDependency\":\"release\",\"sourceKind\":\"program-graph\",\"graphInput\":{\"artifact\":\"./zero.graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"lowering\":\"graph-native-check\",\"parserArtifactsInKey\":false,\"keyedBy\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"modulePaths\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"profile\",\"compilerVersion\",\"packageDependencies\"],\"mappedFinalMir\":{\"path\":\"./.zero/cache/native/mir-d8a0783685717fe7.zmir\",\"byteLength\":910,\"hit\":false,\"written\":true,\"memoryMapped\":true,\"borrowedStorage\":true,\"codegenImmediate\":false,\"programReconstructed\":false}},\"affectedModules\":1,\"recheckStrategy\":\"fingerprint changed modules and dependent bodies\",\"changedInputs\":{\"sourceFiles\":[\"src/main.0\"],\"manifestPath\":\"./zero.toml\",\"packageLockfile\":\".zero/package-locks/94159b0148bf9f10.lock.json\",\"graphArtifact\":\"./zero.graph\"},\"cacheHits\":0,\"cacheMisses\":6,\"partialDiagnosticsStable\":true,\"interfaceFingerprints\":{\"schemaVersion\":1,\"algorithm\":\"fnv1a64-zero-interface-v1\",\"targetFactsHash\":\"807f6e2986500abe\",\"importedPackageMetadataHash\":\"09954160c49c6474\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"modules\":[{\"name\":\"main\",\"path\":\"src/main.0\",\"sourceHash\":\"b969f4c6d033800d\",\"publicInterfaceHash\":\"687c142e2bf9b02a\",\"publicSymbolCount\":1,\"publicSymbols\":[{\"name\":\"main\",\"kind\":\"function\"}],\"imports\":[]}]}}\n}\n",
+    "stderr": "note: zero check refreshed zero.graph from the edited package source projection; tip: zero patch --replace-fn <fn> --body-file - edits the graph directly and skips this reconcile\n",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "source-edit-run",
+    "args": [
+      "run"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "human-edit\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "source-edit-final-verify",
+    "args": [
+      "verify-projection",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"verify-projection\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:3ac5cbc6dba61758\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":11,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "strict-stale-check",
+    "args": [
+      "check",
+      "--json"
+    ],
+    "env": {
+      "ZERO_STALE": "fail"
+    },
+    "exit": 1,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": false,\n  \"mode\": \"compiler-input\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"source-stale\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"stale\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"schemaVersion\":1,\"graphHash\":\"graph:dcc932d9a732cd90\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"diagnostics\": [{\"severity\":\"error\",\"code\":\"RGP008\",\"message\":\"package source projection does not match the zero.graph compiler input\",\"path\":\".\",\"line\":1,\"column\":1,\"length\":1,\"expected\":\"zero.graph store matching the checked-in .0 source projection\",\"actual\":\"source-stale projection state\",\"help\":\"run zero import to refresh zero.graph from the edited source, or unset ZERO_STALE=fail to let this command refresh automatically\",\"fixSafety\":\"requires-human-review\",\"repair\":{\"id\":\"inspect-repository-graph-status\",\"summary\":\"Inspect projection state before choosing import or export.\"},\"related\":[]}],\n  \"repairCommands\": [\"zero import .\"]\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "explicit-import",
+    "args": [
+      "import",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"import\",\n  \"writes\": true,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:3ac5cbc6dba61758\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":11,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [\"./zero.graph\"],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "imported-run",
+    "args": [
+      "run"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "human-edit\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "imported-verify",
+    "args": [
+      "verify-projection",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"verify-projection\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:3ac5cbc6dba61758\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":11,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "graph-only-patch",
+    "args": [
+      "patch",
+      "--json",
+      "--op",
+      "addCheckWrite fn=\"main\" text=\"graph-edit\\n\""
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<inline>\",\n  \"checkOnly\": false,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:dcc932d9a732cd90\",\n  \"patchedGraphHash\": \"graph:e4ead6fe28c96d8a\",\n  \"operationCount\": 1,\n  \"operations\": [{\"index\": 0, \"line\": 2, \"op\": \"addCheckWrite\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": \"graph-edit\\n\", \"name\": null, \"type\": null, \"path\": null, \"function\": \"main\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": {\"functions\":[\"main\",\"add\"],\"tests\":[]},\n  \"diagnostic\": null,\n  \"saved\": {\"path\": \"./zero.graph\", \"byteStable\": true}\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "graph-only-status",
+    "args": [
+      "status",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"status\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"source-stale\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"stale\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:e4ead6fe28c96d8a\",\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"stale\",\"checked\":true,\"current\":false},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":17,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":30,\"edge\":29,\"projection\":1,\"sourceMap\":30},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "graph-only-run",
+    "args": [
+      "run"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "baseline\ngraph-edit\n",
+    "stderr": "note: zero run is using zero.graph, which is newer than the .0 source projection; run zero export to sync sources or zero import to make the edited source authoritative\n",
+    "before": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "graph-only-export",
+    "args": [
+      "export",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"export\",\n  \"writes\": true,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:e4ead6fe28c96d8a\",\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":17,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":30,\"edge\":29,\"projection\":1,\"sourceMap\":30},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [\"./src/main.0\", \"./zero.graph\"],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "6537b160f7845b7ddcd3b8c5af9a466d67d2b83154f48ad026c3c3257d3241ca",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "441c55aaf639362a72aa6a0e28c427939fd0879876af7191beaa20e7b0758f5a"
+    }
+  },
+  {
+    "name": "graph-only-verify",
+    "args": [
+      "verify-projection",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"verify-projection\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:e4ead6fe28c96d8a\",\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":17,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":30,\"edge\":29,\"projection\":1,\"sourceMap\":30},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "6537b160f7845b7ddcd3b8c5af9a466d67d2b83154f48ad026c3c3257d3241ca",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "441c55aaf639362a72aa6a0e28c427939fd0879876af7191beaa20e7b0758f5a"
+    },
+    "after": {
+      "zero.graph": "6537b160f7845b7ddcd3b8c5af9a466d67d2b83154f48ad026c3c3257d3241ca",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "441c55aaf639362a72aa6a0e28c427939fd0879876af7191beaa20e7b0758f5a"
+    }
+  },
+  {
+    "name": "conflict-graph-edit",
+    "args": [
+      "patch",
+      "--json",
+      "--op",
+      "addCheckWrite fn=\"main\" text=\"graph-edit\\n\""
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<inline>\",\n  \"checkOnly\": false,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:dcc932d9a732cd90\",\n  \"patchedGraphHash\": \"graph:e4ead6fe28c96d8a\",\n  \"operationCount\": 1,\n  \"operations\": [{\"index\": 0, \"line\": 2, \"op\": \"addCheckWrite\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": \"graph-edit\\n\", \"name\": null, \"type\": null, \"path\": null, \"function\": \"main\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": {\"functions\":[\"main\",\"add\"],\"tests\":[]},\n  \"diagnostic\": null,\n  \"saved\": {\"path\": \"./zero.graph\", \"byteStable\": true}\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "conflict-status",
+    "args": [
+      "status",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"status\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"source-stale\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"stale\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:e4ead6fe28c96d8a\",\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"stale\",\"checked\":true,\"current\":false},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":17,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":30,\"edge\":29,\"projection\":1,\"sourceMap\":30},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "conflict-check",
+    "args": [
+      "check",
+      "--json"
+    ],
+    "env": {},
+    "exit": 1,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": false,\n  \"mode\": \"compiler-input\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"source-stale\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"stale\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"schemaVersion\":1,\"graphHash\":\"graph:e4ead6fe28c96d8a\",\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"diagnostics\": [{\"severity\":\"error\",\"code\":\"RGP006\",\"message\":\"package source projection and zero.graph have diverged\",\"path\":\".\",\"line\":1,\"column\":1,\"length\":1,\"expected\":\"checked-in .0 source text matching zero.graph projection\",\"actual\":\"source projection and zero.graph edited independently\",\"help\":\"run zero status to inspect the drift, then run zero import if the .0 projection is authoritative or zero export if zero.graph is authoritative\",\"fixSafety\":\"requires-human-review\",\"repair\":{\"id\":\"inspect-repository-graph-status\",\"summary\":\"Inspect projection state before choosing import or export.\"},\"related\":[]}],\n  \"repairCommands\": [\"zero import .\", \"zero export .\"]\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "conflict-run",
+    "args": [
+      "run"
+    ],
+    "env": {},
+    "exit": 1,
+    "stdout": "",
+    "stderr": ".:1:1 RGP006: package source projection and zero.graph have diverged\n  expected: checked-in .0 source text matching zero.graph projection\n  actual: source projection and zero.graph edited independently\n  help: run zero status to inspect the drift, then run zero import if the .0 projection is authoritative or zero export if zero.graph is authoritative\n  repair: zero import .\n  repair: zero export .\n",
+    "before": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "conflict-export-select-graph",
+    "args": [
+      "export",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"export\",\n  \"writes\": true,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:e4ead6fe28c96d8a\",\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":17,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":30,\"edge\":29,\"projection\":1,\"sourceMap\":30},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [\"./src/main.0\", \"./zero.graph\"],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "6537b160f7845b7ddcd3b8c5af9a466d67d2b83154f48ad026c3c3257d3241ca",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "441c55aaf639362a72aa6a0e28c427939fd0879876af7191beaa20e7b0758f5a"
+    }
+  },
+  {
+    "name": "conflict-export-run",
+    "args": [
+      "run"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "baseline\ngraph-edit\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "6537b160f7845b7ddcd3b8c5af9a466d67d2b83154f48ad026c3c3257d3241ca",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "441c55aaf639362a72aa6a0e28c427939fd0879876af7191beaa20e7b0758f5a"
+    },
+    "after": {
+      "zero.graph": "6537b160f7845b7ddcd3b8c5af9a466d67d2b83154f48ad026c3c3257d3241ca",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "441c55aaf639362a72aa6a0e28c427939fd0879876af7191beaa20e7b0758f5a"
+    }
+  },
+  {
+    "name": "conflict-export-verify",
+    "args": [
+      "verify-projection",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"verify-projection\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:e4ead6fe28c96d8a\",\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":17,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":30,\"edge\":29,\"projection\":1,\"sourceMap\":30},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":30,\"edges\":29,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "6537b160f7845b7ddcd3b8c5af9a466d67d2b83154f48ad026c3c3257d3241ca",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "441c55aaf639362a72aa6a0e28c427939fd0879876af7191beaa20e7b0758f5a"
+    },
+    "after": {
+      "zero.graph": "6537b160f7845b7ddcd3b8c5af9a466d67d2b83154f48ad026c3c3257d3241ca",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "441c55aaf639362a72aa6a0e28c427939fd0879876af7191beaa20e7b0758f5a"
+    }
+  },
+  {
+    "name": "invalid-source-refresh",
+    "args": [
+      "check",
+      "--json"
+    ],
+    "env": {},
+    "exit": 1,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": false,\n  \"diagnostics\": [\n    {\n      \"severity\": \"error\",\n      \"code\": \"TYP003\",\n      \"message\": \"return type does not match function return type\",\n      \"path\": \"./src/main.0\",\n      \"line\": 6,\n      \"column\": 5,\n      \"length\": 1,\n      \"expected\": \"i32\",\n      \"actual\": \"Bool\",\n      \"help\": \"return a value compatible with the function signature\",\n      \"fixSafety\": \"requires-human-review\",\n      \"repair\": {\"id\": \"match-return-type\", \"summary\": \"Change the returned expression or the function return annotation so both types agree.\"},\n      \"related\": []\n    }\n  ],\n  \"safetyFacts\": {\"schemaVersion\":1,\"profile\":\"release-small\",\"profileKey\":\"small\",\"coverage\":\"checker-mir-direct-backends\",\"bounds\":{\"policy\":\"checked\",\"staticDiagnostics\":true,\"runtimeTraps\":true,\"trapRuntime\":\"pay-as-used\",\"optimizerElision\":false,\"unchecked\":false},\"overflow\":{\"policy\":\"literal-range-checked-runtime-unchecked\",\"integerLiterals\":\"range-checked\",\"staticValues\":\"range-checked\",\"runtimeArithmetic\":\"unchecked-machine-wrap\",\"unchecked\":true},\"initialization\":{\"locals\":\"initializer-required\",\"fields\":\"explicit-or-default-required\",\"fixedArrays\":\"literal-or-repeat-required\",\"maybePayloadReads\":\"guard-checked\",\"unchecked\":false},\"aliasing\":{\"mutableAliases\":\"diagnostic\",\"sharedWhileMutable\":\"diagnostic\",\"references\":\"provenance-checked\"},\"lifetimes\":{\"escapedLocalBorrow\":\"diagnostic\",\"returnedLocalBorrow\":\"diagnostic\",\"borrowedStdlibResults\":\"provenance-checked\"},\"ownership\":{\"moves\":\"checked\",\"useAfterMove\":\"diagnostic\",\"ownedResourceDrop\":\"explicit\"},\"spans\":{\"construction\":\"type-and-mutability-checked\",\"indexing\":\"bounds-checked\",\"slicing\":\"order-and-bounds-checked\"},\"mir\":{\"contracts\":\"verified-before-direct-emission\",\"localLayout\":true,\"localIndexBounds\":true,\"memoryOpWidths\":true,\"invalidMemoryContractsBlockEmission\":true},\"uncheckedSurfaces\":[{\"surface\":\"C imports\",\"policy\":\"externally-trusted\"},{\"surface\":\"host filesystem/process/network effects\",\"policy\":\"capability-gated-not-sandboxed\"}]}\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "5839cfdc26b4a62d61045ccc132989ee4b90a8b6094452f686a04ff2b7278a9b"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "5839cfdc26b4a62d61045ccc132989ee4b90a8b6094452f686a04ff2b7278a9b"
+    }
+  },
+  {
+    "name": "invalid-source-import",
+    "args": [
+      "import",
+      "--json"
+    ],
+    "env": {},
+    "exit": 1,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": false,\n  \"diagnostics\": [\n    {\n      \"severity\": \"error\",\n      \"code\": \"TYP003\",\n      \"message\": \"return type does not match function return type\",\n      \"path\": \"./src/main.0\",\n      \"line\": 6,\n      \"column\": 5,\n      \"length\": 1,\n      \"expected\": \"i32\",\n      \"actual\": \"Bool\",\n      \"help\": \"return a value compatible with the function signature\",\n      \"fixSafety\": \"requires-human-review\",\n      \"repair\": {\"id\": \"match-return-type\", \"summary\": \"Change the returned expression or the function return annotation so both types agree.\"},\n      \"related\": []\n    }\n  ]\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "5839cfdc26b4a62d61045ccc132989ee4b90a8b6094452f686a04ff2b7278a9b"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "5839cfdc26b4a62d61045ccc132989ee4b90a8b6094452f686a04ff2b7278a9b"
+    }
+  },
+  {
+    "name": "mtime-independent-refresh",
+    "args": [
+      "check",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"sourceFile\": \"./zero.graph\",\n  \"graph\": {\"artifact\":\"./zero.graph\",\"canonicalSource\":false,\"moduleIdentity\":\"package:baseline@0.1.0\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"lowering\":\"graph-native-check\",\"sourceProjectionState\":\"clean\"},\n  \"package\": {\"name\":\"baseline\",\"version\":\"0.1.0\",\"root\":\".\",\"manifestPath\":\"./zero.toml\",\"manifestHash\":\"bccfc689022d0d22\",\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfile\":{\"format\":\"zero-lock-v1\",\"path\":\".zero/package-locks/94159b0148bf9f10.lock.json\",\"hash\":\"232ebffb569d82dc\",\"generated\":true},\"resolver\":{\"deterministic\":true,\"registryReadyMetadata\":true,\"remoteFetch\":false,\"versionSolver\":\"exact-version-or-path\"},\"dependencies\":[]},\n  \"packageCache\": {\"cacheKeyInputs\":{\"compilerVersion\":\"0.3.4\",\"target\":\"darwin-x64\",\"packageVersion\":\"0.1.0\",\"dependencyGraphHash\":\"94159b0148bf9f10\",\"manifestHash\":\"bccfc689022d0d22\",\"lockfileHash\":\"232ebffb569d82dc\"},\"invalidationReasons\":[\"source changed\",\"manifest changed\",\"dependency graph changed\",\"target changed\",\"profile changed\",\"compiler version changed\"],\"profile\":\"release\"},\n  \"diagnostics\": [],\n  \"compileTime\": {\"deterministic\":true,\"releaseMetadataDefault\":false,\"sandbox\":{\"filesystem\":\"denied\",\"network\":\"denied\",\"ambientEnv\":\"denied\",\"process\":\"denied\"},\"limits\":{\"maxDepth\":64,\"maxSteps\":1024,\"stringBytes\":127,\"memory\":\"bounded-evaluator-state-only\",\"time\":\"step-counted\"},\"cacheKeyInputs\":{\"algorithm\":\"fnv1a64-zero-meta-v1\",\n    \"sourceHash\": \"acbb858f31af2771\",\n    \"targetHash\": \"845766a1eed8fb33\",\n    \"manifestHash\": \"bccfc689022d0d22\",\"compilerVersion\":\"0.3.4\",\"declaredInputs\":[\"source\",\"target\",\"compilerVersion\",\"manifest\",\"targetFacts\"]},\"meta\":{\"supportedFacts\":[\"literal arithmetic\",\"literal comparisons\",\"Bool logic\",\"target.os\",\"target.arch\",\"target.abi\",\"target.libc\",\"target.objectFormat\",\"target.endian\",\"target.pointerWidth\",\"target.hasCapability\",\"fieldCount\",\"hasField\",\"fieldType\",\"enumCaseCount\",\"hasEnumCase\",\"choiceCaseCount\",\"hasChoiceCase\"],\"unsupportedEffects\":[\"filesystem\",\"network\",\"process\",\"ambient environment\"],\"cycleDiagnostic\":\"MET001\",\"safetyLimitDiagnostic\":\"MET001\"},\"reflection\":{\"typed\":true,\"compileTimeOnly\":true,\"releaseMetadataRetained\":false,\"facts\":[\"target\",\"shape fields\",\"enum cases\",\"choice cases\"]},\"staticValues\":{\"supported\":[\"integer\",\"Bool\",\"enum\"],\"concreteSpecializations\":true,\"runtimeRegistries\":false,\"reflectionTables\":false,\"mismatchesDiagnostic\":\"STC003\"},\"typedBuilders\":{\"status\":\"limited-v1\",\"supported\":[\"shape literals\",\"enum case values\",\"choice constructors\"],\"rawTokenStrings\":false,\"compileTimeOnly\":true,\"runtimeBuilderRegistry\":false},\"programSurface\":{\"shapeCount\":0,\"enumCount\":0,\"choiceCount\":0}},\n  \"targetReadiness\": {\"schemaVersion\":1,\"ok\":true,\"languageOk\":true,\"buildable\":true,\"target\":\"darwin-x64\",\"emit\":\"exe\",\"objectFormat\":\"macho\",\"backend\":\"zero-macho-x64-exe\",\"stage\":\"ready\",\"diagnostics\":[]},\n  \"safetyFacts\": {\"schemaVersion\":1,\"profile\":\"release-small\",\"profileKey\":\"small\",\"coverage\":\"checker-mir-direct-backends\",\"bounds\":{\"policy\":\"checked\",\"staticDiagnostics\":true,\"runtimeTraps\":true,\"trapRuntime\":\"pay-as-used\",\"optimizerElision\":false,\"unchecked\":false},\"overflow\":{\"policy\":\"literal-range-checked-runtime-unchecked\",\"integerLiterals\":\"range-checked\",\"staticValues\":\"range-checked\",\"runtimeArithmetic\":\"unchecked-machine-wrap\",\"unchecked\":true},\"initialization\":{\"locals\":\"initializer-required\",\"fields\":\"explicit-or-default-required\",\"fixedArrays\":\"literal-or-repeat-required\",\"maybePayloadReads\":\"guard-checked\",\"unchecked\":false},\"aliasing\":{\"mutableAliases\":\"diagnostic\",\"sharedWhileMutable\":\"diagnostic\",\"references\":\"provenance-checked\"},\"lifetimes\":{\"escapedLocalBorrow\":\"diagnostic\",\"returnedLocalBorrow\":\"diagnostic\",\"borrowedStdlibResults\":\"provenance-checked\"},\"ownership\":{\"moves\":\"checked\",\"useAfterMove\":\"diagnostic\",\"ownedResourceDrop\":\"explicit\"},\"spans\":{\"construction\":\"type-and-mutability-checked\",\"indexing\":\"bounds-checked\",\"slicing\":\"order-and-bounds-checked\"},\"mir\":{\"contracts\":\"verified-before-direct-emission\",\"localLayout\":true,\"localIndexBounds\":true,\"memoryOpWidths\":true,\"invalidMemoryContractsBlockEmission\":true},\"uncheckedSurfaces\":[{\"surface\":\"C imports\",\"policy\":\"externally-trusted\"},{\"surface\":\"host filesystem/process/network effects\",\"policy\":\"capability-gated-not-sandboxed\"}]},\n  \"graphCompiler\": {\"schemaVersion\":1,\"input\":\"repository-graph-store\",\"graphStoreLoaded\":true,\"sourceProjectionRequiredForCompilerInput\":false,\"sourceProjectionState\":\"clean\",\"graphNativeCheckerUsed\":true,\"graphHirToMirUsed\":true,\"unsupportedGraphFacts\":{\"count\":0,\"facts\":[]},\"timings\":{\"loadMs\":0,\"validateMs\":0,\"resolveMs\":0,\"checkMs\":0,\"lowerMs\":1,\"cacheMs\":2,\"validationInLoad\":true},\"defaultReadiness\":{\"schemaVersion\":1,\"compilerInputReady\":true,\"claim\":\"ready-for-repository-graph-input\",\"sourceFreeCompile\":true,\"sourceProjectionRequired\":false,\"sourceProjectionState\":\"clean\",\"targetReadinessOk\":true,\"targetReadinessReportedIn\":\"targetReadiness\",\"graphMir\":{\"used\":true},\"unsupportedGraphFacts\":{\"count\":0,\"facts\":[]},\"performance\":{\"withinBudget\":true,\"unit\":\"ms\",\"validationInLoad\":true,\"budgets\":{\"loadMs\":50,\"validateMs\":50,\"resolveMs\":50,\"checkMs\":50,\"lowerMs\":100,\"cacheMs\":25},\"timings\":{\"loadMs\":0,\"validateMs\":0,\"resolveMs\":0,\"checkMs\":0,\"lowerMs\":1,\"cacheMs\":2}},\"cacheInvalidation\":{\"sourceKind\":\"program-graph\",\"parserArtifactsInKey\":false,\"keyedBy\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"modulePaths\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"profile\",\"compilerVersion\",\"packageDependencies\"]}},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":11,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"resolution\":{\"state\":\"resolved-graph-facts\",\"ok\":true,\"references\":9,\"diagnostics\":0},\"checking\":{\"state\":\"checked-graph-readiness-facts\",\"ok\":true,\"scope\":\"resolution-package-target-and-graph-mir-readiness\",\"semanticDiagnosticsEnforced\":false,\"semanticDiagnosticsAuthority\":\"stored-typed-graph-facts\",\"authority\":\"ProgramGraphStore\",\"sourceTextAuthority\":false},\"semanticFacts\":{\"state\":\"typed-facts\",\"ok\":true,\"counts\":{\"typedNodes\":11,\"functions\":2,\"calls\":1,\"fallibleCalls\":1,\"effects\":2,\"contracts\":1,\"ownership\":2,\"borrowing\":0,\"resources\":3,\"targetRequirements\":1,\"repairs\":1,\"diagnostics\":0},\"types\":[{\"node\":\"#fn_main\",\"kind\":\"Function\",\"name\":\"main\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":8},\"end\":{\"line\":1,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#param_main_world\",\"kind\":\"Param\",\"name\":\"world\",\"type\":\"World\",\"typeId\":\"type:3660b802c5c23502\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":13},\"end\":{\"line\":1,\"column\":18},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_main_world_type\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"World\",\"typeId\":\"type:3660b802c5c23502\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":20},\"end\":{\"line\":1,\"column\":25},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_main_returnType\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr_232cdca6\",\"kind\":\"Literal\",\"name\":\"\",\"type\":\"String\",\"typeId\":\"type:0c7be574dddec83b\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":27},\"end\":{\"line\":2,\"column\":41},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#fn_add\",\"kind\":\"Function\",\"name\":\"add\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":4},\"end\":{\"line\":5,\"column\":7},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#param_add_left\",\"kind\":\"Param\",\"name\":\"left\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":8},\"end\":{\"line\":5,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_left_type\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":14},\"end\":{\"line\":5,\"column\":17},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#param_add_right\",\"kind\":\"Param\",\"name\":\"right\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":19},\"end\":{\"line\":5,\"column\":24},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_right_type\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":26},\"end\":{\"line\":5,\"column\":29},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_add_returnType\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":34},\"end\":{\"line\":5,\"column\":37},\"columnUnit\":\"utf8-byte\"}}],\"functions\":[{\"node\":\"#fn_main\",\"name\":\"main\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.main\",\"returnType\":\"Void\",\"returnTypeId\":\"type:b30331c589d91166\",\"public\":true,\"fallible\":true,\"exportC\":false,\"params\":[{\"node\":\"#param_main_world\",\"name\":\"world\",\"type\":\"World\",\"typeId\":\"type:3660b802c5c23502\",\"mutable\":false,\"static\":false,\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":13},\"end\":{\"line\":1,\"column\":18},\"columnUnit\":\"utf8-byte\"}}],\"effects\":[{\"node\":\"#effect_main_error\",\"name\":\"error\",\"effectId\":\"effect:d1c6cb38f134cbfc\"}],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":8},\"end\":{\"line\":1,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#fn_add\",\"name\":\"add\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.add\",\"returnType\":\"i32\",\"returnTypeId\":\"type:107347fb7f47c5c0\",\"public\":false,\"fallible\":false,\"exportC\":false,\"params\":[{\"node\":\"#param_add_left\",\"name\":\"left\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"mutable\":false,\"static\":false,\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":8},\"end\":{\"line\":5,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#param_add_right\",\"name\":\"right\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"mutable\":false,\"static\":false,\"order\":1,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":19},\"end\":{\"line\":5,\"column\":24},\"columnUnit\":\"utf8-byte\"}}],\"effects\":[],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":5,\"column\":4},\"end\":{\"line\":5,\"column\":7},\"columnUnit\":\"utf8-byte\"}}],\"calls\":[{\"node\":\"#expr_main_write_call_0\",\"kind\":\"MethodCall\",\"name\":\"write\",\"qualifiedName\":\"world.out.write\",\"returnType\":\"Void\",\"returnTypeId\":\"\",\"receiver\":null,\"args\":[{\"node\":\"#expr_232cdca6\",\"kind\":\"Literal\",\"type\":\"String\",\"typeId\":\"type:0c7be574dddec83b\",\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":27},\"end\":{\"line\":2,\"column\":41},\"columnUnit\":\"utf8-byte\"}}],\"contract\":{\"kind\":\"worldStreamWrite\",\"fallible\":true,\"checked\":true,\"requiresCheck\":false,\"targetNode\":\"#param_main_world\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.main/param.world\",\"returnType\":\"Void\",\"capability\":\"io\",\"targetSupport\":\"world-io\",\"allocation\":\"\",\"sourceModule\":\"\",\"expectedArgCount\":null,\"expectedArgTypes\":[],\"errors\":[],\"repair\":{\"id\":\"check-fallible-call\",\"appliesWhen\":\"alreadyChecked\",\"summary\":\"wrap this fallible call in check or rescue before using its value\"}},\"resolution\":{\"referenceKind\":\"call\",\"qualifiedName\":\"world.out.write\",\"resolved\":true,\"ambiguous\":false,\"targetKind\":\"member\",\"targetNode\":\"#param_main_world\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.main/param.world\"},\"fallible\":true,\"checked\":true,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":21},\"end\":{\"line\":2,\"column\":26},\"columnUnit\":\"utf8-byte\"}}],\"effects\":[{\"node\":\"#fn_main\",\"kind\":\"Function\",\"fallible\":true,\"effects\":[{\"node\":\"#effect_main_error\",\"name\":\"error\",\"effectId\":\"effect:d1c6cb38f134cbfc\"}],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":8},\"end\":{\"line\":1,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#stmt_main_check_write_0\",\"kind\":\"Check\",\"fallible\":false,\"effects\":[],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":5},\"end\":{\"line\":2,\"column\":10},\"columnUnit\":\"utf8-byte\"}}],\"ownership\":[{\"node\":\"#param_main_world\",\"kind\":\"Param\",\"name\":\"world\",\"type\":\"World\",\"ownership\":\"resource-handle\",\"mutable\":false,\"resource\":true,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":13},\"end\":{\"line\":1,\"column\":18},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_main_world_type\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"World\",\"ownership\":\"resource-handle\",\"mutable\":false,\"resource\":true,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":20},\"end\":{\"line\":1,\"column\":25},\"columnUnit\":\"utf8-byte\"}}],\"borrowing\":[],\"resources\":[{\"node\":\"#param_main_world\",\"kind\":\"binding\",\"resourceKind\":\"world-io\",\"type\":\"World\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":13},\"end\":{\"line\":1,\"column\":18},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_main_world_type\",\"kind\":\"binding\",\"resourceKind\":\"world-io\",\"type\":\"World\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":20},\"end\":{\"line\":1,\"column\":25},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr_main_write_call_0\",\"kind\":\"capabilityUse\",\"resourceKind\":\"world-io\",\"capability\":\"io\",\"qualifiedName\":\"world.out.write\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":21},\"end\":{\"line\":2,\"column\":26},\"columnUnit\":\"utf8-byte\"}}],\"targetRequirements\":[{\"node\":\"#expr_main_write_call_0\",\"qualifiedName\":\"world.out.write\",\"contractKind\":\"worldStreamWrite\",\"capability\":\"io\",\"targetSupport\":\"world-io\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":21},\"end\":{\"line\":2,\"column\":26},\"columnUnit\":\"utf8-byte\"}}],\"repairs\":[{\"node\":\"#expr_main_write_call_0\",\"qualifiedName\":\"world.out.write\",\"requiresCheck\":false,\"repair\":{\"id\":\"check-fallible-call\",\"appliesWhen\":\"alreadyChecked\",\"summary\":\"wrap this fallible call in check or rescue before using its value\"},\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":2,\"column\":21},\"end\":{\"line\":2,\"column\":26},\"columnUnit\":\"utf8-byte\"}}],\"diagnostics\":[]}},\n  \"compilerPhases\": [{\"name\":\"resolve\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"parse\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"interface\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"check\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"lower\",\"elapsedMs\":1,\"cacheable\":true}, {\"name\":\"codegen\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"object\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"link\",\"elapsedMs\":0,\"cacheable\":false}],\n  \"compilerCaches\": [{\"name\":\"parseTree\",\"key\":\"9d6ab49a1cdc9c9d\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"compilerVersion\",\"packageDependencies\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input\"}, {\"name\":\"interface\",\"key\":\"9e5283c7211c9b5d\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"modulePaths\",\"symbolFacts\",\"importGraph\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"graph public symbols/import graph\"}, {\"name\":\"checkedBody\",\"key\":\"9a53d3d4e85c85b7\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"compilerVersion\",\"packageDependencies\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input or target\"}, {\"name\":\"specialization\",\"key\":\"d8d6bfb914196994\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"profile\",\"compilerVersion\",\"packageDependencies\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input, target, or profile\"}, {\"name\":\"mappedFinalMir\",\"key\":\"861b1424131210fa\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"compilerVersion\",\"packageDependencies\",\"emitKind\",\"backend\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input, target, emit kind, backend, or compiler version\",\"path\":\"./.zero/cache/native/mir-d8a0783685717fe7.zmir\",\"byteLength\":910,\"memoryMapped\":true,\"borrowedStorage\":true,\"written\":true,\"codegenImmediate\":false,\"programReconstructed\":false}, {\"name\":\"emittedObject\",\"key\":\"48e5fe9368c59db3\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"profile\",\"compilerVersion\",\"packageDependencies\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input, target, profile, or backend\"}],\n  \"interfaceFingerprints\": {\"schemaVersion\":1,\"algorithm\":\"fnv1a64-zero-interface-v1\",\"targetFactsHash\":\"807f6e2986500abe\",\"importedPackageMetadataHash\":\"09954160c49c6474\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"modules\":[{\"name\":\"main\",\"path\":\"src/main.0\",\"sourceHash\":\"b969f4c6d033800d\",\"publicInterfaceHash\":\"687c142e2bf9b02a\",\"publicSymbolCount\":1,\"publicSymbols\":[{\"name\":\"main\",\"kind\":\"function\"}],\"imports\":[]}]},\n  \"incrementalInvalidation\": {\"moduleDependencies\":[],\"targetDependency\":\"darwin-x64\",\"profileDependency\":\"release\",\"sourceKind\":\"program-graph\",\"graphInput\":{\"artifact\":\"./zero.graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"lowering\":\"graph-native-check\",\"parserArtifactsInKey\":false,\"keyedBy\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"modulePaths\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"profile\",\"compilerVersion\",\"packageDependencies\"],\"mappedFinalMir\":{\"path\":\"./.zero/cache/native/mir-d8a0783685717fe7.zmir\",\"byteLength\":910,\"hit\":false,\"written\":true,\"memoryMapped\":true,\"borrowedStorage\":true,\"codegenImmediate\":false,\"programReconstructed\":false}},\"affectedModules\":1,\"recheckStrategy\":\"fingerprint changed modules and dependent bodies\",\"changedInputs\":{\"sourceFiles\":[\"src/main.0\"],\"manifestPath\":\"./zero.toml\",\"packageLockfile\":\".zero/package-locks/94159b0148bf9f10.lock.json\",\"graphArtifact\":\"./zero.graph\"},\"cacheHits\":0,\"cacheMisses\":6,\"partialDiagnosticsStable\":true,\"interfaceFingerprints\":{\"schemaVersion\":1,\"algorithm\":\"fnv1a64-zero-interface-v1\",\"targetFactsHash\":\"807f6e2986500abe\",\"importedPackageMetadataHash\":\"09954160c49c6474\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:3ac5cbc6dba61758\",\"modules\":[{\"name\":\"main\",\"path\":\"src/main.0\",\"sourceHash\":\"b969f4c6d033800d\",\"publicInterfaceHash\":\"687c142e2bf9b02a\",\"publicSymbolCount\":1,\"publicSymbols\":[{\"name\":\"main\",\"kind\":\"function\"}],\"imports\":[]}]}}\n}\n",
+    "stderr": "note: zero check refreshed zero.graph from the edited package source projection; tip: zero patch --replace-fn <fn> --body-file - edits the graph directly and skips this reconcile\n",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "mtime-independent-run",
+    "args": [
+      "run"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "human-edit\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "rollback-type-failure",
+    "args": [
+      "patch",
+      "--json",
+      "--op",
+      "addCheckWrite fn=\"main\" text=\"must-not-persist\\n\"",
+      "--op",
+      "addFunction name=\"bad\" ret=\"i32\"",
+      "--op",
+      "addReturnExpr fn=\"bad\" expr=\"true\""
+    ],
+    "env": {},
+    "exit": 1,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": false,\n  \"diagnostics\": [\n    {\n      \"severity\": \"error\",\n      \"code\": \"TYP003\",\n      \"message\": \"return type does not match function return type\",\n      \"path\": \"src/main.0\",\n      \"line\": 2,\n      \"column\": 1,\n      \"length\": 1,\n      \"expected\": \"i32\",\n      \"actual\": \"Bool\",\n      \"help\": \"return a value compatible with the function signature\",\n      \"fixSafety\": \"requires-human-review\",\n      \"repair\": {\"id\": \"match-return-type\", \"summary\": \"Change the returned expression or the function return annotation so both types agree.\"},\n      \"related\": []\n    }\n  ]\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "rollback-original-run",
+    "args": [
+      "run"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "baseline\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "rollback-unknown-operation",
+    "args": [
+      "patch",
+      "--json",
+      "--op",
+      "addCheckWrite fn=\"main\" text=\"must-not-persist\\n\"",
+      "--op",
+      "unknownOperation"
+    ],
+    "env": {},
+    "exit": 1,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": false,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<inline>\",\n  \"checkOnly\": false,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:dcc932d9a732cd90\",\n  \"patchedGraphHash\": null,\n  \"operationCount\": 1,\n  \"operations\": [{\"index\": 0, \"line\": 2, \"op\": \"addCheckWrite\", \"ok\": false, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": \"must-not-persist\\n\", \"name\": null, \"type\": null, \"path\": null, \"function\": \"main\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": null,\n  \"diagnostic\": {\"code\": \"GPH001\", \"message\": \"unknown program graph patch operation; run `zero patch --op help` for working examples of every operation\", \"line\": 3, \"expected\": \"expect, set, insert, insertEdge, replace, replaceExpr, delete, rename, deleteTest, renameTest, setConst, setReturnType, addFunction, addMain, addParam, addParamTo, addReturnBinary, addLetLiteral, addLetBinary, addReturnValue, addReturnExpr, appendStmt, addCheckWriteValue, addCheckWrite, addTest, addTestBody, upsertFunction, replaceFunctionBody, or replaceBlockBody\", \"actual\": \"unknownOperation\"},\n  \"saved\": null\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "stale-hash-rejection",
+    "args": [
+      "patch",
+      "--json",
+      "--op",
+      "expect graphHash \"graph:0000000000000000\"",
+      "--op",
+      "addCheckWrite fn=\"main\" text=\"must-not-persist\\n\""
+    ],
+    "env": {},
+    "exit": 1,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": false,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<inline>\",\n  \"checkOnly\": false,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:dcc932d9a732cd90\",\n  \"patchedGraphHash\": null,\n  \"operationCount\": 1,\n  \"operations\": [{\"index\": 0, \"line\": 3, \"op\": \"addCheckWrite\", \"ok\": false, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": \"must-not-persist\\n\", \"name\": null, \"type\": null, \"path\": null, \"function\": \"main\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": null,\n  \"diagnostic\": {\"code\": \"GPH002\", \"message\": \"graph hash precondition failed\", \"line\": null, \"expected\": \"graph:0000000000000000\", \"actual\": \"graph:dcc932d9a732cd90\"},\n  \"saved\": null\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "dry-run-valid",
+    "args": [
+      "patch",
+      "--json",
+      "--check-only",
+      "--op",
+      "addCheckWrite fn=\"main\" text=\"dry-run\\n\""
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<inline>\",\n  \"checkOnly\": true,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:dcc932d9a732cd90\",\n  \"patchedGraphHash\": \"graph:992a79cb23b35b4d\",\n  \"operationCount\": 1,\n  \"operations\": [{\"index\": 0, \"line\": 2, \"op\": \"addCheckWrite\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": \"dry-run\\n\", \"name\": null, \"type\": null, \"path\": null, \"function\": \"main\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": {\"functions\":[\"main\",\"add\"],\"tests\":[]},\n  \"diagnostic\": null,\n  \"saved\": null\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "dry-run-original-run",
+    "args": [
+      "run"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "baseline\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "add-passing-test",
+    "args": [
+      "patch",
+      "--json",
+      "--op",
+      "addTest name=\"addition works\" call=\"add\" arg0=\"40\" arg1=\"2\" expect=\"42\" type=\"i32\""
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<inline>\",\n  \"checkOnly\": false,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:dcc932d9a732cd90\",\n  \"patchedGraphHash\": \"graph:57d97a4cfb0f5674\",\n  \"operationCount\": 1,\n  \"operations\": [{\"index\": 0, \"line\": 2, \"op\": \"addTest\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": \"42\", \"actual\": null, \"value\": null, \"name\": \"addition works\", \"type\": \"i32\", \"path\": null, \"function\": null, \"left\": null, \"right\": null, \"arg0\": \"40\", \"arg1\": \"2\", \"call\": \"add\", \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": {\"functions\":[\"main\",\"add\"],\"tests\":[\"addition works\"]},\n  \"diagnostic\": null,\n  \"saved\": {\"path\": \"./zero.graph\", \"byteStable\": true}\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "87b9477ce623d092836566bb9d40d1af320deb5826b10960065fda38cf3d87af",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "passing-test",
+    "args": [
+      "test"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "1 test(s) ok\n",
+    "stderr": "note: zero test is using zero.graph, which is newer than the .0 source projection; run zero export to sync sources or zero import to make the edited source authoritative\n",
+    "before": {
+      "zero.graph": "87b9477ce623d092836566bb9d40d1af320deb5826b10960065fda38cf3d87af",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "87b9477ce623d092836566bb9d40d1af320deb5826b10960065fda38cf3d87af",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "add-failing-test",
+    "args": [
+      "patch",
+      "--json",
+      "--op",
+      "addTest name=\"wrong expectation\" call=\"add\" arg0=\"40\" arg1=\"2\" expect=\"41\" type=\"i32\""
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<inline>\",\n  \"checkOnly\": false,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:57d97a4cfb0f5674\",\n  \"patchedGraphHash\": \"graph:a9066b9e36e7ddb4\",\n  \"operationCount\": 1,\n  \"operations\": [{\"index\": 0, \"line\": 2, \"op\": \"addTest\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": \"41\", \"actual\": null, \"value\": null, \"name\": \"wrong expectation\", \"type\": \"i32\", \"path\": null, \"function\": null, \"left\": null, \"right\": null, \"arg0\": \"40\", \"arg1\": \"2\", \"call\": \"add\", \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": {\"functions\":[\"main\",\"add\"],\"tests\":[\"addition works\",\"wrong expectation\"]},\n  \"diagnostic\": null,\n  \"saved\": {\"path\": \"./zero.graph\", \"byteStable\": true}\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "87b9477ce623d092836566bb9d40d1af320deb5826b10960065fda38cf3d87af",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "894d6a2e3b6e6747bb02fd20a5ac74cb5ba7b1dbd660e2a7304a7ae92860b70f",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "valid-graph-wrong-expectation",
+    "args": [
+      "check",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"sourceFile\": \"./zero.graph\",\n  \"graph\": {\"artifact\":\"./zero.graph\",\"canonicalSource\":false,\"moduleIdentity\":\"package:baseline@0.1.0\",\"graphHash\":\"graph:a9066b9e36e7ddb4\",\"lowering\":\"graph-native-check\",\"sourceProjectionState\":\"stale\"},\n  \"package\": {\"name\":\"baseline\",\"version\":\"0.1.0\",\"root\":\".\",\"manifestPath\":\"./zero.toml\",\"manifestHash\":\"bccfc689022d0d22\",\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfile\":{\"format\":\"zero-lock-v1\",\"path\":\".zero/package-locks/94159b0148bf9f10.lock.json\",\"hash\":\"232ebffb569d82dc\",\"generated\":true},\"resolver\":{\"deterministic\":true,\"registryReadyMetadata\":true,\"remoteFetch\":false,\"versionSolver\":\"exact-version-or-path\"},\"dependencies\":[]},\n  \"packageCache\": {\"cacheKeyInputs\":{\"compilerVersion\":\"0.3.4\",\"target\":\"darwin-x64\",\"packageVersion\":\"0.1.0\",\"dependencyGraphHash\":\"94159b0148bf9f10\",\"manifestHash\":\"bccfc689022d0d22\",\"lockfileHash\":\"232ebffb569d82dc\"},\"invalidationReasons\":[\"source changed\",\"manifest changed\",\"dependency graph changed\",\"target changed\",\"profile changed\",\"compiler version changed\"],\"profile\":\"release\"},\n  \"diagnostics\": [],\n  \"compileTime\": {\"deterministic\":true,\"releaseMetadataDefault\":false,\"sandbox\":{\"filesystem\":\"denied\",\"network\":\"denied\",\"ambientEnv\":\"denied\",\"process\":\"denied\"},\"limits\":{\"maxDepth\":64,\"maxSteps\":1024,\"stringBytes\":127,\"memory\":\"bounded-evaluator-state-only\",\"time\":\"step-counted\"},\"cacheKeyInputs\":{\"algorithm\":\"fnv1a64-zero-meta-v1\",\n    \"sourceHash\": \"960f74dd7193d04c\",\n    \"targetHash\": \"845766a1eed8fb33\",\n    \"manifestHash\": \"bccfc689022d0d22\",\"compilerVersion\":\"0.3.4\",\"declaredInputs\":[\"source\",\"target\",\"compilerVersion\",\"manifest\",\"targetFacts\"]},\"meta\":{\"supportedFacts\":[\"literal arithmetic\",\"literal comparisons\",\"Bool logic\",\"target.os\",\"target.arch\",\"target.abi\",\"target.libc\",\"target.objectFormat\",\"target.endian\",\"target.pointerWidth\",\"target.hasCapability\",\"fieldCount\",\"hasField\",\"fieldType\",\"enumCaseCount\",\"hasEnumCase\",\"choiceCaseCount\",\"hasChoiceCase\"],\"unsupportedEffects\":[\"filesystem\",\"network\",\"process\",\"ambient environment\"],\"cycleDiagnostic\":\"MET001\",\"safetyLimitDiagnostic\":\"MET001\"},\"reflection\":{\"typed\":true,\"compileTimeOnly\":true,\"releaseMetadataRetained\":false,\"facts\":[\"target\",\"shape fields\",\"enum cases\",\"choice cases\"]},\"staticValues\":{\"supported\":[\"integer\",\"Bool\",\"enum\"],\"concreteSpecializations\":true,\"runtimeRegistries\":false,\"reflectionTables\":false,\"mismatchesDiagnostic\":\"STC003\"},\"typedBuilders\":{\"status\":\"limited-v1\",\"supported\":[\"shape literals\",\"enum case values\",\"choice constructors\"],\"rawTokenStrings\":false,\"compileTimeOnly\":true,\"runtimeBuilderRegistry\":false},\"programSurface\":{\"shapeCount\":0,\"enumCount\":0,\"choiceCount\":0}},\n  \"targetReadiness\": {\"schemaVersion\":1,\"ok\":true,\"languageOk\":true,\"buildable\":true,\"target\":\"darwin-x64\",\"emit\":\"exe\",\"objectFormat\":\"macho\",\"backend\":\"zero-macho-x64-exe\",\"stage\":\"ready\",\"diagnostics\":[]},\n  \"safetyFacts\": {\"schemaVersion\":1,\"profile\":\"release-small\",\"profileKey\":\"small\",\"coverage\":\"checker-mir-direct-backends\",\"bounds\":{\"policy\":\"checked\",\"staticDiagnostics\":true,\"runtimeTraps\":true,\"trapRuntime\":\"pay-as-used\",\"optimizerElision\":false,\"unchecked\":false},\"overflow\":{\"policy\":\"literal-range-checked-runtime-unchecked\",\"integerLiterals\":\"range-checked\",\"staticValues\":\"range-checked\",\"runtimeArithmetic\":\"unchecked-machine-wrap\",\"unchecked\":true},\"initialization\":{\"locals\":\"initializer-required\",\"fields\":\"explicit-or-default-required\",\"fixedArrays\":\"literal-or-repeat-required\",\"maybePayloadReads\":\"guard-checked\",\"unchecked\":false},\"aliasing\":{\"mutableAliases\":\"diagnostic\",\"sharedWhileMutable\":\"diagnostic\",\"references\":\"provenance-checked\"},\"lifetimes\":{\"escapedLocalBorrow\":\"diagnostic\",\"returnedLocalBorrow\":\"diagnostic\",\"borrowedStdlibResults\":\"provenance-checked\"},\"ownership\":{\"moves\":\"checked\",\"useAfterMove\":\"diagnostic\",\"ownedResourceDrop\":\"explicit\"},\"spans\":{\"construction\":\"type-and-mutability-checked\",\"indexing\":\"bounds-checked\",\"slicing\":\"order-and-bounds-checked\"},\"mir\":{\"contracts\":\"verified-before-direct-emission\",\"localLayout\":true,\"localIndexBounds\":true,\"memoryOpWidths\":true,\"invalidMemoryContractsBlockEmission\":true},\"uncheckedSurfaces\":[{\"surface\":\"C imports\",\"policy\":\"externally-trusted\"},{\"surface\":\"host filesystem/process/network effects\",\"policy\":\"capability-gated-not-sandboxed\"}]},\n  \"graphCompiler\": {\"schemaVersion\":1,\"input\":\"repository-graph-store\",\"graphStoreLoaded\":true,\"sourceProjectionRequiredForCompilerInput\":false,\"sourceProjectionState\":\"stale\",\"graphNativeCheckerUsed\":true,\"graphHirToMirUsed\":true,\"unsupportedGraphFacts\":{\"count\":0,\"facts\":[]},\"timings\":{\"loadMs\":0,\"validateMs\":0,\"resolveMs\":0,\"checkMs\":0,\"lowerMs\":1,\"cacheMs\":1,\"validationInLoad\":true},\"defaultReadiness\":{\"schemaVersion\":1,\"compilerInputReady\":true,\"claim\":\"ready-for-repository-graph-input\",\"sourceFreeCompile\":true,\"sourceProjectionRequired\":false,\"sourceProjectionState\":\"stale\",\"targetReadinessOk\":true,\"targetReadinessReportedIn\":\"targetReadiness\",\"graphMir\":{\"used\":true},\"unsupportedGraphFacts\":{\"count\":0,\"facts\":[]},\"performance\":{\"withinBudget\":true,\"unit\":\"ms\",\"validationInLoad\":true,\"budgets\":{\"loadMs\":50,\"validateMs\":50,\"resolveMs\":50,\"checkMs\":50,\"lowerMs\":100,\"cacheMs\":25},\"timings\":{\"loadMs\":0,\"validateMs\":0,\"resolveMs\":0,\"checkMs\":0,\"lowerMs\":1,\"cacheMs\":1}},\"cacheInvalidation\":{\"sourceKind\":\"program-graph\",\"parserArtifactsInKey\":false,\"keyedBy\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"modulePaths\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"profile\",\"compilerVersion\",\"packageDependencies\"]}},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":7,\"scope\":9,\"import\":0,\"symbol\":8,\"type\":31,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":48,\"edge\":47,\"projection\":1,\"sourceMap\":48},\"resolution\":{\"state\":\"resolved-graph-facts\",\"ok\":true,\"references\":15,\"diagnostics\":0},\"checking\":{\"state\":\"checked-graph-readiness-facts\",\"ok\":true,\"scope\":\"resolution-package-target-and-graph-mir-readiness\",\"semanticDiagnosticsEnforced\":false,\"semanticDiagnosticsAuthority\":\"stored-typed-graph-facts\",\"authority\":\"ProgramGraphStore\",\"sourceTextAuthority\":false},\"semanticFacts\":{\"state\":\"typed-facts\",\"ok\":true,\"counts\":{\"typedNodes\":31,\"functions\":4,\"calls\":5,\"fallibleCalls\":1,\"effects\":2,\"contracts\":5,\"ownership\":2,\"borrowing\":0,\"resources\":3,\"targetRequirements\":1,\"repairs\":1,\"diagnostics\":0},\"types\":[{\"node\":\"#fn_main\",\"kind\":\"Function\",\"name\":\"main\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":8},\"end\":{\"line\":1,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_main_returnType\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#param_main_world\",\"kind\":\"Param\",\"name\":\"world\",\"type\":\"World\",\"typeId\":\"type:3660b802c5c23502\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":13},\"end\":{\"line\":1,\"column\":18},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_main_world_type\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"World\",\"typeId\":\"type:3660b802c5c23502\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":20},\"end\":{\"line\":1,\"column\":25},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr_main_write_call_0\",\"kind\":\"MethodCall\",\"name\":\"write\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr_main_write_text_0\",\"kind\":\"Literal\",\"name\":\"\",\"type\":\"String\",\"typeId\":\"type:0c7be574dddec83b\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#fn_add\",\"kind\":\"Function\",\"name\":\"add\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":5},\"end\":{\"line\":1,\"column\":7},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_add_returnType\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#param_add_left\",\"kind\":\"Param\",\"name\":\"left\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_left_type\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#param_add_right\",\"kind\":\"Param\",\"name\":\"right\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_right_type\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr_add_return_call_0\",\"kind\":\"Call\",\"name\":\"+\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr_add_return_left_0\",\"kind\":\"Identifier\",\"name\":\"left\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr_add_return_right_0\",\"kind\":\"Identifier\",\"name\":\"right\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#fn___zero_test_0\",\"kind\":\"Function\",\"name\":\"__zero_test_0\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type___zero_test_0_returnType\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_0_expect_call_0\",\"kind\":\"Call\",\"name\":\"expect\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_0_eq_call_0\",\"kind\":\"Call\",\"name\":\"==\",\"type\":\"Bool\",\"typeId\":\"type:a62fd93bcd228ad8\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_0_subject_call_0\",\"kind\":\"Call\",\"name\":\"add\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_0_arg0_0\",\"kind\":\"Literal\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_0_arg1_0\",\"kind\":\"Literal\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_0_want_0\",\"kind\":\"Literal\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#fn___zero_test_1\",\"kind\":\"Function\",\"name\":\"__zero_test_1\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type___zero_test_1_returnType\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_1_expect_call_0\",\"kind\":\"Call\",\"name\":\"expect\",\"type\":\"Void\",\"typeId\":\"type:b30331c589d91166\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_1_eq_call_0\",\"kind\":\"Call\",\"name\":\"==\",\"type\":\"Bool\",\"typeId\":\"type:a62fd93bcd228ad8\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_1_subject_call_0\",\"kind\":\"Call\",\"name\":\"add\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_1_arg0_0\",\"kind\":\"Literal\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_1_arg1_0\",\"kind\":\"Literal\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_1_want_0\",\"kind\":\"Literal\",\"name\":\"\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}}],\"functions\":[{\"node\":\"#fn_main\",\"name\":\"main\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.main\",\"returnType\":\"Void\",\"returnTypeId\":\"type:b30331c589d91166\",\"public\":true,\"fallible\":true,\"exportC\":false,\"params\":[{\"node\":\"#param_main_world\",\"name\":\"world\",\"type\":\"World\",\"typeId\":\"type:3660b802c5c23502\",\"mutable\":false,\"static\":false,\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":13},\"end\":{\"line\":1,\"column\":18},\"columnUnit\":\"utf8-byte\"}}],\"effects\":[{\"node\":\"#effect_main_error\",\"name\":\"error\",\"effectId\":\"effect:d1c6cb38f134cbfc\"}],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":8},\"end\":{\"line\":1,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#fn_add\",\"name\":\"add\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.add\",\"returnType\":\"i32\",\"returnTypeId\":\"type:107347fb7f47c5c0\",\"public\":false,\"fallible\":false,\"exportC\":false,\"params\":[{\"node\":\"#param_add_left\",\"name\":\"left\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"mutable\":false,\"static\":false,\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#param_add_right\",\"name\":\"right\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"mutable\":false,\"static\":false,\"order\":1,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}}],\"effects\":[],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":5},\"end\":{\"line\":1,\"column\":7},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#fn___zero_test_0\",\"name\":\"__zero_test_0\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.__zero_test_0\",\"returnType\":\"Void\",\"returnTypeId\":\"type:b30331c589d91166\",\"public\":false,\"fallible\":false,\"exportC\":false,\"params\":[],\"effects\":[],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#fn___zero_test_1\",\"name\":\"__zero_test_1\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.__zero_test_1\",\"returnType\":\"Void\",\"returnTypeId\":\"type:b30331c589d91166\",\"public\":false,\"fallible\":false,\"exportC\":false,\"params\":[],\"effects\":[],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}}],\"calls\":[{\"node\":\"#expr_main_write_call_0\",\"kind\":\"MethodCall\",\"name\":\"write\",\"qualifiedName\":\"world.out.write\",\"returnType\":\"Void\",\"returnTypeId\":\"type:b30331c589d91166\",\"receiver\":null,\"args\":[{\"node\":\"#expr_main_write_text_0\",\"kind\":\"Literal\",\"type\":\"String\",\"typeId\":\"type:0c7be574dddec83b\",\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}}],\"contract\":{\"kind\":\"worldStreamWrite\",\"fallible\":true,\"checked\":true,\"requiresCheck\":false,\"targetNode\":\"#param_main_world\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.main/param.world\",\"returnType\":\"Void\",\"capability\":\"io\",\"targetSupport\":\"world-io\",\"allocation\":\"\",\"sourceModule\":\"\",\"expectedArgCount\":null,\"expectedArgTypes\":[],\"errors\":[],\"repair\":{\"id\":\"check-fallible-call\",\"appliesWhen\":\"alreadyChecked\",\"summary\":\"wrap this fallible call in check or rescue before using its value\"}},\"resolution\":{\"referenceKind\":\"call\",\"qualifiedName\":\"world.out.write\",\"resolved\":true,\"ambiguous\":false,\"targetKind\":\"member\",\"targetNode\":\"#param_main_world\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.main/param.world\"},\"fallible\":true,\"checked\":true,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_0_expect_call_0\",\"kind\":\"Call\",\"name\":\"expect\",\"qualifiedName\":\"expect\",\"returnType\":\"Void\",\"returnTypeId\":\"type:b30331c589d91166\",\"receiver\":null,\"args\":[{\"node\":\"#expr___zero_test_0_eq_call_0\",\"kind\":\"Call\",\"type\":\"Bool\",\"typeId\":\"type:a62fd93bcd228ad8\",\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}}],\"contract\":{\"kind\":\"testExpect\",\"fallible\":false,\"checked\":false,\"requiresCheck\":false,\"targetNode\":\"\",\"symbolId\":\"builtin:expect\",\"returnType\":\"Void\",\"capability\":\"\",\"targetSupport\":\"\",\"allocation\":\"\",\"sourceModule\":\"\",\"expectedArgCount\":null,\"expectedArgTypes\":[],\"errors\":[],\"repair\":null},\"resolution\":{\"referenceKind\":\"call\",\"qualifiedName\":\"expect\",\"resolved\":true,\"ambiguous\":false,\"targetKind\":\"testExpect\",\"targetNode\":\"\",\"symbolId\":\"builtin:expect\"},\"fallible\":false,\"checked\":false,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_0_subject_call_0\",\"kind\":\"Call\",\"name\":\"add\",\"qualifiedName\":\"add\",\"returnType\":\"i32\",\"returnTypeId\":\"type:107347fb7f47c5c0\",\"receiver\":null,\"args\":[{\"node\":\"#expr___zero_test_0_arg0_0\",\"kind\":\"Literal\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_0_arg1_0\",\"kind\":\"Literal\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"order\":1,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}}],\"contract\":{\"kind\":\"function\",\"fallible\":false,\"checked\":false,\"requiresCheck\":false,\"targetNode\":\"#fn_add\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.add\",\"returnType\":\"i32\",\"capability\":\"\",\"targetSupport\":\"\",\"allocation\":\"\",\"sourceModule\":\"\",\"expectedArgCount\":2,\"expectedArgTypes\":[\"i32\",\"i32\"],\"errors\":[],\"repair\":null},\"resolution\":{\"referenceKind\":\"call\",\"qualifiedName\":\"add\",\"resolved\":true,\"ambiguous\":false,\"targetKind\":\"function\",\"targetNode\":\"#fn_add\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.add\"},\"fallible\":false,\"checked\":false,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_1_expect_call_0\",\"kind\":\"Call\",\"name\":\"expect\",\"qualifiedName\":\"expect\",\"returnType\":\"Void\",\"returnTypeId\":\"type:b30331c589d91166\",\"receiver\":null,\"args\":[{\"node\":\"#expr___zero_test_1_eq_call_0\",\"kind\":\"Call\",\"type\":\"Bool\",\"typeId\":\"type:a62fd93bcd228ad8\",\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}}],\"contract\":{\"kind\":\"testExpect\",\"fallible\":false,\"checked\":false,\"requiresCheck\":false,\"targetNode\":\"\",\"symbolId\":\"builtin:expect\",\"returnType\":\"Void\",\"capability\":\"\",\"targetSupport\":\"\",\"allocation\":\"\",\"sourceModule\":\"\",\"expectedArgCount\":null,\"expectedArgTypes\":[],\"errors\":[],\"repair\":null},\"resolution\":{\"referenceKind\":\"call\",\"qualifiedName\":\"expect\",\"resolved\":true,\"ambiguous\":false,\"targetKind\":\"testExpect\",\"targetNode\":\"\",\"symbolId\":\"builtin:expect\"},\"fallible\":false,\"checked\":false,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_1_subject_call_0\",\"kind\":\"Call\",\"name\":\"add\",\"qualifiedName\":\"add\",\"returnType\":\"i32\",\"returnTypeId\":\"type:107347fb7f47c5c0\",\"receiver\":null,\"args\":[{\"node\":\"#expr___zero_test_1_arg0_0\",\"kind\":\"Literal\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"order\":0,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr___zero_test_1_arg1_0\",\"kind\":\"Literal\",\"type\":\"i32\",\"typeId\":\"type:107347fb7f47c5c0\",\"order\":1,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}}],\"contract\":{\"kind\":\"function\",\"fallible\":false,\"checked\":false,\"requiresCheck\":false,\"targetNode\":\"#fn_add\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.add\",\"returnType\":\"i32\",\"capability\":\"\",\"targetSupport\":\"\",\"allocation\":\"\",\"sourceModule\":\"\",\"expectedArgCount\":2,\"expectedArgTypes\":[\"i32\",\"i32\"],\"errors\":[],\"repair\":null},\"resolution\":{\"referenceKind\":\"call\",\"qualifiedName\":\"add\",\"resolved\":true,\"ambiguous\":false,\"targetKind\":\"function\",\"targetNode\":\"#fn_add\",\"symbolId\":\"symbol:baseline@0.1.0/main::value.add\"},\"fallible\":false,\"checked\":false,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}}],\"effects\":[{\"node\":\"#fn_main\",\"kind\":\"Function\",\"fallible\":true,\"effects\":[{\"node\":\"#effect_main_error\",\"name\":\"error\",\"effectId\":\"effect:d1c6cb38f134cbfc\"}],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":8},\"end\":{\"line\":1,\"column\":12},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#stmt_main_check_write_0\",\"kind\":\"Check\",\"fallible\":false,\"effects\":[],\"errors\":[],\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":1},\"end\":{\"line\":1,\"column\":2},\"columnUnit\":\"utf8-byte\"}}],\"ownership\":[{\"node\":\"#param_main_world\",\"kind\":\"Param\",\"name\":\"world\",\"type\":\"World\",\"ownership\":\"resource-handle\",\"mutable\":false,\"resource\":true,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":13},\"end\":{\"line\":1,\"column\":18},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_main_world_type\",\"kind\":\"TypeRef\",\"name\":\"\",\"type\":\"World\",\"ownership\":\"resource-handle\",\"mutable\":false,\"resource\":true,\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":20},\"end\":{\"line\":1,\"column\":25},\"columnUnit\":\"utf8-byte\"}}],\"borrowing\":[],\"resources\":[{\"node\":\"#param_main_world\",\"kind\":\"binding\",\"resourceKind\":\"world-io\",\"type\":\"World\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":13},\"end\":{\"line\":1,\"column\":18},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#type_main_world_type\",\"kind\":\"binding\",\"resourceKind\":\"world-io\",\"type\":\"World\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":20},\"end\":{\"line\":1,\"column\":25},\"columnUnit\":\"utf8-byte\"}},{\"node\":\"#expr_main_write_call_0\",\"kind\":\"capabilityUse\",\"resourceKind\":\"world-io\",\"capability\":\"io\",\"qualifiedName\":\"world.out.write\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}}],\"targetRequirements\":[{\"node\":\"#expr_main_write_call_0\",\"qualifiedName\":\"world.out.write\",\"contractKind\":\"worldStreamWrite\",\"capability\":\"io\",\"targetSupport\":\"world-io\",\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}}],\"repairs\":[{\"node\":\"#expr_main_write_call_0\",\"qualifiedName\":\"world.out.write\",\"requiresCheck\":false,\"repair\":{\"id\":\"check-fallible-call\",\"appliesWhen\":\"alreadyChecked\",\"summary\":\"wrap this fallible call in check or rescue before using its value\"},\"sourceRange\":{\"path\":\"src/main.0\",\"start\":{\"line\":1,\"column\":30},\"end\":{\"line\":1,\"column\":34},\"columnUnit\":\"utf8-byte\"}}],\"diagnostics\":[]}},\n  \"compilerPhases\": [{\"name\":\"resolve\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"parse\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"interface\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"check\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"lower\",\"elapsedMs\":1,\"cacheable\":true}, {\"name\":\"codegen\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"object\",\"elapsedMs\":0,\"cacheable\":true}, {\"name\":\"link\",\"elapsedMs\":0,\"cacheable\":false}],\n  \"compilerCaches\": [{\"name\":\"parseTree\",\"key\":\"ea8df429fde5a284\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:a9066b9e36e7ddb4\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"compilerVersion\",\"packageDependencies\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input\"}, {\"name\":\"interface\",\"key\":\"1c1d0ed33338a8a9\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:a9066b9e36e7ddb4\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"modulePaths\",\"symbolFacts\",\"importGraph\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"graph public symbols/import graph\"}, {\"name\":\"checkedBody\",\"key\":\"2f650d3ef114d55e\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:a9066b9e36e7ddb4\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"compilerVersion\",\"packageDependencies\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input or target\"}, {\"name\":\"specialization\",\"key\":\"5bab42c05a3bc64d\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:a9066b9e36e7ddb4\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"profile\",\"compilerVersion\",\"packageDependencies\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input, target, or profile\"}, {\"name\":\"mappedFinalMir\",\"key\":\"7b284d41190f9f9b\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:a9066b9e36e7ddb4\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"compilerVersion\",\"packageDependencies\",\"emitKind\",\"backend\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input, target, emit kind, backend, or compiler version\",\"path\":\"./.zero/cache/native/mir-a81a0781c0da0f04.zmir\",\"byteLength\":908,\"memoryMapped\":true,\"borrowedStorage\":true,\"written\":true,\"codegenImmediate\":false,\"programReconstructed\":false}, {\"name\":\"emittedObject\",\"key\":\"7bc06d757d0fa7c2\",\"hit\":false,\"stored\":true,\"compilerVersion\":\"0.3.4\",\"packageVersion\":\"0.1.0\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:a9066b9e36e7ddb4\",\"stdlibGraphHash\":\"3c4232072768f5a6\",\"graphKeyInputs\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"profile\",\"compilerVersion\",\"packageDependencies\"],\"parserArtifactsInKey\":false,\"dependencyGraphHash\":\"94159b0148bf9f10\",\"lockfileHash\":\"232ebffb569d82dc\",\"invalidatesOn\":\"ProgramGraph input, target, profile, or backend\"}],\n  \"interfaceFingerprints\": {\"schemaVersion\":1,\"algorithm\":\"fnv1a64-zero-interface-v1\",\"targetFactsHash\":\"807f6e2986500abe\",\"importedPackageMetadataHash\":\"09954160c49c6474\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:a9066b9e36e7ddb4\",\"modules\":[{\"name\":\"main\",\"path\":\"src/main.0\",\"sourceHash\":\"7292d2d8f15d8c9a\",\"publicInterfaceHash\":\"687c142e2bf9b02a\",\"publicSymbolCount\":1,\"publicSymbols\":[{\"name\":\"main\",\"kind\":\"function\"}],\"imports\":[]}]},\n  \"incrementalInvalidation\": {\"moduleDependencies\":[],\"targetDependency\":\"darwin-x64\",\"profileDependency\":\"release\",\"sourceKind\":\"program-graph\",\"graphInput\":{\"artifact\":\"./zero.graph\",\"graphHash\":\"graph:a9066b9e36e7ddb4\",\"lowering\":\"graph-native-check\",\"parserArtifactsInKey\":false,\"keyedBy\":[\"graphHash\",\"stdlibGraph\",\"moduleHash\",\"modulePaths\",\"nodeHashes\",\"typeFacts\",\"symbolFacts\",\"importGraph\",\"importPaths\",\"targetFacts\",\"profile\",\"compilerVersion\",\"packageDependencies\"],\"mappedFinalMir\":{\"path\":\"./.zero/cache/native/mir-a81a0781c0da0f04.zmir\",\"byteLength\":908,\"hit\":false,\"written\":true,\"memoryMapped\":true,\"borrowedStorage\":true,\"codegenImmediate\":false,\"programReconstructed\":false}},\"affectedModules\":1,\"recheckStrategy\":\"fingerprint changed modules and dependent bodies\",\"changedInputs\":{\"sourceFiles\":[\"src/main.0\"],\"manifestPath\":\"./zero.toml\",\"packageLockfile\":\".zero/package-locks/94159b0148bf9f10.lock.json\",\"graphArtifact\":\"./zero.graph\"},\"cacheHits\":0,\"cacheMisses\":6,\"partialDiagnosticsStable\":true,\"interfaceFingerprints\":{\"schemaVersion\":1,\"algorithm\":\"fnv1a64-zero-interface-v1\",\"targetFactsHash\":\"807f6e2986500abe\",\"importedPackageMetadataHash\":\"09954160c49c6474\",\"sourceKind\":\"program-graph\",\"graphHash\":\"graph:a9066b9e36e7ddb4\",\"modules\":[{\"name\":\"main\",\"path\":\"src/main.0\",\"sourceHash\":\"7292d2d8f15d8c9a\",\"publicInterfaceHash\":\"687c142e2bf9b02a\",\"publicSymbolCount\":1,\"publicSymbols\":[{\"name\":\"main\",\"kind\":\"function\"}],\"imports\":[]}]}}\n}\n",
+    "stderr": "note: zero check is using zero.graph, which is newer than the .0 source projection; run zero export to sync sources or zero import to make the edited source authoritative\n",
+    "before": {
+      "zero.graph": "894d6a2e3b6e6747bb02fd20a5ac74cb5ba7b1dbd660e2a7304a7ae92860b70f",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "894d6a2e3b6e6747bb02fd20a5ac74cb5ba7b1dbd660e2a7304a7ae92860b70f",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "failing-test",
+    "args": [
+      "test"
+    ],
+    "env": {},
+    "exit": 1,
+    "stdout": "",
+    "stderr": "zero test expectation failed: wrong expectation\n",
+    "before": {
+      "zero.graph": "894d6a2e3b6e6747bb02fd20a5ac74cb5ba7b1dbd660e2a7304a7ae92860b70f",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "894d6a2e3b6e6747bb02fd20a5ac74cb5ba7b1dbd660e2a7304a7ae92860b70f",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "import-conflict-graph-edit",
+    "args": [
+      "patch",
+      "--json",
+      "--op",
+      "addCheckWrite fn=\"main\" text=\"graph-edit\\n\""
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<inline>\",\n  \"checkOnly\": false,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:dcc932d9a732cd90\",\n  \"patchedGraphHash\": \"graph:e4ead6fe28c96d8a\",\n  \"operationCount\": 1,\n  \"operations\": [{\"index\": 0, \"line\": 2, \"op\": \"addCheckWrite\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": \"graph-edit\\n\", \"name\": null, \"type\": null, \"path\": null, \"function\": \"main\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": {\"functions\":[\"main\",\"add\"],\"tests\":[]},\n  \"diagnostic\": null,\n  \"saved\": {\"path\": \"./zero.graph\", \"byteStable\": true}\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "conflict-import-select-source",
+    "args": [
+      "import",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"import\",\n  \"writes\": true,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:3ac5cbc6dba61758\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":11,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [\"./zero.graph\"],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "7b9221dddb967530100ab0aa3ffb21b15bb89c8b16d51d4661491ab3ccc6028d",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "conflict-import-run",
+    "args": [
+      "run"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "human-edit\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "conflict-import-verify",
+    "args": [
+      "verify-projection",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"verify-projection\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:3ac5cbc6dba61758\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":11,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    },
+    "after": {
+      "zero.graph": "cc7befc2e75f9d13a47e5a1fb86a72fecec1be64eb90e218f7d0cfef6111c325",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "e116e5b601af838b5c469fb1e96165377db8d8061dd8e07f0982e96f43ffba34"
+    }
+  },
+  {
+    "name": "merge-left-edit",
+    "args": [
+      "patch",
+      "--json",
+      "--replace-in-fn",
+      "main",
+      "--old",
+      "baseline",
+      "--new",
+      "left-edit"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<replace-in-fn>\",\n  \"checkOnly\": false,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:dcc932d9a732cd90\",\n  \"patchedGraphHash\": \"graph:c28538276f4d98cb\",\n  \"operationCount\": 1,\n  \"operations\": [{\"index\": 0, \"line\": 1, \"op\": \"replaceFunctionBody\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": \"    check world.out.write(\\\"left-edit\\\\n\\\")\\n\", \"name\": null, \"type\": null, \"path\": null, \"function\": \"main\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": {\"functions\":[\"main\",\"add\"],\"tests\":[]},\n  \"diagnostic\": null,\n  \"saved\": {\"path\": \"./zero.graph\", \"byteStable\": true}\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "9fd726e0dd60606f5e17f494e30fd407e7e4fccd9990e9faeb2759e5b19080e3",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "merge-right-edit",
+    "args": [
+      "patch",
+      "--json",
+      "--replace-in-fn",
+      "add",
+      "--old",
+      "left + right",
+      "--new",
+      "left - right"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<replace-in-fn>\",\n  \"checkOnly\": false,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:dcc932d9a732cd90\",\n  \"patchedGraphHash\": \"graph:6dd3dd3135fa5129\",\n  \"operationCount\": 1,\n  \"operations\": [{\"index\": 0, \"line\": 1, \"op\": \"replaceFunctionBody\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": \"    return left - right\\n\", \"name\": null, \"type\": null, \"path\": null, \"function\": \"add\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": {\"functions\":[\"main\",\"add\"],\"tests\":[]},\n  \"diagnostic\": null,\n  \"saved\": {\"path\": \"./zero.graph\", \"byteStable\": true}\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "5169a4013e9b58b975f001063e0e9d99f9d62d6237d79afc6f16073f1fb1c257",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "merge-independent",
+    "args": [
+      "merge",
+      "--json",
+      "--base",
+      "$CASE_ROOT/baseline/zero.graph",
+      "--left",
+      "$CASE_ROOT/merge-left/zero.graph",
+      "--right",
+      "$CASE_ROOT/merge-right/zero.graph"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"merge\",\n  \"writes\": true,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"source-stale\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"stale\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:d1816e9bdeb0cb50\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"stale\",\"checked\":true,\"current\":false},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":11,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"merge\": {\"target\": \"./zero.graph\", \"mergedNodes\": 24, \"mergedEdges\": 23, \"leftChanges\": 23, \"rightChanges\": 15, \"conflicts\": 0},\n  \"changedPaths\": [\"./zero.graph\"],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "72e2b3417c65e96d225610ffe26b2a6c24b084a240fcd4e1edb2864a86b333f9",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "merge-independent-run",
+    "args": [
+      "run"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "left-edit\n",
+    "stderr": "note: zero run is using zero.graph, which is newer than the .0 source projection; run zero export to sync sources or zero import to make the edited source authoritative\n",
+    "before": {
+      "zero.graph": "72e2b3417c65e96d225610ffe26b2a6c24b084a240fcd4e1edb2864a86b333f9",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "72e2b3417c65e96d225610ffe26b2a6c24b084a240fcd4e1edb2864a86b333f9",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "merge-independent-export",
+    "args": [
+      "export",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"export\",\n  \"writes\": true,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:d1816e9bdeb0cb50\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":11,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [\"./src/main.0\", \"./zero.graph\"],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "72e2b3417c65e96d225610ffe26b2a6c24b084a240fcd4e1edb2864a86b333f9",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "02dfcb8809d0971bafa7a4e6af5b093da19c7445d8fa7e197538bd5a5a92f795",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "0016433769ff0f35a2786a902d22dc04f0078ace2fbe0bd91fc25d7beaa91127"
+    }
+  },
+  {
+    "name": "merge-independent-verify",
+    "args": [
+      "verify-projection",
+      "--json"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"mode\": \"verify-projection\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:d1816e9bdeb0cb50\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":11,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"changedPaths\": [],\n  \"diagnostics\": [],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "02dfcb8809d0971bafa7a4e6af5b093da19c7445d8fa7e197538bd5a5a92f795",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "0016433769ff0f35a2786a902d22dc04f0078ace2fbe0bd91fc25d7beaa91127"
+    },
+    "after": {
+      "zero.graph": "02dfcb8809d0971bafa7a4e6af5b093da19c7445d8fa7e197538bd5a5a92f795",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "0016433769ff0f35a2786a902d22dc04f0078ace2fbe0bd91fc25d7beaa91127"
+    }
+  },
+  {
+    "name": "merge-conflict-left-edit",
+    "args": [
+      "patch",
+      "--json",
+      "--replace-in-fn",
+      "main",
+      "--old",
+      "baseline",
+      "--new",
+      "left-edit"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<replace-in-fn>\",\n  \"checkOnly\": false,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:dcc932d9a732cd90\",\n  \"patchedGraphHash\": \"graph:c28538276f4d98cb\",\n  \"operationCount\": 1,\n  \"operations\": [{\"index\": 0, \"line\": 1, \"op\": \"replaceFunctionBody\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": \"    check world.out.write(\\\"left-edit\\\\n\\\")\\n\", \"name\": null, \"type\": null, \"path\": null, \"function\": \"main\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": {\"functions\":[\"main\",\"add\"],\"tests\":[]},\n  \"diagnostic\": null,\n  \"saved\": {\"path\": \"./zero.graph\", \"byteStable\": true}\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "9fd726e0dd60606f5e17f494e30fd407e7e4fccd9990e9faeb2759e5b19080e3",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "merge-conflict-right-edit",
+    "args": [
+      "patch",
+      "--json",
+      "--replace-in-fn",
+      "main",
+      "--old",
+      "baseline",
+      "--new",
+      "right-edit"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": true,\n  \"artifact\": \"./zero.graph\",\n  \"patch\": \"<replace-in-fn>\",\n  \"checkOnly\": false,\n  \"canonicalSource\": true,\n  \"originalGraphHash\": \"graph:dcc932d9a732cd90\",\n  \"patchedGraphHash\": \"graph:c05cabf192121942\",\n  \"operationCount\": 1,\n  \"operations\": [{\"index\": 0, \"line\": 1, \"op\": \"replaceFunctionBody\", \"ok\": true, \"node\": null, \"parent\": null, \"from\": null, \"to\": null, \"edge\": null, \"kind\": null, \"target\": null, \"order\": null, \"field\": null, \"expected\": null, \"actual\": null, \"value\": \"    check world.out.write(\\\"right-edit\\\\n\\\")\\n\", \"name\": null, \"type\": null, \"path\": null, \"function\": \"main\", \"left\": null, \"right\": null, \"arg0\": null, \"arg1\": null, \"call\": null, \"lineValue\": null, \"columnValue\": null, \"public\": null, \"mutable\": null, \"static\": null, \"fallible\": null, \"exportC\": null, \"callSites\": null}],\n  \"summary\": {\"functions\":[\"main\",\"add\"],\"tests\":[]},\n  \"diagnostic\": null,\n  \"saved\": {\"path\": \"./zero.graph\", \"byteStable\": true}\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "d35771b3293357c30b9023f2ffe4b13f7de4c5964aff432af94ff4f91c6692b9",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "merge-conflicting",
+    "args": [
+      "merge",
+      "--json",
+      "--base",
+      "$CASE_ROOT/baseline/zero.graph",
+      "--left",
+      "$CASE_ROOT/merge-conflict-left/zero.graph",
+      "--right",
+      "$CASE_ROOT/merge-conflict-right/zero.graph"
+    ],
+    "env": {},
+    "exit": 1,
+    "stdout": "{\n  \"schemaVersion\": 1,\n  \"ok\": false,\n  \"mode\": \"merge\",\n  \"writes\": false,\n  \"repositoryGraph\": {\"root\": \".\", \"storePath\": \"./zero.graph\", \"storePresent\": true, \"storeValid\": true, \"enabled\": true, \"projectionState\": \"clean\", \"possibleProjectionStates\": [\"store-missing\", \"store-invalid\", \"clean\", \"source-missing\", \"source-stale\", \"conflict\"], \"canonicalSourceExtension\": \".0\", \"compilerInput\": \"repository-graph\", \"semanticValidity\": \"shape-valid\", \"projectionValidity\": \"clean\"},\n  \"store\": {\"format\":\"zero-repository-graph\",\"encoding\":\"binary\",\"schemaVersion\":1,\"graphHash\":\"graph:dcc932d9a732cd90\",\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"compilerStore\": {\"schemaVersion\":1,\"shape\":\"compiler-oriented-tables\",\"sourceFreeInspection\":true,\"sourceProjectionRequiredForSemanticFacts\":false,\"sourceMapRequiredForSemanticFacts\":false,\"semanticValidity\":{\"state\":\"shape-valid\",\"ok\":true},\"projectionValidity\":{\"state\":\"clean\",\"checked\":true,\"current\":true},\"tables\":{\"schema\":1,\"package\":1,\"module\":1,\"declaration\":5,\"scope\":5,\"import\":0,\"symbol\":6,\"type\":15,\"effect\":2,\"capability\":3,\"ownership\":0,\"resource\":2,\"node\":24,\"edge\":23,\"projection\":1,\"sourceMap\":24},\"hashInputs\":{\"graphHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"nodeHashExcludes\":[\"sourcePath\",\"line\",\"column\",\"projectionText\"],\"idCollisionFallbackMayUse\":[\"sourcePath\",\"line\",\"column\"]}},\n  \"storage\": {\"encoding\":\"single-file-binary\",\"artifact\":\"zero.graph\",\"interface\":\"ProgramGraphStore\",\"schemaVersion\":1,\"evolvable\":true,\"binaryAvailable\":true,\"defaultEncoding\":\"binary\"},\n  \"scale\": {\"nodes\":24,\"edges\":23,\"sources\":1},\n  \"contract\": {\"artifact\":\"zero.graph\",\"sourceProjection\":\"checked-in .0 source text\",\"compilerInput\":\"manifest package plus checked-in zero.graph repository store\",\"commands\":{\"status\":{\"writes\":false,\"available\":true},\"verifyProjection\":{\"writes\":false,\"available\":true,\"repairCommands\":[\"zero import .\",\"zero export .\"]},\"import\":{\"writes\":true,\"available\":true},\"export\":{\"writes\":true,\"available\":true},\"merge\":{\"writes\":true,\"available\":true,\"requires\":[\"--base\",\"--left\",\"--right\"]}}},\n  \"merge\": {\"target\": \"./zero.graph\", \"mergedNodes\": 0, \"mergedEdges\": 0, \"leftChanges\": 11, \"rightChanges\": 11, \"conflicts\": 1},\n  \"diagnostics\": [{\"severity\":\"error\",\"code\":\"RGM003\",\"message\":\"repository graph inserted the same node id with different content\",\"path\":\"src/main.0\",\"line\":1,\"column\":1,\"length\":1,\"expected\":\"independent repository graph edits\",\"actual\":\"#expr_8dccc1ba\",\"help\":\"resolve the graph conflict by editing one side, then rerun zero merge\",\"fixSafety\":\"requires-human-review\",\"repair\":{\"id\":\"resolve-repository-graph-merge-conflict\",\"summary\":\"Resolve the conflicting graph node or edge before merging.\"},\"related\":[{\"kind\":\"graphNode\",\"id\":\"#expr_8dccc1ba\"},{\"kind\":\"semanticObject\",\"id\":\"Literal left-edit\\n\"},{\"kind\":\"field\",\"id\":\"node\"}]}],\n  \"repairCommands\": []\n}\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  },
+  {
+    "name": "merge-conflicting-original-run",
+    "args": [
+      "run"
+    ],
+    "env": {},
+    "exit": 0,
+    "stdout": "baseline\n",
+    "stderr": "",
+    "before": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    },
+    "after": {
+      "zero.graph": "bdb1da99f9dd2daa8dbbce8d545f90dca6be6637a181223a1453b96a5514a9ce",
+      "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554",
+      "src/main.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0"
+    }
+  }
+]

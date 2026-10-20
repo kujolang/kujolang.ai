@@ -1,0 +1,13 @@
+{
+  "CHECKSUMS.txt": "a03cb4831eeea73261dc6071e8934cfc8a71a1c656f108cdc17ecc50722ee47c",
+  "README.md": "bf1f7035f2686f99b988901794e4e8e43de9469433980c6568a9fae846de7ef3",
+  "baseline.0": "d68a081e48066f37fa2727b2c1cc0e1bc7ec83bd35891efe748a676d022becf0",
+  "merged-projection.0": "0016433769ff0f35a2786a902d22dc04f0078ace2fbe0bd91fc25d7beaa91127",
+  "portable-results.json": "4362160ec8f151199ea378bf09dc3dbd6a0467846cf5e896f2dae59574899608",
+  "provenance.json": "56f8ca136e435344b1921f246ac6e53a006ebd1a554135999aa83b9e68e2cbb9",
+  "reproduce.py": "5a6c350f5e2da69558fc1a7231ac30eb6cf4b96014ea0d1b9d9a545930727b27",
+  "results.json": "baafc9d90aefce8c22ce3fb670b3820d1a9a341eb40ec5c59277aea45151b202",
+  "setup-results.json": "044b28a6bdd48de330bb7e6e5652c8cfbfaab381c838132076a6b17ba3e82684",
+  "verify-evidence.py": "e19fe46f98912f2b26a1956f8fd619a03a3300ed90a9f167d1fd29021f1bdf94",
+  "zero.toml": "d07a50ddf7879b24ceb204ed8c5c4e01300b60149bbe18412084a93bf065d554"
+}

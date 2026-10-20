@@ -1,0 +1,79 @@
+{
+  "reviewDate": "2026-10-20",
+  "repository": "https://github.com/vercel-labs/zerolang",
+  "release": "v0.3.4",
+  "releaseURL": "https://github.com/vercel-labs/zerolang/releases/tag/v0.3.4",
+  "publishedAt": "2026-06-13T16:54:57Z",
+  "commit": "5b3a90a7756e48ab449eb16e688044b8decec7a9",
+  "binary": "zero-darwin-x64",
+  "binarySHA256": "ae8eaa25818e785e821d7ace7758e57c46d3fc920f2ff5c1b62b0cc9a32dcd6a",
+  "officialChecksumMatches": true,
+  "version": {
+    "schemaVersion": 1,
+    "version": "0.3.4",
+    "commit": "5b3a90a",
+    "host": "darwin-x64",
+    "backend": "zero-c",
+    "targets": [
+      "darwin-arm64",
+      "darwin-x64",
+      "linux-musl-x64",
+      "linux-musl-arm64",
+      "linux-x64",
+      "linux-arm64",
+      "win32-x64.exe",
+      "win32-arm64.exe"
+    ],
+    "targetCompiler": {
+      "available": false,
+      "kind": "target-capable C compiler",
+      "version": ""
+    },
+    "crossCompilation": {
+      "ready": false
+    }
+  },
+  "sources": [
+    {
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/projections.md",
+      "sha256": "6415b1ff8a0c0c9ca351bd6afd9472123e007a69b6b3b0668fa1a0d8d089a1ca"
+    },
+    {
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_command.c",
+      "sha256": "92c63d5a1d4e017198d3bb49e37205411a4626763f5110ed5e4ac2b76d066544"
+    },
+    {
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c",
+      "sha256": "6327cb24ceeffc56451182c4f55a05bbbd23e30b451c5c3088bf65106986225e"
+    },
+    {
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_projection.c",
+      "sha256": "9b36feec650db74c37dad661a27e06a633bf72e4c08d0cf85a12d8b9ea504ae2"
+    },
+    {
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_projection_validate.c",
+      "sha256": "5c2e307128238db7ad2a1a2f28b30125116aad00269547ed7a2170cfae23b4b4"
+    },
+    {
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_reconcile.c",
+      "sha256": "9cf925d682fbfc2345f0e5f422f434f5edfd3217465dfd4ebe83219db321626b"
+    },
+    {
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_reconcile_apply.c",
+      "sha256": "97828cf582f94cc247ff7e389033f1ff37afcf5d4f19d572fa4c843280f05699"
+    },
+    {
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_repository.c",
+      "sha256": "af2e361bd1e5d7f5a6e7314cf8e774b99ebbaf0c1fb5dd85d0eff2758c331d47"
+    },
+    {
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_repository_input.c",
+      "sha256": "a85fa5ea06b4a0dff0baff5399f1e31f97723a01f539e955d69a43cb48d871cb"
+    },
+    {
+      "url": "https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_repository_merge.c",
+      "sha256": "8ba3b2dd5af91ade9131176b2c1dd8edc6f248499c6bc7a52c671d66ccc7bf58"
+    }
+  ],
+  "setupLimitation": "The first export from the macOS Documents workspace returned Operation not permitted. The same fixture succeeded in a temporary directory. Completed tests ran in temporary directories; no compiler defect is inferred from that setup restriction."
+}
