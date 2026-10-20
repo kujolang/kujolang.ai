@@ -2,7 +2,7 @@
 
 Choose an agent’s host language by the tools it must call, the permissions those tools need and the failures it must recover from. The host coordinates the agent; the repository it edits can use another language. Test the interfaces between them before deciding whether any language change is needed.
 
-Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/programming-languages-for-ai-agents/
+Last reviewed: 2026-10-20. Canonical page: https://kujolang.ai/compare/programming-languages-for-ai-agents/
 
 ## Choose how your agent runs and uses tools.
 
@@ -190,6 +190,10 @@ Test that denied actions remain denied, interrupted tasks have explicit outcomes
 
 Build one tool-calling workflow with offline fixtures, then add one live provider with explicit credentials and limits. Keep the task input, versions, tool results and independent checks. The workflow guide shows how to turn those records into evidence a reviewer can inspect.
 
+## What this review tested
+
+Agents SDK passed six budget and 32 runner contract tests, including cancellation, timeout, retry and approval-denial cases with offline callbacks. Dispatch completed an offline workflow and recognized it as already completed on resume. Watchdog’s loopback proxy suite passed. Workcell ran Docker success/failure and receipt-integrity controls on Linux with Kujo 1.6.0. These cases do not establish live-provider reliability, interrupted external-effect recovery or general deployment security.
+
 ## Frequently asked questions
 
 ### Must the agent host and target repository use the same language?
@@ -208,7 +212,8 @@ No. A host can invoke tools that inspect or build another language. Verify the p
 - [TypeScript documentation](https://www.typescriptlang.org/docs/) — official documentation; TypeScript 7.0.2 (2026-08-20); rolling documentation, not runtime-tested; reviewed 2026-10-19.
 - [The Rust book](https://doc.rust-lang.org/book/) — official documentation; Rust 1.99.1 (2026-10-16); rolling book, not runtime-tested; reviewed 2026-10-19.
 - [Python type-boundary fixtures and results](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19) — release-specific static, runtime, parsing and crash-control tests; BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64; reviewed 2026-10-19.
-- [Workcell stable and alpha execution boundaries](https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/README.md) — official documentation; deployment isolation not tested; Workcell 1.2.0; pinned documentation snapshot; reviewed 2026-10-19.
+- [Workcell stable and alpha execution boundaries](https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/README.md) — official documentation; bounded Linux Docker execution tested separately; no deployment security certification; Workcell 1.2.0; pinned documentation snapshot; reviewed 2026-10-19.
+- [All-page runtime gap review and retained evidence](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20) — Pinned ecosystem fixtures; Linux Docker execution; extended Zerolang merge and BAML nightly tests; Kujo 1.8.2 local; Workcell Docker with Kujo 1.6.0; Zerolang 0.3.4; BAML nightly 20261019.a; reviewed 2026-10-20.
 
 ## Related pages
 

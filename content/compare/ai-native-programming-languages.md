@@ -4,14 +4,14 @@ title: "AI-native programming languages: a practical comparison"
 description: "A decision guide to AI-native language claims, including Kujo, Bend and BAML, without conflating language safety with workflow evidence."
 seo_title: "AI-native programming languages: a practical comparison"
 custom_url: "ai-native-programming-languages"
-date: "2026-10-19"
+date: "2026-10-20"
 author: "1"
 social_image: "/assets/images/social/ai-native-programming-languages.jpg"
 ---
 
 AI-native describes a design goal, not a safety certification. Compare what each language helps an agent do, which mistakes its tools can reject and what evidence you can inspect after a run. The right choice depends on your application and the guarantees it needs.
 
-Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/ai-native-programming-languages/
+Last reviewed: 2026-10-20. Canonical page: https://kujolang.ai/compare/ai-native-programming-languages/
 
 ## Choose a language by what it can do.
 
@@ -195,6 +195,10 @@ Use one representative repository task and fix its acceptance criteria before th
 
 We do not rank market share, search volume, speed or agent success rates. These pages distinguish inspected implementation from official claims and unknowns. A useful performance comparison would need the same workloads, appropriate targets and repeated measurements.
 
+## What this review tested
+
+The direct comparisons now link runtime evidence for Bend, BAML and Zerolang. The Kujo workflow claims also have positive and negative Spec/Eval fixtures, RunLedger and Fence contract tests, and a Linux Workcell Docker run. Python, TypeScript and Rust remain documented alternatives; this guide makes no measured productivity or performance ranking.
+
 ## Frequently asked questions
 
 ### What is the best AI-native programming language?
@@ -215,6 +219,7 @@ There is no supported universal ranking here. Use Bend’s proof model, BAML’s
 - [Zerolang patch validation implementation](https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c) — implementation inspected; selected release cases executed; v0.3.4; 5b3a90a7756e48ab449eb16e688044b8decec7a9; reviewed 2026-10-19.
 - [Competitor runtime fixtures and raw outcomes](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19) — local execution receipts; bounded fixtures; Bend 2.0.37; BAML 0.22.2; Zerolang 0.3.4; macOS x86_64; reviewed 2026-10-19.
 - [Python type-boundary fixtures and results](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19) — release-specific static, runtime, parsing and crash-control tests; BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64; reviewed 2026-10-19.
+- [All-page runtime gap review and retained evidence](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20) — Pinned ecosystem fixtures; Linux Docker execution; extended Zerolang merge and BAML nightly tests; Kujo 1.8.2 local; Workcell Docker with Kujo 1.6.0; Zerolang 0.3.4; BAML nightly 20261019.a; reviewed 2026-10-20.
 
 ## Related pages
 

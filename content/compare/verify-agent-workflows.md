@@ -4,14 +4,14 @@ title: "Verify agent workflows: contracts, checks and reproducible evidence"
 description: "A practical guide to verifying AI-generated code, evaluating coding agents and preserving traceable execution evidence with honest limits."
 seo_title: "Verify agent workflows: contracts, checks and reproducible evidence"
 custom_url: "verify-agent-workflows"
-date: "2026-10-19"
+date: "2026-10-20"
 author: "1"
 social_image: "/assets/images/social/verify-agent-workflows.jpg"
 ---
 
 Check an agent’s completion report against the work it produced. Define the requirement first, inspect the output with an independent checker and keep the commands, results and environment details needed to repeat the check. This guide shows how to connect those steps using a small runnable example.
 
-Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/verify-agent-workflows/
+Last reviewed: 2026-10-20. Canonical page: https://kujolang.ai/compare/verify-agent-workflows/
 
 ## Check whether the agent finished the task.
 
@@ -227,6 +227,10 @@ Download [produce.kujo](/compare/evidence/produce.kujo) and [verify.py](/compare
 
 A pass shows that the checker accepted the correct output and rejected the specified invalid cases for this small task. It does not compare languages, evaluate a coding agent or prove an application correct. To evaluate an agent, use representative tasks, record all attempts and configurations, and report manual intervention. Do not turn this exercise into a general success-rate claim.
 
+## What this review tested
+
+The public exercise accepted the correct artifact and rejected wrong-value, malformed and wrong-type controls. A separate producer printed correct JSON but exited 7; the exercise correctly failed. Kujo 1.8.0 was rejected by the 1.8.2 version gate. Workcell also accepted an intact Docker run receipt and rejected a modified log. Revision matching and application-specific acceptance criteria remain the reviewer’s responsibility.
+
 ## Frequently asked questions
 
 ### How do I prove an agent completed a task?
@@ -246,6 +250,7 @@ Specifications, output evaluation, traceability and reproducibility are successi
 - [Shipcheck scope and implementation](https://github.com/kujolang/shipcheck/blob/ee4cfd052c0522eebedc0eead223cbb22490b357/src/checks.kujo) — implementation inspected; ee4cfd052c0522eebedc0eead223cbb22490b357; reviewed 2026-10-19.
 - [Evaluating coding agents](https://vercel.com/i/evaluating-ai-coding-agents) — official documentation; Documentation snapshot; no release version asserted; reviewed 2026-10-19.
 - [Runnable artifact checker and negative controls](https://kujolang.ai/compare/evidence/verify.py) — implementation inspected and executed; independent Python checker, not Eval; Kujo 1.8.2 producer; Python 3 checker; reviewed 2026-10-19.
+- [All-page runtime gap review and retained evidence](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20) — Pinned ecosystem fixtures; Linux Docker execution; extended Zerolang merge and BAML nightly tests; Kujo 1.8.2 local; Workcell Docker with Kujo 1.6.0; Zerolang 0.3.4; BAML nightly 20261019.a; reviewed 2026-10-20.
 
 ## Related pages
 

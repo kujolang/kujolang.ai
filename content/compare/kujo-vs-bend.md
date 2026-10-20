@@ -39,7 +39,7 @@ Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100ea
 
 Kujo — Verified supported (language and first-party ecosystem): In Kujo 1.8.2, `kujo check` parses and compiles without executing; it is not a complete type-enforcement gate. Interpreter type diagnostics can be warnings. Spec validates task records, and Eval checks selected outputs; none proves arbitrary programs correct.
 
-Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20
 
 Bend — Verified supported (language): Type-level laws paired with proof definitions; open claims are rejected when used as proof.
 
@@ -67,9 +67,9 @@ Sources: https://github.com/bendlang/bend/blob/4ff8545f19b09b7d2b8ca2303668100ea
 
 ### Workflow receipts
 
-Kujo — Verified supported (first-party ecosystem): RunLedger stores supplied verdicts, commands and tests with Git metadata. Workcell records execution receipts. Follow these records to the underlying checks; a receipt or correlation ID alone does not prove the result correct.
+Kujo — Verified supported (first-party ecosystem): RunLedger’s tested CLI records supplied verdicts, commands and test results with Git metadata. Workcell’s Linux Docker fixture exported an artifact and verified its receipt; modifying a recorded log made verification fail. These records still need to be matched to the underlying checks.
 
-Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
+Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20
 
 Bend — Unknown / not verified (toolchain): A Kujo-style cross-tool receipt system was not verified. Proof-checker output has a different scope.
 
@@ -191,6 +191,10 @@ Bend excludes unsafe and foreign dependencies from its stronger proof verdict, a
 
 Bend 2.0.37 passed valid proof controls through --verdict with its independent BendTT kernel built using Lean 4.34.0. Direct kernel calls accepted an exported proof and rejected its corrupted body. The expanded macOS and Linux tests exercised laws, unsafe and foreign dependencies, termination, affine reuse, JavaScript arguments, arithmetic and process exits. GPU execution and parallel speedup remain untested.
 
+## What this review tested
+
+Bend’s proof and execution results are backed by the dedicated runtime review. The Kujo side now also has executed Spec, Eval and RunLedger controls, plus a Linux Workcell Docker fixture. Bend GPU execution, parallel speedup and a direct Kujo–Bend adapter remain outside this review.
+
 ## Frequently asked questions
 
 ### Is Bend only the older HVM language?
@@ -216,6 +220,7 @@ This review did not establish an equivalent general proof system in Kujo. Kujo�
 - [Competitor runtime fixtures and raw outcomes](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19) — local execution receipts; bounded fixtures; Bend 2.0.37; BAML 0.22.2; Zerolang 0.3.4; macOS x86_64; reviewed 2026-10-19.
 - [Bend kernel and BAML integration runtime tests](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19) — release binaries executed; positive and negative fixtures; local mock provider; Bend 2.0.37 with Lean 4.34.0 on Linux x86_64; BAML and Python bridge 0.22.2 on macOS x86_64; reviewed 2026-10-19.
 - [Bend proof gates and JavaScript boundary tests](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/bend-contract-review-2026-10-20) — 76 macOS and 83 Linux command observations; 12 independent-kernel controls; pinned official source; Bend 2.0.37; Lean 4.34.0; macOS and Linux x86_64; reviewed 2026-10-20.
+- [All-page runtime gap review and retained evidence](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20) — Pinned ecosystem fixtures; Linux Docker execution; extended Zerolang merge and BAML nightly tests; Kujo 1.8.2 local; Workcell Docker with Kujo 1.6.0; Zerolang 0.3.4; BAML nightly 20261019.a; reviewed 2026-10-20.
 
 ## Related pages
 

@@ -1,6 +1,6 @@
 # Kujo comparison overview
 
-Reviewed 2026-10-19. Canonical: https://kujolang.ai/compare/
+Reviewed 2026-10-20. Canonical: https://kujolang.ai/compare/
 
 ## Kujo
 
@@ -94,6 +94,7 @@ https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/s
 https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs
 https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo
 https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20
 
 ### Bend
 
@@ -212,10 +213,11 @@ What can a reviewer inspect afterward?
 
 Run metadata and execution receipts
 
-verified-supported · first-party ecosystem: RunLedger stores supplied verdicts, commands and tests with Git metadata. Workcell records execution receipts. Follow these records to the underlying checks; a receipt or correlation ID alone does not prove the result correct.
+verified-supported · first-party ecosystem: RunLedger’s tested CLI records supplied verdicts, commands and test results with Git metadata. Workcell’s Linux Docker fixture exported an artifact and verified its receipt; modifying a recorded log made verification fail. These records still need to be matched to the underlying checks.
 
 https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo
 https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20
 
 ### Bend
 
@@ -253,10 +255,11 @@ What constrains a running process?
 
 Configured Workcell container boundary
 
-verified-supported · first-party ecosystem: Workcell 1.2.0’s stable execution boundary uses configured Docker/Podman containers. Its provider-neutral and remote-adapter contracts remain alpha. A normal Kujo process is not automatically a container sandbox; host and daemon security remain outside this guarantee.
+verified-supported · first-party ecosystem: Workcell 1.2.0 executed positive and failing Docker workloads on a Linux runner using its pinned Kujo 1.6.0 runtime. Configured container execution is separate from ordinary Kujo execution. Podman, remote adapters and host/daemon security were not certified by this fixture.
 
 https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
 https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/README.md
+https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20
 
 ### Bend
 

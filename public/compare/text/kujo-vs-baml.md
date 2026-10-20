@@ -10,7 +10,7 @@ BAML: https://boundaryml.com/
 
 Documentation: https://boundaryml.com/quickstart
 
-Version: Stable language toolchain and Python bridge 0.22.2 (toolchain released 2026-10-13; commit 01f5c412c73c213846ea8cb6ead89d303b053672). Runtime and generated Python client tested on macOS x86_64. Retested on 2026-10-20 with CLI 0.22.3-nightly.20261018.a and Python bridge 0.22.3.dev2026101800: all 32 boundary outcomes matched stable, including the invalid-arithmetic crash.
+Version: Stable language toolchain and Python bridge 0.22.2 (toolchain released 2026-10-13; commit 01f5c412c73c213846ea8cb6ead89d303b053672). Runtime and generated Python client tested on macOS x86_64. Retested on 2026-10-20 with CLI 0.22.3-nightly.20261018.a and Python bridge 0.22.3.dev2026101800: all 32 boundary outcomes matched stable, including the invalid-arithmetic crash. A follow-up with CLI 0.22.3-nightly.20261019.a and bridge 0.22.3.dev2026101900 also reproduced all 32 outcomes, including the crash.
 
 Repository: https://github.com/BoundaryML/baml
 
@@ -30,7 +30,7 @@ Sources: https://boundaryml.com/
 
 Kujo — Verified supported (language and first-party ecosystem): In Kujo 1.8.2, `kujo check` parses and compiles without executing; it is not a complete type-enforcement gate. Interpreter type diagnostics can be warnings. Spec validates task records, and Eval checks selected outputs; none proves arbitrary programs correct.
 
-Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20
 
 BAML — Verified supported (language): Project diagnostics are implemented by the current check command.
 
@@ -40,7 +40,7 @@ Sources: https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d3
 
 Kujo — Verified supported (language and first-party ecosystem): In Kujo 1.8.2, `kujo check` parses and compiles without executing; it is not a complete type-enforcement gate. Interpreter type diagnostics can be warnings. Spec validates task records, and Eval checks selected outputs; none proves arbitrary programs correct.
 
-Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20
 
 BAML — Verified supported (toolchain): Local assertions passed and failed as expected. Mock-provider response parsing accepted a valid object and rejected an invalid field; the full upstream suite was not run.
 
@@ -68,9 +68,9 @@ Sources: https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d3
 
 ### Observability
 
-Kujo — Verified supported (first-party ecosystem): RunLedger stores supplied verdicts, commands and tests with Git metadata. Workcell records execution receipts. Follow these records to the underlying checks; a receipt or correlation ID alone does not prove the result correct.
+Kujo — Verified supported (first-party ecosystem): RunLedger’s tested CLI records supplied verdicts, commands and test results with Git metadata. Workcell’s Linux Docker fixture exported an artifact and verified its receipt; modifying a recorded log made verification fail. These records still need to be matched to the underlying checks.
 
-Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
+Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20
 
 BAML — Verified supported (toolchain): Local BTEL recordings and SQL queries recovered success/error outcomes and profiler counts. Trace context reached a generated-client call without leaking into the next call. Cloud delivery and overhead remain untested.
 
@@ -165,7 +165,7 @@ These are separate checks, not one blanket type-safety guarantee. We tested the 
 | Plain values and collections | Pass a string to int identity functions, or a mixed list to int[]. | Sync and async identity calls returned the string. The mixed list also returned unchanged. An int? fixture rejected the string. | Validation varies by type and operation. The declared primitive return type did not enforce the observed result; do not generalize this to optional or class paths. https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/crates/bex_engine/src/conversion.rs, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19 |
 | Generated classes | Construct Answer(value="bad"), or return a class with an invalid field. | Pydantic raised ValidationError. Answer(value="42") became Answer(value=42); strict validation rejected that string. | Class construction and decoding validate fields. A deliberately bypassed or later-mutated model could still yield a bad primitive field value. https://github.com/BoundaryML/baml/blob/01f5c412c73c213846ea8cb6ead89d303b053672/baml_language/sdks/python/src/baml_bridge/proto.py, https://docs.pydantic.dev/latest/concepts/strict_mode/, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19 |
 | Model-response parsing | Parse objects containing value 42, "bad", "42" and 41 through the generated function specification. | 42 passed; "bad" raised ParseError; "42" was coerced to 42; 41 also passed. | Schema-aligned parsing can repair or coerce data. A structurally valid value is not proof that the answer meets a business requirement. These parser tests made no model request. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-gap-review-2026-10-19 |
-| Invalid values used in arithmetic | Call plus(value: int) -> int { value + 1 } with 41 and then "bad". | 41 returned 42. The string caused SIGSEGV in stable 0.22.2 and nightly 0.22.3-nightly.20261018.a with its matching Python bridge. The nightly reproduced all 32 boundary outcomes; separate runs without Python’s signal handler also crashed. | The tested nightly does not fix this failure. Source and crash reports support a missing type check before optimized integer arithmetic. Live debugger attachment was unavailable; the exact source-to-machine path remains inferred. Other platforms and bridges were not tested. We reported this as BAML issue #5332; follow the linked upstream issue for its current status. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-crash-nightly-2026-10-20, https://github.com/BoundaryML/baml/issues/5332 |
+| Invalid values used in arithmetic | Call plus(value: int) -> int { value + 1 } with 41 and then "bad". | 41 returned 42. The string caused SIGSEGV in stable 0.22.2 and nightly 0.22.3-nightly.20261018.a with its matching Python bridge. The nightly reproduced all 32 boundary outcomes; separate runs without Python’s signal handler also crashed. The newer 0.22.3-nightly.20261019.a also reproduced this crash and all 32 boundary outcomes. | The tested nightly does not fix this failure. Source and crash reports support a missing type check before optimized integer arithmetic. Live debugger attachment was unavailable; the exact source-to-machine path remains inferred. Other platforms and bridges were not tested. We reported this as BAML issue #5332; follow the linked upstream issue for its current status. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-crash-nightly-2026-10-20, https://github.com/BoundaryML/baml/issues/5332, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20 |
 | Application validation | Validate the input with TypeAdapter(int).validate_python(value, strict=True) before calling BAML. | The numeric string was rejected; validated integer arithmetic returned 42. | This is an application-side guard tested for int. Validate the full input schema and retain domain-specific assertions; do not assume this one wrapper covers every BAML type. https://docs.pydantic.dev/latest/concepts/strict_mode/, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19 |
 
 ## Technical architecture
@@ -191,6 +191,10 @@ BAML’s type declarations, generated Python signatures, Pydantic models and mod
 ## Examples and benchmark evidence
 
 BAML 0.22.2 passed local function and assertion tests and rejected invalid source. Its generated Python client returned 42 synchronously and asynchronously; a standalone packed executable also returned 42. A local mock provider returned a typed object, while an invalid field and HTTP 401 produced distinct errors. Local trace queries recovered successful and failed runs with matching profiler counts. These fixtures do not test hosted models, cloud trace delivery, model quality or performance.
+
+## What this review tested
+
+The 20261019.a nightly and matching Python bridge reproduced all 32 prior boundary outcomes, including the invalid-integer arithmetic crash. Hosted model quality, cloud trace delivery and other language bridges remain outside these local fixtures. The upstream issue remains the place to follow maintainer status.
 
 ## Frequently asked questions
 
@@ -230,6 +234,7 @@ No. In our 0.22.2 fixtures, static checking caught a wrong argument, but a direc
 - [Python type-boundary fixtures and results](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-python-boundary-2026-10-19) — release-specific static, runtime, parsing and crash-control tests; BAML CLI/bridge 0.22.2; Python 3.10; Pydantic 2.14.1; macOS x86_64; reviewed 2026-10-19.
 - [BAML stable and nightly crash retest](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/baml-crash-nightly-2026-10-20) — 32 boundary cases, isolated crash controls, official source and native crash reports; CLI 0.22.2 / bridge 0.22.2 and CLI 0.22.3-nightly.20261018.a / bridge 0.22.3.dev2026101800; macOS x86_64; Python 3.10; reviewed 2026-10-20.
 - [Follow upstream BAML issue #5332](https://github.com/BoundaryML/baml/issues/5332) — upstream bug report; follow the issue for maintainer updates and resolution; Reported against CLI/bridge 0.22.2 and CLI 0.22.3-nightly.20261018.a / bridge 0.22.3.dev2026101800; reviewed 2026-10-20.
+- [All-page runtime gap review and retained evidence](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20) — Pinned ecosystem fixtures; Linux Docker execution; extended Zerolang merge and BAML nightly tests; Kujo 1.8.2 local; Workcell Docker with Kujo 1.6.0; Zerolang 0.3.4; BAML nightly 20261019.a; reviewed 2026-10-20.
 
 ## Related pages
 

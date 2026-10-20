@@ -30,7 +30,7 @@ Sources: https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e68
 
 Kujo — Verified supported (language and first-party ecosystem): In Kujo 1.8.2, `kujo check` parses and compiles without executing; it is not a complete type-enforcement gate. Interpreter type diagnostics can be warnings. Spec validates task records, and Eval checks selected outputs; none proves arbitrary programs correct.
 
-Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo
+Sources: https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/main.rs, https://github.com/kujolang/kujo/blob/549bdb4d5aa8edc60a83c81bf3be4b1c688ad3e1/src/type_checker.rs, https://github.com/kujolang/spec/blob/1211f37a09314be7150734bf15a55e9b2ea6504d/src/validate.kujo, https://github.com/kujolang/eval/blob/71e66dff780d6930bcbe093c046bf31aa26411df/src/checks.kujo, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20
 
 Zerolang — Verified supported (toolchain): Stale hashes, ill-typed patches and conflicting graph/source edits were rejected. The tested patch failures and merge conflicts preserved stored fixture files.
 
@@ -58,9 +58,9 @@ Sources: https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e68
 
 ### Workflow evidence
 
-Kujo — Verified supported (first-party ecosystem): RunLedger stores supplied verdicts, commands and tests with Git metadata. Workcell records execution receipts. Follow these records to the underlying checks; a receipt or correlation ID alone does not prove the result correct.
+Kujo — Verified supported (first-party ecosystem): RunLedger’s tested CLI records supplied verdicts, commands and test results with Git metadata. Workcell’s Linux Docker fixture exported an artifact and verified its receipt; modifying a recorded log made verification fail. These records still need to be matched to the underlying checks.
 
-Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo
+Sources: https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo, https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20
 
 Zerolang — Verified supported (toolchain): Graph hashes, patch outcomes, no-write projection checks and explicit conflict diagnostics provide review evidence. Import/export and three-way merge behavior were exercised; a separate end-to-end run ledger was not assessed.
 
@@ -155,7 +155,7 @@ We tested these workflows on Zerolang 0.3.4 with the official macOS x86_64 binar
 | Graph-only changes | Patch the graph while keeping the previous source projection. | Run used the patched graph and reported the newer graph state. Export synchronized the projection; verification passed. | Review the exported text before treating it as the program that will run. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/zerolang-contract-review-2026-10-20 |
 | Conflicting changes | Edit the graph and source independently. | Check and run returned RGP006 without changing either side. Export selected the graph; import selected the source in a separate fixture. | Import and export choose an authority. Review the changes before discarding the other side. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/zerolang-contract-review-2026-10-20, https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/docs/articles/concepts/projections.md |
 | Invalid edits and rollback | Apply a valid operation followed by an ill-typed or unknown operation; separately import an invalid return type. | Each failed operation preserved the checked files. A wrong graph hash was also rejected. A valid dry run succeeded without saving. | These results cover the named rejection paths, not interrupted writes or every patch operation. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/zerolang-contract-review-2026-10-20, https://github.com/vercel-labs/zerolang/blob/5b3a90a7756e48ab449eb16e688044b8decec7a9/native/zero-c/src/program_graph_patch.c |
-| Independent merge | Change the printed text on one branch and arithmetic in a separate function on another. | Three-way merge succeeded. Runtime printed the first edit; the exported projection contained the second. | The merged arithmetic change was inspected in the projection, not separately executed. Complex multi-file merges remain untested. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/zerolang-contract-review-2026-10-20 |
+| Independent merge | Change the printed text on one branch and arithmetic in a separate function on another. | Three-way merge succeeded. Runtime printed the text edit, and an executable test confirmed the arithmetic edit: 40 minus 2 returned 38. | This closes the earlier projection-only arithmetic check. Complex multi-file merges and concurrent writers remain untested. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/zerolang-contract-review-2026-10-20, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20 |
 | Conflicting merge | Change the same printed value differently on two branches. | Merge returned RGM003 and left the destination unchanged. The destination still ran the baseline. | This was a sequential three-way merge fixture, not a simultaneous-writer test. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/zerolang-contract-review-2026-10-20 |
 | Behavioral requirements | Run a passing addition assertion, then add an incorrect expected result. | Graph check passed in both cases. The correct assertion passed; the incorrect expectation made test fail. | A checked edit and a consistent projection do not prove that the program meets your requirements. https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/zerolang-contract-review-2026-10-20, https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/runtime-review-2026-10-19 |
 
@@ -187,6 +187,10 @@ A valid graph can still implement the wrong behavior: our graph check passed whi
 
 Our deeper review recorded 53 command observations and repeated them in a fresh run. Failed patches and conflicting merges preserved the checked files. Independent function edits merged, while explicit import and export selected the intended side of a source/graph conflict. Valid graph checks still passed when an incorrect test expectation failed. These are bounded correctness checks on macOS x86_64, not a performance benchmark or an exhaustive compiler audit.
 
+## What this review tested
+
+The extended merge test executed both independent edits: main printed the edited text, and a generated test confirmed that the merged arithmetic returned 38 for 40 and 2. The 55 command observations include the earlier refresh, conflict and rollback controls. Concurrent writers, power-loss recovery and complex multi-file merges remain untested.
+
 ## Frequently asked questions
 
 ### Is Zerolang an AI-native language?
@@ -216,6 +220,7 @@ No. Our valid graph passed check while a deliberately wrong test expectation fai
 - [Runledger scope and implementation](https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo) — implementation inspected; 334ddd4d33c8cb2612c8edab971ee69170824133; reviewed 2026-10-19.
 - [Workcell scope and implementation](https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/src/receipts/receipt.kujo) — implementation inspected; a276a92c6bac9279a8cb36ace9687ade34d5128f; reviewed 2026-10-19.
 - [Zerolang graph, projection and merge runtime review](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/zerolang-contract-review-2026-10-20) — 53 command observations repeated in a fresh run; file hashes, diagnostics and executed outputs; Zerolang 0.3.4 / 5b3a90a7756e48ab449eb16e688044b8decec7a9; macOS x86_64; reviewed 2026-10-20.
+- [All-page runtime gap review and retained evidence](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20) — Pinned ecosystem fixtures; Linux Docker execution; extended Zerolang merge and BAML nightly tests; Kujo 1.8.2 local; Workcell Docker with Kujo 1.6.0; Zerolang 0.3.4; BAML nightly 20261019.a; reviewed 2026-10-20.
 
 ## Related pages
 

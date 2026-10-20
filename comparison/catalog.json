@@ -172,7 +172,7 @@
     "workcell-boundary": {
       "label": "Workcell stable and alpha execution boundaries",
       "url": "https://github.com/kujolang/workcell/blob/a276a92c6bac9279a8cb36ace9687ade34d5128f/README.md",
-      "level": "official documentation; deployment isolation not tested",
+      "level": "official documentation; bounded Linux Docker execution tested separately; no deployment security certification",
       "version": "Workcell 1.2.0; pinned documentation snapshot",
       "verified": "2026-10-19"
     },
@@ -315,6 +315,13 @@
       "level": "76 macOS and 83 Linux command observations; 12 independent-kernel controls; pinned official source",
       "version": "Bend 2.0.37; Lean 4.34.0; macOS and Linux x86_64",
       "verified": "2026-10-20"
+    },
+    "all-page-gap-review": {
+      "label": "All-page runtime gap review and retained evidence",
+      "url": "https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20",
+      "level": "Pinned ecosystem fixtures; Linux Docker execution; extended Zerolang merge and BAML nightly tests",
+      "version": "Kujo 1.8.2 local; Workcell Docker with Kujo 1.6.0; Zerolang 0.3.4; BAML nightly 20261019.a",
+      "verified": "2026-10-20"
     }
   },
   "kujoFacts": {
@@ -334,7 +341,8 @@
         "kujo",
         "types",
         "spec",
-        "eval"
+        "eval",
+        "all-page-gap-review"
       ],
       "status": "verified-supported",
       "layer": "language and first-party ecosystem"
@@ -356,19 +364,21 @@
       "layer": "language"
     },
     "evidence": {
-      "text": "RunLedger stores supplied verdicts, commands and tests with Git metadata. Workcell records execution receipts. Follow these records to the underlying checks; a receipt or correlation ID alone does not prove the result correct.",
+      "text": "RunLedger’s tested CLI records supplied verdicts, commands and test results with Git metadata. Workcell’s Linux Docker fixture exported an artifact and verified its receipt; modifying a recorded log made verification fail. These records still need to be matched to the underlying checks.",
       "sources": [
         "runledger",
-        "workcell"
+        "workcell",
+        "all-page-gap-review"
       ],
       "status": "verified-supported",
       "layer": "first-party ecosystem"
     },
     "isolation": {
-      "text": "Workcell 1.2.0’s stable execution boundary uses configured Docker/Podman containers. Its provider-neutral and remote-adapter contracts remain alpha. A normal Kujo process is not automatically a container sandbox; host and daemon security remain outside this guarantee.",
+      "text": "Workcell 1.2.0 executed positive and failing Docker workloads on a Linux runner using its pinned Kujo 1.6.0 runtime. Configured container execution is separate from ordinary Kujo execution. Podman, remote adapters and host/daemon security were not certified by this fixture.",
       "sources": [
         "workcell",
-        "workcell-boundary"
+        "workcell-boundary",
+        "all-page-gap-review"
       ],
       "status": "verified-supported",
       "layer": "first-party ecosystem"
@@ -404,6 +414,10 @@
         {
           "heading": "Examples and benchmark evidence",
           "body": "Bend 2.0.37 passed valid proof controls through --verdict with its independent BendTT kernel built using Lean 4.34.0. Direct kernel calls accepted an exported proof and rejected its corrupted body. The expanded macOS and Linux tests exercised laws, unsafe and foreign dependencies, termination, affine reuse, JavaScript arguments, arithmetic and process exits. GPU execution and parallel speedup remain untested."
+        },
+        {
+          "heading": "What this review tested",
+          "body": "Bend’s proof and execution results are backed by the dedicated runtime review. The Kujo side now also has executed Spec, Eval and RunLedger controls, plus a Linux Workcell Docker fixture. Bend GPU execution, parallel speedup and a direct Kujo–Bend adapter remain outside this review."
         }
       ],
       "sources": [
@@ -419,7 +433,8 @@
         "kujo-release",
         "runtime-review",
         "runtime-gap-review",
-        "bend-contract-review"
+        "bend-contract-review",
+        "all-page-gap-review"
       ],
       "verified": "2026-10-20",
       "kind": "direct",
@@ -689,6 +704,10 @@
         {
           "heading": "Examples and benchmark evidence",
           "body": "BAML 0.22.2 passed local function and assertion tests and rejected invalid source. Its generated Python client returned 42 synchronously and asynchronously; a standalone packed executable also returned 42. A local mock provider returned a typed object, while an invalid field and HTTP 401 produced distinct errors. Local trace queries recovered successful and failed runs with matching profiler counts. These fixtures do not test hosted models, cloud trace delivery, model quality or performance."
+        },
+        {
+          "heading": "What this review tested",
+          "body": "The 20261019.a nightly and matching Python bridge reproduced all 32 prior boundary outcomes, including the invalid-integer arithmetic crash. Hosted model quality, cloud trace delivery and other language bridges remain outside these local fixtures. The upstream issue remains the place to follow maintainer status."
         }
       ],
       "sources": [
@@ -713,7 +732,8 @@
         "pydantic-strict",
         "baml-boundary-review",
         "baml-crash-nightly-review",
-        "baml-upstream-5332"
+        "baml-upstream-5332",
+        "all-page-gap-review"
       ],
       "verified": "2026-10-20",
       "kind": "direct",
@@ -725,7 +745,7 @@
         "website": "https://boundaryml.com/",
         "repository": "https://github.com/BoundaryML/baml",
         "documentation": "https://boundaryml.com/quickstart",
-        "version": "Stable language toolchain and Python bridge 0.22.2 (toolchain released 2026-10-13; commit 01f5c412c73c213846ea8cb6ead89d303b053672). Runtime and generated Python client tested on macOS x86_64. Retested on 2026-10-20 with CLI 0.22.3-nightly.20261018.a and Python bridge 0.22.3.dev2026101800: all 32 boundary outcomes matched stable, including the invalid-arithmetic crash."
+        "version": "Stable language toolchain and Python bridge 0.22.2 (toolchain released 2026-10-13; commit 01f5c412c73c213846ea8cb6ead89d303b053672). Runtime and generated Python client tested on macOS x86_64. Retested on 2026-10-20 with CLI 0.22.3-nightly.20261018.a and Python bridge 0.22.3.dev2026101800: all 32 boundary outcomes matched stable, including the invalid-arithmetic crash. A follow-up with CLI 0.22.3-nightly.20261019.a and bridge 0.22.3.dev2026101900 also reproduced all 32 outcomes, including the crash."
       },
       "dimensions": [
         [
@@ -959,12 +979,13 @@
           [
             "Invalid values used in arithmetic",
             "Call plus(value: int) -> int { value + 1 } with 41 and then \"bad\".",
-            "41 returned 42. The string caused SIGSEGV in stable 0.22.2 and nightly 0.22.3-nightly.20261018.a with its matching Python bridge. The nightly reproduced all 32 boundary outcomes; separate runs without Python’s signal handler also crashed.",
+            "41 returned 42. The string caused SIGSEGV in stable 0.22.2 and nightly 0.22.3-nightly.20261018.a with its matching Python bridge. The nightly reproduced all 32 boundary outcomes; separate runs without Python’s signal handler also crashed. The newer 0.22.3-nightly.20261019.a also reproduced this crash and all 32 boundary outcomes.",
             "The tested nightly does not fix this failure. Source and crash reports support a missing type check before optimized integer arithmetic. Live debugger attachment was unavailable; the exact source-to-machine path remains inferred. Other platforms and bridges were not tested. We reported this as BAML issue #5332; follow the linked upstream issue for its current status.",
             [
               "baml-boundary-review",
               "baml-crash-nightly-review",
-              "baml-upstream-5332"
+              "baml-upstream-5332",
+              "all-page-gap-review"
             ]
           ],
           [
@@ -1013,6 +1034,10 @@
         {
           "heading": "Examples and benchmark evidence",
           "body": "Our deeper review recorded 53 command observations and repeated them in a fresh run. Failed patches and conflicting merges preserved the checked files. Independent function edits merged, while explicit import and export selected the intended side of a source/graph conflict. Valid graph checks still passed when an incorrect test expectation failed. These are bounded correctness checks on macOS x86_64, not a performance benchmark or an exhaustive compiler audit."
+        },
+        {
+          "heading": "What this review tested",
+          "body": "The extended merge test executed both independent edits: main printed the edited text, and a generated test confirmed that the merged arithmetic returned 38 for 40 and 2. The 55 command observations include the earlier refresh, conflict and rollback controls. Concurrent writers, power-loss recovery and complex multi-file merges remain untested."
         }
       ],
       "sources": [
@@ -1028,7 +1053,8 @@
         "eval",
         "runledger",
         "workcell",
-        "zero-contract-review"
+        "zero-contract-review",
+        "all-page-gap-review"
       ],
       "verified": "2026-10-20",
       "kind": "direct",
@@ -1266,10 +1292,11 @@
           [
             "Independent merge",
             "Change the printed text on one branch and arithmetic in a separate function on another.",
-            "Three-way merge succeeded. Runtime printed the first edit; the exported projection contained the second.",
-            "The merged arithmetic change was inspected in the projection, not separately executed. Complex multi-file merges remain untested.",
+            "Three-way merge succeeded. Runtime printed the text edit, and an executable test confirmed the arithmetic edit: 40 minus 2 returned 38.",
+            "This closes the earlier projection-only arithmetic check. Complex multi-file merges and concurrent writers remain untested.",
             [
-              "zero-contract-review"
+              "zero-contract-review",
+              "all-page-gap-review"
             ]
           ],
           [
@@ -1319,6 +1346,10 @@
         {
           "heading": "What this guide does not rank",
           "body": "We do not rank market share, search volume, speed or agent success rates. These pages distinguish inspected implementation from official claims and unknowns. A useful performance comparison would need the same workloads, appropriate targets and repeated measurements."
+        },
+        {
+          "heading": "What this review tested",
+          "body": "The direct comparisons now link runtime evidence for Bend, BAML and Zerolang. The Kujo workflow claims also have positive and negative Spec/Eval fixtures, RunLedger and Fence contract tests, and a Linux Workcell Docker run. Python, TypeScript and Rust remain documented alternatives; this guide makes no measured productivity or performance ranking."
         }
       ],
       "sources": [
@@ -1333,9 +1364,10 @@
         "rust",
         "zero-patch",
         "runtime-review",
-        "baml-boundary-review"
+        "baml-boundary-review",
+        "all-page-gap-review"
       ],
-      "verified": "2026-10-19",
+      "verified": "2026-10-20",
       "kind": "discovery",
       "faq": [
         [
@@ -1566,6 +1598,10 @@
         {
           "heading": "Start with one workflow you can test",
           "body": "Build one tool-calling workflow with offline fixtures, then add one live provider with explicit credentials and limits. Keep the task input, versions, tool results and independent checks. The workflow guide shows how to turn those records into evidence a reviewer can inspect."
+        },
+        {
+          "heading": "What this review tested",
+          "body": "Agents SDK passed six budget and 32 runner contract tests, including cancellation, timeout, retry and approval-denial cases with offline callbacks. Dispatch completed an offline workflow and recognized it as already completed on resume. Watchdog’s loopback proxy suite passed. Workcell ran Docker success/failure and receipt-integrity controls on Linux with Kujo 1.6.0. These cases do not establish live-provider reliability, interrupted external-effect recovery or general deployment security."
         }
       ],
       "sources": [
@@ -1579,9 +1615,10 @@
         "typescript",
         "rust",
         "baml-boundary-review",
-        "workcell-boundary"
+        "workcell-boundary",
+        "all-page-gap-review"
       ],
-      "verified": "2026-10-19",
+      "verified": "2026-10-20",
       "kind": "discovery",
       "faq": [
         [
@@ -1801,6 +1838,10 @@
         {
           "heading": "Adoption without a language rewrite",
           "body": "You can add verification around a repository without changing its language. Record a baseline, then add the smallest check that catches a real failure. The workflow guide provides runnable checks of correct and incorrect outputs without a model provider or paid service."
+        },
+        {
+          "heading": "What this review tested",
+          "body": "Spec accepted a valid task record and rejected a missing goal. Eval accepted the expected JSON value and rejected a different expected value. Fence passed 317 upstream assertions; RunLedger passed 81 unit assertions and its CLI suite. ShipCheck’s gate passed a repository containing a test that exited 7 when run separately: test presence is not test execution."
         }
       ],
       "sources": [
@@ -1811,9 +1852,10 @@
         "workcell",
         "runledger",
         "shipcheck",
-        "artifact-checker"
+        "artifact-checker",
+        "all-page-gap-review"
       ],
-      "verified": "2026-10-19",
+      "verified": "2026-10-20",
       "kind": "discovery",
       "faq": [
         [
@@ -2053,6 +2095,10 @@
         {
           "heading": "Interpret the result narrowly",
           "body": "A pass shows that the checker accepted the correct output and rejected the specified invalid cases for this small task. It does not compare languages, evaluate a coding agent or prove an application correct. To evaluate an agent, use representative tasks, record all attempts and configurations, and report manual intervention. Do not turn this exercise into a general success-rate claim."
+        },
+        {
+          "heading": "What this review tested",
+          "body": "The public exercise accepted the correct artifact and rejected wrong-value, malformed and wrong-type controls. A separate producer printed correct JSON but exited 7; the exercise correctly failed. Kujo 1.8.0 was rejected by the 1.8.2 version gate. Workcell also accepted an intact Docker run receipt and rejected a modified log. Revision matching and application-specific acceptance criteria remain the reviewer’s responsibility."
         }
       ],
       "sources": [
@@ -2062,9 +2108,10 @@
         "workcell",
         "shipcheck",
         "vercel",
-        "artifact-checker"
+        "artifact-checker",
+        "all-page-gap-review"
       ],
-      "verified": "2026-10-19",
+      "verified": "2026-10-20",
       "kind": "guide",
       "faq": [
         [
@@ -2269,7 +2316,7 @@
     }
   ],
   "hub": {
-    "reviewed": "2026-10-19",
+    "reviewed": "2026-10-20",
     "profiles": [
       {
         "name": "Kujo",

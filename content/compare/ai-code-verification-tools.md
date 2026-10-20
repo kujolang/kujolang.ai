@@ -4,14 +4,14 @@ title: "AI code verification tools: what each check can establish"
 description: "Compare static checks, tests, proofs, execution receipts and release gates for AI-generated code, with concrete Kujo ecosystem roles."
 seo_title: "AI code verification tools: what each check can establish"
 custom_url: "ai-code-verification-tools"
-date: "2026-10-19"
+date: "2026-10-20"
 author: "1"
 social_image: "/assets/images/social/ai-code-verification-tools.jpg"
 ---
 
 Use independent checks tied to clear requirements to verify AI-generated code. A type checker rejects some invalid programs, a test checks selected behavior, and a proof establishes a stated property within its assumptions. An execution record helps show what ran. Build your verification process around the facts you need each tool to establish.
 
-Last reviewed: 2026-10-19. Canonical page: https://kujolang.ai/compare/ai-code-verification-tools/
+Last reviewed: 2026-10-20. Canonical page: https://kujolang.ai/compare/ai-code-verification-tools/
 
 ## Choose checks that catch the failures you care about.
 
@@ -211,6 +211,10 @@ Choose checks by failure mode. Validate structure and values for malformed outpu
 
 You can add verification around a repository without changing its language. Record a baseline, then add the smallest check that catches a real failure. The workflow guide provides runnable checks of correct and incorrect outputs without a model provider or paid service.
 
+## What this review tested
+
+Spec accepted a valid task record and rejected a missing goal. Eval accepted the expected JSON value and rejected a different expected value. Fence passed 317 upstream assertions; RunLedger passed 81 unit assertions and its CLI suite. ShipCheck’s gate passed a repository containing a test that exited 7 when run separately: test presence is not test execution.
+
 ## Frequently asked questions
 
 ### Can a passing test suite prove an agent finished the task?
@@ -227,6 +231,7 @@ It establishes that the suite’s assertions passed under the recorded condition
 - [Runledger scope and implementation](https://github.com/kujolang/runledger/blob/334ddd4d33c8cb2612c8edab971ee69170824133/src/record.kujo) — implementation inspected; 334ddd4d33c8cb2612c8edab971ee69170824133; reviewed 2026-10-19.
 - [Shipcheck scope and implementation](https://github.com/kujolang/shipcheck/blob/ee4cfd052c0522eebedc0eead223cbb22490b357/src/checks.kujo) — implementation inspected; ee4cfd052c0522eebedc0eead223cbb22490b357; reviewed 2026-10-19.
 - [Runnable artifact checker and negative controls](https://kujolang.ai/compare/evidence/verify.py) — implementation inspected and executed; independent Python checker, not Eval; Kujo 1.8.2 producer; Python 3 checker; reviewed 2026-10-19.
+- [All-page runtime gap review and retained evidence](https://github.com/kujolang/kujolang.ai/tree/main/comparison/research/all-page-gap-review-2026-10-20) — Pinned ecosystem fixtures; Linux Docker execution; extended Zerolang merge and BAML nightly tests; Kujo 1.8.2 local; Workcell Docker with Kujo 1.6.0; Zerolang 0.3.4; BAML nightly 20261019.a; reviewed 2026-10-20.
 
 ## Related pages
 
