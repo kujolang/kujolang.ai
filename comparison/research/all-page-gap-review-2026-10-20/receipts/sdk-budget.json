@@ -1,0 +1,14 @@
+{
+  "name": "sdk-budget",
+  "repo": "agents-sdk",
+  "args": [
+    "$WORKSPACE/work/runtime-1.8.2/kujo",
+    "test-run",
+    "tests/budget_limits_contract_tests.kujo",
+    "-v"
+  ],
+  "exit": 0,
+  "stdout": "\n============================================================\nTest Results\n============================================================\n  \u2713 budget contract key registries include required counters and limits (16ms)\n  \u2713 budget constructors normalize policy budget and usage payloads (16ms)\n  \u2713 budget usage increment helper updates counters deterministically (20ms)\n  \u2713 budget evaluation reports within limits for valid usage (27ms)\n  \u2713 budget evaluation returns budget_exceeded with deterministic details (25ms)\n  \u2713 budget evaluation supports observe mode while surfacing exceeded limits (27ms)\n\nTests: 6 total, 6 passed, 0 failed\nTime:  138ms\n============================================================\n\nAll tests passed! \u2728\n",
+  "stderr": "",
+  "seconds": 0.2
+}

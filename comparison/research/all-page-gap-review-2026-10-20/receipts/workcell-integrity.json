@@ -1,0 +1,13 @@
+{
+  "name": "workcell-integrity",
+  "repo": "workcell",
+  "args": [
+    "$WORKSPACE/work/runtime-1.8.2/kujo",
+    "run",
+    "tests/evidence_recovery_test.kujo"
+  ],
+  "exit": 0,
+  "stdout": "PASS v1 definition maps to semantic requirements\nPASS fixture resolves complete portable default\nPASS controls ledger preserves all requested controls\nPASS controls ledger has no false enforcement claim\nPASS controls ledger rejects semantic resolution drift\nPASS receipt v2 initializes normalized sections\nPASS receipt v2 checkpoint persists atomically\nPASS receipt v2 finalizes cleanup and status\nPASS receipt v2 verifies fully offline\nPASS receipt v2 rejects invented amount for unknown cost\nPASS receipt v2 rejects persisted signed transport URL\nPASS provision intent is durable before a handle exists\nPASS provision intent can reconcile an inventory-owned orphan\nPASS provision intent reloads before handle attachment\nPASS attached recovery test handle is valid\nPASS provisioned handle attaches to its durable intent\nPASS provisioned handle creates durable recovery journal\nPASS recovery journal reload validates ownership\nPASS recovery plan refuses ownership mismatch\nPASS recovery includes every inventoried resource with exact ownership\nPASS recovery destroys an orphan found from provision intent\nPASS recovery dry run inventories without deleting\nPASS recovery invokes ownership-scoped destroy\nPASS recovery never destroys a handle resource absent from verified inventory\nPASS recovery journal preserves attempt timeline\nPassed: 25\nFailed: 0\n",
+  "stderr": "",
+  "seconds": 3.503
+}

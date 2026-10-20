@@ -1,0 +1,13 @@
+{
+  "name": "shipcheck-test-actually-fails",
+  "repo": "gate-fixture",
+  "args": [
+    "$WORKSPACE/work/runtime-1.8.2/kujo",
+    "run",
+    "tests/fails.kujo"
+  ],
+  "exit": 7,
+  "stdout": "",
+  "stderr": "",
+  "seconds": 0.024
+}

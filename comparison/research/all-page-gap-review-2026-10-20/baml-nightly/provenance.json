@@ -1,0 +1,8 @@
+{
+  "tag": "baml-language-0.22.3-nightly.20261019.a",
+  "releaseURL": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.3-nightly.20261019.a",
+  "bridge": "0.22.3.dev2026101900",
+  "archiveSHA256": "4700fedbdd562e7a0a3f6aa2d9a1566ff6f4a27831750ea9deb2d6b8528c7b19",
+  "cliSHA256": "206872cdb3129d8a2a48a3a319baf3e956546c31ed18fce50daeb65229461bcf",
+  "requirements": "annotated-types==0.8.0\nbaml_bridge==0.22.3.dev2026101900\nprotobuf==7.36.2\npydantic==2.14.1\npydantic_core==2.50.1\ntyping-inspection==0.4.4\ntyping_extensions==4.16.0\n"
+}

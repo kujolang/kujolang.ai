@@ -1,0 +1,13 @@
+{
+  "name": "fence-contract",
+  "repo": "fence",
+  "args": [
+    "$WORKSPACE/work/runtime-1.8.2/kujo",
+    "run",
+    "tests/fence_tests.kujo"
+  ],
+  "exit": 0,
+  "stdout": "\nFence tests: 317 passed, 0 failed\n",
+  "stderr": "",
+  "seconds": 2.455
+}

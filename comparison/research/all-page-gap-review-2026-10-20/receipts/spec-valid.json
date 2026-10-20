@@ -1,0 +1,15 @@
+{
+  "name": "spec-valid",
+  "repo": "spec",
+  "args": [
+    "bash",
+    "scripts/spec",
+    "validate",
+    "review-valid.spec.json",
+    "--json"
+  ],
+  "exit": 0,
+  "stdout": "{\"errors\": [], \"valid\": true, \"warnings\": []}\n",
+  "stderr": "",
+  "seconds": 0.762
+}

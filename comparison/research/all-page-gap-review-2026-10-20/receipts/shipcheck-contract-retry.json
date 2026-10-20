@@ -1,0 +1,12 @@
+{
+  "name": "shipcheck-contract-retry",
+  "repo": "shipcheck",
+  "args": [
+    "bash",
+    "tests/cli-output-contract.sh"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": "",
+  "seconds": 2.908
+}

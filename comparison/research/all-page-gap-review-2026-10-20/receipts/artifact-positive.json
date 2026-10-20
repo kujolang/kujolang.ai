@@ -1,0 +1,12 @@
+{
+  "name": "artifact-positive",
+  "repo": "artifact/positive",
+  "args": [
+    "python3",
+    "verify.py"
+  ],
+  "exit": 0,
+  "stdout": "PASS: correct artifact accepted; incorrect and malformed artifacts rejected\n",
+  "stderr": "",
+  "seconds": 0.649
+}

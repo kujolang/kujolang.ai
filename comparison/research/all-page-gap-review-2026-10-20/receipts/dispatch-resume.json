@@ -1,0 +1,19 @@
+{
+  "name": "dispatch-resume",
+  "repo": "dispatch",
+  "args": [
+    "$WORKSPACE/work/runtime-1.8.2/kujo",
+    "run",
+    "dispatch.kujo",
+    "resume",
+    "run-1792511698663-8891",
+    "--yes",
+    "--non-interactive",
+    "--output-root",
+    "tests/tmp/comparison-review"
+  ],
+  "exit": 0,
+  "stdout": "Run is already completed: run-1792511698663-8891\n",
+  "stderr": "",
+  "seconds": 0.913
+}

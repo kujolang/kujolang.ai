@@ -1,0 +1,14 @@
+{
+  "name": "artifact-wrong-runtime",
+  "repo": "artifact/positive",
+  "args": [
+    "env",
+    "KUJO_BIN=$WORKSPACE/work/runtime-1.8.0/kujo",
+    "python3",
+    "verify.py"
+  ],
+  "exit": 1,
+  "stdout": "",
+  "stderr": "This exercise is pinned to kujo 1.8.2; observed kujo 1.8.0\n",
+  "seconds": 0.144
+}

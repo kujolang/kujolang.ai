@@ -1,0 +1,12 @@
+{
+  "name": "watchdog-proxy",
+  "repo": "watchdog",
+  "args": [
+    "node",
+    "tests/proxy_integration_stub_suite.js"
+  ],
+  "exit": 0,
+  "stdout": "proxy_integration_stub_suite: passthrough start\nproxy_integration_stub_suite: json passthrough ok\nproxy_integration_stub_suite: named profile ok\nproxy_integration_stub_suite: query passthrough ok\nproxy_integration_stub_suite: sse passthrough ok\nproxy_integration_stub_suite: upstream error ok\nproxy_integration_stub_suite: malformed upstream ok\nproxy_integration_stub_suite: timeout upstream ok\nproxy_integration_stub_suite: unsafe path ok\nproxy_integration_stub_suite: passthrough done\nproxy_integration_stub_suite: override start\nproxy_integration_stub_suite: override done\nproxy_integration_stub_suite: PASS\n",
+  "stderr": "",
+  "seconds": 7.003
+}

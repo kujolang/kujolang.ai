@@ -1,0 +1,12 @@
+{
+  "name": "shipcheck-contract",
+  "repo": "shipcheck",
+  "args": [
+    "bash",
+    "tests/cli-output-contract.sh"
+  ],
+  "exit": 1,
+  "stdout": "",
+  "stderr": "",
+  "seconds": 0.263
+}

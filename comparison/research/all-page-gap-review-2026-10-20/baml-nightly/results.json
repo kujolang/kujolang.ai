@@ -1,0 +1,226 @@
+[
+  {
+    "name": "int",
+    "expression": "sdk.echo(42)",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"int\", \"repr\": \"42\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "string",
+    "expression": "sdk.echo(\"wrong\")",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"str\", \"repr\": \"'wrong'\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "numeric-string",
+    "expression": "sdk.echo(\"42\")",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"str\", \"repr\": \"'42'\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "bool",
+    "expression": "sdk.echo(True)",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"bool\", \"repr\": \"True\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "float",
+    "expression": "sdk.echo(1.5)",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"float\", \"repr\": \"1.5\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "null",
+    "expression": "sdk.echo(None)",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"NoneType\", \"repr\": \"None\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "list-to-int",
+    "expression": "sdk.echo([1,\"bad\"])",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"list\", \"repr\": \"[1, 'bad']\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "async-string",
+    "expression": "asyncio.run(sdk.echo_async(\"wrong\"))",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"str\", \"repr\": \"'wrong'\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "list-valid",
+    "expression": "sdk.items([1,2])",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"list\", \"repr\": \"[1, 2]\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "list-invalid-member",
+    "expression": "sdk.items([1,\"bad\"])",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"list\", \"repr\": \"[1, 'bad']\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "optional-invalid",
+    "expression": "sdk.optional(\"bad\")",
+    "exit": 0,
+    "stdout": "{\"kind\": \"error\", \"type\": \"TypeError\", \"message\": \"Value of type 'string' does not match any member of union [Int, Null]\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "plus-valid",
+    "expression": "sdk.plus(41)",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"int\", \"repr\": \"42\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "plus-invalid",
+    "expression": "sdk.plus(\"bad\")",
+    "exit": -11,
+    "stdout": "",
+    "stderr": "Fatal Python error: Segmentation fault\n\nThread 0x00007ff847aa8c40 (most recent call first):\n  File \"$WORKSPACE/work/all-page-gap-review/baml-nightly/venv/lib/python3.10/site-packages/baml_bridge/__init__.py\", line 452 in _sync\n  File \"<string>\", line 4 in <module>\n\nExtension modules: google._upb._message (total: 1)\n"
+  },
+  {
+    "name": "missing-arg",
+    "expression": "sdk.echo()",
+    "exit": 0,
+    "stdout": "{\"kind\": \"error\", \"type\": \"BamlError\", \"message\": \"baml.errors.InvalidArgument: InvalidArgument(message='Invalid argument: value')\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "unknown-arg",
+    "expression": "sdk.echo(1,extra=2)",
+    "exit": 0,
+    "stdout": "{\"kind\": \"error\", \"type\": \"BamlError\", \"message\": \"baml.errors.InvalidArgument: InvalidArgument(message='Invalid argument: extra arguments: extra')\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "duplicate-arg",
+    "expression": "sdk.echo(1,value=2)",
+    "exit": 0,
+    "stdout": "{\"kind\": \"error\", \"type\": \"TypeError\", \"message\": \"multiple values for argument 'value'\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "unsupported-object",
+    "expression": "sdk.echo(object())",
+    "exit": 0,
+    "stdout": "{\"kind\": \"error\", \"type\": \"TypeError\", \"message\": \"Cannot encode argument 'value' of type object into baml_inbound.proto\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "large-int",
+    "expression": "sdk.echo(2**80)",
+    "exit": 0,
+    "stdout": "{\"kind\": \"error\", \"type\": \"TypeError\", \"message\": \"bigint value 1208925819614629174706176 does not fit in i64\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "model-valid",
+    "expression": "sdk.Answer(value=42)",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"Answer\", \"repr\": \"Answer(value=42)\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "model-invalid",
+    "expression": "sdk.Answer(value=\"bad\")",
+    "exit": 0,
+    "stdout": "{\"kind\": \"error\", \"type\": \"ValidationError\", \"message\": \"1 validation error for Answer\\nvalue\\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='bad', input_type=str]\\n    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "model-coercion",
+    "expression": "sdk.Answer(value=\"42\")",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"Answer\", \"repr\": \"Answer(value=42)\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "strict-model",
+    "expression": "sdk.Answer.model_validate({\"value\":\"42\"},strict=True)",
+    "exit": 0,
+    "stdout": "{\"kind\": \"error\", \"type\": \"ValidationError\", \"message\": \"1 validation error for Answer\\nvalue\\n  Input should be a valid integer [type=int_type, input_value='42', input_type=str]\\n    For further information visit https://errors.pydantic.dev/2.14/v/int_type\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "class-return-valid",
+    "expression": "sdk.answer(sdk.Answer(value=42))",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"Answer\", \"repr\": \"Answer(value=42)\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "class-return-forged",
+    "expression": "sdk.answer(sdk.Answer.model_construct(value=\"bad\"))",
+    "exit": 0,
+    "stdout": "{\"kind\": \"error\", \"type\": \"ValidationError\", \"message\": \"1 validation error for Answer\\nvalue\\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='bad', input_type=str]\\n    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "field-forged",
+    "expression": "sdk.field(sdk.Answer.model_construct(value=\"bad\"))",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"str\", \"repr\": \"'bad'\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "constructed-return-invalid",
+    "expression": "sdk.construct(\"bad\")",
+    "exit": 0,
+    "stdout": "{\"kind\": \"error\", \"type\": \"ValidationError\", \"message\": \"1 validation error for Answer\\nvalue\\n  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='bad', input_type=str]\\n    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "class-dict",
+    "expression": "sdk.answer({\"value\":42})",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"Answer\", \"repr\": \"Answer(value=42)\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "parse-valid",
+    "expression": "sdk.Extract_spec().parse('{\"value\":42}')",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"Answer\", \"repr\": \"Answer(value=42)\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "parse-invalid",
+    "expression": "sdk.Extract_spec().parse('{\"value\":\"bad\"}')",
+    "exit": 0,
+    "stdout": "{\"kind\": \"error\", \"type\": \"BamlError\", \"message\": \"baml.errors.ParseError: ParseError(message='<root>: Failed while parsing required fields: missing=0, unparsed=1\\\\n  - <root>: Failed to parse field value: value: Expected int, got String(\\\"bad\\\", Complete).\\\\n    - value: Expected int, got String(\\\"bad\\\", Complete).')\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "parse-coercion",
+    "expression": "sdk.Extract_spec().parse('{\"value\":\"42\"}')",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"Answer\", \"repr\": \"Answer(value=42)\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "parse-wrong-domain",
+    "expression": "sdk.Extract_spec().parse('{\"value\":41}')",
+    "exit": 0,
+    "stdout": "{\"kind\": \"return\", \"type\": \"Answer\", \"repr\": \"Answer(value=41)\"}\n",
+    "stderr": ""
+  },
+  {
+    "name": "strict-host-wrapper",
+    "expression": "TypeAdapter(int).validate_python(\"42\",strict=True)",
+    "exit": 0,
+    "stdout": "{\"kind\": \"error\", \"type\": \"ValidationError\", \"message\": \"1 validation error for int\\n  Input should be a valid integer [type=int_type, input_value='42', input_type=str]\\n    For further information visit https://errors.pydantic.dev/2.14/v/int_type\"}\n",
+    "stderr": ""
+  }
+]

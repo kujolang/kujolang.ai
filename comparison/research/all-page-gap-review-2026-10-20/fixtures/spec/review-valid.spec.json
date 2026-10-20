@@ -1,0 +1,1 @@
+{"name": "Comparison fixture", "goal": "Produce an integer total", "acceptance_criteria": ["total equals 42"]}

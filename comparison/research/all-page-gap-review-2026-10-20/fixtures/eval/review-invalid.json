@@ -1,0 +1,1 @@
+{"name": "comparison-invalid", "tests": [{"name": "total equals expected", "check": "json_value_equals", "params": {"path": "review-result.json", "json_path": "total", "expected": 41}}]}

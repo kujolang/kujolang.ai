@@ -1,0 +1,12 @@
+{
+  "name": "artifact-failed-producer",
+  "repo": "artifact/failed-producer",
+  "args": [
+    "python3",
+    "verify.py"
+  ],
+  "exit": 1,
+  "stdout": "FAIL\n",
+  "stderr": "",
+  "seconds": 0.591
+}

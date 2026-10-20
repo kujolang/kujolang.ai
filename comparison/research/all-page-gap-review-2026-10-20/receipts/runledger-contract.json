@@ -1,0 +1,12 @@
+{
+  "name": "runledger-contract",
+  "repo": "runledger",
+  "args": [
+    "bash",
+    "tests/run.sh"
+  ],
+  "exit": 0,
+  "stdout": "\nRunLedger tests: 81 passed, 0 failed\nWrote report to /var/folders/wb/0cck3lgd08n55g_8ly9qmf_00000gn/T//runledger-cli-test.jg82m9/page-report.md\nAdded note to 2026-10-20-codex-cli-test-001\nAdded note to 2026-10-20-codex-cli-test-001\nAdded note to 2026-10-20-codex-cli-test-001\nAdded follow-up to 2026-10-20-codex-cli-test-001\nRecorded command for 2026-10-20-codex-cli-test-001\nRecorded test for 2026-10-20-codex-cli-test-001\nRecorded test for 2026-10-20-codex-cli-test-001\nUpdated usage for 2026-10-20-codex-cli-test-001\nUpdated cost for 2026-10-20-codex-cli-test-001\nUpdated correlation for 2026-10-20-codex-cli-test-001\nFinished run: 2026-10-20-codex-cli-test-001\n  status:       partial\n  end commit:   545387b8e919eb5d37f206c43ebb10a9179f2a06\n  changed files: 1\nWrote report to /var/folders/wb/0cck3lgd08n55g_8ly9qmf_00000gn/T//runledger-cli-test.jg82m9/RUNLEDGER_REPORT.md\nWrote report to /var/folders/wb/0cck3lgd08n55g_8ly9qmf_00000gn/T//runledger-cli-test.jg82m9/nested/out/RUNLEDGER_REPORT.md\nFinished run: 2026-10-20-local-agent-committed-work-001\n  status:       pass\n  end commit:   b28f08177520fd9116565b28cf06462c4848f353\n  changed files: 1\nFinished run: 2026-10-20-local-agent-no-git-001\n  status:       pass\n  end commit:   -\n  changed files: 0\nFinished run: 2026-10-20-local-agent-no-commit-repo-001\n  status:       pass\n  end commit:   -\n  changed files: 1\nFinished run: 2026-10-20-local-agent-repo-override-001\n  status:       partial\n  end commit:   b188a912f3754d51bf7e436311ba41a502aaa590\n  changed files: 1\nFinished run: 2026-10-20-local-agent-sha256-001\n  status:       pass\n  end commit:   d02be4ec7be0a35503422aa762d35bc33e02cdcd2a9c8db0c97a70065f142190\n  changed files: 1\nCLI integration: ok\nruntime_measurement_reference: PASS\n",
+  "stderr": "",
+  "seconds": 18.593
+}

@@ -1,0 +1,15 @@
+{
+  "name": "spec-invalid",
+  "repo": "spec",
+  "args": [
+    "bash",
+    "scripts/spec",
+    "validate",
+    "review-invalid.spec.json",
+    "--json"
+  ],
+  "exit": 1,
+  "stdout": "{\"errors\": [\"Missing required field: goal\"], \"valid\": false, \"warnings\": []}\n",
+  "stderr": "",
+  "seconds": 0.697
+}

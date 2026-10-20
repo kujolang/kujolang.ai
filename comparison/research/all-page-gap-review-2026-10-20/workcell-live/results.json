@@ -1,0 +1,97 @@
+[
+  {
+    "name": "runtime",
+    "args": [
+      "/opt/hostedtoolcache/kujo/v1.6.0/Linux-X64/kujo",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "kujo 1.6.0\n",
+    "stderr": ""
+  },
+  {
+    "name": "docker",
+    "args": [
+      "docker",
+      "version",
+      "--format",
+      "{{.Server.Version}}"
+    ],
+    "exit": 0,
+    "stdout": "28.0.4\n",
+    "stderr": ""
+  },
+  {
+    "name": "hello",
+    "args": [
+      "/home/runner/work/kujolang.ai/kujolang.ai/review-workcell/bin/workcell",
+      "run",
+      "--file",
+      "examples/hello/workcell.json",
+      "--repo",
+      "/tmp/workcell-comparison-msc3wm8q/repo",
+      "--output",
+      "/tmp/workcell-comparison-msc3wm8q/hello",
+      "--no-pull"
+    ],
+    "exit": 0,
+    "stdout": "Workcell completed\n\nRun:           wc-11d21abe46a74c0d95b741ce77afd21e\nExit code:     0\nReceipt:       /tmp/workcell-comparison-msc3wm8q/hello/wc-11d21abe46a74c0d95b741ce77afd21e/receipt.json\nPatch:         /tmp/workcell-comparison-msc3wm8q/hello/wc-11d21abe46a74c0d95b741ce77afd21e/changes.patch\nOutput:        /tmp/workcell-comparison-msc3wm8q/hello/wc-11d21abe46a74c0d95b741ce77afd21e\nCleanup:       complete\nVerification:   true\nChanged files:  1\nArtifacts:      [hello.txt]\n",
+    "stderr": ""
+  },
+  {
+    "name": "verify-intact",
+    "args": [
+      "/home/runner/work/kujolang.ai/kujolang.ai/review-workcell/bin/workcell",
+      "verify",
+      "--run",
+      "/tmp/workcell-comparison-msc3wm8q/hello/wc-11d21abe46a74c0d95b741ce77afd21e",
+      "--json"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"manifest\": {\n    \"bytes\": 14566,\n    \"files\": 10,\n    \"ok\": true,\n    \"schema_version\": \"workcell-manifest/v1\"\n  },\n  \"ok\": true,\n  \"receipt\": {\n    \"ok\": true,\n    \"schema_version\": \"workcell-receipt/v1\"\n  },\n  \"run_dir\": \"/tmp/workcell-comparison-msc3wm8q/hello/wc-11d21abe46a74c0d95b741ce77afd21e\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "name": "verify-modified",
+    "args": [
+      "/home/runner/work/kujolang.ai/kujolang.ai/review-workcell/bin/workcell",
+      "verify",
+      "--run",
+      "/tmp/workcell-comparison-msc3wm8q/hello/wc-11d21abe46a74c0d95b741ce77afd21e",
+      "--json"
+    ],
+    "exit": 8,
+    "stdout": "{\n  \"manifest\": {\n    \"error\": \"integrity manifest byte count mismatch: stdout.log\",\n    \"ok\": false\n  },\n  \"ok\": false,\n  \"receipt\": {\n    \"error\": \"manifest verification failed before receipt verification\",\n    \"ok\": false\n  },\n  \"run_dir\": \"/tmp/workcell-comparison-msc3wm8q/hello/wc-11d21abe46a74c0d95b741ce77afd21e\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "name": "failed-workload",
+    "args": [
+      "/home/runner/work/kujolang.ai/kujolang.ai/review-workcell/bin/workcell",
+      "run",
+      "--file",
+      "/tmp/workcell-comparison-msc3wm8q/failure.json",
+      "--repo",
+      "/tmp/workcell-comparison-msc3wm8q/repo",
+      "--output",
+      "/tmp/workcell-comparison-msc3wm8q/failure",
+      "--no-pull"
+    ],
+    "exit": 7,
+    "stdout": "Workcell failed during workload-failed\nCause: container exited with code 7\n\nRun:           wc-b76b60b5d882475394d68e20d5f8efdf\nExit code:     7\nReceipt:       /tmp/workcell-comparison-msc3wm8q/failure/wc-b76b60b5d882475394d68e20d5f8efdf/receipt.json\nPatch:         /tmp/workcell-comparison-msc3wm8q/failure/wc-b76b60b5d882475394d68e20d5f8efdf/changes.patch\nOutput:        /tmp/workcell-comparison-msc3wm8q/failure/wc-b76b60b5d882475394d68e20d5f8efdf\nCleanup:       complete\nVerification:   false\nChanged files:  0\nArtifacts:      []\n",
+    "stderr": ""
+  },
+  {
+    "name": "source-unchanged",
+    "args": [
+      "git",
+      "-C",
+      "/tmp/workcell-comparison-msc3wm8q/repo",
+      "diff",
+      "--exit-code"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

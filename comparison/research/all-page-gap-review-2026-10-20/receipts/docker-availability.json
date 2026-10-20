@@ -1,0 +1,15 @@
+{
+  "name": "docker-availability",
+  "repo": "workcell",
+  "args": [
+    "docker",
+    "info",
+    "--format",
+    "{{.ServerVersion}}"
+  ],
+  "exit": null,
+  "timeout": 15,
+  "stdout": "None",
+  "stderr": "None",
+  "seconds": 15.01
+}

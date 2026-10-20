@@ -1,0 +1,109 @@
+[
+  {
+    "route": "/compare/",
+    "reviewed": [
+      "project identity",
+      "version selection",
+      "six dimensions",
+      "shared direct-page sections",
+      "editorial trial recommendations"
+    ],
+    "newEvidence": "Shared Kujo evidence and Docker boundary cells updated",
+    "remaining": [
+      "Bend GPU and comparative performance",
+      "live providers and cloud tracing",
+      "general proof-system absence cannot be established by finite tests"
+    ]
+  },
+  {
+    "route": "/compare/kujo-vs-bend/",
+    "reviewed": [
+      "summary",
+      "sections",
+      "dimensions or guide matrices",
+      "architecture cards",
+      "examples",
+      "FAQ",
+      "sources and versions"
+    ],
+    "newEvidence": "Bend\u2019s proof and execution results are backed by the dedicated runtime review. The Kujo side now also has executed Spec, Eval and RunLedger controls, plus a Linux Workcell Docker fixture. Bend GPU execution, parallel speedup and a direct Kujo\u2013Bend adapter remain outside this review."
+  },
+  {
+    "route": "/compare/kujo-vs-baml/",
+    "reviewed": [
+      "summary",
+      "sections",
+      "dimensions or guide matrices",
+      "architecture cards",
+      "examples",
+      "FAQ",
+      "sources and versions"
+    ],
+    "newEvidence": "The 20261019.a nightly and matching Python bridge reproduced all 32 prior boundary outcomes, including the invalid-integer arithmetic crash. Hosted model quality, cloud trace delivery and other language bridges remain outside these local fixtures. The upstream issue remains the place to follow maintainer status."
+  },
+  {
+    "route": "/compare/kujo-vs-zero/",
+    "reviewed": [
+      "summary",
+      "sections",
+      "dimensions or guide matrices",
+      "architecture cards",
+      "examples",
+      "FAQ",
+      "sources and versions"
+    ],
+    "newEvidence": "The extended merge test executed both independent edits: main printed the edited text, and a generated test confirmed that the merged arithmetic returned 38 for 40 and 2. The 55 command observations include the earlier refresh, conflict and rollback controls. Concurrent writers, power-loss recovery and complex multi-file merges remain untested."
+  },
+  {
+    "route": "/compare/ai-native-programming-languages/",
+    "reviewed": [
+      "summary",
+      "sections",
+      "dimensions or guide matrices",
+      "architecture cards",
+      "examples",
+      "FAQ",
+      "sources and versions"
+    ],
+    "newEvidence": "The direct comparisons now link runtime evidence for Bend, BAML and Zerolang. The Kujo workflow claims also have positive and negative Spec/Eval fixtures, RunLedger and Fence contract tests, and a Linux Workcell Docker run. Python, TypeScript and Rust remain documented alternatives; this guide makes no measured productivity or performance ranking."
+  },
+  {
+    "route": "/compare/programming-languages-for-ai-agents/",
+    "reviewed": [
+      "summary",
+      "sections",
+      "dimensions or guide matrices",
+      "architecture cards",
+      "examples",
+      "FAQ",
+      "sources and versions"
+    ],
+    "newEvidence": "Agents SDK passed six budget and 32 runner contract tests, including cancellation, timeout, retry and approval-denial cases with offline callbacks. Dispatch completed an offline workflow and recognized it as already completed on resume. Watchdog\u2019s loopback proxy suite passed. Workcell ran Docker success/failure and receipt-integrity controls on Linux with Kujo 1.6.0. These cases do not establish live-provider reliability, interrupted external-effect recovery or general deployment security."
+  },
+  {
+    "route": "/compare/ai-code-verification-tools/",
+    "reviewed": [
+      "summary",
+      "sections",
+      "dimensions or guide matrices",
+      "architecture cards",
+      "examples",
+      "FAQ",
+      "sources and versions"
+    ],
+    "newEvidence": "Spec accepted a valid task record and rejected a missing goal. Eval accepted the expected JSON value and rejected a different expected value. Fence passed 317 upstream assertions; RunLedger passed 81 unit assertions and its CLI suite. ShipCheck\u2019s gate passed a repository containing a test that exited 7 when run separately: test presence is not test execution."
+  },
+  {
+    "route": "/compare/verify-agent-workflows/",
+    "reviewed": [
+      "summary",
+      "sections",
+      "dimensions or guide matrices",
+      "architecture cards",
+      "examples",
+      "FAQ",
+      "sources and versions"
+    ],
+    "newEvidence": "The public exercise accepted the correct artifact and rejected wrong-value, malformed and wrong-type controls. A separate producer printed correct JSON but exited 7; the exercise correctly failed. Kujo 1.8.0 was rejected by the 1.8.2 version gate. Workcell also accepted an intact Docker run receipt and rejected a modified log. Revision matching and application-specific acceptance criteria remain the reviewer\u2019s responsibility."
+  }
+]

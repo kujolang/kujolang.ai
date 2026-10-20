@@ -1,0 +1,2 @@
+# Kujo 1.8.1; deterministic artifact workload, not a performance benchmark.
+print(to_json({"total": 6 * 7}))

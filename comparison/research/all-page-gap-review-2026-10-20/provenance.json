@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-20",
+  "platform": "macOS-26.6.2-x86_64-i386-64bit",
+  "python": "3.10.5",
+  "node": "v26.7.0",
+  "kujo": "kujo 1.8.2",
+  "kujoSHA256": "e46ac33e49197cca6d30ef2f375e54022d1e1634623556acf4a147167f35c269",
+  "workcellWorkflow": "https://github.com/kujolang/kujolang.ai/actions/runs/39453238913",
+  "workcellArtifactID": 12279750271,
+  "sourcePins": {
+    "spec": "1211f37a09314be7150734bf15a55e9b2ea6504d",
+    "eval": "71e66dff780d6930bcbe093c046bf31aa26411df",
+    "runledger": "334ddd4d33c8cb2612c8edab971ee69170824133",
+    "shipcheck": "ee4cfd052c0522eebedc0eead223cbb22490b357",
+    "fence": "d3173049b5365af975624fddd48e943d39738c75",
+    "agents-sdk": "6c4a54e74855c605eea67253f6808b16b8c63086",
+    "dispatch": "71ca927c65598ecfe7c1816068e047cf50b915e0",
+    "watchdog": "ad6fbc287c626539c1b3a69b4d3d31528b70edaa",
+    "workcell": "a276a92c6bac9279a8cb36ace9687ade34d5128f"
+  }
+}

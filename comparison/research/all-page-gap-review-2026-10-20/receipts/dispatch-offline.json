@@ -1,0 +1,19 @@
+{
+  "name": "dispatch-offline",
+  "repo": "dispatch",
+  "args": [
+    "$WORKSPACE/work/runtime-1.8.2/kujo",
+    "run",
+    "dispatch.kujo",
+    "demo",
+    "Comparison evidence",
+    "--yes",
+    "--non-interactive",
+    "--output-root",
+    "tests/tmp/comparison-review"
+  ],
+  "exit": 0,
+  "stdout": "Run ID: run-1792511698663-8891\nStatus: completed\nRun Directory: tests/tmp/comparison-review/run-1792511698663-8891\nReport: tests/tmp/comparison-review/run-1792511698663-8891/report.md\nState: tests/tmp/comparison-review/run-1792511698663-8891/state.json\nTrace: tests/tmp/comparison-review/run-1792511698663-8891/trace.json\n",
+  "stderr": "",
+  "seconds": 17.389
+}

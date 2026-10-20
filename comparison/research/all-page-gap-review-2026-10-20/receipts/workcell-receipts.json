@@ -1,0 +1,13 @@
+{
+  "name": "workcell-receipts",
+  "repo": "workcell",
+  "args": [
+    "$WORKSPACE/work/runtime-1.8.2/kujo",
+    "run",
+    "tests/execution_result_test.kujo"
+  ],
+  "exit": 0,
+  "stdout": "PASS execution result is emitted\nPASS verification failure remains distinct\nPASS offline workspace-only run permits policy retry\nPASS secret values are represented only by references\nPASS live dependency disables automatic retry\nPASS external effects remain unknown and operator controlled\nPASS normalized definition is retained without a credential value\nPassed: 7\nFailed: 0\n",
+  "stderr": "",
+  "seconds": 0.424
+}

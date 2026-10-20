@@ -1,0 +1,18 @@
+{
+  "name": "eval-invalid",
+  "repo": "eval",
+  "args": [
+    "$WORKSPACE/work/runtime-1.8.2/kujo",
+    "run",
+    "main.kujo",
+    "run",
+    "review-invalid.json",
+    "--output-dir",
+    ".review-invalid",
+    "--json"
+  ],
+  "exit": 1,
+  "stdout": "{\"data\":{\"active_policy_stage\":\"\",\"cache_metric_bytes_reused\":0,\"cache_metric_candidates\":1,\"cache_metric_hits\":0,\"cache_metric_misses\":1,\"cache_metric_unique_files\":0,\"duration_ms\":65,\"failed\":1,\"parallel_fallback_reason\":\"\",\"parallel_mode\":\"serial\",\"parallel_prefetch_duration_ms\":0,\"parallel_prefetched_files\":0,\"parallel_requested\":false,\"parallel_used\":false,\"parallel_workers\":1,\"passed\":0,\"skipped\":0,\"suite_description\":\"\",\"suite_name\":\"comparison-invalid\",\"suite_version\":\"0.0.0\",\"test_results\":[{\"check\":\"json_value_equals\",\"description\":\"\",\"details\":{\"actual\":\"42\",\"expected\":\"41\",\"expected_type\":\"\",\"json_path\":\"total\"},\"message\":\"Expected 41 but got 42\",\"name\":\"total equals expected\",\"passed\":false,\"skipped\":false}],\"timestamp\":\"\",\"total\":1},\"error\":\"\",\"ok\":true}\n",
+  "stderr": "",
+  "seconds": 0.379
+}

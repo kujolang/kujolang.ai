@@ -1,0 +1,7 @@
+{
+  "number": 5332,
+  "state": "open",
+  "html_url": "https://github.com/BoundaryML/baml/issues/5332",
+  "updated_at": "2026-10-20T13:59:34Z",
+  "title": "[bug] Python bridge: invalid int argument causes SIGSEGV in 0.22.2 and 0.22.3 nightly on macOS x86_64"
+}

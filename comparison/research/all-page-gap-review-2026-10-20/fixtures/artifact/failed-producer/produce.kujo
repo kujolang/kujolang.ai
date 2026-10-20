@@ -1,0 +1,2 @@
+print(to_json({"total":42}))
+exit(7)
