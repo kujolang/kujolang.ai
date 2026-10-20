@@ -1,0 +1,17 @@
+{
+  "verifiedAtUTC": "2026-10-20T14:58:23.605086+00:00",
+  "commit": "75ccc21d4f062495439a5cab4f9701681c979654",
+  "runtimeObservationsPerRun": 53,
+  "runtimeRuns": 2,
+  "nodeTests": 26,
+  "pythonTests": 4,
+  "comparisonRoutes": 8,
+  "internalLinks": 444,
+  "generatedProjections": 23,
+  "socialCards": 255,
+  "responsiveImages": 553,
+  "htmlFiles": 256,
+  "siteContractPassed": true,
+  "scope": "focused comparison render over existing full-site graph; production CI performs a fresh full-site build",
+  "passed": true
+}
