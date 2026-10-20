@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-20T13:29:53.677931+00:00",
+  "commit": "fa30c50ef4a5b6e0b41b27916f13cdbc0cfc702d",
+  "nodeTests": 26,
+  "pythonTests": 4,
+  "catalogRecords": 7,
+  "generatedFiles": 23,
+  "comparisonRoutes": 8,
+  "internalLinks": 443,
+  "socialCards": 255,
+  "responsiveImages": 553,
+  "htmlFiles": 256,
+  "siteContract": true,
+  "evidenceVerification": true,
+  "buildScope": "focused comparison render plus existing full-site graph; fresh full-site build runs in production CI",
+  "passed": true
+}
