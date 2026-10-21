@@ -9,7 +9,7 @@ order: 420
 install_command: "git clone https://github.com/kujolang/ai-chat.git"
 github_url: "https://github.com/kujolang/ai-chat"
 launch_story: "Run and supervise multiple coding and content agents with reviewable changes, explicit permissions, durable evidence, and provider-neutral controls."
-scope_note: "AI Chat 1.3.0 adds live per-pane diffs, checkpoints, plans and steering, managed Git worktrees, attachments, execution artifacts, scoped MCP connections, an attention inbox, a command palette, and persistent chat tabs. Use Node 22.17.0, npm ci, and matching database/encryption backups. The historical eight-hour soak remains incomplete; browser execution requires supported OS containment."
+scope_note: "AI Chat 1.3.0 adds live per-pane diffs, checkpoints, plans and steering, managed Git worktrees, attachments, execution artifacts, scoped MCP connections, an attention inbox, a command palette, and persistent chat tabs. Use patched Node 22.23.4, npm ci, and matching database/encryption backups. The historical eight-hour soak remains incomplete; browser execution requires supported OS containment."
 keywords: "AI Chat, Kujo ecosystem, Showcase, AI"
 seo_title: "AI Chat — Kujo Ecosystem"
 version: "1.3.0"
@@ -28,7 +28,7 @@ Run coding, review, content, and operations agents side by side while keeping pe
 
 ## Operating boundary
 
-AI Chat 1.3.0 is a local-first showcase, not a managed service or deployed production certification. Use Node 22.17.0 and `npm ci`; back up the database with its matching encryption secret and preserve uncommitted managed worktrees before upgrading. Local writes, shell execution, MCP connections, desktop notifications, browser execution, and ChatGPT plan access remain explicit opt-ins. The historical eight-hour soak remains incomplete, and browser execution still requires supported OS containment.
+AI Chat 1.3.0 is a local-first showcase, not a managed service or deployed production certification. Use patched Node 22.23.4 and `npm ci`; back up the database with its matching encryption secret and preserve uncommitted managed worktrees before upgrading. Local writes, shell execution, MCP connections, desktop notifications, browser execution, and ChatGPT plan access remain explicit opt-ins. The historical eight-hour soak remains incomplete, and browser execution still requires supported OS containment.
 
 ## Release
 
