@@ -288,10 +288,10 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 56 ]] || fail "expected 56 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 59 ]] || fail "expected 56 project and 3 catalog output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_sources" == 57 ]] || fail "expected 57 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 60 ]] || fail "expected 57 project and 3 catalog output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 16 ]] || fail "expected 16 primitive cards, found ${primitive_count}"
-[[ "$tooling_count" == 30 ]] || fail "expected 30 tooling cards, found ${tooling_count}"
+[[ "$tooling_count" == 31 ]] || fail "expected 31 tooling cards, found ${tooling_count}"
 [[ "$showcase_count" == 10 ]] || fail "expected 10 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
@@ -531,7 +531,7 @@ require_text "${output_dir}/ecosystem/source/index.html" 'width="1916" height="8
 
 
 require_file "${output_dir}/ecosystem/kujo-opencode/index.html"
-require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'npm install --global @kujolang/kujo-opencode@0.2.0'
+require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'npm install --global @kujolang/kujo-opencode@0.2.1'
 require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'images/opencode-approval-workbench-'
 require_text "${output_dir}/ecosystem/kujo-opencode/index.html" 'width="1916" height="821"'
 require_text "${output_dir}/ecosystem/tooling/index.html" 'href="/ecosystem/kujo-opencode/"'
@@ -543,4 +543,4 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 56 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 57 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

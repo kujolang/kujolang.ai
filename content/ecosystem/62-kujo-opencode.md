@@ -7,17 +7,17 @@ social_image: "/assets/images/social/kujo-opencode.jpg"
 section: "Tooling"
 tags: ["Tools", "OpenCode", "Agents", "Ability"]
 order: 620
-install_command: "npm install --global @kujolang/kujo-opencode@0.2.0"
+install_command: "npm install --global @kujolang/kujo-opencode@0.2.1"
 github_url: "https://github.com/kujolang/kujo-opencode"
 launch_story: "Understand a repository, build and test Kujo programs, review changes, and prepare release evidence without leaving OpenCode."
-scope_note: "Version 0.2.0 supports OpenCode 2 from 2.0.31. Setup installs pinned Kujo sources and a runtime; optional browsers and services require explicit setup. OpenCode owns the model connection and human approval decisions. Live specialist tests used ChatGPT on macOS; free GLM and DeepSeek specialist access is not verified."
-version: "0.2.0"
-latest_release_url: "https://github.com/kujolang/kujo-opencode/releases/tag/v0.2.0"
+scope_note: "Version 0.2.1 supports OpenCode 2 from 2.0.31. Setup installs pinned Kujo sources and a runtime; optional browsers and services require explicit setup. OpenCode owns the model connection and human approval decisions. Live specialist tests used an explicitly configured local Hermes connection with free Beam on macOS; other providers need their own working account connection."
+version: "0.2.1"
+latest_release_url: "https://github.com/kujolang/kujo-opencode/releases/tag/v0.2.1"
 release_status: "Published on npm and GitHub. Registry installation, upgrades, signatures, provenance, and release asset digests are verified."
-last_updated: "2026-10-18"
+last_updated: "2026-10-21"
 keywords: "Kujo OpenCode, OpenCode 2 plugin, Kujo tools, local agents, approvals, receipts"
 seo_title: "Kujo OpenCode — Kujo Tools Inside OpenCode"
-seo_description: "Install Kujo OpenCode 0.2.0 for six specialists, 62 scoped capabilities, native approvals, source tools, browser checks, and workflow receipts."
+seo_description: "Install Kujo OpenCode 0.2.1 for six specialists, 62 scoped capabilities, native approvals, source tools, browser checks, and workflow receipts."
 ---
 
 ## Start with one project
@@ -31,7 +31,7 @@ kujo-opencode demo
 opencode
 ```
 
-You need Node.js 20 or newer, npm, Git, and OpenCode 2 version 2.0.31 or newer. Setup downloads 28 pinned source repositories and the Kujo runtime. It needs internet access and does not require a separate global Kujo installation. The demo runs a read-only ShipCheck scan without calling a model.
+You need Node.js 22.23.4+, 24.22.1+, or 26.12.1+ on those release lines, npm, Git, and OpenCode 2 version 2.0.31 or newer. Setup downloads 28 pinned source repositories and the Kujo runtime. It needs internet access and does not require a separate global Kujo installation. The demo runs a read-only ShipCheck scan without calling a model.
 
 Open `/kujo` inside OpenCode to choose a profile, enable capabilities, select a specialist, or inspect evidence. Essentials starts with five tools; Full exposes 62 supported capabilities. Enabling a tool does not approve its actions.
 
@@ -66,11 +66,11 @@ Inspect Dispatch runs after a lost response before deciding whether to retry. Us
 
 Use OpenCode's provider settings. For ChatGPT, choose OpenAI and Sign in with ChatGPT, then select a model offered by your account. Kujo does not copy model credentials, proxy inference, or switch providers for you.
 
-All six specialists passed 50 live operation checks on macOS x64 with OpenCode 2.0.32 and `openai/gpt-5.6-sol`. Native and rendered host checks cover Linux, macOS, and Windows on OpenCode 2.0.31 and 2.0.32. These are separate test scopes; free GLM and DeepSeek specialist access remains unverified.
+All six specialists passed 50 live operation checks on macOS x64 with OpenCode 2.1.2 and `hermes/reflection/beam-1.0-501b-a23b:free`. Native and rendered host checks cover Linux, macOS, and Windows on OpenCode 2.0.31 and 2.1.2. These are separate test scopes; free GLM and DeepSeek specialist access remains unverified.
 
 ## Learn more
 
 - [Installation and daily use](https://docs.kujolang.ai/tools/kujo-opencode/)
-- [Published npm package](https://www.npmjs.com/package/@kujolang/kujo-opencode/v/0.2.0)
-- [Release archive and verification evidence](https://github.com/kujolang/kujo-opencode/releases/tag/v0.2.0)
-- [Walkthrough and demo source](https://github.com/kujolang/kujo-opencode/tree/v0.2.0/docs/walkthrough)
+- [Published npm package](https://www.npmjs.com/package/@kujolang/kujo-opencode/v/0.2.1)
+- [Release archive and verification evidence](https://github.com/kujolang/kujo-opencode/releases/tag/v0.2.1)
+- [Walkthrough and demo source](https://github.com/kujolang/kujo-opencode/tree/v0.2.1/docs/walkthrough)

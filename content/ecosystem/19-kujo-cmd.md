@@ -6,29 +6,29 @@ featured_image: "/assets/images/ecosystem/mcp-tool-connectors.webp"
 section: "Tooling"
 tags: [Tool, Agents, MCP]
 order: 190
-install_command: "npx github:kujolang/kujo-cmd#v0.2.0 setup"
+install_command: "npx github:kujolang/kujo-cmd#v0.3.0 setup"
 github_url: "https://github.com/kujolang/kujo-cmd"
 launch_story: "Bring Kujo's reviewed tools into Command Code through one local MCP server without replacing either system's permission boundary."
 scope_note: "Kujo CMD installs and projects local Kujo capabilities; it does not choose models, proxy provider traffic, or turn Command Code identity metadata into verified identity. Mutating and external effects still require Kujo approval and the host's separate permission check."
 keywords: "Kujo CMD, Command Code integration, Kujo MCP tools, local agent tools, Command Code agents"
-seo_title: "Kujo CMD 0.2.0 — Kujo Tools for Command Code"
+seo_title: "Kujo CMD 0.3.0 — Kujo Tools for Command Code"
 seo_description: "Install 38 Kujo Abilities, seven scoped agents, approvals, receipts, correlation, and optional Lens browser QA in Command Code."
-version: "0.2.0"
-latest_release_url: "https://github.com/kujolang/kujo-cmd/releases/tag/v0.2.0"
+version: "0.3.0"
+latest_release_url: "https://github.com/kujolang/kujo-cmd/releases/tag/v0.3.0"
 release_status: "The GitHub release is published. npm publication is temporarily pending restored registry authorization, so the install command runs the same tagged package directly from GitHub."
-last_updated: "2026-10-06"
+last_updated: "2026-10-21"
 ---
 
 ## What it does
 
 Kujo CMD connects Command Code to 25 pinned Kujo source projects through one
-local STDIO MCP server. Release 0.2.0 exposes 38 portable Abilities, links the
+local STDIO MCP server. Release 0.3.0 exposes 38 portable Abilities, links the
 canonical Agent Skills, projects seven task-scoped agents with explicit MCP
 allowlists, and retains Kujo policy decisions and receipts around every call.
 
 The GitHub release is live. npm publication is temporarily pending restoration
 of the package's trusted-publisher or `NPM_TOKEN` authorization. The install
-command above runs the tagged 0.2.0 package directly from GitHub in the interim.
+command above runs the tagged 0.3.0 package directly from GitHub in the interim.
 
 Four profiles keep the visible surface manageable: Essentials exposes 5
 read-mostly tools, Review exposes 18, Ship exposes 29, and Full exposes all 38.
@@ -67,5 +67,5 @@ identity. The release is verified against Command Code 1.75.1.
 ## Learn more
 
 - [Install and use Kujo CMD](https://docs.kujolang.ai/tools/kujo-cmd/)
-- [Kujo CMD 0.2.0 release](https://github.com/kujolang/kujo-cmd/releases/tag/v0.2.0)
+- [Kujo CMD 0.3.0 release](https://github.com/kujolang/kujo-cmd/releases/tag/v0.3.0)
 - [Kujo CMD repository](https://github.com/kujolang/kujo-cmd)

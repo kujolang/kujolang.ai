@@ -3323,6 +3323,19 @@
       "show_url": false,
       "background_image": "assets/images/ethos-human-agent-trust.webp",
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "bb-kujo",
+      "title": "BB Kujo",
+      "tagline": "Kujo light and dark themes for your BB workspace.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "tooling",
+      "url": "kujolang.ai/ecosystem/bb-kujo/",
+      "background_image": "assets/images/ecosystem/workflows-evidence-routing-bench.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
     }
   ]
 }
