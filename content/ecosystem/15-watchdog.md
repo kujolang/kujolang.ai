@@ -9,13 +9,13 @@ order: 130
 install_command: "kennel add watchdog"
 github_url: "https://github.com/kujolang/watchdog"
 launch_story: "Make AI application behavior observable without hiding the request path from the operator."
-scope_note: "Watchdog 1.2.1 hardens credentials, telemetry validation, OTLP retries and queue limits, reduces intake and client work, and refreshes pricing. Runtime observations do not authorize replay. Cost estimates are not invoices; auth, retention and deployment remain operator-owned."
+scope_note: "Watchdog 1.2.2 hardens credentials, telemetry validation, OTLP retries and queue limits, reduces intake and client work, and refreshes pricing. Runtime observations do not authorize replay. Cost estimates are not invoices; auth, retention and deployment remain operator-owned."
 keywords: "Watchdog, Kujo ecosystem, Primitive, Observability"
 seo_title: "Watchdog — Kujo Ecosystem"
-version: "1.2.1"
-latest_release_url: "https://github.com/kujolang/watchdog/releases/tag/v1.2.1"
+version: "1.2.2"
+latest_release_url: "https://github.com/kujolang/watchdog/releases/tag/v1.2.2"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-10-12"
+last_updated: "2026-10-21"
 ---
 
 ## What it does
@@ -28,7 +28,7 @@ Make AI application behavior observable without hiding the request path from the
 
 ## Operating boundary
 
-[Watchdog 1.2.1](https://github.com/kujolang/watchdog/releases/tag/v1.2.1) keeps gateway credentials out of provider requests, validates and redacts canonical metadata, fixes OTLP retries, and enforces queue limits. It reduces canonical intake work, JavaScript client cloning and backup memory use, and refreshes provider pricing.
+[Watchdog 1.2.2](https://github.com/kujolang/watchdog/releases/tag/v1.2.2) keeps gateway credentials out of provider requests, validates and redacts canonical metadata, fixes OTLP retries, and enforces queue limits. It reduces canonical intake work, JavaScript client cloning and backup memory use, and refreshes provider pricing.
 
 It retains canonical v2 telemetry, JSONL/OTLP exports, runtime measurement references, RunLedger correlation and Connected Sources. Existing routes and schema versions remain compatible. Invalid telemetry returns errors; changed records with the same OTLP identity return 409.
 

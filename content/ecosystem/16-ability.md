@@ -12,9 +12,9 @@ launch_story: "Define an operation once, then project the same meaning into appl
 scope_note: "Ability adds application-owned assurance and controlled HTTP evidence. Wave C beta is opt-in, required/deny and single-effect; HTTP handoffs remain alpha. Applications own identity and authorization; Dispatch owns replay. Ability is not a hosted gateway or workflow engine."
 keywords: "Kujo Ability, operation contracts, MCP tools, agent tools, typed schemas, policy gates, execution receipts"
 seo_title: "Kujo Ability — Portable Operation Contracts"
-last_updated: "2026-09-29"
-version: "1.2.0"
-latest_release_url: "https://github.com/kujolang/ability/releases/tag/v1.2.0"
+last_updated: "2026-10-21"
+version: "1.3.0"
+latest_release_url: "https://github.com/kujolang/ability/releases/tag/v1.3.0"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
@@ -80,6 +80,6 @@ The [Ability repository](https://github.com/kujolang/ability) is the source of t
 
 ## Controlled execution and evidence
 
-The [current release](https://github.com/kujolang/ability/releases/tag/v1.2.0) targets the reviewed Kujo runtime and exports the portable v2 definition digest through the public API. See the [installation guide](https://docs.kujolang.ai/tools/ability/) for the exact runtime requirement. It includes the experimental application-assurance profile and local HTTP/OpenAPI controlled integration. Applications own authentication and business transactions; Dispatch owns replay. Stable Ability and receipt identities remain unchanged.
+The [current release](https://github.com/kujolang/ability/releases/tag/v1.3.0) targets the reviewed Kujo runtime and exports the portable v2 definition digest through the public API. See the [installation guide](https://docs.kujolang.ai/tools/ability/) for the exact runtime requirement. It includes the experimental application-assurance profile and local HTTP/OpenAPI controlled integration. Applications own authentication and business transactions; Dispatch owns replay. Stable Ability and receipt identities remain unchanged.
 
 Wave C beta remains opt-in in the bounded single-effect required/deny domain, with alpha retained. Wave D handoffs remain alpha under a trusted local host. No remote participant trust or exactly-once guarantee is claimed.

@@ -12,10 +12,10 @@ launch_story: "Turn an ambiguous request into an agent-readable contract before 
 scope_note: "Spec describes and validates work; it does not grant authority to perform the work."
 keywords: "Spec, Kujo ecosystem, Primitive, Contracts"
 seo_title: "Spec — Kujo Ecosystem"
-version: "1.0.1"
-latest_release_url: "https://github.com/kujolang/spec/releases/tag/v1.0.1"
+version: "1.0.2"
+latest_release_url: "https://github.com/kujolang/spec/releases/tag/v1.0.2"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-09-09"
+last_updated: "2026-10-21"
 ---
 
 ## What it does

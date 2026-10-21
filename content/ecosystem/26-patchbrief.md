@@ -12,10 +12,10 @@ launch_story: "Make a code change easier to review and easier to hand off."
 scope_note: "PatchBrief summarizes evidence from a diff; it does not replace reading sensitive or high-risk changes."
 keywords: "PatchBrief, Kujo ecosystem, Tool, Review"
 seo_title: "PatchBrief — Kujo Ecosystem"
-version: "1.0.2"
-latest_release_url: "https://github.com/kujolang/patchbrief/releases/tag/v1.0.2"
+version: "1.0.3"
+latest_release_url: "https://github.com/kujolang/patchbrief/releases/tag/v1.0.3"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-10-14"
+last_updated: "2026-10-21"
 ---
 
 ## What it does

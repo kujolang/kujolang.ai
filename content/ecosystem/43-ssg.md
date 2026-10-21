@@ -9,13 +9,13 @@ order: 430
 install_command: "kennel add ssg"
 github_url: "https://github.com/kujolang/ssg"
 launch_story: "An agent-inspectable publishing pipeline where content and generated output remain visible."
-scope_note: "SSG 1.2.0 hardens publication boundaries and requires esbuild 0.28.2 for minified builds. Experimental public read-only WebMCP remains enabled by default with ten local Ability workflows. The independently versioned Ability pack is 1.0.0; builds require approval and keyed idempotency. No hosted deployment service or deploy Ability is included."
+scope_note: "SSG 1.2.1 hardens publication boundaries and requires esbuild 0.28.2 for minified builds. Experimental public read-only WebMCP remains enabled by default with ten local Ability workflows. The independently versioned Ability pack is 1.0.0; builds require approval and keyed idempotency. No hosted deployment service or deploy Ability is included."
 keywords: "SSG, Kujo ecosystem, Showcase, Publishing"
 seo_title: "SSG — Kujo Ecosystem"
-version: "1.2.0"
-latest_release_url: "https://github.com/kujolang/ssg/releases/tag/v1.2.0"
+version: "1.2.1"
+latest_release_url: "https://github.com/kujolang/ssg/releases/tag/v1.2.1"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-10-12"
+last_updated: "2026-10-21"
 ---
 
 ## What it does
@@ -30,11 +30,11 @@ An agent-inspectable publishing pipeline where content and generated output rema
 
 SSG is a generator and showcase, not a hosted deployment service or a guarantee of SEO and accessibility outcomes.
 
-## Release 1.2.0
+## Release 1.2.1
 
-[SSG 1.2.0](https://github.com/kujolang/ssg/releases/tag/v1.2.0), released October 12, 2026, hardens network and filesystem access, keeps JSON-LD metadata inert, bounds local Ability inspection, and makes DocGen paths, final-build ordering, deadlines, and retained CI logs explicit.
+[SSG 1.2.1](https://github.com/kujolang/ssg/releases/tag/v1.2.1), released October 21, 2026, hardens network and filesystem access, keeps JSON-LD metadata inert, bounds local Ability inspection, and makes DocGen paths, final-build ordering, deadlines, and retained CI logs explicit.
 
-Minification now uses the esbuild parser instead of rewriting CSS and JavaScript whitespace with regular expressions. From the repository or packaged docs starter, run `npm ci --ignore-scripts` before a minified build. It installs pinned esbuild 0.28.2; sites with `minify: false` need no minifier. For standalone sites, use the [documented installation path](https://github.com/kujolang/ssg/blob/v1.2.0/README.md#minifier-dependency).
+Minification now uses the esbuild parser instead of rewriting CSS and JavaScript whitespace with regular expressions. From the repository or packaged docs starter, run `npm ci --ignore-scripts` before a minified build. It installs pinned esbuild 0.28.2; sites with `minify: false` need no minifier. For standalone sites, use the [documented installation path](https://github.com/kujolang/ssg/blob/v1.2.1/README.md#minifier-dependency).
 
 Remote images reject private destinations by default. Trusted local mirroring requires both `--download-remote-images` and `--allow-private-remote-images`. These controls do not make untrusted content an authorized deployment request.
 

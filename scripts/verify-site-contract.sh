@@ -514,7 +514,7 @@ require_text "${output_dir}/ecosystem/kujo/index.html" "Windows x64"
 require_text "${output_dir}/ecosystem/kujo/index.html" "<!--email_off-->"
 
 # Keep SSG release setup and catalog discovery aligned.
-require_text "${output_dir}/ecosystem/ssg/index.html" "https://github.com/kujolang/ssg/releases/tag/v1.2.0"
+require_text "${output_dir}/ecosystem/ssg/index.html" "https://github.com/kujolang/ssg/releases/tag/v1.2.1"
 require_text "${output_dir}/ecosystem/ssg/index.html" "npm ci --ignore-scripts"
 require_text "${output_dir}/ecosystem/ssg/index.html" "esbuild 0.28.2"
 
@@ -522,7 +522,7 @@ require_text "${output_dir}/ecosystem/intake/index.html" "https://github.com/kuj
 require_text "${output_dir}/ecosystem/intake/index.html" "Node.js 20.19"
 
 # Source uses Git/npm; its public release and images must remain discoverable.
-require_text "${output_dir}/ecosystem/source/index.html" "https://github.com/kujolang/source/releases/tag/v0.1.0"
+require_text "${output_dir}/ecosystem/source/index.html" "https://github.com/kujolang/source/releases/tag/v0.1.1"
 require_text "${output_dir}/ecosystem/source/index.html" "Node.js 22"
 require_text "${output_dir}/ecosystem/source/index.html" "<title>Source — Git Review for Agent Contributions | Kujolang.ai</title>"
 require_text "${output_dir}/ecosystem/source/index.html" "not a Kennel-installable"

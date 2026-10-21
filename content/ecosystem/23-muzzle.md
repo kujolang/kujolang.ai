@@ -12,10 +12,10 @@ launch_story: "Keep agent context focused while retaining the complete operation
 scope_note: "Muzzle controls output shape and workflow contracts; commands retain the authority of the environment running them."
 keywords: "Muzzle, Kujo ecosystem, Tool, Execution"
 seo_title: "Muzzle — Kujo Ecosystem"
-version: "1.1.2"
-latest_release_url: "https://github.com/kujolang/muzzle/releases/tag/v1.1.2"
+version: "1.1.3"
+latest_release_url: "https://github.com/kujolang/muzzle/releases/tag/v1.1.3"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-10-12"
+last_updated: "2026-10-21"
 ---
 
 ## What it does
@@ -34,7 +34,7 @@ Muzzle controls output shape and workflow contracts; commands retain the authori
 
 The repository is the source of truth for current setup, commands, examples, security notes, compatibility, and verification evidence.
 
-## Version 1.1.2
+## Version 1.1.3
 
 This patch release hardens initialization, cleanup, option parsing, loop state, and failure excerpts. It also reduces repeated work in argument parsing, retention selection, and workflow snapshot preparation. Existing CLI and JSON contracts remain compatible.
 
@@ -47,8 +47,8 @@ kennel tool update muzzle
 muzzle version
 ```
 
-Expected version: `Muzzle v1.1.2`. For a project dependency, use `kennel add muzzle`.
+Expected version: `Muzzle v1.1.3`. For a project dependency, use `kennel add muzzle`.
 
 Existing projects should add `state/` to `.muzzle/.gitignore`; initialization preserves user-owned files. Use one loop writer per project. Full logs may contain secrets, and workflow scripts retain the caller's permissions.
 
-See the [release notes](https://github.com/kujolang/muzzle/releases/tag/v1.1.2) and [Muzzle documentation](https://docs.kujolang.ai/tools/muzzle/) for setup and compatibility details.
+See the [release notes](https://github.com/kujolang/muzzle/releases/tag/v1.1.3) and [Muzzle documentation](https://docs.kujolang.ai/tools/muzzle/) for setup and compatibility details.
