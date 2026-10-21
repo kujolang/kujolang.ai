@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Keep comparison pages focused on Vercel Zerolang and its reviewed release, removing unrelated project references and draft revision history.
+
 - Rebuild the comparison hub as a four-language field guide with a six-dimension evidence matrix, adoption profiles, technical briefs, workflow stages and a worked artifact check.
 
 - Add source-backed language comparisons, distinct discovery guides, shared Markdown projections and a reproducible artifact-verification exercise.

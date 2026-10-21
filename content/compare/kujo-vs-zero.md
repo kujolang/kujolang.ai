@@ -170,7 +170,7 @@ We tested these workflows on Zerolang 0.3.4 with the official macOS x86_64 binar
 
 ## Which Zero is being compared?
 
-This page covers Vercel’s experimental Zerolang at zerolang.ai and vercel-labs/zerolang. The earlier page covered the unrelated systems-language preview at zero-lang.com. Its C++ and value-semantics descriptions do not describe this repository. We now pin this comparison to published Zerolang 0.3.4, rather than mixing its release behavior with current main.
+This page covers Vercel’s experimental Zerolang at zerolang.ai and vercel-labs/zerolang. The comparison is pinned to published Zerolang 0.3.4; behavior on the repository’s main branch may differ.
 
 ## Technical architecture
 
@@ -206,9 +206,9 @@ The extended merge test executed both independent edits: main printed the edited
 
 Vercel explicitly designs Zerolang for agents: they query a compiler-owned graph and submit checked edits. This design goal does not establish better productivity or correctness on every task.
 
-### Is this the Zero language at zero-lang.com?
+### Which Zerolang release does this comparison cover?
 
-No. This page now covers zerolang.ai and vercel-labs/zerolang. They are different projects, and the old systems-preview claims should not be carried across.
+This comparison covers Vercel Zerolang 0.3.4 from vercel-labs/zerolang, using the official macOS x86_64 binary for the runtime checks.
 
 ### Does a checked graph prove the program meets its requirements?
 
