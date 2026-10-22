@@ -12,15 +12,15 @@ launch_story: "Give people and agents a stable set of tokens, schemas, semantic 
 scope_note: "SiteKit provides tested source components and distribution assets, not accessibility certification for arbitrary downstream pages or a hosted component service."
 keywords: "SiteKit, Kujo ecosystem, design system, accessible components, static websites"
 seo_title: "SiteKit — Kujo Ecosystem"
-version: "1.0.0"
-latest_release_url: "https://github.com/kujolang/site-kit/releases/tag/v1.0.0"
+version: "1.1.1"
+latest_release_url: "https://github.com/kujolang/site-kit/releases/tag/v1.1.1"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-09-09"
+last_updated: "2026-10-22"
 ---
 
 ## What it does
 
-SiteKit 1.0 generates a stable `dist/` distribution from design tokens, bundled themes, component schemas, semantic HTML templates, component CSS, layout recipes, and documented accessibility and responsive contracts. Consumers vendor the distribution and load `sitekit.css`; optional `sitekit.js` progressively enhances documented interactive hooks.
+SiteKit 1.1.1 generates a stable `dist/` distribution from design tokens, bundled themes, component schemas, semantic HTML templates, component CSS, layout recipes, and documented accessibility and responsive contracts. Consumers vendor the distribution and load `sitekit.css`; optional `sitekit.js` progressively enhances documented interactive hooks.
 
 ## Built for durable pages
 

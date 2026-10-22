@@ -10,7 +10,10 @@ order: 290
 install_command: ""
 github_url: ""
 launch_story: "Turn dependency alerts across many repositories into a local, reviewable remediation workflow."
-scope_note: "Ward is read-only by default; code changes require explicit apply mode, and operators remain responsible for credentials and review."
+version: "1.0.0"
+last_updated: "2026-10-22"
+release_status: "Private technical preview; public installation is unavailable."
+scope_note: "Ward 1.0.0 is a private technical preview. Ward is read-only by default; code changes require explicit apply mode, and operators remain responsible for credentials and review."
 keywords: "Ward, Kujo ecosystem, Dependabot, dependency security"
 seo_title: "Ward — Kujo Ecosystem"
 ---

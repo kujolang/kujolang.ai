@@ -12,10 +12,10 @@ launch_story: "Produce browser-backed proof that a UI behaves as intended."
 scope_note: "Lens is beta and stabilizing; automated evidence complements rather than replaces representative human review."
 keywords: "Lens, Kujo ecosystem, Tool, Browser QA"
 seo_title: "Lens — Kujo Ecosystem"
-version: "1.1.0"
-latest_release_url: "https://github.com/kujolang/lens/releases/tag/v1.1.0"
+version: "1.1.1"
+latest_release_url: "https://github.com/kujolang/lens/releases/tag/v1.1.1"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-09-09"
+last_updated: "2026-10-22"
 ---
 
 ## What it does
