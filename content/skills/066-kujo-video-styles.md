@@ -7,12 +7,12 @@ featured_image: "/assets/images/ecosystem/skills-agent-guidance-library.webp"
 social_image: "/assets/images/social/kujo-video-styles.jpg"
 section: "Agent Skill"
 order: "660"
-install_command: "git clone --branch v0.7.0 --depth 1 https://github.com/kujolang/kujo-skills.git && mkdir -p ~/.codex/skills && cp -R kujo-skills/skills/kujo-video-styles ~/.codex/skills/"
-github_url: "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-video-styles/SKILL.md"
-launch_story: "One of 135 focused, repository-backed skills in the Kujo Skills 0.7.0 technical preview."
+install_command: "git clone --branch v0.7.1 --depth 1 https://github.com/kujolang/kujo-skills.git && mkdir -p ~/.codex/skills && cp -R kujo-skills/skills/kujo-video-styles ~/.codex/skills/"
+github_url: "https://github.com/kujolang/kujo-skills/blob/v0.7.1/skills/kujo-video-styles/SKILL.md"
+launch_story: "One of 135 focused, repository-backed skills in the Kujo Skills 0.7.1 technical preview."
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
-version: "0.7.0"
-last_updated: "2026-09-08"
+version: "0.7.1"
+last_updated: "2026-10-22"
 keywords: "Kujo video styles, Kujo Agent Skill, kujo-video-styles, repository-backed agent guidance"
 seo_title: "Kujo video styles — Kujo Agent Skill"
 seo_description: "Create Kujo launch and release videos in ten reusable styles, from kinetic drops and polished micro interactions to changelog films, product proof reels, PR explainers, integrations and cinematic launches. Use to choose a style or automate a family of HyperFrames videos from source evidence."
@@ -48,9 +48,9 @@ For the fixed 15-second monochrome announcement, choose [Kujo Release Video](/ec
 
 ## Release boundary
 
-This page reflects the 0.7.0 technical preview on 2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
+This page reflects the 0.7.1 technical preview on 2026-10-22. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
 
 ## Source
 
-- [Read the complete kujo-video-styles skill on GitHub](https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-video-styles/SKILL.md)
-- [Browse the released Kujo Skills Index](https://github.com/kujolang/kujo-skills/blob/v0.7.0/SKILLS_INDEX.md)
+- [Read the complete kujo-video-styles skill on GitHub](https://github.com/kujolang/kujo-skills/blob/v0.7.1/skills/kujo-video-styles/SKILL.md)
+- [Browse the released Kujo Skills Index](https://github.com/kujolang/kujo-skills/blob/v0.7.1/SKILLS_INDEX.md)

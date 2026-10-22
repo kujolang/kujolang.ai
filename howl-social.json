@@ -1741,7 +1741,7 @@
     {
       "id": "kujo-mcp-workflows",
       "title": "Kujo MCP",
-      "tagline": "Use this skill when generating, running, validating, deploying, packaging, or maintaining Kujo MCP servers and repo-specific MCP/Ability scaffolds: `mcp make`, `kujo run mcp.kujo --interpreter make`, `mcp-server.json`, MCP tool/resource registries, generated `.mcp/` outputs, `mcp.manifest.json`, repo profiles, MCP safety tiers, Ability projection/gateway/host packages, Watchdog lifecycle metadata, auth/host/request guardrails, endpoint tests, or MCP source/test changes.",
+      "tagline": "Use this skill when generating, running, validating, deploying, packaging, or maintaining Kujo MCP servers and repo-specific MCP/Ability scaffolds: `kujo mcp make`, `kujo run mcp.kujo --interpreter make`, `mcp-server.json`, MCP tool/resource registries, generated `.mcp/` outputs, `mcp.manifest.json`, repo profiles, MCP safety tiers, Ability projection/gateway/host packages, Watchdog lifecycle metadata, auth/host/request guardrails, endpoint tests, or MCP source/test changes.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "agent skill",
@@ -2001,7 +2001,7 @@
     {
       "id": "kujo-site-kit-workflows",
       "title": "Kujo SiteKit Repository",
-      "tagline": "Use this skill when building, validating, consuming, or maintaining SiteKit design-system artifacts in the `site-kit` repository: tokens, component schemas/templates/CSS, generated `dist/sitekit.css`, optional `dist/sitekit.js`, accessibility checks, browser smoke tests, launch checklist, or Workcell evidence.",
+      "tagline": "Use this skill when building, validating, consuming, or maintaining SiteKit 1.0 design-system artifacts in the `site-kit` repository: tokens, component schemas/templates/CSS, generated `dist/sitekit.css`, `dist/sitekit.js`, theme behavior, Tabler icon assets, accessibility checks, browser/release smoke tests, or Workcell evidence.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "agent skill",
@@ -2014,7 +2014,7 @@
     {
       "id": "kujo-sitekit-workflows",
       "title": "Kujo SiteKit",
-      "tagline": "Use this skill when building, validating, consuming, or maintaining SiteKit design-system artifacts: tokens, component schemas/templates/CSS, layout recipes, generated `dist/sitekit.css`, optional `dist/sitekit.js`, `DESIGN.md`, accessibility/semantic standards, examples, snapshots, smoke tests, or SiteKit source/docs changes.",
+      "tagline": "Use this skill when building, validating, consuming, or maintaining SiteKit 1.0 design-system artifacts: tokens, component schemas/templates/CSS, layout recipes, generated `dist/sitekit.css`, `dist/sitekit.js`, `DESIGN.md`, accessibility/semantic standards, examples, snapshots, smoke tests, release checks, or SiteKit source/docs changes.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "agent skill",
@@ -2079,7 +2079,7 @@
     {
       "id": "kujo-standard-library",
       "title": "Kujo Standard Library",
-      "tagline": "Use this skill when using, adding, or reviewing Kujo native standard library functions, including arity, return types, capability gates, JSON/JSONL conversion, filesystem, process, network, database, crypto, strings, URI encoding, arrays, dictionaries, rendering helpers, AI helpers, and collection helper behavior.",
+      "tagline": "Use this skill when using, adding, or reviewing Kujo native standard library functions, including arity, return types, capability gates, JSON/JSONL conversion, filesystem, process, network, database, crypto, strings, URI encoding/decoding, date/time, PDF rendering, arrays, dictionaries, rendering helpers, AI helpers, and collection helper behavior.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "agent skill",
@@ -2144,7 +2144,7 @@
     {
       "id": "kujo-versionseal-workflows",
       "title": "Kujo VersionSeal",
-      "tagline": "Use when operating or maintaining VersionSeal exact-version human approval: approval requests, approve/reject/request-changes decisions, revocation, expiry, checksum verification, quorum and separation-of-duties policies, signatures, replication conflicts, exports, or VersionSeal CLI/source/tests.",
+      "tagline": "Use when operating or maintaining VersionSeal exact-version human approval: approval requests, approve/reject/request-changes decisions, revocation, expiry, checksum verification, quorum and separation-of-duties policies, signatures, replication conflicts, interrupted-write recovery, exports, or VersionSeal CLI/source/tests.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "agent skill",
@@ -2209,7 +2209,7 @@
     {
       "id": "kujo-workcell-workflows",
       "title": "Kujo Workcell",
-      "tagline": "Use this skill when initializing, validating, inspecting, running, verifying, cleaning, or maintaining Workcell local Docker/Podman execution sandboxes: `workcell.json`, `bin/workcell`, `doctor`, `init`, `validate`, `inspect`, `run`, `verify`, `clean`, `.workcell/runs/`, receipts, manifests, artifacts, runtime boundaries, release reports, or Workcell source/docs changes.",
+      "tagline": "Use this skill when initializing, validating, inspecting, running, verifying, cleaning, recovering, or maintaining Workcell 1.2 execution harnesses: `workcell.json`, `bin/workcell`, `doctor`, `init`, `validate`, `inspect`, `run`, `verify`, `clean`, `backends`, `recover`, `.workcell/runs/`, summaries, receipts, manifests, artifacts, Docker/Podman boundaries, preservation, alpha backend adapters, release reports, or Workcell source/docs changes.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "agent skill",

@@ -7,12 +7,12 @@ featured_image: "/assets/images/ecosystem/skills-agent-guidance-library.webp"
 social_image: "/assets/images/social/kujo-release-video.jpg"
 section: "Agent Skill"
 order: "460"
-install_command: "git clone --branch v0.7.0 --depth 1 https://github.com/kujolang/kujo-skills.git && mkdir -p ~/.codex/skills && cp -R kujo-skills/skills/kujo-release-video ~/.codex/skills/"
-github_url: "https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-release-video/SKILL.md"
-launch_story: "One of 135 focused, repository-backed skills in the Kujo Skills 0.7.0 technical preview."
+install_command: "git clone --branch v0.7.1 --depth 1 https://github.com/kujolang/kujo-skills.git && mkdir -p ~/.codex/skills && cp -R kujo-skills/skills/kujo-release-video ~/.codex/skills/"
+github_url: "https://github.com/kujolang/kujo-skills/blob/v0.7.1/skills/kujo-release-video/SKILL.md"
+launch_story: "One of 135 focused, repository-backed skills in the Kujo Skills 0.7.1 technical preview."
 scope_note: "Guidance only. The agent host must enforce permissions, capability limits, and approval boundaries."
-version: "0.7.0"
-last_updated: "2026-09-08"
+version: "0.7.1"
+last_updated: "2026-10-22"
 keywords: "Kujo release video, Kujo Agent Skill, kujo-release-video, repository-backed agent guidance"
 seo_title: "Kujo release video — Kujo Agent Skill"
 seo_description: "Create source-grounded Kujo ecosystem release videos in the monochrome trust-at-speed style, with a release-specific narrative, ElevenLabs voiceover, original ambient music and synchronized sound effects. Use for repeatable tool/version announcements and agent-driven release-video pipelines."
@@ -46,9 +46,9 @@ Use [Kujo Video Styles](/ecosystem/skills/kujo-video-styles/) for longer films, 
 
 ## Release boundary
 
-This page reflects the 0.7.0 technical preview on 2026-09-08. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
+This page reflects the 0.7.1 technical preview on 2026-10-22. The skill provides repository-backed guidance; the agent host remains responsible for permissions and enforcement.
 
 ## Source
 
-- [Read the complete kujo-release-video skill on GitHub](https://github.com/kujolang/kujo-skills/blob/v0.7.0/skills/kujo-release-video/SKILL.md)
-- [Browse the released Kujo Skills Index](https://github.com/kujolang/kujo-skills/blob/v0.7.0/SKILLS_INDEX.md)
+- [Read the complete kujo-release-video skill on GitHub](https://github.com/kujolang/kujo-skills/blob/v0.7.1/skills/kujo-release-video/SKILL.md)
+- [Browse the released Kujo Skills Index](https://github.com/kujolang/kujo-skills/blob/v0.7.1/SKILLS_INDEX.md)

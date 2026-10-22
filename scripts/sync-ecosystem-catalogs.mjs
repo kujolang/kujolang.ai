@@ -7,8 +7,8 @@ const reposRoot = process.env.KUJO_REPOS
   ? path.resolve(process.env.KUJO_REPOS)
   : path.resolve(siteRoot, '..');
 const skillsOnly = process.argv.includes('--skills-only');
-const skillsRef = process.env.KUJO_SKILLS_REF || 'v0.7.0';
-const workflowsRef = process.env.KUJO_WORKFLOWS_REF || 'v0.6.0';
+const skillsRef = process.env.KUJO_SKILLS_REF || 'v0.7.1';
+const workflowsRef = process.env.KUJO_WORKFLOWS_REF || 'v0.6.2';
 const workflowsLinkRef = workflowsRef.replace(/^origin\//, '');
 const skillsLinkRef = skillsRef.replace(/^origin\//, '');
 const skillsRepo = path.join(reposRoot, 'kujo-skills');
@@ -255,9 +255,13 @@ const workflowsDir = path.join(siteRoot, 'content', 'workflows');
 const operatorPageName = fs.existsSync(workflowsDir)
   ? fs.readdirSync(workflowsDir).find((name) => name.endsWith('-publishing-house-operator.md'))
   : undefined;
-const operatorPage = operatorPageName
+let operatorPage = operatorPageName
   ? fs.readFileSync(path.join(workflowsDir, operatorPageName), 'utf8')
   : undefined;
+if (operatorPage) {
+  const previousVersion = frontmatterValue(operatorPage, 'version');
+  if (previousVersion) operatorPage = operatorPage.replaceAll(`v${previousVersion}`, workflowsLinkRef);
+}
 fs.rmSync(workflowsDir, { recursive: true, force: true });
 targets.push({
   kind: 'workflows-index', name: 'Workflows', slug: 'workflows',

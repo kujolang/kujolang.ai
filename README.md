@@ -145,7 +145,7 @@ The vendored Kujo SSG and SiteKit assets retain their upstream terms in [SSG-LIC
 Use an explicit release ref to update skills without rewriting workflow pages:
 
 ```bash
-KUJO_SKILLS_REF=v0.7.0 node scripts/sync-ecosystem-catalogs.mjs --skills-only
+KUJO_SKILLS_REF=v0.7.1 node scripts/sync-ecosystem-catalogs.mjs --skills-only
 npm run social:cards
 ```
 
