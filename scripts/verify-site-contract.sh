@@ -342,10 +342,10 @@ require_text "${output_dir}/ecosystem/skills/kujo-video-styles/index.html" "feat
 require_social_meta "${output_dir}/ecosystem/skills/kujo-video-styles/index.html" "kujo-video-styles"
 require_file "${output_dir}/ecosystem/workflows/owned-agent-project/index.html"
 require_file "${output_dir}/ecosystem/workflows/publishing-house-operator/index.html"
-require_text "${output_dir}/ecosystem/workflows/index.html" 'kujo-workflows 0.6.0'
+require_text "${output_dir}/ecosystem/workflows/index.html" 'kujo-workflows 0.6.2'
 require_text "${output_dir}/ecosystem/workflows/index.html" '44 / Released workflows'
-require_text "${output_dir}/ecosystem/workflows/index.html" 'Every active workflow in the 0.6.0 release'
-require_text "${output_dir}/ecosystem/workflows/owned-agent-project/index.html" 'in the 0.6.0 local technical preview'
+require_text "${output_dir}/ecosystem/workflows/index.html" 'Every active workflow in the 0.6.2 release'
+require_text "${output_dir}/ecosystem/workflows/owned-agent-project/index.html" 'in the 0.6.2 local technical preview'
 require_text "${output_dir}/ecosystem/workflows/publishing-house-operator/index.html" 'Kujo Workflows 0.4.0 release'
 require_social_meta "${output_dir}/ecosystem/workflows/owned-agent-project/index.html" 'owned-agent-project'
 require_social_meta "${output_dir}/ecosystem/workflows/publishing-house-operator/index.html" 'publishing-house-operator'
