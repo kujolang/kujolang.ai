@@ -16,7 +16,7 @@ keywords: "Kujo CMS, open source CMS, agent-ready CMS, WebMCP CMS, MCP content m
 seo_title: "Kujo CMS 1.2.1 — Agent-Ready Content Management"
 seo_description: "Explore Kujo CMS 1.2.1: framework-neutral content, SEO, social sharing, themes, plugins, identities, abilities, MCP, WebMCP, APIs, and CLI workflows."
 latest_release_url: "https://github.com/kujolang/cms/releases/tag/v1.2.1"
-release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
+release_status: "CMS 1.2.1, CMS Example 1.2.0, Contact Form 1.0.1, and Field Notes 1.0.3 are published. CMS Experience remains unreleased. Kennel installs the CMS backend; companion extensions use their GitHub release ZIPs."
 ---
 
 ## What it does
