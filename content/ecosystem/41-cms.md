@@ -9,19 +9,19 @@ order: 400
 install_command: "kennel add cms"
 github_url: "https://github.com/kujolang/cms"
 launch_story: "Give people, developers, integrations, and agents one inspectable content contract without prescribing the frontend stack."
-scope_note: "CMS 1.2.0 is production-oriented backend software, but each deployment still requires environment-specific identity, infrastructure, storage, security, recovery, and governance proof."
-version: "1.2.0"
-last_updated: "2026-10-12"
+scope_note: "CMS 1.2.1 is production-oriented backend software, but each deployment still requires environment-specific identity, infrastructure, storage, security, recovery, and governance proof."
+version: "1.2.1"
+last_updated: "2026-10-22"
 keywords: "Kujo CMS, open source CMS, agent-ready CMS, WebMCP CMS, MCP content management, headless CMS, theme and plugin packages"
-seo_title: "Kujo CMS 1.2.0 — Agent-Ready Content Management"
-seo_description: "Explore Kujo CMS 1.2.0: framework-neutral content, SEO, social sharing, themes, plugins, identities, abilities, MCP, WebMCP, APIs, and CLI workflows."
-latest_release_url: "https://github.com/kujolang/cms/releases/tag/v1.2.0"
+seo_title: "Kujo CMS 1.2.1 — Agent-Ready Content Management"
+seo_description: "Explore Kujo CMS 1.2.1: framework-neutral content, SEO, social sharing, themes, plugins, identities, abilities, MCP, WebMCP, APIs, and CLI workflows."
+latest_release_url: "https://github.com/kujolang/cms/releases/tag/v1.2.1"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
 ## What it does
 
-Kujo CMS 1.2.0 is a framework-neutral content backend with a separate, complete administration and frontend example. It manages content types, entries, taxonomies, media, menus, users, sessions, permissions, SEO, social sharing, themes, plugins, abilities, connectors, delivery APIs, and production operations.
+Kujo CMS 1.2.1 is a framework-neutral content backend with a separate, complete administration and frontend example. It manages content types, entries, taxonomies, media, menus, users, sessions, permissions, SEO, social sharing, themes, plugins, abilities, connectors, delivery APIs, and production operations.
 
 Use the core from Next.js, Astro, PHP, a native application, a terminal harness, or another frontend stack. The official dependency-free JavaScript and PHP clients expose the same contracts used by the example application.
 
@@ -47,13 +47,13 @@ The standalone [Field Notes theme](https://github.com/kujolang/cms-field-notes-t
 
 CMS shows what an AI-native application looks like when agents are first-class consumers instead of browser automation bolted on later: clear contracts, scoped authority, human confirmation, observable actions, and equal access through the interface, API, and terminal.
 
-## CMS 1.2.0 upgrade
+## Upgrading from before CMS 1.2
 
 This release adds canonical Ability contracts and request-bound one-time approvals, tightens session expiry and request limits, protects extension cleanup and media reads, and fixes concurrent content composition and queue claims. Scheduler batches use one database transaction; workers wait for completion without a one-second polling delay per job.
 
 Back up the database and managed storage, install pinned dependencies, and let startup apply the migrations. Ability callers must obtain approval for the exact invocation; `confirmed: true` grants no authority. Keep the returned `updated_at` for later edits. Legacy extension directories without an ownership receipt are preserved. The CMS Ability pack and Ability dependency remain independently versioned at 1.0.1.
 
-Read the [upgrade notes](https://github.com/kujolang/cms/blob/v1.2.0/docs/releases/1.2.0.md) before deployment. CMS Example’s current source pairs its public frontend and Studio with this backend. The Field Notes theme and contact form plugin retain their own versions and compatible manifest contracts.
+Read the [upgrade notes](https://github.com/kujolang/cms/blob/v1.2.1/docs/releases/1.2.0.md) before deployment. CMS Example’s current source pairs its public frontend and Studio with this backend. The Field Notes theme and contact form plugin retain their own versions and compatible manifest contracts.
 
 ## Operating boundary
 
@@ -69,8 +69,19 @@ Static WebMCP remains a separate public, same-origin, read-only surface. Authent
 
 ## Learn more
 
-- [CMS 1.2.0 release](https://github.com/kujolang/cms/releases/tag/v1.2.0)
+- [CMS 1.2.1 release](https://github.com/kujolang/cms/releases/tag/v1.2.1)
 - [CMS repository](https://github.com/kujolang/cms)
 - [CMS Example frontend and Studio](https://github.com/kujolang/cms-example)
-- [Latest published CMS Example release (1.1.0)](https://github.com/kujolang/cms-example/releases/tag/v1.1.0)
+- [CMS Example 1.2.0 release](https://github.com/kujolang/cms-example/releases/tag/v1.2.0)
 - [Complete CMS documentation](https://docs.kujolang.ai/showcases/cms/)
+
+## Companion releases
+
+| Component | Release | Installation |
+| --- | --- | --- |
+| CMS backend | [1.2.1](https://github.com/kujolang/cms/releases/tag/v1.2.1) | `kennel add cms` or the tagged source |
+| CMS Example frontend and Studio | [1.2.0](https://github.com/kujolang/cms-example/releases/tag/v1.2.0) | Tagged source and `npm ci`; pairs with CMS 1.2.1 |
+| Contact Form plugin | [1.0.1](https://github.com/kujolang/cms-contact-form/releases/tag/v1.0.1) | Release ZIP through CMS Studio or the extension CLI |
+| Field Notes theme | [1.0.3](https://github.com/kujolang/cms-field-notes-theme/releases/tag/v1.0.3) | Release ZIP through CMS Studio or the extension CLI |
+
+CMS Experience is an unreleased legacy adapter. Use CMS Example for the current frontend and Studio. The independently versioned embedded theme in CMS Example retains its own manifest identity. CMS 1.2.1 preserves the 1.2 API and storage contracts; see its [maintenance release notes](https://github.com/kujolang/cms/blob/v1.2.1/docs/releases/1.2.1.md).
