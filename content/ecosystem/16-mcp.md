@@ -9,12 +9,12 @@ order: 70
 install_command: "kennel add mcp"
 github_url: "https://github.com/kujolang/mcp"
 launch_story: "A guarded gateway for exposing useful capabilities to agents through explicit contracts."
-scope_note: "MCP 1.3.2 targets Kujo 1.7.0 and retains the first-class generator, standard MCP JSON-RPC methods, hardened generated servers, and the portable Ability host package. Controlled handoffs remain alpha; Dispatch owns replay. Review server authority, authentication and deployment boundaries. Historical host certificates retain their exact tested scope."
+scope_note: "MCP 1.3.3 targets Kujo 1.7.0 and retains the first-class generator, standard MCP JSON-RPC methods, hardened generated servers, and the portable Ability host package. Controlled handoffs remain alpha; Dispatch owns replay. Review server authority, authentication and deployment boundaries. Historical host certificates retain their exact tested scope."
 keywords: "MCP, Kujo ecosystem, Primitive, Gateway"
 seo_title: "MCP — Kujo Ecosystem"
-last_updated: "2026-10-14"
-version: "1.3.2"
-latest_release_url: "https://github.com/kujolang/mcp/releases/tag/v1.3.2"
+last_updated: "2026-10-22"
+version: "1.3.3"
+latest_release_url: "https://github.com/kujolang/mcp/releases/tag/v1.3.3"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
@@ -50,9 +50,9 @@ The [MCP repository](https://github.com/kujolang/mcp) is the source of truth for
 
 The Ability Gateway repository is private; public source access is not available.
 
-## Version 1.3.2
+## Version 1.3.3
 
-MCP 1.3.2 targets Kujo 1.7.0 and retains `kujo mcp make` as a first-class generator command, standard MCP JSON-RPC methods, bounded scans, fail-closed configuration, audit-safe metadata, and a portable `kujo-ability` host package for Codex, Copilot, Cursor, VS Code, and generic MCP clients. Experimental controlled local STDIO Ability handoffs retain one-use host admission and bounded evidence references. Lost completion remains uncertain until the effect owner verifies it; Dispatch alone decides replay.
+MCP 1.3.3 targets Kujo 1.7.0 and retains `kujo mcp make` as a first-class generator command, standard MCP JSON-RPC methods, bounded scans, fail-closed configuration, audit-safe metadata, and a portable `kujo-ability` host package for Codex, Copilot, Cursor, VS Code, and generic MCP clients. Experimental controlled local STDIO Ability handoffs retain one-use host admission and bounded evidence references. Lost completion remains uncertain until the effect owner verifies it; Dispatch alone decides replay.
 
 Wave C beta remains opt-in in the bounded single-effect required/deny domain, with alpha retained. Wave D handoffs remain alpha under a trusted local host. No remote participant trust or exactly-once guarantee is claimed.
 
