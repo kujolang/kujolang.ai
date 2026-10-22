@@ -9,26 +9,26 @@ order: 350
 install_command: "kennel add searchbridge"
 github_url: "https://github.com/kujolang/searchbridge"
 launch_story: "Bring optional provider measurements into Kujo WebOps through scoped capabilities, normalized evidence, and explicit effect boundaries."
-scope_note: "SearchBridge 1.0.1 fixes replay and budget handling; recollect cached evidence after upgrading. Google search, analytics, PageSpeed, and CrUX remain stable-live. Cloudflare and IndexNow remain fixture-only pending the v1.1 review."
-version: "1.0.1"
-last_updated: "2026-10-13"
+scope_note: "SearchBridge 1.0.2 fixes replay and budget handling; recollect cached evidence after upgrading. Google search, analytics, PageSpeed, and CrUX remain stable-live. Cloudflare and IndexNow remain fixture-only pending the v1.1 review."
+version: "1.0.2"
+last_updated: "2026-10-22"
 keywords: "SearchBridge, Kujo ecosystem, search data, analytics, PageSpeed, CrUX, backlinks, IndexNow"
 seo_title: "SearchBridge — Kujo Ecosystem"
-latest_release_url: "https://github.com/kujolang/searchbridge/releases/tag/v1.0.1"
+latest_release_url: "https://github.com/kujolang/searchbridge/releases/tag/v1.0.2"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
 ---
 
-## Upgrade to 1.0.1
+## Upgrade to 1.0.2
 
-This patch fixes cache-key collisions, enforces live-call budgets, bounds replay
+The current release includes fixes for cache-key collisions, enforces live-call budgets, bounds replay
 and SDK diagnostics, and strengthens release verification. Recollect cached
 evidence after upgrading: new request hashes do not reuse older cache entries.
 Cache record formats and provider support tiers remain unchanged. Submissions
-never use cached receipts. [Read the release notes](https://github.com/kujolang/searchbridge/releases/tag/v1.0.1).
+never use cached receipts. [Read the release notes](https://github.com/kujolang/searchbridge/releases/tag/v1.0.2).
 
 ## What it does
 
-SearchBridge 1.0.1 fetches and normalizes evidence from Google Search Console, Bing Webmaster, Google Analytics 4, PageSpeed Insights, CrUX, Cloudflare, Ahrefs, IndexNow, and other bounded provider contracts. Every result records its provider, capability, retrieval mode, timing, provenance, and normalized rows in a versioned schema without interpreting SEO performance.
+SearchBridge 1.0.2 fetches and normalizes evidence from Google Search Console, Bing Webmaster, Google Analytics 4, PageSpeed Insights, CrUX, Cloudflare, Ahrefs, IndexNow, and other bounded provider contracts. Every result records its provider, capability, retrieval mode, timing, provenance, and normalized rows in a versioned schema without interpreting SEO performance.
 
 ## Capability-scoped providers
 
@@ -46,4 +46,4 @@ Evidence commands are read-only with respect to providers. Submission is separat
 
 ## Learn more
 
-Download the checksum-verified [SearchBridge 1.0.1 release](https://github.com/kujolang/searchbridge/releases/tag/v1.0.1), review its [support matrix](https://github.com/kujolang/searchbridge/blob/v1.0.1/docs/support-matrix.md), or browse the [source repository](https://github.com/kujolang/searchbridge).
+Download the checksum-verified [SearchBridge 1.0.2 release](https://github.com/kujolang/searchbridge/releases/tag/v1.0.2), review its [support matrix](https://github.com/kujolang/searchbridge/blob/v1.0.2/docs/support-matrix.md), or browse the [source repository](https://github.com/kujolang/searchbridge).
