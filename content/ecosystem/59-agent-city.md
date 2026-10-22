@@ -6,17 +6,17 @@ featured_image: "/assets/images/ecosystem/agent-city-live-run.webp"
 section: "Showcase"
 tags: [Showcase, AI, Agents]
 order: 480
-install_command: "curl --proto '=https' --tlsv1.2 -fsSL https://github.com/kujolang/agent-city/releases/download/v0.2.0/install.sh | sh"
+install_command: "curl --proto '=https' --tlsv1.2 -fsSL https://github.com/kujolang/agent-city/releases/download/v0.2.1/install.sh | sh"
 github_url: "https://github.com/kujolang/agent-city"
 launch_story: "Give an agent a task, follow its work through the city, and ask a separate agent to review the result. Every semantic activity links to observed Kujo evidence."
-scope_note: "Agent City 0.2.0 runs locally on macOS and Linux. Bring your own model connection. Container execution and media generation require separate setup and explicit permission."
+scope_note: "Agent City 0.2.1 runs locally on macOS and Linux. Bring your own model connection. Container execution and media generation require separate setup and explicit permission."
 keywords: "Kujo Agent City, AI agent workspace, pixel-art agent city, agent task review, observed agent activity, semantic replay"
 seo_title: "Agent City — Run and Review AI-Agent Tasks"
 seo_description: "Run local AI-agent tasks in Agent City. Follow retrievals, tool calls, reviews, and checks through a pixel-art city, then inspect evidence or replay a recorded run."
-version: "0.2.0"
-latest_release_url: "https://github.com/kujolang/agent-city/releases/tag/v0.2.0"
+version: "0.2.1"
+latest_release_url: "https://github.com/kujolang/agent-city/releases/tag/v0.2.1"
 release_status: "Published local application for macOS Intel and Apple Silicon, Linux x64 and ARM64. A model connection is required; hosted multi-user operation is outside this release."
-last_updated: "2026-10-08"
+last_updated: "2026-10-22"
 ---
 
 ## Watch the work happen
@@ -62,7 +62,7 @@ Workcell execution needs a compatible container engine with seccomp and AppArmor
 ## Learn more
 
 - [Agent City documentation](https://docs.kujolang.ai/showcases/agent-city/)
-- [Version 0.2.0 release](https://github.com/kujolang/agent-city/releases/tag/v0.2.0)
+- [Version 0.2.1 release](https://github.com/kujolang/agent-city/releases/tag/v0.2.1)
 - [Source repository](https://github.com/kujolang/agent-city)
 - [Installation and container setup](https://github.com/kujolang/agent-city/blob/main/installer/README.md)
 - [First-task walkthrough](https://github.com/kujolang/agent-city/blob/main/TRY-AGENT-CITY.md)

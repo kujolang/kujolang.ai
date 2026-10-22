@@ -518,8 +518,8 @@ require_text "${output_dir}/ecosystem/ssg/index.html" "https://github.com/kujola
 require_text "${output_dir}/ecosystem/ssg/index.html" "npm ci --ignore-scripts"
 require_text "${output_dir}/ecosystem/ssg/index.html" "esbuild 0.28.2"
 
-require_text "${output_dir}/ecosystem/intake/index.html" "https://github.com/kujolang/intake/releases/tag/v0.2.0"
-require_text "${output_dir}/ecosystem/intake/index.html" "Node.js 20.19"
+require_text "${output_dir}/ecosystem/intake/index.html" "https://github.com/kujolang/intake/releases/tag/v0.3.0"
+require_text "${output_dir}/ecosystem/intake/index.html" "Node.js 22.23.4"
 
 # Source uses Git/npm; its public release and images must remain discoverable.
 require_text "${output_dir}/ecosystem/source/index.html" "https://github.com/kujolang/source/releases/tag/v0.1.1"

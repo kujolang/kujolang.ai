@@ -12,10 +12,10 @@ launch_story: "A conventional application API pattern that makes Kujo integratio
 scope_note: "This is a proof application and architecture reference, not a production-certified application platform."
 keywords: "CRUD API Showcase, Kujo ecosystem, Showcase, API"
 seo_title: "CRUD API Showcase — Kujo Ecosystem"
-version: "1.0.1"
-latest_release_url: "https://github.com/kujolang/crud-api/releases/tag/v1.0.1"
+version: "1.0.2"
+latest_release_url: "https://github.com/kujolang/crud-api/releases/tag/v1.0.2"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-10-14"
+last_updated: "2026-10-22"
 ---
 
 ## What it does

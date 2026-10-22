@@ -6,17 +6,17 @@ featured_image: "/assets/images/ecosystem/showcase-application-gallery.webp"
 section: "Showcase"
 tags: [Showcase, Intake, Approvals]
 order: 490
-install_command: "git clone --branch v0.2.0 https://github.com/kujolang/intake.git"
+install_command: "git clone --branch v0.3.0 https://github.com/kujolang/intake.git"
 github_url: "https://github.com/kujolang/intake"
 launch_story: "Keep incoming work, original payloads, proposed actions, and operator decisions together in local files."
-scope_note: "Intake 0.2.0 is a Node.js source release for local operators. Requires Node.js 20.19 or newer. Not published to npm or Kennel; live providers and shared deployments need their own validation."
+scope_note: "Intake 0.3.0 is a Node.js source release for local operators. Requires patched Node.js 22.23.4+, 24.22.1+, or 26.12.1+. Not published to npm or Kennel; live providers and shared deployments need their own validation."
 keywords: "Kujo Intake, local work queue, email intake, webhook intake, action approvals, recovery"
-seo_title: "Intake 0.2.0 — Local Intake and Action Review"
+seo_title: "Intake 0.3.0 — Local Intake and Action Review"
 seo_description: "Collect email, webhooks, files, and manual input. Route work through rules and policy, review actions, and recover interrupted local writes."
-version: "0.2.0"
-latest_release_url: "https://github.com/kujolang/intake/releases/tag/v0.2.0"
-release_status: "First tagged GitHub source release. The npm manifest remains private; no Kennel install is advertised."
-last_updated: "2026-10-13"
+version: "0.3.0"
+latest_release_url: "https://github.com/kujolang/intake/releases/tag/v0.3.0"
+release_status: "GitHub source release with inbox filtering and dashboard refinements. The npm manifest remains private; no Kennel install is advertised."
+last_updated: "2026-10-22"
 ---
 
 ## What it does
@@ -27,10 +27,10 @@ The dashboard provides review queues, ownership, snooze, drafts, source health, 
 
 ## Install the release
 
-Use Node.js 20.19 or newer:
+Use patched Node.js 22.23.4+, 24.22.1+, or 26.12.1+:
 
 ```sh
-git clone --branch v0.2.0 https://github.com/kujolang/intake.git
+git clone --branch v0.3.0 https://github.com/kujolang/intake.git
 cd intake
 npm ci
 npm link
@@ -52,7 +52,7 @@ This release supports local operation and adapter development. It does not estab
 
 ## Learn more
 
-- [Intake 0.2.0 release](https://github.com/kujolang/intake/releases/tag/v0.2.0)
-- [Release and upgrade notes](https://github.com/kujolang/intake/blob/v0.2.0/docs/releases/0.2.0.md)
+- [Intake 0.3.0 release](https://github.com/kujolang/intake/releases/tag/v0.3.0)
+- [Release and upgrade notes](https://github.com/kujolang/intake/blob/v0.3.0/docs/releases/0.3.0.md)
 - [Intake documentation](https://docs.kujolang.ai/showcases/intake/)
 - [Source and README](https://github.com/kujolang/intake)

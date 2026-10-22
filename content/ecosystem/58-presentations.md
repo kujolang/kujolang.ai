@@ -9,14 +9,14 @@ order: 470
 install_command: "git clone https://github.com/kujolang/presentations.git"
 github_url: "https://github.com/kujolang/presentations"
 launch_story: "Turn structured deck source into static slide URLs, an overview, a reading edition, print output, and presenter tools without locking content inside a presentation app."
-scope_note: "Presentations 0.3.0 is a source-distributed preview. Native authoring and builds are verified on macOS and Linux, not Windows; hosting, access control, factual review, and human accessibility and language review remain deployment responsibilities."
+scope_note: "Presentations 0.3.1 is a source-distributed preview. Native authoring and builds are verified on macOS and Linux, not Windows; hosting, access control, factual review, and human accessibility and language review remain deployment responsibilities."
 keywords: "Kujo Presentations, browser-native slide decks, static presentation site, presentation generator, presenter console, accessible reading edition"
-seo_title: "Kujo Presentations 0.3.0 — Browser-Native Slide Decks"
+seo_title: "Kujo Presentations 0.3.1 — Browser-Native Slide Decks"
 seo_description: "Build browser-native slide decks with Kujo: static slide routes, overview and reading pages, print and PDF output, presenter tools, local themes, and optional motion."
-version: "0.3.0"
-latest_release_url: "https://github.com/kujolang/presentations/releases/tag/v0.3.0"
+version: "0.3.1"
+latest_release_url: "https://github.com/kujolang/presentations/releases/tag/v0.3.1"
 release_status: "Version identifies the published preview source release. The npm package remains private; clone the repository to use the authoring and build tools."
-last_updated: "2026-10-03"
+last_updated: "2026-10-22"
 ---
 
 ## What it does
@@ -41,7 +41,7 @@ Presentations shows how Kujo's publishing stack can support designed, reviewable
 
 ## Operating boundary
 
-Version 0.3.0 is a preview distributed as source through GitHub releases; it is not published to npm. Native authoring and build tools are verified on macOS and Linux, not Windows. Automated browser, geometry, and accessibility checks do not replace factual review, visual review, a human screen-reader session, or fluent-language review.
+Version 0.3.1 is a preview distributed as source through GitHub releases; it is not published to npm. Native authoring and build tools are verified on macOS and Linux, not Windows. Automated browser, geometry, and accessibility checks do not replace factual review, visual review, a human screen-reader session, or fluent-language review.
 
 Generated decks are static files. Presentations does not provide accounts, tenant isolation, hosted rendering, or server-side authorization. Build trusted projects in a private workspace, keep private files outside the published asset tree, and protect confidential decks at the host.
 
@@ -51,9 +51,9 @@ Generated decks are static files. Presentations does not provide accounts, tenan
 
 ## Learn more
 
-- [Presentations 0.3.0 release](https://github.com/kujolang/presentations/releases/tag/v0.3.0)
+- [Presentations 0.3.1 release](https://github.com/kujolang/presentations/releases/tag/v0.3.1)
 - [Presentations repository](https://github.com/kujolang/presentations)
 - [Presentations documentation](https://docs.kujolang.ai/showcases/presentations/)
-- [Getting started](https://github.com/kujolang/presentations/blob/v0.3.0/docs/getting-started.md)
-- [Authoring guide](https://github.com/kujolang/presentations/blob/v0.3.0/docs/authoring.md)
-- [Support matrix](https://github.com/kujolang/presentations/blob/v0.3.0/docs/support-matrix.md)
+- [Getting started](https://github.com/kujolang/presentations/blob/v0.3.1/docs/getting-started.md)
+- [Authoring guide](https://github.com/kujolang/presentations/blob/v0.3.1/docs/authoring.md)
+- [Support matrix](https://github.com/kujolang/presentations/blob/v0.3.1/docs/support-matrix.md)
