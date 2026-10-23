@@ -1,5 +1,8 @@
 # Kujolang.ai
 
+[![Version](https://img.shields.io/badge/version-1.3.1-black)](https://github.com/kujolang/kujolang.ai)
+[![built with Kujo](https://img.shields.io/badge/built%20with-Kujo-white.svg)](https://github.com/kujolang/kujo)
+
 The official website for the [Kujo programming language](https://github.com/kujolang/kujo) and its local-first tooling ecosystem.
 
 This site is built with the Kujo SSG and the Kujo SiteKit design system. Markdown content is the editable source of truth; generated files are written to `output/` and should not be edited by hand.
