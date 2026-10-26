@@ -1,0 +1,44 @@
+{
+  "chapters": 14,
+  "caption_blocks": 127,
+  "expected_duration_seconds": 567.333,
+  "alignment_and_text_coverage": "pass",
+  "timeline_continuity": "pass",
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "width": 1920,
+  "height": 1080,
+  "fps": "30/1",
+  "duration_seconds": 567.4,
+  "size_bytes": 72389937,
+  "sha256": "7f35df95e04a24991d381dde7cddd5047c7db3cdfe26ec9a266957e2a2feda91",
+  "audio": {
+    "input_i": -16.56,
+    "input_tp": -1.84,
+    "input_lra": 3.1,
+    "input_thresh": -26.92
+  },
+  "frame_matches": [
+    {
+      "seconds": 105,
+      "ssim": 0.995393
+    },
+    {
+      "seconds": 280,
+      "ssim": 0.994475
+    },
+    {
+      "seconds": 420,
+      "ssim": 0.997228
+    },
+    {
+      "seconds": 500,
+      "ssim": 0.997921
+    },
+    {
+      "seconds": 560,
+      "ssim": 0.999771
+    }
+  ],
+  "black_intervals": []
+}

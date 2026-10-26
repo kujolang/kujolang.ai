@@ -1,0 +1,16 @@
+{
+  "name": "watchdog-walkthrough",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx --yes hyperframes@0.8.205 preview",
+    "check": "npx --yes hyperframes@0.8.205 check",
+    "render": "npx --yes hyperframes@0.8.205 render",
+    "publish": "npx --yes hyperframes@0.8.205 publish",
+    "build": "python3 scripts/build-film.py",
+    "render:sparse": "python3 scripts/render-sparse.py",
+    "finalize": "python3 scripts/finalize-film.py",
+    "verify": "python3 scripts/verify-film.py",
+    "audit": "python3 scripts/audit-output.py"
+  }
+}

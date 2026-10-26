@@ -1,0 +1,128 @@
+[
+  {
+    "id": "01-intro",
+    "title": "Watchdog, from traffic to answers",
+    "asset": "overview.jpg",
+    "caption": "A local view of your AI systems",
+    "text": "When an AI application gets busy, a simple question becomes surprisingly hard to answer. Where did the tokens go? Watchdog gives you one place to look. It records model requests, tool calls, and agent activity in a local SQLite database, then puts usage, estimated cost, latency, and failures into a dashboard. In this walkthrough, we'll connect the pieces, inspect individual records, and cover the tools for running Watchdog day to day. Everything shown comes from an isolated demonstration with synthetic data. No live account data is used.",
+    "start": 0,
+    "duration": 36.266666666666666
+  },
+  {
+    "id": "02-connect",
+    "title": "Connect your applications",
+    "asset": "setup",
+    "caption": "One proxy. Several ways to send telemetry.",
+    "text": "Start Watchdog with the Kujo runtime, then open its local dashboard. For an OpenAI-compatible application, set the client's base URL to Watchdog's proxy endpoint. The client sends its request to Watchdog, Watchdog forwards it to the upstream provider, and the resulting telemetry is stored locally. Named upstream profiles let one instance serve several provider accounts. Applications can also send request and trace telemetry directly, or use canonical producer batches and supported OTLP traces. These are alternative integration paths. You do not need to send the same event through every path.",
+    "start": 36.267,
+    "duration": 39.166666666666664
+  },
+  {
+    "id": "03-overview",
+    "title": "Read the overview",
+    "asset": "overview.jpg",
+    "caption": "30 days \u2022 more than 24 billion sample tokens",
+    "text": "The overview starts with the questions most operators ask first. How many requests ran? How many tokens did they use? What was the estimated direct API value? How long did successful requests take, and how often did requests fail? The remaining tiles summarize sessions, tool calls, trace activity, and canonical records. Our sample contains more than twenty-four billion tokens across thirty days. Watchdog currently displays that large total in millions. The traffic chart makes busy periods and quieter days easy to spot, while the other charts separate latency, request status, and tool usage.",
+    "start": 75.433,
+    "duration": 39.7
+  },
+  {
+    "id": "04-ranges",
+    "title": "Choose the period that matters",
+    "asset": "range.jpg",
+    "caption": "Compare a broad trend with a focused window",
+    "text": "Use the range selector to move from a broad overview to the period you need to investigate. Choose a recent preset, all time, or a custom start and end. The dashboard applies that range to its supported data views, so you can compare the summary with the records underneath. Start wide when you want to see a trend, then narrow the window around a spike. A high token total and a high request count answer different questions: a smaller number of long-context requests can use more tokens than a much larger number of short requests.",
+    "start": 115.133,
+    "duration": 33.4
+  },
+  {
+    "id": "05-requests",
+    "title": "Inspect a request",
+    "asset": "request.jpg",
+    "caption": "From a summary to the underlying record",
+    "text": "The Requests tab is the working list. Filter by session, model, or prompt text when that content was captured, and narrow the list by tenant, project, status, or provider. Open a row to see its full record. The detail dialog shows identifiers, model, status, input and output tokens, latency, and the available cost fields. Related-data links lead into the session and other associated records. Here the pricing source and per-million-token rates explain the estimate. These estimates are useful for comparing usage. They are not a provider invoice, and they do not automatically reflect a subscription's actual charge.",
+    "start": 148.533,
+    "duration": 41.3
+  },
+  {
+    "id": "06-errors",
+    "title": "Investigate failures",
+    "asset": "errors.jpg",
+    "caption": "Isolate errors before drawing conclusions",
+    "text": "When something goes wrong, switch to Errors to focus on failed requests. Look at the error code and message, then use the session and workflow context to understand what surrounded the failure. A rate-limit response, an upstream outage, and a timeout call for different responses. Watchdog records the evidence; your application still owns its recovery policy. The error rate gives you a useful starting point, but a single percentage cannot explain the cause. Pair it with the affected model, the request timing, and the underlying records before deciding what to change.",
+    "start": 189.833,
+    "duration": 36.03333333333333
+  },
+  {
+    "id": "07-tools",
+    "title": "Follow tool activity",
+    "asset": "tools.jpg",
+    "caption": "See the work beyond the model call",
+    "text": "Model usage is only part of an agent's work. The Tool Calls tab shows recorded tools, their status, latency, arguments, and results where those fields are available under the capture policy. Open a tool record to inspect its details and follow its request or session links. This helps separate a slow model response from a slow database query or document search. In the sample, read-file, search-documents, and query-database calls appear alongside model activity. These are demonstration records, not calls to real customer systems. Watchdog observes tool execution; it does not grant the tool permission to act.",
+    "start": 225.867,
+    "duration": 39.96666666666667
+  },
+  {
+    "id": "08-traces",
+    "title": "Trace a workflow",
+    "asset": "traces.jpg",
+    "caption": "Model, tool, shell, and persistence spans",
+    "text": "Agent Traces adds a timeline of the work inside a workflow. A trace can contain model calls, tool operations, shell activity, persistence, and internal steps. Expand a trace and inspect a span to see its duration, status, attributes, and recorded events. With suitable producer instrumentation, events can mark connection setup, first output, a tool request, and completion. That detail helps answer where time was spent, rather than treating the entire operation as one slow request. The depth you see depends on what the producer reports. Missing instrumentation is missing evidence, not a zero-duration operation.",
+    "start": 265.833,
+    "duration": 41.0
+  },
+  {
+    "id": "09-sessions",
+    "title": "Understand a complete session",
+    "asset": "session.jpg",
+    "caption": "Requests and tools in one conversation",
+    "text": "Sessions brings related activity together. Instead of opening every request separately, compare a session's request count, errors, tokens, estimated value, and average latency. Open its detail dialog to follow the underlying requests and tool calls. In this sample session, eight requests contribute to one aggregate total, and the related tools remain one click away. Agent Insights adds summary views drawn from the recorded activity, including patterns that can help you compare agents and context growth. Use those summaries to find a question worth investigating, then return to the actual records to test your explanation.",
+    "start": 306.833,
+    "duration": 39.96666666666667
+  },
+  {
+    "id": "10-evidence",
+    "title": "Read canonical evidence",
+    "asset": "canonical.jpg",
+    "caption": "Explicit attempts, timing, context, and outcomes",
+    "text": "Canonical Evidence preserves a more structured account of an operation. It can distinguish an explicit retry from a fallback, show observed first-output timing, report throughput when the required measurements exist, and describe context pressure when usage and a known context limit support the calculation. Cost evidence also keeps provider-reported values and catalog estimates distinct. Watchdog does not invent retry relationships from timestamps or model changes. And a successful span alone does not prove the whole operation completed. Terminal events and explicit references carry that meaning. When evidence is missing, the interface says so instead of filling the gap with a guess.",
+    "start": 346.8,
+    "duration": 43.63333333333333
+  },
+  {
+    "id": "11-sources",
+    "title": "Manage connected sources",
+    "asset": "sources.jpg",
+    "caption": "Know which apps contribute telemetry",
+    "text": "Sources shows where incoming telemetry comes from. It combines accepted observations, registered producers, and configured proxy profiles. Open a source to see its identity and the evidence behind its status. Active means matching telemetry was recently accepted. Stale means it was seen earlier. Pending means configuration exists without matching accepted telemetry. These labels describe local evidence, not a remote health check. The Add connection flow provides setup guidance and registration options. Named proxy profiles can be managed here without placing raw credentials into the dashboard. Keep credential values in the appropriate environment or secret store.",
+    "start": 390.433,
+    "duration": 43.06666666666667
+  },
+  {
+    "id": "12-exports",
+    "title": "Take your evidence elsewhere",
+    "asset": "exporters.jpg",
+    "caption": "JSON, JSONL, and supported OTLP destinations",
+    "text": "Watchdog also exposes JSON APIs and export paths for further analysis. The dashboard's export action gives you a convenient JSON snapshot. Canonical JSONL exports preserve structured records for downstream processing and replay workflows. For an observability backend, configure an OTLP exporter and run the export worker. Exporters shows profiles and delivery state. Each destination has bounded queue and retry behavior, and a destination outage does not turn an otherwise successful proxy request into a failure. Credentials are resolved from environment-variable references. Supported OTLP data can go through a collector to compatible tools; Watchdog is not a receiver for every kind of OpenTelemetry data.",
+    "start": 433.5,
+    "duration": 46.666666666666664
+  },
+  {
+    "id": "13-backups",
+    "title": "Back up and protect the data",
+    "asset": "backups.jpg",
+    "caption": "Local storage needs an operating policy",
+    "text": "The Backups tab controls the local database backup workflow. Set the interval, destination folder, and retention count, or create a backup immediately. Watchdog checks generated backups and records their history. Encryption requires a separately configured key file. Active backup files and missing or failed history are separate views. For the telemetry itself, content capture is off by default, and basic redaction applies before storage and export. Before exposing Watchdog beyond your machine, configure API and proxy authentication, TLS, network access, retention, and rate limits. Local-first storage gives you control, but it still needs an operating policy.",
+    "start": 480.167,
+    "duration": 44.666666666666664
+  },
+  {
+    "id": "14-finish",
+    "title": "Turn usage into useful decisions",
+    "asset": "finish",
+    "caption": "Connect. Observe. Investigate.",
+    "text": "The practical loop is simple. Connect an application. Establish a baseline for usage, latency, and failures. When a pattern changes, narrow the range, inspect requests, and follow sessions, tools, and traces until the evidence explains it. Use canonical records when you need explicit timing and outcome semantics, exporters when the evidence belongs in another system, and backups to preserve the local history. Watchdog makes AI activity inspectable without taking over execution or recovery. Start with one application and one question you want to answer. The setup guide and source are available at kujolang dot ai, slash ecosystem, slash watchdog.",
+    "start": 524.833,
+    "duration": 42.5
+  }
+]

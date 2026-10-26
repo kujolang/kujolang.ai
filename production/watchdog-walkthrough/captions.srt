@@ -1,0 +1,507 @@
+1
+00:00:00,350 --> 00:00:04,990
+When an AI application gets busy, a simple question becomes surprisingly
+
+2
+00:00:05,070 --> 00:00:09,310
+hard to answer. Where did the tokens go? Watchdog gives you
+
+3
+00:00:09,390 --> 00:00:13,390
+one place to look. It records model requests, tool calls, and
+
+4
+00:00:13,470 --> 00:00:18,270
+agent activity in a local SQLite database, then puts usage, estimated
+
+5
+00:00:18,350 --> 00:00:23,070
+cost, latency, and failures into a dashboard. In this walkthrough, we'll
+
+6
+00:00:23,150 --> 00:00:27,310
+connect the pieces, inspect individual records, and cover the tools for
+
+7
+00:00:27,390 --> 00:00:31,150
+running Watchdog day to day. Everything shown comes from an isolated
+
+8
+00:00:31,190 --> 00:00:35,390
+demonstration with synthetic data. No live account data is used.
+
+9
+00:00:36,617 --> 00:00:41,017
+Start Watchdog with the Kujo runtime, then open its local dashboard.
+
+10
+00:00:41,497 --> 00:00:46,377
+For an OpenAI-compatible application, set the client's base URL to Watchdog's
+
+11
+00:00:46,457 --> 00:00:51,177
+proxy endpoint. The client sends its request to Watchdog, Watchdog forwards
+
+12
+00:00:51,257 --> 00:00:54,617
+it to the upstream provider, and the resulting telemetry is stored
+
+13
+00:00:54,697 --> 00:01:00,257
+locally. Named upstream profiles let one instance serve several provider accounts.
+
+14
+00:01:00,537 --> 00:01:04,937
+Applications can also send request and trace telemetry directly, or use
+
+15
+00:01:05,017 --> 00:01:10,457
+canonical producer batches and supported OTLP traces. These are alternative integration
+
+16
+00:01:10,537 --> 00:01:13,497
+paths. You do not need to send the same event through
+
+17
+00:01:13,577 --> 00:01:14,537
+every path.
+
+18
+00:01:15,783 --> 00:01:19,863
+The overview starts with the questions most operators ask first. How
+
+19
+00:01:19,943 --> 00:01:23,703
+many requests ran? How many tokens did they use? What was
+
+20
+00:01:23,783 --> 00:01:28,503
+the estimated direct API value? How long did successful requests take,
+
+21
+00:01:28,663 --> 00:01:33,383
+and how often did requests fail? The remaining tiles summarize sessions,
+
+22
+00:01:33,503 --> 00:01:38,183
+tool calls, trace activity, and canonical records. Our sample contains more
+
+23
+00:01:38,263 --> 00:01:43,543
+than twenty-four billion tokens across thirty days. Watchdog currently displays that
+
+24
+00:01:43,623 --> 00:01:47,863
+large total in millions. The traffic chart makes busy periods and
+
+25
+00:01:47,943 --> 00:01:52,023
+quieter days easy to spot, while the other charts separate latency,
+
+26
+00:01:52,223 --> 00:01:54,263
+request status, and tool usage.
+
+27
+00:01:55,483 --> 00:01:58,683
+Use the range selector to move from a broad overview to
+
+28
+00:01:58,723 --> 00:02:02,603
+the period you need to investigate. Choose a recent preset, all
+
+29
+00:02:02,683 --> 00:02:06,763
+time, or a custom start and end. The dashboard applies that
+
+30
+00:02:06,843 --> 00:02:09,723
+range to its supported data views, so you can compare the
+
+31
+00:02:09,803 --> 00:02:13,323
+summary with the records underneath. Start wide when you want to
+
+32
+00:02:13,403 --> 00:02:17,163
+see a trend, then narrow the window around a spike. A
+
+33
+00:02:17,243 --> 00:02:21,323
+high token total and a high request count answer different questions:
+
+34
+00:02:21,403 --> 00:02:25,163
+a smaller number of long-context requests can use more tokens than
+
+35
+00:02:25,243 --> 00:02:27,643
+a much larger number of short requests.
+
+36
+00:02:28,883 --> 00:02:33,363
+The Requests tab is the working list. Filter by session, model,
+
+37
+00:02:33,443 --> 00:02:36,803
+or prompt text when that content was captured, and narrow the
+
+38
+00:02:36,883 --> 00:02:41,443
+list by tenant, project, status, or provider. Open a row to
+
+39
+00:02:41,483 --> 00:02:47,203
+see its full record. The detail dialog shows identifiers, model, status,
+
+40
+00:02:47,363 --> 00:02:52,563
+input and output tokens, latency, and the available cost fields. Related-data
+
+41
+00:02:52,643 --> 00:02:56,723
+links lead into the session and other associated records. Here the
+
+42
+00:02:56,923 --> 00:03:01,363
+pricing source and per-million-token rates explain the estimate. These estimates are
+
+43
+00:03:01,443 --> 00:03:05,203
+useful for comparing usage. They are not a provider invoice, and
+
+44
+00:03:05,283 --> 00:03:08,963
+they do not automatically reflect a subscription's actual charge.
+
+45
+00:03:10,183 --> 00:03:13,863
+When something goes wrong, switch to Errors to focus on failed
+
+46
+00:03:14,183 --> 00:03:17,543
+requests. Look at the error code and message, then use the
+
+47
+00:03:17,623 --> 00:03:21,943
+session and workflow context to understand what surrounded the failure. A
+
+48
+00:03:22,023 --> 00:03:26,023
+rate-limit response, an upstream outage, and a timeout call for different
+
+49
+00:03:26,383 --> 00:03:31,703
+responses. Watchdog records the evidence; your application still owns its recovery
+
+50
+00:03:31,783 --> 00:03:35,783
+policy. The error rate gives you a useful starting point, but
+
+51
+00:03:35,863 --> 00:03:39,423
+a single percentage cannot explain the cause. Pair it with the
+
+52
+00:03:39,463 --> 00:03:43,943
+affected model, the request timing, and the underlying records before deciding
+
+53
+00:03:44,023 --> 00:03:44,983
+what to change.
+
+54
+00:03:46,217 --> 00:03:49,657
+Model usage is only part of an agent's work. The Tool
+
+55
+00:03:49,737 --> 00:03:55,177
+Calls tab shows recorded tools, their status, latency, arguments, and results
+
+56
+00:03:55,257 --> 00:03:58,857
+where those fields are available under the capture policy. Open a
+
+57
+00:03:58,937 --> 00:04:02,057
+tool record to inspect its details and follow its request or
+
+58
+00:04:02,137 --> 00:04:05,977
+session links. This helps separate a slow model response from a
+
+59
+00:04:06,057 --> 00:04:11,977
+slow database query or document search. In the sample, read-file, search-documents,
+
+60
+00:04:12,017 --> 00:04:17,497
+and query-database calls appear alongside model activity. These are demonstration records,
+
+61
+00:04:17,577 --> 00:04:22,617
+not calls to real customer systems. Watchdog observes tool execution; it
+
+62
+00:04:22,737 --> 00:04:24,937
+does not grant the tool permission to act.
+
+63
+00:04:26,183 --> 00:04:29,703
+Agent Traces adds a timeline of the work inside a workflow.
+
+64
+00:04:30,183 --> 00:04:35,223
+A trace can contain model calls, tool operations, shell activity, persistence,
+
+65
+00:04:35,343 --> 00:04:39,223
+and internal steps. Expand a trace and inspect a span to
+
+66
+00:04:39,303 --> 00:04:44,503
+see its duration, status, attributes, and recorded events. With suitable producer
+
+67
+00:04:44,743 --> 00:04:49,623
+instrumentation, events can mark connection setup, first output, a tool request,
+
+68
+00:04:49,703 --> 00:04:53,943
+and completion. That detail helps answer where time was spent, rather
+
+69
+00:04:54,023 --> 00:04:58,263
+than treating the entire operation as one slow request. The depth
+
+70
+00:04:58,343 --> 00:05:02,503
+you see depends on what the producer reports. Missing instrumentation is
+
+71
+00:05:02,583 --> 00:05:05,943
+missing evidence, not a zero-duration operation.
+
+72
+00:05:07,183 --> 00:05:12,863
+Sessions brings related activity together. Instead of opening every request separately,
+
+73
+00:05:13,063 --> 00:05:17,983
+compare a session's request count, errors, tokens, estimated value, and average
+
+74
+00:05:18,063 --> 00:05:22,303
+latency. Open its detail dialog to follow the underlying requests and
+
+75
+00:05:22,383 --> 00:05:26,863
+tool calls. In this sample session, eight requests contribute to one
+
+76
+00:05:26,943 --> 00:05:31,543
+aggregate total, and the related tools remain one click away. Agent
+
+77
+00:05:31,663 --> 00:05:35,943
+Insights adds summary views drawn from the recorded activity, including patterns
+
+78
+00:05:35,983 --> 00:05:39,623
+that can help you compare agents and context growth. Use those
+
+79
+00:05:39,743 --> 00:05:43,423
+summaries to find a question worth investigating, then return to the
+
+80
+00:05:43,823 --> 00:05:45,903
+actual records to test your explanation.
+
+81
+00:05:47,150 --> 00:05:51,310
+Canonical Evidence preserves a more structured account of an operation. It
+
+82
+00:05:51,390 --> 00:05:56,030
+can distinguish an explicit retry from a fallback, show observed first-output
+
+83
+00:05:56,270 --> 00:06:01,150
+timing, report throughput when the required measurements exist, and describe context
+
+84
+00:06:01,230 --> 00:06:05,310
+pressure when usage and a known context limit support the calculation.
+
+85
+00:06:05,630 --> 00:06:11,710
+Cost evidence also keeps provider-reported values and catalog estimates distinct. Watchdog
+
+86
+00:06:11,790 --> 00:06:16,510
+does not invent retry relationships from timestamps or model changes. And
+
+87
+00:06:16,590 --> 00:06:20,590
+a successful span alone does not prove the whole operation completed.
+
+88
+00:06:21,070 --> 00:06:25,390
+Terminal events and explicit references carry that meaning. When evidence is
+
+89
+00:06:25,470 --> 00:06:28,750
+missing, the interface says so instead of filling the gap with
+
+90
+00:06:28,777 --> 00:06:29,550
+a guess.
+
+91
+00:06:30,783 --> 00:06:36,223
+Sources shows where incoming telemetry comes from. It combines accepted observations,
+
+92
+00:06:36,463 --> 00:06:41,023
+registered producers, and configured proxy profiles. Open a source to see
+
+93
+00:06:41,103 --> 00:06:45,503
+its identity and the evidence behind its status. Active means matching
+
+94
+00:06:45,583 --> 00:06:50,943
+telemetry was recently accepted. Stale means it was seen earlier. Pending
+
+95
+00:06:51,103 --> 00:06:56,623
+means configuration exists without matching accepted telemetry. These labels describe local
+
+96
+00:06:56,703 --> 00:07:01,103
+evidence, not a remote health check. The Add connection flow provides
+
+97
+00:07:01,263 --> 00:07:05,663
+setup guidance and registration options. Named proxy profiles can be managed
+
+98
+00:07:05,743 --> 00:07:10,063
+here without placing raw credentials into the dashboard. Keep credential values
+
+99
+00:07:10,103 --> 00:07:12,623
+in the appropriate environment or secret store.
+
+100
+00:07:13,850 --> 00:07:19,250
+Watchdog also exposes JSON APIs and export paths for further analysis.
+
+101
+00:07:19,530 --> 00:07:24,090
+The dashboard's export action gives you a convenient JSON snapshot. Canonical
+
+102
+00:07:24,170 --> 00:07:29,530
+JSONL exports preserve structured records for downstream processing and replay workflows.
+
+103
+00:07:30,010 --> 00:07:34,250
+For an observability backend, configure an OTLP exporter and run the
+
+104
+00:07:34,330 --> 00:07:39,770
+export worker. Exporters shows profiles and delivery state. Each destination has
+
+105
+00:07:39,850 --> 00:07:43,930
+bounded queue and retry behavior, and a destination outage does not
+
+106
+00:07:44,050 --> 00:07:48,090
+turn an otherwise successful proxy request into a failure. Credentials are
+
+107
+00:07:48,170 --> 00:07:53,130
+resolved from environment-variable references. Supported OTLP data can go through a
+
+108
+00:07:53,210 --> 00:07:57,450
+collector to compatible tools; Watchdog is not a receiver for every
+
+109
+00:07:57,530 --> 00:07:59,290
+kind of OpenTelemetry data.
+
+110
+00:08:00,517 --> 00:08:04,757
+The Backups tab controls the local database backup workflow. Set the
+
+111
+00:08:04,837 --> 00:08:09,957
+interval, destination folder, and retention count, or create a backup immediately.
+
+112
+00:08:10,597 --> 00:08:15,477
+Watchdog checks generated backups and records their history. Encryption requires a
+
+113
+00:08:15,557 --> 00:08:19,957
+separately configured key file. Active backup files and missing or failed
+
+114
+00:08:20,037 --> 00:08:24,597
+history are separate views. For the telemetry itself, content capture is
+
+115
+00:08:24,677 --> 00:08:29,317
+off by default, and basic redaction applies before storage and export.
+
+116
+00:08:29,557 --> 00:08:34,837
+Before exposing Watchdog beyond your machine, configure API and proxy authentication,
+
+117
+00:08:34,917 --> 00:08:40,677
+TLS, network access, retention, and rate limits. Local-first storage gives you
+
+118
+00:08:40,757 --> 00:08:43,957
+control, but it still needs an operating policy.
+
+119
+00:08:45,183 --> 00:08:49,823
+The practical loop is simple. Connect an application. Establish a baseline
+
+120
+00:08:49,903 --> 00:08:54,543
+for usage, latency, and failures. When a pattern changes, narrow the
+
+121
+00:08:54,623 --> 00:08:59,263
+range, inspect requests, and follow sessions, tools, and traces until the
+
+122
+00:08:59,343 --> 00:09:03,583
+evidence explains it. Use canonical records when you need explicit timing
+
+123
+00:09:03,623 --> 00:09:08,143
+and outcome semantics, exporters when the evidence belongs in another system,
+
+124
+00:09:08,223 --> 00:09:12,543
+and backups to preserve the local history. Watchdog makes AI activity
+
+125
+00:09:12,823 --> 00:09:17,983
+inspectable without taking over execution or recovery. Start with one application
+
+126
+00:09:18,063 --> 00:09:21,023
+and one question you want to answer. The setup guide and
+
+127
+00:09:21,103 --> 00:09:26,463
+source are available at kujolang dot ai, slash ecosystem, slash watchdog.

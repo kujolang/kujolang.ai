@@ -1,0 +1,14 @@
+00:00 Watchdog, from traffic to answers
+00:36 Connect your applications
+01:15 Read the overview
+01:55 Choose the period that matters
+02:28 Inspect a request
+03:09 Investigate failures
+03:45 Follow tool activity
+04:25 Trace a workflow
+05:06 Understand a complete session
+05:46 Read canonical evidence
+06:30 Manage connected sources
+07:13 Take your evidence elsewhere
+08:00 Back up and protect the data
+08:44 Turn usage into useful decisions

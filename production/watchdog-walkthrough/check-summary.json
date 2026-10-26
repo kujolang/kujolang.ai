@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "categories": {
+    "lint": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "runtime": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "layout": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "motion": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "contrast": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "craft": {
+      "errors": 0,
+      "warnings": 3
+    }
+  },
+  "reviewed_craft_advisories": [
+    {
+      "code": "line_unread",
+      "message": "\"what to change.\" (3 words) is on screen 0.95 s (\u00b10.47 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md."
+    },
+    {
+      "code": "line_unread",
+      "message": "\"does not grant the tool permission to act.\" (8 words) is on screen 1.89 s (\u00b10.47 s), under its 2.17 s floor: hold it about 0.5 s + 0.3 s a word (2.90 s here) before it leaves or changes; see references/motion.md."
+    },
+    {
+      "code": "line_unread",
+      "message": "\"in the appropriate environment or secret store.\" (7 words) is on screen 1.89 s (\u00b10.47 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md."
+    }
+  ]
+}
