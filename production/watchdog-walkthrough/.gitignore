@@ -1,0 +1,7 @@
+.hyperframes/
+output/
+renders/
+node_modules/
+assets/screens/dom/
+
+__pycache__/

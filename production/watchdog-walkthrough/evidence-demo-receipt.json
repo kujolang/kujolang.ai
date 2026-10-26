@@ -1,0 +1,50 @@
+{
+  "synthetic": true,
+  "receipts": [
+    {
+      "path": "/telemetry/v2/batches",
+      "result": {
+        "data": {
+          "batch_dbid": 1,
+          "deduplicated": true,
+          "error": "",
+          "ok": true,
+          "records": 4
+        },
+        "ok": true
+      }
+    },
+    {
+      "path": "/telemetry/v2/batches",
+      "result": {
+        "data": {
+          "batch_dbid": 2,
+          "deduplicated": false,
+          "error": "",
+          "ok": true,
+          "records": 1
+        },
+        "ok": true
+      }
+    },
+    {
+      "path": "/api/telemetry/traces",
+      "result": {
+        "data": {
+          "canonical": {
+            "batch_dbid": 3,
+            "deduplicated": false,
+            "error": "",
+            "ok": true,
+            "records": 7
+          },
+          "events": 2,
+          "spans": 4,
+          "tool_calls": 0,
+          "trace_id": "demo-video-research-trace"
+        },
+        "ok": true
+      }
+    }
+  ]
+}
