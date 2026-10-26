@@ -1,39 +1,47 @@
 ---
 title: "Watchdog"
 custom_url: watchdog
-description: "An OpenAI-compatible proxy and dashboard for request, tool, step, audit, cost, latency, error, and redaction telemetry."
+description: "See what your AI apps use, what they cost, and where they fail."
 featured_image: "/assets/images/ecosystem/watchdog-telemetry-alert.webp"
 section: "Primitives"
 tags: [Primitive, Observability]
 order: 130
 install_command: "kennel add watchdog"
 github_url: "https://github.com/kujolang/watchdog"
-launch_story: "Make AI application behavior observable without hiding the request path from the operator."
-scope_note: "Watchdog 1.2.2 hardens credentials, telemetry validation, OTLP retries and queue limits, reduces intake and client work, and refreshes pricing. Runtime observations do not authorize replay. Cost estimates are not invoices; auth, retention and deployment remain operator-owned."
-keywords: "Watchdog, Kujo ecosystem, Primitive, Observability"
-seo_title: "Watchdog — Kujo Ecosystem"
-version: "1.2.2"
-latest_release_url: "https://github.com/kujolang/watchdog/releases/tag/v1.2.2"
-release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-10-21"
+launch_story: "Track model requests, tool calls, and agent steps in one local dashboard."
+scope_note: "Your telemetry stays in a local SQLite database. Costs are estimates of direct API usage, not invoices."
+keywords: "Watchdog, AI observability, token usage, API costs, local telemetry"
+seo_title: "Watchdog — AI Usage and Cost Dashboard"
+latest_release_url: "https://github.com/kujolang/watchdog/releases/latest"
+last_updated: "2026-10-26"
 ---
 
-## What it does
+## Know where your tokens go
 
-An OpenAI-compatible proxy and dashboard for request, tool, step, audit, cost, latency, error, and redaction telemetry.
+Watchdog records model requests, tool calls, and agent steps. See request volume, token use, estimated costs, latency, and errors together. Filter by time, provider, project, or session, then open a request to inspect the details.
 
-## Why it belongs in Kujo
+## See Watchdog in use
 
-Make AI application behavior observable without hiding the request path from the operator.
+This demo shows 30 days of synthetic activity with more than 20 billion tokens. Busy stretches, quieter days, and occasional error spikes give the charts a realistic shape. Every total comes from the same sample records; no live account data appears here.
 
-## Operating boundary
+WATCHDOG_SCREENSHOT_GALLERY
 
-[Watchdog 1.2.2](https://github.com/kujolang/watchdog/releases/tag/v1.2.2) keeps gateway credentials out of provider requests, validates and redacts canonical metadata, fixes OTLP retries, and enforces queue limits. It reduces canonical intake work, JavaScript client cloning and backup memory use, and refreshes provider pricing.
+## Connect your apps
 
-It retains canonical v2 telemetry, JSONL/OTLP exports, runtime measurement references, RunLedger correlation and Connected Sources. Existing routes and schema versions remain compatible. Invalid telemetry returns errors; changed records with the same OTLP identity return 409.
+Point an OpenAI-compatible client at Watchdog's `/proxy/v1` endpoint. Watchdog forwards requests to your provider and records their usage. Named upstream profiles let one server track several provider accounts.
 
-Use Kujo 1.6.0 or newer. Runtime measurements do not authorize retries or prove business effects. Cost estimates are not invoices. Configure authentication, retention, exporter credentials and deployment controls for your environment; per-session rate limits do not establish a trusted caller identity.
+Apps can also send telemetry directly through producer batches or supported OTLP traces. Connected Sources shows which apps and proxy profiles contribute data.
 
-## Learn more
+## Go from a spike to a request
 
-The repository is the source of truth for current setup, commands, examples, security notes, compatibility, and verification evidence.
+Use the dashboard to spot a change in traffic or failures. Narrow the date range, filter the request list, and open a request or session to see what happened. Tool calls and agent steps add context to model activity.
+
+Export records as JSONL or send supported telemetry through OTLP when you need it elsewhere. Runtime measurement references and RunLedger correlation help connect observations to recorded runs.
+
+## Keep control of your data
+
+Watchdog stores telemetry locally in SQLite and supports redaction, retention, and backups. Before exposing it beyond your machine, configure authentication, TLS, network access, and exporter credentials.
+
+Estimated costs help compare usage; they are not provider bills. Recorded activity does not grant permission to retry an operation or prove that a business action succeeded.
+
+Read the [setup guide](https://github.com/kujolang/watchdog#quick-start) to connect your first app, or check the [latest release](https://github.com/kujolang/watchdog/releases/latest) for changes.

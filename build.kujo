@@ -4501,6 +4501,9 @@ func build_site(settings) {
 				item_featured_image_url := resolve_media_url(featured_image, route_prefix(route))
 				item_navigation := build_navigation(pages_data, custom_collections, route, settings["blog_slug"])
 				item_body_html := docs_body_html(parsed["body"])
+				if collection_slug == "ecosystem" && slug == "watchdog" {
+					item_body_html = replace(item_body_html, "<p>WATCHDOG_SCREENSHOT_GALLERY</p>", read_file(path_join(templates_dir, "watchdog-gallery.html")))
+				}
 				if collection_slug == "compare" {
 					item_body_html = read_file(path_join(templates_dir, "compare-content/" + slug + ".html"))
 				}
