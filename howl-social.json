@@ -11,8 +11,8 @@
   "cards": [
     {
       "id": "home",
-      "title": "KUJO",
-      "tagline": "Programming language for AI-native software.",
+      "title": "Kujo",
+      "tagline": "AI-native programming language and toolchain that brings accountability to agent-driven development.",
       "file": "social-card.txt",
       "variant": "social",
       "label": "language",
@@ -20,7 +20,8 @@
       "show_border": false,
       "show_url": false,
       "background_image": "assets/images/home-agent-workflow.webp",
-      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "logo_image": "assets/images/kujo-logomark.svg"
     },
     {
       "id": "ecosystem",

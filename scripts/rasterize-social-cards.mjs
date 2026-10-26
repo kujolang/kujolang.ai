@@ -2,6 +2,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import sharp from 'sharp';
+import { homeSocialOverlay } from './home-social-overlay.mjs';
 
 const [inputDir, outputDir, manifestPath] = process.argv.slice(2);
 
@@ -22,7 +23,12 @@ for (const file of files) {
 		throw new Error(`Missing background_image for social card: ${id}`);
 	}
 	const backgroundPath = path.resolve(manifestDir, card.background_image);
-	const overlay = await sharp(path.join(inputDir, file), { density: 144 })
+	let svg = await readFile(path.join(inputDir, file), 'utf8');
+	if (id === 'home') {
+		const logo = await readFile(path.resolve(manifestDir, card.logo_image));
+		svg = homeSocialOverlay(svg, card, logo);
+	}
+	const overlay = await sharp(Buffer.from(svg), { density: 144 })
 		.resize(1200, 630, { fit: 'fill' })
 		.png()
 		.toBuffer();
