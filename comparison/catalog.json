@@ -178,24 +178,31 @@
     },
     "kujo-release": {
       "label": "Kujo stable release",
-      "url": "https://github.com/kujolang/kujo/releases/tag/v1.8.2",
+      "url": "https://github.com/kujolang/kujo/releases/tag/v1.9.0",
       "level": "official release metadata",
-      "version": "1.8.2; released 2026-10-19",
-      "verified": "2026-10-19"
+      "version": "1.9.0; released 2026-10-22. The comparison fixtures remain pinned to 1.8.2.",
+      "verified": "2026-10-26"
     },
     "bend-release": {
       "label": "Bend stable release",
-      "url": "https://github.com/bendlang/bend/releases/tag/v2.0.37",
+      "url": "https://github.com/bendlang/bend/releases/tag/v2.0.39",
       "level": "official release metadata",
-      "version": "2.0.37; released 2026-10-13",
-      "verified": "2026-10-19"
+      "version": "2.0.39; released 2026-10-23. The executed fixtures remain pinned to 2.0.37.",
+      "verified": "2026-10-26"
     },
     "baml-release": {
       "label": "BAML stable language toolchain",
-      "url": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.22.2",
+      "url": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.23.0",
       "level": "official release metadata",
-      "version": "0.22.2; released 2026-10-13",
-      "verified": "2026-10-19"
+      "version": "0.23.0; released 2026-10-26. The executed Python-boundary fixtures remain pinned to 0.22.2.",
+      "verified": "2026-10-26"
+    },
+    "baml-preview-release": {
+      "label": "BAML latest nightly release",
+      "url": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.23.1-nightly.20261025.a",
+      "level": "official nightly release metadata; not a stable release",
+      "version": "0.23.1-nightly.20261025.a; published 2026-10-26. Not executed in this review.",
+      "verified": "2026-10-26"
     },
     "zero-patch": {
       "label": "Zerolang patch validation implementation",
@@ -721,6 +728,7 @@
         "eval",
         "runledger",
         "baml-release",
+        "baml-preview-release",
         "kujo-release",
         "runtime-review",
         "runtime-gap-review",
