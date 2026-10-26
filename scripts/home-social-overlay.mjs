@@ -1,6 +1,7 @@
 // Adapt Howl's social layout for the homepage brand lockup before rasterization.
 // Keep the background, embedded font, and typography supplied by Howl.
 export function homeSocialOverlay(svg, card, logo) {
+	svg = svg.replace('<rect x="78" y="570" width="84" height="4" fill="#111"/>', '');
 	const escape = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;')
 		.replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&apos;');
 	for (const className of ['label', 'social-title', 'social-tag']) {

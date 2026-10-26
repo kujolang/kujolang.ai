@@ -99,7 +99,7 @@ the local Departure Mono font. Howl embeds those assets into a self-contained
 SVG, then Sharp produces the network-ready JPEG.
 
 The homepage rasterization adds the website SVG mark from `logo_image` beside
-the title, removes the top label, and wraps the full manifest description.
+the title, removes the top label and bottom accent line, and wraps the full manifest description.
 This homepage adjustment lives in `scripts/home-social-overlay.mjs`; other
 cards retain the standard Howl layout. `assets/images/og.png` mirrors `home.jpg`.
 
