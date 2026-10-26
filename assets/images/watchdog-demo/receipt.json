@@ -1,0 +1,13 @@
+{
+  "requests": 200800,
+  "tokens": 24240808335,
+  "estimated_cost_usd": 21588.12129879976,
+  "errors": 3335,
+  "sessions": 16743,
+  "days": 30,
+  "synthetic": true,
+  "seed": 261026,
+  "start_ms": 1790448266445,
+  "end_ms": 1793040266445,
+  "pricing_catalog": "watchdog-provider-catalog:2026-10-25"
+}
