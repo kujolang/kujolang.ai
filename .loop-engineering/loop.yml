@@ -1,6 +1,6 @@
-objective: "Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output."
-checklist_file: ""
-max_iterations: 4
+objective: "Implement and verify the complete language-first website redesign"
+checklist_file: ".loop-engineering/checklist-language-first.md"
+max_iterations: 1
 max_no_progress: 2
 max_consecutive_failures: 3
 
@@ -18,40 +18,54 @@ blocked_actions:
   - production_config_change
 
 eval_gates:
-  - id: shell_syntax
-    command: "bash -n scripts/dev.sh scripts/render-social-cards.sh scripts/validate-generated-output.sh scripts/verify-site-contract.sh"
+  - id: examples_source
+    command: "npm run examples:check"
     required: true
-
-  - id: howl_manifest
-    command: "/Users/robertdevore/2026/Kujolang/kujo-repos/howl/bin/howl validate --manifest howl-social.json"
+  - id: examples_runtime
+    command: "npm run examples:verify"
     required: true
-
-  - id: ssg_build_receipt
-    command: "test -s output/sitemap.xml && test -s output/ecosystem/workflows/publishing-house-post-publication/index.html"
+  - id: node_tests
+    command: "npm test"
     required: true
-
-  - id: generated_output
-    command: "bash scripts/validate-generated-output.sh output"
+  - id: build
+    command: "kujo run ./build.kujo -- --site-url https://kujolang.ai"
     required: true
-
+  - id: responsive
+    command: "npm run images:responsive"
+    required: true
   - id: site_contract
     command: "bash scripts/verify-site-contract.sh output"
     required: true
-
-  - id: social_contract
+  - id: generated_output
+    command: "bash scripts/validate-generated-output.sh output"
+    required: true
+  - id: language_contract
+    command: "npm run language:verify"
+    required: true
+  - id: social
     command: "npm run social:verify"
     required: true
-
-  - id: publishing_house_counts
-    command: "test $(find content/workflows -maxdepth 1 -type f -name \*.md | wc -l) -eq 34 && test $(find assets/images/social -maxdepth 1 -type f -name \*.jpg | wc -l) -eq 173"
+  - id: comparisons
+    command: "npm run compare:verify"
     required: true
-
-  - id: diff_check
-    command: "git diff --check -- .loop-engineering/loop.yml CHANGELOG.md README.md build.kujo howl-social.json scripts templates content assets seo-audit"
+  - id: javascript
+    command: "node --check assets/js/site.js"
+    required: true
+  - id: shell
+    command: "bash -n scripts/*.sh"
+    required: true
+  - id: audit
+    command: "npm audit --omit=dev"
+    required: true
+  - id: browser
+    command: "node scripts/test-language-browser.cjs"
+    required: true
+  - id: diff
+    command: "git diff --check"
     required: true
 
 commit:
-  enabled: true
+  enabled: false
   strategy: small_meaningful
   push: true
 
@@ -61,3 +75,6 @@ memory:
   project: "Agent Notes"
   mode: consolidate
   retrieval_tests: true
+
+# Commits/pushes are performed explicitly after all gates pass; native runner commits even on failure.
+# One evaluation per bounded phase; archive iterations before subsequent runs.

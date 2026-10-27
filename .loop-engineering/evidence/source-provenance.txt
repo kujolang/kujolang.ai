@@ -1,0 +1,2 @@
+21 samples match exact upstream source/ranges at 2cfaf185ad03059c89ef4f72fb061074255d00fc (v1.9.0).
+Release executable checksum verified with shasum -a 256 -c kujo-v1.9.0-macos-x64.tar.gz.sha256.

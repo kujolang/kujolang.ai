@@ -1,0 +1,13 @@
+{
+  "assets/js/site.js": {
+    "before_bytes": 23217,
+    "after_bytes": 25892,
+    "gzip_after_bytes": 6278
+  },
+  "assets/css/style.css": {
+    "before_bytes": 58321,
+    "after_bytes": 61699,
+    "gzip_after_bytes": 10036
+  },
+  "new_runtime_dependencies": 0
+}

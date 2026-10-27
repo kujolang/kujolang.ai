@@ -1,0 +1,2640 @@
+diff --git a/.github/workflows/pages.yml b/.github/workflows/pages.yml
+index f8f25b3..51ea46c 100644
+--- a/.github/workflows/pages.yml
++++ b/.github/workflows/pages.yml
+@@ -46,12 +46,16 @@ jobs:
+         shell: bash
+         run: |
+           kujo --version
++          npm run examples:check
++          npm run examples:verify
+           kujo run ./build.kujo -- --site-url https://kujolang.ai
+           npm run images:responsive
+           cp CNAME output/CNAME
+           touch output/.nojekyll
+           bash scripts/verify-site-contract.sh output
+           bash scripts/validate-generated-output.sh output
++          npm run language:verify
++          npm run social:verify
+           npm run compare:verify
+           node --check output/assets/js/site.js
+ 
+diff --git a/.loop-engineering/SUMMARY.md b/.loop-engineering/SUMMARY.md
+index 5732edf..6e8141e 100644
+--- a/.loop-engineering/SUMMARY.md
++++ b/.loop-engineering/SUMMARY.md
+@@ -2,25 +2,38 @@
+ 
+ ## Verdict
+ 
+-success
++failed
+ 
+ ## Completed
+ 
+-- configured loop run completed through iteration 1
++- line 3 [already-done] Discovery and baseline with preserved prior evidence
++- line 4 [already-done] Language-first homepage hierarchy
++- line 5 [already-done] Progressive code explorer
++- line 6 [already-done] Pinned and classified examples collection
++- line 7 [already-done] Installation and first program
++- line 8 [already-done] AI runtime examples and layer boundaries
++- line 9 [already-done] Goal-based ecosystem discovery
++- line 10 [already-done] Composable workflow exercise
++- line 11 [already-done] Three onboarding paths
++- line 12 [already-done] Performance methodology and real showcases
++- line 13 [already-done] Navigation and route preservation
++- line 14 [already-done] Responsive and accessible browser verification
++- line 15 [already-done] Metadata sitemap and Howl cards
++- line 16 [already-done] Complete native loop evaluation
+ 
+ ## Verification
+ 
+-- passed: shell_syntax, howl_manifest, ssg_build_receipt, generated_output, site_contract, social_contract, publishing_house_counts, diff_check
++- passed: examples_source, examples_runtime, node_tests, build, responsive, site_contract, generated_output, language_contract, social, comparisons, javascript, shell, audit, diff
+ - blocked: none
+-- failed: none
++- failed: browser
+ 
+ ## Commits
+ 
+-- Loop engineering: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
++- none
+ 
+ ## Remaining
+ 
+-- none
++- line 17 [needs-release-pipeline] README changelog commits and authorized Pages deployment
+ 
+ ## External Blockers
+ 
+@@ -28,4 +41,4 @@ success
+ 
+ ## Next Start
+ 
+-- success: required gates passed
++- required gate failed
+diff --git a/.loop-engineering/evidence/strata-memory-request.md b/.loop-engineering/evidence/strata-memory-request.md
+index 0d32c80..51bbf1e 100644
+--- a/.loop-engineering/evidence/strata-memory-request.md
++++ b/.loop-engineering/evidence/strata-memory-request.md
+@@ -2,7 +2,7 @@
+ 
+ Provider: strata
+ Mode: consolidate
+-Objective: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
+-Verdict: success
+-Summary: see /Users/robertdevore/2026/Kujolang/kujolang.ai/.loop-engineering/SUMMARY.md and /Users/robertdevore/2026/Kujolang/kujolang.ai/.loop-engineering/ledger.tsv.
++Objective: Implement and verify the complete language-first website redesign
++Verdict: failed
++Summary: see /Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/.loop-engineering/SUMMARY.md and /Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/.loop-engineering/ledger.tsv.
+ Retrieval tests requested: true
+diff --git a/.loop-engineering/iterations/001/context.md b/.loop-engineering/iterations/001/context.md
+index 0ab9f09..5d8de67 100644
+--- a/.loop-engineering/iterations/001/context.md
++++ b/.loop-engineering/iterations/001/context.md
+@@ -1,6 +1,23 @@
+ # Context
+ 
+-- objective: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
+-- git_head: 621d13f
++- objective: Implement and verify the complete language-first website redesign
++- git_head: 5e10ff9
+ - changed_files:
+-  - none
++  - .github/workflows/pages.yml
++  - .loop-engineering/SUMMARY.md
++  - .loop-engineering/evidence/strata-memory-request.md
++  - .loop-engineering/iterations/001/context.md
++  - .loop-engineering/iterations/001/diff.patch
++  - .loop-engineering/ledger.tsv
++  - .loop-engineering/loop.yml
++  - CHANGELOG.md
++  - README.md
++  - assets/css/style.css
++  - assets/js/site.js
++  - build.kujo
++  - howl-social.json
++  - package.json
++  - scripts/verify-site-contract.sh
++  - templates/page-ecosystem.html
++  - templates/page-home.html
++- checklist_classification: checklist.tsv
+diff --git a/.loop-engineering/iterations/001/diff.patch b/.loop-engineering/iterations/001/diff.patch
+index ed15b96..7e8d580 100644
+--- a/.loop-engineering/iterations/001/diff.patch
++++ b/.loop-engineering/iterations/001/diff.patch
+@@ -1,306 +1,1319 @@
++diff --git a/.github/workflows/pages.yml b/.github/workflows/pages.yml
++index f8f25b3..51ea46c 100644
++--- a/.github/workflows/pages.yml
+++++ b/.github/workflows/pages.yml
++@@ -46,12 +46,16 @@ jobs:
++         shell: bash
++         run: |
++           kujo --version
+++          npm run examples:check
+++          npm run examples:verify
++           kujo run ./build.kujo -- --site-url https://kujolang.ai
++           npm run images:responsive
++           cp CNAME output/CNAME
++           touch output/.nojekyll
++           bash scripts/verify-site-contract.sh output
++           bash scripts/validate-generated-output.sh output
+++          npm run language:verify
+++          npm run social:verify
++           npm run compare:verify
++           node --check output/assets/js/site.js
++ 
++diff --git a/.loop-engineering/SUMMARY.md b/.loop-engineering/SUMMARY.md
++index 5732edf..a4e7a49 100644
++--- a/.loop-engineering/SUMMARY.md
+++++ b/.loop-engineering/SUMMARY.md
++@@ -2,7 +2,7 @@
++ 
++ ## Verdict
++ 
++-success
+++partial
++ 
++ ## Completed
++ 
++@@ -10,17 +10,31 @@ success
++ 
++ ## Verification
++ 
++-- passed: shell_syntax, howl_manifest, ssg_build_receipt, generated_output, site_contract, social_contract, publishing_house_counts, diff_check
+++- passed: examples_source, examples_runtime, node_tests, build, responsive, site_contract, generated_output, language_contract, social, comparisons, javascript, shell, audit, diff
++ - blocked: none
++ - failed: none
++ 
++ ## Commits
++ 
++-- Loop engineering: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
+++- none
++ 
++ ## Remaining
++ 
++-- none
+++- line 3 [local-fixable] Discovery and baseline with preserved prior evidence
+++- line 4 [local-fixable] Language-first homepage hierarchy
+++- line 5 [local-fixable] Progressive code explorer
+++- line 6 [local-fixable] Pinned and classified examples collection
+++- line 7 [local-fixable] Installation and first program
+++- line 8 [local-fixable] AI runtime examples and layer boundaries
+++- line 9 [local-fixable] Goal-based ecosystem discovery
+++- line 10 [local-fixable] Composable workflow exercise
+++- line 11 [local-fixable] Three onboarding paths
+++- line 12 [local-fixable] Performance methodology and real showcases
+++- line 13 [local-fixable] Navigation and route preservation
+++- line 14 [local-fixable] Responsive and accessible browser verification
+++- line 15 [local-fixable] Metadata sitemap and Howl cards
+++- line 16 [local-fixable] Complete native loop evaluation
+++- line 17 [needs-release-pipeline] README changelog commits and authorized Pages deployment
++ 
++ ## External Blockers
++ 
++@@ -28,4 +42,4 @@ success
++ 
++ ## Next Start
++ 
++-- success: required gates passed
+++- remaining checklist items require another iteration or external action
++diff --git a/.loop-engineering/evidence/strata-memory-request.md b/.loop-engineering/evidence/strata-memory-request.md
++index 0d32c80..9f361ab 100644
++--- a/.loop-engineering/evidence/strata-memory-request.md
+++++ b/.loop-engineering/evidence/strata-memory-request.md
++@@ -2,7 +2,7 @@
++ 
++ Provider: strata
++ Mode: consolidate
++-Objective: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
++-Verdict: success
++-Summary: see /Users/robertdevore/2026/Kujolang/kujolang.ai/.loop-engineering/SUMMARY.md and /Users/robertdevore/2026/Kujolang/kujolang.ai/.loop-engineering/ledger.tsv.
+++Objective: Implement and verify the complete language-first website redesign
+++Verdict: partial
+++Summary: see /Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/.loop-engineering/SUMMARY.md and /Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/.loop-engineering/ledger.tsv.
++ Retrieval tests requested: true
+ diff --git a/.loop-engineering/iterations/001/context.md b/.loop-engineering/iterations/001/context.md
+-index ec64559..0ab9f09 100644
++index 0ab9f09..5d8de67 100644
+ --- a/.loop-engineering/iterations/001/context.md
+ +++ b/.loop-engineering/iterations/001/context.md
+-@@ -1,12 +1,6 @@
++@@ -1,6 +1,23 @@
+  # Context
+  
+- - objective: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
+--- git_head: 03d2a2a
+-+- git_head: 621d13f
++-- objective: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
++-- git_head: 621d13f
+++- objective: Implement and verify the complete language-first website redesign
+++- git_head: 5e10ff9
+  - changed_files:
+--  - .loop-engineering/loop.yml
+--  - CHANGELOG.md
+--  - README.md
+--  - build.kujo
+--  - howl-social.json
+--  - scripts/verify-site-contract.sh
+--  - templates/page-workflows.html
+-+  - none
++-  - none
+++  - .github/workflows/pages.yml
+++  - .loop-engineering/SUMMARY.md
+++  - .loop-engineering/evidence/strata-memory-request.md
+++  - .loop-engineering/iterations/001/context.md
+++  - .loop-engineering/iterations/001/diff.patch
+++  - .loop-engineering/ledger.tsv
+++  - .loop-engineering/loop.yml
+++  - CHANGELOG.md
+++  - README.md
+++  - assets/css/style.css
+++  - assets/js/site.js
+++  - build.kujo
+++  - howl-social.json
+++  - package.json
+++  - scripts/verify-site-contract.sh
+++  - templates/page-ecosystem.html
+++  - templates/page-home.html
+++- checklist_classification: checklist.tsv
+ diff --git a/.loop-engineering/iterations/001/diff.patch b/.loop-engineering/iterations/001/diff.patch
+-index 6653e46..e69de29 100644
++index ed15b96..0505c45 100644
+ --- a/.loop-engineering/iterations/001/diff.patch
+ +++ b/.loop-engineering/iterations/001/diff.patch
+-@@ -1,282 +0,0 @@
++@@ -1,306 +0,0 @@
+ -diff --git a/.loop-engineering/iterations/001/context.md b/.loop-engineering/iterations/001/context.md
+--index cf54a4b..ec64559 100644
++-index ec64559..0ab9f09 100644
+ ---- a/.loop-engineering/iterations/001/context.md
+ -+++ b/.loop-engineering/iterations/001/context.md
+--@@ -1,6 +1,12 @@
++-@@ -1,12 +1,6 @@
+ - # Context
+ - 
+---- objective: Implement the attached Kujolang.ai content, imagery, navigation, modal, footer, and ecosystem corrections with Kujo SSG and verified local preview behavior.
+---- git_head: bcae1fd
+--+- objective: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
+--+- git_head: 03d2a2a
++- - objective: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
++--- git_head: 03d2a2a
++-+- git_head: 621d13f
+ - - changed_files:
+---  - none
+--+  - .loop-engineering/loop.yml
+--+  - CHANGELOG.md
+--+  - README.md
+--+  - build.kujo
+--+  - howl-social.json
+--+  - scripts/verify-site-contract.sh
+--+  - templates/page-workflows.html
+--diff --git a/.loop-engineering/loop.yml b/.loop-engineering/loop.yml
+--index b162be4..124c736 100644
+----- a/.loop-engineering/loop.yml
+--+++ b/.loop-engineering/loop.yml
+--@@ -1,4 +1,4 @@
+---objective: "Implement the attached Kujolang.ai content, imagery, navigation, modal, footer, and ecosystem corrections with Kujo SSG and verified local preview behavior."
+--+objective: "Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output."
+-- checklist_file: ""
+-- max_iterations: 4
+-- max_no_progress: 2
+--@@ -11,23 +11,23 @@ allowed_actions:
+--   - commit_local_changes
+--   - add_project_assets
+--   - convert_project_assets
+--+  - deploy
+-- 
+-- blocked_actions:
+---  - deploy
+--   - destructive_cleanup
+--   - production_config_change
+-- 
+-- eval_gates:
+---  - id: spec_contract
+---    command: "/Users/robertdevore/2026/Kujolang/kujo-repos/spec/scripts/spec validate specs/kujolang-ai-refresh.spec.yml --strict --json"
+--+  - id: shell_syntax
+--+    command: "bash -n scripts/dev.sh scripts/render-social-cards.sh scripts/validate-generated-output.sh scripts/verify-site-contract.sh"
+--     required: true
+-- 
+---  - id: shell_syntax
+---    command: "bash -n scripts/dev.sh scripts/validate-generated-output.sh scripts/verify-site-contract.sh"
+--+  - id: howl_manifest
+--+    command: "/Users/robertdevore/2026/Kujolang/kujo-repos/howl/bin/howl validate --manifest howl-social.json"
+--     required: true
+-- 
+---  - id: ssg_build
+---    command: "kujo run ./build.kujo -- --site-url http://127.0.0.1:4173"
+--+  - id: ssg_build_receipt
+--+    command: "test -s output/sitemap.xml && test -s output/ecosystem/workflows/publishing-house-post-publication/index.html"
+--     required: true
+-- 
+--   - id: generated_output
+--@@ -38,8 +38,16 @@ eval_gates:
+--     command: "bash scripts/verify-site-contract.sh output"
+--     required: true
+-- 
+--+  - id: social_contract
+--+    command: "npm run social:verify"
+--+    required: true
+--+
+--+  - id: publishing_house_counts
+--+    command: "test $(find content/workflows -maxdepth 1 -type f -name \*.md | wc -l) -eq 34 && test $(find assets/images/social -maxdepth 1 -type f -name \*.jpg | wc -l) -eq 173"
+--+    required: true
+--+
+--   - id: diff_check
+---    command: "git diff --check"
+--+    command: "git diff --check -- .loop-engineering/loop.yml CHANGELOG.md README.md build.kujo howl-social.json scripts templates content assets seo-audit"
+--     required: true
+-- 
+-- commit:
+--diff --git a/CHANGELOG.md b/CHANGELOG.md
+--index 66d97c5..e9b3107 100644
+----- a/CHANGELOG.md
+--+++ b/CHANGELOG.md
+--@@ -9,10 +9,12 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
+-- - Full-screen, accessible Kujo introduction video player launched from the homepage hero.
+-- - Ecosystem pages for the eight Publishing House tools: AssetWorks, BluePencil, Dossier, GalleyPack, PressWire, ReaderSignal, StoryDesk, and VersionSeal.
+-- - Dedicated binary Kujo dither hero art and Howl-rendered 1200×630 social cards for every Publishing House tool.
+--+- Eight installable Publishing House workflow pages covering Daily Desk through Post-Publication Learning, each with source-grounded boundaries, custom Kujo dither hero art, and a Howl-rendered social card.
+-- 
+-- ### Changed
+-- 
+-- - Replaced the homepage hero's Quick Install action with a View video action while preserving Quick Install in the site navigation.
+--+- Updated the Workflows catalog from 26 workflows in kujo-workflows 0.2.0 to 34 workflows in kujo-workflows 0.3.0.
+-- 
+-- ## [1.2.0] - 2026-08-12
+-- 
+--diff --git a/README.md b/README.md
+--index da797f3..5618d6a 100644
+----- a/README.md
+--+++ b/README.md
+--@@ -4,7 +4,7 @@ The official website for the [Kujo programming language](https://github.com/kujo
+-- 
+-- This site is built with the Kujo SSG and the Kujo SiteKit design system. Markdown content is the editable source of truth; generated files are written to `output/` and should not be edited by hand.
+-- 
+---Current release: **v1.2.3**
+--+Current release: **v1.2.5**
+-- 
+-- - Website: [kujolang.ai](https://kujolang.ai)
+-- - Documentation: [docs.kujolang.ai](https://docs.kujolang.ai)
+--diff --git a/build.kujo b/build.kujo
+--index a7d07c7..e3771a1 100644
+----- a/build.kujo
+--+++ b/build.kujo
+--@@ -4179,7 +4179,7 @@ func build_site(settings) {
+-- 		} else if collection_slug == "skills" {
+-- 			listing_description = "Browse all 83 repository-backed Kujo Agent Skills released in kujo-skills 0.2.0, including language, tooling, safety, release, and WebOps guidance."
+-- 		} else if collection_slug == "workflows" {
+---			listing_description = "Browse all 26 local-first workflow kits released in kujo-workflows 0.2.0, with explicit inputs, boundaries, evidence, and readiness status."
+--+			listing_description = "Browse all 34 local-first workflow kits released in kujo-workflows 0.3.0, with explicit inputs, boundaries, evidence, and readiness status."
+-- 		}
+-- 		listing_html := render_layout(
+-- 			layout_template,
+--diff --git a/howl-social.json b/howl-social.json
+--index 28e56d7..9bf3ad9 100644
+----- a/howl-social.json
+--+++ b/howl-social.json
+--@@ -2128,6 +2128,110 @@
+--       "show_border": false,
+--       "show_url": false
+--     },
+--+    {
+--+      "id": "publishing-house-daily-desk",
+--+      "title": "Publishing House Daily Desk",
+--+      "tagline": "Validate a daily editorial packet and route each item to the narrowest actionable Publishing House workflow.",
+--+      "file": "social-card.txt",
+--+      "variant": "social",
+--+      "label": "workflow",
+--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-daily-desk/",
+--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-daily-desk.webp",
+--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+--+      "show_border": false,
+--+      "show_url": false
+--+    },
+--+    {
+--+      "id": "publishing-house-commissioning",
+--+      "title": "Publishing House Commissioning",
+--+      "tagline": "Turn an approved idea or audience signal into a specific Editorial Brief and bounded assignment structure.",
+--+      "file": "social-card.txt",
+--+      "variant": "social",
+--+      "label": "workflow",
+--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-commissioning/",
+--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-commissioning.webp",
+--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+--+      "show_border": false,
+--+      "show_url": false
+--+    },
+--+    {
+--+      "id": "publishing-house-evidence-dossier",
+--+      "title": "Publishing House Evidence Dossier",
+--+      "tagline": "Build a checksum-bound claims, sources, rights, conflicts, and freshness record before drafting.",
+--+      "file": "social-card.txt",
+--+      "variant": "social",
+--+      "label": "workflow",
+--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-evidence-dossier/",
+--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-evidence-dossier.webp",
+--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+--+      "show_border": false,
+--+      "show_url": false
+--+    },
+--+    {
+--+      "id": "publishing-house-primary-piece",
+--+      "title": "Publishing House Primary Piece Production",
+--+      "tagline": "Create a claim-mapped authoritative artifact and freeze its exact lineage and checksum in GalleyPack.",
+--+      "file": "social-card.txt",
+--+      "variant": "social",
+--+      "label": "workflow",
+--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-primary-piece/",
+--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-primary-piece.webp",
+--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+--+      "show_border": false,
+--+      "show_url": false
+--+    },
+--+    {
+--+      "id": "publishing-house-asset-production",
+--+      "title": "Publishing House Asset Production",
+--+      "tagline": "Plan, validate, and package supported media with provenance, accessibility records, and exact checksums.",
+--+      "file": "social-card.txt",
+--+      "variant": "social",
+--+      "label": "workflow",
+--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-asset-production/",
+--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-asset-production.webp",
+--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+--+      "show_border": false,
+--+      "show_url": false
+--+    },
+--+    {
+--+      "id": "publishing-house-editorial-review",
+--+      "title": "Publishing House Editorial Review and Revision",
+--+      "tagline": "Review an exact package, preserve independent findings, and route a bounded revision loop.",
+--+      "file": "social-card.txt",
+--+      "variant": "social",
+--+      "label": "workflow",
+--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-editorial-review/",
+--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-editorial-review.webp",
+--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+--+      "show_border": false,
+--+      "show_url": false
+--+    },
+--+    {
+--+      "id": "publishing-house-approval-publication",
+--+      "title": "Publishing House Approval and Publication",
+--+      "tagline": "Bind real human approval to an exact checksum and allow publication only through PressWire.",
+--+      "file": "social-card.txt",
+--+      "variant": "social",
+--+      "label": "workflow",
+--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-approval-publication/",
+--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-approval-publication.webp",
+--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+--+      "show_border": false,
+--+      "show_url": false
+--+    },
+--+    {
+--+      "id": "publishing-house-post-publication",
+--+      "title": "Publishing House Post-Publication Learning",
+--+      "tagline": "Turn a verified publication receipt and audience signals into bounded editorial learning.",
+--+      "file": "social-card.txt",
+--+      "variant": "social",
+--+      "label": "workflow",
+--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-post-publication/",
+--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-post-publication.webp",
+--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+--+      "show_border": false,
+--+      "show_url": false
+--+    },
+--     {
+--       "id": "codebase-cleanup",
+--       "title": "Codebase Cleanup",
+--diff --git a/scripts/verify-site-contract.sh b/scripts/verify-site-contract.sh
+--index 0bf17bd..5735dd5 100755
+----- a/scripts/verify-site-contract.sh
+--+++ b/scripts/verify-site-contract.sh
+--@@ -216,7 +216,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
+-- require_social_meta "${output_dir}/contact/index.html" 'contact'
+-- 
+-- social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
+---[[ "$social_card_count" == 165 ]] || fail "expected 165 social cards, found ${social_card_count}"
+--+[[ "$social_card_count" == 173 ]] || fail "expected 173 social cards, found ${social_card_count}"
+-- 
+-- for social_card in "${repo_root}"/assets/images/social/*.jpg; do
+-- 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
+--@@ -281,7 +281,7 @@ workflow_sources=$(find "${repo_root}/content/workflows" -maxdepth 1 -type f -na
+-- skills_outputs=$(find "${output_dir}/ecosystem/skills" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
+-- workflow_outputs=$(find "${output_dir}/ecosystem/workflows" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
+-- [[ "$skills_sources" == 83 && "$skills_outputs" == 83 ]] || fail "expected 83 skill source and output routes, found ${skills_sources}/${skills_outputs}"
+---[[ "$workflow_sources" == 26 && "$workflow_outputs" == 26 ]] || fail "expected 26 workflow source and output routes, found ${workflow_sources}/${workflow_outputs}"
+--+[[ "$workflow_sources" == 34 && "$workflow_outputs" == 34 ]] || fail "expected 34 workflow source and output routes, found ${workflow_sources}/${workflow_outputs}"
+-- 
+-- for catalog_page in "${output_dir}/ecosystem/skills/index.html" "${output_dir}/ecosystem/workflows/index.html"; do
+-- 	require_text "$catalog_page" '"@type":"CollectionPage"'
+--@@ -362,4 +362,4 @@ if (( failures > 0 )); then
+-- 	exit 1
+-- fi
+-- 
+---printf 'Site contract passed: 46 ecosystem projects, 3 section catalogs, 83 skills, 26 workflows, carousels, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+--+printf 'Site contract passed: 46 ecosystem projects, 3 section catalogs, 83 skills, 34 workflows, carousels, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+--diff --git a/templates/page-workflows.html b/templates/page-workflows.html
+--index 5d45495..3543baa 100644
+----- a/templates/page-workflows.html
+--+++ b/templates/page-workflows.html
+--@@ -2,10 +2,10 @@
+-- 	<header class="page-hero sk-hero" data-layout="split">
+-- 		<div class="page-hero__media" aria-hidden="true"><img src="/assets/images/ecosystem/workflows-evidence-routing-bench.webp" alt="" class="featured-image" width="1916" height="821" loading="eager" decoding="async" fetchpriority="high"></div>
+-- 		<div class="page-hero__wash" aria-hidden="true"></div>
+---		<div class="sk-hero__inner"><div class="page-hero__copy"><p class="sk-badge" data-variant="outline">kujo-workflows 0.2.0</p><h1>{{title}}</h1><p>Local-first workflow kits with explicit inputs, approvals, evidence, recovery, and readiness boundaries. Start from a runnable proof instead of an opaque hosted service.</p><div class="sk-hero__actions"><a class="sk-button" href="https://github.com/kujolang/kujo-workflows" target="_blank" rel="noopener">View repository</a></div></div></div>
+--+		<div class="sk-hero__inner"><div class="page-hero__copy"><p class="sk-badge" data-variant="outline">kujo-workflows 0.3.0</p><h1>{{title}}</h1><p>Local-first workflow kits with explicit inputs, approvals, evidence, recovery, and readiness boundaries. Start from a runnable proof instead of an opaque hosted service.</p><div class="sk-hero__actions"><a class="sk-button" href="https://github.com/kujolang/kujo-workflows" target="_blank" rel="noopener">View repository</a></div></div></div>
+-- 	</header>
+-- 	<section class="ecosystem-section section-shell" aria-labelledby="workflows-catalog-title">
+---		<div class="section-heading sk-heading"><p>26 / Released workflows</p><h2 id="workflows-catalog-title">Workflow catalog</h2><span>Every active workflow in the 0.2.0 technical preview, with its real entry point, evidence model, and current readiness.</span></div>
+--+		<div class="section-heading sk-heading"><p>34 / Released workflows</p><h2 id="workflows-catalog-title">Workflow catalog</h2><span>Every active workflow in the 0.3.0 release, with its real entry point, evidence model, and current readiness.</span></div>
+-- 		<ul class="card-grid ecosystem-card-grid">{{cards}}</ul>
+-- 	</section>
+-- </main>
++--  - .loop-engineering/loop.yml
++--  - CHANGELOG.md
++--  - README.md
++--  - build.kujo
++--  - howl-social.json
++--  - scripts/verify-site-contract.sh
++--  - templates/page-workflows.html
++-+  - none
++-diff --git a/.loop-engineering/iterations/001/diff.patch b/.loop-engineering/iterations/001/diff.patch
++-index 6653e46..e69de29 100644
++---- a/.loop-engineering/iterations/001/diff.patch
++-+++ b/.loop-engineering/iterations/001/diff.patch
++-@@ -1,282 +0,0 @@
++--diff --git a/.loop-engineering/iterations/001/context.md b/.loop-engineering/iterations/001/context.md
++--index cf54a4b..ec64559 100644
++----- a/.loop-engineering/iterations/001/context.md
++--+++ b/.loop-engineering/iterations/001/context.md
++--@@ -1,6 +1,12 @@
++-- # Context
++-- 
++---- objective: Implement the attached Kujolang.ai content, imagery, navigation, modal, footer, and ecosystem corrections with Kujo SSG and verified local preview behavior.
++---- git_head: bcae1fd
++--+- objective: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
++--+- git_head: 03d2a2a
++-- - changed_files:
++---  - none
++--+  - .loop-engineering/loop.yml
++--+  - CHANGELOG.md
++--+  - README.md
++--+  - build.kujo
++--+  - howl-social.json
++--+  - scripts/verify-site-contract.sh
++--+  - templates/page-workflows.html
++--diff --git a/.loop-engineering/loop.yml b/.loop-engineering/loop.yml
++--index b162be4..124c736 100644
++----- a/.loop-engineering/loop.yml
++--+++ b/.loop-engineering/loop.yml
++--@@ -1,4 +1,4 @@
++---objective: "Implement the attached Kujolang.ai content, imagery, navigation, modal, footer, and ecosystem corrections with Kujo SSG and verified local preview behavior."
++--+objective: "Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output."
++-- checklist_file: ""
++-- max_iterations: 4
++-- max_no_progress: 2
++--@@ -11,23 +11,23 @@ allowed_actions:
++--   - commit_local_changes
++--   - add_project_assets
++--   - convert_project_assets
++--+  - deploy
++-- 
++-- blocked_actions:
++---  - deploy
++--   - destructive_cleanup
++--   - production_config_change
++-- 
++-- eval_gates:
++---  - id: spec_contract
++---    command: "/Users/robertdevore/2026/Kujolang/kujo-repos/spec/scripts/spec validate specs/kujolang-ai-refresh.spec.yml --strict --json"
++--+  - id: shell_syntax
++--+    command: "bash -n scripts/dev.sh scripts/render-social-cards.sh scripts/validate-generated-output.sh scripts/verify-site-contract.sh"
++--     required: true
++-- 
++---  - id: shell_syntax
++---    command: "bash -n scripts/dev.sh scripts/validate-generated-output.sh scripts/verify-site-contract.sh"
++--+  - id: howl_manifest
++--+    command: "/Users/robertdevore/2026/Kujolang/kujo-repos/howl/bin/howl validate --manifest howl-social.json"
++--     required: true
++-- 
++---  - id: ssg_build
++---    command: "kujo run ./build.kujo -- --site-url http://127.0.0.1:4173"
++--+  - id: ssg_build_receipt
++--+    command: "test -s output/sitemap.xml && test -s output/ecosystem/workflows/publishing-house-post-publication/index.html"
++--     required: true
++-- 
++--   - id: generated_output
++--@@ -38,8 +38,16 @@ eval_gates:
++--     command: "bash scripts/verify-site-contract.sh output"
++--     required: true
++-- 
++--+  - id: social_contract
++--+    command: "npm run social:verify"
++--+    required: true
++--+
++--+  - id: publishing_house_counts
++--+    command: "test $(find content/workflows -maxdepth 1 -type f -name \*.md | wc -l) -eq 34 && test $(find assets/images/social -maxdepth 1 -type f -name \*.jpg | wc -l) -eq 173"
++--+    required: true
++--+
++--   - id: diff_check
++---    command: "git diff --check"
++--+    command: "git diff --check -- .loop-engineering/loop.yml CHANGELOG.md README.md build.kujo howl-social.json scripts templates content assets seo-audit"
++--     required: true
++-- 
++-- commit:
++--diff --git a/CHANGELOG.md b/CHANGELOG.md
++--index 66d97c5..e9b3107 100644
++----- a/CHANGELOG.md
++--+++ b/CHANGELOG.md
++--@@ -9,10 +9,12 @@ All notable changes to Kujolang.ai are documented here. Releases follow semantic
++-- - Full-screen, accessible Kujo introduction video player launched from the homepage hero.
++-- - Ecosystem pages for the eight Publishing House tools: AssetWorks, BluePencil, Dossier, GalleyPack, PressWire, ReaderSignal, StoryDesk, and VersionSeal.
++-- - Dedicated binary Kujo dither hero art and Howl-rendered 1200×630 social cards for every Publishing House tool.
++--+- Eight installable Publishing House workflow pages covering Daily Desk through Post-Publication Learning, each with source-grounded boundaries, custom Kujo dither hero art, and a Howl-rendered social card.
++-- 
++-- ### Changed
++-- 
++-- - Replaced the homepage hero's Quick Install action with a View video action while preserving Quick Install in the site navigation.
++--+- Updated the Workflows catalog from 26 workflows in kujo-workflows 0.2.0 to 34 workflows in kujo-workflows 0.3.0.
++-- 
++-- ## [1.2.0] - 2026-08-12
++-- 
++--diff --git a/README.md b/README.md
++--index da797f3..5618d6a 100644
++----- a/README.md
++--+++ b/README.md
++--@@ -4,7 +4,7 @@ The official website for the [Kujo programming language](https://github.com/kujo
++-- 
++-- This site is built with the Kujo SSG and the Kujo SiteKit design system. Markdown content is the editable source of truth; generated files are written to `output/` and should not be edited by hand.
++-- 
++---Current release: **v1.2.3**
++--+Current release: **v1.2.5**
++-- 
++-- - Website: [kujolang.ai](https://kujolang.ai)
++-- - Documentation: [docs.kujolang.ai](https://docs.kujolang.ai)
++--diff --git a/build.kujo b/build.kujo
++--index a7d07c7..e3771a1 100644
++----- a/build.kujo
++--+++ b/build.kujo
++--@@ -4179,7 +4179,7 @@ func build_site(settings) {
++-- 		} else if collection_slug == "skills" {
++-- 			listing_description = "Browse all 83 repository-backed Kujo Agent Skills released in kujo-skills 0.2.0, including language, tooling, safety, release, and WebOps guidance."
++-- 		} else if collection_slug == "workflows" {
++---			listing_description = "Browse all 26 local-first workflow kits released in kujo-workflows 0.2.0, with explicit inputs, boundaries, evidence, and readiness status."
++--+			listing_description = "Browse all 34 local-first workflow kits released in kujo-workflows 0.3.0, with explicit inputs, boundaries, evidence, and readiness status."
++-- 		}
++-- 		listing_html := render_layout(
++-- 			layout_template,
++--diff --git a/howl-social.json b/howl-social.json
++--index 28e56d7..9bf3ad9 100644
++----- a/howl-social.json
++--+++ b/howl-social.json
++--@@ -2128,6 +2128,110 @@
++--       "show_border": false,
++--       "show_url": false
++--     },
++--+    {
++--+      "id": "publishing-house-daily-desk",
++--+      "title": "Publishing House Daily Desk",
++--+      "tagline": "Validate a daily editorial packet and route each item to the narrowest actionable Publishing House workflow.",
++--+      "file": "social-card.txt",
++--+      "variant": "social",
++--+      "label": "workflow",
++--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-daily-desk/",
++--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-daily-desk.webp",
++--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++--+      "show_border": false,
++--+      "show_url": false
++--+    },
++--+    {
++--+      "id": "publishing-house-commissioning",
++--+      "title": "Publishing House Commissioning",
++--+      "tagline": "Turn an approved idea or audience signal into a specific Editorial Brief and bounded assignment structure.",
++--+      "file": "social-card.txt",
++--+      "variant": "social",
++--+      "label": "workflow",
++--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-commissioning/",
++--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-commissioning.webp",
++--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++--+      "show_border": false,
++--+      "show_url": false
++--+    },
++--+    {
++--+      "id": "publishing-house-evidence-dossier",
++--+      "title": "Publishing House Evidence Dossier",
++--+      "tagline": "Build a checksum-bound claims, sources, rights, conflicts, and freshness record before drafting.",
++--+      "file": "social-card.txt",
++--+      "variant": "social",
++--+      "label": "workflow",
++--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-evidence-dossier/",
++--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-evidence-dossier.webp",
++--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++--+      "show_border": false,
++--+      "show_url": false
++--+    },
++--+    {
++--+      "id": "publishing-house-primary-piece",
++--+      "title": "Publishing House Primary Piece Production",
++--+      "tagline": "Create a claim-mapped authoritative artifact and freeze its exact lineage and checksum in GalleyPack.",
++--+      "file": "social-card.txt",
++--+      "variant": "social",
++--+      "label": "workflow",
++--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-primary-piece/",
++--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-primary-piece.webp",
++--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++--+      "show_border": false,
++--+      "show_url": false
++--+    },
++--+    {
++--+      "id": "publishing-house-asset-production",
++--+      "title": "Publishing House Asset Production",
++--+      "tagline": "Plan, validate, and package supported media with provenance, accessibility records, and exact checksums.",
++--+      "file": "social-card.txt",
++--+      "variant": "social",
++--+      "label": "workflow",
++--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-asset-production/",
++--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-asset-production.webp",
++--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++--+      "show_border": false,
++--+      "show_url": false
++--+    },
++--+    {
++--+      "id": "publishing-house-editorial-review",
++--+      "title": "Publishing House Editorial Review and Revision",
++--+      "tagline": "Review an exact package, preserve independent findings, and route a bounded revision loop.",
++--+      "file": "social-card.txt",
++--+      "variant": "social",
++--+      "label": "workflow",
++--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-editorial-review/",
++--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-editorial-review.webp",
++--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++--+      "show_border": false,
++--+      "show_url": false
++--+    },
++--+    {
++--+      "id": "publishing-house-approval-publication",
++--+      "title": "Publishing House Approval and Publication",
++--+      "tagline": "Bind real human approval to an exact checksum and allow publication only through PressWire.",
++--+      "file": "social-card.txt",
++--+      "variant": "social",
++--+      "label": "workflow",
++--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-approval-publication/",
++--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-approval-publication.webp",
++--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++--+      "show_border": false,
++--+      "show_url": false
++--+    },
++--+    {
++--+      "id": "publishing-house-post-publication",
++--+      "title": "Publishing House Post-Publication Learning",
++--+      "tagline": "Turn a verified publication receipt and audience signals into bounded editorial learning.",
++--+      "file": "social-card.txt",
++--+      "variant": "social",
++--+      "label": "workflow",
++--+      "url": "kujolang.ai/ecosystem/workflows/publishing-house-post-publication/",
++--+      "background_image": "assets/images/ecosystem/workflow-publishing-house-post-publication.webp",
++--+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++--+      "show_border": false,
++--+      "show_url": false
++--+    },
++--     {
++--       "id": "codebase-cleanup",
++--       "title": "Codebase Cleanup",
++--diff --git a/scripts/verify-site-contract.sh b/scripts/verify-site-contract.sh
++--index 0bf17bd..5735dd5 100755
++----- a/scripts/verify-site-contract.sh
++--+++ b/scripts/verify-site-contract.sh
++--@@ -216,7 +216,7 @@ require_social_meta "${output_dir}/writing/index.html" 'writing'
++-- require_social_meta "${output_dir}/contact/index.html" 'contact'
++-- 
++-- social_card_count=$(find "${repo_root}/assets/images/social" -maxdepth 1 -type f -name '*.jpg' | wc -l | tr -d ' ')
++---[[ "$social_card_count" == 165 ]] || fail "expected 165 social cards, found ${social_card_count}"
++--+[[ "$social_card_count" == 173 ]] || fail "expected 173 social cards, found ${social_card_count}"
++-- 
++-- for social_card in "${repo_root}"/assets/images/social/*.jpg; do
++-- 	file "$social_card" | grep -Fq '1200x630' || fail "social card is not 1200x630: ${social_card}"
++--@@ -281,7 +281,7 @@ workflow_sources=$(find "${repo_root}/content/workflows" -maxdepth 1 -type f -na
++-- skills_outputs=$(find "${output_dir}/ecosystem/skills" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
++-- workflow_outputs=$(find "${output_dir}/ecosystem/workflows" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
++-- [[ "$skills_sources" == 83 && "$skills_outputs" == 83 ]] || fail "expected 83 skill source and output routes, found ${skills_sources}/${skills_outputs}"
++---[[ "$workflow_sources" == 26 && "$workflow_outputs" == 26 ]] || fail "expected 26 workflow source and output routes, found ${workflow_sources}/${workflow_outputs}"
++--+[[ "$workflow_sources" == 34 && "$workflow_outputs" == 34 ]] || fail "expected 34 workflow source and output routes, found ${workflow_sources}/${workflow_outputs}"
++-- 
++-- for catalog_page in "${output_dir}/ecosystem/skills/index.html" "${output_dir}/ecosystem/workflows/index.html"; do
++-- 	require_text "$catalog_page" '"@type":"CollectionPage"'
++--@@ -362,4 +362,4 @@ if (( failures > 0 )); then
++-- 	exit 1
++-- fi
++-- 
++---printf 'Site contract passed: 46 ecosystem projects, 3 section catalogs, 83 skills, 26 workflows, carousels, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
++--+printf 'Site contract passed: 46 ecosystem projects, 3 section catalogs, 83 skills, 34 workflows, carousels, static WebP heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
++--diff --git a/templates/page-workflows.html b/templates/page-workflows.html
++--index 5d45495..3543baa 100644
++----- a/templates/page-workflows.html
++--+++ b/templates/page-workflows.html
++--@@ -2,10 +2,10 @@
++-- 	<header class="page-hero sk-hero" data-layout="split">
++-- 		<div class="page-hero__media" aria-hidden="true"><img src="/assets/images/ecosystem/workflows-evidence-routing-bench.webp" alt="" class="featured-image" width="1916" height="821" loading="eager" decoding="async" fetchpriority="high"></div>
++-- 		<div class="page-hero__wash" aria-hidden="true"></div>
++---		<div class="sk-hero__inner"><div class="page-hero__copy"><p class="sk-badge" data-variant="outline">kujo-workflows 0.2.0</p><h1>{{title}}</h1><p>Local-first workflow kits with explicit inputs, approvals, evidence, recovery, and readiness boundaries. Start from a runnable proof instead of an opaque hosted service.</p><div class="sk-hero__actions"><a class="sk-button" href="https://github.com/kujolang/kujo-workflows" target="_blank" rel="noopener">View repository</a></div></div></div>
++--+		<div class="sk-hero__inner"><div class="page-hero__copy"><p class="sk-badge" data-variant="outline">kujo-workflows 0.3.0</p><h1>{{title}}</h1><p>Local-first workflow kits with explicit inputs, approvals, evidence, recovery, and readiness boundaries. Start from a runnable proof instead of an opaque hosted service.</p><div class="sk-hero__actions"><a class="sk-button" href="https://github.com/kujolang/kujo-workflows" target="_blank" rel="noopener">View repository</a></div></div></div>
++-- 	</header>
++-- 	<section class="ecosystem-section section-shell" aria-labelledby="workflows-catalog-title">
++---		<div class="section-heading sk-heading"><p>26 / Released workflows</p><h2 id="workflows-catalog-title">Workflow catalog</h2><span>Every active workflow in the 0.2.0 technical preview, with its real entry point, evidence model, and current readiness.</span></div>
++--+		<div class="section-heading sk-heading"><p>34 / Released workflows</p><h2 id="workflows-catalog-title">Workflow catalog</h2><span>Every active workflow in the 0.3.0 release, with its real entry point, evidence model, and current readiness.</span></div>
++-- 		<ul class="card-grid ecosystem-card-grid">{{cards}}</ul>
++-- 	</section>
++-- </main>
++diff --git a/.loop-engineering/ledger.tsv b/.loop-engineering/ledger.tsv
++index 5e5d38a..2b0aaa5 100644
++--- a/.loop-engineering/ledger.tsv
+++++ b/.loop-engineering/ledger.tsv
++@@ -4,3 +4,5 @@ iteration	action	verdict	progress	evidence	justification
++ 002	configured-gates	failed	0	iterations/002/eval.log	required gate failed
++ 003	configured-gates	failed	0	iterations/003/eval.log	required gate failed
++ 001	configured-gates	success	1	iterations/001/eval.log	success: required gates passed
+++001	configured-gates	failed	0	iterations/001/eval.log	required gate failed
+++001	configured-gates	success	1	iterations/001/eval.log	success: required gates passed
++diff --git a/.loop-engineering/loop.yml b/.loop-engineering/loop.yml
++index 124c736..51bd023 100644
++--- a/.loop-engineering/loop.yml
+++++ b/.loop-engineering/loop.yml
++@@ -1,6 +1,6 @@
++-objective: "Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output."
++-checklist_file: ""
++-max_iterations: 4
+++objective: "Implement and verify the complete language-first website redesign"
+++checklist_file: ".loop-engineering/checklist-language-first.md"
+++max_iterations: 1
++ max_no_progress: 2
++ max_consecutive_failures: 3
++ 
++@@ -18,40 +18,54 @@ blocked_actions:
++   - production_config_change
++ 
++ eval_gates:
++-  - id: shell_syntax
++-    command: "bash -n scripts/dev.sh scripts/render-social-cards.sh scripts/validate-generated-output.sh scripts/verify-site-contract.sh"
+++  - id: examples_source
+++    command: "npm run examples:check"
++     required: true
++-
++-  - id: howl_manifest
++-    command: "/Users/robertdevore/2026/Kujolang/kujo-repos/howl/bin/howl validate --manifest howl-social.json"
+++  - id: examples_runtime
+++    command: "npm run examples:verify"
++     required: true
++-
++-  - id: ssg_build_receipt
++-    command: "test -s output/sitemap.xml && test -s output/ecosystem/workflows/publishing-house-post-publication/index.html"
+++  - id: node_tests
+++    command: "npm test"
++     required: true
++-
++-  - id: generated_output
++-    command: "bash scripts/validate-generated-output.sh output"
+++  - id: build
+++    command: "kujo run ./build.kujo -- --site-url https://kujolang.ai"
+++    required: true
+++  - id: responsive
+++    command: "npm run images:responsive"
++     required: true
++-
++   - id: site_contract
++     command: "bash scripts/verify-site-contract.sh output"
++     required: true
++-
++-  - id: social_contract
+++  - id: generated_output
+++    command: "bash scripts/validate-generated-output.sh output"
+++    required: true
+++  - id: language_contract
+++    command: "npm run language:verify"
+++    required: true
+++  - id: social
++     command: "npm run social:verify"
++     required: true
++-
++-  - id: publishing_house_counts
++-    command: "test $(find content/workflows -maxdepth 1 -type f -name \*.md | wc -l) -eq 34 && test $(find assets/images/social -maxdepth 1 -type f -name \*.jpg | wc -l) -eq 173"
+++  - id: comparisons
+++    command: "npm run compare:verify"
++     required: true
++-
++-  - id: diff_check
++-    command: "git diff --check -- .loop-engineering/loop.yml CHANGELOG.md README.md build.kujo howl-social.json scripts templates content assets seo-audit"
+++  - id: javascript
+++    command: "node --check assets/js/site.js"
+++    required: true
+++  - id: shell
+++    command: "bash -n scripts/*.sh"
+++    required: true
+++  - id: audit
+++    command: "npm audit --omit=dev"
+++    required: true
+++  - id: browser
+++    command: "node scripts/test-language-browser.cjs"
+++    required: true
+++  - id: diff
+++    command: "git diff --check"
++     required: true
++ 
++ commit:
++-  enabled: true
+++  enabled: false
++   strategy: small_meaningful
++   push: true
++ 
++@@ -61,3 +75,6 @@ memory:
++   project: "Agent Notes"
++   mode: consolidate
++   retrieval_tests: true
+++
+++# Commits/pushes are performed explicitly after all gates pass; native runner commits even on failure.
+++# One evaluation per bounded phase; archive iterations before subsequent runs.
++diff --git a/CHANGELOG.md b/CHANGELOG.md
++index b0c435e..f689a6a 100644
++--- a/CHANGELOG.md
+++++ b/CHANGELOG.md
++@@ -2,6 +2,11 @@
++ 
++ ## Unreleased
++ 
+++- Lead with the Kujo language, real code, installation and six goal-based ecosystem entry points.
+++- Add 21 pinned examples with exact runtime verification, offline replay fixtures, accessible selection, copy feedback and category/search filtering.
+++- Add language onboarding, a composable workflow exercise and reproducible performance methodology; preserve existing ecosystem and comparison routes.
+++- Extend static page routing to validated nested slugs, generate Howl cards and add source, output and browser gates.
+++
++ - Keep comparison pages focused on Vercel Zerolang and its reviewed release, removing unrelated project references and draft revision history.
++ 
++ - Rebuild the comparison hub as a four-language field guide with a six-dimension evidence matrix, adoption profiles, technical briefs, workflow stages and a worked artifact check.
++diff --git a/README.md b/README.md
++index 05553a9..c3d257e 100644
++--- a/README.md
+++++ b/README.md
++@@ -162,3 +162,53 @@ This release contains 135 skills. The sync preserves workflow content, reuses th
++ ## Comparisons and discovery
++ 
++ The `/compare/` collection is generated from `comparison/catalog.json`. Run `npm run compare:generate` after editing records and `npm run compare:verify` after the production build. See [the comparison maintainer guide](comparison/README.md) for editorial standards, research, evidence and measurement.
+++
+++## Language-first pages and verified examples
+++
+++The homepage leads with language positioning and a native-select code explorer.
+++`/language/` is the installation journey, `/examples/` the searchable collection,
+++`/development-workflow/` a composable workflow exercise, and `/performance/` the
+++measurement methodology. Existing ecosystem, Writing and comparison routes remain.
+++
+++`examples/catalog.json` pins every sample to Kujo 1.9.0 and an upstream commit,
+++source path, optional line range, SHA-256, verification mode and expected output.
+++`public/samples/` contains downloadable source and offline AI cassette fixtures.
+++To add an example, copy reviewed source from the pinned commit, record its hash
+++and honest prerequisites, and choose `run`, `check` or `test-run`. Do not execute
+++network listeners or file-mutating samples merely to mark them runnable. Module
+++imports currently use check-only examples with explicit missing dependencies.
+++
+++Run `npm run examples:generate` to update Markdown projections, semantic page
+++templates, the homepage explorer and Howl manifest. Raw HTML is deliberately
+++escaped by the Markdown renderer, so generated templates own interactive markup.
+++Do not hand-edit generated example pages/templates. The native SSG supports
+++nested canonical slug segments for these routes, retaining traversal rejection.
+++
+++```sh
+++npm run examples:check
+++npm run examples:verify
+++npm run social:cards
+++kujo run ./build.kujo -- --site-url https://kujolang.ai
+++npm run images:responsive
+++npm run language:verify
+++npm run social:verify
+++```
+++
+++Set `KUJO_BIN` to a Kujo 1.9.0 executable when it is not on PATH. Run browser
+++verification with `node scripts/test-language-browser.cjs`; provide a Playwright
+++installation through `PLAYWRIGHT_MODULE` and optionally `CHROME_BIN`. The browser
+++suite requires the site served at `http://127.0.0.1:4178` (or `SITE_URL`). It checks
+++selection, clipboard text, filtering, mobile navigation, responsive overflow,
+++console errors and the JavaScript-disabled fallback. Screenshots and loop
+++receipts are under `.loop-engineering/evidence/`.
+++
+++Regenerate the downloadable bundle after updating samples:
+++`COPYFILE_DISABLE=1 tar -czf public/samples/kujo-examples.tar.gz -C public/samples --exclude=kujo-examples.tar.gz .`.
+++Measure startup plus script execution with `python3 scripts/measure-language.py`;
+++its receipt does not establish cross-language performance superiority.
+++
+++For WCAG A/AA checks on the six key page types, set `AXE_SCRIPT` to an installed
+++`axe-core/axe.min.js` when running the browser suite. It saves exact violation
+++results beside screenshots. No browser or accessibility package is shipped to
+++site visitors. The GitHub Pages build runs the source/runtime example gates and
+++language-route verification before uploading its artifact.
++diff --git a/assets/css/style.css b/assets/css/style.css
++index 60dfb53..a04546e 100644
++--- a/assets/css/style.css
+++++ b/assets/css/style.css
++@@ -1606,3 +1606,40 @@
++ .watchdog-gallery__track img { display: block; width: 100%; height: 100%; object-fit: contain; margin: 0; }
++ .watchdog-gallery__track figcaption { padding: 1rem; font-size: .85rem; line-height: 1.6; }
++ .watchdog-gallery__track:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+++
+++/* Language-first composition; SiteKit remains the token and component source. */
+++.language-home .home-hero, .language-home .home-hero .sk-hero__inner { min-block-size: auto; }
+++.language-home .home-hero .sk-hero__inner { padding-block: calc(var(--site-header-block) + 3rem) 2rem; }
+++.language-home .home-hero h1 { font-size: clamp(2.6rem, 5.5vw, 5rem); max-inline-size: 14ch; }
+++.language-home .home-hero__body { margin-block-start: 1.2rem; max-inline-size: 60ch; }
+++.language-home .home-hero .sk-hero__actions { margin-block-start: 1.25rem; }
+++.language-section { max-width: 1180px; margin-inline: auto; padding: 3rem var(--site-pad-inline); border-bottom: 1px solid var(--sk-border-default, #ccc); }
+++.language-section h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); line-height: 1.15; margin-block: .5rem 1.5rem; }
+++.language-section p { max-width: 75ch; }
+++.language-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,260px),1fr)); gap: 2rem; }
+++.language-grid article { min-width: 0; }
+++.language-grid h3 { font-size: 1.2rem; }
+++.language-grid p, .language-section p { line-height: 1.65; }
+++.sample-code { position: relative; margin-block: 1rem; min-width: 0; }
+++.sample-code pre, .example-panel pre { background: #181818; color: #f9f9f9; padding: 1.2rem; border-radius: 4px; overflow-x: auto; max-width: 100%; font-size: .88rem; line-height: 1.65; }
+++.sample-code code { color: inherit; background: transparent; white-space: pre; }
+++.syntax-token { color: #fff; font-weight: 700; text-decoration-color: #777; }
+++.sample-code button { margin-right: 1rem; min-height: 44px; }
+++.example-panel[hidden], [data-example-card][hidden], .example-category-group[hidden] { display: none !important; }
+++.example-selector, .example-filter { margin-block: 1.5rem; }
+++.example-selector select, .example-filter input, .example-filter select { font: inherit; padding: .7rem; border: 1px solid #777; color: #111; background: #fff; max-width: 100%; min-height: 44px; }
+++.example-filter label { display: block; margin-top: 1rem; }
+++.example-note { border-left: 3px solid #777; padding-left: 1rem; }
+++.example-category-group { border-bottom: 1px solid #ccc; padding-block: 1rem; }
+++.workflow-stages { display: flex; flex-wrap: wrap; gap: 1rem 2rem; padding-left: 1.5rem; }
+++.workflow-stages li { flex: 1 1 140px; }
+++.language-final { padding-bottom: 4rem; }
+++.language-final .sk-button { margin: .5rem; }
+++:focus-visible { outline: 3px solid #555; outline-offset: 4px; }
+++@media(max-width: 700px) { .language-home .home-hero .sk-hero__inner { padding-block: calc(var(--site-header-block) + 1.5rem) 1rem; } .language-section { padding-block: 2rem; } .example-selector label { display: block; } }
+++.language-home .home-hero .sk-hero__inner { padding-block: calc(var(--site-header-block) + 1.2rem) 1rem; }
+++.language-home .home-hero h1 { font-size: clamp(2.6rem, 4.5vw, 4rem); }
+++.language-home .home-hero .home-hero__body { font-size: 1rem; max-inline-size: 65ch; line-height: 1.55; }
+++.language-home .home-hero__wash { background: linear-gradient(90deg, var(--sk-surface-page) 0%, color-mix(in srgb,var(--sk-surface-page) 96%,transparent) 42%,color-mix(in srgb,var(--sk-surface-page) 70%,transparent) 68%,transparent); }
+++[data-code-explorer] { padding-top: 1.5rem; }
+++@media(max-width:700px) { .language-home .home-hero__wash { background: color-mix(in srgb,var(--sk-surface-page) 94%,transparent); } }
++diff --git a/assets/js/site.js b/assets/js/site.js
++index 93628d8..913590d 100644
++--- a/assets/js/site.js
+++++ b/assets/js/site.js
++@@ -546,7 +546,7 @@
++ 
++     function wrapTextNode(node) {
++       var parent = node.parentElement;
++-      if (!parent || !node.nodeValue.trim() || parent.closest(selector) || parent.closest('[data-scramble-skip], .ecosystem-carousel-controls')) return;
+++      if (!parent || !node.nodeValue.trim() || parent.closest(selector) || parent.closest('[data-scramble-skip], .ecosystem-carousel-controls, pre, code, select, option, [role="status"]')) return;
++       if (/^(SCRIPT|STYLE|NOSCRIPT|TEMPLATE|SVG)$/i.test(parent.tagName)) return;
++ 
++       var match = node.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);
++@@ -613,3 +613,56 @@
++     init();
++   }
++ })();
+++
+++// Native controls progressively enhance static, indexable language examples.
+++(() => {
+++  document.querySelectorAll('[data-code-explorer]').forEach(root => {
+++    const selector = root.querySelector('select');
+++    const panels = [...root.querySelectorAll('[data-example]')];
+++    const update = () => panels.forEach(panel => { panel.hidden = panel.dataset.example !== selector.value; });
+++    root.querySelector('.example-selector').hidden = false;
+++    selector.addEventListener('change', update);
+++    update();
+++  });
+++  document.querySelectorAll('.kujo-content pre').forEach(pre => {
+++    if (pre.closest('.sample-code') || !pre.querySelector('code')) return;
+++    const wrapper = document.createElement('div');
+++    wrapper.className = 'sample-code';
+++    pre.before(wrapper);
+++    wrapper.append(pre);
+++    const button = document.createElement('button');
+++    button.type = 'button'; button.className = 'sk-button';
+++    button.dataset.copyCode = ''; button.textContent = 'Copy code';
+++    const status = document.createElement('span');
+++    status.dataset.codeStatus = ''; status.setAttribute('role', 'status');
+++    wrapper.append(button, status);
+++  });
+++  document.querySelectorAll('[data-copy-code]').forEach(button => {
+++    button.hidden = false;
+++    button.addEventListener('click', async () => {
+++      const root = button.closest('.sample-code');
+++      const status = root.querySelector('[data-code-status]');
+++      try {
+++        await navigator.clipboard.writeText(root.querySelector('code').textContent);
+++        status.textContent = 'Copied!';
+++      } catch {
+++        status.textContent = 'Copy unavailable. Select the code and copy it manually.';
+++      }
+++    });
+++  });
+++  const search = document.querySelector('#example-search');
+++  const category = document.querySelector('#example-category');
+++  if (search && category) {
+++    document.querySelector('.example-filter').hidden = false;
+++    const cards = [...document.querySelectorAll('[data-example-card]')];
+++    const update = () => {
+++      const query = search.value.trim().toLowerCase();
+++      cards.forEach(card => { card.hidden = !card.textContent.toLowerCase().includes(query) || (category.value !== '' && card.dataset.category !== category.value); });
+++      document.querySelectorAll('.example-category-group').forEach(group => { group.hidden = [...group.querySelectorAll('[data-example-card]')].every(card => card.hidden); });
+++      document.querySelector('#example-count').textContent = `${cards.filter(card => !card.hidden).length} examples found`;
+++    };
+++    search.addEventListener('input', update);
+++    category.addEventListener('change', update);
+++    update();
+++  }
+++})();
++diff --git a/build.kujo b/build.kujo
++index 6458021..d94f241 100644
++--- a/build.kujo
+++++ b/build.kujo
++@@ -346,7 +346,14 @@ func custom_slug_override(meta) {
++ 		return ""
++ 	}
++ 	if contains(candidate, "/") {
++-		return ""
+++		# Nested page routes must contain only canonical non-empty slug segments.
+++		parts := split(candidate, "/")
+++		for part in parts {
+++			if len(part) == 0 || part != clean_slug(part) {
+++				return ""
+++			}
+++		}
+++		return candidate
++ 	}
++ 	lowered := to_lower(candidate)
++ 	if ends_with(lowered, ".jpg") || ends_with(lowered, ".jpeg") || ends_with(lowered, ".png") || ends_with(lowered, ".gif") || ends_with(lowered, ".webp") {
++@@ -893,12 +900,12 @@ func docs_body_html(markdown) {
++ 
++ func build_navigation(pages_data, custom_collections, current_route, blog_slug) {
++ 	current_path := route_to_path(current_route)
++-	html := navigation_item("/", "Home", current_path == "/")
++-	html = html + ecosystem_navigation_item(starts_with(current_path, "/ecosystem/"))
++-	html = html + navigation_item("/ethos/", "Ethos", current_path == "/ethos/")
+++	html := navigation_item("/language/", "Language", current_path == "/language/")
+++	html = html + navigation_item("/examples/", "Examples", starts_with(current_path, "/examples/"))
+++	html = html + navigation_item("/ecosystem/", "Ecosystem", starts_with(current_path, "/ecosystem/"))
+++	html = html + navigation_item("https://docs.kujolang.ai/", "Docs", false)
++ 	html = html + navigation_item("/writing/", "Writing", starts_with(current_path, "/writing/"))
++-	html = html + navigation_item("https://docs.kujolang.ai", "Docs", false)
++-	html = html + navigation_item("/contact/", "Contact", current_path == "/contact/")
+++	html = html + navigation_item("https://github.com/kujolang/kujo", "GitHub", false)
++ 	return html
++ }
++ 
++diff --git a/howl-social.json b/howl-social.json
++index 969346e..6b8cae9 100644
++--- a/howl-social.json
+++++ b/howl-social.json
++@@ -3337,6 +3337,331 @@
++       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++       "show_border": false,
++       "show_url": false
+++    },
+++    {
+++      "id": "examples",
+++      "title": "Kujo language examples",
+++      "tagline": "Real code. Verified commands. Pinned sources.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-hello-world",
+++      "title": "Hello World",
+++      "tagline": "Print your first message.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/hello-world/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-variables",
+++      "title": "Variables and types",
+++      "tagline": "Bind values with let and print strings.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/variables/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-functions",
+++      "title": "Functions and operators",
+++      "tagline": "Sum a collection with a reusable function.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/functions/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-control-flow",
+++      "title": "Control flow",
+++      "tagline": "Choose a branch based on a comparison.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/control-flow/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-collections",
+++      "title": "Collections",
+++      "tagline": "Combine arrays and dictionaries into a report.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/collections/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-structs",
+++      "title": "Structs and methods",
+++      "tagline": "Return a new counter from an instance method.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/structs/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-pattern-matching",
+++      "title": "Enums and pattern matching",
+++      "tagline": "Handle tagged values and Result variants explicitly.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/pattern-matching/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-errors",
+++      "title": "Error handling",
+++      "tagline": "Catch a thrown error and continue execution.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/errors/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-async",
+++      "title": "Async tasks",
+++      "tagline": "Await a value produced by an async function.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/async/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-channels",
+++      "title": "Channels",
+++      "tagline": "Send and receive a value in a FIFO channel.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/channels/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-generators",
+++      "title": "Generators",
+++      "tagline": "Yield values lazily and iterate over them.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/generators/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-json",
+++      "title": "JSON data",
+++      "tagline": "Parse configuration and access nested fields.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/json/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-structured-output",
+++      "title": "Structured output validation",
+++      "tagline": "Validate structured data before consuming it. This validates local values; it does not call a model.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/structured-output/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-request-hash",
+++      "title": "Deterministic AI request IDs",
+++      "tagline": "Compare request identities without credentials affecting the hash.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/request-hash/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-replay",
+++      "title": "AI calls and replay",
+++      "tagline": "Replay a recorded model response offline.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/replay/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-streaming",
+++      "title": "AI streaming",
+++      "tagline": "Consume streamed deltas through a callback using an offline cassette.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/streaming/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-capabilities",
+++      "title": "AI capability restrictions",
+++      "tagline": "Use replay with the AI egress example; pair it with the documented capability policy.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/capabilities/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-tests",
+++      "title": "Tests",
+++      "tagline": "Run assertions using the built-in test runner.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/tests/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-modules",
+++      "title": "Modules and imports",
+++      "tagline": "Inspect dotted imports and named imports.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/modules/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-files",
+++      "title": "File operations",
+++      "tagline": "Read the upstream filesystem demonstration.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/files/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "examples-http",
+++      "title": "HTTP and networking",
+++      "tagline": "Inspect a local HTTP server.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/examples/http/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "language",
+++      "title": "Learn Kujo",
+++      "tagline": "Install, check and run your first Kujo program.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/language/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "development-workflow",
+++      "title": "A composable development workflow",
+++      "tagline": "Define scope, inspect context, test changes and review evidence.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/development-workflow/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+++    },
+++    {
+++      "id": "performance",
+++      "title": "Performance evidence",
+++      "tagline": "Reproduce measurements and understand their limits.",
+++      "file": "social-card.txt",
+++      "variant": "social",
+++      "label": "language",
+++      "url": "kujolang.ai/performance/",
+++      "show_border": false,
+++      "show_url": false,
+++      "background_image": "assets/images/home-agent-workflow.webp",
+++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++     }
++   ]
++ }
++diff --git a/package.json b/package.json
++index fdb1192..438cc56 100644
++--- a/package.json
+++++ b/package.json
++@@ -12,7 +12,11 @@
++     "social:verify": "node scripts/verify-social-cards.mjs",
++     "compare:generate": "node scripts/render-comparisons.mjs",
++     "compare:check": "node scripts/render-comparisons.mjs --check",
++-    "compare:verify": "python3 scripts/verify-comparisons.py"
+++    "compare:verify": "python3 scripts/verify-comparisons.py",
+++    "examples:generate": "node scripts/render-language-examples.mjs",
+++    "examples:check": "node scripts/render-language-examples.mjs --check",
+++    "examples:verify": "python3 scripts/verify-language-examples.py",
+++    "language:verify": "python3 scripts/verify-language-site.py"
++   },
++   "dependencies": {
++     "scramble-decode": "0.1.0"
++diff --git a/scripts/verify-site-contract.sh b/scripts/verify-site-contract.sh
++index 8b59afe..4bc515f 100755
++--- a/scripts/verify-site-contract.sh
+++++ b/scripts/verify-site-contract.sh
++@@ -93,7 +93,7 @@ require_text "${output_dir}/index.html" 'Trust at the speed of AI'
++ require_text "${output_dir}/index.html" '<title>Kujo — AI-Native Programming Language | Kujolang.ai</title>'
++ require_text "${output_dir}/index.html" '"name":"Kujo","alternateName":["Kujolang.ai","Kujolang"]'
++ require_text "${output_dir}/index.html" '<meta name="author" content="Kujo Team">'
++-require_text "${output_dir}/index.html" 'Kujo is an AI-native programming language and toolchain built to make agent-driven software development clear, controlled, and verifiable.'
+++require_text "${output_dir}/index.html" 'Kujo is an AI-native programming language for local-first automation and practical application scripting.'
++ require_text "${output_dir}/index.html" 'data-hero-video-open aria-haspopup="dialog"'
++ require_text "${output_dir}/index.html" '<span>View video</span>'
++ require_text "${output_dir}/index.html" 'data-hero-video-modal hidden'
++@@ -137,17 +137,12 @@ require_text "${output_dir}/index.html" '<meta name="mobile-web-app-capable" con
++ require_text "${output_dir}/index.html" '<meta name="msapplication-TileImage" content="mstile-150x150.png">'
++ require_text "${output_dir}/ecosystem/shipcheck/index.html" 'href="../../favicon.svg?v=kujo-k-1"'
++ require_text "${output_dir}/ecosystem/shipcheck/index.html" 'href="../../site.webmanifest"'
++-require_text "${output_dir}/index.html" '>Home</a></li><li class="nav-dropdown" data-nav-dropdown>'
++-require_text "${output_dir}/index.html" '<a href="/ecosystem/" class="text-primary hover:underline">Ecosystem</a>'
++-require_text "${output_dir}/index.html" '<a href="/ecosystem/primitives/">Primitives</a>'
++-require_text "${output_dir}/index.html" '<a href="/ecosystem/tooling/">Tooling</a>'
++-require_text "${output_dir}/index.html" '<a href="/ecosystem/showcase/">Showcase</a>'
++-require_text "${output_dir}/index.html" '<a href="/ecosystem/skills/">Skills</a>'
++-require_text "${output_dir}/index.html" '<a href="/ecosystem/workflows/">Workflows</a>'
++-require_text "${output_dir}/index.html" '<a href="https://agents.kujolang.ai" target="_blank" rel="noopener">Agents'
++-require_text "${output_dir}/index.html" '>Ethos</a></li><li><a href="/writing/"'
++-require_text "${output_dir}/index.html" '>Writing</a></li><li><a href="https://docs.kujolang.ai"'
++-require_text "${output_dir}/index.html" '>Docs</a></li><li><a href="/contact/"'
+++# Language-first navigation replaces the former ecosystem dropdown.
+++for label in Language Examples Ecosystem Docs Writing GitHub; do
+++ require_text "${output_dir}/index.html" ">${label}</a>"
+++done
+++require_text "${output_dir}/index.html" 'href="/language/"'
+++require_text "${output_dir}/index.html" 'href="/examples/"'
++ require_text "${output_dir}/index.html" 'aria-label="Menu, open navigation"'
++ require_text "${output_dir}/index.html" '<nav aria-label="Footer"><a href="compare/">Compare</a><a href="ecosystem/">Ecosystem</a>'
++ reject_text "${output_dir}/index.html" '<nav aria-label="Footer"><a href="index.html">Home</a>'
++@@ -463,6 +458,9 @@ if command -v rg >/dev/null 2>&1; then
++ 		--include='*.html' --include='*.md' --include='*.txt' \
++ 		"${existing_scan_paths[@]}" || true)
++ fi
+++# A verified assertion intentionally compares to_upper("kujo") with "KUJO".
+++# Preserve that executable source without treating its string literal as branding.
+++obsolete_naming=$(printf '%s\n' "$obsolete_naming" | grep -v 'assert_equal(to_upper(' || true)
++ if [[ -n "${obsolete_naming}" ]]; then
++ 	fail "found obsolete product naming or removed ecosystem entries"
++ fi
++diff --git a/templates/page-ecosystem.html b/templates/page-ecosystem.html
++index 152698b..cf9179a 100644
++--- a/templates/page-ecosystem.html
+++++ b/templates/page-ecosystem.html
++@@ -4,6 +4,7 @@
++ 		<div class="page-hero__wash" aria-hidden="true"></div>
++ 		<div class="sk-hero__inner"><div class="page-hero__copy"><h1>{{title}}</h1><p>Explore Kujo by layer, scan a focused selection in each carousel, then open the dedicated catalog for every released project.</p></div></div>
++ 	</header>
+++	<section class="language-section" aria-labelledby="ecosystem-start"><h2 id="ecosystem-start">Choose a starting point</h2><div class="language-grid"><article><h3>For Kujo programs</h3><p>Start with the <a href="/language/">language runtime</a>, then add <a href="/ecosystem/agents-sdk/">Agents SDK</a>, <a href="/ecosystem/ai-sdk/">AI SDK</a> or <a href="/ecosystem/rag/">RAG</a> for application-specific behavior. SDK programs run in Kujo; packages are installed and versioned separately.</p></article><article><h3>For an existing repository</h3><p><a href="/ecosystem/scout/">Scout</a> and <a href="/ecosystem/scent/">Scent</a> inspect context; <a href="/ecosystem/patchbrief/">PatchBrief</a> and <a href="/ecosystem/changebucket/">ChangeBucket</a> inspect Git changes; <a href="/ecosystem/shipcheck/">ShipCheck</a> checks release readiness. These repository-oriented workflows do not require rewriting your application in Kujo.</p></article></div><p><a href="/development-workflow/">Follow the composable workflow exercise</a>. Each tool's page links to its prerequisites, installation and operating boundaries.</p></section>
++ 	<section class="ecosystem-section section-shell" aria-labelledby="primitives-title" data-carousel>
++ 		<div class="ecosystem-section-heading"><div class="section-heading sk-heading"><p>01 / Foundation</p><h2 id="primitives-title"><a class="ecosystem-section-title-link" href="/ecosystem/primitives/">Primitives</a></h2><span>The language, package foundation, runtimes, SDKs, and reusable building blocks for reliable AI-native software.</span></div><div class="sk-carousel__controls ecosystem-carousel-controls"><button class="sk-button" data-variant="secondary" type="button" data-carousel-previous aria-label="Previous primitive projects">&lt;</button><button class="sk-button" data-variant="secondary" type="button" data-carousel-next aria-label="Next primitive projects">&gt;</button></div></div>
++ 		<div class="sk-carousel ecosystem-carousel" aria-label="Primitive projects"><ul class="sk-carousel__track" data-carousel-track tabindex="0">{{primitive_cards}}</ul></div>
++diff --git a/templates/page-home.html b/templates/page-home.html
++index ee284e9..fdebce0 100644
++--- a/templates/page-home.html
+++++ b/templates/page-home.html
++@@ -1,18 +1,121 @@
++-<main id="main-content">
++-	<section class="sk-hero home-hero" aria-labelledby="home-hero-title">
++-		<div class="home-hero__media" aria-hidden="true"><img src="/assets/images/home-agent-workflow.webp" alt="" width="1672" height="941" fetchpriority="high"></div>
++-		<div class="home-hero__wash" aria-hidden="true"></div>
++-		<div class="sk-hero__inner">
++-			<div class="home-hero__copy">
++-				<h1 id="home-hero-title">Trust at the speed of AI</h1>
++-				<p class="home-hero__body">Kujo is an AI-native programming language and toolchain built to make agent-driven software development clear, controlled, and verifiable.</p>
++-				<div class="sk-hero__actions">
++-					<a class="sk-button" href="/ecosystem/">Explore ecosystem</a>
++-					<button class="sk-button home-video-button" data-variant="secondary" type="button" data-hero-video-open aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7 8 5-8 5z"/></svg><span>View video</span></button>
++-				</div>
++-			</div>
++-		</div>
++-	</section>
+++<main id="main-content" class="language-home">
+++<section class="sk-hero home-hero" aria-labelledby="home-hero-title">
+++<div class="home-hero__media" aria-hidden="true"><img src="/assets/images/home-agent-workflow.webp" alt="" width="1672" height="941" fetchpriority="high"></div><div class="home-hero__wash" aria-hidden="true"></div>
+++<div class="sk-hero__inner"><div class="home-hero__copy"><p class="eyebrow">The Kujo programming language</p><h1 id="home-hero-title">Trust at the speed of AI.</h1><p class="home-hero__body">Kujo is an AI-native programming language for local-first automation and practical application scripting. Its Rust-based runtime executes code on a bytecode VM, with checking, testing and editor tools in the CLI.</p><div class="sk-hero__actions"><a class="sk-button" href="/language/">Get Started</a><a class="sk-button" data-variant="secondary" href="/examples/">View Examples</a></div><p><a href="https://docs.kujolang.ai/">Documentation</a> · <a href="https://github.com/kujolang/kujo">GitHub</a></p></div></div></section>
+++<!-- LANGUAGE EXPLORER START -->
+++<section class="language-section" aria-labelledby="code-title" data-code-explorer><p class="eyebrow">Read it. Run it. Change it.</p><h2 id="code-title">A feel for the language</h2><div class="example-selector" hidden><label for="home-example">Choose an example</label><select id="home-example"><option value="hello-world">Hello World</option><option value="functions">Functions and operators</option><option value="collections">Collections</option><option value="async">Async tasks</option><option value="request-hash">Deterministic AI request IDs</option><option value="replay">AI calls and replay</option></select></div><article class="example-panel" id="example-hello-world" data-example="hello-world" data-category="Basics"><p class="eyebrow">Basics · Executed offline · Kujo 1.9.0</p><h3>Hello World</h3><p>Print your first message.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
+++<span class="syntax-token"># Kujo Kujo!</span>
+++
+++print(<span class="syntax-token">&quot;Kujo Kujo!&quot;</span>)
+++</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/hello-world.kujo" download>hello-world.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run hello-world.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>Kujo Kujo!
+++</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/00-hello.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/hello-world/">Full example</a></p></article>
+++<article class="example-panel" id="example-functions" data-example="functions" data-category="Basics"><p class="eyebrow">Basics · Executed offline · Kujo 1.9.0</p><h3>Functions and operators</h3><p>Sum a collection with a reusable function.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
+++<span class="syntax-token"># total: 42</span>
+++
+++<span class="syntax-token">func</span> total(values) {
+++    <span class="syntax-token">mut</span> sum := 0
+++    <span class="syntax-token">for</span> value <span class="syntax-token">in</span> values {
+++        sum = sum + value
+++    }
+++    <span class="syntax-token">return</span> sum
+++}
+++
+++<span class="syntax-token">let</span> scores := [8, 13, 21]
+++print(<span class="syntax-token">&quot;total: &quot;</span> + to_string(total(scores)))
+++</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/functions.kujo" download>functions.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run functions.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>total: 42
+++</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/02-functions.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/functions/">Full example</a></p></article>
+++<article class="example-panel" id="example-collections" data-example="collections" data-category="Data"><p class="eyebrow">Data · Executed offline · Kujo 1.9.0</p><h3>Collections</h3><p>Combine arrays and dictionaries into a report.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
+++<span class="syntax-token"># build total: 42</span>
+++
+++<span class="syntax-token">let</span> scores := [8, 13, 21]
+++<span class="syntax-token">let</span> report := {<span class="syntax-token">&quot;name&quot;</span>: <span class="syntax-token">&quot;build&quot;</span>, <span class="syntax-token">&quot;total&quot;</span>: scores[0] + scores[1] + scores[2]}
+++
+++print(report[<span class="syntax-token">&quot;name&quot;</span>] + <span class="syntax-token">&quot; total: &quot;</span> + to_string(report[<span class="syntax-token">&quot;total&quot;</span>]))
+++</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/collections.kujo" download>collections.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run collections.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>build total: 42
+++</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/04-data.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/collections/">Full example</a></p></article>
+++<article class="example-panel" id="example-async" data-example="async" data-category="Concurrency"><p class="eyebrow">Concurrency · Executed offline · Kujo 1.9.0</p><h3>Async tasks</h3><p>Await a value produced by an async function.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">// Simple async test</span>
+++
+++<span class="syntax-token">async</span> <span class="syntax-token">func</span> get_value() {
+++    <span class="syntax-token">return</span> 42;
+++}
+++
+++<span class="syntax-token">let</span> p = get_value();
+++println(<span class="syntax-token">&quot;Promise type: &quot;</span>, type(p));
+++<span class="syntax-token">let</span> result = <span class="syntax-token">await</span> p;
+++println(<span class="syntax-token">&quot;Result: &quot;</span>, result);
+++</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/async.kujo" download>async.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run <span class="syntax-token">async</span>.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>Promise type:  promise
+++Result:  42
+++</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/simple_async_test.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/async/">Full example</a></p></article>
+++<article class="example-panel" id="example-request-hash" data-example="request-hash" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline · Kujo 1.9.0</p><h3>Deterministic AI request IDs</h3><p>Compare request identities without credentials affecting the hash.</p><p class="example-note">The credential strings are dummy values. This example makes no network request.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
+++    print(label + <span class="syntax-token">&quot;: &quot;</span> + value)
+++}
+++
+++<span class="syntax-token">let</span> options_a := {
+++    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;https://api.example.test/v1/chat/completions&quot;</span>,
+++    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-demo&quot;</span>,
+++    <span class="syntax-token">&quot;api_key&quot;</span>: <span class="syntax-token">&quot;credential-one&quot;</span>,
+++    <span class="syntax-token">&quot;headers&quot;</span>: {
+++        <span class="syntax-token">&quot;Authorization&quot;</span>: <span class="syntax-token">&quot;Bearer credential-one&quot;</span>,
+++        <span class="syntax-token">&quot;X-App&quot;</span>: <span class="syntax-token">&quot;kujo&quot;</span>
+++    },
+++    <span class="syntax-token">&quot;body&quot;</span>: {
+++        <span class="syntax-token">&quot;temperature&quot;</span>: 0,
+++        <span class="syntax-token">&quot;max_tokens&quot;</span>: 32
+++    }
+++}
+++
+++<span class="syntax-token">let</span> options_b := {
+++    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;https://api.example.test/v1/chat/completions&quot;</span>,
+++    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-demo&quot;</span>,
+++    <span class="syntax-token">&quot;api_key&quot;</span>: <span class="syntax-token">&quot;credential-two&quot;</span>,
+++    <span class="syntax-token">&quot;headers&quot;</span>: {
+++        <span class="syntax-token">&quot;Authorization&quot;</span>: <span class="syntax-token">&quot;Bearer credential-two&quot;</span>,
+++        <span class="syntax-token">&quot;X-App&quot;</span>: <span class="syntax-token">&quot;kujo&quot;</span>
+++    },
+++    <span class="syntax-token">&quot;body&quot;</span>: {
+++        <span class="syntax-token">&quot;temperature&quot;</span>: 0,
+++        <span class="syntax-token">&quot;max_tokens&quot;</span>: 32
+++    }
+++}
+++
+++<span class="syntax-token">let</span> hash_a := ai_request_hash(<span class="syntax-token">&quot;Summarize Kujo&quot;</span>, options_a)
+++<span class="syntax-token">let</span> hash_b := ai_request_hash(<span class="syntax-token">&quot;Summarize Kujo&quot;</span>, options_b)
+++
+++kv(<span class="syntax-token">&quot;hash_length&quot;</span>, to_string(len(hash_a)))
+++kv(<span class="syntax-token">&quot;same_without_credentials&quot;</span>, to_string(hash_a == hash_b))
+++kv(<span class="syntax-token">&quot;hash&quot;</span>, hash_a)
+++</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/request-hash.kujo" download>request-hash.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run request-hash.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>hash_length: 64
+++same_without_credentials: true
+++hash: a6244047c108dcf58a952ed0a6c70dc04d13ee9aa9dba08eeb623f241fbd37ce
+++</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_request_hash.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/request-hash/">Full example</a></p></article>
+++<article class="example-panel" id="example-replay" data-example="replay" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline · Kujo 1.9.0</p><h3>AI calls and replay</h3><p>Replay a recorded model response offline.</p><p class="example-note">Run from the pinned Kujo repository root: the cassette fixture directory is required.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
+++    print(label + <span class="syntax-token">&quot;: &quot;</span> + value)
+++}
+++
+++<span class="syntax-token">let</span> options := {
+++    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;http://127.0.0.1:1/v1/chat/completions&quot;</span>,
+++    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-replay&quot;</span>,
+++    <span class="syntax-token">&quot;cassette&quot;</span>: {
+++        <span class="syntax-token">&quot;mode&quot;</span>: <span class="syntax-token">&quot;replay&quot;</span>,
+++        <span class="syntax-token">&quot;dir&quot;</span>: <span class="syntax-token">&quot;tests/fixtures/ai_cassettes&quot;</span>
+++    }
+++}
+++
+++<span class="syntax-token">let</span> result := ai_chat(<span class="syntax-token">&quot;Hello model&quot;</span>, options)
+++
+++kv(<span class="syntax-token">&quot;replay_result&quot;</span>, to_string(result))
+++</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/replay.kujo" download>replay.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run replay.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>replay_result: Ok({&quot;finish_reason&quot;: tool_calls, &quot;headers&quot;: {&quot;content-type&quot;: application/json}, &quot;json&quot;: {&quot;choices&quot;: [{&quot;finish_reason&quot;: tool_calls, &quot;message&quot;: {&quot;content&quot;: hello from cassette, &quot;tool_calls&quot;: [{&quot;function&quot;: {&quot;arguments&quot;: {&quot;query&quot;:&quot;kujo&quot;}, &quot;name&quot;: lookup}, &quot;id&quot;: call_1}]}}], &quot;usage&quot;: {&quot;completion_tokens&quot;: 5, &quot;prompt_tokens&quot;: 7, &quot;total_tokens&quot;: 12}}, &quot;message&quot;: hello from cassette, &quot;model&quot;: gpt-replay, &quot;provider&quot;: , &quot;status&quot;: 200, &quot;text&quot;: {&quot;choices&quot;:[{&quot;finish_reason&quot;:&quot;tool_calls&quot;,&quot;message&quot;:{&quot;content&quot;:&quot;hello from cassette&quot;,&quot;tool_calls&quot;:[{&quot;id&quot;:&quot;call_1&quot;,&quot;function&quot;:{&quot;name&quot;:&quot;lookup&quot;,&quot;arguments&quot;:&quot;{\&quot;query\&quot;:\&quot;kujo\&quot;}&quot;}}]}}],&quot;usage&quot;:{&quot;prompt_tokens&quot;:7,&quot;completion_tokens&quot;:5,&quot;total_tokens&quot;:12}}, &quot;tool_calls&quot;: [{&quot;arguments_json&quot;: {&quot;query&quot;:&quot;kujo&quot;}, &quot;id&quot;: call_1, &quot;name&quot;: lookup}], &quot;usage&quot;: {&quot;completion_tokens&quot;: 5, &quot;prompt_tokens&quot;: 7, &quot;total_tokens&quot;: 12}})
+++</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_replay_cassette.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/replay/">Full example</a></p></article><a class="sk-button" href="/examples/">Explore all examples</a></section>
+++<!-- LANGUAGE EXPLORER END -->
+++<section class="language-section"><p class="eyebrow">One language, practical building blocks</p><h2>Build scripts. Services. AI workflows.</h2><div class="language-grid"><article><h3>Automate local work</h3><p>Work with files, processes, JSON and collections. Write small scripts with functions, structs and explicit error handling.</p><a href="/examples/files/">Explore file operations</a></article><article><h3>Build applications</h3><p>Use HTTP and networking helpers, modules, async tasks and generators. Check the documented runtime limits before choosing a deployment.</p><a href="/examples/http/">Inspect an HTTP server</a></article><article><h3>Make AI work inspectable</h3><p>Identify requests, replay recorded responses and validate structured data. Add packages when you need agent orchestration.</p><a href="/examples/replay/">Run an offline AI call</a></article></div></section>
+++<section class="language-section"><p class="eyebrow">AI-native, with concrete mechanisms</p><h2>Repeat the request. Inspect the result.</h2><div class="language-grid"><article><h3>Stable request identity</h3><p><code>ai_request_hash</code> derives a deterministic request identifier while excluding credentials. Compare requests without sending them to a model.</p><a href="/examples/request-hash/">Run the hash example</a></article><article><h3>Offline model replay</h3><p><code>ai_chat</code> can read recorded cassettes. Reproduce a response in tests without a live provider, then validate its data with <code>json_schema_validate</code>.</p><a href="/examples/replay/">Replay a response</a> · <a href="/examples/structured-output/">Validate a schema</a></article></div><p>Conventional languages already offer async functions, HTTP clients and testing libraries. Kujo adds AI request identity, replay, streaming callbacks and capability controls at the runtime level. These mechanisms support review; they do not guarantee correctness or isolation.</p><p>Choose Kujo for scripts and tools that benefit from those primitives. Keep Python or TypeScript when existing libraries, deployment requirements or team experience matter more. Independent Kujo tools can still inspect and evaluate those repositories.</p><details><summary>What belongs to which layer?</summary><ul><li><strong>Language:</strong> functions, modules, collections, structs, enums, matching, async and generators.</li><li><strong>Rust VM/runtime:</strong> execution, host helpers, AI primitives and capability-aware access.</li><li><strong>Core CLI:</strong> check, format, lint, tests, LSP and documentation generation.</li><li><strong>Separate packages:</strong> Kennel, Agents SDK, AI SDK and workflow tools have their own installation and versions.</li><li><strong>External systems:</strong> live model providers require configuration and credentials; optional hosts and integrations are not bundled language features.</li></ul></details></section>
+++<section class="language-section" id="get-started"><p class="eyebrow">Your first successful program</p><h2>Install. Check. Run.</h2><p>For a runtime-only install on supported macOS, Linux and Windows systems with Node.js 18 or newer:</p><div class="sample-code"><pre tabindex="0"><code>npm install --global @kujolang/kujo-runtime@1.9.0
+++kujo --version</code></pre><button class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save <code>print("Hello, Kujo!")</code> in <code>hello.kujo</code>:</p><div class="sample-code"><pre tabindex="0"><code>kujo check hello.kujo
+++kujo run hello.kujo</code></pre><button class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Expected output: <code>Hello, Kujo!</code>. <a href="/language/">Native installers, Windows guidance and troubleshooting</a>.</p></section>
+++<section class="language-section"><p class="eyebrow">Ecosystem · installed separately</p><h2>Start with the job you need done.</h2><p>These are independent projects. Tools that inspect repositories or run configured commands can support existing languages; SDK code itself runs in Kujo.</p><div class="language-grid"><article><h3>Build an AI agent</h3><p>Use Agents SDK with AI SDK for Kujo agent programs.</p><a href="/ecosystem/agents-sdk/">Agents SDK</a></article><article><h3>Coordinate multi-step work</h3><p>Define repeatable work and inspect its state.</p><a href="/ecosystem/dispatch/">Dispatch</a></article><article><h3>Understand a repository</h3><p>Inspect existing code and assemble context for a change.</p><a href="/ecosystem/scout/">Scout</a> · <a href="/ecosystem/scent/">Scent</a></article><article><h3>Evaluate generated work</h3><p>Run configured checks and browser assertions for your project.</p><a href="/ecosystem/eval/">Eval</a> · <a href="/ecosystem/lens/">Lens</a></article><article><h3>Review a change</h3><p>Turn Git diffs and footprint into inspectable evidence.</p><a href="/ecosystem/patchbrief/">PatchBrief</a> · <a href="/ecosystem/changebucket/">ChangeBucket</a></article><article><h3>Prepare a release</h3><p>Evaluate repository readiness against explicit checks.</p><a href="/ecosystem/shipcheck/">ShipCheck</a></article></div><p><a href="/ecosystem/">Browse the full ecosystem</a></p><h3>From request to reviewable change</h3><ol class="workflow-stages"><li>Define scope</li><li>Retrieve context</li><li>Implement in a chosen environment</li><li>Run tests</li><li>Inspect change evidence</li><li>Assess readiness</li></ol><p>Composable stages, not an automatically integrated pipeline. <a href="/development-workflow/">Follow a reproducible repository workflow</a>.</p></section>
+++<section class="language-section"><p class="eyebrow">Evidence over promises</p><h2>Inspect what people build.</h2><div class="language-grid"><article><h3>This website</h3><p>Kujo SSG generates static HTML; SiteKit supplies the visual system.</p><a href="https://github.com/kujolang/kujolang.ai/blob/main/build.kujo">Inspect the build source</a></article><article><h3>Applications and services</h3><p>Explore the Kujo-backed CMS, CRUD API and RAG showcases with their runtime and integration boundaries.</p><a href="/ecosystem/cms/">CMS</a> · <a href="/ecosystem/crud-api/">CRUD API</a> · <a href="/ecosystem/rag/">RAG</a></article><article><h3>Performance and comparisons</h3><p>Separate VM execution, startup and application workloads. Cross-language results remain unmeasured unless a reproducible report says otherwise.</p><a href="/performance/">Measurement methodology</a> · <a href="/compare/">Compare language approaches</a></article></div></section>
+++<section class="language-section"><h2>Start where you are.</h2><div class="language-grid"><article><h3>Learn the language</h3><p>Prerequisite: a terminal and a supported runtime. Scope: one script, then functions and data. First action: install Kujo and run Hello World.</p><a href="/language/">Start the language guide</a></article><article><h3>Build AI agents</h3><p>Prerequisite: Kujo and the SDK dependencies. Scope: a small agent with explicit tools. First action: follow the Agents SDK installation and offline examples.</p><a href="/ecosystem/agents-sdk/">Start with Agents SDK</a></article><article><h3>Improve an existing workflow</h3><p>Prerequisite: a Git repository and its test commands. Scope: inspect a change and record evidence. First action: run the local workflow exercise.</p><a href="/development-workflow/">Keep your language, improve the workflow</a></article></div></section>
+++<section class="language-section language-final"><h2>Make your first program run.</h2><a class="sk-button" href="/language/">Get Started</a><button class="sk-button home-video-button" data-variant="secondary" type="button" data-hero-video-open aria-haspopup="dialog"><span>View video</span></button></section>
++ 	<div class="hero-video-modal" data-hero-video-modal hidden>
++ 		<div class="hero-video-modal__backdrop" data-hero-video-close></div>
++ 		<section class="hero-video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="hero-video-title" tabindex="-1">
+diff --git a/.loop-engineering/iterations/001/verdict.yml b/.loop-engineering/iterations/001/verdict.yml
+index ebbbe06..5eace62 100644
+--- a/.loop-engineering/iterations/001/verdict.yml
++++ b/.loop-engineering/iterations/001/verdict.yml
+@@ -1,6 +1,6 @@
+ iteration: 1
+-verdict: success
+-progress: 1
+-required_failures: 0
++verdict: failed
++progress: 0
++required_failures: 1
+ external_blockers: 0
+-stop_reason: "success: required gates passed"
++stop_reason: "required gate failed"
+diff --git a/.loop-engineering/ledger.tsv b/.loop-engineering/ledger.tsv
+index 5e5d38a..6ac564f 100644
+--- a/.loop-engineering/ledger.tsv
++++ b/.loop-engineering/ledger.tsv
+@@ -4,3 +4,6 @@ iteration	action	verdict	progress	evidence	justification
+ 002	configured-gates	failed	0	iterations/002/eval.log	required gate failed
+ 003	configured-gates	failed	0	iterations/003/eval.log	required gate failed
+ 001	configured-gates	success	1	iterations/001/eval.log	success: required gates passed
++001	configured-gates	failed	0	iterations/001/eval.log	required gate failed
++001	configured-gates	success	1	iterations/001/eval.log	success: required gates passed
++001	configured-gates	failed	0	iterations/001/eval.log	required gate failed
+diff --git a/.loop-engineering/loop.yml b/.loop-engineering/loop.yml
+index 124c736..51bd023 100644
+--- a/.loop-engineering/loop.yml
++++ b/.loop-engineering/loop.yml
+@@ -1,6 +1,6 @@
+-objective: "Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output."
+-checklist_file: ""
+-max_iterations: 4
++objective: "Implement and verify the complete language-first website redesign"
++checklist_file: ".loop-engineering/checklist-language-first.md"
++max_iterations: 1
+ max_no_progress: 2
+ max_consecutive_failures: 3
+ 
+@@ -18,40 +18,54 @@ blocked_actions:
+   - production_config_change
+ 
+ eval_gates:
+-  - id: shell_syntax
+-    command: "bash -n scripts/dev.sh scripts/render-social-cards.sh scripts/validate-generated-output.sh scripts/verify-site-contract.sh"
++  - id: examples_source
++    command: "npm run examples:check"
+     required: true
+-
+-  - id: howl_manifest
+-    command: "/Users/robertdevore/2026/Kujolang/kujo-repos/howl/bin/howl validate --manifest howl-social.json"
++  - id: examples_runtime
++    command: "npm run examples:verify"
+     required: true
+-
+-  - id: ssg_build_receipt
+-    command: "test -s output/sitemap.xml && test -s output/ecosystem/workflows/publishing-house-post-publication/index.html"
++  - id: node_tests
++    command: "npm test"
+     required: true
+-
+-  - id: generated_output
+-    command: "bash scripts/validate-generated-output.sh output"
++  - id: build
++    command: "kujo run ./build.kujo -- --site-url https://kujolang.ai"
++    required: true
++  - id: responsive
++    command: "npm run images:responsive"
+     required: true
+-
+   - id: site_contract
+     command: "bash scripts/verify-site-contract.sh output"
+     required: true
+-
+-  - id: social_contract
++  - id: generated_output
++    command: "bash scripts/validate-generated-output.sh output"
++    required: true
++  - id: language_contract
++    command: "npm run language:verify"
++    required: true
++  - id: social
+     command: "npm run social:verify"
+     required: true
+-
+-  - id: publishing_house_counts
+-    command: "test $(find content/workflows -maxdepth 1 -type f -name \*.md | wc -l) -eq 34 && test $(find assets/images/social -maxdepth 1 -type f -name \*.jpg | wc -l) -eq 173"
++  - id: comparisons
++    command: "npm run compare:verify"
+     required: true
+-
+-  - id: diff_check
+-    command: "git diff --check -- .loop-engineering/loop.yml CHANGELOG.md README.md build.kujo howl-social.json scripts templates content assets seo-audit"
++  - id: javascript
++    command: "node --check assets/js/site.js"
++    required: true
++  - id: shell
++    command: "bash -n scripts/*.sh"
++    required: true
++  - id: audit
++    command: "npm audit --omit=dev"
++    required: true
++  - id: browser
++    command: "node scripts/test-language-browser.cjs"
++    required: true
++  - id: diff
++    command: "git diff --check"
+     required: true
+ 
+ commit:
+-  enabled: true
++  enabled: false
+   strategy: small_meaningful
+   push: true
+ 
+@@ -61,3 +75,6 @@ memory:
+   project: "Agent Notes"
+   mode: consolidate
+   retrieval_tests: true
++
++# Commits/pushes are performed explicitly after all gates pass; native runner commits even on failure.
++# One evaluation per bounded phase; archive iterations before subsequent runs.
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index b0c435e..f689a6a 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -2,6 +2,11 @@
+ 
+ ## Unreleased
+ 
++- Lead with the Kujo language, real code, installation and six goal-based ecosystem entry points.
++- Add 21 pinned examples with exact runtime verification, offline replay fixtures, accessible selection, copy feedback and category/search filtering.
++- Add language onboarding, a composable workflow exercise and reproducible performance methodology; preserve existing ecosystem and comparison routes.
++- Extend static page routing to validated nested slugs, generate Howl cards and add source, output and browser gates.
++
+ - Keep comparison pages focused on Vercel Zerolang and its reviewed release, removing unrelated project references and draft revision history.
+ 
+ - Rebuild the comparison hub as a four-language field guide with a six-dimension evidence matrix, adoption profiles, technical briefs, workflow stages and a worked artifact check.
+diff --git a/README.md b/README.md
+index 05553a9..c3d257e 100644
+--- a/README.md
++++ b/README.md
+@@ -162,3 +162,53 @@ This release contains 135 skills. The sync preserves workflow content, reuses th
+ ## Comparisons and discovery
+ 
+ The `/compare/` collection is generated from `comparison/catalog.json`. Run `npm run compare:generate` after editing records and `npm run compare:verify` after the production build. See [the comparison maintainer guide](comparison/README.md) for editorial standards, research, evidence and measurement.
++
++## Language-first pages and verified examples
++
++The homepage leads with language positioning and a native-select code explorer.
++`/language/` is the installation journey, `/examples/` the searchable collection,
++`/development-workflow/` a composable workflow exercise, and `/performance/` the
++measurement methodology. Existing ecosystem, Writing and comparison routes remain.
++
++`examples/catalog.json` pins every sample to Kujo 1.9.0 and an upstream commit,
++source path, optional line range, SHA-256, verification mode and expected output.
++`public/samples/` contains downloadable source and offline AI cassette fixtures.
++To add an example, copy reviewed source from the pinned commit, record its hash
++and honest prerequisites, and choose `run`, `check` or `test-run`. Do not execute
++network listeners or file-mutating samples merely to mark them runnable. Module
++imports currently use check-only examples with explicit missing dependencies.
++
++Run `npm run examples:generate` to update Markdown projections, semantic page
++templates, the homepage explorer and Howl manifest. Raw HTML is deliberately
++escaped by the Markdown renderer, so generated templates own interactive markup.
++Do not hand-edit generated example pages/templates. The native SSG supports
++nested canonical slug segments for these routes, retaining traversal rejection.
++
++```sh
++npm run examples:check
++npm run examples:verify
++npm run social:cards
++kujo run ./build.kujo -- --site-url https://kujolang.ai
++npm run images:responsive
++npm run language:verify
++npm run social:verify
++```
++
++Set `KUJO_BIN` to a Kujo 1.9.0 executable when it is not on PATH. Run browser
++verification with `node scripts/test-language-browser.cjs`; provide a Playwright
++installation through `PLAYWRIGHT_MODULE` and optionally `CHROME_BIN`. The browser
++suite requires the site served at `http://127.0.0.1:4178` (or `SITE_URL`). It checks
++selection, clipboard text, filtering, mobile navigation, responsive overflow,
++console errors and the JavaScript-disabled fallback. Screenshots and loop
++receipts are under `.loop-engineering/evidence/`.
++
++Regenerate the downloadable bundle after updating samples:
++`COPYFILE_DISABLE=1 tar -czf public/samples/kujo-examples.tar.gz -C public/samples --exclude=kujo-examples.tar.gz .`.
++Measure startup plus script execution with `python3 scripts/measure-language.py`;
++its receipt does not establish cross-language performance superiority.
++
++For WCAG A/AA checks on the six key page types, set `AXE_SCRIPT` to an installed
++`axe-core/axe.min.js` when running the browser suite. It saves exact violation
++results beside screenshots. No browser or accessibility package is shipped to
++site visitors. The GitHub Pages build runs the source/runtime example gates and
++language-route verification before uploading its artifact.
+diff --git a/assets/css/style.css b/assets/css/style.css
+index 60dfb53..a04546e 100644
+--- a/assets/css/style.css
++++ b/assets/css/style.css
+@@ -1606,3 +1606,40 @@
+ .watchdog-gallery__track img { display: block; width: 100%; height: 100%; object-fit: contain; margin: 0; }
+ .watchdog-gallery__track figcaption { padding: 1rem; font-size: .85rem; line-height: 1.6; }
+ .watchdog-gallery__track:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
++
++/* Language-first composition; SiteKit remains the token and component source. */
++.language-home .home-hero, .language-home .home-hero .sk-hero__inner { min-block-size: auto; }
++.language-home .home-hero .sk-hero__inner { padding-block: calc(var(--site-header-block) + 3rem) 2rem; }
++.language-home .home-hero h1 { font-size: clamp(2.6rem, 5.5vw, 5rem); max-inline-size: 14ch; }
++.language-home .home-hero__body { margin-block-start: 1.2rem; max-inline-size: 60ch; }
++.language-home .home-hero .sk-hero__actions { margin-block-start: 1.25rem; }
++.language-section { max-width: 1180px; margin-inline: auto; padding: 3rem var(--site-pad-inline); border-bottom: 1px solid var(--sk-border-default, #ccc); }
++.language-section h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); line-height: 1.15; margin-block: .5rem 1.5rem; }
++.language-section p { max-width: 75ch; }
++.language-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,260px),1fr)); gap: 2rem; }
++.language-grid article { min-width: 0; }
++.language-grid h3 { font-size: 1.2rem; }
++.language-grid p, .language-section p { line-height: 1.65; }
++.sample-code { position: relative; margin-block: 1rem; min-width: 0; }
++.sample-code pre, .example-panel pre { background: #181818; color: #f9f9f9; padding: 1.2rem; border-radius: 4px; overflow-x: auto; max-width: 100%; font-size: .88rem; line-height: 1.65; }
++.sample-code code { color: inherit; background: transparent; white-space: pre; }
++.syntax-token { color: #fff; font-weight: 700; text-decoration-color: #777; }
++.sample-code button { margin-right: 1rem; min-height: 44px; }
++.example-panel[hidden], [data-example-card][hidden], .example-category-group[hidden] { display: none !important; }
++.example-selector, .example-filter { margin-block: 1.5rem; }
++.example-selector select, .example-filter input, .example-filter select { font: inherit; padding: .7rem; border: 1px solid #777; color: #111; background: #fff; max-width: 100%; min-height: 44px; }
++.example-filter label { display: block; margin-top: 1rem; }
++.example-note { border-left: 3px solid #777; padding-left: 1rem; }
++.example-category-group { border-bottom: 1px solid #ccc; padding-block: 1rem; }
++.workflow-stages { display: flex; flex-wrap: wrap; gap: 1rem 2rem; padding-left: 1.5rem; }
++.workflow-stages li { flex: 1 1 140px; }
++.language-final { padding-bottom: 4rem; }
++.language-final .sk-button { margin: .5rem; }
++:focus-visible { outline: 3px solid #555; outline-offset: 4px; }
++@media(max-width: 700px) { .language-home .home-hero .sk-hero__inner { padding-block: calc(var(--site-header-block) + 1.5rem) 1rem; } .language-section { padding-block: 2rem; } .example-selector label { display: block; } }
++.language-home .home-hero .sk-hero__inner { padding-block: calc(var(--site-header-block) + 1.2rem) 1rem; }
++.language-home .home-hero h1 { font-size: clamp(2.6rem, 4.5vw, 4rem); }
++.language-home .home-hero .home-hero__body { font-size: 1rem; max-inline-size: 65ch; line-height: 1.55; }
++.language-home .home-hero__wash { background: linear-gradient(90deg, var(--sk-surface-page) 0%, color-mix(in srgb,var(--sk-surface-page) 96%,transparent) 42%,color-mix(in srgb,var(--sk-surface-page) 70%,transparent) 68%,transparent); }
++[data-code-explorer] { padding-top: 1.5rem; }
++@media(max-width:700px) { .language-home .home-hero__wash { background: color-mix(in srgb,var(--sk-surface-page) 94%,transparent); } }
+diff --git a/assets/js/site.js b/assets/js/site.js
+index 93628d8..913590d 100644
+--- a/assets/js/site.js
++++ b/assets/js/site.js
+@@ -546,7 +546,7 @@
+ 
+     function wrapTextNode(node) {
+       var parent = node.parentElement;
+-      if (!parent || !node.nodeValue.trim() || parent.closest(selector) || parent.closest('[data-scramble-skip], .ecosystem-carousel-controls')) return;
++      if (!parent || !node.nodeValue.trim() || parent.closest(selector) || parent.closest('[data-scramble-skip], .ecosystem-carousel-controls, pre, code, select, option, [role="status"]')) return;
+       if (/^(SCRIPT|STYLE|NOSCRIPT|TEMPLATE|SVG)$/i.test(parent.tagName)) return;
+ 
+       var match = node.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);
+@@ -613,3 +613,56 @@
+     init();
+   }
+ })();
++
++// Native controls progressively enhance static, indexable language examples.
++(() => {
++  document.querySelectorAll('[data-code-explorer]').forEach(root => {
++    const selector = root.querySelector('select');
++    const panels = [...root.querySelectorAll('[data-example]')];
++    const update = () => panels.forEach(panel => { panel.hidden = panel.dataset.example !== selector.value; });
++    root.querySelector('.example-selector').hidden = false;
++    selector.addEventListener('change', update);
++    update();
++  });
++  document.querySelectorAll('.kujo-content pre').forEach(pre => {
++    if (pre.closest('.sample-code') || !pre.querySelector('code')) return;
++    const wrapper = document.createElement('div');
++    wrapper.className = 'sample-code';
++    pre.before(wrapper);
++    wrapper.append(pre);
++    const button = document.createElement('button');
++    button.type = 'button'; button.className = 'sk-button';
++    button.dataset.copyCode = ''; button.textContent = 'Copy code';
++    const status = document.createElement('span');
++    status.dataset.codeStatus = ''; status.setAttribute('role', 'status');
++    wrapper.append(button, status);
++  });
++  document.querySelectorAll('[data-copy-code]').forEach(button => {
++    button.hidden = false;
++    button.addEventListener('click', async () => {
++      const root = button.closest('.sample-code');
++      const status = root.querySelector('[data-code-status]');
++      try {
++        await navigator.clipboard.writeText(root.querySelector('code').textContent);
++        status.textContent = 'Copied!';
++      } catch {
++        status.textContent = 'Copy unavailable. Select the code and copy it manually.';
++      }
++    });
++  });
++  const search = document.querySelector('#example-search');
++  const category = document.querySelector('#example-category');
++  if (search && category) {
++    document.querySelector('.example-filter').hidden = false;
++    const cards = [...document.querySelectorAll('[data-example-card]')];
++    const update = () => {
++      const query = search.value.trim().toLowerCase();
++      cards.forEach(card => { card.hidden = !card.textContent.toLowerCase().includes(query) || (category.value !== '' && card.dataset.category !== category.value); });
++      document.querySelectorAll('.example-category-group').forEach(group => { group.hidden = [...group.querySelectorAll('[data-example-card]')].every(card => card.hidden); });
++      document.querySelector('#example-count').textContent = `${cards.filter(card => !card.hidden).length} examples found`;
++    };
++    search.addEventListener('input', update);
++    category.addEventListener('change', update);
++    update();
++  }
++})();
+diff --git a/build.kujo b/build.kujo
+index 6458021..d94f241 100644
+--- a/build.kujo
++++ b/build.kujo
+@@ -346,7 +346,14 @@ func custom_slug_override(meta) {
+ 		return ""
+ 	}
+ 	if contains(candidate, "/") {
+-		return ""
++		# Nested page routes must contain only canonical non-empty slug segments.
++		parts := split(candidate, "/")
++		for part in parts {
++			if len(part) == 0 || part != clean_slug(part) {
++				return ""
++			}
++		}
++		return candidate
+ 	}
+ 	lowered := to_lower(candidate)
+ 	if ends_with(lowered, ".jpg") || ends_with(lowered, ".jpeg") || ends_with(lowered, ".png") || ends_with(lowered, ".gif") || ends_with(lowered, ".webp") {
+@@ -893,12 +900,12 @@ func docs_body_html(markdown) {
+ 
+ func build_navigation(pages_data, custom_collections, current_route, blog_slug) {
+ 	current_path := route_to_path(current_route)
+-	html := navigation_item("/", "Home", current_path == "/")
+-	html = html + ecosystem_navigation_item(starts_with(current_path, "/ecosystem/"))
+-	html = html + navigation_item("/ethos/", "Ethos", current_path == "/ethos/")
++	html := navigation_item("/language/", "Language", current_path == "/language/")
++	html = html + navigation_item("/examples/", "Examples", starts_with(current_path, "/examples/"))
++	html = html + navigation_item("/ecosystem/", "Ecosystem", starts_with(current_path, "/ecosystem/"))
++	html = html + navigation_item("https://docs.kujolang.ai/", "Docs", false)
+ 	html = html + navigation_item("/writing/", "Writing", starts_with(current_path, "/writing/"))
+-	html = html + navigation_item("https://docs.kujolang.ai", "Docs", false)
+-	html = html + navigation_item("/contact/", "Contact", current_path == "/contact/")
++	html = html + navigation_item("https://github.com/kujolang/kujo", "GitHub", false)
+ 	return html
+ }
+ 
+diff --git a/howl-social.json b/howl-social.json
+index 969346e..6b8cae9 100644
+--- a/howl-social.json
++++ b/howl-social.json
+@@ -3337,6 +3337,331 @@
+       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+       "show_border": false,
+       "show_url": false
++    },
++    {
++      "id": "examples",
++      "title": "Kujo language examples",
++      "tagline": "Real code. Verified commands. Pinned sources.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-hello-world",
++      "title": "Hello World",
++      "tagline": "Print your first message.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/hello-world/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-variables",
++      "title": "Variables and types",
++      "tagline": "Bind values with let and print strings.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/variables/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-functions",
++      "title": "Functions and operators",
++      "tagline": "Sum a collection with a reusable function.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/functions/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-control-flow",
++      "title": "Control flow",
++      "tagline": "Choose a branch based on a comparison.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/control-flow/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-collections",
++      "title": "Collections",
++      "tagline": "Combine arrays and dictionaries into a report.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/collections/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-structs",
++      "title": "Structs and methods",
++      "tagline": "Return a new counter from an instance method.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/structs/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-pattern-matching",
++      "title": "Enums and pattern matching",
++      "tagline": "Handle tagged values and Result variants explicitly.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/pattern-matching/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-errors",
++      "title": "Error handling",
++      "tagline": "Catch a thrown error and continue execution.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/errors/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-async",
++      "title": "Async tasks",
++      "tagline": "Await a value produced by an async function.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/async/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-channels",
++      "title": "Channels",
++      "tagline": "Send and receive a value in a FIFO channel.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/channels/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-generators",
++      "title": "Generators",
++      "tagline": "Yield values lazily and iterate over them.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/generators/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-json",
++      "title": "JSON data",
++      "tagline": "Parse configuration and access nested fields.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/json/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-structured-output",
++      "title": "Structured output validation",
++      "tagline": "Validate structured data before consuming it. This validates local values; it does not call a model.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/structured-output/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-request-hash",
++      "title": "Deterministic AI request IDs",
++      "tagline": "Compare request identities without credentials affecting the hash.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/request-hash/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-replay",
++      "title": "AI calls and replay",
++      "tagline": "Replay a recorded model response offline.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/replay/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-streaming",
++      "title": "AI streaming",
++      "tagline": "Consume streamed deltas through a callback using an offline cassette.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/streaming/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-capabilities",
++      "title": "AI capability restrictions",
++      "tagline": "Use replay with the AI egress example; pair it with the documented capability policy.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/capabilities/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-tests",
++      "title": "Tests",
++      "tagline": "Run assertions using the built-in test runner.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/tests/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-modules",
++      "title": "Modules and imports",
++      "tagline": "Inspect dotted imports and named imports.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/modules/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-files",
++      "title": "File operations",
++      "tagline": "Read the upstream filesystem demonstration.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/files/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "examples-http",
++      "title": "HTTP and networking",
++      "tagline": "Inspect a local HTTP server.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/http/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "language",
++      "title": "Learn Kujo",
++      "tagline": "Install, check and run your first Kujo program.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/language/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "development-workflow",
++      "title": "A composable development workflow",
++      "tagline": "Define scope, inspect context, test changes and review evidence.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/development-workflow/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
++    },
++    {
++      "id": "performance",
++      "title": "Performance evidence",
++      "tagline": "Reproduce measurements and understand their limits.",
++      "file": "social-card.txt",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/performance/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+     }
+   ]
+ }
+diff --git a/package.json b/package.json
+index fdb1192..438cc56 100644
+--- a/package.json
++++ b/package.json
+@@ -12,7 +12,11 @@
+     "social:verify": "node scripts/verify-social-cards.mjs",
+     "compare:generate": "node scripts/render-comparisons.mjs",
+     "compare:check": "node scripts/render-comparisons.mjs --check",
+-    "compare:verify": "python3 scripts/verify-comparisons.py"
++    "compare:verify": "python3 scripts/verify-comparisons.py",
++    "examples:generate": "node scripts/render-language-examples.mjs",
++    "examples:check": "node scripts/render-language-examples.mjs --check",
++    "examples:verify": "python3 scripts/verify-language-examples.py",
++    "language:verify": "python3 scripts/verify-language-site.py"
+   },
+   "dependencies": {
+     "scramble-decode": "0.1.0"
+diff --git a/scripts/verify-site-contract.sh b/scripts/verify-site-contract.sh
+index 8b59afe..4bc515f 100755
+--- a/scripts/verify-site-contract.sh
++++ b/scripts/verify-site-contract.sh
+@@ -93,7 +93,7 @@ require_text "${output_dir}/index.html" 'Trust at the speed of AI'
+ require_text "${output_dir}/index.html" '<title>Kujo — AI-Native Programming Language | Kujolang.ai</title>'
+ require_text "${output_dir}/index.html" '"name":"Kujo","alternateName":["Kujolang.ai","Kujolang"]'
+ require_text "${output_dir}/index.html" '<meta name="author" content="Kujo Team">'
+-require_text "${output_dir}/index.html" 'Kujo is an AI-native programming language and toolchain built to make agent-driven software development clear, controlled, and verifiable.'
++require_text "${output_dir}/index.html" 'Kujo is an AI-native programming language for local-first automation and practical application scripting.'
+ require_text "${output_dir}/index.html" 'data-hero-video-open aria-haspopup="dialog"'
+ require_text "${output_dir}/index.html" '<span>View video</span>'
+ require_text "${output_dir}/index.html" 'data-hero-video-modal hidden'
+@@ -137,17 +137,12 @@ require_text "${output_dir}/index.html" '<meta name="mobile-web-app-capable" con
+ require_text "${output_dir}/index.html" '<meta name="msapplication-TileImage" content="mstile-150x150.png">'
+ require_text "${output_dir}/ecosystem/shipcheck/index.html" 'href="../../favicon.svg?v=kujo-k-1"'
+ require_text "${output_dir}/ecosystem/shipcheck/index.html" 'href="../../site.webmanifest"'
+-require_text "${output_dir}/index.html" '>Home</a></li><li class="nav-dropdown" data-nav-dropdown>'
+-require_text "${output_dir}/index.html" '<a href="/ecosystem/" class="text-primary hover:underline">Ecosystem</a>'
+-require_text "${output_dir}/index.html" '<a href="/ecosystem/primitives/">Primitives</a>'
+-require_text "${output_dir}/index.html" '<a href="/ecosystem/tooling/">Tooling</a>'
+-require_text "${output_dir}/index.html" '<a href="/ecosystem/showcase/">Showcase</a>'
+-require_text "${output_dir}/index.html" '<a href="/ecosystem/skills/">Skills</a>'
+-require_text "${output_dir}/index.html" '<a href="/ecosystem/workflows/">Workflows</a>'
+-require_text "${output_dir}/index.html" '<a href="https://agents.kujolang.ai" target="_blank" rel="noopener">Agents'
+-require_text "${output_dir}/index.html" '>Ethos</a></li><li><a href="/writing/"'
+-require_text "${output_dir}/index.html" '>Writing</a></li><li><a href="https://docs.kujolang.ai"'
+-require_text "${output_dir}/index.html" '>Docs</a></li><li><a href="/contact/"'
++# Language-first navigation replaces the former ecosystem dropdown.
++for label in Language Examples Ecosystem Docs Writing GitHub; do
++ require_text "${output_dir}/index.html" ">${label}</a>"
++done
++require_text "${output_dir}/index.html" 'href="/language/"'
++require_text "${output_dir}/index.html" 'href="/examples/"'
+ require_text "${output_dir}/index.html" 'aria-label="Menu, open navigation"'
+ require_text "${output_dir}/index.html" '<nav aria-label="Footer"><a href="compare/">Compare</a><a href="ecosystem/">Ecosystem</a>'
+ reject_text "${output_dir}/index.html" '<nav aria-label="Footer"><a href="index.html">Home</a>'
+@@ -463,6 +458,9 @@ if command -v rg >/dev/null 2>&1; then
+ 		--include='*.html' --include='*.md' --include='*.txt' \
+ 		"${existing_scan_paths[@]}" || true)
+ fi
++# A verified assertion intentionally compares to_upper("kujo") with "KUJO".
++# Preserve that executable source without treating its string literal as branding.
++obsolete_naming=$(printf '%s\n' "$obsolete_naming" | grep -v 'assert_equal(to_upper(' || true)
+ if [[ -n "${obsolete_naming}" ]]; then
+ 	fail "found obsolete product naming or removed ecosystem entries"
+ fi
+diff --git a/templates/page-ecosystem.html b/templates/page-ecosystem.html
+index 152698b..cf9179a 100644
+--- a/templates/page-ecosystem.html
++++ b/templates/page-ecosystem.html
+@@ -4,6 +4,7 @@
+ 		<div class="page-hero__wash" aria-hidden="true"></div>
+ 		<div class="sk-hero__inner"><div class="page-hero__copy"><h1>{{title}}</h1><p>Explore Kujo by layer, scan a focused selection in each carousel, then open the dedicated catalog for every released project.</p></div></div>
+ 	</header>
++	<section class="language-section" aria-labelledby="ecosystem-start"><h2 id="ecosystem-start">Choose a starting point</h2><div class="language-grid"><article><h3>For Kujo programs</h3><p>Start with the <a href="/language/">language runtime</a>, then add <a href="/ecosystem/agents-sdk/">Agents SDK</a>, <a href="/ecosystem/ai-sdk/">AI SDK</a> or <a href="/ecosystem/rag/">RAG</a> for application-specific behavior. SDK programs run in Kujo; packages are installed and versioned separately.</p></article><article><h3>For an existing repository</h3><p><a href="/ecosystem/scout/">Scout</a> and <a href="/ecosystem/scent/">Scent</a> inspect context; <a href="/ecosystem/patchbrief/">PatchBrief</a> and <a href="/ecosystem/changebucket/">ChangeBucket</a> inspect Git changes; <a href="/ecosystem/shipcheck/">ShipCheck</a> checks release readiness. These repository-oriented workflows do not require rewriting your application in Kujo.</p></article></div><p><a href="/development-workflow/">Follow the composable workflow exercise</a>. Each tool's page links to its prerequisites, installation and operating boundaries.</p></section>
+ 	<section class="ecosystem-section section-shell" aria-labelledby="primitives-title" data-carousel>
+ 		<div class="ecosystem-section-heading"><div class="section-heading sk-heading"><p>01 / Foundation</p><h2 id="primitives-title"><a class="ecosystem-section-title-link" href="/ecosystem/primitives/">Primitives</a></h2><span>The language, package foundation, runtimes, SDKs, and reusable building blocks for reliable AI-native software.</span></div><div class="sk-carousel__controls ecosystem-carousel-controls"><button class="sk-button" data-variant="secondary" type="button" data-carousel-previous aria-label="Previous primitive projects">&lt;</button><button class="sk-button" data-variant="secondary" type="button" data-carousel-next aria-label="Next primitive projects">&gt;</button></div></div>
+ 		<div class="sk-carousel ecosystem-carousel" aria-label="Primitive projects"><ul class="sk-carousel__track" data-carousel-track tabindex="0">{{primitive_cards}}</ul></div>
+diff --git a/templates/page-home.html b/templates/page-home.html
+index ee284e9..fdebce0 100644
+--- a/templates/page-home.html
++++ b/templates/page-home.html
+@@ -1,18 +1,121 @@
+-<main id="main-content">
+-	<section class="sk-hero home-hero" aria-labelledby="home-hero-title">
+-		<div class="home-hero__media" aria-hidden="true"><img src="/assets/images/home-agent-workflow.webp" alt="" width="1672" height="941" fetchpriority="high"></div>
+-		<div class="home-hero__wash" aria-hidden="true"></div>
+-		<div class="sk-hero__inner">
+-			<div class="home-hero__copy">
+-				<h1 id="home-hero-title">Trust at the speed of AI</h1>
+-				<p class="home-hero__body">Kujo is an AI-native programming language and toolchain built to make agent-driven software development clear, controlled, and verifiable.</p>
+-				<div class="sk-hero__actions">
+-					<a class="sk-button" href="/ecosystem/">Explore ecosystem</a>
+-					<button class="sk-button home-video-button" data-variant="secondary" type="button" data-hero-video-open aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7 8 5-8 5z"/></svg><span>View video</span></button>
+-				</div>
+-			</div>
+-		</div>
+-	</section>
++<main id="main-content" class="language-home">
++<section class="sk-hero home-hero" aria-labelledby="home-hero-title">
++<div class="home-hero__media" aria-hidden="true"><img src="/assets/images/home-agent-workflow.webp" alt="" width="1672" height="941" fetchpriority="high"></div><div class="home-hero__wash" aria-hidden="true"></div>
++<div class="sk-hero__inner"><div class="home-hero__copy"><p class="eyebrow">The Kujo programming language</p><h1 id="home-hero-title">Trust at the speed of AI.</h1><p class="home-hero__body">Kujo is an AI-native programming language for local-first automation and practical application scripting. Its Rust-based runtime executes code on a bytecode VM, with checking, testing and editor tools in the CLI.</p><div class="sk-hero__actions"><a class="sk-button" href="/language/">Get Started</a><a class="sk-button" data-variant="secondary" href="/examples/">View Examples</a></div><p><a href="https://docs.kujolang.ai/">Documentation</a> · <a href="https://github.com/kujolang/kujo">GitHub</a></p></div></div></section>
++<!-- LANGUAGE EXPLORER START -->
++<section class="language-section" aria-labelledby="code-title" data-code-explorer><p class="eyebrow">Read it. Run it. Change it.</p><h2 id="code-title">A feel for the language</h2><div class="example-selector" hidden><label for="home-example">Choose an example</label><select id="home-example"><option value="hello-world">Hello World</option><option value="functions">Functions and operators</option><option value="collections">Collections</option><option value="async">Async tasks</option><option value="request-hash">Deterministic AI request IDs</option><option value="replay">AI calls and replay</option></select></div><article class="example-panel" id="example-hello-world" data-example="hello-world" data-category="Basics"><p class="eyebrow">Basics · Executed offline · Kujo 1.9.0</p><h3>Hello World</h3><p>Print your first message.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
++<span class="syntax-token"># Kujo Kujo!</span>
++
++print(<span class="syntax-token">&quot;Kujo Kujo!&quot;</span>)
++</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/hello-world.kujo" download>hello-world.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run hello-world.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>Kujo Kujo!
++</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/00-hello.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/hello-world/">Full example</a></p></article>
++<article class="example-panel" id="example-functions" data-example="functions" data-category="Basics"><p class="eyebrow">Basics · Executed offline · Kujo 1.9.0</p><h3>Functions and operators</h3><p>Sum a collection with a reusable function.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
++<span class="syntax-token"># total: 42</span>
++
++<span class="syntax-token">func</span> total(values) {
++    <span class="syntax-token">mut</span> sum := 0
++    <span class="syntax-token">for</span> value <span class="syntax-token">in</span> values {
++        sum = sum + value
++    }
++    <span class="syntax-token">return</span> sum
++}
++
++<span class="syntax-token">let</span> scores := [8, 13, 21]
++print(<span class="syntax-token">&quot;total: &quot;</span> + to_string(total(scores)))
++</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/functions.kujo" download>functions.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run functions.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>total: 42
++</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/02-functions.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/functions/">Full example</a></p></article>
++<article class="example-panel" id="example-collections" data-example="collections" data-category="Data"><p class="eyebrow">Data · Executed offline · Kujo 1.9.0</p><h3>Collections</h3><p>Combine arrays and dictionaries into a report.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
++<span class="syntax-token"># build total: 42</span>
++
++<span class="syntax-token">let</span> scores := [8, 13, 21]
++<span class="syntax-token">let</span> report := {<span class="syntax-token">&quot;name&quot;</span>: <span class="syntax-token">&quot;build&quot;</span>, <span class="syntax-token">&quot;total&quot;</span>: scores[0] + scores[1] + scores[2]}
++
++print(report[<span class="syntax-token">&quot;name&quot;</span>] + <span class="syntax-token">&quot; total: &quot;</span> + to_string(report[<span class="syntax-token">&quot;total&quot;</span>]))
++</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/collections.kujo" download>collections.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run collections.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>build total: 42
++</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/04-data.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/collections/">Full example</a></p></article>
++<article class="example-panel" id="example-async" data-example="async" data-category="Concurrency"><p class="eyebrow">Concurrency · Executed offline · Kujo 1.9.0</p><h3>Async tasks</h3><p>Await a value produced by an async function.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">// Simple async test</span>
++
++<span class="syntax-token">async</span> <span class="syntax-token">func</span> get_value() {
++    <span class="syntax-token">return</span> 42;
++}
++
++<span class="syntax-token">let</span> p = get_value();
++println(<span class="syntax-token">&quot;Promise type: &quot;</span>, type(p));
++<span class="syntax-token">let</span> result = <span class="syntax-token">await</span> p;
++println(<span class="syntax-token">&quot;Result: &quot;</span>, result);
++</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/async.kujo" download>async.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run <span class="syntax-token">async</span>.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>Promise type:  promise
++Result:  42
++</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/simple_async_test.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/async/">Full example</a></p></article>
++<article class="example-panel" id="example-request-hash" data-example="request-hash" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline · Kujo 1.9.0</p><h3>Deterministic AI request IDs</h3><p>Compare request identities without credentials affecting the hash.</p><p class="example-note">The credential strings are dummy values. This example makes no network request.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
++    print(label + <span class="syntax-token">&quot;: &quot;</span> + value)
++}
++
++<span class="syntax-token">let</span> options_a := {
++    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;https://api.example.test/v1/chat/completions&quot;</span>,
++    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-demo&quot;</span>,
++    <span class="syntax-token">&quot;api_key&quot;</span>: <span class="syntax-token">&quot;credential-one&quot;</span>,
++    <span class="syntax-token">&quot;headers&quot;</span>: {
++        <span class="syntax-token">&quot;Authorization&quot;</span>: <span class="syntax-token">&quot;Bearer credential-one&quot;</span>,
++        <span class="syntax-token">&quot;X-App&quot;</span>: <span class="syntax-token">&quot;kujo&quot;</span>
++    },
++    <span class="syntax-token">&quot;body&quot;</span>: {
++        <span class="syntax-token">&quot;temperature&quot;</span>: 0,
++        <span class="syntax-token">&quot;max_tokens&quot;</span>: 32
++    }
++}
++
++<span class="syntax-token">let</span> options_b := {
++    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;https://api.example.test/v1/chat/completions&quot;</span>,
++    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-demo&quot;</span>,
++    <span class="syntax-token">&quot;api_key&quot;</span>: <span class="syntax-token">&quot;credential-two&quot;</span>,
++    <span class="syntax-token">&quot;headers&quot;</span>: {
++        <span class="syntax-token">&quot;Authorization&quot;</span>: <span class="syntax-token">&quot;Bearer credential-two&quot;</span>,
++        <span class="syntax-token">&quot;X-App&quot;</span>: <span class="syntax-token">&quot;kujo&quot;</span>
++    },
++    <span class="syntax-token">&quot;body&quot;</span>: {
++        <span class="syntax-token">&quot;temperature&quot;</span>: 0,
++        <span class="syntax-token">&quot;max_tokens&quot;</span>: 32
++    }
++}
++
++<span class="syntax-token">let</span> hash_a := ai_request_hash(<span class="syntax-token">&quot;Summarize Kujo&quot;</span>, options_a)
++<span class="syntax-token">let</span> hash_b := ai_request_hash(<span class="syntax-token">&quot;Summarize Kujo&quot;</span>, options_b)
++
++kv(<span class="syntax-token">&quot;hash_length&quot;</span>, to_string(len(hash_a)))
++kv(<span class="syntax-token">&quot;same_without_credentials&quot;</span>, to_string(hash_a == hash_b))
++kv(<span class="syntax-token">&quot;hash&quot;</span>, hash_a)
++</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/request-hash.kujo" download>request-hash.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run request-hash.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>hash_length: 64
++same_without_credentials: true
++hash: a6244047c108dcf58a952ed0a6c70dc04d13ee9aa9dba08eeb623f241fbd37ce
++</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_request_hash.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/request-hash/">Full example</a></p></article>
++<article class="example-panel" id="example-replay" data-example="replay" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline · Kujo 1.9.0</p><h3>AI calls and replay</h3><p>Replay a recorded model response offline.</p><p class="example-note">Run from the pinned Kujo repository root: the cassette fixture directory is required.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
++    print(label + <span class="syntax-token">&quot;: &quot;</span> + value)
++}
++
++<span class="syntax-token">let</span> options := {
++    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;http://127.0.0.1:1/v1/chat/completions&quot;</span>,
++    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-replay&quot;</span>,
++    <span class="syntax-token">&quot;cassette&quot;</span>: {
++        <span class="syntax-token">&quot;mode&quot;</span>: <span class="syntax-token">&quot;replay&quot;</span>,
++        <span class="syntax-token">&quot;dir&quot;</span>: <span class="syntax-token">&quot;tests/fixtures/ai_cassettes&quot;</span>
++    }
++}
++
++<span class="syntax-token">let</span> result := ai_chat(<span class="syntax-token">&quot;Hello model&quot;</span>, options)
++
++kv(<span class="syntax-token">&quot;replay_result&quot;</span>, to_string(result))
++</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/replay.kujo" download>replay.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run replay.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>replay_result: Ok({&quot;finish_reason&quot;: tool_calls, &quot;headers&quot;: {&quot;content-type&quot;: application/json}, &quot;json&quot;: {&quot;choices&quot;: [{&quot;finish_reason&quot;: tool_calls, &quot;message&quot;: {&quot;content&quot;: hello from cassette, &quot;tool_calls&quot;: [{&quot;function&quot;: {&quot;arguments&quot;: {&quot;query&quot;:&quot;kujo&quot;}, &quot;name&quot;: lookup}, &quot;id&quot;: call_1}]}}], &quot;usage&quot;: {&quot;completion_tokens&quot;: 5, &quot;prompt_tokens&quot;: 7, &quot;total_tokens&quot;: 12}}, &quot;message&quot;: hello from cassette, &quot;model&quot;: gpt-replay, &quot;provider&quot;: , &quot;status&quot;: 200, &quot;text&quot;: {&quot;choices&quot;:[{&quot;finish_reason&quot;:&quot;tool_calls&quot;,&quot;message&quot;:{&quot;content&quot;:&quot;hello from cassette&quot;,&quot;tool_calls&quot;:[{&quot;id&quot;:&quot;call_1&quot;,&quot;function&quot;:{&quot;name&quot;:&quot;lookup&quot;,&quot;arguments&quot;:&quot;{\&quot;query\&quot;:\&quot;kujo\&quot;}&quot;}}]}}],&quot;usage&quot;:{&quot;prompt_tokens&quot;:7,&quot;completion_tokens&quot;:5,&quot;total_tokens&quot;:12}}, &quot;tool_calls&quot;: [{&quot;arguments_json&quot;: {&quot;query&quot;:&quot;kujo&quot;}, &quot;id&quot;: call_1, &quot;name&quot;: lookup}], &quot;usage&quot;: {&quot;completion_tokens&quot;: 5, &quot;prompt_tokens&quot;: 7, &quot;total_tokens&quot;: 12}})
++</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_replay_cassette.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/replay/">Full example</a></p></article><a class="sk-button" href="/examples/">Explore all examples</a></section>
++<!-- LANGUAGE EXPLORER END -->
++<section class="language-section"><p class="eyebrow">One language, practical building blocks</p><h2>Build scripts. Services. AI workflows.</h2><div class="language-grid"><article><h3>Automate local work</h3><p>Work with files, processes, JSON and collections. Write small scripts with functions, structs and explicit error handling.</p><a href="/examples/files/">Explore file operations</a></article><article><h3>Build applications</h3><p>Use HTTP and networking helpers, modules, async tasks and generators. Check the documented runtime limits before choosing a deployment.</p><a href="/examples/http/">Inspect an HTTP server</a></article><article><h3>Make AI work inspectable</h3><p>Identify requests, replay recorded responses and validate structured data. Add packages when you need agent orchestration.</p><a href="/examples/replay/">Run an offline AI call</a></article></div></section>
++<section class="language-section"><p class="eyebrow">AI-native, with concrete mechanisms</p><h2>Repeat the request. Inspect the result.</h2><div class="language-grid"><article><h3>Stable request identity</h3><p><code>ai_request_hash</code> derives a deterministic request identifier while excluding credentials. Compare requests without sending them to a model.</p><a href="/examples/request-hash/">Run the hash example</a></article><article><h3>Offline model replay</h3><p><code>ai_chat</code> can read recorded cassettes. Reproduce a response in tests without a live provider, then validate its data with <code>json_schema_validate</code>.</p><a href="/examples/replay/">Replay a response</a> · <a href="/examples/structured-output/">Validate a schema</a></article></div><p>Conventional languages already offer async functions, HTTP clients and testing libraries. Kujo adds AI request identity, replay, streaming callbacks and capability controls at the runtime level. These mechanisms support review; they do not guarantee correctness or isolation.</p><p>Choose Kujo for scripts and tools that benefit from those primitives. Keep Python or TypeScript when existing libraries, deployment requirements or team experience matter more. Independent Kujo tools can still inspect and evaluate those repositories.</p><details><summary>What belongs to which layer?</summary><ul><li><strong>Language:</strong> functions, modules, collections, structs, enums, matching, async and generators.</li><li><strong>Rust VM/runtime:</strong> execution, host helpers, AI primitives and capability-aware access.</li><li><strong>Core CLI:</strong> check, format, lint, tests, LSP and documentation generation.</li><li><strong>Separate packages:</strong> Kennel, Agents SDK, AI SDK and workflow tools have their own installation and versions.</li><li><strong>External systems:</strong> live model providers require configuration and credentials; optional hosts and integrations are not bundled language features.</li></ul></details></section>
++<section class="language-section" id="get-started"><p class="eyebrow">Your first successful program</p><h2>Install. Check. Run.</h2><p>For a runtime-only install on supported macOS, Linux and Windows systems with Node.js 18 or newer:</p><div class="sample-code"><pre tabindex="0"><code>npm install --global @kujolang/kujo-runtime@1.9.0
++kujo --version</code></pre><button class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save <code>print("Hello, Kujo!")</code> in <code>hello.kujo</code>:</p><div class="sample-code"><pre tabindex="0"><code>kujo check hello.kujo
++kujo run hello.kujo</code></pre><button class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Expected output: <code>Hello, Kujo!</code>. <a href="/language/">Native installers, Windows guidance and troubleshooting</a>.</p></section>
++<section class="language-section"><p class="eyebrow">Ecosystem · installed separately</p><h2>Start with the job you need done.</h2><p>These are independent projects. Tools that inspect repositories or run configured commands can support existing languages; SDK code itself runs in Kujo.</p><div class="language-grid"><article><h3>Build an AI agent</h3><p>Use Agents SDK with AI SDK for Kujo agent programs.</p><a href="/ecosystem/agents-sdk/">Agents SDK</a></article><article><h3>Coordinate multi-step work</h3><p>Define repeatable work and inspect its state.</p><a href="/ecosystem/dispatch/">Dispatch</a></article><article><h3>Understand a repository</h3><p>Inspect existing code and assemble context for a change.</p><a href="/ecosystem/scout/">Scout</a> · <a href="/ecosystem/scent/">Scent</a></article><article><h3>Evaluate generated work</h3><p>Run configured checks and browser assertions for your project.</p><a href="/ecosystem/eval/">Eval</a> · <a href="/ecosystem/lens/">Lens</a></article><article><h3>Review a change</h3><p>Turn Git diffs and footprint into inspectable evidence.</p><a href="/ecosystem/patchbrief/">PatchBrief</a> · <a href="/ecosystem/changebucket/">ChangeBucket</a></article><article><h3>Prepare a release</h3><p>Evaluate repository readiness against explicit checks.</p><a href="/ecosystem/shipcheck/">ShipCheck</a></article></div><p><a href="/ecosystem/">Browse the full ecosystem</a></p><h3>From request to reviewable change</h3><ol class="workflow-stages"><li>Define scope</li><li>Retrieve context</li><li>Implement in a chosen environment</li><li>Run tests</li><li>Inspect change evidence</li><li>Assess readiness</li></ol><p>Composable stages, not an automatically integrated pipeline. <a href="/development-workflow/">Follow a reproducible repository workflow</a>.</p></section>
++<section class="language-section"><p class="eyebrow">Evidence over promises</p><h2>Inspect what people build.</h2><div class="language-grid"><article><h3>This website</h3><p>Kujo SSG generates static HTML; SiteKit supplies the visual system.</p><a href="https://github.com/kujolang/kujolang.ai/blob/main/build.kujo">Inspect the build source</a></article><article><h3>Applications and services</h3><p>Explore the Kujo-backed CMS, CRUD API and RAG showcases with their runtime and integration boundaries.</p><a href="/ecosystem/cms/">CMS</a> · <a href="/ecosystem/crud-api/">CRUD API</a> · <a href="/ecosystem/rag/">RAG</a></article><article><h3>Performance and comparisons</h3><p>Separate VM execution, startup and application workloads. Cross-language results remain unmeasured unless a reproducible report says otherwise.</p><a href="/performance/">Measurement methodology</a> · <a href="/compare/">Compare language approaches</a></article></div></section>
++<section class="language-section"><h2>Start where you are.</h2><div class="language-grid"><article><h3>Learn the language</h3><p>Prerequisite: a terminal and a supported runtime. Scope: one script, then functions and data. First action: install Kujo and run Hello World.</p><a href="/language/">Start the language guide</a></article><article><h3>Build AI agents</h3><p>Prerequisite: Kujo and the SDK dependencies. Scope: a small agent with explicit tools. First action: follow the Agents SDK installation and offline examples.</p><a href="/ecosystem/agents-sdk/">Start with Agents SDK</a></article><article><h3>Improve an existing workflow</h3><p>Prerequisite: a Git repository and its test commands. Scope: inspect a change and record evidence. First action: run the local workflow exercise.</p><a href="/development-workflow/">Keep your language, improve the workflow</a></article></div></section>
++<section class="language-section language-final"><h2>Make your first program run.</h2><a class="sk-button" href="/language/">Get Started</a><button class="sk-button home-video-button" data-variant="secondary" type="button" data-hero-video-open aria-haspopup="dialog"><span>View video</span></button></section>
+ 	<div class="hero-video-modal" data-hero-video-modal hidden>
+ 		<div class="hero-video-modal__backdrop" data-hero-video-close></div>
+ 		<section class="hero-video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="hero-video-title" tabindex="-1">

@@ -1,0 +1,10 @@
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 social:cards
+> bash scripts/render-social-cards.sh
+
+ok: /Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/howl-social.json is valid (281 card(s))
+rendered 281 card(s) -> /Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/.howl-social-render/ (281 files)
+Rasterized 281 Howl SVG cards.
+Rendered provider social promo with 25 official local logos.
+Rendered 281 social cards to /Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social

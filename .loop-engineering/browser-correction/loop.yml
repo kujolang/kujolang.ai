@@ -1,0 +1,17 @@
+objective: "Verify native-select keyboard correction and retain all required full-run acceptance receipts"
+max_iterations: 1
+max_no_progress: 1
+max_consecutive_failures: 1
+eval_gates:
+  - id: retained_full_run_gates
+    command: "python3 scripts/verify-evaluation-receipts.py"
+    required: true
+  - id: browser
+    command: "node scripts/test-language-browser.cjs"
+    required: true
+  - id: diff
+    command: "git diff --check"
+    required: true
+commit:
+  enabled: false
+  push: false

@@ -1,0 +1,121 @@
+╔════════════════════════════════════════════════╗
+║        Kujo Static Site Generator              ║
+╚════════════════════════════════════════════════╝
+
+Loaded configuration from kujo-ssg.yml
+Build complete
+  Posts generated: 0
+  Pages generated: 3
+  Output directory: output
+  Build time: 12.923947206s
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 images:responsive
+> node scripts/generate-responsive-images.mjs
+
+Generated 1167 responsive images at 640/960/1280px; skipped 0.
+Responsive image contract passed for 556 rendered images.
+FAIL: expected 281 social cards, found 256
+FAIL: examples: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/assets/images/social/examples.jpg'
+FAIL: /examples/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/index.html'
+FAIL: examples-hello-world: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-hello-world.jpg'
+FAIL: /examples/hello-world/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/hello-world/index.html'
+FAIL: examples-variables: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/assets/images/social/examples-variables.jpg'
+FAIL: /examples/variables/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/variables/index.html'
+FAIL: examples-functions: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-functions.jpg'
+FAIL: /examples/functions/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/functions/index.html'
+FAIL: examples-control-flow: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-control-flow.jpg'
+FAIL: /examples/control-flow/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/control-flow/index.html'
+FAIL: examples-collections: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-collections.jpg'
+FAIL: /examples/collections/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/collections/index.html'
+FAIL: examples-structs: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-structs.jpg'
+FAIL: /examples/structs/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/structs/index.html'
+FAIL: examples-pattern-matching: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-pattern-matching.jpg'
+FAIL: /examples/pattern-matching/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/pattern-matching/index.html'
+FAIL: examples-errors: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-errors.jpg'
+FAIL: /examples/errors/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/errors/index.html'
+FAIL: examples-async: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-async.jpg'
+FAIL: /examples/async/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/async/index.html'
+FAIL: examples-channels: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-channels.jpg'
+FAIL: /examples/channels/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/channels/index.html'
+FAIL: examples-generators: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-generators.jpg'
+FAIL: /examples/generators/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/generators/index.html'
+FAIL: examples-json: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-json.jpg'
+FAIL: /examples/json/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/json/index.html'
+FAIL: examples-structured-output: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-structured-output.jpg'
+FAIL: /examples/structured-output/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/structured-output/index.html'
+FAIL: examples-request-hash: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-request-hash.jpg'
+FAIL: /examples/request-hash/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/request-hash/index.html'
+FAIL: examples-replay: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-replay.jpg'
+FAIL: /examples/replay/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/replay/index.html'
+FAIL: examples-streaming: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-streaming.jpg'
+FAIL: /examples/streaming/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/streaming/index.html'
+FAIL: examples-capabilities: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-capabilities.jpg'
+FAIL: /examples/capabilities/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/capabilities/index.html'
+FAIL: examples-tests: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-tests.jpg'
+FAIL: /examples/tests/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/tests/index.html'
+FAIL: examples-modules: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-modules.jpg'
+FAIL: /examples/modules/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/modules/index.html'
+FAIL: examples-files: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-files.jpg'
+FAIL: /examples/files/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/files/index.html'
+FAIL: examples-http: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/examples-http.jpg'
+FAIL: /examples/http/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/examples/http/index.html'
+FAIL: language: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/language.jpg'
+FAIL: /language/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/language/index.html'
+FAIL: development-workflow: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/development-workflow.jpg'
+FAIL: /development-workflow/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/development-workflow/index.html'
+FAIL: performance: image verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/assets/images/social/performance.jpg'
+FAIL: /performance/: metadata verification failed: ENOENT: no such file or directory, open '/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/output/performance/index.html'
+FAIL: /examples/: Howl card has no generated page
+FAIL: /examples/hello-world/: Howl card has no generated page
+FAIL: /examples/variables/: Howl card has no generated page
+FAIL: /examples/functions/: Howl card has no generated page
+FAIL: /examples/control-flow/: Howl card has no generated page
+FAIL: /examples/collections/: Howl card has no generated page
+FAIL: /examples/structs/: Howl card has no generated page
+FAIL: /examples/pattern-matching/: Howl card has no generated page
+FAIL: /examples/errors/: Howl card has no generated page
+FAIL: /examples/async/: Howl card has no generated page
+FAIL: /examples/channels/: Howl card has no generated page
+FAIL: /examples/generators/: Howl card has no generated page
+FAIL: /examples/json/: Howl card has no generated page
+FAIL: /examples/structured-output/: Howl card has no generated page
+FAIL: /examples/request-hash/: Howl card has no generated page
+FAIL: /examples/replay/: Howl card has no generated page
+FAIL: /examples/streaming/: Howl card has no generated page
+FAIL: /examples/capabilities/: Howl card has no generated page
+FAIL: /examples/tests/: Howl card has no generated page
+FAIL: /examples/modules/: Howl card has no generated page
+FAIL: /examples/files/: Howl card has no generated page
+FAIL: /examples/http/: Howl card has no generated page
+FAIL: /language/: Howl card has no generated page
+FAIL: /development-workflow/: Howl card has no generated page
+FAIL: /performance/: Howl card has no generated page
+FAIL: examples: manifest card has no social image
+FAIL: examples-hello-world: manifest card has no social image
+FAIL: examples-variables: manifest card has no social image
+FAIL: examples-functions: manifest card has no social image
+FAIL: examples-control-flow: manifest card has no social image
+FAIL: examples-collections: manifest card has no social image
+FAIL: examples-structs: manifest card has no social image
+FAIL: examples-pattern-matching: manifest card has no social image
+FAIL: examples-errors: manifest card has no social image
+FAIL: examples-async: manifest card has no social image
+FAIL: examples-channels: manifest card has no social image
+FAIL: examples-generators: manifest card has no social image
+FAIL: examples-json: manifest card has no social image
+FAIL: examples-structured-output: manifest card has no social image
+FAIL: examples-request-hash: manifest card has no social image
+FAIL: examples-replay: manifest card has no social image
+FAIL: examples-streaming: manifest card has no social image
+FAIL: examples-capabilities: manifest card has no social image
+FAIL: examples-tests: manifest card has no social image
+FAIL: examples-modules: manifest card has no social image
+FAIL: examples-files: manifest card has no social image
+FAIL: examples-http: manifest card has no social image
+FAIL: language: manifest card has no social image
+FAIL: development-workflow: manifest card has no social image
+FAIL: performance: manifest card has no social image
+Social card verification failed: 100 issue(s)
+FAIL: exhaustive social card verification failed
+scripts/verify-site-contract.sh: line 405: syntax error near unexpected token `('

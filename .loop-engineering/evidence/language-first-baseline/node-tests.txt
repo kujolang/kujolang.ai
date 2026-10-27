@@ -1,0 +1,39 @@
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 test
+> node --test tests/*.test.mjs
+
+✔ published projections match the validated catalog (79.223799ms)
+✔ reject unknown status (4.443073ms)
+✔ reject missing source (1.482865ms)
+✔ reject broken source (2.595298ms)
+✔ reject unknown Kujo fact (1.240317ms)
+✔ reject broken related page (1.730217ms)
+✔ reject path traversal (2.023673ms)
+✔ reject social card path traversal (1.637996ms)
+✔ reject missing competitor recommendation (1.51749ms)
+✔ reject missing identity provenance (2.257422ms)
+✔ reject duplicate route (2.47609ms)
+✔ reject invalid review date (2.175581ms)
+✔ hub rejects a stale fact reference before publication (3.878009ms)
+✔ hub rejects a missing language cell rather than shifting columns (2.566716ms)
+✔ direct comparisons reject architecture claims without valid evidence (2.102254ms)
+✔ direct comparisons reject incomplete decision rows (1.950065ms)
+✔ each technical comparison publishes its evaluation plan in HTML and Markdown (6.210807ms)
+✔ guides reject unsourced architecture cards and matrix claims (5.996275ms)
+✔ guides reject incomplete examples instead of shifting table columns (1.936931ms)
+✔ every guide preserves its detailed criteria and examples in HTML and Markdown (4.566814ms)
+✔ boundary table rejects missing evidence and malformed rows (1.747335ms)
+✔ boundary results survive both projections and HTML escapes fixture text (12.819359ms)
+✔ BAML hub execution points to runtime evidence, not compiler diagnostics (1.663823ms)
+✔ provider registry contains each requested integration exactly once (5.957437ms)
+✔ every registered local logo exists (67.513597ms)
+✔ creates deterministic responsive WebP variants without enlarging small images (576.317496ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 958.867437

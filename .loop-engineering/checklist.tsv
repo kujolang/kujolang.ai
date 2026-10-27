@@ -1,0 +1,16 @@
+line	status	text	evidence
+3	already-done	Discovery and baseline with preserved prior evidence	.loop-engineering/checklist-language-first.md:3
+4	already-done	Language-first homepage hierarchy	.loop-engineering/checklist-language-first.md:4
+5	already-done	Progressive code explorer	.loop-engineering/checklist-language-first.md:5
+6	already-done	Pinned and classified examples collection	.loop-engineering/checklist-language-first.md:6
+7	already-done	Installation and first program	.loop-engineering/checklist-language-first.md:7
+8	already-done	AI runtime examples and layer boundaries	.loop-engineering/checklist-language-first.md:8
+9	already-done	Goal-based ecosystem discovery	.loop-engineering/checklist-language-first.md:9
+10	already-done	Composable workflow exercise	.loop-engineering/checklist-language-first.md:10
+11	already-done	Three onboarding paths	.loop-engineering/checklist-language-first.md:11
+12	already-done	Performance methodology and real showcases	.loop-engineering/checklist-language-first.md:12
+13	already-done	Navigation and route preservation	.loop-engineering/checklist-language-first.md:13
+14	already-done	Responsive and accessible browser verification	.loop-engineering/checklist-language-first.md:14
+15	already-done	Metadata sitemap and Howl cards	.loop-engineering/checklist-language-first.md:15
+16	already-done	Complete native loop evaluation	.loop-engineering/checklist-language-first.md:16
+17	needs-release-pipeline	README changelog commits and authorized Pages deployment	.loop-engineering/checklist-language-first.md:17

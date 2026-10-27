@@ -1,0 +1,14 @@
+
+## gate: retained_full_run_gates
+$ python3 scripts/verify-evaluation-receipts.py
+All 14 non-browser full-run gates passed; application source and generated artifact unchanged
+gate retained_full_run_gates: pass
+
+## gate: browser
+$ node scripts/test-language-browser.cjs
+Browser: selection, exact clipboard, filter, no-JS, mobile menu, responsive layouts and console passed
+gate browser: pass
+
+## gate: diff
+$ git diff --check
+gate diff: pass

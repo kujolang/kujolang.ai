@@ -2,30 +2,34 @@
 
 ## Verdict
 
-success
+partial — implementation and verification complete; GitHub Pages publication pending.
 
 ## Completed
 
-- configured loop run completed through iteration 1
+- Language-first homepage, 21 pinned examples, installation, AI mechanisms, goal-based ecosystem, workflow exercise and measured performance methodology.
+- Preserved existing routes; 281 Howl cards; README and CHANGELOG updated.
 
 ## Verification
 
-- passed: shell_syntax, howl_manifest, ssg_build_receipt, generated_output, site_contract, social_contract, publishing_house_counts, diff_check
-- blocked: none
-- failed: none
+- passed: all 14 full-run non-browser gates in evidence/language-first-run-03/001/eval.log.
+- passed: browser-correction native run, including unchanged application/output SHA-256 checks, keyboard selection, copy, filtering, no-JS, three viewports and six WCAG audits.
+- failed: none outstanding. The earlier keyboard harness failure is preserved in run-03.
+- blocked: none.
 
 ## Commits
 
-- Loop engineering: Publish the eight Kujo Workflows 0.3.0 Publishing House routes with verified content, dither heroes, Howl social cards, accurate catalog counts, and search-ready generated output.
+- c6de238 — pinned language examples.
+- 052be79 — language-first website journey.
+- Verification/CI evidence follows in its own commit.
 
 ## Remaining
 
-- none
+- Push and verify the authorized GitHub Pages deployment.
 
 ## External Blockers
 
-- none
+- none.
 
 ## Next Start
 
-- success: required gates passed
+- Follow the Deploy GitHub Pages run for the pushed main commit, verify production routes, and record publication in the release receipt and Strata handoff.

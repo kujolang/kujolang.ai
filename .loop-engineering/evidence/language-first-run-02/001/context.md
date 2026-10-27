@@ -1,0 +1,22 @@
+# Context
+
+- objective: Implement and verify the complete language-first website redesign
+- git_head: 5e10ff9
+- changed_files:
+  - .loop-engineering/SUMMARY.md
+  - .loop-engineering/evidence/strata-memory-request.md
+  - .loop-engineering/iterations/001/context.md
+  - .loop-engineering/iterations/001/diff.patch
+  - .loop-engineering/iterations/001/verdict.yml
+  - .loop-engineering/ledger.tsv
+  - .loop-engineering/loop.yml
+  - CHANGELOG.md
+  - README.md
+  - assets/css/style.css
+  - assets/js/site.js
+  - build.kujo
+  - howl-social.json
+  - package.json
+  - scripts/verify-site-contract.sh
+  - templates/page-home.html
+- checklist_classification: checklist.tsv

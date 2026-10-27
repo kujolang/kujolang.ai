@@ -93,7 +93,7 @@ require_text "${output_dir}/index.html" 'Trust at the speed of AI'
 require_text "${output_dir}/index.html" '<title>Kujo — AI-Native Programming Language | Kujolang.ai</title>'
 require_text "${output_dir}/index.html" '"name":"Kujo","alternateName":["Kujolang.ai","Kujolang"]'
 require_text "${output_dir}/index.html" '<meta name="author" content="Kujo Team">'
-require_text "${output_dir}/index.html" 'Kujo is an AI-native programming language and toolchain built to make agent-driven software development clear, controlled, and verifiable.'
+require_text "${output_dir}/index.html" 'Kujo is an AI-native programming language for local-first automation and practical application scripting.'
 require_text "${output_dir}/index.html" 'data-hero-video-open aria-haspopup="dialog"'
 require_text "${output_dir}/index.html" '<span>View video</span>'
 require_text "${output_dir}/index.html" 'data-hero-video-modal hidden'
@@ -137,17 +137,12 @@ require_text "${output_dir}/index.html" '<meta name="mobile-web-app-capable" con
 require_text "${output_dir}/index.html" '<meta name="msapplication-TileImage" content="mstile-150x150.png">'
 require_text "${output_dir}/ecosystem/shipcheck/index.html" 'href="../../favicon.svg?v=kujo-k-1"'
 require_text "${output_dir}/ecosystem/shipcheck/index.html" 'href="../../site.webmanifest"'
-require_text "${output_dir}/index.html" '>Home</a></li><li class="nav-dropdown" data-nav-dropdown>'
-require_text "${output_dir}/index.html" '<a href="/ecosystem/" class="text-primary hover:underline">Ecosystem</a>'
-require_text "${output_dir}/index.html" '<a href="/ecosystem/primitives/">Primitives</a>'
-require_text "${output_dir}/index.html" '<a href="/ecosystem/tooling/">Tooling</a>'
-require_text "${output_dir}/index.html" '<a href="/ecosystem/showcase/">Showcase</a>'
-require_text "${output_dir}/index.html" '<a href="/ecosystem/skills/">Skills</a>'
-require_text "${output_dir}/index.html" '<a href="/ecosystem/workflows/">Workflows</a>'
-require_text "${output_dir}/index.html" '<a href="https://agents.kujolang.ai" target="_blank" rel="noopener">Agents'
-require_text "${output_dir}/index.html" '>Ethos</a></li><li><a href="/writing/"'
-require_text "${output_dir}/index.html" '>Writing</a></li><li><a href="https://docs.kujolang.ai"'
-require_text "${output_dir}/index.html" '>Docs</a></li><li><a href="/contact/"'
+# Language-first navigation replaces the former ecosystem dropdown.
+for label in Language Examples Ecosystem Docs Writing GitHub; do
+ require_text "${output_dir}/index.html" ">${label}</a>"
+done
+require_text "${output_dir}/index.html" 'href="/language/"'
+require_text "${output_dir}/index.html" 'href="/examples/"'
 require_text "${output_dir}/index.html" 'aria-label="Menu, open navigation"'
 require_text "${output_dir}/index.html" '<nav aria-label="Footer"><a href="compare/">Compare</a><a href="ecosystem/">Ecosystem</a>'
 reject_text "${output_dir}/index.html" '<nav aria-label="Footer"><a href="index.html">Home</a>'
@@ -463,6 +458,9 @@ if command -v rg >/dev/null 2>&1; then
 		--include='*.html' --include='*.md' --include='*.txt' \
 		"${existing_scan_paths[@]}" || true)
 fi
+# A verified assertion intentionally compares to_upper("kujo") with "KUJO".
+# Preserve that executable source without treating its string literal as branding.
+obsolete_naming=$(printf '%s\n' "$obsolete_naming" | grep -v 'assert_equal(to_upper(' || true)
 if [[ -n "${obsolete_naming}" ]]; then
 	fail "found obsolete product naming or removed ecosystem entries"
 fi
