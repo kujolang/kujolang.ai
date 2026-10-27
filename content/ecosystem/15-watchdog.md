@@ -13,7 +13,7 @@ scope_note: "Your telemetry stays in a local SQLite database. Costs are estimate
 keywords: "Watchdog, AI observability, token usage, API costs, local telemetry"
 seo_title: "Watchdog — AI Usage and Cost Dashboard"
 latest_release_url: "https://github.com/kujolang/watchdog/releases/latest"
-last_updated: "2026-10-26"
+last_updated: "2026-10-27"
 ---
 
 ## Know where your tokens go

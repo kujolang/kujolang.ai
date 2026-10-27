@@ -25,3 +25,5 @@ normal viewport. No values or UI elements were altered for the screenshots.
 Source revision: kujolang/watchdog b0a682a3a0beaa7482b34e83245c607de81d260d.
 The site builder escapes raw HTML in Markdown. The Watchdog-only gallery marker
 is replaced with templates/watchdog-gallery.html after Markdown rendering.
+
+Website framing updated 2026-10-27: `overview-chart.svg` embeds the original JPEG unchanged in a 1274 × 840 viewport, ending below Requests Over Time and before the lower chart row. The gallery and full-size link use this cropped viewport. All slides share that aspect ratio, with complete request/session images fitted inside it. The full original capture remains available for provenance and video work.
