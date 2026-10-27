@@ -14,4 +14,4 @@
 - [x] Responsive and accessible browser verification
 - [x] Metadata sitemap and Howl cards
 - [x] Complete native loop evaluation
-- [ ] README changelog commits and authorized Pages deployment
+- [x] README changelog commits and authorized Pages deployment

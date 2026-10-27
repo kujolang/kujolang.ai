@@ -2,7 +2,7 @@
 
 ## Verdict
 
-partial — implementation and verification complete; GitHub Pages publication pending.
+success — implementation, verification and authorized GitHub Pages publication complete.
 
 ## Completed
 
@@ -20,11 +20,12 @@ partial — implementation and verification complete; GitHub Pages publication p
 
 - c6de238 — pinned language examples.
 - 052be79 — language-first website journey.
-- Verification/CI evidence follows in its own commit.
+- 7573955 — verification, CI gates and loop evidence.
+- Publication receipt and archival whitespace attributes follow in the final evidence commit.
 
 ## Remaining
 
-- Push and verify the authorized GitHub Pages deployment.
+- none.
 
 ## External Blockers
 
@@ -32,4 +33,6 @@ partial — implementation and verification complete; GitHub Pages publication p
 
 ## Next Start
 
-- Follow the Deploy GitHub Pages run for the pushed main commit, verify production routes, and record publication in the release receipt and Strata handoff.
+- Use README.md and examples/catalog.json for maintenance. Release run 40599173462 passed; release/evidence/production.json verifies all 28 public routes for 7573955.
+- Strata procedure: 244d3612-0f46-477e-a04c-72d3ccc93319. Final release handoff records the post-evidence commit and deployment status.
+- SignalBox: no captures warranted.

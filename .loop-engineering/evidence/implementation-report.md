@@ -82,3 +82,21 @@ the build now additionally checks sample integrity/runtime behavior, language
 routes and exhaustive social metadata before uploading. Publication confirmation
 and exact commit/run identifiers are recorded in the release receipt and Strata
 handoff after deployment succeeds. No DNS, secrets or branch protection changes.
+
+## Confirmed publication
+
+GitHub Pages run https://github.com/kujolang/kujolang.ai/actions/runs/40599173462
+succeeded for commit 7573955c618e05b3b1ec3612c750c3bea935b03f. The native release
+loop verified 28 live routes, canonical URLs, social metadata and new example
+content. See release/evidence/production.json. The final follow-up commit only
+records evidence and its verifier; it does not alter the deployed application.
+
+Verbatim upstream samples, raw command logs and archived baseline HTML retain
+their original whitespace. Git attributes exempt those artifacts from whitespace
+formatting checks; source SHA-256 and executable/output assertions remain strict.
+
+Strata saved the pinned-example maintenance procedure as
+244d3612-0f46-477e-a04c-72d3ccc93319. Exact ID and scoped title retrieval pass.
+A broad semantic paraphrase missed the note even after a focused-tag update; use
+the exact title/ID or the linked release handoff. No duplicate memory was written.
+SignalBox: no captures warranted.

@@ -1,0 +1,11 @@
+diff --git a/.gitattributes b/.gitattributes
+index 24e115f..62f9185 100644
+--- a/.gitattributes
++++ b/.gitattributes
+@@ -1 +1,6 @@
+ *.patch -whitespace
++# Preserve verbatim command receipts and the immutable baseline HTML.
++.loop-engineering/**/*.log -whitespace
++.loop-engineering/evidence/language-first-baseline/index.html -whitespace
++# Verbatim upstream samples are checked by SHA-256, including their whitespace.
++public/samples/*.kujo -whitespace

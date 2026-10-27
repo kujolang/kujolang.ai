@@ -13,4 +13,4 @@ line	status	text	evidence
 14	already-done	Responsive and accessible browser verification	.loop-engineering/checklist-language-first.md:14
 15	already-done	Metadata sitemap and Howl cards	.loop-engineering/checklist-language-first.md:15
 16	already-done	Complete native loop evaluation	.loop-engineering/checklist-language-first.md:16
-17	needs-release-pipeline	README changelog commits and authorized Pages deployment	.loop-engineering/checklist-language-first.md:17
+17	already-done	README changelog commits and authorized Pages deployment	.loop-engineering/checklist-language-first.md:17
