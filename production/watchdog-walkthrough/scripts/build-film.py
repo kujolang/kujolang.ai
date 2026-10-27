@@ -8,9 +8,8 @@ def probe(p):return float(subprocess.check_output(['ffprobe','-v','error','-show
 def esc(s):return html.escape(s)
 def stamp(t):
  ms=round(t*1000);return f'{ms//3600000:02}:{ms//60000%60:02}:{ms//1000%60:02},{ms%1000:03}'
-# These callouts explain actual behavior; they are not fabricated product screenshots.
-notes=[['Where did the tokens go?','Usage · latency · failures','Synthetic demonstration data'],['Application → Watchdog → Provider','OpenAI-compatible /proxy/v1','Local SQLite telemetry'],['199,025 requests','24,026.9M tokens','Estimated API value ≠ invoice'],['Start with the broad trend','Narrow the investigation window','Requests and tokens measure different things'],['Find the request','Inspect usage and pricing evidence','Follow related records'],['Read the error code','Find the affected session','Recovery belongs to your application'],['Model time or tool time?','Arguments and results follow capture policy','Follow request and session links'],['Workflow → spans → events','Inspect recorded operations','Detail depends on instrumentation'],['One session, related activity','Eight requests · three tool calls','Use insights to choose the next question'],['Retry ≠ fallback','Observed timing and context limits','Explicit terminal events matter'],['Observed · registered · configured','Active / stale / pending','Local evidence, not a health probe'],['JSON snapshot → further analysis','Canonical JSONL → structured records','OTLP worker → compatible backend'],['Folder · interval · retention','Encryption needs a key file','Capture policy and access controls'],['Connect → Observe → Investigate','Start with one application','kujolang.ai/ecosystem/watchdog']]
-assets=['overview.jpg',None,'overview.jpg','overview.jpg','request.jpg','errors.png','tools.png','traces.png','session.jpg','canonical.png','sources.png','exporters.png','backups.png',None]
+# Product screens only; captions remain available as a separate SRT.
+assets=['overview.jpg','connection.jpg','overview.jpg','overview.jpg','request.jpg','errors.png','tools.png','traces.png','session.jpg','canonical.png','sources.png','exporters.png','backups.png','overview.jpg']
 start=0;hosts=[];audios=[];srt=[];chapterlines=[];timing=[];cue=1
 for i,c in enumerate(chapters):
  cid='chapter-'+c['id'];audio=P/'assets/audio'/f"{c['id']}.mp3"; dur=math.ceil((probe(audio)+1.3)*30)/30
@@ -23,32 +22,20 @@ for i,c in enumerate(chapters):
   captions.append(f'<div id="{cid}-cap-{k}" class="clip subtitle" data-start="{begin:.3f}" data-duration="{max(.1,end-begin):.3f}"><span>{esc(text)}</span></div>')
   srt.extend([str(cue),f'{stamp(start+begin)} --> {stamp(start+end)}',text,'']);cue+=1
  visual=''; anim=[]
- if assets[i]:
-  asset=assets[i]; panel=asset.endswith('.png'); w=1728; imgw=1728; h=1600 if asset=='overview.jpg' else 973 if panel else 973
-  visual=f'<div class="viewport" data-hold data-layout-allow-overflow="true"><div id="{cid}-camera" class="camera"><img src="assets/screens/{asset}" width="{imgw}" style="width:{imgw}px;max-width:none" alt="Watchdog synthetic demo: {esc(c["title"])}"></div></div>'
-  # Anchored camera holds; no perpetual drift or animated UI claims.
-  targets=[(1,0,0),(1,0,-190),(1,0,-620),(1,0,-850)] if asset=='overview.jpg' else [(1,0,0),(1.15,-100,-90),(1.08,-60,-190),(1,0,0)]
-  if i==3: targets=[(1,0,0),(1.5,-820,-110),(1,0,-620),(1,0,0)]
-  for j,(scale,x,y) in enumerate(targets):
-   t=dur*j/4
-   if j==0:anim.append(f'tl.set("#{cid}-camera",{{scale:{scale},x:{x},y:{y},transformOrigin:"0 0"}},0);')
-   else:anim.append(f'tl.to("#{cid}-camera",{{scale:{scale},x:{x},y:{y},duration:.8,ease:"power2.inOut"}},{t:.3f});')
-  if i in (8,10):
-   visual+=f'<div id="{cid}-insights" class="clip viewport" data-start="{dur*.64:.3f}" data-duration="{dur*.36:.3f}" data-layout-allow-overflow="true"><img src="assets/screens/{"insights.png" if i==8 else "connection.jpg"}" style="width:1728px" alt="Agent Insights from synthetic telemetry"></div>'
- else:
-  labels=['Your application','Watchdog','AI provider'] if i==1 else ['Connect','Observe','Investigate']
-  desc=['OpenAI-compatible client','Proxy + local SQLite','Upstream response'] if i==1 else ['One application','Usage, latency, failures','Requests, sessions, traces']
-  visual='<div class="diagram" data-hold>'+''.join(f'<div id="{cid}-step-{j}" class="step"><div class="num" data-layout-ignore>0{j+1}</div><h2>{esc(x)}</h2><p>{esc(desc[j])}</p></div>'+('<div class="arrow">→</div>' if j<2 else '') for j,x in enumerate(labels))+'</div>'
-  for j in range(3):anim.append(f'tl.fromTo("#{cid}-step-{j}",{{opacity:1}},{{opacity:1,duration:.6,ease:"power3.out"}},{j*3});')
-  extra='Direct request / trace telemetry · Canonical batches · Supported OTLP traces' if i==1 else 'kujolang.ai/ecosystem/watchdog'
-  visual+=f'<div class="diagram-note">{extra}</div>'
- callouts=''
- for j,n in enumerate(notes[i]):
-  at=dur*j/3; length=dur/3
-  callouts+=f'<div id="{cid}-note-{j}" class="clip callout" data-start="{at:.3f}" data-duration="{length:.3f}"><span>{esc(n)}</span></div>'
-  anim.append(f'tl.fromTo("#{cid}-note-{j} span",{{opacity:0}},{{opacity:1,duration:.3}},{at:.3f});')
- css='''*{box-sizing:border-box}#root{position:absolute;inset:0;font-family:Inter,sans-serif;color:#17202d;background:#edf0f4;overflow:hidden}.ground{position:absolute;inset:0;background:#edf0f4}.top{position:absolute;left:96px;right:96px;top:48px;display:flex;justify-content:space-between;font-family:Departure,monospace;font-size:28px;letter-spacing:1px;color:#516174}h1{position:absolute;top:91px;left:96px;font-size:52px;font-weight:700;letter-spacing:-1.5px;margin:0}.viewport{position:absolute;left:96px;top:185px;width:1728px;height:665px;overflow:hidden;border:1px solid #cbd3de;border-radius:12px;background:#fff}.camera{position:absolute;left:0;top:0}.camera img{display:block}.callout{position:absolute;left:96px;top:866px;font-size:28px;color:#33475e;font-weight:700}.subtitle{position:absolute;left:170px;right:170px;top:938px;height:88px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:32px;line-height:1.3;color:#fff}.subtitle span{padding:10px 22px;border-radius:8px;background:#17202d}.foot{position:absolute;bottom:22px;left:96px;right:96px;font-family:Departure,monospace;font-size:28px;color:#516174;display:flex;justify-content:space-between}.diagram{position:absolute;left:110px;right:110px;top:300px;display:flex;align-items:center;justify-content:space-between}.step{width:450px}.num{font-family:Departure,monospace;font-size:92px;color:#bec9d6;border-bottom:3px solid #243e5b;padding-bottom:20px}h2{font-size:42px;margin:26px 0 16px}.step p{font-size:28px;color:#516174}.arrow{font-size:60px;color:#243e5b}.diagram-note{position:absolute;left:110px;top:730px;font-size:29px;color:#33475e}'''
- (P/'compositions'/f'{cid}.html').write_text(f'''<template><style>@font-face{{font-family:Departure;src:url('assets/fonts/DepartureMono-Regular.woff2')}}{css}</style><div id="root" data-composition-id="{cid}" data-width="1920" data-height="1080"><div class="ground"></div><div class="top"><span>W / WATCHDOG</span><span>FEATURE WALKTHROUGH · {i+1:02} / 14</span></div><h1>{esc(c['title'])}</h1>{visual}{callouts}{''.join(captions)}<div class="foot"><span>ISOLATED DEMO · SYNTHETIC DATA</span><span>KUJO</span></div></div><script>const tl=gsap.timeline({{paused:true}});{''.join(anim)}window.__timelines['{cid}']=tl;</script></template>''')
+ asset=assets[i]
+ # Fit complete modal screenshots without cropping or distorting the UI.
+ # The tall overview scrolls through its content at native aspect ratio.
+ is_overview=asset=='overview.jpg'
+ visual=f'<div class="viewport" data-hold data-layout-allow-overflow="true"><div id="{cid}-camera" class="camera{" overview" if is_overview else ""}"><img src="assets/screens/{asset}" alt="Watchdog: {esc(c["title"])}"></div></div>'
+ if is_overview:
+  for j,y in enumerate([0,-180,-480,-698]):
+   if j==0:anim.append(f'tl.set("#{cid}-camera",{{y:0}},0);')
+   else:anim.append(f'tl.to("#{cid}-camera",{{y:{y},duration:.8,ease:"power2.inOut"}},{dur*j/4:.3f});')
+ if i in (8,10):
+  extra='insights.png' if i==8 else 'connection.jpg'
+  visual+=f'<div id="{cid}-detail" class="clip viewport" data-start="{dur*.64:.3f}" data-duration="{dur*.36:.3f}" data-layout-allow-overflow="true"><div class="camera"><img src="assets/screens/{extra}" alt="Watchdog detail"></div></div>'
+ css='*{box-sizing:border-box}#root{position:absolute;inset:0;background:#fff;overflow:hidden}.viewport{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;background:#fff}.camera{position:absolute;inset:0;display:flex;justify-content:center;align-items:center}.camera img{display:block;max-width:1920px;max-height:1080px;width:1920px;height:1080px;object-fit:contain}.camera.overview{display:block;bottom:auto}.camera.overview img{width:1920px;height:auto;max-height:none}'
+ (P/'compositions'/f'{cid}.html').write_text(f'''<template><style>{css}</style><div id="root" data-composition-id="{cid}" data-width="1920" data-height="1080">{visual}</div><script>const tl=gsap.timeline({{paused:true}});{''.join(anim)}window.__timelines['{cid}']=tl;</script></template>''')
  hosts.append(f'<div id="{cid}" class="clip" data-composition-id="{cid}" data-composition-src="compositions/{cid}.html" data-start="{start:.3f}" data-duration="{dur:.3f}" data-track-index="1" data-width="1920" data-height="1080"></div>')
  audios.append(f'<audio id="voice-{i}" class="clip" src="assets/audio/{c["id"]}.mp3" data-start="{start+.35:.3f}" data-duration="{probe(audio):.3f}" data-track-index="2" data-volume="1"></audio>')
  start+=dur

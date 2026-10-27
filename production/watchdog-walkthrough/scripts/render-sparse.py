@@ -18,8 +18,7 @@ def motion(a,b):
  for f in range(max(0,math.floor(a*fps)),min(total,math.ceil(b*fps)+2)):frames.add(f)
 for i,c in enumerate(chapters):
  start=c['start'];dur=c['duration'];event(start);event(start+dur)
- for j in range(3):motion(start+dur*j/3,start+dur*j/3+.3)
- if i not in (1,13):
+ if i in (0,2,3,13):
   for j in range(1,4):motion(start+dur*j/4,start+dur*j/4+.8)
  if i in (8,10):event(start+dur*.64)
  source=(P/'compositions'/f"chapter-{c['id']}.html").read_text()

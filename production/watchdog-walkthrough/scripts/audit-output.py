@@ -8,7 +8,7 @@ assert -17<=metrics['audio']['input_i']<=-15
 assert metrics['audio']['input_tp']<=-1
 frames=[]
 for t in [105,280,420,500,560]:
- ref=next((P/'output/final-frames').glob(f'frame-*-at-{t}s.png'));dest=P/'output'/f'verified-frame-{t}.png'
+ ref=next((P/'output/screen-only-review').glob(f'frame-*-at-{t}s.png'));dest=P/'output'/f'verified-frame-{t}.png'
  subprocess.run(['ffmpeg','-v','error','-y','-ss',str(t),'-i',str(video),'-frames:v','1',str(dest)],check=True)
  r=subprocess.run(['ffmpeg','-hide_banner','-i',str(ref),'-i',str(dest),'-lavfi','ssim','-f','null','-'],capture_output=True,text=True,check=True)
  score=float(re.findall(r'All:([0-9.]+)',r.stderr)[-1]);assert score>.98,(t,score);frames.append({'seconds':t,'ssim':score})
