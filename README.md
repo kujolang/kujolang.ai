@@ -162,3 +162,53 @@ This release contains 135 skills. The sync preserves workflow content, reuses th
 ## Comparisons and discovery
 
 The `/compare/` collection is generated from `comparison/catalog.json`. Run `npm run compare:generate` after editing records and `npm run compare:verify` after the production build. See [the comparison maintainer guide](comparison/README.md) for editorial standards, research, evidence and measurement.
+
+## Language-first pages and verified examples
+
+The homepage leads with language positioning and a native-select code explorer.
+`/language/` is the installation journey, `/examples/` the searchable collection,
+`/development-workflow/` a composable workflow exercise, and `/performance/` the
+measurement methodology. Existing ecosystem, Writing and comparison routes remain.
+
+`examples/catalog.json` pins every sample to Kujo 1.9.0 and an upstream commit,
+source path, optional line range, SHA-256, verification mode and expected output.
+`public/samples/` contains downloadable source and offline AI cassette fixtures.
+To add an example, copy reviewed source from the pinned commit, record its hash
+and honest prerequisites, and choose `run`, `check` or `test-run`. Do not execute
+network listeners or file-mutating samples merely to mark them runnable. Module
+imports currently use check-only examples with explicit missing dependencies.
+
+Run `npm run examples:generate` to update Markdown projections, semantic page
+templates, the homepage explorer and Howl manifest. Raw HTML is deliberately
+escaped by the Markdown renderer, so generated templates own interactive markup.
+Do not hand-edit generated example pages/templates. The native SSG supports
+nested canonical slug segments for these routes, retaining traversal rejection.
+
+```sh
+npm run examples:check
+npm run examples:verify
+npm run social:cards
+kujo run ./build.kujo -- --site-url https://kujolang.ai
+npm run images:responsive
+npm run language:verify
+npm run social:verify
+```
+
+Set `KUJO_BIN` to a Kujo 1.9.0 executable when it is not on PATH. Run browser
+verification with `node scripts/test-language-browser.cjs`; provide a Playwright
+installation through `PLAYWRIGHT_MODULE` and optionally `CHROME_BIN`. The browser
+suite requires the site served at `http://127.0.0.1:4178` (or `SITE_URL`). It checks
+selection, clipboard text, filtering, mobile navigation, responsive overflow,
+console errors and the JavaScript-disabled fallback. Screenshots and loop
+receipts are under `.loop-engineering/evidence/`.
+
+Regenerate the downloadable bundle after updating samples:
+`COPYFILE_DISABLE=1 tar -czf public/samples/kujo-examples.tar.gz -C public/samples --exclude=kujo-examples.tar.gz .`.
+Measure startup plus script execution with `python3 scripts/measure-language.py`;
+its receipt does not establish cross-language performance superiority.
+
+For WCAG A/AA checks on the six key page types, set `AXE_SCRIPT` to an installed
+`axe-core/axe.min.js` when running the browser suite. It saves exact violation
+results beside screenshots. No browser or accessibility package is shipped to
+site visitors. The GitHub Pages build runs the source/runtime example gates and
+language-route verification before uploading its artifact.

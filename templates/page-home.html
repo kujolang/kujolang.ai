@@ -1,18 +1,121 @@
-<main id="main-content">
-	<section class="sk-hero home-hero" aria-labelledby="home-hero-title">
-		<div class="home-hero__media" aria-hidden="true"><img src="/assets/images/home-agent-workflow.webp" alt="" width="1672" height="941" fetchpriority="high"></div>
-		<div class="home-hero__wash" aria-hidden="true"></div>
-		<div class="sk-hero__inner">
-			<div class="home-hero__copy">
-				<h1 id="home-hero-title">Trust at the speed of AI</h1>
-				<p class="home-hero__body">Kujo is an AI-native programming language and toolchain built to make agent-driven software development clear, controlled, and verifiable.</p>
-				<div class="sk-hero__actions">
-					<a class="sk-button" href="/ecosystem/">Explore ecosystem</a>
-					<button class="sk-button home-video-button" data-variant="secondary" type="button" data-hero-video-open aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 7 8 5-8 5z"/></svg><span>View video</span></button>
-				</div>
-			</div>
-		</div>
-	</section>
+<main id="main-content" class="language-home">
+<section class="sk-hero home-hero" aria-labelledby="home-hero-title">
+<div class="home-hero__media" aria-hidden="true"><img src="/assets/images/home-agent-workflow.webp" alt="" width="1672" height="941" fetchpriority="high"></div><div class="home-hero__wash" aria-hidden="true"></div>
+<div class="sk-hero__inner"><div class="home-hero__copy"><p class="eyebrow">The Kujo programming language</p><h1 id="home-hero-title">Trust at the speed of AI.</h1><p class="home-hero__body">Kujo is an AI-native programming language for local-first automation and practical application scripting. Its Rust-based runtime executes code on a bytecode VM, with checking, testing and editor tools in the CLI.</p><div class="sk-hero__actions"><a class="sk-button" href="/language/">Get Started</a><a class="sk-button" data-variant="secondary" href="/examples/">View Examples</a></div><p><a href="https://docs.kujolang.ai/">Documentation</a> · <a href="https://github.com/kujolang/kujo">GitHub</a></p></div></div></section>
+<!-- LANGUAGE EXPLORER START -->
+<section class="language-section" aria-labelledby="code-title" data-code-explorer><p class="eyebrow">Read it. Run it. Change it.</p><h2 id="code-title">A feel for the language</h2><div class="example-selector" hidden><label for="home-example">Choose an example</label><select id="home-example"><option value="hello-world">Hello World</option><option value="functions">Functions and operators</option><option value="collections">Collections</option><option value="async">Async tasks</option><option value="request-hash">Deterministic AI request IDs</option><option value="replay">AI calls and replay</option></select></div><article class="example-panel" id="example-hello-world" data-example="hello-world" data-category="Basics"><p class="eyebrow">Basics · Executed offline · Kujo 1.9.0</p><h3>Hello World</h3><p>Print your first message.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
+<span class="syntax-token"># Kujo Kujo!</span>
+
+print(<span class="syntax-token">&quot;Kujo Kujo!&quot;</span>)
+</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/hello-world.kujo" download>hello-world.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run hello-world.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>Kujo Kujo!
+</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/00-hello.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/hello-world/">Full example</a></p></article>
+<article class="example-panel" id="example-functions" data-example="functions" data-category="Basics"><p class="eyebrow">Basics · Executed offline · Kujo 1.9.0</p><h3>Functions and operators</h3><p>Sum a collection with a reusable function.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
+<span class="syntax-token"># total: 42</span>
+
+<span class="syntax-token">func</span> total(values) {
+    <span class="syntax-token">mut</span> sum := 0
+    <span class="syntax-token">for</span> value <span class="syntax-token">in</span> values {
+        sum = sum + value
+    }
+    <span class="syntax-token">return</span> sum
+}
+
+<span class="syntax-token">let</span> scores := [8, 13, 21]
+print(<span class="syntax-token">&quot;total: &quot;</span> + to_string(total(scores)))
+</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/functions.kujo" download>functions.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run functions.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>total: 42
+</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/02-functions.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/functions/">Full example</a></p></article>
+<article class="example-panel" id="example-collections" data-example="collections" data-category="Data"><p class="eyebrow">Data · Executed offline · Kujo 1.9.0</p><h3>Collections</h3><p>Combine arrays and dictionaries into a report.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
+<span class="syntax-token"># build total: 42</span>
+
+<span class="syntax-token">let</span> scores := [8, 13, 21]
+<span class="syntax-token">let</span> report := {<span class="syntax-token">&quot;name&quot;</span>: <span class="syntax-token">&quot;build&quot;</span>, <span class="syntax-token">&quot;total&quot;</span>: scores[0] + scores[1] + scores[2]}
+
+print(report[<span class="syntax-token">&quot;name&quot;</span>] + <span class="syntax-token">&quot; total: &quot;</span> + to_string(report[<span class="syntax-token">&quot;total&quot;</span>]))
+</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/collections.kujo" download>collections.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run collections.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>build total: 42
+</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/04-data.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/collections/">Full example</a></p></article>
+<article class="example-panel" id="example-async" data-example="async" data-category="Concurrency"><p class="eyebrow">Concurrency · Executed offline · Kujo 1.9.0</p><h3>Async tasks</h3><p>Await a value produced by an async function.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">// Simple async test</span>
+
+<span class="syntax-token">async</span> <span class="syntax-token">func</span> get_value() {
+    <span class="syntax-token">return</span> 42;
+}
+
+<span class="syntax-token">let</span> p = get_value();
+println(<span class="syntax-token">&quot;Promise type: &quot;</span>, type(p));
+<span class="syntax-token">let</span> result = <span class="syntax-token">await</span> p;
+println(<span class="syntax-token">&quot;Result: &quot;</span>, result);
+</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/async.kujo" download>async.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run <span class="syntax-token">async</span>.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>Promise type:  promise
+Result:  42
+</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/simple_async_test.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/async/">Full example</a></p></article>
+<article class="example-panel" id="example-request-hash" data-example="request-hash" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline · Kujo 1.9.0</p><h3>Deterministic AI request IDs</h3><p>Compare request identities without credentials affecting the hash.</p><p class="example-note">The credential strings are dummy values. This example makes no network request.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
+    print(label + <span class="syntax-token">&quot;: &quot;</span> + value)
+}
+
+<span class="syntax-token">let</span> options_a := {
+    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;https://api.example.test/v1/chat/completions&quot;</span>,
+    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-demo&quot;</span>,
+    <span class="syntax-token">&quot;api_key&quot;</span>: <span class="syntax-token">&quot;credential-one&quot;</span>,
+    <span class="syntax-token">&quot;headers&quot;</span>: {
+        <span class="syntax-token">&quot;Authorization&quot;</span>: <span class="syntax-token">&quot;Bearer credential-one&quot;</span>,
+        <span class="syntax-token">&quot;X-App&quot;</span>: <span class="syntax-token">&quot;kujo&quot;</span>
+    },
+    <span class="syntax-token">&quot;body&quot;</span>: {
+        <span class="syntax-token">&quot;temperature&quot;</span>: 0,
+        <span class="syntax-token">&quot;max_tokens&quot;</span>: 32
+    }
+}
+
+<span class="syntax-token">let</span> options_b := {
+    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;https://api.example.test/v1/chat/completions&quot;</span>,
+    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-demo&quot;</span>,
+    <span class="syntax-token">&quot;api_key&quot;</span>: <span class="syntax-token">&quot;credential-two&quot;</span>,
+    <span class="syntax-token">&quot;headers&quot;</span>: {
+        <span class="syntax-token">&quot;Authorization&quot;</span>: <span class="syntax-token">&quot;Bearer credential-two&quot;</span>,
+        <span class="syntax-token">&quot;X-App&quot;</span>: <span class="syntax-token">&quot;kujo&quot;</span>
+    },
+    <span class="syntax-token">&quot;body&quot;</span>: {
+        <span class="syntax-token">&quot;temperature&quot;</span>: 0,
+        <span class="syntax-token">&quot;max_tokens&quot;</span>: 32
+    }
+}
+
+<span class="syntax-token">let</span> hash_a := ai_request_hash(<span class="syntax-token">&quot;Summarize Kujo&quot;</span>, options_a)
+<span class="syntax-token">let</span> hash_b := ai_request_hash(<span class="syntax-token">&quot;Summarize Kujo&quot;</span>, options_b)
+
+kv(<span class="syntax-token">&quot;hash_length&quot;</span>, to_string(len(hash_a)))
+kv(<span class="syntax-token">&quot;same_without_credentials&quot;</span>, to_string(hash_a == hash_b))
+kv(<span class="syntax-token">&quot;hash&quot;</span>, hash_a)
+</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/request-hash.kujo" download>request-hash.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run request-hash.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>hash_length: 64
+same_without_credentials: true
+hash: a6244047c108dcf58a952ed0a6c70dc04d13ee9aa9dba08eeb623f241fbd37ce
+</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_request_hash.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/request-hash/">Full example</a></p></article>
+<article class="example-panel" id="example-replay" data-example="replay" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline · Kujo 1.9.0</p><h3>AI calls and replay</h3><p>Replay a recorded model response offline.</p><p class="example-note">Run from the pinned Kujo repository root: the cassette fixture directory is required.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
+    print(label + <span class="syntax-token">&quot;: &quot;</span> + value)
+}
+
+<span class="syntax-token">let</span> options := {
+    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;http://127.0.0.1:1/v1/chat/completions&quot;</span>,
+    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-replay&quot;</span>,
+    <span class="syntax-token">&quot;cassette&quot;</span>: {
+        <span class="syntax-token">&quot;mode&quot;</span>: <span class="syntax-token">&quot;replay&quot;</span>,
+        <span class="syntax-token">&quot;dir&quot;</span>: <span class="syntax-token">&quot;tests/fixtures/ai_cassettes&quot;</span>
+    }
+}
+
+<span class="syntax-token">let</span> result := ai_chat(<span class="syntax-token">&quot;Hello model&quot;</span>, options)
+
+kv(<span class="syntax-token">&quot;replay_result&quot;</span>, to_string(result))
+</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/replay.kujo" download>replay.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run replay.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>replay_result: Ok({&quot;finish_reason&quot;: tool_calls, &quot;headers&quot;: {&quot;content-type&quot;: application/json}, &quot;json&quot;: {&quot;choices&quot;: [{&quot;finish_reason&quot;: tool_calls, &quot;message&quot;: {&quot;content&quot;: hello from cassette, &quot;tool_calls&quot;: [{&quot;function&quot;: {&quot;arguments&quot;: {&quot;query&quot;:&quot;kujo&quot;}, &quot;name&quot;: lookup}, &quot;id&quot;: call_1}]}}], &quot;usage&quot;: {&quot;completion_tokens&quot;: 5, &quot;prompt_tokens&quot;: 7, &quot;total_tokens&quot;: 12}}, &quot;message&quot;: hello from cassette, &quot;model&quot;: gpt-replay, &quot;provider&quot;: , &quot;status&quot;: 200, &quot;text&quot;: {&quot;choices&quot;:[{&quot;finish_reason&quot;:&quot;tool_calls&quot;,&quot;message&quot;:{&quot;content&quot;:&quot;hello from cassette&quot;,&quot;tool_calls&quot;:[{&quot;id&quot;:&quot;call_1&quot;,&quot;function&quot;:{&quot;name&quot;:&quot;lookup&quot;,&quot;arguments&quot;:&quot;{\&quot;query\&quot;:\&quot;kujo\&quot;}&quot;}}]}}],&quot;usage&quot;:{&quot;prompt_tokens&quot;:7,&quot;completion_tokens&quot;:5,&quot;total_tokens&quot;:12}}, &quot;tool_calls&quot;: [{&quot;arguments_json&quot;: {&quot;query&quot;:&quot;kujo&quot;}, &quot;id&quot;: call_1, &quot;name&quot;: lookup}], &quot;usage&quot;: {&quot;completion_tokens&quot;: 5, &quot;prompt_tokens&quot;: 7, &quot;total_tokens&quot;: 12}})
+</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_replay_cassette.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/replay/">Full example</a></p></article><a class="sk-button" href="/examples/">Explore all examples</a></section>
+<!-- LANGUAGE EXPLORER END -->
+<section class="language-section"><p class="eyebrow">One language, practical building blocks</p><h2>Build scripts. Services. AI workflows.</h2><div class="language-grid"><article><h3>Automate local work</h3><p>Work with files, processes, JSON and collections. Write small scripts with functions, structs and explicit error handling.</p><a href="/examples/files/">Explore file operations</a></article><article><h3>Build applications</h3><p>Use HTTP and networking helpers, modules, async tasks and generators. Check the documented runtime limits before choosing a deployment.</p><a href="/examples/http/">Inspect an HTTP server</a></article><article><h3>Make AI work inspectable</h3><p>Identify requests, replay recorded responses and validate structured data. Add packages when you need agent orchestration.</p><a href="/examples/replay/">Run an offline AI call</a></article></div></section>
+<section class="language-section"><p class="eyebrow">AI-native, with concrete mechanisms</p><h2>Repeat the request. Inspect the result.</h2><div class="language-grid"><article><h3>Stable request identity</h3><p><code>ai_request_hash</code> derives a deterministic request identifier while excluding credentials. Compare requests without sending them to a model.</p><a href="/examples/request-hash/">Run the hash example</a></article><article><h3>Offline model replay</h3><p><code>ai_chat</code> can read recorded cassettes. Reproduce a response in tests without a live provider, then validate its data with <code>json_schema_validate</code>.</p><a href="/examples/replay/">Replay a response</a> · <a href="/examples/structured-output/">Validate a schema</a></article></div><p>Conventional languages already offer async functions, HTTP clients and testing libraries. Kujo adds AI request identity, replay, streaming callbacks and capability controls at the runtime level. These mechanisms support review; they do not guarantee correctness or isolation.</p><p>Choose Kujo for scripts and tools that benefit from those primitives. Keep Python or TypeScript when existing libraries, deployment requirements or team experience matter more. Independent Kujo tools can still inspect and evaluate those repositories.</p><details><summary>What belongs to which layer?</summary><ul><li><strong>Language:</strong> functions, modules, collections, structs, enums, matching, async and generators.</li><li><strong>Rust VM/runtime:</strong> execution, host helpers, AI primitives and capability-aware access.</li><li><strong>Core CLI:</strong> check, format, lint, tests, LSP and documentation generation.</li><li><strong>Separate packages:</strong> Kennel, Agents SDK, AI SDK and workflow tools have their own installation and versions.</li><li><strong>External systems:</strong> live model providers require configuration and credentials; optional hosts and integrations are not bundled language features.</li></ul></details></section>
+<section class="language-section" id="get-started"><p class="eyebrow">Your first successful program</p><h2>Install. Check. Run.</h2><p>For a runtime-only install on supported macOS, Linux and Windows systems with Node.js 18 or newer:</p><div class="sample-code"><pre tabindex="0"><code>npm install --global @kujolang/kujo-runtime@1.9.0
+kujo --version</code></pre><button class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save <code>print("Hello, Kujo!")</code> in <code>hello.kujo</code>:</p><div class="sample-code"><pre tabindex="0"><code>kujo check hello.kujo
+kujo run hello.kujo</code></pre><button class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Expected output: <code>Hello, Kujo!</code>. <a href="/language/">Native installers, Windows guidance and troubleshooting</a>.</p></section>
+<section class="language-section"><p class="eyebrow">Ecosystem · installed separately</p><h2>Start with the job you need done.</h2><p>These are independent projects. Tools that inspect repositories or run configured commands can support existing languages; SDK code itself runs in Kujo.</p><div class="language-grid"><article><h3>Build an AI agent</h3><p>Use Agents SDK with AI SDK for Kujo agent programs.</p><a href="/ecosystem/agents-sdk/">Agents SDK</a></article><article><h3>Coordinate multi-step work</h3><p>Define repeatable work and inspect its state.</p><a href="/ecosystem/dispatch/">Dispatch</a></article><article><h3>Understand a repository</h3><p>Inspect existing code and assemble context for a change.</p><a href="/ecosystem/scout/">Scout</a> · <a href="/ecosystem/scent/">Scent</a></article><article><h3>Evaluate generated work</h3><p>Run configured checks and browser assertions for your project.</p><a href="/ecosystem/eval/">Eval</a> · <a href="/ecosystem/lens/">Lens</a></article><article><h3>Review a change</h3><p>Turn Git diffs and footprint into inspectable evidence.</p><a href="/ecosystem/patchbrief/">PatchBrief</a> · <a href="/ecosystem/changebucket/">ChangeBucket</a></article><article><h3>Prepare a release</h3><p>Evaluate repository readiness against explicit checks.</p><a href="/ecosystem/shipcheck/">ShipCheck</a></article></div><p><a href="/ecosystem/">Browse the full ecosystem</a></p><h3>From request to reviewable change</h3><ol class="workflow-stages"><li>Define scope</li><li>Retrieve context</li><li>Implement in a chosen environment</li><li>Run tests</li><li>Inspect change evidence</li><li>Assess readiness</li></ol><p>Composable stages, not an automatically integrated pipeline. <a href="/development-workflow/">Follow a reproducible repository workflow</a>.</p></section>
+<section class="language-section"><p class="eyebrow">Evidence over promises</p><h2>Inspect what people build.</h2><div class="language-grid"><article><h3>This website</h3><p>Kujo SSG generates static HTML; SiteKit supplies the visual system.</p><a href="https://github.com/kujolang/kujolang.ai/blob/main/build.kujo">Inspect the build source</a></article><article><h3>Applications and services</h3><p>Explore the Kujo-backed CMS, CRUD API and RAG showcases with their runtime and integration boundaries.</p><a href="/ecosystem/cms/">CMS</a> · <a href="/ecosystem/crud-api/">CRUD API</a> · <a href="/ecosystem/rag/">RAG</a></article><article><h3>Performance and comparisons</h3><p>Separate VM execution, startup and application workloads. Cross-language results remain unmeasured unless a reproducible report says otherwise.</p><a href="/performance/">Measurement methodology</a> · <a href="/compare/">Compare language approaches</a></article></div></section>
+<section class="language-section"><h2>Start where you are.</h2><div class="language-grid"><article><h3>Learn the language</h3><p>Prerequisite: a terminal and a supported runtime. Scope: one script, then functions and data. First action: install Kujo and run Hello World.</p><a href="/language/">Start the language guide</a></article><article><h3>Build AI agents</h3><p>Prerequisite: Kujo and the SDK dependencies. Scope: a small agent with explicit tools. First action: follow the Agents SDK installation and offline examples.</p><a href="/ecosystem/agents-sdk/">Start with Agents SDK</a></article><article><h3>Improve an existing workflow</h3><p>Prerequisite: a Git repository and its test commands. Scope: inspect a change and record evidence. First action: run the local workflow exercise.</p><a href="/development-workflow/">Keep your language, improve the workflow</a></article></div></section>
+<section class="language-section language-final"><h2>Make your first program run.</h2><a class="sk-button" href="/language/">Get Started</a><button class="sk-button home-video-button" data-variant="secondary" type="button" data-hero-video-open aria-haspopup="dialog"><span>View video</span></button></section>
 	<div class="hero-video-modal" data-hero-video-modal hidden>
 		<div class="hero-video-modal__backdrop" data-hero-video-close></div>
 		<section class="hero-video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="hero-video-title" tabindex="-1">

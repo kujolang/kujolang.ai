@@ -12,7 +12,11 @@
     "social:verify": "node scripts/verify-social-cards.mjs",
     "compare:generate": "node scripts/render-comparisons.mjs",
     "compare:check": "node scripts/render-comparisons.mjs --check",
-    "compare:verify": "python3 scripts/verify-comparisons.py"
+    "compare:verify": "python3 scripts/verify-comparisons.py",
+    "examples:generate": "node scripts/render-language-examples.mjs",
+    "examples:check": "node scripts/render-language-examples.mjs --check",
+    "examples:verify": "python3 scripts/verify-language-examples.py",
+    "language:verify": "python3 scripts/verify-language-site.py"
   },
   "dependencies": {
     "scramble-decode": "0.1.0"

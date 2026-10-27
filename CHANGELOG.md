@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Lead with the Kujo language, real code, installation and six goal-based ecosystem entry points.
+- Add 21 pinned examples with exact runtime verification, offline replay fixtures, accessible selection, copy feedback and category/search filtering.
+- Add language onboarding, a composable workflow exercise and reproducible performance methodology; preserve existing ecosystem and comparison routes.
+- Extend static page routing to validated nested slugs, generate Howl cards and add source, output and browser gates.
+
 - Keep comparison pages focused on Vercel Zerolang and its reviewed release, removing unrelated project references and draft revision history.
 
 - Rebuild the comparison hub as a four-language field guide with a six-dimension evidence matrix, adoption profiles, technical briefs, workflow stages and a worked artifact check.

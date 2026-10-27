@@ -546,7 +546,7 @@
 
     function wrapTextNode(node) {
       var parent = node.parentElement;
-      if (!parent || !node.nodeValue.trim() || parent.closest(selector) || parent.closest('[data-scramble-skip], .ecosystem-carousel-controls')) return;
+      if (!parent || !node.nodeValue.trim() || parent.closest(selector) || parent.closest('[data-scramble-skip], .ecosystem-carousel-controls, pre, code, select, option, [role="status"]')) return;
       if (/^(SCRIPT|STYLE|NOSCRIPT|TEMPLATE|SVG)$/i.test(parent.tagName)) return;
 
       var match = node.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);
@@ -611,5 +611,58 @@
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
+  }
+})();
+
+// Native controls progressively enhance static, indexable language examples.
+(() => {
+  document.querySelectorAll('[data-code-explorer]').forEach(root => {
+    const selector = root.querySelector('select');
+    const panels = [...root.querySelectorAll('[data-example]')];
+    const update = () => panels.forEach(panel => { panel.hidden = panel.dataset.example !== selector.value; });
+    root.querySelector('.example-selector').hidden = false;
+    selector.addEventListener('change', update);
+    update();
+  });
+  document.querySelectorAll('.kujo-content pre').forEach(pre => {
+    if (pre.closest('.sample-code') || !pre.querySelector('code')) return;
+    const wrapper = document.createElement('div');
+    wrapper.className = 'sample-code';
+    pre.before(wrapper);
+    wrapper.append(pre);
+    const button = document.createElement('button');
+    button.type = 'button'; button.className = 'sk-button';
+    button.dataset.copyCode = ''; button.textContent = 'Copy code';
+    const status = document.createElement('span');
+    status.dataset.codeStatus = ''; status.setAttribute('role', 'status');
+    wrapper.append(button, status);
+  });
+  document.querySelectorAll('[data-copy-code]').forEach(button => {
+    button.hidden = false;
+    button.addEventListener('click', async () => {
+      const root = button.closest('.sample-code');
+      const status = root.querySelector('[data-code-status]');
+      try {
+        await navigator.clipboard.writeText(root.querySelector('code').textContent);
+        status.textContent = 'Copied!';
+      } catch {
+        status.textContent = 'Copy unavailable. Select the code and copy it manually.';
+      }
+    });
+  });
+  const search = document.querySelector('#example-search');
+  const category = document.querySelector('#example-category');
+  if (search && category) {
+    document.querySelector('.example-filter').hidden = false;
+    const cards = [...document.querySelectorAll('[data-example-card]')];
+    const update = () => {
+      const query = search.value.trim().toLowerCase();
+      cards.forEach(card => { card.hidden = !card.textContent.toLowerCase().includes(query) || (category.value !== '' && card.dataset.category !== category.value); });
+      document.querySelectorAll('.example-category-group').forEach(group => { group.hidden = [...group.querySelectorAll('[data-example-card]')].every(card => card.hidden); });
+      document.querySelector('#example-count').textContent = `${cards.filter(card => !card.hidden).length} examples found`;
+    };
+    search.addEventListener('input', update);
+    category.addEventListener('change', update);
+    update();
   }
 })();
