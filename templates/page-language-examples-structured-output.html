@@ -1,0 +1,45 @@
+<main class="content-page" id="main-content"><header class="page-hero sk-hero"><div class="sk-hero__inner"><h1>{{title}}</h1><p>{{description}}</p></div></header><div class="prose-shell kujo-content"><nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / Structured output validation</nav>
+<article class="example-panel" id="example-structured-output" data-example="structured-output" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline · Kujo 1.9.0</p><h3>Structured output validation</h3><p>Validate structured data before consuming it. This validates local values; it does not call a model.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
+    print(label + <span class="syntax-token">&quot;: &quot;</span> + to_string(value))
+}
+
+<span class="syntax-token">let</span> schema := {
+    <span class="syntax-token">&quot;type&quot;</span>: <span class="syntax-token">&quot;object&quot;</span>,
+    <span class="syntax-token">&quot;required&quot;</span>: [<span class="syntax-token">&quot;name&quot;</span>, <span class="syntax-token">&quot;scores&quot;</span>],
+    <span class="syntax-token">&quot;properties&quot;</span>: {
+        <span class="syntax-token">&quot;name&quot;</span>: {
+            <span class="syntax-token">&quot;type&quot;</span>: <span class="syntax-token">&quot;string&quot;</span>,
+            <span class="syntax-token">&quot;minLength&quot;</span>: 2
+        },
+        <span class="syntax-token">&quot;scores&quot;</span>: {
+            <span class="syntax-token">&quot;type&quot;</span>: <span class="syntax-token">&quot;array&quot;</span>,
+            <span class="syntax-token">&quot;minItems&quot;</span>: 1,
+            <span class="syntax-token">&quot;items&quot;</span>: {
+                <span class="syntax-token">&quot;type&quot;</span>: <span class="syntax-token">&quot;number&quot;</span>,
+                <span class="syntax-token">&quot;minimum&quot;</span>: 0,
+                <span class="syntax-token">&quot;maximum&quot;</span>: 100
+            }
+        }
+    },
+    <span class="syntax-token">&quot;additionalProperties&quot;</span>: false
+}
+
+<span class="syntax-token">let</span> valid_report := json_schema_validate({
+    <span class="syntax-token">&quot;name&quot;</span>: <span class="syntax-token">&quot;Kujo&quot;</span>,
+    <span class="syntax-token">&quot;scores&quot;</span>: [95, 88]
+}, schema)
+
+<span class="syntax-token">let</span> invalid_report := json_schema_validate({
+    <span class="syntax-token">&quot;name&quot;</span>: <span class="syntax-token">&quot;K&quot;</span>,
+    <span class="syntax-token">&quot;scores&quot;</span>: [101],
+    <span class="syntax-token">&quot;debug&quot;</span>: true
+}, schema)
+
+kv(<span class="syntax-token">&quot;valid&quot;</span>, valid_report[<span class="syntax-token">&quot;valid&quot;</span>])
+kv(<span class="syntax-token">&quot;invalid&quot;</span>, invalid_report[<span class="syntax-token">&quot;valid&quot;</span>])
+kv(<span class="syntax-token">&quot;errors&quot;</span>, invalid_report[<span class="syntax-token">&quot;errors&quot;</span>])
+</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/structured-output.kujo" download>structured-output.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run structured-output.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>valid: true
+invalid: false
+errors: [{&quot;keyword&quot;: minLength, &quot;message&quot;: string length is less than 2, &quot;path&quot;: /name}, {&quot;keyword&quot;: maximum, &quot;message&quot;: number is greater than 100, &quot;path&quot;: /scores/0}, {&quot;keyword&quot;: additionalProperties, &quot;message&quot;: additional property 'debug' is not allowed, &quot;path&quot;: /debug}]
+</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/json_schema_validate.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
+<nav aria-label="Related examples"><a href="/examples/json/">Previous: JSON data</a> · <a href="/examples/request-hash/">Next: Deterministic AI request IDs</a></nav></div></main>

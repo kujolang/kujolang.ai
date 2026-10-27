@@ -1,0 +1,18 @@
+# Channels - Thread Communication Example
+# Demonstrates using channels to communicate between threads
+
+print("=== Channels for Thread Communication Demo ===")
+print("")
+
+# Example 1: Basic channel send/receive
+print("1. Basic channel usage")
+chan := channel()
+
+print("Sending value 42 to channel...")
+chan.send(42)
+
+print("Receiving from channel...")
+value := chan.receive()
+print("Received:")
+print(value)
+print("")

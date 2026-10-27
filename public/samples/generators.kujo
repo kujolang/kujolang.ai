@@ -1,0 +1,24 @@
+# Test: Generator Functions
+# Tests generator creation, yielding, and iteration
+# Both runtimes resume loops lazily and preserve state across every yield.
+
+print("=== Test 1: Simple Generator ===")
+func* count() {
+    yield 1
+    yield 2
+    yield 3
+}
+
+gen := count()
+print("Generator created, type:")
+print(type(gen))
+
+print("")
+print("=== Test 2: Generator Iteration ===")
+for n in count() {
+    print("Value:")
+    print(n)
+}
+
+print("")
+print("=== Test 3: Generator with State ===")

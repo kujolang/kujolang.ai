@@ -1,0 +1,29 @@
+<main class="content-page" id="main-content"><header class="page-hero sk-hero"><div class="sk-hero__inner"><h1>{{title}}</h1><p>{{description}}</p></div></header><div class="prose-shell kujo-content"><nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / Channels</nav>
+<article class="example-panel" id="example-channels" data-example="channels" data-category="Concurrency"><p class="eyebrow">Concurrency · Executed offline · Kujo 1.9.0</p><h3>Channels</h3><p>Send and receive a value in a FIFO channel.</p><p class="example-note">Same-scope example. It does not demonstrate sharing captured state across spawned tasks.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Channels - Thread Communication Example</span>
+<span class="syntax-token"># Demonstrates using channels to communicate between threads</span>
+
+print(<span class="syntax-token">&quot;=== Channels for Thread Communication Demo ===&quot;</span>)
+print(<span class="syntax-token">&quot;&quot;</span>)
+
+<span class="syntax-token"># Example 1: Basic channel send/receive</span>
+print(<span class="syntax-token">&quot;1. Basic channel usage&quot;</span>)
+chan := channel()
+
+print(<span class="syntax-token">&quot;Sending value 42 to channel...&quot;</span>)
+chan.send(42)
+
+print(<span class="syntax-token">&quot;Receiving from channel...&quot;</span>)
+value := chan.receive()
+print(<span class="syntax-token">&quot;Received:&quot;</span>)
+print(value)
+print(<span class="syntax-token">&quot;&quot;</span>)
+</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/channels.kujo" download>channels.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run channels.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>=== Channels for Thread Communication Demo ===
+
+1. Basic channel usage
+Sending value 42 to channel...
+Receiving from channel...
+Received:
+42
+
+</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/concurrency_channels.kujo#L1-L18">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
+<nav aria-label="Related examples"><a href="/examples/async/">Previous: Async tasks</a> · <a href="/examples/generators/">Next: Generators</a></nav></div></main>

@@ -1,0 +1,23 @@
+---
+title: Variables and types
+template: language-examples-variables
+custom_url: examples/variables
+description: "Bind values with let and print strings."
+seo_title: "Variables and types | Kujo"
+social_image: /assets/images/social/examples-variables.jpg
+---
+
+<nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / Variables and types</nav>
+<article class="example-panel" id="example-variables" data-example="variables" data-category="Basics"><p class="eyebrow">Basics · Executed offline · Kujo 1.9.0</p><h3>Variables and types</h3><p>Bind values with let and print strings.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
+<span class="syntax-token"># tool: kujo</span>
+<span class="syntax-token"># status: ready</span>
+
+<span class="syntax-token">let</span> tool := <span class="syntax-token">&quot;kujo&quot;</span>
+<span class="syntax-token">let</span> status := <span class="syntax-token">&quot;ready&quot;</span>
+
+print(<span class="syntax-token">&quot;tool: &quot;</span> + tool)
+print(<span class="syntax-token">&quot;status: &quot;</span> + status)
+</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/variables.kujo" download>variables.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run variables.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>tool: kujo
+status: ready
+</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/01-variables.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
+<nav aria-label="Related examples"><a href="/examples/hello-world/">Previous: Hello World</a> · <a href="/examples/functions/">Next: Functions and operators</a></nav>

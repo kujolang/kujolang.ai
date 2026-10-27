@@ -1,0 +1,39 @@
+---
+title: AI streaming
+template: language-examples-streaming
+custom_url: examples/streaming
+description: "Consume streamed deltas through a callback using an offline cassette."
+seo_title: "AI streaming | Kujo"
+social_image: /assets/images/social/examples-streaming.jpg
+---
+
+<nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / AI streaming</nav>
+<article class="example-panel" id="example-streaming" data-example="streaming" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline · Kujo 1.9.0</p><h3>AI streaming</h3><p>Consume streamed deltas through a callback using an offline cassette.</p><p class="example-note">Run from the pinned Kujo repository root. Live providers need credentials, network access and may incur charges.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
+    print(label + <span class="syntax-token">&quot;: &quot;</span> + to_string(value))
+}
+
+<span class="syntax-token">func</span> on_chunk(delta, raw_chunk) {
+    kv(<span class="syntax-token">&quot;delta&quot;</span>, delta)
+    kv(<span class="syntax-token">&quot;raw&quot;</span>, raw_chunk)
+    <span class="syntax-token">return</span> true
+}
+
+<span class="syntax-token">let</span> replay_options := {
+    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;http://127.0.0.1:1/v1/chat/completions&quot;</span>,
+    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-replay&quot;</span>,
+    <span class="syntax-token">&quot;provider&quot;</span>: <span class="syntax-token">&quot;mock-provider&quot;</span>,
+    <span class="syntax-token">&quot;cassette&quot;</span>: {
+        <span class="syntax-token">&quot;mode&quot;</span>: <span class="syntax-token">&quot;replay&quot;</span>,
+        <span class="syntax-token">&quot;dir&quot;</span>: <span class="syntax-token">&quot;tests/fixtures/ai_cassettes&quot;</span>
+    }
+}
+
+<span class="syntax-token">let</span> result := ai_stream_chat(<span class="syntax-token">&quot;Stream please&quot;</span>, replay_options, on_chunk)
+kv(<span class="syntax-token">&quot;stream_result&quot;</span>, result)
+</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/streaming.kujo" download>streaming.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run streaming.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>delta: chunk one
+raw: {&quot;choices&quot;: [{&quot;delta&quot;: {&quot;content&quot;: chunk one}}]}
+delta: chunk two
+raw: {&quot;choices&quot;: [{&quot;delta&quot;: {&quot;content&quot;: chunk two}, &quot;finish_reason&quot;: stop}], &quot;usage&quot;: {&quot;completion_tokens&quot;: 3, &quot;prompt_tokens&quot;: 3, &quot;total_tokens&quot;: 6}}
+stream_result: Ok({&quot;chunks&quot;: [chunk one, chunk two], &quot;finish_reason&quot;: stop, &quot;headers&quot;: {&quot;content-type&quot;: application/json}, &quot;json&quot;: {&quot;choices&quot;: [{&quot;delta&quot;: {&quot;content&quot;: chunk one}}, {&quot;delta&quot;: {&quot;content&quot;: chunk two}, &quot;finish_reason&quot;: stop}], &quot;usage&quot;: {&quot;completion_tokens&quot;: 3, &quot;prompt_tokens&quot;: 3, &quot;total_tokens&quot;: 6}}, &quot;model&quot;: gpt-replay, &quot;provider&quot;: mock-provider, &quot;status&quot;: 200, &quot;text&quot;: {&quot;choices&quot;:[{&quot;delta&quot;:{&quot;content&quot;:&quot;chunk one&quot;}},{&quot;delta&quot;:{&quot;content&quot;:&quot;chunk two&quot;},&quot;finish_reason&quot;:&quot;stop&quot;}],&quot;usage&quot;:{&quot;prompt_tokens&quot;:3,&quot;completion_tokens&quot;:3,&quot;total_tokens&quot;:6}}, &quot;usage&quot;: {&quot;completion_tokens&quot;: 3, &quot;prompt_tokens&quot;: 3, &quot;total_tokens&quot;: 6}})
+</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_stream_callback.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
+<nav aria-label="Related examples"><a href="/examples/replay/">Previous: AI calls and replay</a> · <a href="/examples/capabilities/">Next: AI capability restrictions</a></nav>

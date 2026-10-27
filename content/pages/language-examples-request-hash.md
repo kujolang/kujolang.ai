@@ -1,0 +1,53 @@
+---
+title: Deterministic AI request IDs
+template: language-examples-request-hash
+custom_url: examples/request-hash
+description: "Compare request identities without credentials affecting the hash."
+seo_title: "Deterministic AI request IDs | Kujo"
+social_image: /assets/images/social/examples-request-hash.jpg
+---
+
+<nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / Deterministic AI request IDs</nav>
+<article class="example-panel" id="example-request-hash" data-example="request-hash" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline · Kujo 1.9.0</p><h3>Deterministic AI request IDs</h3><p>Compare request identities without credentials affecting the hash.</p><p class="example-note">The credential strings are dummy values. This example makes no network request.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
+    print(label + <span class="syntax-token">&quot;: &quot;</span> + value)
+}
+
+<span class="syntax-token">let</span> options_a := {
+    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;https://api.example.test/v1/chat/completions&quot;</span>,
+    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-demo&quot;</span>,
+    <span class="syntax-token">&quot;api_key&quot;</span>: <span class="syntax-token">&quot;credential-one&quot;</span>,
+    <span class="syntax-token">&quot;headers&quot;</span>: {
+        <span class="syntax-token">&quot;Authorization&quot;</span>: <span class="syntax-token">&quot;Bearer credential-one&quot;</span>,
+        <span class="syntax-token">&quot;X-App&quot;</span>: <span class="syntax-token">&quot;kujo&quot;</span>
+    },
+    <span class="syntax-token">&quot;body&quot;</span>: {
+        <span class="syntax-token">&quot;temperature&quot;</span>: 0,
+        <span class="syntax-token">&quot;max_tokens&quot;</span>: 32
+    }
+}
+
+<span class="syntax-token">let</span> options_b := {
+    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;https://api.example.test/v1/chat/completions&quot;</span>,
+    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-demo&quot;</span>,
+    <span class="syntax-token">&quot;api_key&quot;</span>: <span class="syntax-token">&quot;credential-two&quot;</span>,
+    <span class="syntax-token">&quot;headers&quot;</span>: {
+        <span class="syntax-token">&quot;Authorization&quot;</span>: <span class="syntax-token">&quot;Bearer credential-two&quot;</span>,
+        <span class="syntax-token">&quot;X-App&quot;</span>: <span class="syntax-token">&quot;kujo&quot;</span>
+    },
+    <span class="syntax-token">&quot;body&quot;</span>: {
+        <span class="syntax-token">&quot;temperature&quot;</span>: 0,
+        <span class="syntax-token">&quot;max_tokens&quot;</span>: 32
+    }
+}
+
+<span class="syntax-token">let</span> hash_a := ai_request_hash(<span class="syntax-token">&quot;Summarize Kujo&quot;</span>, options_a)
+<span class="syntax-token">let</span> hash_b := ai_request_hash(<span class="syntax-token">&quot;Summarize Kujo&quot;</span>, options_b)
+
+kv(<span class="syntax-token">&quot;hash_length&quot;</span>, to_string(len(hash_a)))
+kv(<span class="syntax-token">&quot;same_without_credentials&quot;</span>, to_string(hash_a == hash_b))
+kv(<span class="syntax-token">&quot;hash&quot;</span>, hash_a)
+</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/request-hash.kujo" download>request-hash.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run request-hash.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>hash_length: 64
+same_without_credentials: true
+hash: a6244047c108dcf58a952ed0a6c70dc04d13ee9aa9dba08eeb623f241fbd37ce
+</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_request_hash.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
+<nav aria-label="Related examples"><a href="/examples/structured-output/">Previous: Structured output validation</a> · <a href="/examples/replay/">Next: AI calls and replay</a></nav>

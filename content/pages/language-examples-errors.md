@@ -1,0 +1,30 @@
+---
+title: Error handling
+template: language-examples-errors
+custom_url: examples/errors
+description: "Catch a thrown error and continue execution."
+seo_title: "Error handling | Kujo"
+social_image: /assets/images/social/examples-errors.jpg
+---
+
+<nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / Error handling</nav>
+<article class="example-panel" id="example-errors" data-example="errors" data-category="Basics"><p class="eyebrow">Basics · Executed offline · Kujo 1.9.0</p><h3>Error handling</h3><p>Catch a thrown error and continue execution.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Test better error messages with try/except</span>
+<span class="syntax-token">func</span> process(x) {
+    <span class="syntax-token">if</span> x == 0 {
+        <span class="syntax-token">throw</span>(<span class="syntax-token">&quot;Cannot process zero value&quot;</span>)
+    }
+    <span class="syntax-token">return</span> x * 2
+}
+
+<span class="syntax-token">try</span> {
+    result := process(0)
+    print(<span class="syntax-token">&quot;Result:&quot;</span>, result)
+} <span class="syntax-token">except</span> err {
+    print(<span class="syntax-token">&quot;Error caught:&quot;</span>, err)
+}
+
+print(<span class="syntax-token">&quot;Program continues after error handling&quot;</span>)
+</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/errors.kujo" download>errors.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run errors.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>Error caught: Error { line: 0, message: Cannot process zero value, stack: [process] }
+Program continues after error handling
+</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/error_handling.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
+<nav aria-label="Related examples"><a href="/examples/pattern-matching/">Previous: Enums and pattern matching</a> · <a href="/examples/async/">Next: Async tasks</a></nav>
