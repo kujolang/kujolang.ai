@@ -1,0 +1,290 @@
+diff --git a/assets/css/style.css b/assets/css/style.css
+index a04546e..eaf579d 100644
+--- a/assets/css/style.css
++++ b/assets/css/style.css
+@@ -1201,9 +1201,6 @@
+     fill: currentColor;
+   }
+ 
+-  body:has(.home-hero) .site-footer {
+-    display: none;
+-  }
+ 
+   @media (max-width: 64rem) {
+     .home-hero__wash {
+@@ -1643,3 +1640,92 @@
+ .language-home .home-hero__wash { background: linear-gradient(90deg, var(--sk-surface-page) 0%, color-mix(in srgb,var(--sk-surface-page) 96%,transparent) 42%,color-mix(in srgb,var(--sk-surface-page) 70%,transparent) 68%,transparent); }
+ [data-code-explorer] { padding-top: 1.5rem; }
+ @media(max-width:700px) { .language-home .home-hero__wash { background: color-mix(in srgb,var(--sk-surface-page) 94%,transparent); } }
++
++/* Homepage: the comparison pages' numbered, monochrome editorial rhythm. */
++.language-home { --home-line: #c9c9c5; }
++.language-home > .language-section { max-width: 1280px; padding-block: clamp(3rem,6vw,5rem); border-bottom: 0; }
++.language-home h2 { letter-spacing: -.045em; }
++.language-home p { font-size: .9rem; }
++.language-home .eyebrow { font-size: .7rem; letter-spacing: .09em; margin-bottom: 1rem; }
++.language-home h3 { font-size: 1.25rem; line-height: 1.35; }
++.language-home a:not(.sk-button) { text-underline-offset: .25em; }
++.home-section-heading, .home-explorer-heading { display: flex; justify-content: space-between; gap: 2rem; align-items: end; margin-bottom: 2rem; }
++.home-section-heading > p { max-width: 38ch; }
++.home-section-heading h2, .home-explorer-heading h2 { margin-bottom: 0; }
++.language-home > .home-explorer { padding-block: 1.75rem 3rem; }
++.home-explorer-heading { margin-bottom: 1rem; }
++.home-explorer-heading a { font-size: .8rem; flex-shrink: 0; }
++.home-explorer .example-selector { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.5rem; margin: 0; border: 1px solid var(--home-line); background: #eeeee9; }
++.home-explorer .example-selector[hidden] { display: none; }
++.home-explorer .example-selector label { font-size: .8rem; }
++.home-explorer .example-panel { padding: 1.5rem; border: 1px solid var(--home-line); border-top: 0; background: #f7f7f3; margin-bottom: 1.5rem; }
++.home-explorer .example-panel h3 { margin-bottom: .5rem; }
++.home-explorer .example-panel .eyebrow { margin-bottom: .5rem; }
++.home-explorer .example-panel > p:last-child { font-size: .75rem; margin-top: 1.25rem; }
++.home-explorer .sample-code pre { border-radius: 0; }
++.home-card-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border: 1px solid var(--home-line); }
++.home-card { padding: 2rem; display: flex; flex-direction: column; gap: 1rem; border-right: 1px solid var(--home-line); }
++.home-card:last-child { border: 0; }
++.home-card-mark { font-size: 2.5rem; letter-spacing: -.08em; padding-bottom: 1.5rem; }
++.home-card p { margin: 0 0 1rem; }
++.home-card a { margin-top: auto; font-size: .8rem; }
++.home-runtime { background: #171717; color: #f6f6f2; }
++.home-runtime-inner { max-width: 1280px; margin-inline: auto; padding: clamp(3rem,6vw,5rem) var(--site-pad-inline); display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 5rem; }
++.home-runtime h2 { font-size: clamp(2rem,3.4vw,3.5rem); line-height: 1.15; margin: 1rem 0 1.5rem; }
++.home-runtime p { color: #ccc; line-height: 1.7; }
++.home-runtime a { color: #fff; font-size: .8rem; }
++.home-runtime header > a { display: inline-block; margin-top: 1.5rem; }
++.home-runtime code { color: #fff; background: transparent; overflow-wrap: anywhere; }
++.home-runtime-steps article { display: grid; grid-template-columns: 2rem 1fr; gap: 1rem; border-top: 1px solid #555; padding: 1.5rem 0; }
++.home-runtime-steps article > span { font-size: .7rem; color: #bbb; padding-top: .3rem; }
++.home-runtime-steps h3 { margin: 0 0 .5rem; }
++.home-runtime-steps p { margin-bottom: .75rem; }
++.home-runtime-note { grid-column: 1/-1; border-top: 1px solid #555; padding-top: 1.5rem; font-size: .75rem !important; }
++.home-start > * { min-width: 0; }
++.home-start { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; }
++.home-start header > p:not(.eyebrow) { max-width: 30ch; margin-bottom: 1.5rem; }
++.home-start header > a { font-size: .8rem; }
++.home-start h2 { font-size: clamp(2.8rem,5vw,4.5rem); }
++.home-terminal { border: 1px solid var(--home-line); background: #f0f0eb; padding: 0 1.5rem 1rem; min-width: 0; }
++.home-terminal-bar { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--home-line); padding-block: 1rem; font-size: .7rem; margin-bottom: 1.5rem; }
++.home-terminal > p { font-size: .75rem; }
++.home-terminal .sample-code { margin-bottom: 1.5rem; }
++.home-terminal .sample-code pre { border-radius: 0; font-size: .78rem; }
++.home-terminal-result { border-top: 1px solid var(--home-line); padding-top: 1rem; }
++.home-ecosystem { background: #f4f4ef; }
++.home-tool-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-top: 1px solid var(--home-line); border-left: 1px solid var(--home-line); }
++.home-tool-grid > a { padding: 1.5rem; border-right: 1px solid var(--home-line); border-bottom: 1px solid var(--home-line); text-decoration: none; display: grid; gap: 1.25rem; }
++.home-tool-grid > a:hover { background: #e6e6df; }
++.home-tool-grid > a > span { font-size: .7rem; }
++.home-tool-grid strong { font-size: 1.3rem; display: flex; justify-content: space-between; gap: .5rem; }
++.home-link-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: 2rem; font-size: .8rem; }
++.home-proof { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
++.home-proof header > p:not(.eyebrow) { max-width: 40ch; margin-bottom: 1.5rem; }
++.home-proof header > a { font-size: .8rem; }
++.home-proof-links a { display: grid; grid-template-columns: 2rem 1fr 1rem; gap: 1rem; align-items: center; padding: 1.75rem 0; border-top: 1px solid var(--home-line); text-decoration: none; }
++.home-proof-links a:last-child { border-bottom: 1px solid var(--home-line); }
++.home-proof-links a > span { font-size: .75rem; }
++.home-proof-links a:hover strong { text-decoration: underline; text-underline-offset: .25em; }
++.language-home > .language-final { text-align: center; border-top: 1px solid var(--home-line); }
++.language-final p { margin-inline: auto; margin-bottom: 1.5rem; }
++.language-final h2 { font-size: clamp(2.4rem,5vw,4.5rem); }
++@media(max-width: 800px) {
++ .home-card-grid { grid-template-columns: 1fr; }
++ .home-card { border-right: 0; border-bottom: 1px solid var(--home-line); padding: 1.5rem; }
++ .home-card-mark { padding-bottom: .5rem; }
++ .home-runtime-inner, .home-start, .home-proof { grid-template-columns: 1fr; gap: 2rem; }
++ .home-tool-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
++ .home-section-heading { display: block; }
++ .home-section-heading > p { margin-top: 1rem; }
++}
++@media(max-width: 480px) {
++ .home-explorer-heading { display: block; }
++ .home-explorer-heading > a { display: inline-block; margin-top: 1rem; }
++ .home-explorer .example-selector { display: block; padding: 1rem; }
++ .home-explorer .example-selector label { margin-bottom: .5rem; }
++ .home-explorer .example-selector select { width: 100%; font-size: .8rem; }
++ .home-explorer .example-panel { padding: 1rem; }
++ .home-tool-grid { grid-template-columns: 1fr; }
++ .home-terminal { padding-inline: 1rem; }
++ .home-proof-links strong { font-size: .9rem; }
++}
+diff --git a/scripts/render-language-examples.mjs b/scripts/render-language-examples.mjs
+index a9d3890..1718094 100644
+--- a/scripts/render-language-examples.mjs
++++ b/scripts/render-language-examples.mjs
+@@ -8,7 +8,7 @@ function highlight(code){return code.split(/("(?:\\.|[^"\\])*"|#[^\n]*|\/\/[^\n]
+ export function block(code){return `<div class="sample-code"><pre tabindex="0"><code>${highlight(code)}</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div>`;}
+ const source=x=>`${catalog.repository}/blob/${catalog.commit}/${x.source}${x.start?'#L'+x.start+'-L'+x.end:''}`;
+ const sample=x=>fs.readFileSync(`public/samples/${x.slug}.kujo`,'utf8');
+-function panel(x,full=true){return `<article class="example-panel" id="example-${x.slug}" data-example="${x.slug}" data-category="${x.category}"><p class="eyebrow">${esc(x.category)} · ${x.mode==='run'?'Executed offline':x.mode==='test-run'?'Test runner':x.mode==='parse'?'Parse only':'Checked only'} · Kujo ${catalog.version}</p><h3>${esc(x.title)}</h3><p>${esc(x.description)}</p>${x.note?'<p class="example-note">'+esc(x.note)+'</p>':''}${block(sample(x))}<p>Save as <a href="/samples/${x.slug}.kujo" download>${x.slug}.kujo</a>, then:</p>${block(`kujo ${x.mode} ${x.args?x.args.join(' ')+' ':''}${x.slug}.kujo`)}${x.expected?`<details><summary>Expected output</summary><pre>${esc(x.expected)}</pre></details>`:''}<p><a href="${source(x)}">Pinned source</a> · <a href="${x.docs}">Language documentation</a>${full?'':` · <a href="/examples/${x.slug}/">Full example</a>`}</p></article>`;}
++function panel(x,full=true){return `<article class="example-panel" id="example-${x.slug}" data-example="${x.slug}" data-category="${x.category}"><p class="eyebrow">${esc(x.category)} · ${x.mode==='run'?'Executed offline':x.mode==='test-run'?'Test runner':x.mode==='parse'?'Parse only':'Checked only'}${full?' · Kujo '+catalog.version:''}</p><h3>${esc(x.title)}</h3><p>${esc(x.description)}</p>${x.note?'<p class="example-note">'+esc(x.note)+'</p>':''}${block(sample(x))}<p>Save as <a href="/samples/${x.slug}.kujo" download>${x.slug}.kujo</a>, then:</p>${block(`kujo ${x.mode} ${x.args?x.args.join(' ')+' ':''}${x.slug}.kujo`)}${x.expected?`<details><summary>Expected output</summary><pre>${esc(x.expected)}</pre></details>`:''}<p><a href="${source(x)}">Pinned source</a> · <a href="${x.docs}">Language documentation</a>${full?'':` · <a href="/examples/${x.slug}/">Full example</a>`}</p></article>`;}
+ function page(slug,title,description,body){
+ const template='language-'+slug.replaceAll('/','-');
+ write(`templates/page-${template}.html`,`<main class="content-page" id="main-content"><header class="page-hero sk-hero"><div class="sk-hero__inner"><h1>{{title}}</h1><p>{{description}}</p></div></header><div class="prose-shell kujo-content">${body}</div></main>\n`);
+@@ -19,7 +19,7 @@ for(const [i,x] of catalog.items.entries()){
+ }
+ page('examples','Kujo language examples','Browse verified Kujo code, execution commands, expected output and pinned sources.',`<p>Start with a short program, then explore data, concurrency and the AI runtime. Samples are pinned to <a href="${catalog.repository}/tree/${catalog.commit}">Kujo ${catalog.version}</a>. Every card states its verification level. Download individual scripts or <a href="/samples/kujo-examples.tar.gz">the complete bundle with replay fixtures</a>; run commands from the extracted samples directory.</p>\n<div class="example-filter" hidden><label for="example-search">Search examples</label><input id="example-search" type="search" placeholder="Try replay or collections"><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option>${[...new Set(catalog.items.map(x=>x.category))].map(x=>`<option>${x}</option>`).join('')}</select><p role="status" id="example-count"></p></div>\n<nav aria-label="Example categories">${[...new Set(catalog.items.map(x=>x.category))].map(x=>`<a href="#category-${x.replaceAll(' ','-')}">${x}</a>`).join(' · ')}</nav>\n${[...new Set(catalog.items.map(x=>x.category))].map(cat=>`<section class="example-category-group" id="category-${cat.replaceAll(' ','-')}"><h2>${cat}</h2>${catalog.items.filter(x=>x.category===cat).map(x=>`<article data-example-card data-category="${cat}"><h3><a href="/examples/${x.slug}/">${x.title}</a></h3><p>${x.description} <small>${x.mode==='run'?'Executed offline':x.mode==='parse'?'Parse only':x.mode==='check'?'Checked only':'Test runner'}</small></p></article>`).join('')}</section>`).join('\n')}\n<h2>Packages and agents</h2><p>Packages use separate manifests and dependency installation. Follow <a href="https://docs.kujolang.ai/learn/packages/">Packages with Kennel</a>. To connect model tools to agents, start with the independently installed <a href="/ecosystem/agents-sdk/">Agents SDK</a> and <a href="/ecosystem/ai-sdk/">AI SDK</a>. These are integration guides, not standalone language samples.</p>`);
+ const featured=['hello-world','functions','collections','async','request-hash','replay'];
+-const explorer=`<section class="language-section" aria-labelledby="code-title" data-code-explorer><p class="eyebrow">Read it. Run it. Change it.</p><h2 id="code-title">A feel for the language</h2><div class="example-selector" hidden><label for="home-example">Choose an example</label><select id="home-example">${featured.map(id=>{const x=catalog.items.find(x=>x.slug===id);return `<option value="${id}">${x.title}</option>`}).join('')}</select></div>${featured.map(id=>panel(catalog.items.find(x=>x.slug===id),false)).join('\n')}<a class="sk-button" href="/examples/">Explore all examples</a></section>`;
++const explorer=`<section class="language-section home-explorer" aria-labelledby="code-title" data-code-explorer><header class="home-explorer-heading"><div><p class="eyebrow">01 / Read it. Run it. Change it.</p><h2 id="code-title">A feel for the language</h2></div><a href="/examples/">All examples ↗</a></header><div class="example-selector" hidden><label for="home-example">Choose an example</label><select id="home-example">${featured.map(id=>{const x=catalog.items.find(x=>x.slug===id);return `<option value="${id}">${x.title}</option>`}).join('')}</select></div>${featured.map(id=>panel(catalog.items.find(x=>x.slug===id),false)).join('\n')}<a class="sk-button" href="/examples/">Explore all examples</a></section>`;
+ const home=fs.readFileSync('templates/page-home.html','utf8');write('templates/page-home.html',home.replace(/<!-- LANGUAGE EXPLORER START -->[\s\S]*?<!-- LANGUAGE EXPLORER END -->/,`<!-- LANGUAGE EXPLORER START -->\n${explorer}\n<!-- LANGUAGE EXPLORER END -->`));
+ const manifest=JSON.parse(fs.readFileSync('howl-social.json','utf8'));
+ for(const [slug,title,description] of [['examples','Kujo language examples','Real code. Verified commands. Pinned sources.'],...catalog.items.map(x=>['examples/'+x.slug,x.title,x.description]),['language','Learn Kujo','Install, check and run your first Kujo program.'],['development-workflow','A composable development workflow','Define scope, inspect context, test changes and review evidence.'],['performance','Performance evidence','Reproduce measurements and understand their limits.']]){
+diff --git a/scripts/test-language-browser.cjs b/scripts/test-language-browser.cjs
+index 6f36999..85019ba 100644
+--- a/scripts/test-language-browser.cjs
++++ b/scripts/test-language-browser.cjs
+@@ -4,9 +4,12 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
+  const browser=await chromium.launch({headless:true, ...(process.env.CHROME_BIN ? {executablePath:process.env.CHROME_BIN}: {})});const base=process.env.SITE_URL||'http://127.0.0.1:4178';
+  const context=await browser.newContext({permissions:['clipboard-read','clipboard-write'],reducedMotion:'reduce'});
+  const page=await context.newPage();page.setDefaultTimeout(15000);const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())});
+- fs.mkdirSync('.loop-engineering/evidence/browser',{recursive:true});
++ const evidence=process.env.BROWSER_EVIDENCE_DIR||'.loop-engineering/evidence/browser';
++ fs.mkdirSync(evidence,{recursive:true});
+  for(const [name,width,height] of [['desktop',1440,1000],['tablet',768,1024],['mobile',390,844]]){
+   await page.setViewportSize({width,height});await page.goto(base,{waitUntil:'domcontentloaded'});
++  assert(await page.locator('.site-footer').isVisible(),'Homepage footer must be visible');
++  assert(!/\bv?1\.9(?:\.0)?\b/.test(await page.locator('main').innerText()),'No release number in homepage copy');
+   await page.locator('.example-selector').waitFor({state:'visible'});assert.equal(await page.locator('[data-example]:visible').count(),1);
+   assert(await page.locator('[data-code-explorer]').evaluate(el=>el.getBoundingClientRect().top)<height,'Code explorer should start in first viewport');if(name==='desktop')assert(await page.locator('#example-hello-world pre').first().evaluate(el=>el.getBoundingClientRect().top)<height,'Actual code visible in first desktop viewport');
+   await page.locator('#home-example').focus();await page.keyboard.press('f');await page.keyboard.press('Tab');assert.notEqual(await page.locator('#home-example').inputValue(),'hello-world');await page.selectOption('#home-example','request-hash');assert(await page.locator('#example-request-hash').isVisible());
+@@ -14,18 +17,18 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
+   assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),fs.readFileSync('public/samples/request-hash.kujo','utf8'));
+   await page.selectOption('#home-example','hello-world');
+   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'horizontal overflow');
+-  await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:`.loop-engineering/evidence/browser/home-${name}.png`,fullPage:true});await page.screenshot({path:`.loop-engineering/evidence/browser/viewport-${name}.png`});
++  await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:`${evidence}/home-${name}.png`,fullPage:true});await page.screenshot({path:`${evidence}/viewport-${name}.png`});
+   if(name==='mobile'){await page.locator('[data-mobile-menu-toggle]').click();assert(await page.locator('#mobile-navigation').isVisible());await page.keyboard.press('Escape');assert(await page.locator('#mobile-navigation').isHidden());}
+  }
+  await page.goto(base+'/examples/',{waitUntil:'domcontentloaded'});await page.fill('#example-search','replay');assert(await page.locator('[data-example-card]:visible').count()>0);await page.fill('#example-search','no-such-feature');assert.equal(await page.locator('[data-example-card]:visible').count(),0);assert.equal(await page.locator('#example-count').textContent(),'0 examples found');await page.fill('#example-search','');await page.selectOption('#example-category','Concurrency');assert.equal(await page.locator('[data-example-card]:visible').count(),3);
+- await page.screenshot({path:'.loop-engineering/evidence/browser/examples-mobile.png',fullPage:true});
++ await page.screenshot({path:evidence+'/examples-mobile.png',fullPage:true});
+  for(const route of ['/language/','/development-workflow/','/performance/','/examples/replay/','/ecosystem/','/compare/']){await page.goto(base+route,{waitUntil:'domcontentloaded'});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),route+' overflow');assert.equal(await page.locator('main').count(),1);}
+  if (process.env.AXE_SCRIPT) {
+    for (const route of ['/', '/examples/', '/examples/hello-world/', '/language/', '/development-workflow/', '/performance/']) {
+      await page.goto(base+route,{waitUntil:'domcontentloaded'});
+      await page.addScriptTag({path:process.env.AXE_SCRIPT});
+      const result=await page.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}}));
+-     fs.writeFileSync('.loop-engineering/evidence/browser/axe-'+(route.replaceAll('/','-')||'home')+'.json',JSON.stringify({url:route,violations:result.violations,passes:result.passes.length},null,2));
++     fs.writeFileSync(evidence+'/axe-'+(route.replaceAll('/','-')||'home')+'.json',JSON.stringify({url:route,violations:result.violations,passes:result.passes.length},null,2));
+      assert.deepEqual(result.violations.map(x=>({id:x.id,nodes:x.nodes.map(n=>n.target)})),[],route+' accessibility');
+    }
+  }
+diff --git a/scripts/verify-site-contract.sh b/scripts/verify-site-contract.sh
+index 4bc515f..50f5702 100755
+--- a/scripts/verify-site-contract.sh
++++ b/scripts/verify-site-contract.sh
+@@ -93,7 +93,7 @@ require_text "${output_dir}/index.html" 'Trust at the speed of AI'
+ require_text "${output_dir}/index.html" '<title>Kujo — AI-Native Programming Language | Kujolang.ai</title>'
+ require_text "${output_dir}/index.html" '"name":"Kujo","alternateName":["Kujolang.ai","Kujolang"]'
+ require_text "${output_dir}/index.html" '<meta name="author" content="Kujo Team">'
+-require_text "${output_dir}/index.html" 'Kujo is an AI-native programming language for local-first automation and practical application scripting.'
++require_text "${output_dir}/index.html" 'An AI-native programming language for local-first automation. Write scripts, build services and make AI work inspectable.'
+ require_text "${output_dir}/index.html" 'data-hero-video-open aria-haspopup="dialog"'
+ require_text "${output_dir}/index.html" '<span>View video</span>'
+ require_text "${output_dir}/index.html" 'data-hero-video-modal hidden'
+@@ -389,7 +389,7 @@ done
+ 
+ require_text "${output_dir}/assets/css/style.css" 'position: fixed;'
+ require_text "${output_dir}/assets/css/style.css" 'font-size: 96px;'
+-require_text "${output_dir}/assets/css/style.css" 'body:has(.home-hero) .site-footer'
++reject_text "${output_dir}/assets/css/style.css" 'body:has(.home-hero) .site-footer'
+ require_text "${output_dir}/assets/css/style.css" '.ethos-page .kujo-content > h2:first-child'
+ require_text "${output_dir}/assets/css/style.css" 'margin-block-start: auto;'
+ require_text "${output_dir}/assets/css/style.css" 'block-size: 100%;'
+diff --git a/templates/page-home.html b/templates/page-home.html
+index fdebce0..fac5506 100644
+--- a/templates/page-home.html
++++ b/templates/page-home.html
+@@ -1,15 +1,15 @@
+ <main id="main-content" class="language-home">
+ <section class="sk-hero home-hero" aria-labelledby="home-hero-title">
+ <div class="home-hero__media" aria-hidden="true"><img src="/assets/images/home-agent-workflow.webp" alt="" width="1672" height="941" fetchpriority="high"></div><div class="home-hero__wash" aria-hidden="true"></div>
+-<div class="sk-hero__inner"><div class="home-hero__copy"><p class="eyebrow">The Kujo programming language</p><h1 id="home-hero-title">Trust at the speed of AI.</h1><p class="home-hero__body">Kujo is an AI-native programming language for local-first automation and practical application scripting. Its Rust-based runtime executes code on a bytecode VM, with checking, testing and editor tools in the CLI.</p><div class="sk-hero__actions"><a class="sk-button" href="/language/">Get Started</a><a class="sk-button" data-variant="secondary" href="/examples/">View Examples</a></div><p><a href="https://docs.kujolang.ai/">Documentation</a> · <a href="https://github.com/kujolang/kujo">GitHub</a></p></div></div></section>
++<div class="sk-hero__inner"><div class="home-hero__copy"><p class="eyebrow">The Kujo programming language</p><h1 id="home-hero-title">Trust at the speed of AI.</h1><p class="home-hero__body">An AI-native programming language for local-first automation. Write scripts, build services and make AI work inspectable.</p><div class="sk-hero__actions"><a class="sk-button" href="/language/">Get Started</a><a class="sk-button" data-variant="secondary" href="/examples/">View Examples</a></div><p><a href="https://docs.kujolang.ai/">Documentation</a> · <a href="https://github.com/kujolang/kujo">GitHub</a></p></div></div></section>
+ <!-- LANGUAGE EXPLORER START -->
+-<section class="language-section" aria-labelledby="code-title" data-code-explorer><p class="eyebrow">Read it. Run it. Change it.</p><h2 id="code-title">A feel for the language</h2><div class="example-selector" hidden><label for="home-example">Choose an example</label><select id="home-example"><option value="hello-world">Hello World</option><option value="functions">Functions and operators</option><option value="collections">Collections</option><option value="async">Async tasks</option><option value="request-hash">Deterministic AI request IDs</option><option value="replay">AI calls and replay</option></select></div><article class="example-panel" id="example-hello-world" data-example="hello-world" data-category="Basics"><p class="eyebrow">Basics · Executed offline · Kujo 1.9.0</p><h3>Hello World</h3><p>Print your first message.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
++<section class="language-section home-explorer" aria-labelledby="code-title" data-code-explorer><header class="home-explorer-heading"><div><p class="eyebrow">01 / Read it. Run it. Change it.</p><h2 id="code-title">A feel for the language</h2></div><a href="/examples/">All examples ↗</a></header><div class="example-selector" hidden><label for="home-example">Choose an example</label><select id="home-example"><option value="hello-world">Hello World</option><option value="functions">Functions and operators</option><option value="collections">Collections</option><option value="async">Async tasks</option><option value="request-hash">Deterministic AI request IDs</option><option value="replay">AI calls and replay</option></select></div><article class="example-panel" id="example-hello-world" data-example="hello-world" data-category="Basics"><p class="eyebrow">Basics · Executed offline</p><h3>Hello World</h3><p>Print your first message.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
+ <span class="syntax-token"># Kujo Kujo!</span>
+ 
+ print(<span class="syntax-token">&quot;Kujo Kujo!&quot;</span>)
+ </code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/hello-world.kujo" download>hello-world.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run hello-world.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>Kujo Kujo!
+ </pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/00-hello.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/hello-world/">Full example</a></p></article>
+-<article class="example-panel" id="example-functions" data-example="functions" data-category="Basics"><p class="eyebrow">Basics · Executed offline · Kujo 1.9.0</p><h3>Functions and operators</h3><p>Sum a collection with a reusable function.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
++<article class="example-panel" id="example-functions" data-example="functions" data-category="Basics"><p class="eyebrow">Basics · Executed offline</p><h3>Functions and operators</h3><p>Sum a collection with a reusable function.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
+ <span class="syntax-token"># total: 42</span>
+ 
+ <span class="syntax-token">func</span> total(values) {
+@@ -24,7 +24,7 @@ print(<span class="syntax-token">&quot;Kujo Kujo!&quot;</span>)
+ print(<span class="syntax-token">&quot;total: &quot;</span> + to_string(total(scores)))
+ </code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/functions.kujo" download>functions.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run functions.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>total: 42
+ </pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/02-functions.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/functions/">Full example</a></p></article>
+-<article class="example-panel" id="example-collections" data-example="collections" data-category="Data"><p class="eyebrow">Data · Executed offline · Kujo 1.9.0</p><h3>Collections</h3><p>Combine arrays and dictionaries into a report.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
++<article class="example-panel" id="example-collections" data-example="collections" data-category="Data"><p class="eyebrow">Data · Executed offline</p><h3>Collections</h3><p>Combine arrays and dictionaries into a report.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
+ <span class="syntax-token"># build total: 42</span>
+ 
+ <span class="syntax-token">let</span> scores := [8, 13, 21]
+@@ -33,7 +33,7 @@ print(<span class="syntax-token">&quot;total: &quot;</span> + to_string(total(sc
+ print(report[<span class="syntax-token">&quot;name&quot;</span>] + <span class="syntax-token">&quot; total: &quot;</span> + to_string(report[<span class="syntax-token">&quot;total&quot;</span>]))
+ </code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/collections.kujo" download>collections.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run collections.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>build total: 42
+ </pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/04-data.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/collections/">Full example</a></p></article>
+-<article class="example-panel" id="example-async" data-example="async" data-category="Concurrency"><p class="eyebrow">Concurrency · Executed offline · Kujo 1.9.0</p><h3>Async tasks</h3><p>Await a value produced by an async function.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">// Simple async test</span>
++<article class="example-panel" id="example-async" data-example="async" data-category="Concurrency"><p class="eyebrow">Concurrency · Executed offline</p><h3>Async tasks</h3><p>Await a value produced by an async function.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">// Simple async test</span>
+ 
+ <span class="syntax-token">async</span> <span class="syntax-token">func</span> get_value() {
+     <span class="syntax-token">return</span> 42;
+@@ -46,7 +46,7 @@ println(<span class="syntax-token">&quot;Result: &quot;</span>, result);
+ </code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/async.kujo" download>async.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run <span class="syntax-token">async</span>.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>Promise type:  promise
+ Result:  42
+ </pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/simple_async_test.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/async/">Full example</a></p></article>
+-<article class="example-panel" id="example-request-hash" data-example="request-hash" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline · Kujo 1.9.0</p><h3>Deterministic AI request IDs</h3><p>Compare request identities without credentials affecting the hash.</p><p class="example-note">The credential strings are dummy values. This example makes no network request.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
++<article class="example-panel" id="example-request-hash" data-example="request-hash" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline</p><h3>Deterministic AI request IDs</h3><p>Compare request identities without credentials affecting the hash.</p><p class="example-note">The credential strings are dummy values. This example makes no network request.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
+     print(label + <span class="syntax-token">&quot;: &quot;</span> + value)
+ }
+ 
+@@ -88,7 +88,7 @@ kv(<span class="syntax-token">&quot;hash&quot;</span>, hash_a)
+ same_without_credentials: true
+ hash: a6244047c108dcf58a952ed0a6c70dc04d13ee9aa9dba08eeb623f241fbd37ce
+ </pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_request_hash.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/request-hash/">Full example</a></p></article>
+-<article class="example-panel" id="example-replay" data-example="replay" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline · Kujo 1.9.0</p><h3>AI calls and replay</h3><p>Replay a recorded model response offline.</p><p class="example-note">Run from the pinned Kujo repository root: the cassette fixture directory is required.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
++<article class="example-panel" id="example-replay" data-example="replay" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline</p><h3>AI calls and replay</h3><p>Replay a recorded model response offline.</p><p class="example-note">Run from the pinned Kujo repository root: the cassette fixture directory is required.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
+     print(label + <span class="syntax-token">&quot;: &quot;</span> + value)
+ }
+ 
+@@ -107,15 +107,30 @@ kv(<span class="syntax-token">&quot;replay_result&quot;</span>, to_string(result
+ </code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/replay.kujo" download>replay.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run replay.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>replay_result: Ok({&quot;finish_reason&quot;: tool_calls, &quot;headers&quot;: {&quot;content-type&quot;: application/json}, &quot;json&quot;: {&quot;choices&quot;: [{&quot;finish_reason&quot;: tool_calls, &quot;message&quot;: {&quot;content&quot;: hello from cassette, &quot;tool_calls&quot;: [{&quot;function&quot;: {&quot;arguments&quot;: {&quot;query&quot;:&quot;kujo&quot;}, &quot;name&quot;: lookup}, &quot;id&quot;: call_1}]}}], &quot;usage&quot;: {&quot;completion_tokens&quot;: 5, &quot;prompt_tokens&quot;: 7, &quot;total_tokens&quot;: 12}}, &quot;message&quot;: hello from cassette, &quot;model&quot;: gpt-replay, &quot;provider&quot;: , &quot;status&quot;: 200, &quot;text&quot;: {&quot;choices&quot;:[{&quot;finish_reason&quot;:&quot;tool_calls&quot;,&quot;message&quot;:{&quot;content&quot;:&quot;hello from cassette&quot;,&quot;tool_calls&quot;:[{&quot;id&quot;:&quot;call_1&quot;,&quot;function&quot;:{&quot;name&quot;:&quot;lookup&quot;,&quot;arguments&quot;:&quot;{\&quot;query\&quot;:\&quot;kujo\&quot;}&quot;}}]}}],&quot;usage&quot;:{&quot;prompt_tokens&quot;:7,&quot;completion_tokens&quot;:5,&quot;total_tokens&quot;:12}}, &quot;tool_calls&quot;: [{&quot;arguments_json&quot;: {&quot;query&quot;:&quot;kujo&quot;}, &quot;id&quot;: call_1, &quot;name&quot;: lookup}], &quot;usage&quot;: {&quot;completion_tokens&quot;: 5, &quot;prompt_tokens&quot;: 7, &quot;total_tokens&quot;: 12}})
+ </pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_replay_cassette.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a> · <a href="/examples/replay/">Full example</a></p></article><a class="sk-button" href="/examples/">Explore all examples</a></section>
+ <!-- LANGUAGE EXPLORER END -->
+-<section class="language-section"><p class="eyebrow">One language, practical building blocks</p><h2>Build scripts. Services. AI workflows.</h2><div class="language-grid"><article><h3>Automate local work</h3><p>Work with files, processes, JSON and collections. Write small scripts with functions, structs and explicit error handling.</p><a href="/examples/files/">Explore file operations</a></article><article><h3>Build applications</h3><p>Use HTTP and networking helpers, modules, async tasks and generators. Check the documented runtime limits before choosing a deployment.</p><a href="/examples/http/">Inspect an HTTP server</a></article><article><h3>Make AI work inspectable</h3><p>Identify requests, replay recorded responses and validate structured data. Add packages when you need agent orchestration.</p><a href="/examples/replay/">Run an offline AI call</a></article></div></section>
+-<section class="language-section"><p class="eyebrow">AI-native, with concrete mechanisms</p><h2>Repeat the request. Inspect the result.</h2><div class="language-grid"><article><h3>Stable request identity</h3><p><code>ai_request_hash</code> derives a deterministic request identifier while excluding credentials. Compare requests without sending them to a model.</p><a href="/examples/request-hash/">Run the hash example</a></article><article><h3>Offline model replay</h3><p><code>ai_chat</code> can read recorded cassettes. Reproduce a response in tests without a live provider, then validate its data with <code>json_schema_validate</code>.</p><a href="/examples/replay/">Replay a response</a> · <a href="/examples/structured-output/">Validate a schema</a></article></div><p>Conventional languages already offer async functions, HTTP clients and testing libraries. Kujo adds AI request identity, replay, streaming callbacks and capability controls at the runtime level. These mechanisms support review; they do not guarantee correctness or isolation.</p><p>Choose Kujo for scripts and tools that benefit from those primitives. Keep Python or TypeScript when existing libraries, deployment requirements or team experience matter more. Independent Kujo tools can still inspect and evaluate those repositories.</p><details><summary>What belongs to which layer?</summary><ul><li><strong>Language:</strong> functions, modules, collections, structs, enums, matching, async and generators.</li><li><strong>Rust VM/runtime:</strong> execution, host helpers, AI primitives and capability-aware access.</li><li><strong>Core CLI:</strong> check, format, lint, tests, LSP and documentation generation.</li><li><strong>Separate packages:</strong> Kennel, Agents SDK, AI SDK and workflow tools have their own installation and versions.</li><li><strong>External systems:</strong> live model providers require configuration and credentials; optional hosts and integrations are not bundled language features.</li></ul></details></section>
+-<section class="language-section" id="get-started"><p class="eyebrow">Your first successful program</p><h2>Install. Check. Run.</h2><p>For a runtime-only install on supported macOS, Linux and Windows systems with Node.js 18 or newer:</p><div class="sample-code"><pre tabindex="0"><code>npm install --global @kujolang/kujo-runtime@1.9.0
+-kujo --version</code></pre><button class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save <code>print("Hello, Kujo!")</code> in <code>hello.kujo</code>:</p><div class="sample-code"><pre tabindex="0"><code>kujo check hello.kujo
+-kujo run hello.kujo</code></pre><button class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Expected output: <code>Hello, Kujo!</code>. <a href="/language/">Native installers, Windows guidance and troubleshooting</a>.</p></section>
+-<section class="language-section"><p class="eyebrow">Ecosystem · installed separately</p><h2>Start with the job you need done.</h2><p>These are independent projects. Tools that inspect repositories or run configured commands can support existing languages; SDK code itself runs in Kujo.</p><div class="language-grid"><article><h3>Build an AI agent</h3><p>Use Agents SDK with AI SDK for Kujo agent programs.</p><a href="/ecosystem/agents-sdk/">Agents SDK</a></article><article><h3>Coordinate multi-step work</h3><p>Define repeatable work and inspect its state.</p><a href="/ecosystem/dispatch/">Dispatch</a></article><article><h3>Understand a repository</h3><p>Inspect existing code and assemble context for a change.</p><a href="/ecosystem/scout/">Scout</a> · <a href="/ecosystem/scent/">Scent</a></article><article><h3>Evaluate generated work</h3><p>Run configured checks and browser assertions for your project.</p><a href="/ecosystem/eval/">Eval</a> · <a href="/ecosystem/lens/">Lens</a></article><article><h3>Review a change</h3><p>Turn Git diffs and footprint into inspectable evidence.</p><a href="/ecosystem/patchbrief/">PatchBrief</a> · <a href="/ecosystem/changebucket/">ChangeBucket</a></article><article><h3>Prepare a release</h3><p>Evaluate repository readiness against explicit checks.</p><a href="/ecosystem/shipcheck/">ShipCheck</a></article></div><p><a href="/ecosystem/">Browse the full ecosystem</a></p><h3>From request to reviewable change</h3><ol class="workflow-stages"><li>Define scope</li><li>Retrieve context</li><li>Implement in a chosen environment</li><li>Run tests</li><li>Inspect change evidence</li><li>Assess readiness</li></ol><p>Composable stages, not an automatically integrated pipeline. <a href="/development-workflow/">Follow a reproducible repository workflow</a>.</p></section>
+-<section class="language-section"><p class="eyebrow">Evidence over promises</p><h2>Inspect what people build.</h2><div class="language-grid"><article><h3>This website</h3><p>Kujo SSG generates static HTML; SiteKit supplies the visual system.</p><a href="https://github.com/kujolang/kujolang.ai/blob/main/build.kujo">Inspect the build source</a></article><article><h3>Applications and services</h3><p>Explore the Kujo-backed CMS, CRUD API and RAG showcases with their runtime and integration boundaries.</p><a href="/ecosystem/cms/">CMS</a> · <a href="/ecosystem/crud-api/">CRUD API</a> · <a href="/ecosystem/rag/">RAG</a></article><article><h3>Performance and comparisons</h3><p>Separate VM execution, startup and application workloads. Cross-language results remain unmeasured unless a reproducible report says otherwise.</p><a href="/performance/">Measurement methodology</a> · <a href="/compare/">Compare language approaches</a></article></div></section>
+-<section class="language-section"><h2>Start where you are.</h2><div class="language-grid"><article><h3>Learn the language</h3><p>Prerequisite: a terminal and a supported runtime. Scope: one script, then functions and data. First action: install Kujo and run Hello World.</p><a href="/language/">Start the language guide</a></article><article><h3>Build AI agents</h3><p>Prerequisite: Kujo and the SDK dependencies. Scope: a small agent with explicit tools. First action: follow the Agents SDK installation and offline examples.</p><a href="/ecosystem/agents-sdk/">Start with Agents SDK</a></article><article><h3>Improve an existing workflow</h3><p>Prerequisite: a Git repository and its test commands. Scope: inspect a change and record evidence. First action: run the local workflow exercise.</p><a href="/development-workflow/">Keep your language, improve the workflow</a></article></div></section>
+-<section class="language-section language-final"><h2>Make your first program run.</h2><a class="sk-button" href="/language/">Get Started</a><button class="sk-button home-video-button" data-variant="secondary" type="button" data-hero-video-open aria-haspopup="dialog"><span>View video</span></button></section>
++<section class="language-section home-build" aria-labelledby="build-title">
++<header class="home-section-heading"><p class="eyebrow">02 / Put it to work</p><h2 id="build-title">Small scripts.<br>Real building blocks.</h2></header>
++<div class="home-card-grid">
++<article class="home-card"><span class="home-card-mark" aria-hidden="true">[ / ]</span><h3>Automate local work</h3><p>Files, processes, JSON and collections. Turn a repetitive job into a script.</p><a href="/examples/files/">File operations ↗</a></article>
++<article class="home-card"><span class="home-card-mark" aria-hidden="true">{ : }</span><h3>Build applications</h3><p>HTTP helpers, modules and async tasks. Start small and inspect the runtime limits.</p><a href="/examples/http/">HTTP server ↗</a></article>
++<article class="home-card"><span class="home-card-mark" aria-hidden="true">&gt;_</span><h3>Work with AI</h3><p>Identify requests, replay responses and validate structured data.</p><a href="/examples/replay/">Offline AI call ↗</a></article>
++</div></section>
++<section class="home-runtime" aria-labelledby="runtime-title"><div class="home-runtime-inner">
++<header><p class="eyebrow">03 / Inside the runtime</p><h2 id="runtime-title">Repeat the request.<br>Inspect the result.</h2><p>AI primitives you can test, with evidence you can review.</p><a href="/compare/">Compare language approaches ↗</a></header>
++<div class="home-runtime-steps"><article><span aria-hidden="true">01</span><div><h3>Identify</h3><p><code>ai_request_hash</code> gives a request a stable identity, excluding credentials.</p><a href="/examples/request-hash/">Inspect a request hash</a></div></article><article><span aria-hidden="true">02</span><div><h3>Replay</h3><p><code>ai_chat</code> reads recorded responses without a live model provider.</p><a href="/examples/replay/">Run a recorded response</a></div></article><article><span aria-hidden="true">03</span><div><h3>Validate</h3><p>Check the response shape with <code>json_schema_validate</code>.</p><a href="/examples/structured-output/">Validate structured output</a></div></article></div>
++<p class="home-runtime-note">These mechanisms support review; they do not guarantee correctness or isolation. <a href="/language/">Explore the language and its boundaries.</a></p>
++</div></section>
++<section class="language-section home-start" id="get-started" aria-labelledby="start-title"><header><p class="eyebrow">04 / Your first program</p><h2 id="start-title">Install.<br>Check.<br>Run.</h2><p>Supported macOS, Linux and Windows systems. Node.js 18 or newer.</p><a href="/language/">Installation guide &amp; troubleshooting ↗</a></header><div class="home-terminal"><div class="home-terminal-bar"><span aria-hidden="true">● ● ●</span><span>Terminal / Quick start</span></div><p>01 — Install the runtime</p><div class="sample-code"><pre tabindex="0"><code>npm install --global @kujolang/kujo-runtime</code></pre><button class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>02 — Save this as <code>hello.kujo</code></p><div class="sample-code"><pre tabindex="0"><code>print("Hello, Kujo!")</code></pre><button class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>03 — Check and run</p><div class="sample-code"><pre tabindex="0"><code>kujo check hello.kujo
++kujo run hello.kujo</code></pre><button class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p class="home-terminal-result">↳ Hello, Kujo!</p></div></section>
++<section class="language-section home-ecosystem" aria-labelledby="ecosystem-title"><header class="home-section-heading"><div><p class="eyebrow">Ecosystem · installed separately</p><h2 id="ecosystem-title">Add what the job needs.</h2></div><p>Independent tools and SDKs. Start with one; build your workflow as you go.</p></header><div class="home-tool-grid">
++<a href="/ecosystem/agents-sdk/"><span>Build an AI agent</span><strong>Agents SDK <span aria-hidden="true">↗</span></strong></a>
++<a href="/ecosystem/dispatch/"><span>Coordinate work</span><strong>Dispatch <span aria-hidden="true">↗</span></strong></a>
++<a href="/ecosystem/scout/"><span>Understand a repository</span><strong>Scout <span aria-hidden="true">↗</span></strong></a>
++<a href="/ecosystem/eval/"><span>Evaluate generated work</span><strong>Eval <span aria-hidden="true">↗</span></strong></a>
++<a href="/ecosystem/patchbrief/"><span>Review a change</span><strong>PatchBrief <span aria-hidden="true">↗</span></strong></a>
++<a href="/ecosystem/shipcheck/"><span>Prepare a release</span><strong>ShipCheck <span aria-hidden="true">↗</span></strong></a>
++</div><div class="home-link-row"><a href="/ecosystem/">Browse the ecosystem ↗</a><a href="/development-workflow/">Follow a repository workflow ↗</a></div></section>
++<section class="language-section home-proof" aria-labelledby="proof-title"><header><p class="eyebrow">05 / Open to inspection</p><h2 id="proof-title">See it in use.</h2><p>This website is built with Kujo SSG and SiteKit. The source is open.</p><a href="https://github.com/kujolang/kujolang.ai/blob/main/build.kujo">Read the build source ↗</a></header><div class="home-proof-links"><a href="/ecosystem/cms/"><span>01</span><strong>CMS &amp; applications</strong><span aria-hidden="true">↗</span></a><a href="/ecosystem/crud-api/"><span>02</span><strong>APIs &amp; services</strong><span aria-hidden="true">↗</span></a><a href="/performance/"><span>03</span><strong>Performance evidence</strong><span aria-hidden="true">↗</span></a></div></section>
++<section class="language-section language-final"><p class="eyebrow">Your next step</p><h2>Make something run.</h2><p>One language. Your first script. A place to start.</p><div><a class="sk-button" href="/language/">Get Started</a><button class="sk-button home-video-button" data-variant="secondary" type="button" data-hero-video-open aria-haspopup="dialog"><span>View video</span></button></div></section>
+ 	<div class="hero-video-modal" data-hero-video-modal hidden>
+ 		<div class="hero-video-modal__backdrop" data-hero-video-close></div>
+ 		<section class="hero-video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="hero-video-title" tabindex="-1">

@@ -1,0 +1,4 @@
+Responsive image contract passed for 556 rendered images.
+FAIL: missing text in output/index.html: Kujo is an AI-native programming language for local-first automation and practical application scripting.
+Social cards verified: 281 cards cover 281 shareable routes; 404 uses the branded home fallback.
+scripts/verify-site-contract.sh: line 394: syntax error near unexpected token `.home-hero'

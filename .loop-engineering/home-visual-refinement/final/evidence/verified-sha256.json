@@ -1,0 +1,10 @@
+{
+  "assets/css/style.css": "7c317299a10367edb65f1e87bdc0a00995dfa1f16ca7e95c3523d4fadaa149c1",
+  "templates/page-home.html": "0773962152baf9a71621801e0d9d1a417f8097fa7ad5fe4915d61a2036fd48ef",
+  "scripts/render-language-examples.mjs": "7a0a738d06806ca98818b0c62ec265a3b0f23deec0c648fb785a95a78f9267d4",
+  "scripts/test-language-browser.cjs": "22a2e94387c54763afcefaa5692047df13ced9c8e17de5def3332d653d897ae6",
+  "scripts/verify-site-contract.sh": "00ea774ff9aaf41db0c16e0dc43d0f8af407f3efb76908cbbcde3c0c6f0c889f",
+  "output/index.html": "29378f2c5731924ea9e67240816a35cfaea6ecda9d27057e3c90cb846c115d2d",
+  "output/assets/css/style.css": "7c317299a10367edb65f1e87bdc0a00995dfa1f16ca7e95c3523d4fadaa149c1",
+  "output/assets/css/style.min.css": "1c657196ab6d1013add66f8aa0f0851a003a2397f6472c1c73dfce7563286dde"
+}

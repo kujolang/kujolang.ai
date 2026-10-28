@@ -1,0 +1,6 @@
+line	status	text	evidence
+3	already-done	local-fixable: Use comparison-inspired contrasting sections, numbered headings and concise copy.	.loop-engineering/home-visual-refinement/checklist.md:3
+4	already-done	local-fixable: Restore the shared homepage footer.	.loop-engineering/home-visual-refinement/checklist.md:4
+5	already-done	local-fixable: Remove visible release numbers; retain exact example provenance internally.	.loop-engineering/home-visual-refinement/checklist.md:5
+6	local-fixable	local-fixable: Verify responsive layout, accessibility, examples and build through native Loop gates.	.loop-engineering/home-visual-refinement/checklist.md:6
+7	needs-release-pipeline	local-fixable: Commit, push and verify authorized Pages deployment.	.loop-engineering/home-visual-refinement/checklist.md:7

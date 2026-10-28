@@ -1,0 +1,9 @@
+AssertionError [ERR_ASSERTION]: horizontal overflow
+    at /Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/scripts/test-language-browser.cjs:19:3 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
