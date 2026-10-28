@@ -1,0 +1,37 @@
+id:       examples-tests
+title:    Tests
+tagline:  Check assertions with the built-in test runner.
+file:     public/samples/tests.kujo
+language: kujo
+
+--- code preview ---
+# Kujo test framework example
+# Run with: kujo test-run examples/testing_demo.kujo
+
+test "arithmetic" {
+    assert_equal(2 + 3, 5)
+    assert_equal(7 - 4, 3)
+}
+
+test "booleans" {
+    assert_true(8 % 2 == 0)
+    assert_false(7 % 2 == 0)
+}
+
+test "arrays" {
+    let samples := [1, 2, 3]
+    assert_equal(len(samples), 3)
+    assert_contains(samples, 2)
+}
+
+test "dictionaries" {
+    let user := {"name": "Ada", "active": true}
+    assert_equal(user["name"], "Ada")
+    assert_true(user["active"])
+}
+
+test "strings" {
+    assert_equal(to_upper("kujo"), "KUJO")
+    assert_true(contains("local-first", "local") == 1)
+}
+

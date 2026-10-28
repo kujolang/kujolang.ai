@@ -1,0 +1,25 @@
+id:       performance
+title:    Performance evidence
+tagline:  Reproduce the measurement and understand its limits.
+file:     public/samples/functions.kujo
+language: kujo
+
+--- code preview ---
+# Expected output:
+# total: 42
+
+func total(values) {
+    mut sum := 0
+    for value in values {
+        sum = sum + value
+    }
+    return sum
+}
+
+let scores := [8, 13, 21]
+print("total: " + to_string(total(scores)))
+
+
+--- expected output ---
+total: 42
+

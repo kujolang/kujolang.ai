@@ -1,0 +1,3 @@
+Install the runtime and run your first program.
+
+Kujo: Programming language for AI-native software

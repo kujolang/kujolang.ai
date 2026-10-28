@@ -1,0 +1,184 @@
+[
+  {
+    "url": "https://kujolang.ai/assets/images/social/home.jpg",
+    "status": 200,
+    "expected_sha256": "3bb94d1513b7690969037b24ed205cf188c51910abf9be76162d6742659db66e",
+    "observed_sha256": "3bb94d1513b7690969037b24ed205cf188c51910abf9be76162d6742659db66e",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples.jpg",
+    "status": 200,
+    "expected_sha256": "cac5d3d7d58dc4847fd0ece9d77f97803f2aec4ae814d1e0f2e5199f4b7bc280",
+    "observed_sha256": "cac5d3d7d58dc4847fd0ece9d77f97803f2aec4ae814d1e0f2e5199f4b7bc280",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/language.jpg",
+    "status": 200,
+    "expected_sha256": "5c7d8afaf056466881a71cea8b1e05fddb037fafa9e4a08f8df86ee16449fecd",
+    "observed_sha256": "5c7d8afaf056466881a71cea8b1e05fddb037fafa9e4a08f8df86ee16449fecd",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/development-workflow.jpg",
+    "status": 200,
+    "expected_sha256": "a4a4ae5134384119ac3a06f2f295e5203ed890d2aaaf2500812da1aaf7fc0b72",
+    "observed_sha256": "a4a4ae5134384119ac3a06f2f295e5203ed890d2aaaf2500812da1aaf7fc0b72",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/performance.jpg",
+    "status": 200,
+    "expected_sha256": "10444345feccfad3446394341efd19ac05cb456f72687bbaa58b142bc1deabb2",
+    "observed_sha256": "10444345feccfad3446394341efd19ac05cb456f72687bbaa58b142bc1deabb2",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-hello-world.jpg",
+    "status": 200,
+    "expected_sha256": "070151f578d6c3f164dcf6a1c94f88d8d4e2a70edee70e8d16a9e1d8ace3fe0a",
+    "observed_sha256": "070151f578d6c3f164dcf6a1c94f88d8d4e2a70edee70e8d16a9e1d8ace3fe0a",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-variables.jpg",
+    "status": 200,
+    "expected_sha256": "93cf668626a10b7f13d18e1c27e274ad8e5cecb957824afb593f3ad343011c76",
+    "observed_sha256": "93cf668626a10b7f13d18e1c27e274ad8e5cecb957824afb593f3ad343011c76",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-functions.jpg",
+    "status": 200,
+    "expected_sha256": "c28247761497bfed0847866e1d4942a84ca7c294aef4a8827feb5febd105b711",
+    "observed_sha256": "c28247761497bfed0847866e1d4942a84ca7c294aef4a8827feb5febd105b711",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-control-flow.jpg",
+    "status": 200,
+    "expected_sha256": "8c0bacab7301dd44fb97b2ae18113ecb13b7f28afef764e5aa4a37e7089a7d40",
+    "observed_sha256": "8c0bacab7301dd44fb97b2ae18113ecb13b7f28afef764e5aa4a37e7089a7d40",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-collections.jpg",
+    "status": 200,
+    "expected_sha256": "2728061cd34034a673faaad23aaac2c2d273a03606172020af9e2383fa083188",
+    "observed_sha256": "2728061cd34034a673faaad23aaac2c2d273a03606172020af9e2383fa083188",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-structs.jpg",
+    "status": 200,
+    "expected_sha256": "94cfc8638338249f4c713c1e028d351f97550f8ee923897904a117e9a171d340",
+    "observed_sha256": "94cfc8638338249f4c713c1e028d351f97550f8ee923897904a117e9a171d340",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-pattern-matching.jpg",
+    "status": 200,
+    "expected_sha256": "186065b7ef36bd2085464a099ebd4bfc19947f4a58f07628f61cf5c885d9fd50",
+    "observed_sha256": "186065b7ef36bd2085464a099ebd4bfc19947f4a58f07628f61cf5c885d9fd50",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-errors.jpg",
+    "status": 200,
+    "expected_sha256": "7fde86f08665c211e55e2a97841cbe25daead5a2938680a38a5bd0b11c09d852",
+    "observed_sha256": "7fde86f08665c211e55e2a97841cbe25daead5a2938680a38a5bd0b11c09d852",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-async.jpg",
+    "status": 200,
+    "expected_sha256": "4d5ae2d403a38d7ff793bc65ef4caf8aec06222383043813ae9299983d5b312d",
+    "observed_sha256": "4d5ae2d403a38d7ff793bc65ef4caf8aec06222383043813ae9299983d5b312d",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-channels.jpg",
+    "status": 200,
+    "expected_sha256": "802d1861041815176a35bfb19f636922f412271afe9599c827558be326e56fd8",
+    "observed_sha256": "802d1861041815176a35bfb19f636922f412271afe9599c827558be326e56fd8",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-generators.jpg",
+    "status": 200,
+    "expected_sha256": "c9f84ed6fee0dc5933452d00c54be18f07905aa032d12b805730500d2a6055e9",
+    "observed_sha256": "c9f84ed6fee0dc5933452d00c54be18f07905aa032d12b805730500d2a6055e9",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-json.jpg",
+    "status": 200,
+    "expected_sha256": "5accfd845685b38f5d7c664006654c782d52cec7486e690d7ea141a72e353d39",
+    "observed_sha256": "5accfd845685b38f5d7c664006654c782d52cec7486e690d7ea141a72e353d39",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-structured-output.jpg",
+    "status": 200,
+    "expected_sha256": "407fd10e93a8e5feff70a3b47650f2324fafd2eb6e878d4142d1ada63597ddea",
+    "observed_sha256": "407fd10e93a8e5feff70a3b47650f2324fafd2eb6e878d4142d1ada63597ddea",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-request-hash.jpg",
+    "status": 200,
+    "expected_sha256": "39539dba0692dd1fa00583d8d1c73eeb9c3991075ad056ea0d1133cef76a47cb",
+    "observed_sha256": "39539dba0692dd1fa00583d8d1c73eeb9c3991075ad056ea0d1133cef76a47cb",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-replay.jpg",
+    "status": 200,
+    "expected_sha256": "a7215f809843dd7cca317e11b67ac894e4d723480aab9e7f1a8e38568de1690f",
+    "observed_sha256": "a7215f809843dd7cca317e11b67ac894e4d723480aab9e7f1a8e38568de1690f",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-streaming.jpg",
+    "status": 200,
+    "expected_sha256": "b0c7c13128dd0391457617d59b80babfcb302ca968cb0065bd3cf92126c3eead",
+    "observed_sha256": "b0c7c13128dd0391457617d59b80babfcb302ca968cb0065bd3cf92126c3eead",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-capabilities.jpg",
+    "status": 200,
+    "expected_sha256": "d91e7b4d0ef00167c35c7ac76a7d759cfa757d956dea3726c2c2854525cd2c95",
+    "observed_sha256": "d91e7b4d0ef00167c35c7ac76a7d759cfa757d956dea3726c2c2854525cd2c95",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-tests.jpg",
+    "status": 200,
+    "expected_sha256": "097d824ed8ea377363aeb55726018cda78fac34e91db49b9fd39e651ec754616",
+    "observed_sha256": "097d824ed8ea377363aeb55726018cda78fac34e91db49b9fd39e651ec754616",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-modules.jpg",
+    "status": 200,
+    "expected_sha256": "4074cdf780744153142be18f472afda497a3cbcd3926ba4bb21db616d5539c66",
+    "observed_sha256": "4074cdf780744153142be18f472afda497a3cbcd3926ba4bb21db616d5539c66",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-files.jpg",
+    "status": 200,
+    "expected_sha256": "a33ac6c0b1d64ed85a5fb61ff59f16885c7065317e737264f31183518c5596e7",
+    "observed_sha256": "a33ac6c0b1d64ed85a5fb61ff59f16885c7065317e737264f31183518c5596e7",
+    "matches": true
+  },
+  {
+    "url": "https://kujolang.ai/assets/images/social/examples-http.jpg",
+    "status": 200,
+    "expected_sha256": "cc7cad1e82559d2b5d0249e93bdfe26053c19520b1425811133ea3f0b49130f1",
+    "observed_sha256": "cc7cad1e82559d2b5d0249e93bdfe26053c19520b1425811133ea3f0b49130f1",
+    "matches": true
+  }
+]

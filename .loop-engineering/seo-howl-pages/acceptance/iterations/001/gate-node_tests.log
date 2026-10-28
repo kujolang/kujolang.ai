@@ -1,0 +1,41 @@
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 test
+> node --test tests/*.test.mjs
+
+✔ published projections match the validated catalog (41.00897ms)
+✔ reject unknown status (2.496051ms)
+✔ reject missing source (1.235324ms)
+✔ reject broken source (2.060401ms)
+✔ reject unknown Kujo fact (1.272324ms)
+✔ reject broken related page (1.892123ms)
+✔ reject path traversal (2.665067ms)
+✔ reject social card path traversal (1.870663ms)
+✔ reject missing competitor recommendation (1.719928ms)
+✔ reject missing identity provenance (1.913779ms)
+✔ reject duplicate route (1.788159ms)
+✔ reject invalid review date (1.528698ms)
+✔ hub rejects a stale fact reference before publication (1.838731ms)
+✔ hub rejects a missing language cell rather than shifting columns (1.474645ms)
+✔ direct comparisons reject architecture claims without valid evidence (1.331827ms)
+✔ direct comparisons reject incomplete decision rows (1.704315ms)
+✔ each technical comparison publishes its evaluation plan in HTML and Markdown (4.623677ms)
+✔ guides reject unsourced architecture cards and matrix claims (3.062483ms)
+✔ guides reject incomplete examples instead of shifting table columns (1.930039ms)
+✔ every guide preserves its detailed criteria and examples in HTML and Markdown (7.145962ms)
+✔ boundary table rejects missing evidence and malformed rows (2.926806ms)
+✔ boundary results survive both projections and HTML escapes fixture text (5.781928ms)
+✔ BAML hub execution points to runtime evidence, not compiler diagnostics (1.563436ms)
+✔ guide templates stay in sync with authored content (146.18854ms)
+✔ performance evidence agrees with the published receipt (0.85926ms)
+✔ provider registry contains each requested integration exactly once (3.504166ms)
+✔ every registered local logo exists (17.378816ms)
+✔ creates deterministic responsive WebP variants without enlarging small images (511.698951ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 894.399721

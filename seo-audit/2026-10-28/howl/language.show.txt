@@ -1,0 +1,16 @@
+id:       language
+title:    Learn Kujo
+tagline:  Install the runtime and run your first program.
+file:     public/samples/hello-world.kujo
+language: kujo
+
+--- code preview ---
+# Expected output:
+# Kujo Kujo!
+
+print("Kujo Kujo!")
+
+
+--- expected output ---
+Kujo Kujo!
+

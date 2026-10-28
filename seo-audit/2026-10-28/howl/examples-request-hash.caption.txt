@@ -1,0 +1,3 @@
+Hash an AI request without including credentials.
+
+Kujo: Programming language for AI-native software

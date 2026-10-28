@@ -1,0 +1,1 @@
+{"initial_attempt":"Default Python urllib user agent returned HTTP 403 for an image; it did not finish the image receipt.","follow_up":"Repeat using the same explicit KujoSiteAudit/1.0 user agent used by the page crawl. Treat default-agent behavior as access-policy evidence, not a broken image."}

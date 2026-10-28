@@ -4,3 +4,11 @@
 .loop-engineering/evidence/language-first-baseline/index.html -whitespace
 # Verbatim upstream samples are checked by SHA-256, including their whitespace.
 public/samples/*.kujo -whitespace
+# Dated audit receipts preserve original bytes, including RFC-style CSV CRLF.
+seo-audit/2026-10-28/**/*.csv whitespace=cr-at-eol
+seo-audit/2026-10-28/raw/** -whitespace -diff
+# Native binary-patch receipts are evidence; review the implementation commits.
+.loop-engineering/seo-howl-pages/**/diff.patch -diff
+seo-audit/2026-10-28/howl/*.show.txt -whitespace
+# Hash-sealed audit artifacts must survive checkout without newline conversion.
+seo-audit/2026-10-28/** -text

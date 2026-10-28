@@ -1,0 +1,35 @@
+id:       examples-json
+title:    JSON data
+tagline:  Read JSON and access nested fields.
+file:     public/samples/json.kujo
+language: kujo
+
+--- code preview ---
+# JSON Support Demo
+# Demonstrates parse_json() and to_json() functions
+
+print("=== Kujo JSON Support Demo ===")
+print("")
+
+# Example 1: Parse a configuration file
+print("1. Parsing Configuration")
+config_json := "{\"app_name\": \"My App\", \"version\": \"1.0.0\", \"settings\": {\"debug\": true, \"port\": 8080}}"
+config := parse_json(config_json)
+print("App name:", config["app_name"])
+print("Version:", config["version"])
+print("Debug mode:", config["settings"]["debug"])
+print("Port:", config["settings"]["port"])
+print("")
+
+
+
+--- expected output ---
+=== Kujo JSON Support Demo ===
+
+1. Parsing Configuration
+App name: My App
+Version: 1.0.0
+Debug mode: true
+Port: 8080
+
+

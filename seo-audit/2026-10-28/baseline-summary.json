@@ -1,0 +1,17 @@
+{
+  "phase": "baseline",
+  "pages": 26,
+  "production_200": 26,
+  "indexable": 26,
+  "missing_titles": 0,
+  "duplicate_titles": 0,
+  "missing_descriptions": 0,
+  "duplicate_descriptions": 0,
+  "missing_canonicals": 0,
+  "orphans": 0,
+  "broken_internal_links": 0,
+  "schema_types": [
+    "Organization|WebPage",
+    "Organization|WebSite"
+  ]
+}

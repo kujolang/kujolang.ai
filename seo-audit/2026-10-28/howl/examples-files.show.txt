@@ -1,0 +1,48 @@
+id:       examples-files
+title:    File operations
+tagline:  Explore file operations.
+file:     public/samples/files.kujo
+language: kujo
+
+--- code preview ---
+# File Operations Demo
+# Demonstrates file operation helpers with local output helpers.
+
+func section(title) {
+    print("")
+    print("== " + title + " ==")
+}
+
+func kv(label, value) {
+    print("  " + label + ": " + to_string(value))
+}
+
+func ok(message) {
+    print("  ✓ " + message)
+}
+
+section("File Operations Demo")
+
+# Create a test file
+section("1. Creating test file")
+write_file("demo_test.txt", "Hello, Kujo!\nThis is a test file.\n")
+ok("Created demo_test.txt")
+
+# Check file size
+section("2. Checking file size")
+size := file_size("demo_test.txt")
+kv("File size", "${size} bytes")
+
+# Copy the file
+section("3. Copying file")
+copy_file("demo_test.txt", "demo_test_copy.txt")
+ok("Copied to demo_test_copy.txt")
+
+# Verify both files exist
+section("4. Verifying both files exist")
+exists1 := file_exists("demo_test.txt")
+exists2 := file_exists("demo_test_copy.txt")
+kv("Original exists", exists1)
+kv("Copy exists", exists2)
+
+... (truncated)

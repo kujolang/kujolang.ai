@@ -1,0 +1,3 @@
+Catch an error and keep the program running.
+
+Kujo: Programming language for AI-native software

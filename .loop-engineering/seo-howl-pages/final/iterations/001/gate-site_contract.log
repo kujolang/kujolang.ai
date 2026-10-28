@@ -1,0 +1,4 @@
+Responsive image contract passed for 556 rendered images.
+FAIL: missing text in output/index.html: controls playsinline preload="metadata"
+Social cards verified: 281 cards cover 281 shareable routes; 404 uses the branded home fallback.
+Site contract failed with 1 issue(s).

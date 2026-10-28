@@ -1,0 +1,47 @@
+id:       examples-pattern-matching
+title:    Enums and pattern matching
+tagline:  Handle tagged values and Result variants.
+file:     public/samples/pattern-matching.kujo
+language: kujo
+
+--- code preview ---
+# Pattern matching examples using current Kujo match syntax.
+
+enum Status {
+    Success,
+    Failure
+}
+
+func status_for(code) {
+    if code == 200 {
+        return Status::Success("ok")
+    }
+    return Status::Failure("not ok")
+}
+
+let result := status_for(200)
+
+match result {
+    case Status::Success(message): {
+        print("success: " + message)
+    }
+    case Status::Failure(error): {
+        print("failure: " + error)
+    }
+}
+
+let maybe_value := Ok(42)
+
+match maybe_value {
+    case Ok(value): {
+        print("value: " + to_string(value))
+    }
+    case Err(message): {
+        print("error: " + message)
+    }
+}
+
+
+--- expected output ---
+value: 42
+

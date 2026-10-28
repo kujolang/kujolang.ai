@@ -1,0 +1,23 @@
+id:       examples-async
+title:    Async tasks
+tagline:  Wait for an async function to return a value.
+file:     public/samples/async.kujo
+language: kujo
+
+--- code preview ---
+// Simple async test
+
+async func get_value() {
+    return 42;
+}
+
+let p = get_value();
+println("Promise type: ", type(p));
+let result = await p;
+println("Result: ", result);
+
+
+--- expected output ---
+Promise type:  promise
+Result:  42
+

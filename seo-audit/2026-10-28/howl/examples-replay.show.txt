@@ -1,0 +1,28 @@
+id:       examples-replay
+title:    AI calls and replay
+tagline:  Replay a recorded model response offline.
+file:     public/samples/replay.kujo
+language: kujo
+
+--- code preview ---
+func kv(label, value) {
+    print(label + ": " + value)
+}
+
+let options := {
+    "endpoint": "http://127.0.0.1:1/v1/chat/completions",
+    "model": "gpt-replay",
+    "cassette": {
+        "mode": "replay",
+        "dir": "tests/fixtures/ai_cassettes"
+    }
+}
+
+let result := ai_chat("Hello model", options)
+
+kv("replay_result", to_string(result))
+
+
+--- expected output ---
+replay_result: Ok({"finish_reason": tool_calls, "headers": {"content-type": application/json}, "json": {"choices": [{"finish_reason": tool_calls, "message": {"content": hello from cassette, "tool_calls": [{"function": {"arguments": {"query":"kujo"}, "name": lookup}, "id": call_1}]}}], "usage": {"completion_tokens": 5, "prompt_tokens": 7, "total_tokens": 12}}, "message": hello from cassette, "model": gpt-replay, "provider": , "status": 200, "text": {"choices":[{"finish_reason":"tool_calls","message":{"content":"hello from cassette","tool_calls":[{"id":"call_1","function":{"name":"lookup","arguments":"{\"query\":\"kujo\"}"}}]}}],"usage":{"prompt_tokens":7,"completion_tokens":5,"total_tokens":12}}, "tool_calls": [{"arguments_json": {"query":"kujo"}, "id": call_1, "name": lookup}], "usage": {"completion_tokens": 5, "prompt_tokens": 7, "total_tokens": 12}})
+

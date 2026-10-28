@@ -1,0 +1,46 @@
+objective: "Audit SEO and AI search readiness and generate truthful Howl showcases for 26 new pages"
+max_iterations: 1
+max_no_progress: 2
+max_consecutive_failures: 3
+
+allowed_actions:
+  - read_files
+  - edit_files
+  - run_tests
+  - commit_local_changes
+  - add_project_assets
+  - convert_project_assets
+  - deploy
+
+blocked_actions:
+  - destructive_cleanup
+  - production_config_change
+
+eval_gates:
+  - id: unchanged_verified_build
+    command: "python3 scripts/verify-seo-build-receipt.py"
+    required: true
+  - id: site_contract
+    command: "bash scripts/verify-site-contract.sh output"
+    required: true
+  - id: shell
+    command: "bash -n scripts/*.sh"
+    required: true
+  - id: diff
+    command: "git diff --check"
+    required: true
+
+commit:
+  enabled: false
+  strategy: small_meaningful
+  push: true
+
+memory:
+  enabled: true
+  provider: strata
+  project: "Agent Notes"
+  mode: consolidate
+  retrieval_tests: true
+
+# Commits/pushes are performed explicitly after all gates pass; native runner commits even on failure.
+# One evaluation per bounded phase; archive iterations before subsequent runs.

@@ -1,0 +1,16 @@
+id:       examples-hello-world
+title:    Hello World
+tagline:  Print your first message.
+file:     public/samples/hello-world.kujo
+language: kujo
+
+--- code preview ---
+# Expected output:
+# Kujo Kujo!
+
+print("Kujo Kujo!")
+
+
+--- expected output ---
+Kujo Kujo!
+

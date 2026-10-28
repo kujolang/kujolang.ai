@@ -1,0 +1,52 @@
+home  —  Kujo
+    file: public/samples/request-hash.kujo
+examples  —  Kujo language examples
+    file: public/samples/hello-world.kujo
+language  —  Learn Kujo
+    file: public/samples/hello-world.kujo
+development-workflow  —  An inspectable development workflow
+    file: public/samples/development-workflow.yml
+performance  —  Performance evidence
+    file: public/samples/functions.kujo
+examples-hello-world  —  Hello World
+    file: public/samples/hello-world.kujo
+examples-variables  —  Variables and types
+    file: public/samples/variables.kujo
+examples-functions  —  Functions and operators
+    file: public/samples/functions.kujo
+examples-control-flow  —  Control flow
+    file: public/samples/control-flow.kujo
+examples-collections  —  Collections
+    file: public/samples/collections.kujo
+examples-structs  —  Structs and methods
+    file: public/samples/structs.kujo
+examples-pattern-matching  —  Enums and pattern matching
+    file: public/samples/pattern-matching.kujo
+examples-errors  —  Error handling
+    file: public/samples/errors.kujo
+examples-async  —  Async tasks
+    file: public/samples/async.kujo
+examples-channels  —  Channels
+    file: public/samples/channels.kujo
+examples-generators  —  Generators
+    file: public/samples/generators.kujo
+examples-json  —  JSON data
+    file: public/samples/json.kujo
+examples-structured-output  —  Structured output validation
+    file: public/samples/structured-output.kujo
+examples-request-hash  —  Deterministic AI request IDs
+    file: public/samples/request-hash.kujo
+examples-replay  —  AI calls and replay
+    file: public/samples/replay.kujo
+examples-streaming  —  AI streaming
+    file: public/samples/streaming.kujo
+examples-capabilities  —  AI capability restrictions
+    file: public/samples/capabilities.kujo
+examples-tests  —  Tests
+    file: public/samples/tests.kujo
+examples-modules  —  Modules and imports
+    file: public/samples/modules.kujo
+examples-files  —  File operations
+    file: public/samples/files.kujo
+examples-http  —  HTTP and networking
+    file: public/samples/http.kujo

@@ -1,0 +1,3 @@
+Create variables with let and print their values.
+
+Kujo: Programming language for AI-native software

@@ -1,0 +1,12 @@
+{
+  "verified_at": "2026-10-28T11:32:47.124754+00:00",
+  "origin": "https://kujolang.ai",
+  "suites": [
+    "test-language-browser.cjs",
+    "test-examples-browser.cjs",
+    "test-guides-browser.cjs"
+  ],
+  "result": "passed",
+  "evidence": "../live-browser/",
+  "scope": "Homepage; all 21 examples; three guides; all 23 internal homepage destinations; responsive layouts, exact clipboard, no-JS and accessibility"
+}

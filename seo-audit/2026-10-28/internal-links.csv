@@ -1,0 +1,719 @@
+phase,source_url,destination_url,anchor_text,link_context,http_status,final_url,chain_length,verification,rel,recommended_action
+after,https://kujolang.ai/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/language/,Get Started,main,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/,View Examples,main,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/,All examples ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/samples/hello-world.kujo,hello-world.kujo,article,200,https://kujolang.ai/samples/hello-world.kujo,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/hello-world/,Full example,article,200,https://kujolang.ai/examples/hello-world/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/samples/functions.kujo,functions.kujo,article,200,https://kujolang.ai/samples/functions.kujo,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/functions/,Full example,article,200,https://kujolang.ai/examples/functions/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/samples/collections.kujo,collections.kujo,article,200,https://kujolang.ai/samples/collections.kujo,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/collections/,Full example,article,200,https://kujolang.ai/examples/collections/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/samples/async.kujo,async.kujo,article,200,https://kujolang.ai/samples/async.kujo,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/async/,Full example,article,200,https://kujolang.ai/examples/async/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/samples/request-hash.kujo,request-hash.kujo,article,200,https://kujolang.ai/samples/request-hash.kujo,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/request-hash/,Full example,article,200,https://kujolang.ai/examples/request-hash/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/samples/replay.kujo,replay.kujo,article,200,https://kujolang.ai/samples/replay.kujo,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/replay/,Full example,article,200,https://kujolang.ai/examples/replay/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/,Explore all examples,main,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/files/,File operations ↗,article,200,https://kujolang.ai/examples/files/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/http/,HTTP server ↗,article,200,https://kujolang.ai/examples/http/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/replay/,Offline AI call ↗,article,200,https://kujolang.ai/examples/replay/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/compare/,Compare language approaches ↗,header,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/request-hash/,Inspect a request hash,article,200,https://kujolang.ai/examples/request-hash/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/replay/,Run a recorded response,article,200,https://kujolang.ai/examples/replay/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/examples/structured-output/,Validate structured output,article,200,https://kujolang.ai/examples/structured-output/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/language/,Explore the language and its boundaries ↗,main,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/language/,Installation guide & troubleshooting ↗,header,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ecosystem/agents-sdk/,Build an AI agent Agents SDK ↗,main,200,https://kujolang.ai/ecosystem/agents-sdk/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ecosystem/dispatch/,Coordinate work Dispatch ↗,main,200,https://kujolang.ai/ecosystem/dispatch/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ecosystem/scout/,Understand a repository Scout ↗,main,200,https://kujolang.ai/ecosystem/scout/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ecosystem/eval/,Evaluate generated work Eval ↗,main,200,https://kujolang.ai/ecosystem/eval/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ecosystem/patchbrief/,Review a change PatchBrief ↗,main,200,https://kujolang.ai/ecosystem/patchbrief/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ecosystem/shipcheck/,Prepare a release ShipCheck ↗,main,200,https://kujolang.ai/ecosystem/shipcheck/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ecosystem/,Browse the ecosystem ↗,main,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/development-workflow/,Follow a repository workflow ↗,main,200,https://kujolang.ai/development-workflow/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ecosystem/cms/,01 CMS & applications ↗,main,200,https://kujolang.ai/ecosystem/cms/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ecosystem/crud-api/,02 APIs & services ↗,main,200,https://kujolang.ai/ecosystem/crud-api/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/performance/,03 Performance evidence ↗,main,200,https://kujolang.ai/performance/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/language/,Get Started,main,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/assets/videos/kujo-intro.mp4,Download the Kujo introduction video,main,200,https://kujolang.ai/assets/videos/kujo-intro.mp4,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ecosystem/spec/,Spec,main,200,https://kujolang.ai/ecosystem/spec/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ecosystem/scout/,Scout,main,200,https://kujolang.ai/ecosystem/scout/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ecosystem/scent/,Scent,main,200,https://kujolang.ai/ecosystem/scent/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ecosystem/workcell/,Workcell,main,200,https://kujolang.ai/ecosystem/workcell/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ecosystem/eval/,Eval,main,200,https://kujolang.ai/ecosystem/eval/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ecosystem/lens/,Lens,main,200,https://kujolang.ai/ecosystem/lens/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ecosystem/patchbrief/,PatchBrief,main,200,https://kujolang.ai/ecosystem/patchbrief/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ecosystem/changebucket/,ChangeBucket,main,200,https://kujolang.ai/ecosystem/changebucket/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ecosystem/shipcheck/,ShipCheck,main,200,https://kujolang.ai/ecosystem/shipcheck/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/examples/,Explore the examples,aside,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/development-workflow/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/examples/,More in Concurrency ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/samples/async.kujo,Download ↓,header,200,https://kujolang.ai/samples/async.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/samples/async.kujo,async.kujo,aside,200,https://kujolang.ai/samples/async.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/examples/errors/,← Previous example Error handling,nav,200,https://kujolang.ai/examples/errors/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/examples/channels/,Next example → Channels,nav,200,https://kujolang.ai/examples/channels/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/async/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/examples/,More in AI runtime ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/samples/capabilities.kujo,Download ↓,header,200,https://kujolang.ai/samples/capabilities.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/samples/capabilities.kujo,capabilities.kujo,aside,200,https://kujolang.ai/samples/capabilities.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/examples/streaming/,← Previous example AI streaming,nav,200,https://kujolang.ai/examples/streaming/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/examples/tests/,Next example → Tests,nav,200,https://kujolang.ai/examples/tests/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/capabilities/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/examples/,More in Concurrency ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/samples/channels.kujo,Download ↓,header,200,https://kujolang.ai/samples/channels.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/samples/channels.kujo,channels.kujo,aside,200,https://kujolang.ai/samples/channels.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/examples/async/,← Previous example Async tasks,nav,200,https://kujolang.ai/examples/async/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/examples/generators/,Next example → Generators,nav,200,https://kujolang.ai/examples/generators/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/channels/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/examples/,More in Data ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/samples/collections.kujo,Download ↓,header,200,https://kujolang.ai/samples/collections.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/samples/collections.kujo,collections.kujo,aside,200,https://kujolang.ai/samples/collections.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/examples/control-flow/,← Previous example Control flow,nav,200,https://kujolang.ai/examples/control-flow/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/examples/structs/,Next example → Structs and methods,nav,200,https://kujolang.ai/examples/structs/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/collections/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/examples/,More in Basics ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/samples/control-flow.kujo,Download ↓,header,200,https://kujolang.ai/samples/control-flow.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/samples/control-flow.kujo,control-flow.kujo,aside,200,https://kujolang.ai/samples/control-flow.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/examples/functions/,← Previous example Functions and operators,nav,200,https://kujolang.ai/examples/functions/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/examples/collections/,Next example → Collections,nav,200,https://kujolang.ai/examples/collections/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/control-flow/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/examples/,More in Basics ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/samples/errors.kujo,Download ↓,header,200,https://kujolang.ai/samples/errors.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/samples/errors.kujo,errors.kujo,aside,200,https://kujolang.ai/samples/errors.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/examples/pattern-matching/,← Previous example Enums and pattern matching,nav,200,https://kujolang.ai/examples/pattern-matching/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/examples/async/,Next example → Async tasks,nav,200,https://kujolang.ai/examples/async/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/errors/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/examples/,More in Systems ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/samples/files.kujo,Download ↓,header,200,https://kujolang.ai/samples/files.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/samples/files.kujo,files.kujo,aside,200,https://kujolang.ai/samples/files.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/examples/modules/,← Previous example Modules and imports,nav,200,https://kujolang.ai/examples/modules/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/examples/http/,Next example → HTTP and networking,nav,200,https://kujolang.ai/examples/http/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/files/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/examples/,More in Basics ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/samples/functions.kujo,Download ↓,header,200,https://kujolang.ai/samples/functions.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/samples/functions.kujo,functions.kujo,aside,200,https://kujolang.ai/samples/functions.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/examples/variables/,← Previous example Variables and types,nav,200,https://kujolang.ai/examples/variables/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/examples/control-flow/,Next example → Control flow,nav,200,https://kujolang.ai/examples/control-flow/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/functions/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/examples/,More in Concurrency ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/samples/generators.kujo,Download ↓,header,200,https://kujolang.ai/samples/generators.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/samples/generators.kujo,generators.kujo,aside,200,https://kujolang.ai/samples/generators.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/examples/channels/,← Previous example Channels,nav,200,https://kujolang.ai/examples/channels/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/examples/json/,Next example → JSON data,nav,200,https://kujolang.ai/examples/json/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/generators/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/examples/,More in Basics ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/samples/hello-world.kujo,Download ↓,header,200,https://kujolang.ai/samples/hello-world.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/samples/hello-world.kujo,hello-world.kujo,aside,200,https://kujolang.ai/samples/hello-world.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/examples/http/,← Previous example HTTP and networking,nav,200,https://kujolang.ai/examples/http/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/examples/variables/,Next example → Variables and types,nav,200,https://kujolang.ai/examples/variables/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/hello-world/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/examples/,More in Systems ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/samples/http.kujo,Download ↓,header,200,https://kujolang.ai/samples/http.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/samples/http.kujo,http.kujo,aside,200,https://kujolang.ai/samples/http.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/examples/files/,← Previous example File operations,nav,200,https://kujolang.ai/examples/files/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/examples/hello-world/,Next example → Hello World,nav,200,https://kujolang.ai/examples/hello-world/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/http/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/hello-world/,Start with Hello World,header,200,https://kujolang.ai/examples/hello-world/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download samples + replay fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/hello-world/,Hello World ↗,article,200,https://kujolang.ai/examples/hello-world/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/variables/,Variables and types ↗,article,200,https://kujolang.ai/examples/variables/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/functions/,Functions and operators ↗,article,200,https://kujolang.ai/examples/functions/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/control-flow/,Control flow ↗,article,200,https://kujolang.ai/examples/control-flow/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/errors/,Error handling ↗,article,200,https://kujolang.ai/examples/errors/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/collections/,Collections ↗,article,200,https://kujolang.ai/examples/collections/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/structs/,Structs and methods ↗,article,200,https://kujolang.ai/examples/structs/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/pattern-matching/,Enums and pattern matching ↗,article,200,https://kujolang.ai/examples/pattern-matching/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/json/,JSON data ↗,article,200,https://kujolang.ai/examples/json/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/async/,Async tasks ↗,article,200,https://kujolang.ai/examples/async/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/channels/,Channels ↗,article,200,https://kujolang.ai/examples/channels/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/generators/,Generators ↗,article,200,https://kujolang.ai/examples/generators/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/structured-output/,Structured output validation ↗,article,200,https://kujolang.ai/examples/structured-output/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/request-hash/,Deterministic AI request IDs ↗,article,200,https://kujolang.ai/examples/request-hash/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/replay/,AI calls and replay ↗,article,200,https://kujolang.ai/examples/replay/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/streaming/,AI streaming ↗,article,200,https://kujolang.ai/examples/streaming/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/capabilities/,AI capability restrictions ↗,article,200,https://kujolang.ai/examples/capabilities/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/tests/,Tests ↗,article,200,https://kujolang.ai/examples/tests/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/modules/,Modules and imports ↗,article,200,https://kujolang.ai/examples/modules/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/files/,File operations ↗,article,200,https://kujolang.ai/examples/files/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/examples/http/,HTTP and networking ↗,article,200,https://kujolang.ai/examples/http/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/ecosystem/agents-sdk/,Agents SDK ↗,main,200,https://kujolang.ai/ecosystem/agents-sdk/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/ecosystem/ai-sdk/,AI SDK ↗,main,200,https://kujolang.ai/ecosystem/ai-sdk/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/examples/,More in Data ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/samples/json.kujo,Download ↓,header,200,https://kujolang.ai/samples/json.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/samples/json.kujo,json.kujo,aside,200,https://kujolang.ai/samples/json.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/examples/generators/,← Previous example Generators,nav,200,https://kujolang.ai/examples/generators/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/examples/structured-output/,Next example → Structured output validation,nav,200,https://kujolang.ai/examples/structured-output/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/json/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/examples/,More in Tooling ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/samples/modules.kujo,Download ↓,header,200,https://kujolang.ai/samples/modules.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/samples/modules.kujo,modules.kujo,aside,200,https://kujolang.ai/samples/modules.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/examples/tests/,← Previous example Tests,nav,200,https://kujolang.ai/examples/tests/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/examples/files/,Next example → File operations,nav,200,https://kujolang.ai/examples/files/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/modules/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/examples/,More in Data ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/samples/pattern-matching.kujo,Download ↓,header,200,https://kujolang.ai/samples/pattern-matching.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/samples/pattern-matching.kujo,pattern-matching.kujo,aside,200,https://kujolang.ai/samples/pattern-matching.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/examples/structs/,← Previous example Structs and methods,nav,200,https://kujolang.ai/examples/structs/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/examples/errors/,Next example → Error handling,nav,200,https://kujolang.ai/examples/errors/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/pattern-matching/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/examples/,More in AI runtime ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/samples/replay.kujo,Download ↓,header,200,https://kujolang.ai/samples/replay.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/samples/replay.kujo,replay.kujo,aside,200,https://kujolang.ai/samples/replay.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/examples/request-hash/,← Previous example Deterministic AI request IDs,nav,200,https://kujolang.ai/examples/request-hash/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/examples/streaming/,Next example → AI streaming,nav,200,https://kujolang.ai/examples/streaming/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/replay/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/examples/,More in AI runtime ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/samples/request-hash.kujo,Download ↓,header,200,https://kujolang.ai/samples/request-hash.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/samples/request-hash.kujo,request-hash.kujo,aside,200,https://kujolang.ai/samples/request-hash.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/examples/structured-output/,← Previous example Structured output validation,nav,200,https://kujolang.ai/examples/structured-output/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/examples/replay/,Next example → AI calls and replay,nav,200,https://kujolang.ai/examples/replay/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/request-hash/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/examples/,More in AI runtime ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/samples/streaming.kujo,Download ↓,header,200,https://kujolang.ai/samples/streaming.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/samples/streaming.kujo,streaming.kujo,aside,200,https://kujolang.ai/samples/streaming.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/examples/replay/,← Previous example AI calls and replay,nav,200,https://kujolang.ai/examples/replay/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/examples/capabilities/,Next example → AI capability restrictions,nav,200,https://kujolang.ai/examples/capabilities/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/streaming/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/examples/,More in Data ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/samples/structs.kujo,Download ↓,header,200,https://kujolang.ai/samples/structs.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/samples/structs.kujo,structs.kujo,aside,200,https://kujolang.ai/samples/structs.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/examples/collections/,← Previous example Collections,nav,200,https://kujolang.ai/examples/collections/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/examples/pattern-matching/,Next example → Enums and pattern matching,nav,200,https://kujolang.ai/examples/pattern-matching/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structs/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/examples/,More in AI runtime ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/samples/structured-output.kujo,Download ↓,header,200,https://kujolang.ai/samples/structured-output.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/samples/structured-output.kujo,structured-output.kujo,aside,200,https://kujolang.ai/samples/structured-output.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/examples/json/,← Previous example JSON data,nav,200,https://kujolang.ai/examples/json/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/examples/request-hash/,Next example → Deterministic AI request IDs,nav,200,https://kujolang.ai/examples/request-hash/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/structured-output/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/examples/,More in Tooling ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/samples/tests.kujo,Download ↓,header,200,https://kujolang.ai/samples/tests.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/samples/tests.kujo,tests.kujo,aside,200,https://kujolang.ai/samples/tests.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/examples/capabilities/,← Previous example AI capability restrictions,nav,200,https://kujolang.ai/examples/capabilities/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/examples/modules/,Next example → Modules and imports,nav,200,https://kujolang.ai/examples/modules/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/tests/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/examples/,More in Basics ↗,header,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/samples/variables.kujo,Download ↓,header,200,https://kujolang.ai/samples/variables.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/language/,Install the runtime,aside,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/samples/variables.kujo,variables.kujo,aside,200,https://kujolang.ai/samples/variables.kujo,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/samples/kujo-examples.tar.gz,Download all samples + fixtures ↓,aside,200,https://kujolang.ai/samples/kujo-examples.tar.gz,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/examples/hello-world/,← Previous example Hello World,nav,200,https://kujolang.ai/examples/hello-world/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/examples/functions/,Next example → Functions and operators,nav,200,https://kujolang.ai/examples/functions/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/examples/variables/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/examples/,Browse verified examples,main,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/examples/,Explore the examples,aside,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/language/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/,Kujo,header,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/language/,Language,nav,200,https://kujolang.ai/language/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/examples/,Examples,nav,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,give the setup prompt to a coding agent,body,200,https://kujolang.ai/assets/prompts/kujo-agent-onboarding.txt,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/,Home,nav,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/samples/performance.json,Download the raw receipt ↗,main,200,https://kujolang.ai/samples/performance.json,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/compare/,comparison pages,main,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/samples/performance.json,machine-readable receipt,main,200,https://kujolang.ai/samples/performance.json,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/examples/functions/,functions example,main,200,https://kujolang.ai/examples/functions/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/ecosystem/cms/,CMS,main,200,https://kujolang.ai/ecosystem/cms/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/ecosystem/crud-api/,CRUD API,main,200,https://kujolang.ai/ecosystem/crud-api/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/ecosystem/rag/,RAG,main,200,https://kujolang.ai/ecosystem/rag/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/examples/,Explore the examples,aside,200,https://kujolang.ai/examples/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/,Kujo,footer,200,https://kujolang.ai/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/compare/,Compare,nav,200,https://kujolang.ai/compare/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/ecosystem/,Ecosystem,nav,200,https://kujolang.ai/ecosystem/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/providers/,Providers,nav,200,https://kujolang.ai/providers/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/ethos/,Ethos,nav,200,https://kujolang.ai/ethos/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/writing/,Writing,nav,200,https://kujolang.ai/writing/,0,rendered local route,,none
+after,https://kujolang.ai/performance/,https://kujolang.ai/contact/,Contact,nav,200,https://kujolang.ai/contact/,0,rendered local route,,none

@@ -1,0 +1,52 @@
+id:       examples-request-hash
+title:    Deterministic AI request IDs
+tagline:  Hash an AI request without including credentials.
+file:     public/samples/request-hash.kujo
+language: kujo
+
+--- code preview ---
+func kv(label, value) {
+    print(label + ": " + value)
+}
+
+let options_a := {
+    "endpoint": "https://api.example.test/v1/chat/completions",
+    "model": "gpt-demo",
+    "api_key": "credential-one",
+    "headers": {
+        "Authorization": "Bearer credential-one",
+        "X-App": "kujo"
+    },
+    "body": {
+        "temperature": 0,
+        "max_tokens": 32
+    }
+}
+
+let options_b := {
+    "endpoint": "https://api.example.test/v1/chat/completions",
+    "model": "gpt-demo",
+    "api_key": "credential-two",
+    "headers": {
+        "Authorization": "Bearer credential-two",
+        "X-App": "kujo"
+    },
+    "body": {
+        "temperature": 0,
+        "max_tokens": 32
+    }
+}
+
+let hash_a := ai_request_hash("Summarize Kujo", options_a)
+let hash_b := ai_request_hash("Summarize Kujo", options_b)
+
+kv("hash_length", to_string(len(hash_a)))
+kv("same_without_credentials", to_string(hash_a == hash_b))
+kv("hash", hash_a)
+
+
+--- expected output ---
+hash_length: 64
+same_without_credentials: true
+hash: a6244047c108dcf58a952ed0a6c70dc04d13ee9aa9dba08eeb623f241fbd37ce
+

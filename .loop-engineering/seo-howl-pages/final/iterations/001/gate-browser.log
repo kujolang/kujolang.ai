@@ -1,0 +1,18 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   'Failed to load resource: net::ERR_FAILED'
++ ]
+- []
+
+    at /Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/scripts/test-language-browser.cjs:69:9
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:541:9) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}

@@ -1,0 +1,15 @@
+id:       examples-modules
+title:    Modules and imports
+tagline:  Read examples of dotted and named imports.
+file:     public/samples/modules.kujo
+language: kujo
+
+--- code preview ---
+# Parse-only module import tour.
+# To run this pattern, create the imported files beside your script or inside a package root.
+
+import math_helpers
+from metrics import average, total
+from src.util import value
+from src.core.math import add
+

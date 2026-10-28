@@ -1,0 +1,1 @@
+Initial evaluation stopped during responsive image generation with `cat: stdout: No space left on device`; no verdict was produced. A subsequent disk check showed 10 GiB available. Only the redundant task-created Howl repeat directory was removed. Baseline artifacts remain intact. Full acceptance is rerun in acceptance/.

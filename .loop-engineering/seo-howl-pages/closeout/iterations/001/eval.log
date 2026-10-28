@@ -1,0 +1,20 @@
+
+## gate: unchanged_verified_build
+$ python3 scripts/verify-seo-build-receipt.py
+3170 build source/output hashes verified
+gate unchanged_verified_build: pass
+
+## gate: site_contract
+$ bash scripts/verify-site-contract.sh output
+Responsive image contract passed for 556 rendered images.
+Social cards verified: 281 cards cover 281 shareable routes; 404 uses the branded home fallback.
+Site contract passed: 57 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.
+gate site_contract: pass
+
+## gate: shell
+$ bash -n scripts/*.sh
+gate shell: pass
+
+## gate: diff
+$ git diff --check
+gate diff: pass

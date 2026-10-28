@@ -1,0 +1,29 @@
+id:       examples-errors
+title:    Error handling
+tagline:  Catch an error and keep the program running.
+file:     public/samples/errors.kujo
+language: kujo
+
+--- code preview ---
+# Test better error messages with try/except
+func process(x) {
+    if x == 0 {
+        throw("Cannot process zero value")
+    }
+    return x * 2
+}
+
+try {
+    result := process(0)
+    print("Result:", result)
+} except err {
+    print("Error caught:", err)
+}
+
+print("Program continues after error handling")
+
+
+--- expected output ---
+Error caught: Error { line: 0, message: Cannot process zero value, stack: [process] }
+Program continues after error handling
+

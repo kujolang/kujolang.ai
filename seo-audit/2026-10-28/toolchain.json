@@ -1,0 +1,32 @@
+[
+  {
+    "command": "tmp/runtime/kujo --version",
+    "exit_code": 0,
+    "stdout": "kujo 1.9.0",
+    "stderr": ""
+  },
+  {
+    "command": "../howl/bin/howl version",
+    "exit_code": 0,
+    "stdout": "howl 1.2.0",
+    "stderr": ""
+  },
+  {
+    "command": "node --version",
+    "exit_code": 0,
+    "stdout": "v26.12.1",
+    "stderr": ""
+  },
+  {
+    "command": "python3 --version",
+    "exit_code": 0,
+    "stdout": "Python 3.10.5",
+    "stderr": ""
+  },
+  {
+    "command": "tmp/seo-tools/node_modules/.bin/lighthouse --version",
+    "exit_code": 0,
+    "stdout": "13.0.1",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,22 @@
+id:       examples-variables
+title:    Variables and types
+tagline:  Create variables with let and print their values.
+file:     public/samples/variables.kujo
+language: kujo
+
+--- code preview ---
+# Expected output:
+# tool: kujo
+# status: ready
+
+let tool := "kujo"
+let status := "ready"
+
+print("tool: " + tool)
+print("status: " + status)
+
+
+--- expected output ---
+tool: kujo
+status: ready
+

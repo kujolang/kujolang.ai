@@ -1,0 +1,38 @@
+id:       examples-structs
+title:    Structs and methods
+tagline:  Return a new counter from an instance method.
+file:     public/samples/structs.kujo
+language: kujo
+
+--- code preview ---
+# Struct methods with an explicit self parameter
+
+struct Counter {
+    value: int,
+
+    func increment(self) {
+        return Counter { value: self.value + 1 }
+    }
+
+    func add(self, amount) {
+        return Counter { value: self.value + amount }
+    }
+
+    func describe(self) {
+        return "Counter(" + to_string(self.value) + ")"
+    }
+}
+
+let initial := Counter { value: 1 }
+let incremented := initial.increment()
+let advanced := incremented.add(8)
+
+assert_equal(initial.value, 1)
+assert_equal(incremented.value, 2)
+assert_equal(advanced.value, 10)
+print(advanced.describe())
+
+
+--- expected output ---
+Counter(10)
+

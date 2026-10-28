@@ -1,0 +1,211 @@
+
+## gate: examples_source
+$ npm run examples:check
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 examples:check
+> node scripts/render-language-examples.mjs --check
+
+gate examples_source: pass
+
+## gate: examples_runtime
+$ npm run examples:verify
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 examples:verify
+> python3 scripts/verify-language-examples.py
+
+hello-world: run passed
+variables: run passed
+functions: run passed
+control-flow: run passed
+collections: run passed
+structs: run passed
+pattern-matching: run passed
+errors: run passed
+async: run passed
+channels: run passed
+generators: run passed
+json: run passed
+structured-output: run passed
+request-hash: run passed
+replay: run passed
+streaming: run passed
+capabilities: run passed
+tests: test-run passed
+modules: check passed
+files: check passed
+http: check passed
+21 pinned examples verified
+AI capability denied without grant and allowed with explicit grant
+Nested page route acceptance and traversal rejection passed
+gate examples_runtime: pass
+
+## gate: node_tests
+$ npm test
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 test
+> node --test tests/*.test.mjs
+
+✔ published projections match the validated catalog (41.00897ms)
+✔ reject unknown status (2.496051ms)
+✔ reject missing source (1.235324ms)
+✔ reject broken source (2.060401ms)
+✔ reject unknown Kujo fact (1.272324ms)
+✔ reject broken related page (1.892123ms)
+✔ reject path traversal (2.665067ms)
+✔ reject social card path traversal (1.870663ms)
+✔ reject missing competitor recommendation (1.719928ms)
+✔ reject missing identity provenance (1.913779ms)
+✔ reject duplicate route (1.788159ms)
+✔ reject invalid review date (1.528698ms)
+✔ hub rejects a stale fact reference before publication (1.838731ms)
+✔ hub rejects a missing language cell rather than shifting columns (1.474645ms)
+✔ direct comparisons reject architecture claims without valid evidence (1.331827ms)
+✔ direct comparisons reject incomplete decision rows (1.704315ms)
+✔ each technical comparison publishes its evaluation plan in HTML and Markdown (4.623677ms)
+✔ guides reject unsourced architecture cards and matrix claims (3.062483ms)
+✔ guides reject incomplete examples instead of shifting table columns (1.930039ms)
+✔ every guide preserves its detailed criteria and examples in HTML and Markdown (7.145962ms)
+✔ boundary table rejects missing evidence and malformed rows (2.926806ms)
+✔ boundary results survive both projections and HTML escapes fixture text (5.781928ms)
+✔ BAML hub execution points to runtime evidence, not compiler diagnostics (1.563436ms)
+✔ guide templates stay in sync with authored content (146.18854ms)
+✔ performance evidence agrees with the published receipt (0.85926ms)
+✔ provider registry contains each requested integration exactly once (3.504166ms)
+✔ every registered local logo exists (17.378816ms)
+✔ creates deterministic responsive WebP variants without enlarging small images (511.698951ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 894.399721
+gate node_tests: pass
+
+## gate: build
+$ kujo run ./build.kujo -- --site-url https://kujolang.ai
+╔════════════════════════════════════════════════╗
+║        Kujo Static Site Generator              ║
+╚════════════════════════════════════════════════╝
+
+Loaded configuration from kujo-ssg.yml
+Build complete
+  Posts generated: 0
+  Pages generated: 28
+  Output directory: output
+  Build time: 17.613669941999998s
+gate build: pass
+
+## gate: responsive
+$ npm run images:responsive
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 images:responsive
+> node scripts/generate-responsive-images.mjs
+
+Generated 1167 responsive images at 640/960/1280px; skipped 0.
+gate responsive: pass
+
+## gate: site_contract
+$ bash scripts/verify-site-contract.sh output
+Responsive image contract passed for 556 rendered images.
+Social cards verified: 281 cards cover 281 shareable routes; 404 uses the branded home fallback.
+Site contract passed: 57 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.
+gate site_contract: pass
+
+## gate: generated_output
+$ bash scripts/validate-generated-output.sh output
+Checked HTML files: 282
+Validation passed
+gate generated_output: pass
+
+## gate: language_contract
+$ npm run language:verify
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 language:verify
+> python3 scripts/verify-language-site.py
+
+Language-first content, all example routes, internal links, sitemap and static fallback passed
+gate language_contract: pass
+
+## gate: social
+$ npm run social:verify
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 social:verify
+> node scripts/verify-social-cards.mjs
+
+Social cards verified: 281 cards cover 281 shareable routes; 404 uses the branded home fallback.
+gate social: pass
+
+## gate: comparisons
+$ npm run compare:verify
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 compare:verify
+> python3 scripts/verify-comparisons.py
+
+{
+  "routes": 8,
+  "internalLinksChecked": 333,
+  "errors": [],
+  "passed": true
+}
+gate comparisons: pass
+
+## gate: javascript
+$ node --check assets/js/site.js
+gate javascript: pass
+
+## gate: shell
+$ bash -n scripts/*.sh
+gate shell: pass
+
+## gate: audit
+$ npm audit --omit=dev
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+found 0 vulnerabilities
+gate audit: pass
+
+## gate: browser
+$ node scripts/test-language-browser.cjs
+Browser: selection, exact clipboard, filter, no-JS, mobile menu, responsive layouts and console passed
+gate browser: pass
+
+## gate: examples_browser
+$ node scripts/test-examples-browser.cjs
+Examples: all 21 pages, source/clipboard integrity, output copying, in-block icons, responsive layouts, filtering, no-JS and accessibility passed
+gate examples_browser: pass
+
+## gate: guides_source
+$ node scripts/render-language-guides.mjs --check
+gate guides_source: pass
+
+## gate: guides_browser
+$ node scripts/test-guides-browser.cjs
+Guides: three responsive layouts, exact code/clipboard, aligned feedback, receipt details, accessibility, no-JS and all homepage destinations passed
+gate guides_browser: pass
+
+## gate: seo_scope
+$ python3 scripts/verify-language-seo.py
+Passed canonical, unique metadata, H1, breadcrumb and source alignment checks for 26 pages.
+gate seo_scope: pass
+
+## gate: howl_sources
+$ node scripts/render-language-howl.mjs --check
+Checked 26 page showcase sources.
+gate howl_sources: pass
+
+## gate: howl_manifest
+$ ../howl/bin/howl validate --manifest howl-language-pages.json
+ok: howl-language-pages.json is valid (26 card(s))
+gate howl_manifest: pass
+
+## gate: diff
+$ git diff --check
+gate diff: pass

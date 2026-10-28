@@ -1,0 +1,3 @@
+Choose which code runs with a comparison.
+
+Kujo: Programming language for AI-native software

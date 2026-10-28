@@ -1,0 +1,16 @@
+id:       examples
+title:    Kujo language examples
+tagline:  Code, commands, expected output and pinned sources.
+file:     public/samples/hello-world.kujo
+language: kujo
+
+--- code preview ---
+# Expected output:
+# Kujo Kujo!
+
+print("Kujo Kujo!")
+
+
+--- expected output ---
+Kujo Kujo!
+

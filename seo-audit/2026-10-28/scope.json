@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-28",
+  "baseline_commit": "9a28242f7838a3571f4f847a77757c1e1cd94cb4",
+  "urls": [
+    "https://kujolang.ai/",
+    "https://kujolang.ai/language/",
+    "https://kujolang.ai/development-workflow/",
+    "https://kujolang.ai/performance/",
+    "https://kujolang.ai/examples/",
+    "https://kujolang.ai/examples/hello-world/",
+    "https://kujolang.ai/examples/variables/",
+    "https://kujolang.ai/examples/functions/",
+    "https://kujolang.ai/examples/control-flow/",
+    "https://kujolang.ai/examples/collections/",
+    "https://kujolang.ai/examples/structs/",
+    "https://kujolang.ai/examples/pattern-matching/",
+    "https://kujolang.ai/examples/errors/",
+    "https://kujolang.ai/examples/async/",
+    "https://kujolang.ai/examples/channels/",
+    "https://kujolang.ai/examples/generators/",
+    "https://kujolang.ai/examples/json/",
+    "https://kujolang.ai/examples/structured-output/",
+    "https://kujolang.ai/examples/request-hash/",
+    "https://kujolang.ai/examples/replay/",
+    "https://kujolang.ai/examples/streaming/",
+    "https://kujolang.ai/examples/capabilities/",
+    "https://kujolang.ai/examples/tests/",
+    "https://kujolang.ai/examples/modules/",
+    "https://kujolang.ai/examples/files/",
+    "https://kujolang.ai/examples/http/"
+  ],
+  "scope": "26 new/refined pages; full generated site crawled as linking context"
+}

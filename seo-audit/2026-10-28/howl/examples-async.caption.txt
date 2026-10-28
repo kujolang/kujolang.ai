@@ -1,0 +1,3 @@
+Wait for an async function to return a value.
+
+Kujo: Programming language for AI-native software

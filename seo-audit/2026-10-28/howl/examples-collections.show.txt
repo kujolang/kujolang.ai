@@ -1,0 +1,19 @@
+id:       examples-collections
+title:    Collections
+tagline:  Build a report from arrays and dictionaries.
+file:     public/samples/collections.kujo
+language: kujo
+
+--- code preview ---
+# Expected output:
+# build total: 42
+
+let scores := [8, 13, 21]
+let report := {"name": "build", "total": scores[0] + scores[1] + scores[2]}
+
+print(report["name"] + " total: " + to_string(report["total"]))
+
+
+--- expected output ---
+build total: 42
+

@@ -1,0 +1,3 @@
+Check local data against a schema without calling a model.
+
+Kujo: Programming language for AI-native software

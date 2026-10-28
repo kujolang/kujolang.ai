@@ -1,0 +1,3 @@
+Build a report from arrays and dictionaries.
+
+Kujo: Programming language for AI-native software
