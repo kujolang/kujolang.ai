@@ -1,0 +1,619 @@
+diff --git a/assets/css/style.css b/assets/css/style.css
+index d2f5cef..808c7b0 100644
+--- a/assets/css/style.css
++++ b/assets/css/style.css
+@@ -1837,14 +1837,14 @@
+  .example-source .sample-code pre { padding: 1rem; font-size: .75rem; }
+ }
+ /* Copy controls live inside the code surface, with space reserved above the code. */
+-:is(.language-home,.examples-site) .sample-code { position: relative; }
+-:is(.language-home,.examples-site) .sample-code pre { margin: 0; padding-top: 3.75rem; min-height: 5.5rem; }
++:is(.language-home,.examples-site,.kujo-content) .sample-code { position: relative; }
++:is(.language-home,.examples-site,.kujo-content) .sample-code pre { margin: 0; padding-top: 3.75rem; min-height: 5.5rem; }
+ .example-source .sample-code { padding-bottom: 0; }
+-:is(.language-home,.examples-site) .sample-code .code-copy-icon { position: absolute; top: .5rem; right: .5rem; margin: 0; padding: 0; width: 44px; height: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; color: #f9f9f9; background: #282828; border: 1px solid #777; z-index: 1; }
+-:is(.language-home,.examples-site) .code-copy-icon[hidden] { display: none; }
+-:is(.language-home,.examples-site) .code-copy-icon:hover { background: #444; }
+-:is(.language-home,.examples-site) .code-copy-icon:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+-:is(.language-home,.examples-site) [data-code-status]:not(:empty) { position: absolute; top: .8rem; right: 3.75rem; max-width: calc(100% - 5rem); padding: .4rem .6rem; font-size: .7rem; line-height: 1.4; background: #f9f9f9; color: #171717; border: 1px solid #777; z-index: 2; }
++:is(.language-home,.examples-site,.kujo-content) .sample-code .code-copy-icon { position: absolute; top: .5rem; right: .5rem; margin: 0; padding: 0; width: 44px; height: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; color: #f9f9f9; background: #282828; border: 1px solid #777; z-index: 1; }
++:is(.language-home,.examples-site,.kujo-content) .code-copy-icon[hidden] { display: none; }
++:is(.language-home,.examples-site,.kujo-content) .code-copy-icon:hover { background: #444; }
++:is(.language-home,.examples-site,.kujo-content) .code-copy-icon:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
++:is(.language-home,.examples-site,.kujo-content) [data-code-status]:not(:empty) { position: absolute; top: .8rem; right: 3.75rem; max-width: calc(100% - 5rem); padding: .4rem .6rem; font-size: .7rem; line-height: 1.4; background: #f9f9f9; color: #171717; border: 1px solid #777; z-index: 2; }
+ /* Familiar code typography; the display face remains on editorial headings. */
+ pre, pre code, .sample-code pre, .sample-code code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+@@ -1861,11 +1861,11 @@ pre, pre code, .sample-code pre, .sample-code code {
+ .sample-code .syntax-string { color: #b8dfa4; }
+ .sample-code .syntax-comment { color: #a8afb9; }
+ .sample-code .syntax-number,.sample-code .syntax-literal { color: #f2c38b; }
+-:is(.language-home,.examples-site) .sample-code pre { font-size: .875rem; line-height: 1.8; }
++:is(.language-home,.examples-site,.kujo-content) .sample-code pre { font-size: .875rem; line-height: 1.8; }
+ .example-source .sample-code pre { padding-inline: 1.5rem; }
+ .example-result .sample-code pre code { white-space: pre-wrap; overflow-wrap: anywhere; }
+ @media(max-width:480px) {
+- :is(.language-home,.examples-site) .sample-code pre { font-size: .8125rem; }
++ :is(.language-home,.examples-site,.kujo-content) .sample-code pre { font-size: .8125rem; }
+  .example-source .sample-code pre { padding-inline: 1rem; }
+ }
+ .examples-orientation .eyebrow,.examples-next .eyebrow { color: #ccc; }
+@@ -1916,15 +1916,15 @@ pre, pre code, .sample-code pre, .sample-code code {
+  .home-tool-grid strong { font-size: 1.3rem; }
+ }
+ /* A fixed side gutter keeps the absolute copy control off the first code line. */
+-:is(.language-home,.examples-site) .sample-code { background: #181818; color: #f9f9f9; border-radius: 0; }
+-:is(.language-home,.examples-site) .sample-code pre {
++:is(.language-home,.examples-site,.kujo-content) .sample-code { background: #181818; color: #f9f9f9; border-radius: 0; }
++:is(.language-home,.examples-site,.kujo-content) .sample-code pre {
+  width: calc(100% - 3.5rem);
+  max-width: calc(100% - 3.5rem);
+  min-height: 4rem;
+  padding: 1.25rem;
+  border-radius: 0;
+ }
+-:is(.language-home,.examples-site) [data-code-status]:not(:empty) {
++:is(.language-home,.examples-site,.kujo-content) [data-code-status]:not(:empty) {
+  top: .9rem;
+  right: 3.75rem;
+  padding: 0;
+@@ -1935,5 +1935,80 @@ pre, pre code, .sample-code pre, .sample-code code {
+  pointer-events: none;
+ }
+ @media(max-width:480px) {
+- :is(.language-home,.examples-site) .sample-code pre { padding: 1rem; }
++ :is(.language-home,.examples-site,.kujo-content) .sample-code pre { padding: 1rem; }
+ }
++
++/* Shared code feedback aligns to the 44px icon's vertical center. */
++:is(.language-home,.examples-site,.kujo-content) [data-code-status]:not(:empty) {
++ top: calc(.5rem + 22px); transform: translateY(-50%); line-height: 1.4;
++}
++.home-explorer .home-explorer-heading { display: block; text-align: center; margin-bottom: 2.5rem; }
++.home-explorer-heading h2 { margin-bottom: 1rem; }
++.home-explorer .example-selector,.home-explorer .example-panel { background: #fff; }
++.example-picker { position: relative; min-width: min(100%, 25rem); }
++.example-picker-trigger { display: flex; justify-content: space-between; align-items: center; gap: 1rem; width: 100%; padding: .85rem 1rem; background: #fff; color: #111; border: 1px solid #111; text-align: left; font: inherit; font-size: .85rem; cursor: pointer; min-height: 48px; }
++.example-picker-trigger::after { content: '⌄'; font-size: 1.2rem; }
++.example-picker-options { position: absolute; inset: calc(100% + 4px) 0 auto; border: 1px solid #111; padding: .35rem; background: #fff; box-shadow: 6px 6px 0 #ddd; z-index: 10; }
++.example-picker-options[hidden] { display: none; }
++.example-picker-options button { display: block; width: 100%; min-height: 44px; padding: .75rem; border: 0; color: #111; background: #fff; font: inherit; font-size: .8rem; text-align: left; cursor: pointer; }
++.example-picker-options button[aria-selected="true"] { background: #eee; }
++.example-picker-options button:hover,.example-picker-options button:focus { background: #111; color: #fff; outline: none; }
++.example-picker-trigger:focus-visible { outline: 2px solid #111; outline-offset: 4px; }
++.guide-page { padding-top: calc(var(--site-header-block) + 2rem); }
++.guide-page > .examples-breadcrumb,.guide-hero,.guide-content,.guide-next { max-width: 92rem; margin-inline: auto; padding-inline: var(--site-pad-inline); }
++.guide-hero { padding-block: 3rem 4rem; border-bottom: 1px solid #ccc; }
++.guide-hero h1 { font-family: var(--sk-font-mono); font-weight: 400; font-size: clamp(2.4rem,5.5vw,5rem); line-height: 1.15; max-width: 20ch; margin: 0 0 1.5rem; }
++.guide-hero > p { max-width: 65ch; font-size: 1.1rem; line-height: 1.8; }
++.guide-intro { padding-block: 3.5rem 2rem; max-width: 75ch; }
++.guide-page h2,.guide-page h3 { font-family: var(--sk-font-mono); font-weight: 400; line-height: 1.35; }
++.guide-intro h2 { font-size: clamp(1.6rem,3vw,2.5rem); }
++.guide-page p { line-height: 1.8; }
++.guide-overview { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border: 1px solid #ccc; margin-block: 1rem 3rem; }
++.guide-overview article { padding: 2rem; background: #fff; }
++.guide-overview article + article { border-left: 1px solid #ccc; }
++.guide-overview span { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; }
++.guide-overview h2 { font-size: 1.3rem; margin-block: 1.25rem .75rem; }
++.guide-overview p { font-size: .9rem; margin-bottom: 0; }
++.guide-nav { display: flex; flex-wrap: wrap; gap: .75rem; padding-block: 1rem 2rem; }
++.guide-nav a { padding: .7rem 1rem; border: 1px solid #aaa; font-size: .8rem; text-decoration: none; background: #fff; }
++.guide-nav a:hover { background: #111; color: #fff; }
++.guide-section { padding-block: 3rem; border-top: 1px solid #ccc; display: flow-root; }
++.guide-section > h2 { font-size: clamp(1.6rem,3vw,2.3rem); max-width: 28ch; margin: 0 0 1.75rem; scroll-margin-top: calc(var(--site-header-block) + 2rem); }
++.guide-section > p { max-width: 85ch; margin-block: 1rem; }
++.guide-section > ol,.guide-section > ul { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; padding-left: 1.5rem; }
++.guide-section li { padding: 1rem; border: 1px solid #ccc; background: #fff; line-height: 1.8; border-radius: 0; }
++.guide-section li strong { display: block; font-family: var(--sk-font-mono); margin-bottom: .5rem; }
++.guide-section .sample-code { margin-block: 1.5rem; max-width: 100%; }
++.guide-section pre { background: #181818; color: #fff; padding: 1.25rem; overflow-x: auto; }
++.measurement-card { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; background: #111; color: #fff; padding: clamp(1.5rem,4vw,3.5rem); }
++.measurement-card h2 { font-size: clamp(3rem,6vw,5rem); margin: 1.5rem 0; }
++.measurement-card small { display: block; font-size: 1rem; }
++.measurement-card a { color: #fff; }
++.measurement-card dl { margin: 0; min-width: 0; }
++.measurement-card dl div { padding-block: 1rem; border-bottom: 1px solid #555; }
++.measurement-card dt { color: #ccc; font-size: .75rem; margin-bottom: .5rem; }
++.measurement-card dd { margin: 0; overflow-wrap: anywhere; line-height: 1.6; font-size: .85rem; }
++.measurement-runs { padding: 1.5rem; border: 1px solid #ccc; margin-bottom: 2rem; background: #fff; }
++.measurement-runs summary { cursor: pointer; min-height: 44px; }
++.measurement-runs ol { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: .75rem; padding: 0; list-style: none; }
++.measurement-runs li { border-top: 1px solid #ccc; padding-block: .75rem; }
++.measurement-runs li span,.measurement-runs li strong { display: block; font-size: .8rem; }
++.guide-next { background: #111; color: #fff; padding-block: 3.5rem; margin-block: 2rem 4rem; text-align: center; }
++.guide-next h2 { font-size: 2rem; }
++.guide-next .sk-button { background: #fff; color: #111; border-color: #fff; }
++@media(max-width:760px) {
++ .example-picker { width: 100%; min-width: 0; }
++ .guide-overview,.measurement-card { grid-template-columns: 1fr; }
++ .guide-overview article + article { border-left: 0; border-top: 1px solid #ccc; }
++ .guide-section > ol,.guide-section > ul { grid-template-columns: 1fr; }
++ .measurement-runs ol { grid-template-columns: repeat(2,minmax(0,1fr)); }
++ .guide-hero { padding-block: 2rem 3rem; }
++ .guide-nav a { flex: 1 1 100%; }
++}
++/* Tool installation blocks use the same in-surface copy placement. */
++.tool-install-panel .sk-code-block { position: relative; background: #181818; color: #fff; }
++.tool-install-panel .sk-code-block figcaption { padding: 0; border: 0; min-height: 0; }
++.tool-install-panel .sk-code-block figcaption > span:first-child { display: none; }
++.tool-install-panel .sk-code-block pre { padding: 1.25rem 4rem 1.25rem 1.25rem; margin: 0; min-height: 4rem; }
++.tool-install-panel .copy-icon-button { position: absolute; top: .5rem; right: .5rem; width: 44px; height: 44px; background: #282828; color: #fff; border: 1px solid #777; }
++.tool-install-panel .copy-status { position: absolute; top: calc(.5rem + 22px); right: 3.75rem; transform: translateY(-50%); margin: 0; padding: 0; background: transparent; border: 0; color: #fff; font-size: .75rem; }
+diff --git a/assets/js/site.js b/assets/js/site.js
+index 65b73c1..b90a7cc 100644
+--- a/assets/js/site.js
++++ b/assets/js/site.js
+@@ -30,12 +30,13 @@
+     var copiedLabel = button.dataset.copiedLabel || 'Install command copied';
+     button.dataset.copied = 'true';
+     button.setAttribute('aria-label', copiedLabel);
+-    if (status) status.textContent = 'Copied to clipboard.';
+-    window.setTimeout(function () {
++    if (status) status.textContent = 'Copied!';
++    window.clearTimeout(button.copyFeedbackTimer);
++    button.copyFeedbackTimer = window.setTimeout(function () {
+       button.dataset.copied = 'false';
+       button.setAttribute('aria-label', copyLabel);
+       if (status) status.textContent = '';
+-    }, 1800);
++    }, 1500);
+   }
+ 
+   function enhanceCopyButtons() {
+@@ -622,7 +623,55 @@
+     const update = () => panels.forEach(panel => { panel.hidden = panel.dataset.example !== selector.value; });
+     root.querySelector('.example-selector').hidden = false;
+     selector.addEventListener('change', update);
+-    update();
++    // A themed disclosure keeps native selection as the underlying value/fallback.
++    const picker = document.createElement('div'); picker.className = 'example-picker';
++    const trigger = document.createElement('button'); trigger.type = 'button';
++    trigger.id = 'example-picker-trigger'; trigger.className = 'example-picker-trigger';
++    trigger.setAttribute('aria-haspopup', 'listbox'); trigger.setAttribute('aria-expanded', 'false');
++    trigger.setAttribute('aria-controls', 'example-picker-options');
++    const list = document.createElement('div'); list.id = 'example-picker-options';
++    list.className = 'example-picker-options'; list.setAttribute('role', 'listbox');
++    list.setAttribute('aria-label', 'Choose an example'); list.hidden = true;
++    const options = [...selector.options].map(option => {
++      const button = document.createElement('button'); button.type = 'button';
++      button.setAttribute('role', 'option'); button.tabIndex = -1;
++      button.dataset.value = option.value; button.textContent = option.textContent;
++      list.append(button); return button;
++    });
++    const sync = () => {
++      trigger.textContent = selector.selectedOptions[0].textContent;
++      trigger.setAttribute('aria-label', 'Choose an example: ' + trigger.textContent);
++      options.forEach(option => option.setAttribute('aria-selected', String(option.dataset.value === selector.value)));
++    };
++    const close = (focus = false) => { list.hidden = true; trigger.setAttribute('aria-expanded', 'false'); if (focus) trigger.focus(); };
++    const open = () => { list.hidden = false; trigger.setAttribute('aria-expanded', 'true'); options.find(option => option.dataset.value === selector.value).focus(); };
++    trigger.addEventListener('click', () => list.hidden ? open() : close());
++    trigger.addEventListener('keydown', event => { if (['ArrowDown', 'ArrowUp'].includes(event.key)) { event.preventDefault(); open(); } });
++    options.forEach(option => option.addEventListener('click', () => {
++      selector.value = option.dataset.value; selector.dispatchEvent(new Event('change')); close(true);
++    }));
++    let typed = '', typingTimer;
++    list.addEventListener('keydown', event => {
++      let index = options.indexOf(document.activeElement);
++      if (event.key === 'Escape') { event.preventDefault(); close(true); return; }
++      if (event.key === 'Tab') { close(); trigger.focus(); return; }
++      if (event.key === 'ArrowDown') index = (index + 1) % options.length;
++      else if (event.key === 'ArrowUp') index = (index + options.length - 1) % options.length;
++      else if (event.key === 'Home') index = 0;
++      else if (event.key === 'End') index = options.length - 1;
++      else if (event.key.length === 1 && event.key !== ' ') {
++        clearTimeout(typingTimer); typed += event.key.toLowerCase();
++        typingTimer = setTimeout(() => { typed = ''; }, 600);
++        index = options.findIndex(option => option.textContent.toLowerCase().startsWith(typed));
++      } else return;
++      event.preventDefault(); if (index >= 0) options[index].focus();
++    });
++    document.addEventListener('click', event => { if (!picker.contains(event.target)) close(); });
++    picker.addEventListener('focusout', event => { if (!picker.contains(event.relatedTarget)) close(); });
++    picker.append(trigger, list); selector.after(picker); selector.hidden = true;
++    const label = root.querySelector('label[for="home-example"]');
++    label.htmlFor = trigger.id;
++    selector.addEventListener('change', sync); sync(); update();
+   });
+   document.querySelectorAll('.kujo-content pre').forEach(pre => {
+     if (pre.closest('.sample-code') || !pre.querySelector('code')) return;
+@@ -631,13 +680,27 @@
+     pre.before(wrapper);
+     wrapper.append(pre);
+     const button = document.createElement('button');
+-    button.type = 'button'; button.className = 'sk-button';
+-    button.dataset.copyCode = ''; button.textContent = 'Copy code';
++    button.type = 'button'; button.className = 'sk-button code-copy-icon';
++    button.dataset.copyCode = ''; button.setAttribute('aria-label', 'Copy code'); button.title = 'Copy code';
++    button.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg>';
++    pre.tabIndex = 0;
++    const code = pre.querySelector('code');
++    // Build spans from text nodes: preserve exact clipboard bytes and never interpret source as HTML.
++    if (!code.children.length) {
++      const tokens = code.textContent.split(/("(?:\\.|[^"\\])*"|'[^'\n]*'|#[^\n]*|\b(?:let|func|return|if|else|true|false|null)\b|\b\d+(?:\.\d+)?\b)/g);
++      code.textContent = '';
++      tokens.forEach((text, index) => {
++        if (!(index % 2)) { code.append(document.createTextNode(text)); return; }
++        const span = document.createElement('span');
++        span.className = 'syntax-token syntax-' + (/^["']/.test(text) ? 'string' : text.startsWith('#') ? 'comment' : /^\d/.test(text) ? 'number' : 'keyword');
++        span.textContent = text; code.append(span);
++      });
++    }
+     const status = document.createElement('span');
+     status.dataset.codeStatus = ''; status.setAttribute('role', 'status');
+     wrapper.append(button, status);
+   });
+-  document.querySelectorAll('[data-copy-code]').forEach(button => {
++  document.querySelectorAll('.sample-code [data-copy-code]').forEach(button => {
+     let statusTimer;
+     button.hidden = false;
+     button.addEventListener('click', async () => {
+diff --git a/content/pages/development-workflow.md b/content/pages/development-workflow.md
+index 6781756..59de4ff 100644
+--- a/content/pages/development-workflow.md
++++ b/content/pages/development-workflow.md
+@@ -1,4 +1,5 @@
+ ---
++template: guide-development-workflow
+ title: A composable development workflow
+ custom_url: development-workflow
+ description: "Define scope, retrieve context, implement a change, run tests and inspect evidence in an existing repository."
+@@ -6,33 +7,38 @@ seo_title: "An inspectable development workflow | Kujo"
+ social_image: /assets/images/social/development-workflow.jpg
+ ---
+ 
+-## Keep your language. Make the work inspectable.
+-
+-Scenario: an agent is asked to add a customer API endpoint to an existing Python or TypeScript repository. These are composable stages, not a claim that all the tools are automatically connected. You choose the commands, execution environment and review boundary.
+-
+-1. **Define scope:** describe the endpoint, expected behavior and excluded changes. [Spec](/ecosystem/spec/) can express a task contract.
+-2. **Retrieve context:** inspect relevant routes and tests. [Scout](/ecosystem/scout/) analyzes repositories; [Scent](/ecosystem/scent/) creates bounded context packs.
+-3. **Execute:** implement in your checkout or a separately configured [Workcell](/ecosystem/workcell/) environment. Isolation depends on the selected backend and policy.
+-4. **Evaluate:** run the repository’s real tests. [Eval](/ecosystem/eval/) and [Lens](/ecosystem/lens/) can provide configured evaluation and browser checks.
+-5. **Inspect evidence:** review the Git diff. [PatchBrief](/ecosystem/patchbrief/) summarizes changes; [ChangeBucket](/ecosystem/changebucket/) measures their footprint.
+-6. **Assess readiness:** [ShipCheck](/ecosystem/shipcheck/) evaluates declared release conditions. Deployment still belongs to the project’s authorized pipeline.
+-
+-These repository-oriented tools can support non-Kujo code. They require their own installation and configuration; they are not language keywords or bundled guarantees.
+-
+-## Reproduce the local gate-and-evidence stage
+-
+-Prerequisites: Git, Bash and the target project’s existing test command. Clone the [Loop Engineering source](https://github.com/kujolang/kujo-workflows/tree/main/loop-engineering) beside a disposable test repository:
+-
+-```sh
+-git clone https://github.com/kujolang/kujo-workflows.git
++<div class="guide-intro"><h2>A change you can trace.</h2>
++<p>Take one change from a clear scope to reviewed evidence. Use your existing repository and its real test commands.</p>
++</div>
++<div class="guide-overview"><article><span>Scope</span><h2>A customer endpoint</h2>
++<p>Define the response, validation rules and excluded changes.</p>
++</article>
++<article><span>Check</span><h2>Your project’s tests</h2>
++<p>Use commands that exercise the behavior you changed.</p>
++</article>
++<article><span>Review</span><h2>A recorded result</h2>
++<p>Read the diff, gate logs and verdict before shipping.</p>
++</article>
++</div>
++<nav class="guide-nav" aria-label="On this page"><a href="#step-1">Keep your language. Make the work inspectable. <span aria-hidden="true">↗</span></a><a href="#step-2">Reproduce the local gate-and-evidence stage <span aria-hidden="true">↗</span></a></nav>
++<div class="guide-sections kujo-content"><section class="guide-section"><h2 id="step-1">Keep your language. Make the work inspectable.</h2>
++<p>Suppose an agent needs to add a customer API endpoint to a Python or TypeScript repository. Choose the tools you need for each stage. You configure their commands, environment and review rules; they do not connect automatically.</p>
++<ol><li><strong>Define scope:</strong> describe the endpoint, expected behavior and excluded changes. <a href="/ecosystem/spec/">Spec</a> can express a task contract.</li>
++<li><strong>Retrieve context:</strong> inspect relevant routes and tests. <a href="/ecosystem/scout/">Scout</a> analyzes repositories; <a href="/ecosystem/scent/">Scent</a> creates bounded context packs.</li>
++<li><strong>Execute:</strong> implement in your checkout or a separately configured <a href="/ecosystem/workcell/">Workcell</a> environment. Isolation depends on the selected backend and policy.</li>
++<li><strong>Evaluate:</strong> run the repository’s real tests. <a href="/ecosystem/eval/">Eval</a> and <a href="/ecosystem/lens/">Lens</a> can provide configured evaluation and browser checks.</li>
++<li><strong>Inspect evidence:</strong> review the Git diff. <a href="/ecosystem/patchbrief/">PatchBrief</a> summarizes changes; <a href="/ecosystem/changebucket/">ChangeBucket</a> measures their footprint.</li>
++<li><strong>Assess readiness:</strong> <a href="/ecosystem/shipcheck/">ShipCheck</a> evaluates declared release conditions. Deployment still belongs to the project’s authorized pipeline.</li>
++</ol>
++<p>These tools also work with non-Kujo code. Install and configure each one separately.</p>
++</section>
++<section class="guide-section"><h2 id="step-2">Reproduce the local gate-and-evidence stage</h2>
++<p>Prerequisites: Git, Bash and the target project’s existing test command. Clone the <a href="https://github.com/kujolang/kujo-workflows/tree/main/loop-engineering">Loop Engineering source</a> beside a disposable test repository:</p>
++<pre><code class="language-sh">git clone https://github.com/kujolang/kujo-workflows.git
+ cd your-existing-project
+-../kujo-workflows/loop-engineering/scripts/init-repo-loop.sh
+-```
+-
+-Inspect any existing `.loop-engineering/` before initialization. Set the objective and real commands in `.loop-engineering/loop.yml`; the following is a minimal example for a project that already has a working `npm test` script:
+-
+-```yaml
+-objective: "Implement and verify the customer endpoint within the agreed scope"
++../kujo-workflows/loop-engineering/scripts/init-repo-loop.sh</code></pre>
++<p>Inspect any existing <code>.loop-engineering/</code> before initialization. Set the objective and real commands in <code>.loop-engineering/loop.yml</code>; the following is a minimal example for a project that already has a working <code>npm test</code> script:</p>
++<pre><code class="language-yaml">objective: "Implement and verify the customer endpoint within the agreed scope"
+ max_iterations: 2
+ max_no_progress: 1
+ max_consecutive_failures: 2
+@@ -45,15 +51,10 @@ eval_gates:
+     required: true
+ commit:
+   enabled: false
+-  push: false
+-```
+-
+-After implementing the endpoint and its tests:
+-
+-```sh
+-../kujo-workflows/loop-engineering/scripts/run-workflow.sh --config .loop-engineering/loop.yml
+-```
+-
+-Inspect `.loop-engineering/SUMMARY.md`, `ledger.tsv` and `iterations/001/`. Each iteration records context, action, diff, evaluation logs and verdict. The Bash runner gates and records work; it does not implement an endpoint or invoke an AI agent on its own. Inspect the verdict file: the process exit alone does not establish that gates passed. A passing test command only proves the assertions it actually ran.
+-
+-This website uses the same runner. Its [committed workflow state](https://github.com/kujolang/kujolang.ai/tree/main/.loop-engineering) provides a concrete example of scoped changes and recorded checks.
++  push: false</code></pre>
++<p>After implementing the endpoint and its tests:</p>
++<pre><code class="language-sh">../kujo-workflows/loop-engineering/scripts/run-workflow.sh --config .loop-engineering/loop.yml</code></pre>
++<p>Inspect <code>.loop-engineering/SUMMARY.md</code>, <code>ledger.tsv</code> and <code>iterations/001/</code>. Each iteration records context, action, diff, evaluation logs and verdict. The Bash runner gates and records work; it does not implement an endpoint or invoke an AI agent on its own. Inspect the verdict file: the process exit alone does not establish that gates passed. A passing test command only proves the assertions it actually ran.</p>
++<p>This website uses the same runner. Its <a href="https://github.com/kujolang/kujolang.ai/tree/main/.loop-engineering">committed workflow state</a> provides a concrete example of scoped changes and recorded checks.</p>
++</section>
++</div>
+diff --git a/content/pages/language.md b/content/pages/language.md
+index 32dec37..e0ca9c8 100644
+--- a/content/pages/language.md
++++ b/content/pages/language.md
+@@ -1,4 +1,5 @@
+ ---
++template: guide-language
+ title: Learn the Kujo language
+ custom_url: language
+ description: "Install Kujo, check and run your first program, then explore language and AI runtime examples."
+@@ -6,57 +7,50 @@ seo_title: "Get started with Kujo | Install and run"
+ social_image: /assets/images/social/language.jpg
+ ---
+ 
+-## Install the runtime
+-
+-Kujo is a programming language with a Rust-based runtime. Start with the runtime alone; independent ecosystem packages can come later.
+-
+-With Node.js 18 or newer, the runtime-only npm package supports macOS x64/arm64, Linux x64/arm64 and Windows x64:
+-
+-```sh
+-npm install --global @kujolang/kujo-runtime@1.9.0
+-kujo --version
+-```
+-
+-Expected version: `kujo 1.9.0`. On Windows, use PowerShell or a terminal with Node.js on PATH. Native Windows archives and checksum instructions are in the [official installation guide](https://github.com/kujolang/kujo/blob/v1.9.0/INSTALLATION.md).
+-
+-For the runtime and core toolset on macOS/Linux:
+-
+-```sh
+-curl -fsSL https://kujolang.ai/install.sh | KUJO_RELEASE_VERSION=v1.9.0 bash
++<div class="guide-intro"><h2>Write your first program.</h2>
++<p>Install the runtime, save a short script and run it. You can add packages and development tools when you need them.</p>
++</div>
++<div class="guide-overview"><article><span>01</span><h2>Install</h2>
++<p>Choose the runtime-only package or the core toolset.</p>
++</article>
++<article><span>02</span><h2>Write</h2>
++<p>Save a plain-text file with a .kujo extension.</p>
++</article>
++<article><span>03</span><h2>Run</h2>
++<p>Check the source, then execute it locally.</p>
++</article>
++</div>
++<nav class="guide-nav" aria-label="On this page"><a href="#step-1">Install the runtime <span aria-hidden="true">↗</span></a><a href="#step-2">Create hello.kujo <span aria-hidden="true">↗</span></a><a href="#step-3">Where to go next <span aria-hidden="true">↗</span></a><a href="#step-4">Troubleshooting <span aria-hidden="true">↗</span></a></nav>
++<div class="guide-sections kujo-content"><section class="guide-section"><h2 id="step-1">Install the runtime</h2>
++<p>Kujo is a programming language with a Rust-based runtime. Start with the runtime alone; independent ecosystem packages can come later.</p>
++<p>With Node.js 18 or newer, the runtime-only npm package supports macOS x64/arm64, Linux x64/arm64 and Windows x64:</p>
++<pre><code class="language-sh">npm install --global @kujolang/kujo-runtime@1.9.0
++kujo --version</code></pre>
++<p>Expected version: <code>kujo 1.9.0</code>. On Windows, use PowerShell or a terminal with Node.js on PATH. Native Windows archives and checksum instructions are in the <a href="https://github.com/kujolang/kujo/blob/v1.9.0/INSTALLATION.md">official installation guide</a>.</p>
++<p>For the runtime and core toolset on macOS/Linux:</p>
++<pre><code class="language-sh">curl -fsSL https://kujolang.ai/install.sh | KUJO_RELEASE_VERSION=v1.9.0 bash
+ export PATH="$HOME/.local/bin:$PATH"
+-kujo --version
+-```
+-
+-This second option also installs separately versioned ecosystem tools. The runtime version does not pin those tool snapshots. Review the official installer and release-manifest options when reproducibility matters.
+-
+-## Create hello.kujo
+-
+-Open a text editor and save this code as `hello.kujo`:
+-
+-```kujo
+-print("Hello, Kujo!")
+-```
+-
+-In the same directory:
+-
+-```sh
+-kujo check hello.kujo
+-kujo run hello.kujo
+-```
+-
+-The check validates source without executing it. The run prints:
+-
+-```text
+-Hello, Kujo!
+-```
+-
+-## Where to go next
+-
+-- [Browse verified examples](/examples/): functions, collections, async and AI replay.
+-- [Follow the language tutorial](https://docs.kujolang.ai/learn/).
+-- [Learn packages with Kennel](https://docs.kujolang.ai/learn/packages/).
+-- [Read the runtime source](https://github.com/kujolang/kujo/tree/v1.9.0).
+-
+-## Troubleshooting
+-
+-If `kujo` is not found, reopen your terminal and check the installer’s PATH instructions. If your operating system or architecture is not listed above, consult the [source-build instructions](https://github.com/kujolang/kujo/blob/v1.9.0/INSTALLATION.md). Use the [issue tracker](https://github.com/kujolang/kujo/issues) with your runtime version, operating system and a minimal sample.
++kujo --version</code></pre>
++<p>This second option also installs separately versioned ecosystem tools. The runtime version does not pin those tool snapshots. Review the official installer and release-manifest options when reproducibility matters.</p>
++</section>
++<section class="guide-section"><h2 id="step-2">Create hello.kujo</h2>
++<p>Open a text editor and save this code as <code>hello.kujo</code>:</p>
++<pre><code class="language-kujo">print("Hello, Kujo!")</code></pre>
++<p>In the same directory:</p>
++<pre><code class="language-sh">kujo check hello.kujo
++kujo run hello.kujo</code></pre>
++<p>The check validates source without executing it. The run prints:</p>
++<pre><code class="language-text">Hello, Kujo!</code></pre>
++</section>
++<section class="guide-section"><h2 id="step-3">Where to go next</h2>
++<ul>
++<li><a href="/examples/">Browse verified examples</a>: functions, collections, async and AI replay.</li>
++<li><a href="https://docs.kujolang.ai/learn/">Follow the language tutorial</a>.</li>
++<li><a href="https://docs.kujolang.ai/learn/packages/">Learn packages with Kennel</a>.</li>
++<li><a href="https://github.com/kujolang/kujo/tree/v1.9.0">Read the runtime source</a>.</li>
++</ul>
++</section>
++<section class="guide-section"><h2 id="step-4">Troubleshooting</h2>
++<p>If <code>kujo</code> is not found, reopen your terminal and check the installer’s PATH instructions. If your operating system or architecture is not listed above, consult the <a href="https://github.com/kujolang/kujo/blob/v1.9.0/INSTALLATION.md">source-build instructions</a>. Use the <a href="https://github.com/kujolang/kujo/issues">issue tracker</a> with your runtime version, operating system and a minimal sample.</p>
++</section>
++</div>
+diff --git a/content/pages/performance.md b/content/pages/performance.md
+index ee7e2dc..fa99173 100644
+--- a/content/pages/performance.md
++++ b/content/pages/performance.md
+@@ -1,4 +1,5 @@
+ ---
++template: guide-performance
+ title: Performance evidence
+ custom_url: performance
+ description: "Reproduce Kujo measurements, separate startup from execution and identify what remains unmeasured."
+@@ -6,31 +7,59 @@ seo_title: "Kujo performance methodology and evidence"
+ social_image: /assets/images/social/performance.jpg
+ ---
+ 
+-## Measure the workload you actually need
++<div class="guide-intro"><h2>Know what was measured.</h2>
++<p>One small script. Ten process runs. A published receipt you can inspect and reproduce.</p>
++</div>
++<div class="guide-overview"><article><span>Workload</span><h2>Three values</h2>
++<p>The functions example adds three numbers and prints total: 42.</p>
++</article>
++<article><span>Timing</span><h2>Whole process</h2>
++<p>Includes runtime startup, script execution and output.</p>
++</article>
++<article><span>Boundary</span><h2>No speed ranking</h2>
++<p>Other languages, throughput and memory use remain unmeasured.</p>
++</article>
++</div>
++<section class="measurement-card" aria-labelledby="measurement-title"><div><p>Recorded local result</p>
++<h2 id="measurement-title">33.19<small> ms median</small></h2>
++<p>10 process runs · 27 October 2026</p>
++<a href="/samples/performance.json">Download the raw receipt ↗</a></div>
++<dl><div><dt>Observed range</dt><dd>28.84–58.95 ms</dd></div>
++<div><dt>Runtime</dt><dd>kujo 1.9.0</dd></div>
++<div><dt>Machine</dt><dd>Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz</dd></div>
++<div><dt>Environment</dt><dd>macOS-26.6.2-x86_64-i386-64bit</dd></div>
++</dl>
++</section>
++<details class="measurement-runs"><summary>Inspect all ten runs</summary><ol><li><span>Run 01</span><strong>58.95 ms</strong></li>
++<li><span>Run 02</span><strong>32.99 ms</strong></li>
++<li><span>Run 03</span><strong>33.33 ms</strong></li>
++<li><span>Run 04</span><strong>34.62 ms</strong></li>
++<li><span>Run 05</span><strong>29.19 ms</strong></li>
++<li><span>Run 06</span><strong>28.84 ms</strong></li>
++<li><span>Run 07</span><strong>32.62 ms</strong></li>
++<li><span>Run 08</span><strong>33.19 ms</strong></li>
++<li><span>Run 09</span><strong>33.19 ms</strong></li>
++<li><span>Run 10</span><strong>33.63 ms</strong></li>
++</ol>
++<p>The receipt includes the command and source SHA-256. This is a local observation, not a performance guarantee.</p>
++</details>
++<nav class="guide-nav" aria-label="On this page"><a href="#step-1">Measure the workload you actually need <span aria-hidden="true">↗</span></a><a href="#step-2">Reproduce the small-script measurement <span aria-hidden="true">↗</span></a><a href="#step-3">Built with Kujo <span aria-hidden="true">↗</span></a></nav>
++<div class="guide-sections kujo-content"><section class="guide-section"><h2 id="step-1">Measure the workload you actually need</h2>
++<p>Kujo runs on a bytecode VM by default. A compatibility interpreter is a different execution path. Neither should be confused with native compiled output or with JIT steady-state measurements from another runtime.</p>
++<p>This page makes no claim that Kujo is faster than another language. Cross-language workloads are <strong>unmeasured here</strong>. Existing <a href="/compare/">comparison pages</a> describe evidence and adoption tradeoffs rather than a universal speed ranking.</p>
+ 
+-Kujo runs on a bytecode VM by default. A compatibility interpreter is a different execution path. Neither should be confused with native compiled output or with JIT steady-state measurements from another runtime.
+-
+-This page makes no claim that Kujo is faster than another language. Cross-language workloads are **unmeasured here**. Existing [comparison pages](/compare/) describe evidence and adoption tradeoffs rather than a universal speed ranking.
+-
+-<!-- MEASUREMENT START -->
+-Observed local median: **33.19 ms** across 10 process runs on Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz, macOS-26.6.2-x86_64-i386-64bit, kujo 1.9.0. Measured 2026-10-27. This tiny workload is dominated by startup; it is not evidence of superiority over another language.
+-<!-- MEASUREMENT END -->
+-
+-## Reproduce the small-script measurement
+-
+-The site includes a [measurement script](https://github.com/kujolang/kujolang.ai/blob/main/scripts/measure-language.py) and a [machine-readable receipt](/samples/performance.json). Run it from the website source after installing Kujo 1.9.0:
+-
+-```sh
+-python3 scripts/measure-language.py
+-```
+-
+-The workload is the pinned [functions example](/examples/functions/), summing three values and printing the result. The script records operating system, architecture, CPU, runtime version, source hash, command, ten process runs and median wall time. It checks output on every run. This is a **process startup plus script execution** measurement, including CLI and output overhead, not a steady-state VM benchmark. It cannot support conclusions about application throughput, memory use, parallelism or other languages.
+-
+-For larger experiments, inspect [Kujo benchmark sources](https://github.com/kujolang/kujo/tree/v1.9.0/benchmarks) and the runtime’s `kujo bench --help`. Record compiler flags, dependency versions, CPU, OS, warmup, sample count, input data and output equivalence. Separate startup, compilation and steady-state time. Publish raw results and uncertainty before drawing comparisons.
+-
+-## Built with Kujo
+-
+-- [This website](https://github.com/kujolang/kujolang.ai/blob/main/build.kujo) is generated by Kujo SSG.
+-- [CMS](/ecosystem/cms/) uses a Kujo server runtime with separate frontend components.
+-- [CRUD API](/ecosystem/crud-api/) provides a Kujo backend showcase and a separate playground.
+-- [RAG](/ecosystem/rag/) demonstrates ingestion and retrieval with documented model and storage requirements.
++</section>
++<section class="guide-section"><h2 id="step-2">Reproduce the small-script measurement</h2>
++<p>The site includes a <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/measure-language.py">measurement script</a> and a <a href="/samples/performance.json">machine-readable receipt</a>. Run it from the website source after installing Kujo 1.9.0:</p>
++<pre><code class="language-sh">python3 scripts/measure-language.py</code></pre>
++<p>The workload is the pinned <a href="/examples/functions/">functions example</a>, summing three values and printing the result. The script records operating system, architecture, CPU, runtime version, source hash, command, ten process runs and median wall time. It checks output on every run. This is a <strong>process startup plus script execution</strong> measurement, including CLI and output overhead, not a steady-state VM benchmark. It cannot support conclusions about application throughput, memory use, parallelism or other languages.</p>
++<p>For larger experiments, inspect <a href="https://github.com/kujolang/kujo/tree/v1.9.0/benchmarks">Kujo benchmark sources</a> and the runtime’s <code>kujo bench --help</code>. Record compiler flags, dependency versions, CPU, OS, warmup, sample count, input data and output equivalence. Separate startup, compilation and steady-state time. Publish raw results and uncertainty before drawing comparisons.</p>
++</section>
++<section class="guide-section"><h2 id="step-3">Built with Kujo</h2>
++<ul>
++<li><a href="https://github.com/kujolang/kujolang.ai/blob/main/build.kujo">This website</a> is generated by Kujo SSG.</li>
++<li><a href="/ecosystem/cms/">CMS</a> uses a Kujo server runtime with separate frontend components.</li>
++<li><a href="/ecosystem/crud-api/">CRUD API</a> provides a Kujo backend showcase and a separate playground.</li>
++<li><a href="/ecosystem/rag/">RAG</a> demonstrates ingestion and retrieval with documented model and storage requirements.</li>
++</ul></section>
++</div>
+diff --git a/scripts/render-language-examples.mjs b/scripts/render-language-examples.mjs
+index 79e4aa5..bb5fd78 100644
+--- a/scripts/render-language-examples.mjs
++++ b/scripts/render-language-examples.mjs
+@@ -50,7 +50,7 @@ ${categories.map((cat,i)=>`<section class="example-category-group" id="${categor
+ <section class="examples-next"><div><p class="eyebrow">Keep building</p><h2>Beyond a single script.</h2><p>Install packages and agent SDKs separately. These guides explain how to use them.</p></div><div><a href="https://docs.kujolang.ai/learn/packages/">Packages with Kennel <span aria-hidden="true">↗</span></a><a href="/ecosystem/agents-sdk/">Agents SDK <span aria-hidden="true">↗</span></a><a href="/ecosystem/ai-sdk/">AI SDK <span aria-hidden="true">↗</span></a></div></section>
+ <details class="example-provenance"><summary>About these samples</summary><div><p>Sources are pinned to <a href="${catalog.repository}/tree/${catalog.commit}">Kujo ${catalog.version}</a>. Each card tells you whether we ran the sample or checked its source. Extract the bundle before running its commands. Each example lists any other requirements.</p></div></details>`);
+ const featured=['hello-world','functions','collections','async','request-hash','replay'];
+-const explorer=`<section class="language-section home-explorer" aria-labelledby="code-title" data-code-explorer><header class="home-explorer-heading"><div><h2 id="code-title">A feel for the language</h2></div><a href="/examples/">All examples ↗</a></header><div class="example-selector" hidden><label for="home-example">Choose an example</label><select id="home-example">${featured.map(id=>{const x=catalog.items.find(x=>x.slug===id);return `<option value="${id}">${x.title}</option>`}).join('')}</select></div>${featured.map(id=>panel(catalog.items.find(x=>x.slug===id),false)).join('\n')}<a class="sk-button" href="/examples/">Explore all examples</a></section>`;
++const explorer=`<section class="language-section home-explorer" aria-labelledby="code-title" data-code-explorer><header class="home-explorer-heading"><div><h2 id="code-title">A feel for the language</h2></div><a href="/examples/">All examples ↗</a></header><div class="example-selector" hidden><label for="home-example">Choose an example</label><select id="home-example">${featured.map(id=>{const x=catalog.items.find(x=>x.slug===id);return `<option value="${id}"${id==='request-hash'?' selected':''}>${x.title}</option>`}).join('')}</select></div>${featured.map(id=>panel(catalog.items.find(x=>x.slug===id),false)).join('\n')}<a class="sk-button" href="/examples/">Explore all examples</a></section>`;
+ const home=fs.readFileSync('templates/page-home.html','utf8');write('templates/page-home.html',home.replace(/<!-- LANGUAGE EXPLORER START -->[\s\S]*?<!-- LANGUAGE EXPLORER END -->/,`<!-- LANGUAGE EXPLORER START -->\n${explorer}\n<!-- LANGUAGE EXPLORER END -->`));
+ const manifest=JSON.parse(fs.readFileSync('howl-social.json','utf8'));
+ for(const [slug,title,description] of [['examples','Kujo language examples','Real code. Verified commands. Pinned sources.'],...catalog.items.map(x=>['examples/'+x.slug,x.title,x.description]),['language','Learn Kujo','Install, check and run your first Kujo program.'],['development-workflow','A composable development workflow','Define scope, inspect context, test changes and review evidence.'],['performance','Performance evidence','Reproduce measurements and understand their limits.']]){
+diff --git a/scripts/test-language-browser.cjs b/scripts/test-language-browser.cjs
+index 2c3af13..fc9eaf7 100644
+--- a/scripts/test-language-browser.cjs
++++ b/scripts/test-language-browser.cjs
+@@ -25,7 +25,12 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
+   assert(await page.locator('.language-final').evaluate(el=>{const r=el.getBoundingClientRect(),s=getComputedStyle(el);return r.left===0&&Math.abs(r.width-innerWidth)<2&&s.backgroundColor==='rgb(17, 17, 17)'&&s.color==='rgb(255, 255, 255)';}),'Final CTA is full-width black with white text');
+   assert.equal(await page.locator('.home-build .home-section-heading').evaluate(el=>getComputedStyle(el).textAlign),'center');
+   assert.equal(await page.locator('.home-ecosystem .home-section-heading').evaluate(el=>getComputedStyle(el).textAlign),'center');
+-  await page.locator('#home-example').focus();await page.keyboard.press('f');await page.keyboard.press('Tab');assert.notEqual(await page.locator('#home-example').inputValue(),'hello-world');await page.selectOption('#home-example','request-hash');assert(await page.locator('#example-request-hash').isVisible());
++  assert.equal(await page.locator('#home-example').inputValue(),'request-hash');
++  assert.equal(await page.locator('.home-hero .eyebrow').count(),0);
++  await page.locator('#example-picker-trigger').click();await page.keyboard.press('Home');await page.keyboard.press('Enter');
++  assert.equal(await page.locator('#home-example').inputValue(),'hello-world');
++  await page.locator('#example-picker-trigger').click();await page.getByRole('option',{name:'Deterministic AI request IDs'}).click();
++  assert(await page.locator('#example-request-hash').isVisible());
+   await page.locator('#example-request-hash [data-copy-code]').first().click();await page.waitForFunction(()=>document.querySelector('#example-request-hash [data-code-status]').textContent==='Copied!');
+   assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),fs.readFileSync('public/samples/request-hash.kujo','utf8'));
+   await page.selectOption('#home-example','hello-world');
+diff --git a/scripts/verify-language-site.py b/scripts/verify-language-site.py
+index 1bab469..839190e 100644
+--- a/scripts/verify-language-site.py
++++ b/scripts/verify-language-site.py
+@@ -1,7 +1,7 @@
+ import json,pathlib,re
+ from html.parser import HTMLParser
+ r=pathlib.Path('output');c=json.loads(pathlib.Path('examples/catalog.json').read_text());home=(r/'index.html').read_text();sitemap=(r/'sitemap.xml').read_text()
+-assert home.index('The Kujo programming language') < home.index('data-code-explorer') < home.index('id="ecosystem-title"')
++assert home.index('home-hero') < home.index('data-code-explorer') < home.index('id="ecosystem-title"')
+ for t in ['Get Started','View Examples','ai_request_hash','ai_chat','home-example']: assert t in home,t
+ routes=['language','examples','development-workflow','performance']+['examples/'+x['slug'] for x in c['items']]
+ class Links(HTMLParser):
+diff --git a/templates/page-home.html b/templates/page-home.html
+index 2c6e7db..52fdcc6 100644
+--- a/templates/page-home.html
++++ b/templates/page-home.html
+@@ -1,9 +1,9 @@
+ <main id="main-content" class="language-home">
+ <section class="sk-hero home-hero" aria-labelledby="home-hero-title">
+ <div class="home-hero__media" aria-hidden="true"><img src="/assets/images/home-agent-workflow.webp" alt="" width="1672" height="941" fetchpriority="high"></div><div class="home-hero__wash" aria-hidden="true"></div>
+-<div class="sk-hero__inner"><div class="home-hero__copy"><p class="eyebrow">The Kujo programming language</p><h1 id="home-hero-title">Trust at the speed of AI.</h1><p class="home-hero__body">Kujo is a programming language for scripts, services and AI tools. Run your code locally, replay model responses and check the results.</p><div class="sk-hero__actions"><a class="sk-button" href="/language/">Get Started</a><a class="sk-button" data-variant="secondary" href="/examples/">View Examples</a></div></div></div></section>
++<div class="sk-hero__inner"><div class="home-hero__copy"><h1 id="home-hero-title">Trust at the speed of AI.</h1><p class="home-hero__body">Kujo is a programming language for scripts, services and AI tools. Run your code locally, replay model responses and check the results.</p><div class="sk-hero__actions"><a class="sk-button" href="/language/">Get Started</a><a class="sk-button" data-variant="secondary" href="/examples/">View Examples</a></div></div></div></section>
+ <!-- LANGUAGE EXPLORER START -->
+-<section class="language-section home-explorer" aria-labelledby="code-title" data-code-explorer><header class="home-explorer-heading"><div><h2 id="code-title">A feel for the language</h2></div><a href="/examples/">All examples ↗</a></header><div class="example-selector" hidden><label for="home-example">Choose an example</label><select id="home-example"><option value="hello-world">Hello World</option><option value="functions">Functions and operators</option><option value="collections">Collections</option><option value="async">Async tasks</option><option value="request-hash">Deterministic AI request IDs</option><option value="replay">AI calls and replay</option></select></div><article class="example-panel" id="example-hello-world" data-example="hello-world" data-category="Basics"><p class="eyebrow">Basics · Executed offline</p><h3>Hello World</h3><p>Print your first message.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token syntax-comment"># Expected output:</span>
++<section class="language-section home-explorer" aria-labelledby="code-title" data-code-explorer><header class="home-explorer-heading"><div><h2 id="code-title">A feel for the language</h2></div><a href="/examples/">All examples ↗</a></header><div class="example-selector" hidden><label for="home-example">Choose an example</label><select id="home-example"><option value="hello-world">Hello World</option><option value="functions">Functions and operators</option><option value="collections">Collections</option><option value="async">Async tasks</option><option value="request-hash" selected>Deterministic AI request IDs</option><option value="replay">AI calls and replay</option></select></div><article class="example-panel" id="example-hello-world" data-example="hello-world" data-category="Basics"><p class="eyebrow">Basics · Executed offline</p><h3>Hello World</h3><p>Print your first message.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token syntax-comment"># Expected output:</span>
+ <span class="syntax-token syntax-comment"># Kujo Kujo!</span>
+ 
+ print(<span class="syntax-token syntax-string">&quot;Kujo Kujo!&quot;</span>)

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "assets/css/style.css": "0c32e1a06e1c65d68d55931135cbf6e695835204b12e2ce4481f0804e1d0c593",
+    "assets/js/site.js": "b7a0552a13b4b7560db8c7a7acdef034a7af0880789b3cb997cb66158469cfd2",
+    "content/pages/development-workflow.md": "5b5a86d6216619dd3b2931d0722dbbb0ab037e748711536c10feb96681e4a5f0",
+    "content/pages/language.md": "f33d3ec0c66c6fa96ac5354efc0731a050f09d59a35d403a494810d81fb99a79",
+    "content/pages/performance.md": "b27d9fbb7a799369f0624493a0a31bab03a46e307ea2fd7476b4d206c6a3ca83",
+    "package.json": "38c7825491645e298878eb9d07d43bd7e52d9a520e62c971a09e399d4b744f03",
+    "scripts/render-language-examples.mjs": "964657d4cd39c2cce71b957be0155e38512fd82b182be1c756e984659b868b6b",
+    "scripts/test-language-browser.cjs": "818a89d8fa68eea03faf73e89ea9d9d11f2896b38e50b2b6e08a6d9ef8731005",
+    "scripts/verify-language-site.py": "c37fd028ef3c53e7844738c27d90e908c84f69c6afac2922a75860e60a4fcf91",
+    "templates/page-home.html": "cd9fec17366c7340b5b97d9df01fdd3593e3cc60c596400a0d17fecd7f31fa86",
+    "scripts/render-language-guides.mjs": "69b13f188d89481a99cb591b541a630c41fc6cf07344dceee37f7d52bd6582ff",
+    "scripts/test-guides-browser.cjs": "b6ff3d2d04bfaec284129eb8be0ba5f213b0f6a63db91b55b958eadb7db7050d",
+    "templates/page-guide-development-workflow.html": "53ac64e1af78db43ddaef1882b5e0c92617c6b83c36d873f8b01c03133e2795f",
+    "templates/page-guide-language.html": "3b48e05294e26cea096f4f463baff2269cac2686a32db3218f7fa9bcb41da056",
+    "templates/page-guide-performance.html": "e3d8be93ee32727e5cc1ed79a6187b231ba0842c244599fcfed889d0b0c7c9c0",
+    "templates/page-guide.html": "a048de2cad9d7e3a08a55a57e4b9698727a53d7ad7b10f92970716e6555289a5",
+    "tests/language-guides.test.mjs": "9eadf40be5acf2e2f8c3c06ca30a754afb26c501f52d54c6178355de9e84f35c"
+  },
+  "rendered": {
+    "output/index.html": "c95071aad053b66994388b43ee48f22dff5a463ee05714813b29181baa6c83bf",
+    "output/language/index.html": "a3d60c577752a7ae830dbe0b62a1a3e294bec0aeb4fec3efb18ebbc4a3b230e2",
+    "output/development-workflow/index.html": "db4aa6c86cff7d7050b7e2029c4a6935ee344b312a67424dfb2447f3d22bc84d",
+    "output/performance/index.html": "db4d0555e1af4383e98900fe34cbf169b695d62430fb8170afcc5ad52b826a82",
+    "output/assets/css/style.css": "0c32e1a06e1c65d68d55931135cbf6e695835204b12e2ce4481f0804e1d0c593",
+    "output/assets/js/site.js": "b7a0552a13b4b7560db8c7a7acdef034a7af0880789b3cb997cb66158469cfd2"
+  }
+}
