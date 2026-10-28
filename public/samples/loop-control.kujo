@@ -1,0 +1,21 @@
+print("=== Break in While Loop ===")
+x := 0
+while true {
+    print(x)
+    x := x + 1
+    if x >= 5 {
+        break
+    }
+}
+print("Broke out of loop")
+
+print("")
+print("=== Continue in While Loop ===")
+y := 0
+while y < 10 {
+    y := y + 1
+    if y % 2 == 0 {
+        continue
+    }
+    print(y)
+}

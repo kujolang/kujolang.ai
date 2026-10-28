@@ -1,0 +1,10 @@
+func double(x) { return x * 2 }
+func add_five(x) { return x + 5 }
+func square(x) { return x * x }
+
+let result := square(add_five(double(3)))
+print(result)
+
+func exclaim(s) { return s + "!" }
+let greeting := exclaim(to_upper("hello"))
+print(greeting)

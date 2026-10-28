@@ -1,0 +1,73 @@
+func print_lines(lines) {
+    for line in lines {
+        print(line)
+    }
+}
+
+func section(title, description) {
+    print_lines([
+        title,
+        "   " + description,
+        ""
+    ])
+}
+
+func show_pair(title, first_label, first_value, second_label, second_value) {
+    print("   " + title + ":")
+    print("   " + first_label + ": " + to_string(first_value))
+    print("   " + second_label + ": " + to_string(second_value))
+    print()
+}
+
+func show_value(title, label, value) {
+    print("   " + title + ":")
+    print("   " + label + ": " + to_string(value))
+    print()
+}
+
+func show_step(label, value) {
+    print("   " + label + ": " + to_string(value))
+}
+
+print_lines([
+    "=== Array Higher-Order Functions ===",
+    ""
+])
+
+# ============================================================================
+# MAP - Transform each element
+# ============================================================================
+section("1. MAP - Transform elements", "Applies a function to each element, returning a new array")
+
+# Example 1: Square numbers
+numbers := [1, 2, 3, 4, 5]
+squared := map(numbers, func(x) {
+    return x * x
+})
+show_pair("Square numbers", "Input", numbers, "Output", squared)
+
+# Example 2: Convert temperatures from Celsius to Fahrenheit
+celsius := [0, 10, 20, 30, 40]
+fahrenheit := map(celsius, func(c) {
+    return c * 9 / 5 + 32
+})
+show_pair("Celsius to Fahrenheit", "Celsius", celsius, "Fahrenheit", fahrenheit)
+
+# Example 3: String manipulation
+names := ["alice", "bob", "charlie"]
+capitalized := map(names, func(name) {
+    return to_upper(name)
+})
+show_pair("Capitalize names", "Input", names, "Output", capitalized)
+
+# ============================================================================
+# FILTER - Select elements matching a condition
+# ============================================================================
+section("2. FILTER - Select matching elements", "Returns only elements where the function returns true")
+
+# Example 1: Filter even numbers
+all_numbers := [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+evens := filter(all_numbers, func(n) {
+    return n % 2 == 0
+})
+show_pair("Even numbers", "Input", all_numbers, "Output", evens)

@@ -1,0 +1,27 @@
+// Sample log entries
+logs := [
+    "[2026-01-23 10:15:30] INFO: Application started successfully",
+    "[2026-01-23 10:15:31] DEBUG: Loading configuration from config.json",
+    "[2026-01-23 10:15:32] INFO: Connected to database",
+    "[2026-01-23 10:16:45] WARNING: High memory usage detected: 85%",
+    "[2026-01-23 10:17:12] ERROR: Failed to connect to API endpoint",
+    "[2026-01-23 10:17:15] INFO: Retrying connection...",
+    "[2026-01-23 10:17:18] ERROR: Connection timeout after 3 attempts",
+    "[2026-01-23 10:18:00] INFO: Fallback mode activated"
+]
+
+print("Sample Logs:")
+for log in logs {
+    print("  " + log)
+}
+print("")
+
+// Extract timestamps
+print("1. Extracting Timestamps:")
+timestamp_pattern := "\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}"
+for log in logs {
+    timestamps := regex_find_all(log, timestamp_pattern)
+    if len(timestamps) > 0 {
+        print("  " + timestamps[0])
+    }
+}

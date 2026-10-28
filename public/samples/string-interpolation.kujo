@@ -1,0 +1,23 @@
+# Simple variable interpolation
+name := "Alice"
+greeting := "Hello, ${name}!"
+print(greeting)
+
+# Number interpolation
+age := 25
+bio := "I am ${age} years old"
+print(bio)
+
+print("\n=== Expression Interpolation ===")
+
+# Arithmetic expressions
+x := 10
+y := 5
+result := "The sum of ${x} and ${y} is ${x + y}"
+print(result)
+
+# Multiple expressions
+width := 5
+height := 3
+area_msg := "Rectangle: ${width} x ${height} = ${width * height}"
+print(area_msg)

@@ -1,0 +1,48 @@
+func print_lines(lines) {
+    for line in lines {
+        print(line)
+    }
+}
+
+func section(title) {
+    print("")
+    print(title)
+}
+
+func kv(label, value) {
+    print("   " + label + ": " + to_string(value))
+}
+
+func show_result(label, value) {
+    print("   " + label + " = " + to_string(value))
+    print()
+}
+
+print_lines([
+    "=== Array Utilities Demo ===",
+    ""
+])
+
+# Sample data
+nums := [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
+kv("Original array", nums)
+
+# 1. Sort - arrange in ascending order
+section("1. SORT - Arrange in ascending order")
+sorted := sort(nums)
+show_result("sort(nums)", sorted)
+
+# 2. Reverse - reverse the order
+section("2. REVERSE - Reverse the order")
+reversed := reverse(nums)
+show_result("reverse(nums)", reversed)
+
+# 3. Unique - remove duplicates
+section("3. UNIQUE - Remove duplicates (preserves order)")
+unique_nums := unique(nums)
+show_result("unique(nums)", unique_nums)
+
+# 4. Sum - calculate total
+section("4. SUM - Calculate total")
+total := sum(nums)
+show_result("sum(nums)", total)

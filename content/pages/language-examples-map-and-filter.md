@@ -1,0 +1,116 @@
+---
+title: Map and filter arrays
+template: language-examples-map-and-filter
+custom_url: examples/map-and-filter
+description: "Transform numbers and names, then keep the even numbers."
+seo_title: "Map and filter arrays | Kujo"
+social_image: /assets/images/social/examples-map-and-filter.jpg
+---
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","@id":"https://kujolang.ai/examples/map-and-filter/#source","name":"Map and filter arrays","description":"Transform numbers and names, then keep the even numbers.","codeRepository":"https://github.com/kujolang/kujo","programmingLanguage":"Kujo","codeSampleType":"code snippet","url":"https://kujolang.ai/examples/map-and-filter/","text":"func print_lines(lines) {\n    for line in lines {\n        print(line)\n    }\n}\n\nfunc section(title, description) {\n    print_lines([\n        title,\n        \"   \" + description,\n        \"\"\n    ])\n}\n\nfunc show_pair(title, first_label, first_value, second_label, second_value) {\n    print(\"   \" + title + \":\")\n    print(\"   \" + first_label + \": \" + to_string(first_value))\n    print(\"   \" + second_label + \": \" + to_string(second_value))\n    print()\n}\n\nfunc show_value(title, label, value) {\n    print(\"   \" + title + \":\")\n    print(\"   \" + label + \": \" + to_string(value))\n    print()\n}\n\nfunc show_step(label, value) {\n    print(\"   \" + label + \": \" + to_string(value))\n}\n\nprint_lines([\n    \"=== Array Higher-Order Functions ===\",\n    \"\"\n])\n\n# ============================================================================\n# MAP - Transform each element\n# ============================================================================\nsection(\"1. MAP - Transform elements\", \"Applies a function to each element, returning a new array\")\n\n# Example 1: Square numbers\nnumbers := [1, 2, 3, 4, 5]\nsquared := map(numbers, func(x) {\n    return x * x\n})\nshow_pair(\"Square numbers\", \"Input\", numbers, \"Output\", squared)\n\n# Example 2: Convert temperatures from Celsius to Fahrenheit\ncelsius := [0, 10, 20, 30, 40]\nfahrenheit := map(celsius, func(c) {\n    return c * 9 / 5 + 32\n})\nshow_pair(\"Celsius to Fahrenheit\", \"Celsius\", celsius, \"Fahrenheit\", fahrenheit)\n\n# Example 3: String manipulation\nnames := [\"alice\", \"bob\", \"charlie\"]\ncapitalized := map(names, func(name) {\n    return to_upper(name)\n})\nshow_pair(\"Capitalize names\", \"Input\", names, \"Output\", capitalized)\n\n# ============================================================================\n# FILTER - Select elements matching a condition\n# ============================================================================\nsection(\"2. FILTER - Select matching elements\", \"Returns only elements where the function returns true\")\n\n# Example 1: Filter even numbers\nall_numbers := [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nevens := filter(all_numbers, func(n) {\n    return n % 2 == 0\n})\nshow_pair(\"Even numbers\", \"Input\", all_numbers, \"Output\", evens)\n","isBasedOn":"https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/array_higher_order.kujo#L4-L76"}</script>
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Map and filter arrays</span></nav>
+ <header class="examples-hero example-detail-hero"><div><p class="eyebrow">29 / Data</p><h1>Map and filter arrays</h1><p>Transform numbers and names, then keep the even numbers.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Data">More in Data ↗</a></div></header>
+ <div class="example-workbench">
+ <section class="example-source" aria-labelledby="source-title"><header class="example-file-bar"><h2 id="source-title">map-and-filter.kujo</h2><a href="/samples/map-and-filter.kujo" download>Download ↓</a></header><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token syntax-keyword">func</span> print_lines(lines) {
+    <span class="syntax-token syntax-keyword">for</span> line <span class="syntax-token syntax-keyword">in</span> lines {
+        print(line)
+    }
+}
+
+<span class="syntax-token syntax-keyword">func</span> section(title, description) {
+    print_lines([
+        title,
+        <span class="syntax-token syntax-string">&quot;   &quot;</span> + description,
+        <span class="syntax-token syntax-string">&quot;&quot;</span>
+    ])
+}
+
+<span class="syntax-token syntax-keyword">func</span> show_pair(title, first_label, first_value, second_label, second_value) {
+    print(<span class="syntax-token syntax-string">&quot;   &quot;</span> + title + <span class="syntax-token syntax-string">&quot;:&quot;</span>)
+    print(<span class="syntax-token syntax-string">&quot;   &quot;</span> + first_label + <span class="syntax-token syntax-string">&quot;: &quot;</span> + to_string(first_value))
+    print(<span class="syntax-token syntax-string">&quot;   &quot;</span> + second_label + <span class="syntax-token syntax-string">&quot;: &quot;</span> + to_string(second_value))
+    print()
+}
+
+<span class="syntax-token syntax-keyword">func</span> show_value(title, label, value) {
+    print(<span class="syntax-token syntax-string">&quot;   &quot;</span> + title + <span class="syntax-token syntax-string">&quot;:&quot;</span>)
+    print(<span class="syntax-token syntax-string">&quot;   &quot;</span> + label + <span class="syntax-token syntax-string">&quot;: &quot;</span> + to_string(value))
+    print()
+}
+
+<span class="syntax-token syntax-keyword">func</span> show_step(label, value) {
+    print(<span class="syntax-token syntax-string">&quot;   &quot;</span> + label + <span class="syntax-token syntax-string">&quot;: &quot;</span> + to_string(value))
+}
+
+print_lines([
+    <span class="syntax-token syntax-string">&quot;=== Array Higher-Order Functions ===&quot;</span>,
+    <span class="syntax-token syntax-string">&quot;&quot;</span>
+])
+
+<span class="syntax-token syntax-comment"># ============================================================================</span>
+<span class="syntax-token syntax-comment"># MAP - Transform each element</span>
+<span class="syntax-token syntax-comment"># ============================================================================</span>
+section(<span class="syntax-token syntax-string">&quot;1. MAP - Transform elements&quot;</span>, <span class="syntax-token syntax-string">&quot;Applies a function to each element, returning a new array&quot;</span>)
+
+<span class="syntax-token syntax-comment"># Example 1: Square numbers</span>
+numbers := [<span class="syntax-token syntax-number">1</span>, <span class="syntax-token syntax-number">2</span>, <span class="syntax-token syntax-number">3</span>, <span class="syntax-token syntax-number">4</span>, <span class="syntax-token syntax-number">5</span>]
+squared := map(numbers, <span class="syntax-token syntax-keyword">func</span>(x) {
+    <span class="syntax-token syntax-keyword">return</span> x * x
+})
+show_pair(<span class="syntax-token syntax-string">&quot;Square numbers&quot;</span>, <span class="syntax-token syntax-string">&quot;Input&quot;</span>, numbers, <span class="syntax-token syntax-string">&quot;Output&quot;</span>, squared)
+
+<span class="syntax-token syntax-comment"># Example 2: Convert temperatures from Celsius to Fahrenheit</span>
+celsius := [<span class="syntax-token syntax-number">0</span>, <span class="syntax-token syntax-number">10</span>, <span class="syntax-token syntax-number">20</span>, <span class="syntax-token syntax-number">30</span>, <span class="syntax-token syntax-number">40</span>]
+fahrenheit := map(celsius, <span class="syntax-token syntax-keyword">func</span>(c) {
+    <span class="syntax-token syntax-keyword">return</span> c * <span class="syntax-token syntax-number">9</span> / <span class="syntax-token syntax-number">5</span> + <span class="syntax-token syntax-number">32</span>
+})
+show_pair(<span class="syntax-token syntax-string">&quot;Celsius to Fahrenheit&quot;</span>, <span class="syntax-token syntax-string">&quot;Celsius&quot;</span>, celsius, <span class="syntax-token syntax-string">&quot;Fahrenheit&quot;</span>, fahrenheit)
+
+<span class="syntax-token syntax-comment"># Example 3: String manipulation</span>
+names := [<span class="syntax-token syntax-string">&quot;alice&quot;</span>, <span class="syntax-token syntax-string">&quot;bob&quot;</span>, <span class="syntax-token syntax-string">&quot;charlie&quot;</span>]
+capitalized := map(names, <span class="syntax-token syntax-keyword">func</span>(name) {
+    <span class="syntax-token syntax-keyword">return</span> to_upper(name)
+})
+show_pair(<span class="syntax-token syntax-string">&quot;Capitalize names&quot;</span>, <span class="syntax-token syntax-string">&quot;Input&quot;</span>, names, <span class="syntax-token syntax-string">&quot;Output&quot;</span>, capitalized)
+
+<span class="syntax-token syntax-comment"># ============================================================================</span>
+<span class="syntax-token syntax-comment"># FILTER - Select elements matching a condition</span>
+<span class="syntax-token syntax-comment"># ============================================================================</span>
+section(<span class="syntax-token syntax-string">&quot;2. FILTER - Select matching elements&quot;</span>, <span class="syntax-token syntax-string">&quot;Returns only elements where the function returns true&quot;</span>)
+
+<span class="syntax-token syntax-comment"># Example 1: Filter even numbers</span>
+all_numbers := [<span class="syntax-token syntax-number">1</span>, <span class="syntax-token syntax-number">2</span>, <span class="syntax-token syntax-number">3</span>, <span class="syntax-token syntax-number">4</span>, <span class="syntax-token syntax-number">5</span>, <span class="syntax-token syntax-number">6</span>, <span class="syntax-token syntax-number">7</span>, <span class="syntax-token syntax-number">8</span>, <span class="syntax-token syntax-number">9</span>, <span class="syntax-token syntax-number">10</span>]
+evens := filter(all_numbers, <span class="syntax-token syntax-keyword">func</span>(n) {
+    <span class="syntax-token syntax-keyword">return</span> n % <span class="syntax-token syntax-number">2</span> == <span class="syntax-token syntax-number">0</span>
+})
+show_pair(<span class="syntax-token syntax-string">&quot;Even numbers&quot;</span>, <span class="syntax-token syntax-string">&quot;Input&quot;</span>, all_numbers, <span class="syntax-token syntax-string">&quot;Output&quot;</span>, evens)
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></section>
+ <aside class="example-runbook" aria-labelledby="run-title"><p class="eyebrow">Run it locally</p><h2 id="run-title">Try this example.</h2><ol><li><strong>Set up Kujo</strong><p><a href="/language/">Install the runtime</a> before running the command below.</p></li><li><strong>Save the sample</strong><p>Download <a href="/samples/map-and-filter.kujo" download>map-and-filter.kujo</a> or copy the code into a file with that name.</p></li><li><strong>Run the command</strong><div class="sample-code"><pre tabindex="0"><code>kujo run map-and-filter.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></li></ol><a class="example-bundle-link" href="/samples/kujo-examples.tar.gz">Download all samples + fixtures ↓</a></aside>
+ </div>
+ <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Expected output</h2><p>Your terminal should show this output.</p></header><div><div class="sample-code"><pre tabindex="0"><code>=== Array Higher-Order Functions ===
+
+1. MAP - Transform elements
+   Applies a function to each element, returning a new array
+
+   Square numbers:
+   Input: [1, 2, 3, 4, 5]
+   Output: [1, 4, 9, 16, 25]
+
+   Celsius to Fahrenheit:
+   Celsius: [0, 10, 20, 30, 40]
+   Fahrenheit: [32, 50, 68, 86, 104]
+
+   Capitalize names:
+   Input: [alice, bob, charlie]
+   Output: [ALICE, BOB, CHARLIE]
+
+2. FILTER - Select matching elements
+   Returns only elements where the function returns true
+
+   Even numbers:
+   Input: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+   Output: [2, 4, 6, 8, 10]
+
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></div></section>
+ <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Executed offline.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/array_higher_order.kujo#L4-L76">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>9b5144c83d8b8baa50a24d3500bf9bc3a977ce47b4619b2e9345c288250ea8f3</code></p></div></details>
+ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/array-spread/"><span>← Previous example</span><strong>Combine arrays</strong></a><a href="/examples/array-utilities/"><span>Next example →</span><strong>Sort and summarize arrays</strong></a></nav>

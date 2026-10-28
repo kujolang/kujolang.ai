@@ -1,0 +1,16 @@
+# CSV parsing and generation
+
+let csv_text := "name,age,active\nAlice,28,true\nBob,35,false"
+let rows := parse_csv(csv_text)
+
+assert_equal(len(rows), 2)
+assert_equal(rows[0]["name"], "Alice")
+assert_equal(rows[1]["age"], 35)
+
+let generated := to_csv(rows)
+let round_trip := parse_csv(generated)
+
+assert_equal(len(round_trip), 2)
+assert_equal(round_trip[0]["name"], "Alice")
+print("parsed rows:", rows)
+print("generated CSV:\n" + generated)

@@ -1,9 +1,19 @@
-import hashlib,json,os,pathlib,subprocess
+import hashlib,json,os,pathlib,subprocess,tempfile,tarfile,atexit
 root=pathlib.Path(__file__).resolve().parents[1];c=json.loads((root/'examples/catalog.json').read_text());binary=os.environ.get('KUJO_BIN','kujo')
 assert subprocess.check_output([binary,'--version'],text=True).strip()=='kujo '+c['version']
+# Run the downloadable bundle in an isolated directory, including replay fixtures.
+binary=str(pathlib.Path(binary).resolve()) if '/' in binary else binary
+temporary=tempfile.TemporaryDirectory();atexit.register(temporary.cleanup)
+samples=pathlib.Path(temporary.name)
+with tarfile.open(root/'public/samples/kujo-examples.tar.gz') as archive:
+ for member in archive.getmembers():
+  destination=samples/member.name
+  assert member.isfile() and destination.resolve().is_relative_to(samples.resolve()),member.name
+  destination.parent.mkdir(parents=True,exist_ok=True)
+  destination.write_bytes(archive.extractfile(member).read())
 seen=set()
 for x in c['items']:
- assert x['slug'] not in seen;seen.add(x['slug']);p=root/'public/samples'/f"{x['slug']}.kujo"
+ assert x['slug'] not in seen;seen.add(x['slug']);p=samples/f"{x['slug']}.kujo"
  assert hashlib.sha256(p.read_bytes()).hexdigest()==x['sha256'],x['slug']
  assert x['mode'] in ['run','check','test-run']
  subprocess.run([binary,'check',p.name],cwd=p.parent,check=True,capture_output=True,timeout=20)
@@ -12,7 +22,7 @@ for x in c['items']:
  print(x['slug']+': '+x['mode']+' passed')
 print(f'{len(seen)} pinned examples verified')
 
-denied=subprocess.run([binary,'run','--untrusted','capabilities.kujo'],cwd=root/'public/samples',capture_output=True,text=True,timeout=20)
+denied=subprocess.run([binary,'run','--untrusted','capabilities.kujo'],cwd=samples,capture_output=True,text=True,timeout=20)
 assert denied.returncode != 0 and 'Capability denied' in denied.stderr
 print('AI capability denied without grant and allowed with explicit grant')
 

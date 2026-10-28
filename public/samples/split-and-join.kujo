@@ -1,0 +1,31 @@
+# 5. split() - Split string into array
+print("5. split()")
+csv := "apple,banana,cherry,date"
+fruits := split(csv, ",")
+print("  split('apple,banana,cherry,date', ','): [")
+for fruit in fruits {
+    print("    ${fruit}")
+}
+print("  ]")
+print("")
+
+path := "/home/user/documents/file.txt"
+parts := split(path, "/")
+print("  split('/home/user/documents/file.txt', '/'): [")
+for part in parts {
+    if len(part) > 0 {
+        print("    ${part}")
+    }
+}
+print("  ]")
+print("")
+
+# 6. join() - Join array elements into string
+print("6. join()")
+words := ["Kujo", "is", "awesome"]
+sentence := join(words, " ")
+print("  join(['Kujo', 'is', 'awesome'], ' '): ${sentence}")
+
+numbers := [1, 2, 3, 4, 5]
+nums_str := join(numbers, "-")
+print("  join([1, 2, 3, 4, 5], '-'): ${nums_str}")

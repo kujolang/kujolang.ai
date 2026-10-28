@@ -14,11 +14,17 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
  }};
  for(const [name,width,height] of [['desktop',1440,1000],['tablet',768,1024],['mobile',390,844]]){
   await page.setViewportSize({width,height});await page.goto(base+'/examples/',{waitUntil:'domcontentloaded'});
-  await page.locator('.example-filter').waitFor({state:'visible'});await fits();assert.equal(await page.locator('[data-example-card]:visible').count(),21);
+  await page.locator('.example-filter').waitFor({state:'visible'});await fits();assert.equal(await page.locator('[data-example-card]:visible').count(),catalog.items.length);
   assert(await page.locator('.site-footer').isVisible());assert.equal(await page.locator('h1').count(),1);
+  for(const stat of await page.locator('.examples-stats strong').all())assert(/departure/i.test(await stat.evaluate(el=>getComputedStyle(el).fontFamily)),'Statistics use Departure Mono');
+  assert.equal(await page.locator('.examples-stats strong').first().textContent(),String(catalog.items.length));
   await page.screenshot({path:`${evidence}/index-${name}.png`,fullPage:true});
   await page.fill('#example-search','no-such-example');assert.equal(await page.locator('.example-category-group:visible').count(),0);assert.equal(await page.locator('#example-count').textContent(),'0 examples found');
-  await page.fill('#example-search','');await page.selectOption('#example-category','Concurrency');assert.equal(await page.locator('[data-example-card]:visible').count(),3);
+  await page.fill('#example-search','');
+  for(const category of new Set(catalog.items.map(x=>x.category))){
+   await page.selectOption('#example-category',category);
+   assert.equal(await page.locator('[data-example-card]:visible').count(),catalog.items.filter(x=>x.category===category).length,category+' filter count');
+  }
   await page.goto(base,{waitUntil:'domcontentloaded'});await icons();await fits();
  }
  const axeReports=[];
@@ -38,6 +44,6 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
   if(process.env.AXE_SCRIPT){await page.addScriptTag({path:process.env.AXE_SCRIPT});const r=await page.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}}));axeReports.push({slug:x.slug,violations:r.violations,passes:r.passes.length});assert.deepEqual(r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),[],x.slug+' accessibility');}
  }
  fs.writeFileSync(evidence+'/accessibility.json',JSON.stringify(axeReports,null,2)+'\n');
- const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base+'/examples/');assert.equal(await p.locator('[data-example-card]:visible').count(),21);await p.goto(base+'/examples/replay/');assert.equal(await p.locator('.example-source code').textContent(),fs.readFileSync('public/samples/replay.kujo','utf8'));assert.equal(await p.locator('[data-copy-code]:visible').count(),0);
- assert.deepEqual(errors,[]);await browser.close();console.log('Examples: all 21 pages, source/clipboard integrity, output copying, in-block icons, responsive layouts, filtering, no-JS and accessibility passed');
+ const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base+'/examples/');assert.equal(await p.locator('[data-example-card]:visible').count(),catalog.items.length);await p.goto(base+'/examples/replay/');assert.equal(await p.locator('.example-source code').textContent(),fs.readFileSync('public/samples/replay.kujo','utf8'));assert.equal(await p.locator('[data-copy-code]:visible').count(),0);
+ assert.deepEqual(errors,[]);await browser.close();console.log('Examples: all '+catalog.items.length+' pages, source/clipboard integrity, output copying, in-block icons, responsive layouts, filtering, no-JS and accessibility passed');
 })().catch(e=>{console.error(e);process.exit(1)});

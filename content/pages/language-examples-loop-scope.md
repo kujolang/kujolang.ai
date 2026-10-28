@@ -1,0 +1,31 @@
+---
+title: Accumulate a total
+template: language-examples-loop-scope
+custom_url: examples/loop-scope
+description: "Update a running total as a loop visits each number."
+seo_title: "Accumulate a total | Kujo"
+social_image: /assets/images/social/examples-loop-scope.jpg
+---
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","@id":"https://kujolang.ai/examples/loop-scope/#source","name":"Accumulate a total","description":"Update a running total as a loop visits each number.","codeRepository":"https://github.com/kujolang/kujo","programmingLanguage":"Kujo","codeSampleType":"code snippet","url":"https://kujolang.ai/examples/loop-scope/","text":"sum := 0\nfor n in [1, 2, 3, 4, 5] {\n    sum := sum + n\n    print(\"Current sum:\", sum)\n}\nprint(\"Final sum:\", sum)\n","isBasedOn":"https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/scoping_simple.kujo"}</script>
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Accumulate a total</span></nav>
+ <header class="examples-hero example-detail-hero"><div><p class="eyebrow">39 / Basics</p><h1>Accumulate a total</h1><p>Update a running total as a loop visits each number.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Basics">More in Basics ↗</a></div></header>
+ <div class="example-workbench">
+ <section class="example-source" aria-labelledby="source-title"><header class="example-file-bar"><h2 id="source-title">loop-scope.kujo</h2><a href="/samples/loop-scope.kujo" download>Download ↓</a></header><div class="sample-code"><pre tabindex="0"><code>sum := <span class="syntax-token syntax-number">0</span>
+<span class="syntax-token syntax-keyword">for</span> n <span class="syntax-token syntax-keyword">in</span> [<span class="syntax-token syntax-number">1</span>, <span class="syntax-token syntax-number">2</span>, <span class="syntax-token syntax-number">3</span>, <span class="syntax-token syntax-number">4</span>, <span class="syntax-token syntax-number">5</span>] {
+    sum := sum + n
+    print(<span class="syntax-token syntax-string">&quot;Current sum:&quot;</span>, sum)
+}
+print(<span class="syntax-token syntax-string">&quot;Final sum:&quot;</span>, sum)
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></section>
+ <aside class="example-runbook" aria-labelledby="run-title"><p class="eyebrow">Run it locally</p><h2 id="run-title">Try this example.</h2><ol><li><strong>Set up Kujo</strong><p><a href="/language/">Install the runtime</a> before running the command below.</p></li><li><strong>Save the sample</strong><p>Download <a href="/samples/loop-scope.kujo" download>loop-scope.kujo</a> or copy the code into a file with that name.</p></li><li><strong>Run the command</strong><div class="sample-code"><pre tabindex="0"><code>kujo run loop-scope.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></li></ol><a class="example-bundle-link" href="/samples/kujo-examples.tar.gz">Download all samples + fixtures ↓</a></aside>
+ </div>
+ <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Expected output</h2><p>Your terminal should show this output.</p></header><div><div class="sample-code"><pre tabindex="0"><code>Current sum: 1
+Current sum: 3
+Current sum: 6
+Current sum: 10
+Current sum: 15
+Final sum: 15
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></div></section>
+ <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Executed offline.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/scoping_simple.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>60b0a1926f6c56272f317f5915a021ccaa23c298d2bf0926c3a161bacd3480ef</code></p></div></details>
+ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/recursion/"><span>← Previous example</span><strong>Calculate a factorial</strong></a><a href="/examples/canonical-json/"><span>Next example →</span><strong>Canonical JSON</strong></a></nav>

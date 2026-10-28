@@ -64,6 +64,6 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
      assert.deepEqual(result.violations.map(x=>({id:x.id,nodes:x.nodes.map(n=>n.target)})),[],route+' accessibility');
    }
  }
- const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base);assert.equal(await p.locator('[data-example]:visible').count(),6);await p.goto(base+'/examples/');assert.equal(await p.locator('[data-example-card]:visible').count(),21);
+ const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base);assert.equal(await p.locator('[data-example]:visible').count(),6);await p.goto(base+'/examples/');assert.equal(await p.locator('[data-example-card]:visible').count(),JSON.parse(fs.readFileSync('examples/catalog.json','utf8')).items.length);
  assert.deepEqual(errors,[]);await browser.close();console.log('Browser: selection, exact clipboard, filter, no-JS, mobile menu, responsive layouts and console passed');
 })().catch(e=>{console.error(e);process.exit(1)});

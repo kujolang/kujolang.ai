@@ -1,0 +1,8 @@
+age := to_int("25")
+balance := to_float("150.75")
+print("Age: " + to_string(age))
+print("Balance: " + to_string(balance))
+
+if age >= 18 {
+    print("Status: Adult")
+}

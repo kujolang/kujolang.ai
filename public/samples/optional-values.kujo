@@ -1,0 +1,25 @@
+func find_user_by_id(id) {
+    if id == 1 {
+        return Some("Alice")
+    }
+    if id == 2 {
+        return Some("Bob")
+    }
+    if id == 3 {
+        return Some("Charlie")
+    }
+    return None
+}
+
+let users := [1, 2, 99, 3]
+for user_id in users {
+    let user := find_user_by_id(user_id)
+    match user {
+        case Some(name): {
+            print("User " + to_string(user_id) + ": " + name)
+        }
+        case None: {
+            print("User " + to_string(user_id) + ": Not found")
+        }
+    }
+}

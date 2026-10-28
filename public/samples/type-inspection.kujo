@@ -1,0 +1,28 @@
+func section(title) {
+    print("")
+    print("== " + title + " ==")
+}
+
+func kv(label, value) {
+    print("  " + label + ": " + to_string(value))
+}
+
+section("Type Introspection Demo")
+
+# 1. Basic Type Inspection
+section("1. Basic Type Inspection")
+kv("type(42)", type(42))
+kv("type(3.14)", type(3.14))
+kv("type(\"hello\")", type("hello"))
+kv("type(true)", type(true))
+kv("type(0)", type(0))
+kv("type([1, 2, 3])", type([1, 2, 3]))
+kv("type({\"a\": 1})", type({"a": 1}))
+
+# 2. Type Predicates
+section("2. Type Predicates")
+x := 42
+kv("x", x)
+kv("is_int(x)", is_int(x))
+kv("is_float(x)", is_float(x))
+kv("is_string(x)", is_string(x))

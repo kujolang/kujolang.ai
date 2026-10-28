@@ -1,0 +1,23 @@
+# Destructuring-style data access
+# Kujo currently expresses extraction explicitly with indexing.
+
+let coordinates := [12, 34, 56]
+let x := coordinates[0]
+let y := coordinates[1]
+let z := coordinates[2]
+
+let profile := {"name": "Ada", "role": "engineer", "active": true}
+let name := profile["name"]
+let role := profile["role"]
+
+let entries := [["alpha", 1], ["beta", 2], ["gamma", 3]]
+mut total := 0
+for entry in entries {
+    print(entry[0] + ":", entry[1])
+    total += entry[1]
+}
+
+assert_equal([x, y, z], coordinates)
+assert_equal(name, "Ada")
+assert_equal(role, "engineer")
+assert_equal(total, 6)

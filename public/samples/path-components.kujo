@@ -1,0 +1,36 @@
+func print_lines(lines) {
+    for line in lines {
+        print(line)
+    }
+}
+
+func section(title) {
+    print("")
+    print(title)
+}
+
+func kv(label, value) {
+    print("  " + label + ": " + to_string(value))
+}
+
+print_lines([
+    "=== Path Utilities Demo ===",
+    ""
+])
+
+// Build paths
+section("1. Building Paths:")
+home_dir := "/home/user"
+docs_path := join_path(home_dir, "Documents", "projects", "kujo")
+kv("Home directory", home_dir)
+kv("Documents path", docs_path)
+
+config_path := join_path(home_dir, ".config", "kujo", "settings.json")
+kv("Config path", config_path)
+
+// Extract path components
+section("2. Extracting Path Components:")
+full_path := "/home/user/projects/kujo/examples/demo.kujo"
+kv("Full path", full_path)
+kv("Directory", dirname(full_path))
+kv("Filename", basename(full_path))

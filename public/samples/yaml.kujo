@@ -1,0 +1,14 @@
+# YAML parsing and generation
+
+let yaml_text := "name: Kujo\nkind: language\nfeatures:\n  - local-first\n  - deterministic"
+let document := parse_yaml(yaml_text)
+
+assert_equal(document["name"], "Kujo")
+assert_equal(len(document["features"]), 2)
+
+let generated := to_yaml(document)
+let round_trip := parse_yaml(generated)
+
+assert_equal(round_trip["kind"], "language")
+assert_equal(round_trip["features"][0], "local-first")
+print("parsed YAML:", document)
