@@ -11,7 +11,20 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
   assert(await page.locator('.site-footer').isVisible(),'Homepage footer must be visible');
   assert(!/\bv?1\.9(?:\.0)?\b/.test(await page.locator('main').innerText()),'No release number in homepage copy');
   await page.locator('.example-selector').waitFor({state:'visible'});assert.equal(await page.locator('[data-example]:visible').count(),1);
-  assert(await page.locator('[data-code-explorer]').evaluate(el=>el.getBoundingClientRect().top)<height,'Code explorer should start in first viewport');if(name==='desktop')assert(await page.locator('#example-hello-world pre').first().evaluate(el=>el.getBoundingClientRect().top)<height,'Actual code visible in first desktop viewport');
+  // The spacious hero supersedes the former first-viewport code constraint.
+  assert(await page.locator('.home-hero .sk-hero__inner').evaluate(el=>{const s=getComputedStyle(el);return parseFloat(s.paddingBottom)>=64&&parseFloat(s.paddingTop)>=140;}),'Hero has breathing room');
+  assert.equal(await page.locator('.home-hero a').count(),2,'Hero contains only its two primary actions');
+  assert.equal(await page.locator('.home-build .eyebrow,.home-runtime header .eyebrow,.home-start .eyebrow,.home-ecosystem .eyebrow,.home-proof .eyebrow,.home-explorer-heading .eyebrow').count(),0);
+  assert(await page.evaluate(()=>{
+   const hero=document.querySelector('.home-hero .sk-hero__inner');
+   const edges=el=>{const r=el.getBoundingClientRect(),s=getComputedStyle(el);return [r.left+parseFloat(s.paddingLeft),r.right-parseFloat(s.paddingRight)];};
+   const [left,right]=edges(hero);
+   return [...document.querySelectorAll('.language-home > .language-section:not(.language-final),.home-runtime-inner,.home-final-inner')].every(el=>{const [l,r]=edges(el);return Math.abs(l-left)<2&&Math.abs(r-right)<2;});
+  }),'Homepage sections align with hero content');
+  for(const selector of ['.home-explorer .example-panel h3','.home-card h3','.home-runtime-steps h3','.home-tool-grid strong'])assert(/Departure Mono/.test(await page.locator(selector).first().evaluate(el=>getComputedStyle(el).fontFamily)),selector+' display font');
+  assert(await page.locator('.language-final').evaluate(el=>{const r=el.getBoundingClientRect(),s=getComputedStyle(el);return r.left===0&&Math.abs(r.width-innerWidth)<2&&s.backgroundColor==='rgb(17, 17, 17)'&&s.color==='rgb(255, 255, 255)';}),'Final CTA is full-width black with white text');
+  assert.equal(await page.locator('.home-build .home-section-heading').evaluate(el=>getComputedStyle(el).textAlign),'center');
+  assert.equal(await page.locator('.home-ecosystem .home-section-heading').evaluate(el=>getComputedStyle(el).textAlign),'center');
   await page.locator('#home-example').focus();await page.keyboard.press('f');await page.keyboard.press('Tab');assert.notEqual(await page.locator('#home-example').inputValue(),'hello-world');await page.selectOption('#home-example','request-hash');assert(await page.locator('#example-request-hash').isVisible());
   await page.locator('#example-request-hash [data-copy-code]').first().click();await page.waitForFunction(()=>document.querySelector('#example-request-hash [data-code-status]').textContent==='Copied!');
   assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),fs.readFileSync('public/samples/request-hash.kujo','utf8'));

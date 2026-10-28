@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "hello-world",
+    "violations": [],
+    "passes": 25
+  },
+  {
+    "slug": "variables",
+    "violations": [],
+    "passes": 25
+  },
+  {
+    "slug": "functions",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "control-flow",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "collections",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "structs",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "pattern-matching",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "errors",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "async",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "channels",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "generators",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "json",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "structured-output",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "request-hash",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "replay",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "streaming",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "capabilities",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "tests",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "modules",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "files",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "http",
+    "violations": [],
+    "passes": 26
+  }
+]
