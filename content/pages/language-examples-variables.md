@@ -7,17 +7,24 @@ seo_title: "Variables and types | Kujo"
 social_image: /assets/images/social/examples-variables.jpg
 ---
 
-<nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / Variables and types</nav>
-<article class="example-panel" id="example-variables" data-example="variables" data-category="Basics"><p class="eyebrow">Basics · Executed offline · Kujo 1.9.0</p><h3>Variables and types</h3><p>Bind values with let and print strings.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Expected output:</span>
-<span class="syntax-token"># tool: kujo</span>
-<span class="syntax-token"># status: ready</span>
 
-<span class="syntax-token">let</span> tool := <span class="syntax-token">&quot;kujo&quot;</span>
-<span class="syntax-token">let</span> status := <span class="syntax-token">&quot;ready&quot;</span>
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Variables and types</span></nav>
+ <header class="examples-hero example-detail-hero"><div><p class="eyebrow">02 / Basics</p><h1>Variables and types</h1><p>Bind values with let and print strings.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Basics">More in Basics ↗</a></div></header>
+ <div class="example-workbench">
+ <section class="example-source" aria-labelledby="source-title"><header class="example-file-bar"><h2 id="source-title">variables.kujo</h2><a href="/samples/variables.kujo" download>Download ↓</a></header><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token syntax-comment"># Expected output:</span>
+<span class="syntax-token syntax-comment"># tool: kujo</span>
+<span class="syntax-token syntax-comment"># status: ready</span>
 
-print(<span class="syntax-token">&quot;tool: &quot;</span> + tool)
-print(<span class="syntax-token">&quot;status: &quot;</span> + status)
-</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/variables.kujo" download>variables.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run variables.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>tool: kujo
+<span class="syntax-token syntax-keyword">let</span> tool := <span class="syntax-token syntax-string">&quot;kujo&quot;</span>
+<span class="syntax-token syntax-keyword">let</span> status := <span class="syntax-token syntax-string">&quot;ready&quot;</span>
+
+print(<span class="syntax-token syntax-string">&quot;tool: &quot;</span> + tool)
+print(<span class="syntax-token syntax-string">&quot;status: &quot;</span> + status)
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></section>
+ <aside class="example-runbook" aria-labelledby="run-title"><p class="eyebrow">Run it locally</p><h2 id="run-title">Try this example.</h2><ol><li><strong>Set up Kujo</strong><p><a href="/language/">Install the runtime</a> if this is your first program.</p></li><li><strong>Save the sample</strong><p>Download <a href="/samples/variables.kujo" download>variables.kujo</a> or copy the code into a file.</p></li><li><strong>Run the command</strong><div class="sample-code"><pre tabindex="0"><code>kujo run variables.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></li></ol><a class="example-bundle-link" href="/samples/kujo-examples.tar.gz">Download all samples + fixtures ↓</a></aside>
+ </div>
+ <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Expected output</h2><p>Compare your terminal output with this recorded result.</p></header><div><div class="sample-code"><pre tabindex="0"><code>tool: kujo
 status: ready
-</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/01-variables.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
-<nav aria-label="Related examples"><a href="/examples/hello-world/">Previous: Hello World</a> · <a href="/examples/functions/">Next: Functions and operators</a></nav>
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></div></section>
+ <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Executed offline.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/01-variables.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>0ca50777845bd935ddc1bf43020150504ac6f3885855c2036579be0818ec117e</code></p></div></details>
+ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/hello-world/"><span>← Previous example</span><strong>Hello World</strong></a><a href="/examples/functions/"><span>Next example →</span><strong>Functions and operators</strong></a></nav>

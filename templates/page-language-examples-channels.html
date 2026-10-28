@@ -1,23 +1,29 @@
-<main class="content-page" id="main-content"><header class="page-hero sk-hero"><div class="sk-hero__inner"><h1>{{title}}</h1><p>{{description}}</p></div></header><div class="prose-shell kujo-content"><nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / Channels</nav>
-<article class="example-panel" id="example-channels" data-example="channels" data-category="Concurrency"><p class="eyebrow">Concurrency · Executed offline · Kujo 1.9.0</p><h3>Channels</h3><p>Send and receive a value in a FIFO channel.</p><p class="example-note">Same-scope example. It does not demonstrate sharing captured state across spawned tasks.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Channels - Thread Communication Example</span>
-<span class="syntax-token"># Demonstrates using channels to communicate between threads</span>
+<main class="examples-site example-detail" id="main-content"><div class="examples-shell">
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Channels</span></nav>
+ <header class="examples-hero example-detail-hero"><div><p class="eyebrow">10 / Concurrency</p><h1>Channels</h1><p>Send and receive a value in a FIFO channel.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Concurrency">More in Concurrency ↗</a></div></header>
+ <div class="example-workbench">
+ <section class="example-source" aria-labelledby="source-title"><header class="example-file-bar"><h2 id="source-title">channels.kujo</h2><a href="/samples/channels.kujo" download>Download ↓</a></header><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token syntax-comment"># Channels - Thread Communication Example</span>
+<span class="syntax-token syntax-comment"># Demonstrates using channels to communicate between threads</span>
 
-print(<span class="syntax-token">&quot;=== Channels for Thread Communication Demo ===&quot;</span>)
-print(<span class="syntax-token">&quot;&quot;</span>)
+print(<span class="syntax-token syntax-string">&quot;=== Channels for Thread Communication Demo ===&quot;</span>)
+print(<span class="syntax-token syntax-string">&quot;&quot;</span>)
 
-<span class="syntax-token"># Example 1: Basic channel send/receive</span>
-print(<span class="syntax-token">&quot;1. Basic channel usage&quot;</span>)
+<span class="syntax-token syntax-comment"># Example 1: Basic channel send/receive</span>
+print(<span class="syntax-token syntax-string">&quot;1. Basic channel usage&quot;</span>)
 chan := channel()
 
-print(<span class="syntax-token">&quot;Sending value 42 to channel...&quot;</span>)
-chan.send(42)
+print(<span class="syntax-token syntax-string">&quot;Sending value 42 to channel...&quot;</span>)
+chan.send(<span class="syntax-token syntax-number">42</span>)
 
-print(<span class="syntax-token">&quot;Receiving from channel...&quot;</span>)
+print(<span class="syntax-token syntax-string">&quot;Receiving from channel...&quot;</span>)
 value := chan.receive()
-print(<span class="syntax-token">&quot;Received:&quot;</span>)
+print(<span class="syntax-token syntax-string">&quot;Received:&quot;</span>)
 print(value)
-print(<span class="syntax-token">&quot;&quot;</span>)
-</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/channels.kujo" download>channels.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run channels.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>=== Channels for Thread Communication Demo ===
+print(<span class="syntax-token syntax-string">&quot;&quot;</span>)
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></section>
+ <aside class="example-runbook" aria-labelledby="run-title"><p class="eyebrow">Run it locally</p><h2 id="run-title">Try this example.</h2><ol><li><strong>Set up Kujo</strong><p><a href="/language/">Install the runtime</a> if this is your first program.</p></li><li><strong>Save the sample</strong><p>Download <a href="/samples/channels.kujo" download>channels.kujo</a> or copy the code into a file.</p></li><li><strong>Run the command</strong><div class="sample-code"><pre tabindex="0"><code>kujo run channels.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></li></ol><div class="example-note"><strong>Before you run</strong><p>Same-scope example. It does not demonstrate sharing captured state across spawned tasks.</p></div><a class="example-bundle-link" href="/samples/kujo-examples.tar.gz">Download all samples + fixtures ↓</a></aside>
+ </div>
+ <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Expected output</h2><p>Compare your terminal output with this recorded result.</p></header><div><div class="sample-code"><pre tabindex="0"><code>=== Channels for Thread Communication Demo ===
 
 1. Basic channel usage
 Sending value 42 to channel...
@@ -25,5 +31,6 @@ Receiving from channel...
 Received:
 42
 
-</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/concurrency_channels.kujo#L1-L18">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
-<nav aria-label="Related examples"><a href="/examples/async/">Previous: Async tasks</a> · <a href="/examples/generators/">Next: Generators</a></nav></div></main>
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></div></section>
+ <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Executed offline.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/concurrency_channels.kujo#L1-L18">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>3e52231f8a7c760af6ccbc003235363a748b39fe0fac47bdcc325098a7362ebd</code></p></div></details>
+ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/async/"><span>← Previous example</span><strong>Async tasks</strong></a><a href="/examples/generators/"><span>Next example →</span><strong>Generators</strong></a></nav></div></main>

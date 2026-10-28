@@ -7,35 +7,42 @@ seo_title: "Tests | Kujo"
 social_image: /assets/images/social/examples-tests.jpg
 ---
 
-<nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / Tests</nav>
-<article class="example-panel" id="example-tests" data-example="tests" data-category="Tooling"><p class="eyebrow">Tooling · Test runner · Kujo 1.9.0</p><h3>Tests</h3><p>Run assertions using the built-in test runner.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Kujo test framework example</span>
-<span class="syntax-token"># Run with: kujo test-run examples/testing_demo.kujo</span>
 
-<span class="syntax-token">test</span> <span class="syntax-token">&quot;arithmetic&quot;</span> {
-    assert_equal(2 + 3, 5)
-    assert_equal(7 - 4, 3)
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Tests</span></nav>
+ <header class="examples-hero example-detail-hero"><div><p class="eyebrow">18 / Tooling</p><h1>Tests</h1><p>Run assertions using the built-in test runner.</p></div><div class="example-hero-meta"><span class="example-badge">Test runner</span><a href="/examples/#category-Tooling">More in Tooling ↗</a></div></header>
+ <div class="example-workbench">
+ <section class="example-source" aria-labelledby="source-title"><header class="example-file-bar"><h2 id="source-title">tests.kujo</h2><a href="/samples/tests.kujo" download>Download ↓</a></header><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token syntax-comment"># Kujo test framework example</span>
+<span class="syntax-token syntax-comment"># Run with: kujo test-run examples/testing_demo.kujo</span>
+
+<span class="syntax-token syntax-keyword">test</span> <span class="syntax-token syntax-string">&quot;arithmetic&quot;</span> {
+    assert_equal(<span class="syntax-token syntax-number">2</span> + <span class="syntax-token syntax-number">3</span>, <span class="syntax-token syntax-number">5</span>)
+    assert_equal(<span class="syntax-token syntax-number">7</span> - <span class="syntax-token syntax-number">4</span>, <span class="syntax-token syntax-number">3</span>)
 }
 
-<span class="syntax-token">test</span> <span class="syntax-token">&quot;booleans&quot;</span> {
-    assert_true(8 % 2 == 0)
-    assert_false(7 % 2 == 0)
+<span class="syntax-token syntax-keyword">test</span> <span class="syntax-token syntax-string">&quot;booleans&quot;</span> {
+    assert_true(<span class="syntax-token syntax-number">8</span> % <span class="syntax-token syntax-number">2</span> == <span class="syntax-token syntax-number">0</span>)
+    assert_false(<span class="syntax-token syntax-number">7</span> % <span class="syntax-token syntax-number">2</span> == <span class="syntax-token syntax-number">0</span>)
 }
 
-<span class="syntax-token">test</span> <span class="syntax-token">&quot;arrays&quot;</span> {
-    <span class="syntax-token">let</span> samples := [1, 2, 3]
-    assert_equal(len(samples), 3)
-    assert_contains(samples, 2)
+<span class="syntax-token syntax-keyword">test</span> <span class="syntax-token syntax-string">&quot;arrays&quot;</span> {
+    <span class="syntax-token syntax-keyword">let</span> samples := [<span class="syntax-token syntax-number">1</span>, <span class="syntax-token syntax-number">2</span>, <span class="syntax-token syntax-number">3</span>]
+    assert_equal(len(samples), <span class="syntax-token syntax-number">3</span>)
+    assert_contains(samples, <span class="syntax-token syntax-number">2</span>)
 }
 
-<span class="syntax-token">test</span> <span class="syntax-token">&quot;dictionaries&quot;</span> {
-    <span class="syntax-token">let</span> user := {<span class="syntax-token">&quot;name&quot;</span>: <span class="syntax-token">&quot;Ada&quot;</span>, <span class="syntax-token">&quot;active&quot;</span>: true}
-    assert_equal(user[<span class="syntax-token">&quot;name&quot;</span>], <span class="syntax-token">&quot;Ada&quot;</span>)
-    assert_true(user[<span class="syntax-token">&quot;active&quot;</span>])
+<span class="syntax-token syntax-keyword">test</span> <span class="syntax-token syntax-string">&quot;dictionaries&quot;</span> {
+    <span class="syntax-token syntax-keyword">let</span> user := {<span class="syntax-token syntax-string">&quot;name&quot;</span>: <span class="syntax-token syntax-string">&quot;Ada&quot;</span>, <span class="syntax-token syntax-string">&quot;active&quot;</span>: <span class="syntax-token syntax-literal">true</span>}
+    assert_equal(user[<span class="syntax-token syntax-string">&quot;name&quot;</span>], <span class="syntax-token syntax-string">&quot;Ada&quot;</span>)
+    assert_true(user[<span class="syntax-token syntax-string">&quot;active&quot;</span>])
 }
 
-<span class="syntax-token">test</span> <span class="syntax-token">&quot;strings&quot;</span> {
-    assert_equal(to_upper(<span class="syntax-token">&quot;kujo&quot;</span>), <span class="syntax-token">&quot;KUJO&quot;</span>)
-    assert_true(contains(<span class="syntax-token">&quot;local-first&quot;</span>, <span class="syntax-token">&quot;local&quot;</span>) == 1)
+<span class="syntax-token syntax-keyword">test</span> <span class="syntax-token syntax-string">&quot;strings&quot;</span> {
+    assert_equal(to_upper(<span class="syntax-token syntax-string">&quot;kujo&quot;</span>), <span class="syntax-token syntax-string">&quot;KUJO&quot;</span>)
+    assert_true(contains(<span class="syntax-token syntax-string">&quot;local-first&quot;</span>, <span class="syntax-token syntax-string">&quot;local&quot;</span>) == <span class="syntax-token syntax-number">1</span>)
 }
-</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/tests.kujo" download>tests.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo <span class="syntax-token">test</span>-run tests.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/testing_demo.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
-<nav aria-label="Related examples"><a href="/examples/capabilities/">Previous: AI capability restrictions</a> · <a href="/examples/modules/">Next: Modules and imports</a></nav>
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></section>
+ <aside class="example-runbook" aria-labelledby="run-title"><p class="eyebrow">Run it locally</p><h2 id="run-title">Try this example.</h2><ol><li><strong>Set up Kujo</strong><p><a href="/language/">Install the runtime</a> if this is your first program.</p></li><li><strong>Save the sample</strong><p>Download <a href="/samples/tests.kujo" download>tests.kujo</a> or copy the code into a file.</p></li><li><strong>Run the tests</strong><div class="sample-code"><pre tabindex="0"><code>kujo <span class="syntax-token syntax-keyword">test</span>-run tests.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></li></ol><a class="example-bundle-link" href="/samples/kujo-examples.tar.gz">Download all samples + fixtures ↓</a></aside>
+ </div>
+ <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Verification scope</h2><p>This sample is checked without executing its external integrations.</p></header><div><p class="example-scope">Test runner. This is a source check, not a claim that the application was run end to end.</p></div></section>
+ <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Test runner.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/testing_demo.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>3bf9bd3c7f491ee8a086d08983cad0c5b2480ae43dc75e0159f2e742e6f56987</code></p></div></details>
+ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/capabilities/"><span>← Previous example</span><strong>AI capability restrictions</strong></a><a href="/examples/modules/"><span>Next example →</span><strong>Modules and imports</strong></a></nav>

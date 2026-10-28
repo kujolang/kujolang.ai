@@ -7,47 +7,54 @@ seo_title: "Deterministic AI request IDs | Kujo"
 social_image: /assets/images/social/examples-request-hash.jpg
 ---
 
-<nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / Deterministic AI request IDs</nav>
-<article class="example-panel" id="example-request-hash" data-example="request-hash" data-category="AI runtime"><p class="eyebrow">AI runtime · Executed offline · Kujo 1.9.0</p><h3>Deterministic AI request IDs</h3><p>Compare request identities without credentials affecting the hash.</p><p class="example-note">The credential strings are dummy values. This example makes no network request.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token">func</span> kv(label, value) {
-    print(label + <span class="syntax-token">&quot;: &quot;</span> + value)
+
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Deterministic AI request IDs</span></nav>
+ <header class="examples-hero example-detail-hero"><div><p class="eyebrow">14 / AI runtime</p><h1>Deterministic AI request IDs</h1><p>Compare request identities without credentials affecting the hash.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-AI-runtime">More in AI runtime ↗</a></div></header>
+ <div class="example-workbench">
+ <section class="example-source" aria-labelledby="source-title"><header class="example-file-bar"><h2 id="source-title">request-hash.kujo</h2><a href="/samples/request-hash.kujo" download>Download ↓</a></header><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token syntax-keyword">func</span> kv(label, value) {
+    print(label + <span class="syntax-token syntax-string">&quot;: &quot;</span> + value)
 }
 
-<span class="syntax-token">let</span> options_a := {
-    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;https://api.example.test/v1/chat/completions&quot;</span>,
-    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-demo&quot;</span>,
-    <span class="syntax-token">&quot;api_key&quot;</span>: <span class="syntax-token">&quot;credential-one&quot;</span>,
-    <span class="syntax-token">&quot;headers&quot;</span>: {
-        <span class="syntax-token">&quot;Authorization&quot;</span>: <span class="syntax-token">&quot;Bearer credential-one&quot;</span>,
-        <span class="syntax-token">&quot;X-App&quot;</span>: <span class="syntax-token">&quot;kujo&quot;</span>
+<span class="syntax-token syntax-keyword">let</span> options_a := {
+    <span class="syntax-token syntax-string">&quot;endpoint&quot;</span>: <span class="syntax-token syntax-string">&quot;https://api.example.test/v1/chat/completions&quot;</span>,
+    <span class="syntax-token syntax-string">&quot;model&quot;</span>: <span class="syntax-token syntax-string">&quot;gpt-demo&quot;</span>,
+    <span class="syntax-token syntax-string">&quot;api_key&quot;</span>: <span class="syntax-token syntax-string">&quot;credential-one&quot;</span>,
+    <span class="syntax-token syntax-string">&quot;headers&quot;</span>: {
+        <span class="syntax-token syntax-string">&quot;Authorization&quot;</span>: <span class="syntax-token syntax-string">&quot;Bearer credential-one&quot;</span>,
+        <span class="syntax-token syntax-string">&quot;X-App&quot;</span>: <span class="syntax-token syntax-string">&quot;kujo&quot;</span>
     },
-    <span class="syntax-token">&quot;body&quot;</span>: {
-        <span class="syntax-token">&quot;temperature&quot;</span>: 0,
-        <span class="syntax-token">&quot;max_tokens&quot;</span>: 32
+    <span class="syntax-token syntax-string">&quot;body&quot;</span>: {
+        <span class="syntax-token syntax-string">&quot;temperature&quot;</span>: <span class="syntax-token syntax-number">0</span>,
+        <span class="syntax-token syntax-string">&quot;max_tokens&quot;</span>: <span class="syntax-token syntax-number">32</span>
     }
 }
 
-<span class="syntax-token">let</span> options_b := {
-    <span class="syntax-token">&quot;endpoint&quot;</span>: <span class="syntax-token">&quot;https://api.example.test/v1/chat/completions&quot;</span>,
-    <span class="syntax-token">&quot;model&quot;</span>: <span class="syntax-token">&quot;gpt-demo&quot;</span>,
-    <span class="syntax-token">&quot;api_key&quot;</span>: <span class="syntax-token">&quot;credential-two&quot;</span>,
-    <span class="syntax-token">&quot;headers&quot;</span>: {
-        <span class="syntax-token">&quot;Authorization&quot;</span>: <span class="syntax-token">&quot;Bearer credential-two&quot;</span>,
-        <span class="syntax-token">&quot;X-App&quot;</span>: <span class="syntax-token">&quot;kujo&quot;</span>
+<span class="syntax-token syntax-keyword">let</span> options_b := {
+    <span class="syntax-token syntax-string">&quot;endpoint&quot;</span>: <span class="syntax-token syntax-string">&quot;https://api.example.test/v1/chat/completions&quot;</span>,
+    <span class="syntax-token syntax-string">&quot;model&quot;</span>: <span class="syntax-token syntax-string">&quot;gpt-demo&quot;</span>,
+    <span class="syntax-token syntax-string">&quot;api_key&quot;</span>: <span class="syntax-token syntax-string">&quot;credential-two&quot;</span>,
+    <span class="syntax-token syntax-string">&quot;headers&quot;</span>: {
+        <span class="syntax-token syntax-string">&quot;Authorization&quot;</span>: <span class="syntax-token syntax-string">&quot;Bearer credential-two&quot;</span>,
+        <span class="syntax-token syntax-string">&quot;X-App&quot;</span>: <span class="syntax-token syntax-string">&quot;kujo&quot;</span>
     },
-    <span class="syntax-token">&quot;body&quot;</span>: {
-        <span class="syntax-token">&quot;temperature&quot;</span>: 0,
-        <span class="syntax-token">&quot;max_tokens&quot;</span>: 32
+    <span class="syntax-token syntax-string">&quot;body&quot;</span>: {
+        <span class="syntax-token syntax-string">&quot;temperature&quot;</span>: <span class="syntax-token syntax-number">0</span>,
+        <span class="syntax-token syntax-string">&quot;max_tokens&quot;</span>: <span class="syntax-token syntax-number">32</span>
     }
 }
 
-<span class="syntax-token">let</span> hash_a := ai_request_hash(<span class="syntax-token">&quot;Summarize Kujo&quot;</span>, options_a)
-<span class="syntax-token">let</span> hash_b := ai_request_hash(<span class="syntax-token">&quot;Summarize Kujo&quot;</span>, options_b)
+<span class="syntax-token syntax-keyword">let</span> hash_a := ai_request_hash(<span class="syntax-token syntax-string">&quot;Summarize Kujo&quot;</span>, options_a)
+<span class="syntax-token syntax-keyword">let</span> hash_b := ai_request_hash(<span class="syntax-token syntax-string">&quot;Summarize Kujo&quot;</span>, options_b)
 
-kv(<span class="syntax-token">&quot;hash_length&quot;</span>, to_string(len(hash_a)))
-kv(<span class="syntax-token">&quot;same_without_credentials&quot;</span>, to_string(hash_a == hash_b))
-kv(<span class="syntax-token">&quot;hash&quot;</span>, hash_a)
-</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/request-hash.kujo" download>request-hash.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run request-hash.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>hash_length: 64
+kv(<span class="syntax-token syntax-string">&quot;hash_length&quot;</span>, to_string(len(hash_a)))
+kv(<span class="syntax-token syntax-string">&quot;same_without_credentials&quot;</span>, to_string(hash_a == hash_b))
+kv(<span class="syntax-token syntax-string">&quot;hash&quot;</span>, hash_a)
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></section>
+ <aside class="example-runbook" aria-labelledby="run-title"><p class="eyebrow">Run it locally</p><h2 id="run-title">Try this example.</h2><ol><li><strong>Set up Kujo</strong><p><a href="/language/">Install the runtime</a> if this is your first program.</p></li><li><strong>Save the sample</strong><p>Download <a href="/samples/request-hash.kujo" download>request-hash.kujo</a> or copy the code into a file.</p></li><li><strong>Run the command</strong><div class="sample-code"><pre tabindex="0"><code>kujo run request-hash.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></li></ol><div class="example-note"><strong>Before you run</strong><p>The credential strings are dummy values. This example makes no network request.</p></div><a class="example-bundle-link" href="/samples/kujo-examples.tar.gz">Download all samples + fixtures ↓</a></aside>
+ </div>
+ <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Expected output</h2><p>Compare your terminal output with this recorded result.</p></header><div><div class="sample-code"><pre tabindex="0"><code>hash_length: 64
 same_without_credentials: true
 hash: a6244047c108dcf58a952ed0a6c70dc04d13ee9aa9dba08eeb623f241fbd37ce
-</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_request_hash.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
-<nav aria-label="Related examples"><a href="/examples/structured-output/">Previous: Structured output validation</a> · <a href="/examples/replay/">Next: AI calls and replay</a></nav>
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></div></section>
+ <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Executed offline.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_request_hash.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>511a0a2fb62a92f48b9cb02219d9ce92db9c7684ad3393035d25abe49df7c704</code></p></div></details>
+ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/structured-output/"><span>← Previous example</span><strong>Structured output validation</strong></a><a href="/examples/replay/"><span>Next example →</span><strong>AI calls and replay</strong></a></nav>

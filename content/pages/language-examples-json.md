@@ -7,24 +7,30 @@ seo_title: "JSON data | Kujo"
 social_image: /assets/images/social/examples-json.jpg
 ---
 
-<nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / JSON data</nav>
-<article class="example-panel" id="example-json" data-example="json" data-category="Data"><p class="eyebrow">Data · Executed offline · Kujo 1.9.0</p><h3>JSON data</h3><p>Parse configuration and access nested fields.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># JSON Support Demo</span>
-<span class="syntax-token"># Demonstrates parse_json() and to_json() functions</span>
 
-print(<span class="syntax-token">&quot;=== Kujo JSON Support Demo ===&quot;</span>)
-print(<span class="syntax-token">&quot;&quot;</span>)
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">JSON data</span></nav>
+ <header class="examples-hero example-detail-hero"><div><p class="eyebrow">12 / Data</p><h1>JSON data</h1><p>Parse configuration and access nested fields.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Data">More in Data ↗</a></div></header>
+ <div class="example-workbench">
+ <section class="example-source" aria-labelledby="source-title"><header class="example-file-bar"><h2 id="source-title">json.kujo</h2><a href="/samples/json.kujo" download>Download ↓</a></header><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token syntax-comment"># JSON Support Demo</span>
+<span class="syntax-token syntax-comment"># Demonstrates parse_json() and to_json() functions</span>
 
-<span class="syntax-token"># Example 1: Parse a configuration file</span>
-print(<span class="syntax-token">&quot;1. Parsing Configuration&quot;</span>)
-config_json := <span class="syntax-token">&quot;{\&quot;app_name\&quot;: \&quot;My App\&quot;, \&quot;version\&quot;: \&quot;1.0.0\&quot;, \&quot;settings\&quot;: {\&quot;debug\&quot;: true, \&quot;port\&quot;: 8080}}&quot;</span>
+print(<span class="syntax-token syntax-string">&quot;=== Kujo JSON Support Demo ===&quot;</span>)
+print(<span class="syntax-token syntax-string">&quot;&quot;</span>)
+
+<span class="syntax-token syntax-comment"># Example 1: Parse a configuration file</span>
+print(<span class="syntax-token syntax-string">&quot;1. Parsing Configuration&quot;</span>)
+config_json := <span class="syntax-token syntax-string">&quot;{\&quot;app_name\&quot;: \&quot;My App\&quot;, \&quot;version\&quot;: \&quot;1.0.0\&quot;, \&quot;settings\&quot;: {\&quot;debug\&quot;: true, \&quot;port\&quot;: 8080}}&quot;</span>
 config := parse_json(config_json)
-print(<span class="syntax-token">&quot;App name:&quot;</span>, config[<span class="syntax-token">&quot;app_name&quot;</span>])
-print(<span class="syntax-token">&quot;Version:&quot;</span>, config[<span class="syntax-token">&quot;version&quot;</span>])
-print(<span class="syntax-token">&quot;Debug mode:&quot;</span>, config[<span class="syntax-token">&quot;settings&quot;</span>][<span class="syntax-token">&quot;debug&quot;</span>])
-print(<span class="syntax-token">&quot;Port:&quot;</span>, config[<span class="syntax-token">&quot;settings&quot;</span>][<span class="syntax-token">&quot;port&quot;</span>])
-print(<span class="syntax-token">&quot;&quot;</span>)
+print(<span class="syntax-token syntax-string">&quot;App name:&quot;</span>, config[<span class="syntax-token syntax-string">&quot;app_name&quot;</span>])
+print(<span class="syntax-token syntax-string">&quot;Version:&quot;</span>, config[<span class="syntax-token syntax-string">&quot;version&quot;</span>])
+print(<span class="syntax-token syntax-string">&quot;Debug mode:&quot;</span>, config[<span class="syntax-token syntax-string">&quot;settings&quot;</span>][<span class="syntax-token syntax-string">&quot;debug&quot;</span>])
+print(<span class="syntax-token syntax-string">&quot;Port:&quot;</span>, config[<span class="syntax-token syntax-string">&quot;settings&quot;</span>][<span class="syntax-token syntax-string">&quot;port&quot;</span>])
+print(<span class="syntax-token syntax-string">&quot;&quot;</span>)
 
-</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/json.kujo" download>json.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run json.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>=== Kujo JSON Support Demo ===
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></section>
+ <aside class="example-runbook" aria-labelledby="run-title"><p class="eyebrow">Run it locally</p><h2 id="run-title">Try this example.</h2><ol><li><strong>Set up Kujo</strong><p><a href="/language/">Install the runtime</a> if this is your first program.</p></li><li><strong>Save the sample</strong><p>Download <a href="/samples/json.kujo" download>json.kujo</a> or copy the code into a file.</p></li><li><strong>Run the command</strong><div class="sample-code"><pre tabindex="0"><code>kujo run json.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></li></ol><a class="example-bundle-link" href="/samples/kujo-examples.tar.gz">Download all samples + fixtures ↓</a></aside>
+ </div>
+ <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Expected output</h2><p>Compare your terminal output with this recorded result.</p></header><div><div class="sample-code"><pre tabindex="0"><code>=== Kujo JSON Support Demo ===
 
 1. Parsing Configuration
 App name: My App
@@ -32,5 +38,6 @@ Version: 1.0.0
 Debug mode: true
 Port: 8080
 
-</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/json_demo.kujo#L1-L16">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
-<nav aria-label="Related examples"><a href="/examples/generators/">Previous: Generators</a> · <a href="/examples/structured-output/">Next: Structured output validation</a></nav>
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></div></section>
+ <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Executed offline.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/json_demo.kujo#L1-L16">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>22e76f60a9527f9a69024fab11a71cd967551d202168fffb60d95af2ee6c3122</code></p></div></details>
+ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/generators/"><span>← Previous example</span><strong>Generators</strong></a><a href="/examples/structured-output/"><span>Next example →</span><strong>Structured output validation</strong></a></nav>

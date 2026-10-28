@@ -7,32 +7,38 @@ seo_title: "Generators | Kujo"
 social_image: /assets/images/social/examples-generators.jpg
 ---
 
-<nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / Generators</nav>
-<article class="example-panel" id="example-generators" data-example="generators" data-category="Concurrency"><p class="eyebrow">Concurrency · Executed offline · Kujo 1.9.0</p><h3>Generators</h3><p>Yield values lazily and iterate over them.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># Test: Generator Functions</span>
-<span class="syntax-token"># Tests generator creation, yielding, and iteration</span>
-<span class="syntax-token"># Both runtimes resume loops lazily and preserve state across every yield.</span>
 
-print(<span class="syntax-token">&quot;=== Test 1: Simple Generator ===&quot;</span>)
-<span class="syntax-token">func</span>* count() {
-    <span class="syntax-token">yield</span> 1
-    <span class="syntax-token">yield</span> 2
-    <span class="syntax-token">yield</span> 3
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Generators</span></nav>
+ <header class="examples-hero example-detail-hero"><div><p class="eyebrow">11 / Concurrency</p><h1>Generators</h1><p>Yield values lazily and iterate over them.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Concurrency">More in Concurrency ↗</a></div></header>
+ <div class="example-workbench">
+ <section class="example-source" aria-labelledby="source-title"><header class="example-file-bar"><h2 id="source-title">generators.kujo</h2><a href="/samples/generators.kujo" download>Download ↓</a></header><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token syntax-comment"># Test: Generator Functions</span>
+<span class="syntax-token syntax-comment"># Tests generator creation, yielding, and iteration</span>
+<span class="syntax-token syntax-comment"># Both runtimes resume loops lazily and preserve state across every yield.</span>
+
+print(<span class="syntax-token syntax-string">&quot;=== Test 1: Simple Generator ===&quot;</span>)
+<span class="syntax-token syntax-keyword">func</span>* count() {
+    <span class="syntax-token syntax-keyword">yield</span> <span class="syntax-token syntax-number">1</span>
+    <span class="syntax-token syntax-keyword">yield</span> <span class="syntax-token syntax-number">2</span>
+    <span class="syntax-token syntax-keyword">yield</span> <span class="syntax-token syntax-number">3</span>
 }
 
 gen := count()
-print(<span class="syntax-token">&quot;Generator created, type:&quot;</span>)
+print(<span class="syntax-token syntax-string">&quot;Generator created, type:&quot;</span>)
 print(type(gen))
 
-print(<span class="syntax-token">&quot;&quot;</span>)
-print(<span class="syntax-token">&quot;=== Test 2: Generator Iteration ===&quot;</span>)
-<span class="syntax-token">for</span> n <span class="syntax-token">in</span> count() {
-    print(<span class="syntax-token">&quot;Value:&quot;</span>)
+print(<span class="syntax-token syntax-string">&quot;&quot;</span>)
+print(<span class="syntax-token syntax-string">&quot;=== Test 2: Generator Iteration ===&quot;</span>)
+<span class="syntax-token syntax-keyword">for</span> n <span class="syntax-token syntax-keyword">in</span> count() {
+    print(<span class="syntax-token syntax-string">&quot;Value:&quot;</span>)
     print(n)
 }
 
-print(<span class="syntax-token">&quot;&quot;</span>)
-print(<span class="syntax-token">&quot;=== Test 3: Generator with State ===&quot;</span>)
-</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/generators.kujo" download>generators.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo run generators.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><details><summary>Expected output</summary><pre>=== Test 1: Simple Generator ===
+print(<span class="syntax-token syntax-string">&quot;&quot;</span>)
+print(<span class="syntax-token syntax-string">&quot;=== Test 3: Generator with State ===&quot;</span>)
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></section>
+ <aside class="example-runbook" aria-labelledby="run-title"><p class="eyebrow">Run it locally</p><h2 id="run-title">Try this example.</h2><ol><li><strong>Set up Kujo</strong><p><a href="/language/">Install the runtime</a> if this is your first program.</p></li><li><strong>Save the sample</strong><p>Download <a href="/samples/generators.kujo" download>generators.kujo</a> or copy the code into a file.</p></li><li><strong>Run the command</strong><div class="sample-code"><pre tabindex="0"><code>kujo run generators.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></li></ol><a class="example-bundle-link" href="/samples/kujo-examples.tar.gz">Download all samples + fixtures ↓</a></aside>
+ </div>
+ <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Expected output</h2><p>Compare your terminal output with this recorded result.</p></header><div><div class="sample-code"><pre tabindex="0"><code>=== Test 1: Simple Generator ===
 Generator created, type:
 generator
 
@@ -45,5 +51,6 @@ Value:
 3
 
 === Test 3: Generator with State ===
-</pre></details><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/tests/test_generators.kujo#L1-L24">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
-<nav aria-label="Related examples"><a href="/examples/channels/">Previous: Channels</a> · <a href="/examples/json/">Next: JSON data</a></nav>
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></div></section>
+ <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Executed offline.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/tests/test_generators.kujo#L1-L24">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>bc2161de3d229b2ee90682cbd95079166b0ab7facecb85386f0669c3fdddaaf4</code></p></div></details>
+ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/channels/"><span>← Previous example</span><strong>Channels</strong></a><a href="/examples/json/"><span>Next example →</span><strong>JSON data</strong></a></nav>

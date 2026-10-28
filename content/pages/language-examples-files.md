@@ -7,120 +7,127 @@ seo_title: "File operations | Kujo"
 social_image: /assets/images/social/examples-files.jpg
 ---
 
-<nav aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/examples/">Examples</a> / File operations</nav>
-<article class="example-panel" id="example-files" data-example="files" data-category="Systems"><p class="eyebrow">Systems · Checked only · Kujo 1.9.0</p><h3>File operations</h3><p>Read the upstream filesystem demonstration.</p><p class="example-note">Checked only. Execution creates and modifies files; use a disposable working directory.</p><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token"># File Operations Demo</span>
-<span class="syntax-token"># Demonstrates file operation helpers with local output helpers.</span>
 
-<span class="syntax-token">func</span> section(title) {
-    print(<span class="syntax-token">&quot;&quot;</span>)
-    print(<span class="syntax-token">&quot;== &quot;</span> + title + <span class="syntax-token">&quot; ==&quot;</span>)
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">File operations</span></nav>
+ <header class="examples-hero example-detail-hero"><div><p class="eyebrow">20 / Systems</p><h1>File operations</h1><p>Read the upstream filesystem demonstration.</p></div><div class="example-hero-meta"><span class="example-badge">Checked only</span><a href="/examples/#category-Systems">More in Systems ↗</a></div></header>
+ <div class="example-workbench">
+ <section class="example-source" aria-labelledby="source-title"><header class="example-file-bar"><h2 id="source-title">files.kujo</h2><a href="/samples/files.kujo" download>Download ↓</a></header><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token syntax-comment"># File Operations Demo</span>
+<span class="syntax-token syntax-comment"># Demonstrates file operation helpers with local output helpers.</span>
+
+<span class="syntax-token syntax-keyword">func</span> section(title) {
+    print(<span class="syntax-token syntax-string">&quot;&quot;</span>)
+    print(<span class="syntax-token syntax-string">&quot;== &quot;</span> + title + <span class="syntax-token syntax-string">&quot; ==&quot;</span>)
 }
 
-<span class="syntax-token">func</span> kv(label, value) {
-    print(<span class="syntax-token">&quot;  &quot;</span> + label + <span class="syntax-token">&quot;: &quot;</span> + to_string(value))
+<span class="syntax-token syntax-keyword">func</span> kv(label, value) {
+    print(<span class="syntax-token syntax-string">&quot;  &quot;</span> + label + <span class="syntax-token syntax-string">&quot;: &quot;</span> + to_string(value))
 }
 
-<span class="syntax-token">func</span> ok(message) {
-    print(<span class="syntax-token">&quot;  ✓ &quot;</span> + message)
+<span class="syntax-token syntax-keyword">func</span> ok(message) {
+    print(<span class="syntax-token syntax-string">&quot;  ✓ &quot;</span> + message)
 }
 
-section(<span class="syntax-token">&quot;File Operations Demo&quot;</span>)
+section(<span class="syntax-token syntax-string">&quot;File Operations Demo&quot;</span>)
 
-<span class="syntax-token"># Create a test file</span>
-section(<span class="syntax-token">&quot;1. Creating test file&quot;</span>)
-write_file(<span class="syntax-token">&quot;demo_test.txt&quot;</span>, <span class="syntax-token">&quot;Hello, Kujo!\nThis is a test file.\n&quot;</span>)
-ok(<span class="syntax-token">&quot;Created demo_test.txt&quot;</span>)
+<span class="syntax-token syntax-comment"># Create a test file</span>
+section(<span class="syntax-token syntax-string">&quot;1. Creating test file&quot;</span>)
+write_file(<span class="syntax-token syntax-string">&quot;demo_test.txt&quot;</span>, <span class="syntax-token syntax-string">&quot;Hello, Kujo!\nThis is a test file.\n&quot;</span>)
+ok(<span class="syntax-token syntax-string">&quot;Created demo_test.txt&quot;</span>)
 
-<span class="syntax-token"># Check file size</span>
-section(<span class="syntax-token">&quot;2. Checking file size&quot;</span>)
-size := file_size(<span class="syntax-token">&quot;demo_test.txt&quot;</span>)
-kv(<span class="syntax-token">&quot;File size&quot;</span>, <span class="syntax-token">&quot;${size} bytes&quot;</span>)
+<span class="syntax-token syntax-comment"># Check file size</span>
+section(<span class="syntax-token syntax-string">&quot;2. Checking file size&quot;</span>)
+size := file_size(<span class="syntax-token syntax-string">&quot;demo_test.txt&quot;</span>)
+kv(<span class="syntax-token syntax-string">&quot;File size&quot;</span>, <span class="syntax-token syntax-string">&quot;${size} bytes&quot;</span>)
 
-<span class="syntax-token"># Copy the file</span>
-section(<span class="syntax-token">&quot;3. Copying file&quot;</span>)
-copy_file(<span class="syntax-token">&quot;demo_test.txt&quot;</span>, <span class="syntax-token">&quot;demo_test_copy.txt&quot;</span>)
-ok(<span class="syntax-token">&quot;Copied to demo_test_copy.txt&quot;</span>)
+<span class="syntax-token syntax-comment"># Copy the file</span>
+section(<span class="syntax-token syntax-string">&quot;3. Copying file&quot;</span>)
+copy_file(<span class="syntax-token syntax-string">&quot;demo_test.txt&quot;</span>, <span class="syntax-token syntax-string">&quot;demo_test_copy.txt&quot;</span>)
+ok(<span class="syntax-token syntax-string">&quot;Copied to demo_test_copy.txt&quot;</span>)
 
-<span class="syntax-token"># Verify both files exist</span>
-section(<span class="syntax-token">&quot;4. Verifying both files exist&quot;</span>)
-exists1 := file_exists(<span class="syntax-token">&quot;demo_test.txt&quot;</span>)
-exists2 := file_exists(<span class="syntax-token">&quot;demo_test_copy.txt&quot;</span>)
-kv(<span class="syntax-token">&quot;Original exists&quot;</span>, exists1)
-kv(<span class="syntax-token">&quot;Copy exists&quot;</span>, exists2)
+<span class="syntax-token syntax-comment"># Verify both files exist</span>
+section(<span class="syntax-token syntax-string">&quot;4. Verifying both files exist&quot;</span>)
+exists1 := file_exists(<span class="syntax-token syntax-string">&quot;demo_test.txt&quot;</span>)
+exists2 := file_exists(<span class="syntax-token syntax-string">&quot;demo_test_copy.txt&quot;</span>)
+kv(<span class="syntax-token syntax-string">&quot;Original exists&quot;</span>, exists1)
+kv(<span class="syntax-token syntax-string">&quot;Copy exists&quot;</span>, exists2)
 
-<span class="syntax-token"># Check sizes match</span>
-section(<span class="syntax-token">&quot;5. Comparing file sizes&quot;</span>)
-size1 := file_size(<span class="syntax-token">&quot;demo_test.txt&quot;</span>)
-size2 := file_size(<span class="syntax-token">&quot;demo_test_copy.txt&quot;</span>)
-<span class="syntax-token">if</span> size1 == size2 {
-    ok(<span class="syntax-token">&quot;Sizes match: ${size1} bytes&quot;</span>)
-} <span class="syntax-token">else</span> {
-    print(<span class="syntax-token">&quot;   ✗ Size mismatch!&quot;</span>)
+<span class="syntax-token syntax-comment"># Check sizes match</span>
+section(<span class="syntax-token syntax-string">&quot;5. Comparing file sizes&quot;</span>)
+size1 := file_size(<span class="syntax-token syntax-string">&quot;demo_test.txt&quot;</span>)
+size2 := file_size(<span class="syntax-token syntax-string">&quot;demo_test_copy.txt&quot;</span>)
+<span class="syntax-token syntax-keyword">if</span> size1 == size2 {
+    ok(<span class="syntax-token syntax-string">&quot;Sizes match: ${size1} bytes&quot;</span>)
+} <span class="syntax-token syntax-keyword">else</span> {
+    print(<span class="syntax-token syntax-string">&quot;   ✗ Size mismatch!&quot;</span>)
 }
 
-<span class="syntax-token"># Rename the original</span>
-section(<span class="syntax-token">&quot;6. Renaming original file&quot;</span>)
-rename_file(<span class="syntax-token">&quot;demo_test.txt&quot;</span>, <span class="syntax-token">&quot;demo_renamed.txt&quot;</span>)
-ok(<span class="syntax-token">&quot;Renamed to demo_renamed.txt&quot;</span>)
+<span class="syntax-token syntax-comment"># Rename the original</span>
+section(<span class="syntax-token syntax-string">&quot;6. Renaming original file&quot;</span>)
+rename_file(<span class="syntax-token syntax-string">&quot;demo_test.txt&quot;</span>, <span class="syntax-token syntax-string">&quot;demo_renamed.txt&quot;</span>)
+ok(<span class="syntax-token syntax-string">&quot;Renamed to demo_renamed.txt&quot;</span>)
 
-<span class="syntax-token"># List current directory to see files</span>
-section(<span class="syntax-token">&quot;7. Files in current directory&quot;</span>)
-files := list_dir(<span class="syntax-token">&quot;.&quot;</span>)
-<span class="syntax-token">for</span> file <span class="syntax-token">in</span> files {
-    <span class="syntax-token">if</span> contains(file, <span class="syntax-token">&quot;demo_&quot;</span>) {
-        print(<span class="syntax-token">&quot;   - ${file}&quot;</span>)
+<span class="syntax-token syntax-comment"># List current directory to see files</span>
+section(<span class="syntax-token syntax-string">&quot;7. Files in current directory&quot;</span>)
+files := list_dir(<span class="syntax-token syntax-string">&quot;.&quot;</span>)
+<span class="syntax-token syntax-keyword">for</span> file <span class="syntax-token syntax-keyword">in</span> files {
+    <span class="syntax-token syntax-keyword">if</span> contains(file, <span class="syntax-token syntax-string">&quot;demo_&quot;</span>) {
+        print(<span class="syntax-token syntax-string">&quot;   - ${file}&quot;</span>)
     }
 }
 
-<span class="syntax-token"># Clean up</span>
-section(<span class="syntax-token">&quot;8. Cleaning up&quot;</span>)
-delete_file(<span class="syntax-token">&quot;demo_renamed.txt&quot;</span>)
-delete_file(<span class="syntax-token">&quot;demo_test_copy.txt&quot;</span>)
-ok(<span class="syntax-token">&quot;Deleted all test files&quot;</span>)
+<span class="syntax-token syntax-comment"># Clean up</span>
+section(<span class="syntax-token syntax-string">&quot;8. Cleaning up&quot;</span>)
+delete_file(<span class="syntax-token syntax-string">&quot;demo_renamed.txt&quot;</span>)
+delete_file(<span class="syntax-token syntax-string">&quot;demo_test_copy.txt&quot;</span>)
+ok(<span class="syntax-token syntax-string">&quot;Deleted all test files&quot;</span>)
 
-<span class="syntax-token"># Verify cleanup</span>
-section(<span class="syntax-token">&quot;9. Verification&quot;</span>)
-check1 := file_exists(<span class="syntax-token">&quot;demo_test.txt&quot;</span>)
-check2 := file_exists(<span class="syntax-token">&quot;demo_test_copy.txt&quot;</span>)
-check3 := file_exists(<span class="syntax-token">&quot;demo_renamed.txt&quot;</span>)
+<span class="syntax-token syntax-comment"># Verify cleanup</span>
+section(<span class="syntax-token syntax-string">&quot;9. Verification&quot;</span>)
+check1 := file_exists(<span class="syntax-token syntax-string">&quot;demo_test.txt&quot;</span>)
+check2 := file_exists(<span class="syntax-token syntax-string">&quot;demo_test_copy.txt&quot;</span>)
+check3 := file_exists(<span class="syntax-token syntax-string">&quot;demo_renamed.txt&quot;</span>)
 
-<span class="syntax-token">if</span> !check1 &amp;&amp; !check2 &amp;&amp; !check3 {
-    ok(<span class="syntax-token">&quot;All files successfully removed&quot;</span>)
-} <span class="syntax-token">else</span> {
-    print(<span class="syntax-token">&quot;   ✗ Some files still exist&quot;</span>)
+<span class="syntax-token syntax-keyword">if</span> !check1 &amp;&amp; !check2 &amp;&amp; !check3 {
+    ok(<span class="syntax-token syntax-string">&quot;All files successfully removed&quot;</span>)
+} <span class="syntax-token syntax-keyword">else</span> {
+    print(<span class="syntax-token syntax-string">&quot;   ✗ Some files still exist&quot;</span>)
 }
 
-section(<span class="syntax-token">&quot;Demo Complete&quot;</span>)
+section(<span class="syntax-token syntax-string">&quot;Demo Complete&quot;</span>)
 
-<span class="syntax-token"># Practical example: Backup system</span>
-section(<span class="syntax-token">&quot;Practical Example: Simple Backup&quot;</span>)
+<span class="syntax-token syntax-comment"># Practical example: Backup system</span>
+section(<span class="syntax-token syntax-string">&quot;Practical Example: Simple Backup&quot;</span>)
 
-<span class="syntax-token"># Create a config file</span>
-config := <span class="syntax-token">&quot;database_host=localhost\ndatabase_port=5432\n&quot;</span>
-write_file(<span class="syntax-token">&quot;app_config.txt&quot;</span>, config)
-ok(<span class="syntax-token">&quot;Created app_config.txt (${len(config)} bytes)&quot;</span>)
+<span class="syntax-token syntax-comment"># Create a config file</span>
+config := <span class="syntax-token syntax-string">&quot;database_host=localhost\ndatabase_port=5432\n&quot;</span>
+write_file(<span class="syntax-token syntax-string">&quot;app_config.txt&quot;</span>, config)
+ok(<span class="syntax-token syntax-string">&quot;Created app_config.txt (${len(config)} bytes)&quot;</span>)
 
-<span class="syntax-token"># Create backup</span>
-<span class="syntax-token">if</span> file_exists(<span class="syntax-token">&quot;app_config.txt&quot;</span>) {
-    copy_file(<span class="syntax-token">&quot;app_config.txt&quot;</span>, <span class="syntax-token">&quot;app_config.backup.txt&quot;</span>)
-    size := file_size(<span class="syntax-token">&quot;app_config.backup.txt&quot;</span>)
-    ok(<span class="syntax-token">&quot;Backup created: app_config.backup.txt (${size} bytes)&quot;</span>)
+<span class="syntax-token syntax-comment"># Create backup</span>
+<span class="syntax-token syntax-keyword">if</span> file_exists(<span class="syntax-token syntax-string">&quot;app_config.txt&quot;</span>) {
+    copy_file(<span class="syntax-token syntax-string">&quot;app_config.txt&quot;</span>, <span class="syntax-token syntax-string">&quot;app_config.backup.txt&quot;</span>)
+    size := file_size(<span class="syntax-token syntax-string">&quot;app_config.backup.txt&quot;</span>)
+    ok(<span class="syntax-token syntax-string">&quot;Backup created: app_config.backup.txt (${size} bytes)&quot;</span>)
 }
 
-<span class="syntax-token"># Modify the config</span>
-new_config := <span class="syntax-token">&quot;database_host=prod-server\ndatabase_port=5432\n&quot;</span>
-write_file(<span class="syntax-token">&quot;app_config.txt&quot;</span>, new_config)
-ok(<span class="syntax-token">&quot;Modified app_config.txt&quot;</span>)
+<span class="syntax-token syntax-comment"># Modify the config</span>
+new_config := <span class="syntax-token syntax-string">&quot;database_host=prod-server\ndatabase_port=5432\n&quot;</span>
+write_file(<span class="syntax-token syntax-string">&quot;app_config.txt&quot;</span>, new_config)
+ok(<span class="syntax-token syntax-string">&quot;Modified app_config.txt&quot;</span>)
 
-<span class="syntax-token"># Compare sizes</span>
-original_size := file_size(<span class="syntax-token">&quot;app_config.txt&quot;</span>)
-backup_size := file_size(<span class="syntax-token">&quot;app_config.backup.txt&quot;</span>)
-kv(<span class="syntax-token">&quot;Original bytes&quot;</span>, original_size)
-kv(<span class="syntax-token">&quot;Backup bytes&quot;</span>, backup_size)
+<span class="syntax-token syntax-comment"># Compare sizes</span>
+original_size := file_size(<span class="syntax-token syntax-string">&quot;app_config.txt&quot;</span>)
+backup_size := file_size(<span class="syntax-token syntax-string">&quot;app_config.backup.txt&quot;</span>)
+kv(<span class="syntax-token syntax-string">&quot;Original bytes&quot;</span>, original_size)
+kv(<span class="syntax-token syntax-string">&quot;Backup bytes&quot;</span>, backup_size)
 
-<span class="syntax-token"># Cleanup</span>
-delete_file(<span class="syntax-token">&quot;app_config.txt&quot;</span>)
-delete_file(<span class="syntax-token">&quot;app_config.backup.txt&quot;</span>)
-ok(<span class="syntax-token">&quot;Cleanup complete&quot;</span>)
-</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p>Save as <a href="/samples/files.kujo" download>files.kujo</a>, then:</p><div class="sample-code"><pre tabindex="0"><code>kujo check files.kujo</code></pre><button type="button" class="sk-button" data-copy-code hidden>Copy code</button><span role="status" data-code-status></span></div><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/file_operations_demo.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p></article>
-<nav aria-label="Related examples"><a href="/examples/modules/">Previous: Modules and imports</a> · <a href="/examples/http/">Next: HTTP and networking</a></nav>
+<span class="syntax-token syntax-comment"># Cleanup</span>
+delete_file(<span class="syntax-token syntax-string">&quot;app_config.txt&quot;</span>)
+delete_file(<span class="syntax-token syntax-string">&quot;app_config.backup.txt&quot;</span>)
+ok(<span class="syntax-token syntax-string">&quot;Cleanup complete&quot;</span>)
+</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></section>
+ <aside class="example-runbook" aria-labelledby="run-title"><p class="eyebrow">Run it locally</p><h2 id="run-title">Try this example.</h2><ol><li><strong>Set up Kujo</strong><p><a href="/language/">Install the runtime</a> if this is your first program.</p></li><li><strong>Save the sample</strong><p>Download <a href="/samples/files.kujo" download>files.kujo</a> or copy the code into a file.</p></li><li><strong>Check the source</strong><div class="sample-code"><pre tabindex="0"><code>kujo check files.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></li></ol><div class="example-note"><strong>Before you run</strong><p>Checked only. Execution creates and modifies files; use a disposable working directory.</p></div><a class="example-bundle-link" href="/samples/kujo-examples.tar.gz">Download all samples + fixtures ↓</a></aside>
+ </div>
+ <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Verification scope</h2><p>This sample is checked without executing its external integrations.</p></header><div><p class="example-scope">Checked only. This is a source check, not a claim that the application was run end to end.</p></div></section>
+ <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Checked only.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/file_operations_demo.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>8941d71b0312c6591865e50298d32b34cfe6dc411a932c1cc68cfc1726ced3c7</code></p></div></details>
+ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/modules/"><span>← Previous example</span><strong>Modules and imports</strong></a><a href="/examples/http/"><span>Next example →</span><strong>HTTP and networking</strong></a></nav>
