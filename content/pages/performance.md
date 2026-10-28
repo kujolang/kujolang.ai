@@ -1,4 +1,5 @@
 ---
+template: guide-performance
 title: Performance evidence
 custom_url: performance
 description: "Reproduce Kujo measurements, separate startup from execution and identify what remains unmeasured."
@@ -6,31 +7,60 @@ seo_title: "Kujo performance methodology and evidence"
 social_image: /assets/images/social/performance.jpg
 ---
 
-## Measure the workload you actually need
+<div class="guide-intro"><h2>Know what was measured.</h2>
+<p>One small script. Ten process runs. A published receipt you can inspect and reproduce.</p>
+</div>
+<div class="guide-overview"><article><span>Workload</span><h2>Three values</h2>
+<p>The functions example adds three numbers and prints total: 42.</p>
+</article>
+<article><span>Timing</span><h2>Whole process</h2>
+<p>Includes runtime startup, script execution and output.</p>
+</article>
+<article><span>Boundary</span><h2>No speed ranking</h2>
+<p>Other languages, throughput and memory use remain unmeasured.</p>
+</article>
+</div>
+<section class="measurement-card" aria-labelledby="measurement-title"><div><p>Recorded local result</p>
+<h2 id="measurement-title">33.19<small> ms median</small></h2>
+<p>10 process runs · 27 October 2026</p>
+<a href="/samples/performance.json">Download the raw receipt ↗</a></div>
+<dl><div><dt>Observed range</dt><dd>28.84–58.95 ms</dd></div>
+<div><dt>Runtime</dt><dd>kujo 1.9.0</dd></div>
+<div><dt>Machine</dt><dd>Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz</dd></div>
+<div><dt>Environment</dt><dd>macOS-26.6.2-x86_64-i386-64bit</dd></div>
+</dl>
+</section>
+<details class="measurement-runs"><summary>Inspect all ten runs</summary><ol><li><span>Run 01</span><strong>58.95 ms</strong></li>
+<li><span>Run 02</span><strong>32.99 ms</strong></li>
+<li><span>Run 03</span><strong>33.33 ms</strong></li>
+<li><span>Run 04</span><strong>34.62 ms</strong></li>
+<li><span>Run 05</span><strong>29.19 ms</strong></li>
+<li><span>Run 06</span><strong>28.84 ms</strong></li>
+<li><span>Run 07</span><strong>32.62 ms</strong></li>
+<li><span>Run 08</span><strong>33.19 ms</strong></li>
+<li><span>Run 09</span><strong>33.19 ms</strong></li>
+<li><span>Run 10</span><strong>33.63 ms</strong></li>
+</ol>
+<p>The receipt includes the command and source SHA-256. This is a local observation, not a performance guarantee.</p>
+</details>
+<nav class="guide-nav" aria-label="On this page"><a href="#step-1">Measure the workload you actually need <span aria-hidden="true">↗</span></a><a href="#step-2">Reproduce the small-script measurement <span aria-hidden="true">↗</span></a><a href="#step-3">Built with Kujo <span aria-hidden="true">↗</span></a></nav>
+<div class="guide-sections kujo-content"><section class="guide-section"><h2 id="step-1">Measure the workload you actually need</h2>
+<p>Kujo runs on a bytecode VM by default. A compatibility interpreter is a different execution path. Neither should be confused with native compiled output or with JIT steady-state measurements from another runtime.</p>
+<p>This page makes no claim that Kujo is faster than another language. Cross-language workloads are <strong>unmeasured here</strong>. Existing <a href="/compare/">comparison pages</a> describe evidence and adoption tradeoffs rather than a universal speed ranking.</p>
 
-Kujo runs on a bytecode VM by default. A compatibility interpreter is a different execution path. Neither should be confused with native compiled output or with JIT steady-state measurements from another runtime.
-
-This page makes no claim that Kujo is faster than another language. Cross-language workloads are **unmeasured here**. Existing [comparison pages](/compare/) describe evidence and adoption tradeoffs rather than a universal speed ranking.
-
-<!-- MEASUREMENT START -->
-Observed local median: **33.19 ms** across 10 process runs on Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz, macOS-26.6.2-x86_64-i386-64bit, kujo 1.9.0. Measured 2026-10-27. This tiny workload is dominated by startup; it is not evidence of superiority over another language.
-<!-- MEASUREMENT END -->
-
-## Reproduce the small-script measurement
-
-The site includes a [measurement script](https://github.com/kujolang/kujolang.ai/blob/main/scripts/measure-language.py) and a [machine-readable receipt](/samples/performance.json). Run it from the website source after installing Kujo 1.9.0:
-
-```sh
-python3 scripts/measure-language.py
-```
-
-The workload is the pinned [functions example](/examples/functions/), summing three values and printing the result. The script records operating system, architecture, CPU, runtime version, source hash, command, ten process runs and median wall time. It checks output on every run. This is a **process startup plus script execution** measurement, including CLI and output overhead, not a steady-state VM benchmark. It cannot support conclusions about application throughput, memory use, parallelism or other languages.
-
-For larger experiments, inspect [Kujo benchmark sources](https://github.com/kujolang/kujo/tree/v1.9.0/benchmarks) and the runtime’s `kujo bench --help`. Record compiler flags, dependency versions, CPU, OS, warmup, sample count, input data and output equivalence. Separate startup, compilation and steady-state time. Publish raw results and uncertainty before drawing comparisons.
-
-## Built with Kujo
-
-- [This website](https://github.com/kujolang/kujolang.ai/blob/main/build.kujo) is generated by Kujo SSG.
-- [CMS](/ecosystem/cms/) uses a Kujo server runtime with separate frontend components.
-- [CRUD API](/ecosystem/crud-api/) provides a Kujo backend showcase and a separate playground.
-- [RAG](/ecosystem/rag/) demonstrates ingestion and retrieval with documented model and storage requirements.
+</section>
+<section class="guide-section"><h2 id="step-2">Reproduce the small-script measurement</h2>
+<p>The site includes a <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/measure-language.py">measurement script</a> and a <a href="/samples/performance.json">machine-readable receipt</a>. Run it from the website source after installing Kujo 1.9.0:</p>
+<pre><code class="language-sh">python3 scripts/measure-language.py</code></pre>
+<p>The workload is the pinned <a href="/examples/functions/">functions example</a>, summing three values and printing the result. The script records operating system, architecture, CPU, runtime version, source hash, command, ten process runs and median wall time. It checks output on every run. This is a <strong>process startup plus script execution</strong> measurement, including CLI and output overhead, not a steady-state VM benchmark. It cannot support conclusions about application throughput, memory use, parallelism or other languages.</p>
+<p>All ten launches are included; no warmup runs were discarded. Background load and the host machine affect these numbers. Use the raw receipt to inspect variation rather than treating the median as a guarantee.</p>
+<p>For larger experiments, inspect <a href="https://github.com/kujolang/kujo/tree/v1.9.0/benchmarks">Kujo benchmark sources</a> and the runtime’s <code>kujo bench --help</code>. Record compiler flags, dependency versions, CPU, OS, warmup, sample count, input data and output equivalence. Separate startup, compilation and steady-state time. Publish raw results and uncertainty before drawing comparisons.</p>
+</section>
+<section class="guide-section"><h2 id="step-3">Built with Kujo</h2>
+<ul>
+<li><a href="https://github.com/kujolang/kujolang.ai/blob/main/build.kujo">This website</a> is generated by Kujo SSG.</li>
+<li><a href="/ecosystem/cms/">CMS</a> uses a Kujo server runtime with separate frontend components.</li>
+<li><a href="/ecosystem/crud-api/">CRUD API</a> provides a Kujo backend showcase and a separate playground.</li>
+<li><a href="/ecosystem/rag/">RAG</a> demonstrates ingestion and retrieval with documented model and storage requirements.</li>
+</ul></section>
+</div>

@@ -16,7 +16,9 @@
     "examples:generate": "node scripts/render-language-examples.mjs",
     "examples:check": "node scripts/render-language-examples.mjs --check",
     "examples:verify": "python3 scripts/verify-language-examples.py",
-    "language:verify": "python3 scripts/verify-language-site.py"
+    "language:verify": "python3 scripts/verify-language-site.py",
+    "guides:generate": "node scripts/render-language-guides.mjs",
+    "guides:check": "node scripts/render-language-guides.mjs --check"
   },
   "dependencies": {
     "scramble-decode": "0.1.0"

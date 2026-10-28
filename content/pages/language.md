@@ -1,4 +1,5 @@
 ---
+template: guide-language
 title: Learn the Kujo language
 custom_url: language
 description: "Install Kujo, check and run your first program, then explore language and AI runtime examples."
@@ -6,57 +7,50 @@ seo_title: "Get started with Kujo | Install and run"
 social_image: /assets/images/social/language.jpg
 ---
 
-## Install the runtime
-
-Kujo is a programming language with a Rust-based runtime. Start with the runtime alone; independent ecosystem packages can come later.
-
-With Node.js 18 or newer, the runtime-only npm package supports macOS x64/arm64, Linux x64/arm64 and Windows x64:
-
-```sh
-npm install --global @kujolang/kujo-runtime@1.9.0
-kujo --version
-```
-
-Expected version: `kujo 1.9.0`. On Windows, use PowerShell or a terminal with Node.js on PATH. Native Windows archives and checksum instructions are in the [official installation guide](https://github.com/kujolang/kujo/blob/v1.9.0/INSTALLATION.md).
-
-For the runtime and core toolset on macOS/Linux:
-
-```sh
-curl -fsSL https://kujolang.ai/install.sh | KUJO_RELEASE_VERSION=v1.9.0 bash
+<div class="guide-intro"><h2>Write your first program.</h2>
+<p>Install the runtime, save a short script and run it. You can add packages and development tools when you need them.</p>
+</div>
+<div class="guide-overview"><article><span>01</span><h2>Install</h2>
+<p>Choose the runtime-only package or the core toolset.</p>
+</article>
+<article><span>02</span><h2>Write</h2>
+<p>Save a plain-text file with a .kujo extension.</p>
+</article>
+<article><span>03</span><h2>Run</h2>
+<p>Check the source, then execute it locally.</p>
+</article>
+</div>
+<nav class="guide-nav" aria-label="On this page"><a href="#step-1">Install the runtime <span aria-hidden="true">↗</span></a><a href="#step-2">Create hello.kujo <span aria-hidden="true">↗</span></a><a href="#step-3">Where to go next <span aria-hidden="true">↗</span></a><a href="#step-4">Troubleshooting <span aria-hidden="true">↗</span></a></nav>
+<div class="guide-sections kujo-content"><section class="guide-section"><h2 id="step-1">Install the runtime</h2>
+<p>Kujo is a programming language with a Rust-based runtime. Start with the runtime alone; independent ecosystem packages can come later.</p>
+<p>With Node.js 18 or newer, the runtime-only npm package supports macOS x64/arm64, Linux x64/arm64 and Windows x64:</p>
+<pre><code class="language-sh">npm install --global @kujolang/kujo-runtime@1.9.0
+kujo --version</code></pre>
+<p>Expected version: <code>kujo 1.9.0</code>. On Windows, use PowerShell or a terminal with Node.js on PATH. Native Windows archives and checksum instructions are in the <a href="https://github.com/kujolang/kujo/blob/v1.9.0/INSTALLATION.md">official installation guide</a>.</p>
+<p>For the runtime and core toolset on macOS/Linux:</p>
+<pre><code class="language-sh">curl -fsSL https://kujolang.ai/install.sh | KUJO_RELEASE_VERSION=v1.9.0 bash
 export PATH="$HOME/.local/bin:$PATH"
-kujo --version
-```
-
-This second option also installs separately versioned ecosystem tools. The runtime version does not pin those tool snapshots. Review the official installer and release-manifest options when reproducibility matters.
-
-## Create hello.kujo
-
-Open a text editor and save this code as `hello.kujo`:
-
-```kujo
-print("Hello, Kujo!")
-```
-
-In the same directory:
-
-```sh
-kujo check hello.kujo
-kujo run hello.kujo
-```
-
-The check validates source without executing it. The run prints:
-
-```text
-Hello, Kujo!
-```
-
-## Where to go next
-
-- [Browse verified examples](/examples/): functions, collections, async and AI replay.
-- [Follow the language tutorial](https://docs.kujolang.ai/learn/).
-- [Learn packages with Kennel](https://docs.kujolang.ai/learn/packages/).
-- [Read the runtime source](https://github.com/kujolang/kujo/tree/v1.9.0).
-
-## Troubleshooting
-
-If `kujo` is not found, reopen your terminal and check the installer’s PATH instructions. If your operating system or architecture is not listed above, consult the [source-build instructions](https://github.com/kujolang/kujo/blob/v1.9.0/INSTALLATION.md). Use the [issue tracker](https://github.com/kujolang/kujo/issues) with your runtime version, operating system and a minimal sample.
+kujo --version</code></pre>
+<p>This second option also installs separately versioned ecosystem tools. The runtime version does not pin those tool snapshots. Review the official installer and release-manifest options when reproducibility matters.</p>
+</section>
+<section class="guide-section"><h2 id="step-2">Create hello.kujo</h2>
+<p>Open a text editor and save this code as <code>hello.kujo</code>:</p>
+<pre><code class="language-kujo">print("Hello, Kujo!")</code></pre>
+<p>In the same directory:</p>
+<pre><code class="language-sh">kujo check hello.kujo
+kujo run hello.kujo</code></pre>
+<p>The check validates source without executing it. The run prints:</p>
+<pre><code class="language-text">Hello, Kujo!</code></pre>
+</section>
+<section class="guide-section"><h2 id="step-3">Where to go next</h2>
+<ul>
+<li><a href="/examples/">Browse verified examples</a>: functions, collections, async and AI replay.</li>
+<li><a href="https://docs.kujolang.ai/learn/">Follow the language tutorial</a>.</li>
+<li><a href="https://docs.kujolang.ai/learn/packages/">Learn packages with Kennel</a>.</li>
+<li><a href="https://github.com/kujolang/kujo/tree/v1.9.0">Read the runtime source</a>.</li>
+</ul>
+</section>
+<section class="guide-section"><h2 id="step-4">Troubleshooting</h2>
+<p>If <code>kujo</code> is not found, reopen your terminal and check the installer’s PATH instructions. If your operating system or architecture is not listed above, consult the <a href="https://github.com/kujolang/kujo/blob/v1.9.0/INSTALLATION.md">source-build instructions</a>. Use the <a href="https://github.com/kujolang/kujo/issues">issue tracker</a> with your runtime version, operating system and a minimal sample.</p>
+</section>
+</div>

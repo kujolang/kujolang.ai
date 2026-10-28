@@ -30,12 +30,13 @@
     var copiedLabel = button.dataset.copiedLabel || 'Install command copied';
     button.dataset.copied = 'true';
     button.setAttribute('aria-label', copiedLabel);
-    if (status) status.textContent = 'Copied to clipboard.';
-    window.setTimeout(function () {
+    if (status) status.textContent = 'Copied!';
+    window.clearTimeout(button.copyFeedbackTimer);
+    button.copyFeedbackTimer = window.setTimeout(function () {
       button.dataset.copied = 'false';
       button.setAttribute('aria-label', copyLabel);
       if (status) status.textContent = '';
-    }, 1800);
+    }, 1500);
   }
 
   function enhanceCopyButtons() {
@@ -622,7 +623,55 @@
     const update = () => panels.forEach(panel => { panel.hidden = panel.dataset.example !== selector.value; });
     root.querySelector('.example-selector').hidden = false;
     selector.addEventListener('change', update);
-    update();
+    // A themed disclosure keeps native selection as the underlying value/fallback.
+    const picker = document.createElement('div'); picker.className = 'example-picker';
+    const trigger = document.createElement('button'); trigger.type = 'button';
+    trigger.id = 'example-picker-trigger'; trigger.className = 'example-picker-trigger';
+    trigger.setAttribute('aria-haspopup', 'listbox'); trigger.setAttribute('aria-expanded', 'false');
+    trigger.setAttribute('aria-controls', 'example-picker-options');
+    const list = document.createElement('div'); list.id = 'example-picker-options';
+    list.className = 'example-picker-options'; list.setAttribute('role', 'listbox');
+    list.setAttribute('aria-label', 'Choose an example'); list.hidden = true;
+    const options = [...selector.options].map(option => {
+      const button = document.createElement('button'); button.type = 'button';
+      button.setAttribute('role', 'option'); button.tabIndex = -1;
+      button.dataset.value = option.value; button.textContent = option.textContent;
+      list.append(button); return button;
+    });
+    const sync = () => {
+      trigger.textContent = selector.selectedOptions[0].textContent;
+      trigger.setAttribute('aria-label', 'Choose an example: ' + trigger.textContent);
+      options.forEach(option => option.setAttribute('aria-selected', String(option.dataset.value === selector.value)));
+    };
+    const close = (focus = false) => { list.hidden = true; trigger.setAttribute('aria-expanded', 'false'); if (focus) trigger.focus(); };
+    const open = () => { list.hidden = false; trigger.setAttribute('aria-expanded', 'true'); options.find(option => option.dataset.value === selector.value).focus(); };
+    trigger.addEventListener('click', () => list.hidden ? open() : close());
+    trigger.addEventListener('keydown', event => { if (['ArrowDown', 'ArrowUp'].includes(event.key)) { event.preventDefault(); open(); } });
+    options.forEach(option => option.addEventListener('click', () => {
+      selector.value = option.dataset.value; selector.dispatchEvent(new Event('change')); close(true);
+    }));
+    let typed = '', typingTimer;
+    list.addEventListener('keydown', event => {
+      let index = options.indexOf(document.activeElement);
+      if (event.key === 'Escape') { event.preventDefault(); close(true); return; }
+      if (event.key === 'Tab') { close(); trigger.focus(); return; }
+      if (event.key === 'ArrowDown') index = (index + 1) % options.length;
+      else if (event.key === 'ArrowUp') index = (index + options.length - 1) % options.length;
+      else if (event.key === 'Home') index = 0;
+      else if (event.key === 'End') index = options.length - 1;
+      else if (event.key.length === 1 && event.key !== ' ') {
+        clearTimeout(typingTimer); typed += event.key.toLowerCase();
+        typingTimer = setTimeout(() => { typed = ''; }, 600);
+        index = options.findIndex(option => option.textContent.toLowerCase().startsWith(typed));
+      } else return;
+      event.preventDefault(); if (index >= 0) options[index].focus();
+    });
+    document.addEventListener('click', event => { if (!picker.contains(event.target)) close(); });
+    picker.addEventListener('focusout', event => { if (!picker.contains(event.relatedTarget)) close(); });
+    picker.append(trigger, list); selector.after(picker); selector.hidden = true;
+    const label = root.querySelector('label[for="home-example"]');
+    label.htmlFor = trigger.id;
+    selector.addEventListener('change', sync); sync(); update();
   });
   document.querySelectorAll('.kujo-content pre').forEach(pre => {
     if (pre.closest('.sample-code') || !pre.querySelector('code')) return;
@@ -631,13 +680,27 @@
     pre.before(wrapper);
     wrapper.append(pre);
     const button = document.createElement('button');
-    button.type = 'button'; button.className = 'sk-button';
-    button.dataset.copyCode = ''; button.textContent = 'Copy code';
+    button.type = 'button'; button.className = 'sk-button code-copy-icon';
+    button.dataset.copyCode = ''; button.setAttribute('aria-label', 'Copy code'); button.title = 'Copy code';
+    button.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg>';
+    pre.tabIndex = 0;
+    const code = pre.querySelector('code');
+    // Build spans from text nodes: preserve exact clipboard bytes and never interpret source as HTML.
+    if (!code.children.length) {
+      const tokens = code.textContent.split(/("(?:\\.|[^"\\])*"|'[^'\n]*'|#[^\n]*|\b(?:let|func|return|if|else|true|false|null)\b|\b\d+(?:\.\d+)?\b)/g);
+      code.textContent = '';
+      tokens.forEach((text, index) => {
+        if (!(index % 2)) { code.append(document.createTextNode(text)); return; }
+        const span = document.createElement('span');
+        span.className = 'syntax-token syntax-' + (/^["']/.test(text) ? 'string' : text.startsWith('#') ? 'comment' : /^\d/.test(text) ? 'number' : 'keyword');
+        span.textContent = text; code.append(span);
+      });
+    }
     const status = document.createElement('span');
     status.dataset.codeStatus = ''; status.setAttribute('role', 'status');
     wrapper.append(button, status);
   });
-  document.querySelectorAll('[data-copy-code]').forEach(button => {
+  document.querySelectorAll('.sample-code [data-copy-code]').forEach(button => {
     let statusTimer;
     button.hidden = false;
     button.addEventListener('click', async () => {
