@@ -1746,7 +1746,7 @@
 .examples-orientation > p:not(.eyebrow) { color: #ccc; margin-bottom: 1.5rem; }
 .examples-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-block: 1px solid #555; padding-block: 1rem; margin-bottom: 1rem; }
 .examples-stats p { display: grid; gap: .5rem; }
-.examples-stats strong { font-size: 3rem; line-height: 1.1; }
+.examples-stats strong { font-family: var(--sk-font-mono); font-size: 3rem; line-height: 1.1; }
 .examples-stats span { font-size: .7rem; color: #ccc; }
 .examples-site .example-filter { display: grid; grid-template-columns: 1.5fr 1fr auto; gap: 1.5rem; align-items: end; padding: 1.5rem; margin: 0; background: #eeeee9; border: 1px solid var(--example-line); }
 .examples-site .example-filter[hidden] { display: none; }
