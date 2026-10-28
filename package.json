@@ -18,7 +18,10 @@
     "examples:verify": "python3 scripts/verify-language-examples.py",
     "language:verify": "python3 scripts/verify-language-site.py",
     "guides:generate": "node scripts/render-language-guides.mjs",
-    "guides:check": "node scripts/render-language-guides.mjs --check"
+    "guides:check": "node scripts/render-language-guides.mjs --check",
+    "howl:pages:generate": "node scripts/render-language-howl.mjs",
+    "howl:pages:check": "node scripts/render-language-howl.mjs --check",
+    "seo:pages:verify": "python3 scripts/verify-language-seo.py"
   },
   "dependencies": {
     "scramble-decode": "0.1.0"
