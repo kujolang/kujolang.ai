@@ -30,7 +30,8 @@ for(const [i,x] of catalog.items.entries()){
  const previous=catalog.items[(i+catalog.items.length-1)%catalog.items.length];
  const next=catalog.items[(i+1)%catalog.items.length];
  const command=`kujo ${x.mode} ${x.args?x.args.join(' ')+' ':''}${x.slug}.kujo`;
- page('examples/'+x.slug,x.title,x.description,`
+ const codeSchema={'@context':'https://schema.org','@type':'SoftwareSourceCode','@id':`https://kujolang.ai/examples/${x.slug}/#source`,name:x.title,description:x.description,codeRepository:catalog.repository,programmingLanguage:'Kujo',codeSampleType:'code snippet',url:`https://kujolang.ai/examples/${x.slug}/`,text:sample(x),isBasedOn:source(x)};
+ page('examples/'+x.slug,x.title,x.description,`<script type="application/ld+json">${JSON.stringify(codeSchema).replaceAll('<','\\u003c')}</script>
  <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">${esc(x.title)}</span></nav>
  <header class="examples-hero example-detail-hero"><div><p class="eyebrow">${String(i+1).padStart(2,'0')} / ${esc(x.category)}</p><h1>${esc(x.title)}</h1><p>${esc(x.description)}</p></div><div class="example-hero-meta"><span class="example-badge">${verification(x)}</span><a href="/examples/#${categoryId(x.category)}">More in ${esc(x.category)} ↗</a></div></header>
  <div class="example-workbench">

@@ -7,7 +7,7 @@ seo_title: "Channels | Kujo"
 social_image: /assets/images/social/examples-channels.jpg
 ---
 
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","@id":"https://kujolang.ai/examples/channels/#source","name":"Channels","description":"Send a value through a first-in, first-out channel.","codeRepository":"https://github.com/kujolang/kujo","programmingLanguage":"Kujo","codeSampleType":"code snippet","url":"https://kujolang.ai/examples/channels/","text":"# Channels - Thread Communication Example\n# Demonstrates using channels to communicate between threads\n\nprint(\"=== Channels for Thread Communication Demo ===\")\nprint(\"\")\n\n# Example 1: Basic channel send/receive\nprint(\"1. Basic channel usage\")\nchan := channel()\n\nprint(\"Sending value 42 to channel...\")\nchan.send(42)\n\nprint(\"Receiving from channel...\")\nvalue := chan.receive()\nprint(\"Received:\")\nprint(value)\nprint(\"\")\n","isBasedOn":"https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/concurrency_channels.kujo#L1-L18"}</script>
  <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Channels</span></nav>
  <header class="examples-hero example-detail-hero"><div><p class="eyebrow">10 / Concurrency</p><h1>Channels</h1><p>Send a value through a first-in, first-out channel.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Concurrency">More in Concurrency ↗</a></div></header>
  <div class="example-workbench">

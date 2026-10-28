@@ -7,7 +7,7 @@ seo_title: "AI capability restrictions | Kujo"
 social_image: /assets/images/social/examples-capabilities.jpg
 ---
 
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","@id":"https://kujolang.ai/examples/capabilities/#source","name":"AI capability restrictions","description":"Replay an AI call with explicit permissions.","codeRepository":"https://github.com/kujolang/kujo","programmingLanguage":"Kujo","codeSampleType":"code snippet","url":"https://kujolang.ai/examples/capabilities/","text":"func kv(label, value) {\n    print(label + \": \" + value)\n}\n\nlet options := {\n    \"endpoint\": \"http://127.0.0.1:1/v1/chat/completions\",\n    \"model\": \"gpt-replay\",\n    \"structured_errors\": true,\n    \"cassette\": {\n        \"mode\": \"replay\",\n        \"dir\": \"tests/fixtures/ai_cassettes\"\n    }\n}\n\nlet result := ai_chat(\"Hello model\", options)\n\nkv(\"allowlisted_replay\", to_string(result))\n","isBasedOn":"https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/ai_egress_allowlist.kujo"}</script>
  <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">AI capability restrictions</span></nav>
  <header class="examples-hero example-detail-hero"><div><p class="eyebrow">17 / AI runtime</p><h1>AI capability restrictions</h1><p>Replay an AI call with explicit permissions.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-AI-runtime">More in AI runtime ↗</a></div></header>
  <div class="example-workbench">

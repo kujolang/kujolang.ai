@@ -7,7 +7,7 @@ seo_title: "Hello World | Kujo"
 social_image: /assets/images/social/examples-hello-world.jpg
 ---
 
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","@id":"https://kujolang.ai/examples/hello-world/#source","name":"Hello World","description":"Print your first message.","codeRepository":"https://github.com/kujolang/kujo","programmingLanguage":"Kujo","codeSampleType":"code snippet","url":"https://kujolang.ai/examples/hello-world/","text":"# Expected output:\n# Kujo Kujo!\n\nprint(\"Kujo Kujo!\")\n","isBasedOn":"https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/00-hello.kujo"}</script>
  <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Hello World</span></nav>
  <header class="examples-hero example-detail-hero"><div><p class="eyebrow">01 / Basics</p><h1>Hello World</h1><p>Print your first message.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Basics">More in Basics ↗</a></div></header>
  <div class="example-workbench">

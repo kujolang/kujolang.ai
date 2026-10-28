@@ -7,7 +7,7 @@ seo_title: "Functions and operators | Kujo"
 social_image: /assets/images/social/examples-functions.jpg
 ---
 
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","@id":"https://kujolang.ai/examples/functions/#source","name":"Functions and operators","description":"Add the numbers in an array with a function.","codeRepository":"https://github.com/kujolang/kujo","programmingLanguage":"Kujo","codeSampleType":"code snippet","url":"https://kujolang.ai/examples/functions/","text":"# Expected output:\n# total: 42\n\nfunc total(values) {\n    mut sum := 0\n    for value in values {\n        sum = sum + value\n    }\n    return sum\n}\n\nlet scores := [8, 13, 21]\nprint(\"total: \" + to_string(total(scores)))\n","isBasedOn":"https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/02-functions.kujo"}</script>
  <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Functions and operators</span></nav>
  <header class="examples-hero example-detail-hero"><div><p class="eyebrow">03 / Basics</p><h1>Functions and operators</h1><p>Add the numbers in an array with a function.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Basics">More in Basics ↗</a></div></header>
  <div class="example-workbench">

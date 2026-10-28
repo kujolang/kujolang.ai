@@ -98,7 +98,7 @@ require_text "${output_dir}/index.html" 'data-hero-video-open aria-haspopup="dia
 require_text "${output_dir}/index.html" '<span>View video</span>'
 require_text "${output_dir}/index.html" 'data-hero-video-modal hidden'
 require_text "${output_dir}/index.html" '<source src="/assets/videos/kujo-intro.mp4" type="video/mp4">'
-require_text "${output_dir}/index.html" 'controls playsinline preload="metadata"'
+require_text "${output_dir}/index.html" 'controls playsinline preload="none" data-poster="/assets/images/home-agent-workflow.webp"'
 reject_text "${output_dir}/index.html" '<button class="sk-button" data-variant="secondary" type="button" data-quick-install-open>Quick Install</button>'
 reject_text "${output_dir}/index.html" 'Read the docs'
 reject_text "${output_dir}/index.html" '&rarr;'

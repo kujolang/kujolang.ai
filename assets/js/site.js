@@ -262,6 +262,7 @@
     var previousFocus = null;
 
     function openVideo(trigger) {
+      if (!video.poster && video.dataset.poster) video.poster = video.dataset.poster;
       previousFocus = trigger || document.activeElement;
       document.dispatchEvent(new Event('kujo:close-mobile-menu'));
       modal.hidden = false;

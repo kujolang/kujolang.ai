@@ -7,7 +7,7 @@ seo_title: "Collections | Kujo"
 social_image: /assets/images/social/examples-collections.jpg
 ---
 
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","@id":"https://kujolang.ai/examples/collections/#source","name":"Collections","description":"Build a report from arrays and dictionaries.","codeRepository":"https://github.com/kujolang/kujo","programmingLanguage":"Kujo","codeSampleType":"code snippet","url":"https://kujolang.ai/examples/collections/","text":"# Expected output:\n# build total: 42\n\nlet scores := [8, 13, 21]\nlet report := {\"name\": \"build\", \"total\": scores[0] + scores[1] + scores[2]}\n\nprint(report[\"name\"] + \" total: \" + to_string(report[\"total\"]))\n","isBasedOn":"https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/04-data.kujo"}</script>
  <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Collections</span></nav>
  <header class="examples-hero example-detail-hero"><div><p class="eyebrow">05 / Data</p><h1>Collections</h1><p>Build a report from arrays and dictionaries.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Data">More in Data ↗</a></div></header>
  <div class="example-workbench">

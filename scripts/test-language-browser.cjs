@@ -9,6 +9,8 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
  for(const [name,width,height] of [['desktop',1440,1000],['tablet',768,1024],['mobile',390,844]]){
   await page.setViewportSize({width,height});await page.goto(base,{waitUntil:'domcontentloaded'});
   assert(await page.locator('.site-footer').isVisible(),'Homepage footer must be visible');
+  assert.equal(await page.locator('[data-hero-video]').getAttribute('preload'),'none');
+  assert.equal(await page.locator('[data-hero-video]').getAttribute('poster'),null,'Hidden video poster waits for user intent');
   assert(!/\bv?1\.9(?:\.0)?\b/.test(await page.locator('main').innerText()),'No release number in homepage copy');
   await page.locator('.example-selector').waitFor({state:'visible'});assert.equal(await page.locator('[data-example]:visible').count(),1);
   // The spacious hero supersedes the former first-viewport code constraint.
@@ -44,6 +46,12 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
   await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:`${evidence}/home-${name}.png`,fullPage:true});await page.screenshot({path:`${evidence}/viewport-${name}.png`});
   if(name==='mobile'){await page.locator('[data-mobile-menu-toggle]').click();assert(await page.locator('#mobile-navigation').isVisible());await page.keyboard.press('Escape');assert(await page.locator('#mobile-navigation').isHidden());}
  }
+ await page.locator('[data-hero-video-open]').click();
+ assert(await page.locator('[data-hero-video-modal]').isVisible());
+ assert.equal(await page.locator('[data-hero-video]').getAttribute('poster'),'/assets/images/home-agent-workflow.webp');
+ await page.keyboard.press('Escape');
+ assert(await page.locator('[data-hero-video-modal]').isHidden());
+ assert(await page.locator('[data-hero-video-open]').evaluate(el=>el===document.activeElement));
  await page.goto(base+'/examples/',{waitUntil:'domcontentloaded'});await page.fill('#example-search','replay');assert(await page.locator('[data-example-card]:visible').count()>0);await page.fill('#example-search','no-such-feature');assert.equal(await page.locator('[data-example-card]:visible').count(),0);assert.equal(await page.locator('#example-count').textContent(),'0 examples found');await page.fill('#example-search','');await page.selectOption('#example-category','Concurrency');assert.equal(await page.locator('[data-example-card]:visible').count(),3);
  await page.screenshot({path:evidence+'/examples-mobile.png',fullPage:true});
  for(const route of ['/language/','/development-workflow/','/performance/','/examples/replay/','/ecosystem/','/compare/']){await page.goto(base+route,{waitUntil:'domcontentloaded'});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),route+' overflow');assert.equal(await page.locator('main').count(),1);}

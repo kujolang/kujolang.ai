@@ -7,7 +7,7 @@ seo_title: "Generators | Kujo"
 social_image: /assets/images/social/examples-generators.jpg
 ---
 
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","@id":"https://kujolang.ai/examples/generators/#source","name":"Generators","description":"Generate values as you need them.","codeRepository":"https://github.com/kujolang/kujo","programmingLanguage":"Kujo","codeSampleType":"code snippet","url":"https://kujolang.ai/examples/generators/","text":"# Test: Generator Functions\n# Tests generator creation, yielding, and iteration\n# Both runtimes resume loops lazily and preserve state across every yield.\n\nprint(\"=== Test 1: Simple Generator ===\")\nfunc* count() {\n    yield 1\n    yield 2\n    yield 3\n}\n\ngen := count()\nprint(\"Generator created, type:\")\nprint(type(gen))\n\nprint(\"\")\nprint(\"=== Test 2: Generator Iteration ===\")\nfor n in count() {\n    print(\"Value:\")\n    print(n)\n}\n\nprint(\"\")\nprint(\"=== Test 3: Generator with State ===\")\n","isBasedOn":"https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/tests/test_generators.kujo#L1-L24"}</script>
  <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Generators</span></nav>
  <header class="examples-hero example-detail-hero"><div><p class="eyebrow">11 / Concurrency</p><h1>Generators</h1><p>Generate values as you need them.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Concurrency">More in Concurrency ↗</a></div></header>
  <div class="example-workbench">

@@ -7,7 +7,7 @@ seo_title: "Modules and imports | Kujo"
 social_image: /assets/images/social/examples-modules.jpg
 ---
 
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","@id":"https://kujolang.ai/examples/modules/#source","name":"Modules and imports","description":"Read examples of dotted and named imports.","codeRepository":"https://github.com/kujolang/kujo","programmingLanguage":"Kujo","codeSampleType":"code snippet","url":"https://kujolang.ai/examples/modules/","text":"# Parse-only module import tour.\n# To run this pattern, create the imported files beside your script or inside a package root.\n\nimport math_helpers\nfrom metrics import average, total\nfrom src.util import value\nfrom src.core.math import add\n","isBasedOn":"https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/05-modules.kujo"}</script>
  <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Modules and imports</span></nav>
  <header class="examples-hero example-detail-hero"><div><p class="eyebrow">19 / Tooling</p><h1>Modules and imports</h1><p>Read examples of dotted and named imports.</p></div><div class="example-hero-meta"><span class="example-badge">Checked only</span><a href="/examples/#category-Tooling">More in Tooling ↗</a></div></header>
  <div class="example-workbench">

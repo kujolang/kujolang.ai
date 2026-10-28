@@ -7,7 +7,7 @@ seo_title: "Variables and types | Kujo"
 social_image: /assets/images/social/examples-variables.jpg
 ---
 
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","@id":"https://kujolang.ai/examples/variables/#source","name":"Variables and types","description":"Create variables with let and print their values.","codeRepository":"https://github.com/kujolang/kujo","programmingLanguage":"Kujo","codeSampleType":"code snippet","url":"https://kujolang.ai/examples/variables/","text":"# Expected output:\n# tool: kujo\n# status: ready\n\nlet tool := \"kujo\"\nlet status := \"ready\"\n\nprint(\"tool: \" + tool)\nprint(\"status: \" + status)\n","isBasedOn":"https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/01-variables.kujo"}</script>
  <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">Variables and types</span></nav>
  <header class="examples-hero example-detail-hero"><div><p class="eyebrow">02 / Basics</p><h1>Variables and types</h1><p>Create variables with let and print their values.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Basics">More in Basics ↗</a></div></header>
  <div class="example-workbench">
