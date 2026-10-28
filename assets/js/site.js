@@ -638,14 +638,18 @@
     wrapper.append(button, status);
   });
   document.querySelectorAll('[data-copy-code]').forEach(button => {
+    let statusTimer;
     button.hidden = false;
     button.addEventListener('click', async () => {
       const root = button.closest('.sample-code');
       const status = root.querySelector('[data-code-status]');
       try {
         await navigator.clipboard.writeText(root.querySelector('code').textContent);
+        clearTimeout(statusTimer);
         status.textContent = 'Copied!';
+        statusTimer = window.setTimeout(() => { status.textContent = ''; }, 1500);
       } catch {
+        clearTimeout(statusTimer);
         status.textContent = 'Copy unavailable. Select the code and copy it manually.';
       }
     });

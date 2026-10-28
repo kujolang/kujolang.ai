@@ -2,14 +2,14 @@
 title: JSON data
 template: language-examples-json
 custom_url: examples/json
-description: "Parse configuration and access nested fields."
+description: "Read JSON and access nested fields."
 seo_title: "JSON data | Kujo"
 social_image: /assets/images/social/examples-json.jpg
 ---
 
 
  <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/examples/">Examples</a><span aria-hidden="true">/</span><span aria-current="page">JSON data</span></nav>
- <header class="examples-hero example-detail-hero"><div><p class="eyebrow">12 / Data</p><h1>JSON data</h1><p>Parse configuration and access nested fields.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Data">More in Data ↗</a></div></header>
+ <header class="examples-hero example-detail-hero"><div><p class="eyebrow">12 / Data</p><h1>JSON data</h1><p>Read JSON and access nested fields.</p></div><div class="example-hero-meta"><span class="example-badge">Executed offline</span><a href="/examples/#category-Data">More in Data ↗</a></div></header>
  <div class="example-workbench">
  <section class="example-source" aria-labelledby="source-title"><header class="example-file-bar"><h2 id="source-title">json.kujo</h2><a href="/samples/json.kujo" download>Download ↓</a></header><div class="sample-code"><pre tabindex="0"><code><span class="syntax-token syntax-comment"># JSON Support Demo</span>
 <span class="syntax-token syntax-comment"># Demonstrates parse_json() and to_json() functions</span>
@@ -28,9 +28,9 @@ print(<span class="syntax-token syntax-string">&quot;Port:&quot;</span>, config[
 print(<span class="syntax-token syntax-string">&quot;&quot;</span>)
 
 </code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></section>
- <aside class="example-runbook" aria-labelledby="run-title"><p class="eyebrow">Run it locally</p><h2 id="run-title">Try this example.</h2><ol><li><strong>Set up Kujo</strong><p><a href="/language/">Install the runtime</a> if this is your first program.</p></li><li><strong>Save the sample</strong><p>Download <a href="/samples/json.kujo" download>json.kujo</a> or copy the code into a file.</p></li><li><strong>Run the command</strong><div class="sample-code"><pre tabindex="0"><code>kujo run json.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></li></ol><a class="example-bundle-link" href="/samples/kujo-examples.tar.gz">Download all samples + fixtures ↓</a></aside>
+ <aside class="example-runbook" aria-labelledby="run-title"><p class="eyebrow">Run it locally</p><h2 id="run-title">Try this example.</h2><ol><li><strong>Set up Kujo</strong><p><a href="/language/">Install the runtime</a> before running the command below.</p></li><li><strong>Save the sample</strong><p>Download <a href="/samples/json.kujo" download>json.kujo</a> or copy the code into a file with that name.</p></li><li><strong>Run the command</strong><div class="sample-code"><pre tabindex="0"><code>kujo run json.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></li></ol><a class="example-bundle-link" href="/samples/kujo-examples.tar.gz">Download all samples + fixtures ↓</a></aside>
  </div>
- <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Expected output</h2><p>Compare your terminal output with this recorded result.</p></header><div><div class="sample-code"><pre tabindex="0"><code>=== Kujo JSON Support Demo ===
+ <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Expected output</h2><p>Your terminal should show this output.</p></header><div><div class="sample-code"><pre tabindex="0"><code>=== Kujo JSON Support Demo ===
 
 1. Parsing Configuration
 App name: My App
