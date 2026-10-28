@@ -1,0 +1,277 @@
+[
+  {
+    "path": "assets/images/social/home.jpg",
+    "sha256": "3bb94d1513b7690969037b24ed205cf188c51910abf9be76162d6742659db66e",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples.jpg",
+    "sha256": "cac5d3d7d58dc4847fd0ece9d77f97803f2aec4ae814d1e0f2e5199f4b7bc280",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/language.jpg",
+    "sha256": "5c7d8afaf056466881a71cea8b1e05fddb037fafa9e4a08f8df86ee16449fecd",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/development-workflow.jpg",
+    "sha256": "a4a4ae5134384119ac3a06f2f295e5203ed890d2aaaf2500812da1aaf7fc0b72",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/performance.jpg",
+    "sha256": "10444345feccfad3446394341efd19ac05cb456f72687bbaa58b142bc1deabb2",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-hello-world.jpg",
+    "sha256": "070151f578d6c3f164dcf6a1c94f88d8d4e2a70edee70e8d16a9e1d8ace3fe0a",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-variables.jpg",
+    "sha256": "93cf668626a10b7f13d18e1c27e274ad8e5cecb957824afb593f3ad343011c76",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-functions.jpg",
+    "sha256": "c28247761497bfed0847866e1d4942a84ca7c294aef4a8827feb5febd105b711",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-control-flow.jpg",
+    "sha256": "8c0bacab7301dd44fb97b2ae18113ecb13b7f28afef764e5aa4a37e7089a7d40",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-collections.jpg",
+    "sha256": "2728061cd34034a673faaad23aaac2c2d273a03606172020af9e2383fa083188",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-structs.jpg",
+    "sha256": "94cfc8638338249f4c713c1e028d351f97550f8ee923897904a117e9a171d340",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-pattern-matching.jpg",
+    "sha256": "186065b7ef36bd2085464a099ebd4bfc19947f4a58f07628f61cf5c885d9fd50",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-errors.jpg",
+    "sha256": "7fde86f08665c211e55e2a97841cbe25daead5a2938680a38a5bd0b11c09d852",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-async.jpg",
+    "sha256": "4d5ae2d403a38d7ff793bc65ef4caf8aec06222383043813ae9299983d5b312d",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-channels.jpg",
+    "sha256": "802d1861041815176a35bfb19f636922f412271afe9599c827558be326e56fd8",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-generators.jpg",
+    "sha256": "c9f84ed6fee0dc5933452d00c54be18f07905aa032d12b805730500d2a6055e9",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-json.jpg",
+    "sha256": "5accfd845685b38f5d7c664006654c782d52cec7486e690d7ea141a72e353d39",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-structured-output.jpg",
+    "sha256": "407fd10e93a8e5feff70a3b47650f2324fafd2eb6e878d4142d1ada63597ddea",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-request-hash.jpg",
+    "sha256": "39539dba0692dd1fa00583d8d1c73eeb9c3991075ad056ea0d1133cef76a47cb",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-replay.jpg",
+    "sha256": "a7215f809843dd7cca317e11b67ac894e4d723480aab9e7f1a8e38568de1690f",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-streaming.jpg",
+    "sha256": "b0c7c13128dd0391457617d59b80babfcb302ca968cb0065bd3cf92126c3eead",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-capabilities.jpg",
+    "sha256": "d91e7b4d0ef00167c35c7ac76a7d759cfa757d956dea3726c2c2854525cd2c95",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-tests.jpg",
+    "sha256": "097d824ed8ea377363aeb55726018cda78fac34e91db49b9fd39e651ec754616",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-modules.jpg",
+    "sha256": "4074cdf780744153142be18f472afda497a3cbcd3926ba4bb21db616d5539c66",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-files.jpg",
+    "sha256": "a33ac6c0b1d64ed85a5fb61ff59f16885c7065317e737264f31183518c5596e7",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-http.jpg",
+    "sha256": "cc7cad1e82559d2b5d0249e93bdfe26053c19520b1425811133ea3f0b49130f1",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-string-interpolation.jpg",
+    "sha256": "60fd979def680b53b963881ac720c88bf112f38a8f09e6de85663797f58c93f0",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-split-and-join.jpg",
+    "sha256": "15a904f99df4c963d0f4da22996da269a0ad8c3436cc73c60a6b757d00666c8e",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-url-encoding.jpg",
+    "sha256": "3284ffdcb36bdedcac7d23359772e3bd9f389b28422d2c035ac92e157b13c5a8",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-url-decoding.jpg",
+    "sha256": "cd94bea72af4698370d364758f79dc8f7c8166850fb79439751944dab84a7d99",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-type-conversion.jpg",
+    "sha256": "e76f3ab5643fafb8788ccc7a1db44a12b9d3f5285be1a6f870b4e2926528d10d",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-data-access.jpg",
+    "sha256": "ec1b5d827b15547462d30cb6fb592cd499d58a4b258cf3a2eab11a703e4ce98a",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-array-spread.jpg",
+    "sha256": "c53741e249a7a4dc408cab3b978eb89ca3db7db3356532d2df1f499e2a4cb738",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-map-and-filter.jpg",
+    "sha256": "f96fe7de22af56fbc51ad911e7a255057a30d11aec496f2c1105608329977f3c",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-array-utilities.jpg",
+    "sha256": "c188b45689f148074f7afc2eac5de2165821ae6174a67542bcfdd1cca9d20704",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-nested-dictionaries.jpg",
+    "sha256": "a9efa8a086481719f84f0e955be8f4e895991922b44016b784a6d80277238e8b",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-optional-values.jpg",
+    "sha256": "89ec65ac25f5dd09b1afaa43b2467d47286a7da9e693f8f5f8662e3a2f4fd0b4",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-partial-application.jpg",
+    "sha256": "2aa2772f3d21c53a9be9faf42af011a7c30976074afe1bbffa6bcf7ffbe076fe",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-type-inspection.jpg",
+    "sha256": "0390cb17c724c170c0076bf9a2e8357315b71302329b95ed273136121c73a3f2",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-function-composition.jpg",
+    "sha256": "cebcf0f26adcf7ef0d3dd58fcea1b7e6653c7bae1e72ec5599fff489daf02650",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-result-errors.jpg",
+    "sha256": "7b2085927506d76cc460d637feb1b888b8b5353a312b661b4c605fed11cb0ca0",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-loop-control.jpg",
+    "sha256": "886fcb5c0ea2c703c24fed2120ca97337b7206ae41b1642473795104c43c39c1",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-recursion.jpg",
+    "sha256": "7f80e5a3cbba8a0fe80b38c2510ca74f027d9a48d1c8da9f0b955f29e5d5d53d",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-loop-scope.jpg",
+    "sha256": "480bdfadfd97ffd2e66dbe106d991f69614094deff39f1f00ecb83ec8256d776",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-canonical-json.jpg",
+    "sha256": "351a083d8edd1d63650972558ba7d1a740012dfa722844ac6a43911fb7f186f2",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-csv.jpg",
+    "sha256": "8e841a30ae413c0321e5e212be9e1a6ebcbd665b4cdaea5b02ced8443f30f1bb",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-yaml.jpg",
+    "sha256": "aa0f6aee6975dc1b888c16e527be451db7f894ffdb18263ddbfb3f9ed3f8c978",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-toml.jpg",
+    "sha256": "5eec343ae5805583ab1ae6b1017366dc28d4e830d552db28c8732642976b78f4",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-path-components.jpg",
+    "sha256": "6707057dcc3c4a91ad754a2f0e328832f522c4cad9a0fea4138fa3ea9c9627be",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-log-timestamps.jpg",
+    "sha256": "316a09616fc299adbda58add83f75a514378d9e2988c2f052a3f7b36e72cd228",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-secret-redaction.jpg",
+    "sha256": "3cc12697c8a3b3a7ec6e033b3dd7da36012b760bf9e8359d076032a777a9b4e8",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-password-verification.jpg",
+    "sha256": "f24cada6cd99806db8216db2d7719881a369526bd4b8a2cac4f0d06981453ebf",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-vector-search.jpg",
+    "sha256": "c69ccbce6bf995aba820bfa0b2e9ea44fe7c5654fce101967a57eb97552abe86",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-response-envelope.jpg",
+    "sha256": "c30e65a69426a11079b0854f939671e0b272be220f050423667d8d5996eabd6f",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-token-budget.jpg",
+    "sha256": "1bcfa0e8a4a771f3934d6264b115bd7bc928d438a357b864a860a5a53e499405",
+    "status": 200
+  }
+]

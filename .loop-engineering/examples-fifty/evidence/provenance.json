@@ -1,0 +1,355 @@
+{
+  "commit": "2cfaf185ad03059c89ef4f72fb061074255d00fc",
+  "examples": [
+    {
+      "slug": "hello-world",
+      "source": "examples/00-hello.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "b07c6c29b072dd18e95d23d76965da087faf49518d5eb959b1796cb26684f0b1"
+    },
+    {
+      "slug": "variables",
+      "source": "examples/01-variables.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "0ca50777845bd935ddc1bf43020150504ac6f3885855c2036579be0818ec117e"
+    },
+    {
+      "slug": "functions",
+      "source": "examples/02-functions.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "f8b147878d03e4e7ab92801365c8ef66f47988d2bff0900295a980dc112b97b5"
+    },
+    {
+      "slug": "control-flow",
+      "source": "examples/03-control-flow.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "98b756da1a9e20a74c0b55fe4bc1645d2aae425f64f0e0f6bfaff2096d57a35d"
+    },
+    {
+      "slug": "collections",
+      "source": "examples/04-data.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "26a0903e6d03a26b989c32f43b6cac81492518a6f250dc725fabc3de3f17055a"
+    },
+    {
+      "slug": "structs",
+      "source": "examples/struct_self_methods.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "fa2c4c4c75bf6cc56f772fbd954de6bdbe5d1ab80fe0a271408f9b419dc985ad"
+    },
+    {
+      "slug": "pattern-matching",
+      "source": "examples/pattern_matching.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "91db353c575441ad9481584e495cb15e3a72f7e7af52e20c2bbc5f0f8518f14d"
+    },
+    {
+      "slug": "errors",
+      "source": "examples/error_handling.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "91f00e28cb8e57e44700a3aa49c3712581c1d843291edb2cc1e01482e25b37c3"
+    },
+    {
+      "slug": "async",
+      "source": "examples/simple_async_test.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "84c6d418095c622549e7e3269c99ceec6ef9c18b653e432b52239b4fc4ce2ab2"
+    },
+    {
+      "slug": "channels",
+      "source": "examples/concurrency_channels.kujo",
+      "start": 1,
+      "end": 18,
+      "sha256": "3e52231f8a7c760af6ccbc003235363a748b39fe0fac47bdcc325098a7362ebd"
+    },
+    {
+      "slug": "generators",
+      "source": "tests/test_generators.kujo",
+      "start": 1,
+      "end": 24,
+      "sha256": "bc2161de3d229b2ee90682cbd95079166b0ab7facecb85386f0669c3fdddaaf4"
+    },
+    {
+      "slug": "json",
+      "source": "examples/json_demo.kujo",
+      "start": 1,
+      "end": 16,
+      "sha256": "22e76f60a9527f9a69024fab11a71cd967551d202168fffb60d95af2ee6c3122"
+    },
+    {
+      "slug": "structured-output",
+      "source": "examples/json_schema_validate.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "62b79648298d6f166b49eae8ec4a5484cc9da33f5b52e92c6ec569eed97db3e9"
+    },
+    {
+      "slug": "request-hash",
+      "source": "examples/ai_request_hash.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "511a0a2fb62a92f48b9cb02219d9ce92db9c7684ad3393035d25abe49df7c704"
+    },
+    {
+      "slug": "replay",
+      "source": "examples/ai_replay_cassette.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "65aa42e4264c6f252d6416dec21df18d609f5e6481e3eb0925cff19dfc635aa6"
+    },
+    {
+      "slug": "streaming",
+      "source": "examples/ai_stream_callback.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "6e366b595b6128640059b02d3838658f0a8f28920913c7049327e242fd3e88c3"
+    },
+    {
+      "slug": "capabilities",
+      "source": "examples/ai_egress_allowlist.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "92100f287fe31daa2074f75526514551ee6b0920ac3313883bb6c994d8729d16"
+    },
+    {
+      "slug": "tests",
+      "source": "examples/testing_demo.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "3bf9bd3c7f491ee8a086d08983cad0c5b2480ae43dc75e0159f2e742e6f56987"
+    },
+    {
+      "slug": "modules",
+      "source": "examples/05-modules.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "a82905d440103fcce61de7d57d007465b4f85a04c421b4df0a1ada755a7d967f"
+    },
+    {
+      "slug": "files",
+      "source": "examples/file_operations_demo.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "8941d71b0312c6591865e50298d32b34cfe6dc411a932c1cc68cfc1726ced3c7"
+    },
+    {
+      "slug": "http",
+      "source": "examples/http_server_simple.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "c6ead2595d643ca4d44e30d73d9569a71cb9129f84dbbfcdc3aa72ca6cc2b05d"
+    },
+    {
+      "slug": "string-interpolation",
+      "source": "examples/string_interpolation.kujo",
+      "start": 6,
+      "end": 28,
+      "sha256": "2307a503674413d84e24b998997cf277d26d36300b82596c37ab48b172c8a06f"
+    },
+    {
+      "slug": "split-and-join",
+      "source": "examples/string_functions.kujo",
+      "start": 54,
+      "end": 84,
+      "sha256": "5fb4bf11551f52d4570d9c80058887a6d5dca12ccd6514d853a65e8c774e617d"
+    },
+    {
+      "slug": "url-encoding",
+      "source": "examples/encode_uri_component.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "2654b426244732ea24d0d927a0a2c7e08ba3fc73ef2e45324f115abbc4b6928d"
+    },
+    {
+      "slug": "url-decoding",
+      "source": "examples/decode_uri_component.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "b72e1a173a74eae9803ac0c9e6dbaaaaa7963fa1ec6de0255dd7264e4a8e71d2"
+    },
+    {
+      "slug": "type-conversion",
+      "source": "examples/type_conversion.kujo",
+      "start": 47,
+      "end": 54,
+      "sha256": "cf3a8e81f3c4a0ea9eafafa5e9cbbff7f17ae3e140576881eeffc338697c9895"
+    },
+    {
+      "slug": "data-access",
+      "source": "examples/destructuring_demo.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "e92d8795773555d5aa26054b63f24afae2750542be79882ffc55737ba615275f"
+    },
+    {
+      "slug": "array-spread",
+      "source": "examples/spread_operator_demo.kujo",
+      "start": 6,
+      "end": 20,
+      "sha256": "e4ac25f54e85d0fa50e72b44f1cb564ad688c0914ba462aa9ab757b4e8a51268"
+    },
+    {
+      "slug": "map-and-filter",
+      "source": "examples/array_higher_order.kujo",
+      "start": 4,
+      "end": 76,
+      "sha256": "9b5144c83d8b8baa50a24d3500bf9bc3a977ce47b4619b2e9345c288250ea8f3"
+    },
+    {
+      "slug": "array-utilities",
+      "source": "examples/array_utilities_demo.kujo",
+      "start": 4,
+      "end": 51,
+      "sha256": "adc41075c346875a9d20e582db49643c4ecac3e0fdbaaa4b3626e82c610ebebb"
+    },
+    {
+      "slug": "nested-dictionaries",
+      "source": "examples/dictionaries.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "faca1c95185b0fee5150de2dcae1837f71f59c4e0c8d69c54577f27e6981edc6"
+    },
+    {
+      "slug": "optional-values",
+      "source": "examples/result_option_demo.kujo",
+      "start": 88,
+      "end": 112,
+      "sha256": "a5ace8392985f05f75ad05ad82bf7b1a9d059204960c3267325ba2962a25ae8c"
+    },
+    {
+      "slug": "partial-application",
+      "source": "examples/test_closure_simple.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "385fbef0bd64b69801a4de19f4c485dc62911bdab14487b29fdccfe6ba161b54"
+    },
+    {
+      "slug": "type-inspection",
+      "source": "examples/type_introspection_demo.kujo",
+      "start": 4,
+      "end": 31,
+      "sha256": "cb085aa0bcb44a962acf646ff38332df56e9e7d6a9e18b6e46f5e04ee9a5350d"
+    },
+    {
+      "slug": "function-composition",
+      "source": "examples/method_chaining.kujo",
+      "start": 22,
+      "end": 31,
+      "sha256": "b7a394ceb404ed5e904cd6418622a5d6569f4e6ecf04cf30aaa0a0ab13dd7214"
+    },
+    {
+      "slug": "result-errors",
+      "source": "examples/result_option_demo.kujo",
+      "start": 7,
+      "end": 34,
+      "sha256": "d3bc848d5589f64f410b2ad55d107ac3b8709a4a6225682c182b78097eb4e2df"
+    },
+    {
+      "slug": "loop-control",
+      "source": "examples/loop_control_simple.kujo",
+      "start": 4,
+      "end": 24,
+      "sha256": "fe54c89dc1fe3fe34fe8ecd1bc35664590753264698c43a341c71c5b34988e6d"
+    },
+    {
+      "slug": "recursion",
+      "source": "examples/test_factorial.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "2b449eb836ac68b862c5007c7006cb053276021a9eb97addeda6fdf8dda96da3"
+    },
+    {
+      "slug": "loop-scope",
+      "source": "examples/scoping_simple.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "60b0a1926f6c56272f317f5915a021ccaa23c298d2bf0926c3a161bacd3480ef"
+    },
+    {
+      "slug": "canonical-json",
+      "source": "examples/helper_hlp_015_canonical_json.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "7efd2bc46c478bed2dc410988f4cda616ab7e9ad8ece6632fc2a3370a644fa42"
+    },
+    {
+      "slug": "csv",
+      "source": "examples/csv_demo.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "bfd5e914e4db86f310b7a673ed0bbd98bbd6c536e5593f7b2e7004418c3fd36f"
+    },
+    {
+      "slug": "yaml",
+      "source": "examples/yaml_demo.kujo",
+      "start": 1,
+      "end": 14,
+      "sha256": "d0be433849c2e6346c65d877782b85a3f2b8923ce347a9d013758bc24d6aadd3"
+    },
+    {
+      "slug": "toml",
+      "source": "examples/toml_demo.kujo",
+      "start": 1,
+      "end": 13,
+      "sha256": "4cddf65960a8d9a7f3b8d3a5a33b34fecd6ea4fb10fb259a42feb5cf58564493"
+    },
+    {
+      "slug": "path-components",
+      "source": "examples/path_utilities.kujo",
+      "start": 4,
+      "end": 39,
+      "sha256": "e35c2c291114b43e8bec4a1dd004470f92c3ce35d4c41837238d59b418cffe0f"
+    },
+    {
+      "slug": "log-timestamps",
+      "source": "examples/log_parser_regex.kujo",
+      "start": 7,
+      "end": 33,
+      "sha256": "56b6173fecffdc2073987f79937c88355aac865a7afc6e51f7d067ec79d3308b"
+    },
+    {
+      "slug": "secret-redaction",
+      "source": "examples/secrets_redaction.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "2bca47c7a5c55abebaabdd9489598f3831896c6247bcba75fc5ae0b8b313b33f"
+    },
+    {
+      "slug": "password-verification",
+      "source": "examples/stdlib_crypto.kujo",
+      "start": 14,
+      "end": 23,
+      "sha256": "879d5a1fbfaed46d962a6f3a0f31046899fc100d6c3d7f477b3ea1d61d75c3c3"
+    },
+    {
+      "slug": "vector-search",
+      "source": "examples/vector_math.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "e59799eb9fb1b36680d2514f595df11b3bb08bce193f3f8536a64c4d8c449d7e"
+    },
+    {
+      "slug": "response-envelope",
+      "source": "examples/ai_response_envelope.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "562944e4124fc874805f15740570af6f5aa077183452fed8afdeb304b3c43020"
+    },
+    {
+      "slug": "token-budget",
+      "source": "examples/ai_token_budget.kujo",
+      "start": null,
+      "end": null,
+      "sha256": "52e80c56ee87218923995593eeb1c41d59b8c0cffe297283d16cf6cb7d615ac9"
+    }
+  ]
+}

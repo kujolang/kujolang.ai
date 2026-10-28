@@ -1,0 +1,110 @@
+home  —  Kujo
+    file: public/samples/request-hash.kujo
+examples  —  Kujo language examples
+    file: public/samples/hello-world.kujo
+language  —  Learn Kujo
+    file: public/samples/hello-world.kujo
+development-workflow  —  An inspectable development workflow
+    file: public/samples/development-workflow.yml
+performance  —  Performance evidence
+    file: public/samples/functions.kujo
+examples-hello-world  —  Hello World
+    file: public/samples/hello-world.kujo
+examples-variables  —  Variables and types
+    file: public/samples/variables.kujo
+examples-functions  —  Functions and operators
+    file: public/samples/functions.kujo
+examples-control-flow  —  Control flow
+    file: public/samples/control-flow.kujo
+examples-collections  —  Collections
+    file: public/samples/collections.kujo
+examples-structs  —  Structs and methods
+    file: public/samples/structs.kujo
+examples-pattern-matching  —  Enums and pattern matching
+    file: public/samples/pattern-matching.kujo
+examples-errors  —  Error handling
+    file: public/samples/errors.kujo
+examples-async  —  Async tasks
+    file: public/samples/async.kujo
+examples-channels  —  Channels
+    file: public/samples/channels.kujo
+examples-generators  —  Generators
+    file: public/samples/generators.kujo
+examples-json  —  JSON data
+    file: public/samples/json.kujo
+examples-structured-output  —  Structured output validation
+    file: public/samples/structured-output.kujo
+examples-request-hash  —  Deterministic AI request IDs
+    file: public/samples/request-hash.kujo
+examples-replay  —  AI calls and replay
+    file: public/samples/replay.kujo
+examples-streaming  —  AI streaming
+    file: public/samples/streaming.kujo
+examples-capabilities  —  AI capability restrictions
+    file: public/samples/capabilities.kujo
+examples-tests  —  Tests
+    file: public/samples/tests.kujo
+examples-modules  —  Modules and imports
+    file: public/samples/modules.kujo
+examples-files  —  File operations
+    file: public/samples/files.kujo
+examples-http  —  HTTP and networking
+    file: public/samples/http.kujo
+examples-string-interpolation  —  String interpolation
+    file: public/samples/string-interpolation.kujo
+examples-split-and-join  —  Split and join text
+    file: public/samples/split-and-join.kujo
+examples-url-encoding  —  Encode URL components
+    file: public/samples/url-encoding.kujo
+examples-url-decoding  —  Decode URL components
+    file: public/samples/url-decoding.kujo
+examples-type-conversion  —  Convert text to numbers
+    file: public/samples/type-conversion.kujo
+examples-data-access  —  Read nested data
+    file: public/samples/data-access.kujo
+examples-array-spread  —  Combine arrays
+    file: public/samples/array-spread.kujo
+examples-map-and-filter  —  Map and filter arrays
+    file: public/samples/map-and-filter.kujo
+examples-array-utilities  —  Sort and summarize arrays
+    file: public/samples/array-utilities.kujo
+examples-nested-dictionaries  —  Nested dictionaries
+    file: public/samples/nested-dictionaries.kujo
+examples-optional-values  —  Handle missing values
+    file: public/samples/optional-values.kujo
+examples-partial-application  —  Capture function arguments
+    file: public/samples/partial-application.kujo
+examples-type-inspection  —  Inspect value types
+    file: public/samples/type-inspection.kujo
+examples-function-composition  —  Compose functions
+    file: public/samples/function-composition.kujo
+examples-result-errors  —  Return errors as values
+    file: public/samples/result-errors.kujo
+examples-loop-control  —  Break and continue
+    file: public/samples/loop-control.kujo
+examples-recursion  —  Calculate a factorial
+    file: public/samples/recursion.kujo
+examples-loop-scope  —  Accumulate a total
+    file: public/samples/loop-scope.kujo
+examples-canonical-json  —  Canonical JSON
+    file: public/samples/canonical-json.kujo
+examples-csv  —  Read and write CSV
+    file: public/samples/csv.kujo
+examples-yaml  —  Read and write YAML
+    file: public/samples/yaml.kujo
+examples-toml  —  Read and write TOML
+    file: public/samples/toml.kujo
+examples-path-components  —  Build file paths
+    file: public/samples/path-components.kujo
+examples-log-timestamps  —  Extract log timestamps
+    file: public/samples/log-timestamps.kujo
+examples-secret-redaction  —  Redact secret values
+    file: public/samples/secret-redaction.kujo
+examples-password-verification  —  Verify a password
+    file: public/samples/password-verification.kujo
+examples-vector-search  —  Compare vectors
+    file: public/samples/vector-search.kujo
+examples-response-envelope  —  Inspect AI responses
+    file: public/samples/response-envelope.kujo
+examples-token-budget  —  Fit a token budget
+    file: public/samples/token-budget.kujo

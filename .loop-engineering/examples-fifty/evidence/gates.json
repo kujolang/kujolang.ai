@@ -1,0 +1,23 @@
+{
+  "examples_source": "pass",
+  "examples_runtime": "pass",
+  "node_tests": "pass",
+  "build": "pass",
+  "responsive": "pass",
+  "site_contract": "pass",
+  "generated_output": "pass",
+  "language_contract": "pass",
+  "social": "pass",
+  "comparisons": "pass",
+  "javascript": "pass",
+  "shell": "pass",
+  "audit": "pass",
+  "browser": "pass",
+  "examples_browser": "pass",
+  "guides_source": "pass",
+  "guides_browser": "pass",
+  "seo_scope": "pass",
+  "howl_sources": "pass",
+  "howl_manifest": "pass",
+  "diff": "pass"
+}

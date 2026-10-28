@@ -1,0 +1,2005 @@
+diff --git a/assets/css/style.css b/assets/css/style.css
+index 6d79089..1eb84ee 100644
+--- a/assets/css/style.css
++++ b/assets/css/style.css
+@@ -1746,7 +1746,7 @@
+ .examples-orientation > p:not(.eyebrow) { color: #ccc; margin-bottom: 1.5rem; }
+ .examples-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-block: 1px solid #555; padding-block: 1rem; margin-bottom: 1rem; }
+ .examples-stats p { display: grid; gap: .5rem; }
+-.examples-stats strong { font-size: 3rem; line-height: 1.1; }
++.examples-stats strong { font-family: var(--sk-font-mono); font-size: 3rem; line-height: 1.1; }
+ .examples-stats span { font-size: .7rem; color: #ccc; }
+ .examples-site .example-filter { display: grid; grid-template-columns: 1.5fr 1fr auto; gap: 1.5rem; align-items: end; padding: 1.5rem; margin: 0; background: #eeeee9; border: 1px solid var(--example-line); }
+ .examples-site .example-filter[hidden] { display: none; }
+diff --git a/content/pages/language-examples-hello-world.md b/content/pages/language-examples-hello-world.md
+index 2547349..80c3cac 100644
+--- a/content/pages/language-examples-hello-world.md
++++ b/content/pages/language-examples-hello-world.md
+@@ -21,4 +21,4 @@ print(<span class="syntax-token syntax-string">&quot;Kujo Kujo!&quot;</span>)
+  <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Expected output</h2><p>Your terminal should show this output.</p></header><div><div class="sample-code"><pre tabindex="0"><code>Kujo Kujo!
+ </code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></div></section>
+  <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Executed offline.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/00-hello.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>b07c6c29b072dd18e95d23d76965da087faf49518d5eb959b1796cb26684f0b1</code></p></div></details>
+- <nav class="example-pagination" aria-label="Related examples"><a href="/examples/http/"><span>← Previous example</span><strong>HTTP and networking</strong></a><a href="/examples/variables/"><span>Next example →</span><strong>Variables and types</strong></a></nav>
++ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/token-budget/"><span>← Previous example</span><strong>Fit a token budget</strong></a><a href="/examples/variables/"><span>Next example →</span><strong>Variables and types</strong></a></nav>
+diff --git a/content/pages/language-examples-http.md b/content/pages/language-examples-http.md
+index 800db56..e24e6a4 100644
+--- a/content/pages/language-examples-http.md
++++ b/content/pages/language-examples-http.md
+@@ -37,4 +37,4 @@ server.listen()
+  </div>
+  <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Verification scope</h2><p>We checked the source without running its external integrations.</p></header><div><p class="example-scope">Checked only. We checked the source but did not run the full application.</p></div></section>
+  <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Checked only.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/http_server_simple.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>c6ead2595d643ca4d44e30d73d9569a71cb9129f84dbbfcdc3aa72ca6cc2b05d</code></p></div></details>
+- <nav class="example-pagination" aria-label="Related examples"><a href="/examples/files/"><span>← Previous example</span><strong>File operations</strong></a><a href="/examples/hello-world/"><span>Next example →</span><strong>Hello World</strong></a></nav>
++ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/files/"><span>← Previous example</span><strong>File operations</strong></a><a href="/examples/string-interpolation/"><span>Next example →</span><strong>String interpolation</strong></a></nav>
+diff --git a/content/pages/language-examples.md b/content/pages/language-examples.md
+index 1d6b55e..ffc6543 100644
+--- a/content/pages/language-examples.md
++++ b/content/pages/language-examples.md
+@@ -9,14 +9,15 @@ social_image: /assets/images/social/examples.jpg
+ 
+ 
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Examples</span></nav>
+-<header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>21</strong><span>verified samples</span></p><p><strong>6</strong><span>categories</span></p></div><p>Each example includes code, a command and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
+-<div class="example-filter" hidden><div><label for="example-search">Search examples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option><option>Basics</option><option>Data</option><option>Concurrency</option><option>AI runtime</option><option>Tooling</option><option>Systems</option></select></div><p role="status" id="example-count"></p></div>
+-<nav class="examples-category-nav" aria-label="Example categories"><a href="#category-Basics"><span>01</span>Basics</a><a href="#category-Data"><span>02</span>Data</a><a href="#category-Concurrency"><span>03</span>Concurrency</a><a href="#category-AI-runtime"><span>04</span>AI runtime</a><a href="#category-Tooling"><span>05</span>Tooling</a><a href="#category-Systems"><span>06</span>Systems</a></nav>
+-<section class="example-category-group" id="category-Basics"><header class="example-group-heading"><div><p class="eyebrow">01 / Explore</p><h2>Basics</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/hello-world/">Hello World <span aria-hidden="true">↗</span></a></h3><p>Print your first message.</p><span class="example-card-file">hello-world.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/variables/">Variables and types <span aria-hidden="true">↗</span></a></h3><p>Create variables with let and print their values.</p><span class="example-card-file">variables.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/functions/">Functions and operators <span aria-hidden="true">↗</span></a></h3><p>Add the numbers in an array with a function.</p><span class="example-card-file">functions.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/control-flow/">Control flow <span aria-hidden="true">↗</span></a></h3><p>Choose which code runs with a comparison.</p><span class="example-card-file">control-flow.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/errors/">Error handling <span aria-hidden="true">↗</span></a></h3><p>Catch an error and keep the program running.</p><span class="example-card-file">errors.kujo</span></article></div></section>
+-<section class="example-category-group" id="category-Data"><header class="example-group-heading"><div><p class="eyebrow">02 / Explore</p><h2>Data</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/collections/">Collections <span aria-hidden="true">↗</span></a></h3><p>Build a report from arrays and dictionaries.</p><span class="example-card-file">collections.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/structs/">Structs and methods <span aria-hidden="true">↗</span></a></h3><p>Return a new counter from an instance method.</p><span class="example-card-file">structs.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/pattern-matching/">Enums and pattern matching <span aria-hidden="true">↗</span></a></h3><p>Handle tagged values and Result variants.</p><span class="example-card-file">pattern-matching.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/json/">JSON data <span aria-hidden="true">↗</span></a></h3><p>Read JSON and access nested fields.</p><span class="example-card-file">json.kujo</span></article></div></section>
++<header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>50</strong><span>verified samples</span></p><p><strong>7</strong><span>categories</span></p></div><p>Each example includes code, a command and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
++<div class="example-filter" hidden><div><label for="example-search">Search examples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option><option>Basics</option><option>Data</option><option>Concurrency</option><option>AI runtime</option><option>Tooling</option><option>Systems</option><option>Text</option></select></div><p role="status" id="example-count"></p></div>
++<nav class="examples-category-nav" aria-label="Example categories"><a href="#category-Basics"><span>01</span>Basics</a><a href="#category-Data"><span>02</span>Data</a><a href="#category-Concurrency"><span>03</span>Concurrency</a><a href="#category-AI-runtime"><span>04</span>AI runtime</a><a href="#category-Tooling"><span>05</span>Tooling</a><a href="#category-Systems"><span>06</span>Systems</a><a href="#category-Text"><span>07</span>Text</a></nav>
++<section class="example-category-group" id="category-Basics"><header class="example-group-heading"><div><p class="eyebrow">01 / Explore</p><h2>Basics</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/hello-world/">Hello World <span aria-hidden="true">↗</span></a></h3><p>Print your first message.</p><span class="example-card-file">hello-world.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/variables/">Variables and types <span aria-hidden="true">↗</span></a></h3><p>Create variables with let and print their values.</p><span class="example-card-file">variables.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/functions/">Functions and operators <span aria-hidden="true">↗</span></a></h3><p>Add the numbers in an array with a function.</p><span class="example-card-file">functions.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/control-flow/">Control flow <span aria-hidden="true">↗</span></a></h3><p>Choose which code runs with a comparison.</p><span class="example-card-file">control-flow.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/errors/">Error handling <span aria-hidden="true">↗</span></a></h3><p>Catch an error and keep the program running.</p><span class="example-card-file">errors.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/type-conversion/">Convert text to numbers <span aria-hidden="true">↗</span></a></h3><p>Read an age and a balance from strings.</p><span class="example-card-file">type-conversion.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/optional-values/">Handle missing values <span aria-hidden="true">↗</span></a></h3><p>Look up users and handle both Some and None.</p><span class="example-card-file">optional-values.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/partial-application/">Capture function arguments <span aria-hidden="true">↗</span></a></h3><p>Make a reusable adder by capturing a value in a closure.</p><span class="example-card-file">partial-application.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/type-inspection/">Inspect value types <span aria-hidden="true">↗</span></a></h3><p>Inspect runtime types and check whether a value is a number or string.</p><span class="example-card-file">type-inspection.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/function-composition/">Compose functions <span aria-hidden="true">↗</span></a></h3><p>Pass one function result into the next to calculate a value or format text.</p><span class="example-card-file">function-composition.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/result-errors/">Return errors as values <span aria-hidden="true">↗</span></a></h3><p>Return Ok or Err from division and handle each result.</p><span class="example-card-file">result-errors.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/loop-control/">Break and continue <span aria-hidden="true">↗</span></a></h3><p>Stop a loop early and skip even numbers.</p><span class="example-card-file">loop-control.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/recursion/">Calculate a factorial <span aria-hidden="true">↗</span></a></h3><p>Call a function recursively until it reaches a base case.</p><span class="example-card-file">recursion.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/loop-scope/">Accumulate a total <span aria-hidden="true">↗</span></a></h3><p>Update a running total as a loop visits each number.</p><span class="example-card-file">loop-scope.kujo</span></article></div></section>
++<section class="example-category-group" id="category-Data"><header class="example-group-heading"><div><p class="eyebrow">02 / Explore</p><h2>Data</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/collections/">Collections <span aria-hidden="true">↗</span></a></h3><p>Build a report from arrays and dictionaries.</p><span class="example-card-file">collections.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/structs/">Structs and methods <span aria-hidden="true">↗</span></a></h3><p>Return a new counter from an instance method.</p><span class="example-card-file">structs.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/pattern-matching/">Enums and pattern matching <span aria-hidden="true">↗</span></a></h3><p>Handle tagged values and Result variants.</p><span class="example-card-file">pattern-matching.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/json/">JSON data <span aria-hidden="true">↗</span></a></h3><p>Read JSON and access nested fields.</p><span class="example-card-file">json.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/data-access/">Read nested data <span aria-hidden="true">↗</span></a></h3><p>Read array positions and dictionary fields, then add values from records.</p><span class="example-card-file">data-access.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/array-spread/">Combine arrays <span aria-hidden="true">↗</span></a></h3><p>Combine arrays, insert values and copy a list with spread syntax.</p><span class="example-card-file">array-spread.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/map-and-filter/">Map and filter arrays <span aria-hidden="true">↗</span></a></h3><p>Transform numbers and names, then keep the even numbers.</p><span class="example-card-file">map-and-filter.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/array-utilities/">Sort and summarize arrays <span aria-hidden="true">↗</span></a></h3><p>Sort, reverse, deduplicate and sum a list of numbers.</p><span class="example-card-file">array-utilities.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/nested-dictionaries/">Nested dictionaries <span aria-hidden="true">↗</span></a></h3><p>Store a profile in a dictionary and read its nested fields.</p><span class="example-card-file">nested-dictionaries.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/canonical-json/">Canonical JSON <span aria-hidden="true">↗</span></a></h3><p>Check stable key ordering, pretty printing and JSON round trips.</p><span class="example-card-file">canonical-json.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/csv/">Read and write CSV <span aria-hidden="true">↗</span></a></h3><p>Parse rows, read named fields and check a CSV round trip.</p><span class="example-card-file">csv.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/yaml/">Read and write YAML <span aria-hidden="true">↗</span></a></h3><p>Read a YAML configuration and check its serialized output.</p><span class="example-card-file">yaml.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/toml/">Read and write TOML <span aria-hidden="true">↗</span></a></h3><p>Read server settings from TOML and write them back.</p><span class="example-card-file">toml.kujo</span></article></div></section>
+ <section class="example-category-group" id="category-Concurrency"><header class="example-group-heading"><div><p class="eyebrow">03 / Explore</p><h2>Concurrency</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Concurrency"><span class="example-badge">Executed offline</span><h3><a href="/examples/async/">Async tasks <span aria-hidden="true">↗</span></a></h3><p>Wait for an async function to return a value.</p><span class="example-card-file">async.kujo</span></article><article data-example-card data-category="Concurrency"><span class="example-badge">Executed offline</span><h3><a href="/examples/channels/">Channels <span aria-hidden="true">↗</span></a></h3><p>Send a value through a first-in, first-out channel.</p><span class="example-card-file">channels.kujo</span></article><article data-example-card data-category="Concurrency"><span class="example-badge">Executed offline</span><h3><a href="/examples/generators/">Generators <span aria-hidden="true">↗</span></a></h3><p>Generate values as you need them.</p><span class="example-card-file">generators.kujo</span></article></div></section>
+-<section class="example-category-group" id="category-AI-runtime"><header class="example-group-heading"><div><p class="eyebrow">04 / Explore</p><h2>AI runtime</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/structured-output/">Structured output validation <span aria-hidden="true">↗</span></a></h3><p>Check local data against a schema without calling a model.</p><span class="example-card-file">structured-output.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/request-hash/">Deterministic AI request IDs <span aria-hidden="true">↗</span></a></h3><p>Hash an AI request without including credentials.</p><span class="example-card-file">request-hash.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/replay/">AI calls and replay <span aria-hidden="true">↗</span></a></h3><p>Replay a recorded model response offline.</p><span class="example-card-file">replay.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/streaming/">AI streaming <span aria-hidden="true">↗</span></a></h3><p>Read a recorded response through a streaming callback.</p><span class="example-card-file">streaming.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/capabilities/">AI capability restrictions <span aria-hidden="true">↗</span></a></h3><p>Replay an AI call with explicit permissions.</p><span class="example-card-file">capabilities.kujo</span></article></div></section>
++<section class="example-category-group" id="category-AI-runtime"><header class="example-group-heading"><div><p class="eyebrow">04 / Explore</p><h2>AI runtime</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/structured-output/">Structured output validation <span aria-hidden="true">↗</span></a></h3><p>Check local data against a schema without calling a model.</p><span class="example-card-file">structured-output.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/request-hash/">Deterministic AI request IDs <span aria-hidden="true">↗</span></a></h3><p>Hash an AI request without including credentials.</p><span class="example-card-file">request-hash.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/replay/">AI calls and replay <span aria-hidden="true">↗</span></a></h3><p>Replay a recorded model response offline.</p><span class="example-card-file">replay.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/streaming/">AI streaming <span aria-hidden="true">↗</span></a></h3><p>Read a recorded response through a streaming callback.</p><span class="example-card-file">streaming.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/capabilities/">AI capability restrictions <span aria-hidden="true">↗</span></a></h3><p>Replay an AI call with explicit permissions.</p><span class="example-card-file">capabilities.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/vector-search/">Compare vectors <span aria-hidden="true">↗</span></a></h3><p>Normalize vectors, compare their similarity and rank matches.</p><span class="example-card-file">vector-search.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/response-envelope/">Inspect AI responses <span aria-hidden="true">↗</span></a></h3><p>Replay a model response and inspect a structured error offline.</p><span class="example-card-file">response-envelope.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/token-budget/">Fit a token budget <span aria-hidden="true">↗</span></a></h3><p>Estimate token counts and trim a conversation to fit a budget.</p><span class="example-card-file">token-budget.kujo</span></article></div></section>
+ <section class="example-category-group" id="category-Tooling"><header class="example-group-heading"><div><p class="eyebrow">05 / Explore</p><h2>Tooling</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Tooling"><span class="example-badge">Test runner</span><h3><a href="/examples/tests/">Tests <span aria-hidden="true">↗</span></a></h3><p>Check assertions with the built-in test runner.</p><span class="example-card-file">tests.kujo</span></article><article data-example-card data-category="Tooling"><span class="example-badge">Checked only</span><h3><a href="/examples/modules/">Modules and imports <span aria-hidden="true">↗</span></a></h3><p>Read examples of dotted and named imports.</p><span class="example-card-file">modules.kujo</span></article></div></section>
+-<section class="example-category-group" id="category-Systems"><header class="example-group-heading"><div><p class="eyebrow">06 / Explore</p><h2>Systems</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Systems"><span class="example-badge">Checked only</span><h3><a href="/examples/files/">File operations <span aria-hidden="true">↗</span></a></h3><p>Explore file operations.</p><span class="example-card-file">files.kujo</span></article><article data-example-card data-category="Systems"><span class="example-badge">Checked only</span><h3><a href="/examples/http/">HTTP and networking <span aria-hidden="true">↗</span></a></h3><p>Read a local HTTP server example.</p><span class="example-card-file">http.kujo</span></article></div></section>
++<section class="example-category-group" id="category-Systems"><header class="example-group-heading"><div><p class="eyebrow">06 / Explore</p><h2>Systems</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Systems"><span class="example-badge">Checked only</span><h3><a href="/examples/files/">File operations <span aria-hidden="true">↗</span></a></h3><p>Explore file operations.</p><span class="example-card-file">files.kujo</span></article><article data-example-card data-category="Systems"><span class="example-badge">Checked only</span><h3><a href="/examples/http/">HTTP and networking <span aria-hidden="true">↗</span></a></h3><p>Read a local HTTP server example.</p><span class="example-card-file">http.kujo</span></article><article data-example-card data-category="Systems"><span class="example-badge">Executed offline</span><h3><a href="/examples/path-components/">Build file paths <span aria-hidden="true">↗</span></a></h3><p>Join path segments and extract a directory and filename.</p><span class="example-card-file">path-components.kujo</span></article><article data-example-card data-category="Systems"><span class="example-badge">Executed offline</span><h3><a href="/examples/secret-redaction/">Redact secret values <span aria-hidden="true">↗</span></a></h3><p>Check how secret values appear in printed text and JSON.</p><span class="example-card-file">secret-redaction.kujo</span></article><article data-example-card data-category="Systems"><span class="example-badge">Executed offline</span><h3><a href="/examples/password-verification/">Verify a password <span aria-hidden="true">↗</span></a></h3><p>Hash a sample password and check matching and incorrect input.</p><span class="example-card-file">password-verification.kujo</span></article></div></section>
++<section class="example-category-group" id="category-Text"><header class="example-group-heading"><div><p class="eyebrow">07 / Explore</p><h2>Text</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Text"><span class="example-badge">Executed offline</span><h3><a href="/examples/string-interpolation/">String interpolation <span aria-hidden="true">↗</span></a></h3><p>Put values and calculations into a message.</p><span class="example-card-file">string-interpolation.kujo</span></article><article data-example-card data-category="Text"><span class="example-badge">Executed offline</span><h3><a href="/examples/split-and-join/">Split and join text <span aria-hidden="true">↗</span></a></h3><p>Split text into fields, then join arrays into strings.</p><span class="example-card-file">split-and-join.kujo</span></article><article data-example-card data-category="Text"><span class="example-badge">Executed offline</span><h3><a href="/examples/url-encoding/">Encode URL components <span aria-hidden="true">↗</span></a></h3><p>Encode spaces, punctuation and Unicode for a URL component.</p><span class="example-card-file">url-encoding.kujo</span></article><article data-example-card data-category="Text"><span class="example-badge">Executed offline</span><h3><a href="/examples/url-decoding/">Decode URL components <span aria-hidden="true">↗</span></a></h3><p>Turn percent-encoded URL text back into readable characters.</p><span class="example-card-file">url-decoding.kujo</span></article><article data-example-card data-category="Text"><span class="example-badge">Executed offline</span><h3><a href="/examples/log-timestamps/">Extract log timestamps <span aria-hidden="true">↗</span></a></h3><p>Find timestamps in sample log lines with a regular expression.</p><span class="example-card-file">log-timestamps.kujo</span></article></div></section>
+ <section class="examples-next"><div><p class="eyebrow">Keep building</p><h2>Beyond a single script.</h2><p>Install packages and agent SDKs separately. These guides explain how to use them.</p></div><div><a href="https://docs.kujolang.ai/learn/packages/">Packages with Kennel <span aria-hidden="true">↗</span></a><a href="/ecosystem/agents-sdk/">Agents SDK <span aria-hidden="true">↗</span></a><a href="/ecosystem/ai-sdk/">AI SDK <span aria-hidden="true">↗</span></a></div></section>
+ <details class="example-provenance"><summary>About these samples</summary><div><p>Sources are pinned to <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Each card tells you whether we ran the sample or checked its source. Extract the bundle before running its commands. Each example lists any other requirements.</p></div></details>
+diff --git a/examples/catalog.json b/examples/catalog.json
+index 2fc6993..764dc80 100644
+--- a/examples/catalog.json
++++ b/examples/catalog.json
+@@ -296,6 +296,412 @@
+       "note": "We checked the source only. The server code needs a free local port; the upstream sample skips server startup in automatic VM runs.",
+       "sha256": "c6ead2595d643ca4d44e30d73d9569a71cb9129f84dbbfcdc3aa72ca6cc2b05d",
+       "docs": "https://docs.kujolang.ai/learn/"
++    },
++    {
++      "slug": "string-interpolation",
++      "title": "String interpolation",
++      "category": "Text",
++      "source": "examples/string_interpolation.kujo",
++      "start": 6,
++      "end": 28,
++      "description": "Put values and calculations into a message.",
++      "mode": "run",
++      "note": "",
++      "sha256": "2307a503674413d84e24b998997cf277d26d36300b82596c37ab48b172c8a06f",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "Hello, Alice!\nI am 25 years old\n\n=== Expression Interpolation ===\nThe sum of 10 and 5 is 15\nRectangle: 5 x 3 = 15\n"
++    },
++    {
++      "slug": "split-and-join",
++      "title": "Split and join text",
++      "category": "Text",
++      "source": "examples/string_functions.kujo",
++      "start": 54,
++      "end": 84,
++      "description": "Split text into fields, then join arrays into strings.",
++      "mode": "run",
++      "note": "",
++      "sha256": "5fb4bf11551f52d4570d9c80058887a6d5dca12ccd6514d853a65e8c774e617d",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "5. split()\n  split('apple,banana,cherry,date', ','): [\n    apple\n    banana\n    cherry\n    date\n  ]\n\n  split('/home/user/documents/file.txt', '/'): [\n    home\n    user\n    documents\n    file.txt\n  ]\n\n6. join()\n  join(['Kujo', 'is', 'awesome'], ' '): Kujo is awesome\n  join([1, 2, 3, 4, 5], '-'): 1-2-3-4-5\n"
++    },
++    {
++      "slug": "url-encoding",
++      "title": "Encode URL components",
++      "category": "Text",
++      "source": "examples/encode_uri_component.kujo",
++      "start": null,
++      "end": null,
++      "description": "Encode spaces, punctuation and Unicode for a URL component.",
++      "mode": "run",
++      "note": "",
++      "sha256": "2654b426244732ea24d0d927a0a2c7e08ba3fc73ef2e45324f115abbc4b6928d",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "caf%C3%A9%20%26%20tea\n%E6%9D%B1%E4%BA%AC%2F%E6%A4%9C%E7%B4%A2\n"
++    },
++    {
++      "slug": "url-decoding",
++      "title": "Decode URL components",
++      "category": "Text",
++      "source": "examples/decode_uri_component.kujo",
++      "start": null,
++      "end": null,
++      "description": "Turn percent-encoded URL text back into readable characters.",
++      "mode": "run",
++      "note": "",
++      "sha256": "b72e1a173a74eae9803ac0c9e6dbaaaaa7963fa1ec6de0255dd7264e4a8e71d2",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "caf\u00e9 & tea\n\u6771\u4eac/\u691c\u7d22\n"
++    },
++    {
++      "slug": "type-conversion",
++      "title": "Convert text to numbers",
++      "category": "Basics",
++      "source": "examples/type_conversion.kujo",
++      "start": 47,
++      "end": 54,
++      "description": "Read an age and a balance from strings.",
++      "mode": "run",
++      "note": "",
++      "sha256": "cf3a8e81f3c4a0ea9eafafa5e9cbbff7f17ae3e140576881eeffc338697c9895",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "Age: 25\nBalance: 150.75\nStatus: Adult\n"
++    },
++    {
++      "slug": "data-access",
++      "title": "Read nested data",
++      "category": "Data",
++      "source": "examples/destructuring_demo.kujo",
++      "start": null,
++      "end": null,
++      "description": "Read array positions and dictionary fields, then add values from records.",
++      "mode": "run",
++      "note": "",
++      "sha256": "e92d8795773555d5aa26054b63f24afae2750542be79882ffc55737ba615275f",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "alpha: 1\nbeta: 2\ngamma: 3\n"
++    },
++    {
++      "slug": "array-spread",
++      "title": "Combine arrays",
++      "category": "Data",
++      "source": "examples/spread_operator_demo.kujo",
++      "start": 6,
++      "end": 20,
++      "description": "Combine arrays, insert values and copy a list with spread syntax.",
++      "mode": "run",
++      "note": "",
++      "sha256": "e4ac25f54e85d0fa50e72b44f1cb564ad688c0914ba462aa9ab757b4e8a51268",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "All food: [apple, banana, carrot, broccoli]\nExtended numbers: [1, 2, 3, 4, 5, 6]\nClone: [10, 20, 30]\n"
++    },
++    {
++      "slug": "map-and-filter",
++      "title": "Map and filter arrays",
++      "category": "Data",
++      "source": "examples/array_higher_order.kujo",
++      "start": 4,
++      "end": 76,
++      "description": "Transform numbers and names, then keep the even numbers.",
++      "mode": "run",
++      "note": "",
++      "sha256": "9b5144c83d8b8baa50a24d3500bf9bc3a977ce47b4619b2e9345c288250ea8f3",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "=== Array Higher-Order Functions ===\n\n1. MAP - Transform elements\n   Applies a function to each element, returning a new array\n\n   Square numbers:\n   Input: [1, 2, 3, 4, 5]\n   Output: [1, 4, 9, 16, 25]\n\n   Celsius to Fahrenheit:\n   Celsius: [0, 10, 20, 30, 40]\n   Fahrenheit: [32, 50, 68, 86, 104]\n\n   Capitalize names:\n   Input: [alice, bob, charlie]\n   Output: [ALICE, BOB, CHARLIE]\n\n2. FILTER - Select matching elements\n   Returns only elements where the function returns true\n\n   Even numbers:\n   Input: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n   Output: [2, 4, 6, 8, 10]\n\n"
++    },
++    {
++      "slug": "array-utilities",
++      "title": "Sort and summarize arrays",
++      "category": "Data",
++      "source": "examples/array_utilities_demo.kujo",
++      "start": 4,
++      "end": 51,
++      "description": "Sort, reverse, deduplicate and sum a list of numbers.",
++      "mode": "run",
++      "note": "",
++      "sha256": "adc41075c346875a9d20e582db49643c4ecac3e0fdbaaa4b3626e82c610ebebb",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "=== Array Utilities Demo ===\n\n   Original array: [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]\n\n1. SORT - Arrange in ascending order\n   sort(nums) = [1, 1, 2, 3, 3, 4, 5, 5, 6, 9]\n\n\n2. REVERSE - Reverse the order\n   reverse(nums) = [3, 5, 6, 2, 9, 5, 1, 4, 1, 3]\n\n\n3. UNIQUE - Remove duplicates (preserves order)\n   unique(nums) = [3, 1, 4, 5, 9, 2, 6]\n\n\n4. SUM - Calculate total\n   sum(nums) = 39\n\n"
++    },
++    {
++      "slug": "nested-dictionaries",
++      "title": "Nested dictionaries",
++      "category": "Data",
++      "source": "examples/dictionaries.kujo",
++      "start": null,
++      "end": null,
++      "description": "Store a profile in a dictionary and read its nested fields.",
++      "mode": "run",
++      "note": "",
++      "sha256": "faca1c95185b0fee5150de2dcae1837f71f59c4e0c8d69c54577f27e6981edc6",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "Person: {\"age\": 30, \"city\": Portland, \"name\": Alice}\nName: Alice\nAge: 30\nCity: Portland\nUser: {\"profile\": {\"email\": alice@example.com, \"verified\": 1}, \"username\": alice123}\nUsername: alice123\nProfile: {\"email\": alice@example.com, \"verified\": 1}\n"
++    },
++    {
++      "slug": "optional-values",
++      "title": "Handle missing values",
++      "category": "Basics",
++      "source": "examples/result_option_demo.kujo",
++      "start": 88,
++      "end": 112,
++      "description": "Look up users and handle both Some and None.",
++      "mode": "run",
++      "note": "",
++      "sha256": "a5ace8392985f05f75ad05ad82bf7b1a9d059204960c3267325ba2962a25ae8c",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "User 1: Alice\nUser 2: Bob\nUser 99: Not found\nUser 3: Charlie\n"
++    },
++    {
++      "slug": "partial-application",
++      "title": "Capture function arguments",
++      "category": "Basics",
++      "source": "examples/test_closure_simple.kujo",
++      "start": null,
++      "end": null,
++      "description": "Make a reusable adder by capturing a value in a closure.",
++      "mode": "run",
++      "note": "",
++      "sha256": "385fbef0bd64b69801a4de19f4c485dc62911bdab14487b29fdccfe6ba161b54",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "8\n15\n"
++    },
++    {
++      "slug": "type-inspection",
++      "title": "Inspect value types",
++      "category": "Basics",
++      "source": "examples/type_introspection_demo.kujo",
++      "start": 4,
++      "end": 31,
++      "description": "Inspect runtime types and check whether a value is a number or string.",
++      "mode": "run",
++      "note": "",
++      "sha256": "cb085aa0bcb44a962acf646ff38332df56e9e7d6a9e18b6e46f5e04ee9a5350d",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "\n== Type Introspection Demo ==\n\n== 1. Basic Type Inspection ==\n  type(42): int\n  type(3.14): float\n  type(\"hello\"): string\n  type(true): bool\n  type(0): int\n  type([1, 2, 3]): array\n  type({\"a\": 1}): dict\n\n== 2. Type Predicates ==\n  x: 42\n  is_int(x): true\n  is_float(x): false\n  is_string(x): false\n"
++    },
++    {
++      "slug": "function-composition",
++      "title": "Compose functions",
++      "category": "Basics",
++      "source": "examples/method_chaining.kujo",
++      "start": 22,
++      "end": 31,
++      "description": "Pass one function result into the next to calculate a value or format text.",
++      "mode": "run",
++      "note": "",
++      "sha256": "b7a394ceb404ed5e904cd6418622a5d6569f4e6ecf04cf30aaa0a0ab13dd7214",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "121\nHELLO!\n"
++    },
++    {
++      "slug": "result-errors",
++      "title": "Return errors as values",
++      "category": "Basics",
++      "source": "examples/result_option_demo.kujo",
++      "start": 7,
++      "end": 34,
++      "description": "Return Ok or Err from division and handle each result.",
++      "mode": "run",
++      "note": "",
++      "sha256": "d3bc848d5589f64f410b2ad55d107ac3b8709a4a6225682c182b78097eb4e2df",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "Example 1: Safe Division\n10 / 2 = 5\nError: Cannot divide by zero\n"
++    },
++    {
++      "slug": "loop-control",
++      "title": "Break and continue",
++      "category": "Basics",
++      "source": "examples/loop_control_simple.kujo",
++      "start": 4,
++      "end": 24,
++      "description": "Stop a loop early and skip even numbers.",
++      "mode": "run",
++      "note": "",
++      "sha256": "fe54c89dc1fe3fe34fe8ecd1bc35664590753264698c43a341c71c5b34988e6d",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "=== Break in While Loop ===\n0\n1\n2\n3\n4\nBroke out of loop\n\n=== Continue in While Loop ===\n1\n3\n5\n7\n9\n"
++    },
++    {
++      "slug": "recursion",
++      "title": "Calculate a factorial",
++      "category": "Basics",
++      "source": "examples/test_factorial.kujo",
++      "start": null,
++      "end": null,
++      "description": "Call a function recursively until it reaches a base case.",
++      "mode": "run",
++      "note": "",
++      "sha256": "2b449eb836ac68b862c5007c7006cb053276021a9eb97addeda6fdf8dda96da3",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "factorial(5) = 120\n"
++    },
++    {
++      "slug": "loop-scope",
++      "title": "Accumulate a total",
++      "category": "Basics",
++      "source": "examples/scoping_simple.kujo",
++      "start": null,
++      "end": null,
++      "description": "Update a running total as a loop visits each number.",
++      "mode": "run",
++      "note": "",
++      "sha256": "60b0a1926f6c56272f317f5915a021ccaa23c298d2bf0926c3a161bacd3480ef",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "Current sum: 1\nCurrent sum: 3\nCurrent sum: 6\nCurrent sum: 10\nCurrent sum: 15\nFinal sum: 15\n"
++    },
++    {
++      "slug": "canonical-json",
++      "title": "Canonical JSON",
++      "category": "Data",
++      "source": "examples/helper_hlp_015_canonical_json.kujo",
++      "start": null,
++      "end": null,
++      "description": "Check stable key ordering, pretty printing and JSON round trips.",
++      "mode": "run",
++      "note": "",
++      "sha256": "7efd2bc46c478bed2dc410988f4cda616ab7e9ad8ece6632fc2a3370a644fa42",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "ok: HLP-015 deterministic canonical JSON\n"
++    },
++    {
++      "slug": "csv",
++      "title": "Read and write CSV",
++      "category": "Data",
++      "source": "examples/csv_demo.kujo",
++      "start": null,
++      "end": null,
++      "description": "Parse rows, read named fields and check a CSV round trip.",
++      "mode": "run",
++      "note": "",
++      "sha256": "bfd5e914e4db86f310b7a673ed0bbd98bbd6c536e5593f7b2e7004418c3fd36f",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "parsed rows: [{\"active\": true, \"age\": 28, \"name\": Alice}, {\"active\": false, \"age\": 35, \"name\": Bob}]\ngenerated CSV:\nactive,age,name\ntrue,28,Alice\nfalse,35,Bob\n\n"
++    },
++    {
++      "slug": "yaml",
++      "title": "Read and write YAML",
++      "category": "Data",
++      "source": "examples/yaml_demo.kujo",
++      "start": 1,
++      "end": 14,
++      "description": "Read a YAML configuration and check its serialized output.",
++      "mode": "run",
++      "note": "",
++      "sha256": "d0be433849c2e6346c65d877782b85a3f2b8923ce347a9d013758bc24d6aadd3",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "parsed YAML: {\"features\": [local-first, deterministic], \"kind\": language, \"name\": Kujo}\n"
++    },
++    {
++      "slug": "toml",
++      "title": "Read and write TOML",
++      "category": "Data",
++      "source": "examples/toml_demo.kujo",
++      "start": 1,
++      "end": 13,
++      "description": "Read server settings from TOML and write them back.",
++      "mode": "run",
++      "note": "",
++      "sha256": "4cddf65960a8d9a7f3b8d3a5a33b34fecd6ea4fb10fb259a42feb5cf58564493",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "parsed TOML: {\"server\": {\"host\": 127.0.0.1, \"port\": 8080}, \"title\": Kujo, \"version\": 1.0.0}\n"
++    },
++    {
++      "slug": "path-components",
++      "title": "Build file paths",
++      "category": "Systems",
++      "source": "examples/path_utilities.kujo",
++      "start": 4,
++      "end": 39,
++      "description": "Join path segments and extract a directory and filename.",
++      "mode": "run",
++      "note": "",
++      "sha256": "e35c2c291114b43e8bec4a1dd004470f92c3ce35d4c41837238d59b418cffe0f",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "=== Path Utilities Demo ===\n\n\n1. Building Paths:\n  Home directory: /home/user\n  Documents path: /home/user/Documents/projects/kujo\n  Config path: /home/user/.config/kujo/settings.json\n\n2. Extracting Path Components:\n  Full path: /home/user/projects/kujo/examples/demo.kujo\n  Directory: /home/user/projects/kujo/examples\n  Filename: demo.kujo\n"
++    },
++    {
++      "slug": "log-timestamps",
++      "title": "Extract log timestamps",
++      "category": "Text",
++      "source": "examples/log_parser_regex.kujo",
++      "start": 7,
++      "end": 33,
++      "description": "Find timestamps in sample log lines with a regular expression.",
++      "mode": "run",
++      "note": "",
++      "sha256": "56b6173fecffdc2073987f79937c88355aac865a7afc6e51f7d067ec79d3308b",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "Sample Logs:\n  [2026-01-23 10:15:30] INFO: Application started successfully\n  [2026-01-23 10:15:31] DEBUG: Loading configuration from config.json\n  [2026-01-23 10:15:32] INFO: Connected to database\n  [2026-01-23 10:16:45] WARNING: High memory usage detected: 85%\n  [2026-01-23 10:17:12] ERROR: Failed to connect to API endpoint\n  [2026-01-23 10:17:15] INFO: Retrying connection...\n  [2026-01-23 10:17:18] ERROR: Connection timeout after 3 attempts\n  [2026-01-23 10:18:00] INFO: Fallback mode activated\n\n1. Extracting Timestamps:\n  2026-01-23 10:15:30\n  2026-01-23 10:15:31\n  2026-01-23 10:15:32\n  2026-01-23 10:16:45\n  2026-01-23 10:17:12\n  2026-01-23 10:17:15\n  2026-01-23 10:17:18\n  2026-01-23 10:18:00\n"
++    },
++    {
++      "slug": "secret-redaction",
++      "title": "Redact secret values",
++      "category": "Systems",
++      "source": "examples/secrets_redaction.kujo",
++      "start": null,
++      "end": null,
++      "description": "Check how secret values appear in printed text and JSON.",
++      "mode": "run",
++      "note": "The credentials in this sample are dummy values.",
++      "sha256": "2bca47c7a5c55abebaabdd9489598f3831896c6247bcba75fc5ae0b8b313b33f",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "***\n{\"api_key\":\"***\",\"label\":\"demo\"}\nsecret\ntrue\ntrue\n"
++    },
++    {
++      "slug": "password-verification",
++      "title": "Verify a password",
++      "category": "Systems",
++      "source": "examples/stdlib_crypto.kujo",
++      "start": 14,
++      "end": 23,
++      "description": "Hash a sample password and check matching and incorrect input.",
++      "mode": "run",
++      "note": "The credentials in this sample are dummy values.",
++      "sha256": "879d5a1fbfaed46d962a6f3a0f31046899fc100d6c3d7f477b3ea1d61d75c3c3",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "password verified\nwrong password rejected\n"
++    },
++    {
++      "slug": "vector-search",
++      "title": "Compare vectors",
++      "category": "AI runtime",
++      "source": "examples/vector_math.kujo",
++      "start": null,
++      "end": null,
++      "description": "Normalize vectors, compare their similarity and rank matches.",
++      "mode": "run",
++      "note": "",
++      "sha256": "e59799eb9fb1b36680d2514f595df11b3bb08bce193f3f8536a64c4d8c449d7e",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "dot: 0.8\nnorm: 5\nnormalized: [0.6, 0.8]\ncosine: 0.9701425001453319\ntop: [{\"index\": 0, \"score\": 1}, {\"index\": 2, \"score\": 0.9701425001453319}]\n"
++    },
++    {
++      "slug": "response-envelope",
++      "title": "Inspect AI responses",
++      "category": "AI runtime",
++      "source": "examples/ai_response_envelope.kujo",
++      "start": null,
++      "end": null,
++      "description": "Replay a model response and inspect a structured error offline.",
++      "mode": "run",
++      "note": "Use the samples bundle so the recorded response fixtures are available. Replay makes no live model call.",
++      "sha256": "562944e4124fc874805f15740570af6f5aa077183452fed8afdeb304b3c43020",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "ok_result: Ok({\"finish_reason\": tool_calls, \"headers\": {\"content-type\": application/json}, \"json\": {\"choices\": [{\"finish_reason\": tool_calls, \"message\": {\"content\": hello from cassette, \"tool_calls\": [{\"function\": {\"arguments\": {\"query\":\"kujo\"}, \"name\": lookup}, \"id\": call_1}]}}], \"usage\": {\"completion_tokens\": 5, \"prompt_tokens\": 7, \"total_tokens\": 12}}, \"message\": hello from cassette, \"model\": gpt-replay, \"provider\": mock-provider, \"status\": 200, \"text\": {\"choices\":[{\"finish_reason\":\"tool_calls\",\"message\":{\"content\":\"hello from cassette\",\"tool_calls\":[{\"id\":\"call_1\",\"function\":{\"name\":\"lookup\",\"arguments\":\"{\\\"query\\\":\\\"kujo\\\"}\"}}]}}],\"usage\":{\"prompt_tokens\":7,\"completion_tokens\":5,\"total_tokens\":12}}, \"tool_calls\": [{\"arguments_json\": {\"query\":\"kujo\"}, \"id\": call_1, \"name\": lookup}], \"usage\": {\"completion_tokens\": 5, \"prompt_tokens\": 7, \"total_tokens\": 12}})\nstructured_error: Err({\"body_excerpt\": {\"error\":{\"code\":\"rate_limit_exceeded\",\"message\":\"slow down\"}}, \"http_status\": 429, \"kind\": rate_limited, \"message\": ai_chat failed with HTTP status 429: {\"error\":{\"code\":\"rate_limit_exceeded\",\"message\":\"slow down\"}}, \"provider_code\": rate_limit_exceeded, \"retry_after_ms\": 3000})\n"
++    },
++    {
++      "slug": "token-budget",
++      "title": "Fit a token budget",
++      "category": "AI runtime",
++      "source": "examples/ai_token_budget.kujo",
++      "start": null,
++      "end": null,
++      "description": "Estimate token counts and trim a conversation to fit a budget.",
++      "mode": "run",
++      "note": "Token counts are local estimates, not provider billing records.",
++      "sha256": "52e80c56ee87218923995593eeb1c41d59b8c0cffe297283d16cf6cb7d615ac9",
++      "docs": "https://docs.kujolang.ai/learn/",
++      "expected": "text_tokens: 10\nmessage_tokens: 75\ndropped: 2\nest_tokens: 27\nfits: true\nmessages: [{\"content\": Answer briefly and cite constraints., \"role\": system}, {\"content\": Give me the short version., \"role\": user}]\n"
+     }
+   ]
+ }
+diff --git a/howl-language-pages.json b/howl-language-pages.json
+index 0050ced..c9c216a 100644
+--- a/howl-language-pages.json
++++ b/howl-language-pages.json
+@@ -446,6 +446,499 @@
+       "language": "kujo",
+       "caption": "Read a local HTTP server example.",
+       "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: check. We checked the source only. The server code needs a free local port; the upstream sample skips server startup in automatic VM runs."
++    },
++    {
++      "id": "examples-string-interpolation",
++      "title": "String interpolation",
++      "tagline": "Put values and calculations into a message.",
++      "file": "public/samples/string-interpolation.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/string-interpolation/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Put values and calculations into a message.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "Hello, Alice!\nI am 25 years old\n\n=== Expression Interpolation ===\nThe sum of 10 and 5 is 15\nRectangle: 5 x 3 = 15\n"
++    },
++    {
++      "id": "examples-split-and-join",
++      "title": "Split and join text",
++      "tagline": "Split text into fields, then join arrays into strings.",
++      "file": "public/samples/split-and-join.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/split-and-join/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Split text into fields, then join arrays into strings.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "5. split()\n  split('apple,banana,cherry,date', ','): [\n    apple\n    banana\n    cherry\n    date\n  ]\n\n  split('/home/user/documents/file.txt', '/'): [\n    home\n    user\n    documents\n    file.txt\n  ]\n\n6. join()\n  join(['Kujo', 'is', 'awesome'], ' '): Kujo is awesome\n  join([1, 2, 3, 4, 5], '-'): 1-2-3-4-5\n"
++    },
++    {
++      "id": "examples-url-encoding",
++      "title": "Encode URL components",
++      "tagline": "Encode spaces, punctuation and Unicode for a URL component.",
++      "file": "public/samples/url-encoding.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/url-encoding/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Encode spaces, punctuation and Unicode for a URL component.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "caf%C3%A9%20%26%20tea\n%E6%9D%B1%E4%BA%AC%2F%E6%A4%9C%E7%B4%A2\n"
++    },
++    {
++      "id": "examples-url-decoding",
++      "title": "Decode URL components",
++      "tagline": "Turn percent-encoded URL text back into readable characters.",
++      "file": "public/samples/url-decoding.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/url-decoding/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Turn percent-encoded URL text back into readable characters.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "café & tea\n東京/検索\n"
++    },
++    {
++      "id": "examples-type-conversion",
++      "title": "Convert text to numbers",
++      "tagline": "Read an age and a balance from strings.",
++      "file": "public/samples/type-conversion.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/type-conversion/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Read an age and a balance from strings.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "Age: 25\nBalance: 150.75\nStatus: Adult\n"
++    },
++    {
++      "id": "examples-data-access",
++      "title": "Read nested data",
++      "tagline": "Read array positions and dictionary fields, then add values from records.",
++      "file": "public/samples/data-access.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/data-access/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Read array positions and dictionary fields, then add values from records.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "alpha: 1\nbeta: 2\ngamma: 3\n"
++    },
++    {
++      "id": "examples-array-spread",
++      "title": "Combine arrays",
++      "tagline": "Combine arrays, insert values and copy a list with spread syntax.",
++      "file": "public/samples/array-spread.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/array-spread/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Combine arrays, insert values and copy a list with spread syntax.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "All food: [apple, banana, carrot, broccoli]\nExtended numbers: [1, 2, 3, 4, 5, 6]\nClone: [10, 20, 30]\n"
++    },
++    {
++      "id": "examples-map-and-filter",
++      "title": "Map and filter arrays",
++      "tagline": "Transform numbers and names, then keep the even numbers.",
++      "file": "public/samples/map-and-filter.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/map-and-filter/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Transform numbers and names, then keep the even numbers.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "=== Array Higher-Order Functions ===\n\n1. MAP - Transform elements\n   Applies a function to each element, returning a new array\n\n   Square numbers:\n   Input: [1, 2, 3, 4, 5]\n   Output: [1, 4, 9, 16, 25]\n\n   Celsius to Fahrenheit:\n   Celsius: [0, 10, 20, 30, 40]\n   Fahrenheit: [32, 50, 68, 86, 104]\n\n   Capitalize names:\n   Input: [alice, bob, charlie]\n   Output: [ALICE, BOB, CHARLIE]\n\n2. FILTER - Select matching elements\n   Returns only elements where the function returns true\n\n   Even numbers:\n   Input: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n   Output: [2, 4, 6, 8, 10]\n\n"
++    },
++    {
++      "id": "examples-array-utilities",
++      "title": "Sort and summarize arrays",
++      "tagline": "Sort, reverse, deduplicate and sum a list of numbers.",
++      "file": "public/samples/array-utilities.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/array-utilities/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Sort, reverse, deduplicate and sum a list of numbers.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "=== Array Utilities Demo ===\n\n   Original array: [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]\n\n1. SORT - Arrange in ascending order\n   sort(nums) = [1, 1, 2, 3, 3, 4, 5, 5, 6, 9]\n\n\n2. REVERSE - Reverse the order\n   reverse(nums) = [3, 5, 6, 2, 9, 5, 1, 4, 1, 3]\n\n\n3. UNIQUE - Remove duplicates (preserves order)\n   unique(nums) = [3, 1, 4, 5, 9, 2, 6]\n\n\n4. SUM - Calculate total\n   sum(nums) = 39\n\n"
++    },
++    {
++      "id": "examples-nested-dictionaries",
++      "title": "Nested dictionaries",
++      "tagline": "Store a profile in a dictionary and read its nested fields.",
++      "file": "public/samples/nested-dictionaries.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/nested-dictionaries/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Store a profile in a dictionary and read its nested fields.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "Person: {\"age\": 30, \"city\": Portland, \"name\": Alice}\nName: Alice\nAge: 30\nCity: Portland\nUser: {\"profile\": {\"email\": alice@example.com, \"verified\": 1}, \"username\": alice123}\nUsername: alice123\nProfile: {\"email\": alice@example.com, \"verified\": 1}\n"
++    },
++    {
++      "id": "examples-optional-values",
++      "title": "Handle missing values",
++      "tagline": "Look up users and handle both Some and None.",
++      "file": "public/samples/optional-values.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/optional-values/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Look up users and handle both Some and None.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "User 1: Alice\nUser 2: Bob\nUser 99: Not found\nUser 3: Charlie\n"
++    },
++    {
++      "id": "examples-partial-application",
++      "title": "Capture function arguments",
++      "tagline": "Make a reusable adder by capturing a value in a closure.",
++      "file": "public/samples/partial-application.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/partial-application/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Make a reusable adder by capturing a value in a closure.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "8\n15\n"
++    },
++    {
++      "id": "examples-type-inspection",
++      "title": "Inspect value types",
++      "tagline": "Inspect runtime types and check whether a value is a number or string.",
++      "file": "public/samples/type-inspection.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/type-inspection/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Inspect runtime types and check whether a value is a number or string.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "\n== Type Introspection Demo ==\n\n== 1. Basic Type Inspection ==\n  type(42): int\n  type(3.14): float\n  type(\"hello\"): string\n  type(true): bool\n  type(0): int\n  type([1, 2, 3]): array\n  type({\"a\": 1}): dict\n\n== 2. Type Predicates ==\n  x: 42\n  is_int(x): true\n  is_float(x): false\n  is_string(x): false\n"
++    },
++    {
++      "id": "examples-function-composition",
++      "title": "Compose functions",
++      "tagline": "Pass one function result into the next to calculate a value or format text.",
++      "file": "public/samples/function-composition.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/function-composition/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Pass one function result into the next to calculate a value or format text.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "121\nHELLO!\n"
++    },
++    {
++      "id": "examples-result-errors",
++      "title": "Return errors as values",
++      "tagline": "Return Ok or Err from division and handle each result.",
++      "file": "public/samples/result-errors.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/result-errors/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Return Ok or Err from division and handle each result.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "Example 1: Safe Division\n10 / 2 = 5\nError: Cannot divide by zero\n"
++    },
++    {
++      "id": "examples-loop-control",
++      "title": "Break and continue",
++      "tagline": "Stop a loop early and skip even numbers.",
++      "file": "public/samples/loop-control.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/loop-control/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Stop a loop early and skip even numbers.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "=== Break in While Loop ===\n0\n1\n2\n3\n4\nBroke out of loop\n\n=== Continue in While Loop ===\n1\n3\n5\n7\n9\n"
++    },
++    {
++      "id": "examples-recursion",
++      "title": "Calculate a factorial",
++      "tagline": "Call a function recursively until it reaches a base case.",
++      "file": "public/samples/recursion.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/recursion/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Call a function recursively until it reaches a base case.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "factorial(5) = 120\n"
++    },
++    {
++      "id": "examples-loop-scope",
++      "title": "Accumulate a total",
++      "tagline": "Update a running total as a loop visits each number.",
++      "file": "public/samples/loop-scope.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/loop-scope/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Update a running total as a loop visits each number.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "Current sum: 1\nCurrent sum: 3\nCurrent sum: 6\nCurrent sum: 10\nCurrent sum: 15\nFinal sum: 15\n"
++    },
++    {
++      "id": "examples-canonical-json",
++      "title": "Canonical JSON",
++      "tagline": "Check stable key ordering, pretty printing and JSON round trips.",
++      "file": "public/samples/canonical-json.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/canonical-json/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Check stable key ordering, pretty printing and JSON round trips.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "ok: HLP-015 deterministic canonical JSON\n"
++    },
++    {
++      "id": "examples-csv",
++      "title": "Read and write CSV",
++      "tagline": "Parse rows, read named fields and check a CSV round trip.",
++      "file": "public/samples/csv.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/csv/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Parse rows, read named fields and check a CSV round trip.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "parsed rows: [{\"active\": true, \"age\": 28, \"name\": Alice}, {\"active\": false, \"age\": 35, \"name\": Bob}]\ngenerated CSV:\nactive,age,name\ntrue,28,Alice\nfalse,35,Bob\n\n"
++    },
++    {
++      "id": "examples-yaml",
++      "title": "Read and write YAML",
++      "tagline": "Read a YAML configuration and check its serialized output.",
++      "file": "public/samples/yaml.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/yaml/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Read a YAML configuration and check its serialized output.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "parsed YAML: {\"features\": [local-first, deterministic], \"kind\": language, \"name\": Kujo}\n"
++    },
++    {
++      "id": "examples-toml",
++      "title": "Read and write TOML",
++      "tagline": "Read server settings from TOML and write them back.",
++      "file": "public/samples/toml.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/toml/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Read server settings from TOML and write them back.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "parsed TOML: {\"server\": {\"host\": 127.0.0.1, \"port\": 8080}, \"title\": Kujo, \"version\": 1.0.0}\n"
++    },
++    {
++      "id": "examples-path-components",
++      "title": "Build file paths",
++      "tagline": "Join path segments and extract a directory and filename.",
++      "file": "public/samples/path-components.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/path-components/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Join path segments and extract a directory and filename.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "=== Path Utilities Demo ===\n\n\n1. Building Paths:\n  Home directory: /home/user\n  Documents path: /home/user/Documents/projects/kujo\n  Config path: /home/user/.config/kujo/settings.json\n\n2. Extracting Path Components:\n  Full path: /home/user/projects/kujo/examples/demo.kujo\n  Directory: /home/user/projects/kujo/examples\n  Filename: demo.kujo\n"
++    },
++    {
++      "id": "examples-log-timestamps",
++      "title": "Extract log timestamps",
++      "tagline": "Find timestamps in sample log lines with a regular expression.",
++      "file": "public/samples/log-timestamps.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/log-timestamps/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Find timestamps in sample log lines with a regular expression.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "Sample Logs:\n  [2026-01-23 10:15:30] INFO: Application started successfully\n  [2026-01-23 10:15:31] DEBUG: Loading configuration from config.json\n  [2026-01-23 10:15:32] INFO: Connected to database\n  [2026-01-23 10:16:45] WARNING: High memory usage detected: 85%\n  [2026-01-23 10:17:12] ERROR: Failed to connect to API endpoint\n  [2026-01-23 10:17:15] INFO: Retrying connection...\n  [2026-01-23 10:17:18] ERROR: Connection timeout after 3 attempts\n  [2026-01-23 10:18:00] INFO: Fallback mode activated\n\n1. Extracting Timestamps:\n  2026-01-23 10:15:30\n  2026-01-23 10:15:31\n  2026-01-23 10:15:32\n  2026-01-23 10:16:45\n  2026-01-23 10:17:12\n  2026-01-23 10:17:15\n  2026-01-23 10:17:18\n  2026-01-23 10:18:00\n"
++    },
++    {
++      "id": "examples-secret-redaction",
++      "title": "Redact secret values",
++      "tagline": "Check how secret values appear in printed text and JSON.",
++      "file": "public/samples/secret-redaction.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/secret-redaction/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Check how secret values appear in printed text and JSON.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. The credentials in this sample are dummy values.",
++      "expected_output": "***\n{\"api_key\":\"***\",\"label\":\"demo\"}\nsecret\ntrue\ntrue\n"
++    },
++    {
++      "id": "examples-password-verification",
++      "title": "Verify a password",
++      "tagline": "Hash a sample password and check matching and incorrect input.",
++      "file": "public/samples/password-verification.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/password-verification/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Hash a sample password and check matching and incorrect input.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. The credentials in this sample are dummy values.",
++      "expected_output": "password verified\nwrong password rejected\n"
++    },
++    {
++      "id": "examples-vector-search",
++      "title": "Compare vectors",
++      "tagline": "Normalize vectors, compare their similarity and rank matches.",
++      "file": "public/samples/vector-search.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/vector-search/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Normalize vectors, compare their similarity and rank matches.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "dot: 0.8\nnorm: 5\nnormalized: [0.6, 0.8]\ncosine: 0.9701425001453319\ntop: [{\"index\": 0, \"score\": 1}, {\"index\": 2, \"score\": 0.9701425001453319}]\n"
++    },
++    {
++      "id": "examples-response-envelope",
++      "title": "Inspect AI responses",
++      "tagline": "Replay a model response and inspect a structured error offline.",
++      "file": "public/samples/response-envelope.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/response-envelope/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Replay a model response and inspect a structured error offline.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. Use the samples bundle so the recorded response fixtures are available. Replay makes no live model call.",
++      "expected_output": "ok_result: Ok({\"finish_reason\": tool_calls, \"headers\": {\"content-type\": application/json}, \"json\": {\"choices\": [{\"finish_reason\": tool_calls, \"message\": {\"content\": hello from cassette, \"tool_calls\": [{\"function\": {\"arguments\": {\"query\":\"kujo\"}, \"name\": lookup}, \"id\": call_1}]}}], \"usage\": {\"completion_tokens\": 5, \"prompt_tokens\": 7, \"total_tokens\": 12}}, \"message\": hello from cassette, \"model\": gpt-replay, \"provider\": mock-provider, \"status\": 200, \"text\": {\"choices\":[{\"finish_reason\":\"tool_calls\",\"message\":{\"content\":\"hello from cassette\",\"tool_calls\":[{\"id\":\"call_1\",\"function\":{\"name\":\"lookup\",\"arguments\":\"{\\\"query\\\":\\\"kujo\\\"}\"}}]}}],\"usage\":{\"prompt_tokens\":7,\"completion_tokens\":5,\"total_tokens\":12}}, \"tool_calls\": [{\"arguments_json\": {\"query\":\"kujo\"}, \"id\": call_1, \"name\": lookup}], \"usage\": {\"completion_tokens\": 5, \"prompt_tokens\": 7, \"total_tokens\": 12}})\nstructured_error: Err({\"body_excerpt\": {\"error\":{\"code\":\"rate_limit_exceeded\",\"message\":\"slow down\"}}, \"http_status\": 429, \"kind\": rate_limited, \"message\": ai_chat failed with HTTP status 429: {\"error\":{\"code\":\"rate_limit_exceeded\",\"message\":\"slow down\"}}, \"provider_code\": rate_limit_exceeded, \"retry_after_ms\": 3000})\n"
++    },
++    {
++      "id": "examples-token-budget",
++      "title": "Fit a token budget",
++      "tagline": "Estimate token counts and trim a conversation to fit a budget.",
++      "file": "public/samples/token-budget.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/token-budget/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Estimate token counts and trim a conversation to fit a budget.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. Token counts are local estimates, not provider billing records.",
++      "expected_output": "text_tokens: 10\nmessage_tokens: 75\ndropped: 2\nest_tokens: 27\nfits: true\nmessages: [{\"content\": Answer briefly and cite constraints., \"role\": system}, {\"content\": Give me the short version., \"role\": user}]\n"
+     }
+   ]
+ }
+diff --git a/howl-social.json b/howl-social.json
+index 8590576..9ee2f08 100644
+--- a/howl-social.json
++++ b/howl-social.json
+@@ -3761,6 +3761,499 @@
+       "caption": "Reproduce the measurement and understand its limits.",
+       "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
+       "expected_output": "total: 42\n"
++    },
++    {
++      "id": "examples-string-interpolation",
++      "title": "String interpolation",
++      "tagline": "Put values and calculations into a message.",
++      "file": "public/samples/string-interpolation.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/string-interpolation/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Put values and calculations into a message.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "Hello, Alice!\nI am 25 years old\n\n=== Expression Interpolation ===\nThe sum of 10 and 5 is 15\nRectangle: 5 x 3 = 15\n"
++    },
++    {
++      "id": "examples-split-and-join",
++      "title": "Split and join text",
++      "tagline": "Split text into fields, then join arrays into strings.",
++      "file": "public/samples/split-and-join.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/split-and-join/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Split text into fields, then join arrays into strings.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "5. split()\n  split('apple,banana,cherry,date', ','): [\n    apple\n    banana\n    cherry\n    date\n  ]\n\n  split('/home/user/documents/file.txt', '/'): [\n    home\n    user\n    documents\n    file.txt\n  ]\n\n6. join()\n  join(['Kujo', 'is', 'awesome'], ' '): Kujo is awesome\n  join([1, 2, 3, 4, 5], '-'): 1-2-3-4-5\n"
++    },
++    {
++      "id": "examples-url-encoding",
++      "title": "Encode URL components",
++      "tagline": "Encode spaces, punctuation and Unicode for a URL component.",
++      "file": "public/samples/url-encoding.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/url-encoding/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Encode spaces, punctuation and Unicode for a URL component.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "caf%C3%A9%20%26%20tea\n%E6%9D%B1%E4%BA%AC%2F%E6%A4%9C%E7%B4%A2\n"
++    },
++    {
++      "id": "examples-url-decoding",
++      "title": "Decode URL components",
++      "tagline": "Turn percent-encoded URL text back into readable characters.",
++      "file": "public/samples/url-decoding.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/url-decoding/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Turn percent-encoded URL text back into readable characters.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "café & tea\n東京/検索\n"
++    },
++    {
++      "id": "examples-type-conversion",
++      "title": "Convert text to numbers",
++      "tagline": "Read an age and a balance from strings.",
++      "file": "public/samples/type-conversion.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/type-conversion/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Read an age and a balance from strings.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "Age: 25\nBalance: 150.75\nStatus: Adult\n"
++    },
++    {
++      "id": "examples-data-access",
++      "title": "Read nested data",
++      "tagline": "Read array positions and dictionary fields, then add values from records.",
++      "file": "public/samples/data-access.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/data-access/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Read array positions and dictionary fields, then add values from records.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "alpha: 1\nbeta: 2\ngamma: 3\n"
++    },
++    {
++      "id": "examples-array-spread",
++      "title": "Combine arrays",
++      "tagline": "Combine arrays, insert values and copy a list with spread syntax.",
++      "file": "public/samples/array-spread.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/array-spread/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Combine arrays, insert values and copy a list with spread syntax.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "All food: [apple, banana, carrot, broccoli]\nExtended numbers: [1, 2, 3, 4, 5, 6]\nClone: [10, 20, 30]\n"
++    },
++    {
++      "id": "examples-map-and-filter",
++      "title": "Map and filter arrays",
++      "tagline": "Transform numbers and names, then keep the even numbers.",
++      "file": "public/samples/map-and-filter.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/map-and-filter/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Transform numbers and names, then keep the even numbers.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "=== Array Higher-Order Functions ===\n\n1. MAP - Transform elements\n   Applies a function to each element, returning a new array\n\n   Square numbers:\n   Input: [1, 2, 3, 4, 5]\n   Output: [1, 4, 9, 16, 25]\n\n   Celsius to Fahrenheit:\n   Celsius: [0, 10, 20, 30, 40]\n   Fahrenheit: [32, 50, 68, 86, 104]\n\n   Capitalize names:\n   Input: [alice, bob, charlie]\n   Output: [ALICE, BOB, CHARLIE]\n\n2. FILTER - Select matching elements\n   Returns only elements where the function returns true\n\n   Even numbers:\n   Input: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n   Output: [2, 4, 6, 8, 10]\n\n"
++    },
++    {
++      "id": "examples-array-utilities",
++      "title": "Sort and summarize arrays",
++      "tagline": "Sort, reverse, deduplicate and sum a list of numbers.",
++      "file": "public/samples/array-utilities.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/array-utilities/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Sort, reverse, deduplicate and sum a list of numbers.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "=== Array Utilities Demo ===\n\n   Original array: [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]\n\n1. SORT - Arrange in ascending order\n   sort(nums) = [1, 1, 2, 3, 3, 4, 5, 5, 6, 9]\n\n\n2. REVERSE - Reverse the order\n   reverse(nums) = [3, 5, 6, 2, 9, 5, 1, 4, 1, 3]\n\n\n3. UNIQUE - Remove duplicates (preserves order)\n   unique(nums) = [3, 1, 4, 5, 9, 2, 6]\n\n\n4. SUM - Calculate total\n   sum(nums) = 39\n\n"
++    },
++    {
++      "id": "examples-nested-dictionaries",
++      "title": "Nested dictionaries",
++      "tagline": "Store a profile in a dictionary and read its nested fields.",
++      "file": "public/samples/nested-dictionaries.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/nested-dictionaries/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Store a profile in a dictionary and read its nested fields.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "Person: {\"age\": 30, \"city\": Portland, \"name\": Alice}\nName: Alice\nAge: 30\nCity: Portland\nUser: {\"profile\": {\"email\": alice@example.com, \"verified\": 1}, \"username\": alice123}\nUsername: alice123\nProfile: {\"email\": alice@example.com, \"verified\": 1}\n"
++    },
++    {
++      "id": "examples-optional-values",
++      "title": "Handle missing values",
++      "tagline": "Look up users and handle both Some and None.",
++      "file": "public/samples/optional-values.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/optional-values/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Look up users and handle both Some and None.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "User 1: Alice\nUser 2: Bob\nUser 99: Not found\nUser 3: Charlie\n"
++    },
++    {
++      "id": "examples-partial-application",
++      "title": "Capture function arguments",
++      "tagline": "Make a reusable adder by capturing a value in a closure.",
++      "file": "public/samples/partial-application.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/partial-application/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Make a reusable adder by capturing a value in a closure.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "8\n15\n"
++    },
++    {
++      "id": "examples-type-inspection",
++      "title": "Inspect value types",
++      "tagline": "Inspect runtime types and check whether a value is a number or string.",
++      "file": "public/samples/type-inspection.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/type-inspection/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Inspect runtime types and check whether a value is a number or string.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "\n== Type Introspection Demo ==\n\n== 1. Basic Type Inspection ==\n  type(42): int\n  type(3.14): float\n  type(\"hello\"): string\n  type(true): bool\n  type(0): int\n  type([1, 2, 3]): array\n  type({\"a\": 1}): dict\n\n== 2. Type Predicates ==\n  x: 42\n  is_int(x): true\n  is_float(x): false\n  is_string(x): false\n"
++    },
++    {
++      "id": "examples-function-composition",
++      "title": "Compose functions",
++      "tagline": "Pass one function result into the next to calculate a value or format text.",
++      "file": "public/samples/function-composition.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/function-composition/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Pass one function result into the next to calculate a value or format text.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "121\nHELLO!\n"
++    },
++    {
++      "id": "examples-result-errors",
++      "title": "Return errors as values",
++      "tagline": "Return Ok or Err from division and handle each result.",
++      "file": "public/samples/result-errors.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/result-errors/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Return Ok or Err from division and handle each result.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "Example 1: Safe Division\n10 / 2 = 5\nError: Cannot divide by zero\n"
++    },
++    {
++      "id": "examples-loop-control",
++      "title": "Break and continue",
++      "tagline": "Stop a loop early and skip even numbers.",
++      "file": "public/samples/loop-control.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/loop-control/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Stop a loop early and skip even numbers.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "=== Break in While Loop ===\n0\n1\n2\n3\n4\nBroke out of loop\n\n=== Continue in While Loop ===\n1\n3\n5\n7\n9\n"
++    },
++    {
++      "id": "examples-recursion",
++      "title": "Calculate a factorial",
++      "tagline": "Call a function recursively until it reaches a base case.",
++      "file": "public/samples/recursion.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/recursion/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Call a function recursively until it reaches a base case.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "factorial(5) = 120\n"
++    },
++    {
++      "id": "examples-loop-scope",
++      "title": "Accumulate a total",
++      "tagline": "Update a running total as a loop visits each number.",
++      "file": "public/samples/loop-scope.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/loop-scope/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Update a running total as a loop visits each number.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "Current sum: 1\nCurrent sum: 3\nCurrent sum: 6\nCurrent sum: 10\nCurrent sum: 15\nFinal sum: 15\n"
++    },
++    {
++      "id": "examples-canonical-json",
++      "title": "Canonical JSON",
++      "tagline": "Check stable key ordering, pretty printing and JSON round trips.",
++      "file": "public/samples/canonical-json.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/canonical-json/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Check stable key ordering, pretty printing and JSON round trips.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "ok: HLP-015 deterministic canonical JSON\n"
++    },
++    {
++      "id": "examples-csv",
++      "title": "Read and write CSV",
++      "tagline": "Parse rows, read named fields and check a CSV round trip.",
++      "file": "public/samples/csv.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/csv/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Parse rows, read named fields and check a CSV round trip.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "parsed rows: [{\"active\": true, \"age\": 28, \"name\": Alice}, {\"active\": false, \"age\": 35, \"name\": Bob}]\ngenerated CSV:\nactive,age,name\ntrue,28,Alice\nfalse,35,Bob\n\n"
++    },
++    {
++      "id": "examples-yaml",
++      "title": "Read and write YAML",
++      "tagline": "Read a YAML configuration and check its serialized output.",
++      "file": "public/samples/yaml.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/yaml/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Read a YAML configuration and check its serialized output.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "parsed YAML: {\"features\": [local-first, deterministic], \"kind\": language, \"name\": Kujo}\n"
++    },
++    {
++      "id": "examples-toml",
++      "title": "Read and write TOML",
++      "tagline": "Read server settings from TOML and write them back.",
++      "file": "public/samples/toml.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/toml/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Read server settings from TOML and write them back.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "parsed TOML: {\"server\": {\"host\": 127.0.0.1, \"port\": 8080}, \"title\": Kujo, \"version\": 1.0.0}\n"
++    },
++    {
++      "id": "examples-path-components",
++      "title": "Build file paths",
++      "tagline": "Join path segments and extract a directory and filename.",
++      "file": "public/samples/path-components.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/path-components/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Join path segments and extract a directory and filename.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "=== Path Utilities Demo ===\n\n\n1. Building Paths:\n  Home directory: /home/user\n  Documents path: /home/user/Documents/projects/kujo\n  Config path: /home/user/.config/kujo/settings.json\n\n2. Extracting Path Components:\n  Full path: /home/user/projects/kujo/examples/demo.kujo\n  Directory: /home/user/projects/kujo/examples\n  Filename: demo.kujo\n"
++    },
++    {
++      "id": "examples-log-timestamps",
++      "title": "Extract log timestamps",
++      "tagline": "Find timestamps in sample log lines with a regular expression.",
++      "file": "public/samples/log-timestamps.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/log-timestamps/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Find timestamps in sample log lines with a regular expression.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "Sample Logs:\n  [2026-01-23 10:15:30] INFO: Application started successfully\n  [2026-01-23 10:15:31] DEBUG: Loading configuration from config.json\n  [2026-01-23 10:15:32] INFO: Connected to database\n  [2026-01-23 10:16:45] WARNING: High memory usage detected: 85%\n  [2026-01-23 10:17:12] ERROR: Failed to connect to API endpoint\n  [2026-01-23 10:17:15] INFO: Retrying connection...\n  [2026-01-23 10:17:18] ERROR: Connection timeout after 3 attempts\n  [2026-01-23 10:18:00] INFO: Fallback mode activated\n\n1. Extracting Timestamps:\n  2026-01-23 10:15:30\n  2026-01-23 10:15:31\n  2026-01-23 10:15:32\n  2026-01-23 10:16:45\n  2026-01-23 10:17:12\n  2026-01-23 10:17:15\n  2026-01-23 10:17:18\n  2026-01-23 10:18:00\n"
++    },
++    {
++      "id": "examples-secret-redaction",
++      "title": "Redact secret values",
++      "tagline": "Check how secret values appear in printed text and JSON.",
++      "file": "public/samples/secret-redaction.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/secret-redaction/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Check how secret values appear in printed text and JSON.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. The credentials in this sample are dummy values.",
++      "expected_output": "***\n{\"api_key\":\"***\",\"label\":\"demo\"}\nsecret\ntrue\ntrue\n"
++    },
++    {
++      "id": "examples-password-verification",
++      "title": "Verify a password",
++      "tagline": "Hash a sample password and check matching and incorrect input.",
++      "file": "public/samples/password-verification.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/password-verification/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Hash a sample password and check matching and incorrect input.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. The credentials in this sample are dummy values.",
++      "expected_output": "password verified\nwrong password rejected\n"
++    },
++    {
++      "id": "examples-vector-search",
++      "title": "Compare vectors",
++      "tagline": "Normalize vectors, compare their similarity and rank matches.",
++      "file": "public/samples/vector-search.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/vector-search/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Normalize vectors, compare their similarity and rank matches.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
++      "expected_output": "dot: 0.8\nnorm: 5\nnormalized: [0.6, 0.8]\ncosine: 0.9701425001453319\ntop: [{\"index\": 0, \"score\": 1}, {\"index\": 2, \"score\": 0.9701425001453319}]\n"
++    },
++    {
++      "id": "examples-response-envelope",
++      "title": "Inspect AI responses",
++      "tagline": "Replay a model response and inspect a structured error offline.",
++      "file": "public/samples/response-envelope.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/response-envelope/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Replay a model response and inspect a structured error offline.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. Use the samples bundle so the recorded response fixtures are available. Replay makes no live model call.",
++      "expected_output": "ok_result: Ok({\"finish_reason\": tool_calls, \"headers\": {\"content-type\": application/json}, \"json\": {\"choices\": [{\"finish_reason\": tool_calls, \"message\": {\"content\": hello from cassette, \"tool_calls\": [{\"function\": {\"arguments\": {\"query\":\"kujo\"}, \"name\": lookup}, \"id\": call_1}]}}], \"usage\": {\"completion_tokens\": 5, \"prompt_tokens\": 7, \"total_tokens\": 12}}, \"message\": hello from cassette, \"model\": gpt-replay, \"provider\": mock-provider, \"status\": 200, \"text\": {\"choices\":[{\"finish_reason\":\"tool_calls\",\"message\":{\"content\":\"hello from cassette\",\"tool_calls\":[{\"id\":\"call_1\",\"function\":{\"name\":\"lookup\",\"arguments\":\"{\\\"query\\\":\\\"kujo\\\"}\"}}]}}],\"usage\":{\"prompt_tokens\":7,\"completion_tokens\":5,\"total_tokens\":12}}, \"tool_calls\": [{\"arguments_json\": {\"query\":\"kujo\"}, \"id\": call_1, \"name\": lookup}], \"usage\": {\"completion_tokens\": 5, \"prompt_tokens\": 7, \"total_tokens\": 12}})\nstructured_error: Err({\"body_excerpt\": {\"error\":{\"code\":\"rate_limit_exceeded\",\"message\":\"slow down\"}}, \"http_status\": 429, \"kind\": rate_limited, \"message\": ai_chat failed with HTTP status 429: {\"error\":{\"code\":\"rate_limit_exceeded\",\"message\":\"slow down\"}}, \"provider_code\": rate_limit_exceeded, \"retry_after_ms\": 3000})\n"
++    },
++    {
++      "id": "examples-token-budget",
++      "title": "Fit a token budget",
++      "tagline": "Estimate token counts and trim a conversation to fit a budget.",
++      "file": "public/samples/token-budget.kujo",
++      "variant": "social",
++      "label": "language",
++      "url": "kujolang.ai/examples/token-budget/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Estimate token counts and trim a conversation to fit a budget.",
++      "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. Token counts are local estimates, not provider billing records.",
++      "expected_output": "text_tokens: 10\nmessage_tokens: 75\ndropped: 2\nest_tokens: 27\nfits: true\nmessages: [{\"content\": Answer briefly and cite constraints., \"role\": system}, {\"content\": Give me the short version., \"role\": user}]\n"
+     }
+   ]
+ }
+diff --git a/package.json b/package.json
+index b712416..471ae6c 100644
+--- a/package.json
++++ b/package.json
+@@ -13,8 +13,8 @@
+     "compare:generate": "node scripts/render-comparisons.mjs",
+     "compare:check": "node scripts/render-comparisons.mjs --check",
+     "compare:verify": "python3 scripts/verify-comparisons.py",
+-    "examples:generate": "node scripts/render-language-examples.mjs",
+-    "examples:check": "node scripts/render-language-examples.mjs --check",
++    "examples:generate": "node scripts/render-language-examples.mjs && python3 scripts/bundle-language-examples.py",
++    "examples:check": "node scripts/render-language-examples.mjs --check && python3 scripts/bundle-language-examples.py --check",
+     "examples:verify": "python3 scripts/verify-language-examples.py",
+     "language:verify": "python3 scripts/verify-language-site.py",
+     "guides:generate": "node scripts/render-language-guides.mjs",
+diff --git a/public/samples/kujo-examples.tar.gz b/public/samples/kujo-examples.tar.gz
+index b345d87e61567f3fb9cb0349ceb42a206bd7ce54..c047354bd38b9b75bafb1bdaea8cc76e6d3c6470 100644
+GIT binary patch
+literal 12794
+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
+MKPp9jv;aT>04bf0t^fc4
+
+literal 6875
+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
+V!X|CfCjH*i{{u`5W9$I1003{;pCbSO
+
+diff --git a/scripts/test-examples-browser.cjs b/scripts/test-examples-browser.cjs
+index f211dd3..bbf0819 100644
+--- a/scripts/test-examples-browser.cjs
++++ b/scripts/test-examples-browser.cjs
+@@ -14,8 +14,10 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
+  }};
+  for(const [name,width,height] of [['desktop',1440,1000],['tablet',768,1024],['mobile',390,844]]){
+   await page.setViewportSize({width,height});await page.goto(base+'/examples/',{waitUntil:'domcontentloaded'});
+-  await page.locator('.example-filter').waitFor({state:'visible'});await fits();assert.equal(await page.locator('[data-example-card]:visible').count(),21);
++  await page.locator('.example-filter').waitFor({state:'visible'});await fits();assert.equal(await page.locator('[data-example-card]:visible').count(),catalog.items.length);
+   assert(await page.locator('.site-footer').isVisible());assert.equal(await page.locator('h1').count(),1);
++  for(const stat of await page.locator('.examples-stats strong').all())assert(/departure/i.test(await stat.evaluate(el=>getComputedStyle(el).fontFamily)),'Statistics use Departure Mono');
++  assert.equal(await page.locator('.examples-stats strong').first().textContent(),String(catalog.items.length));
+   await page.screenshot({path:`${evidence}/index-${name}.png`,fullPage:true});
+   await page.fill('#example-search','no-such-example');assert.equal(await page.locator('.example-category-group:visible').count(),0);assert.equal(await page.locator('#example-count').textContent(),'0 examples found');
+   await page.fill('#example-search','');await page.selectOption('#example-category','Concurrency');assert.equal(await page.locator('[data-example-card]:visible').count(),3);
+@@ -38,6 +40,6 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
+   if(process.env.AXE_SCRIPT){await page.addScriptTag({path:process.env.AXE_SCRIPT});const r=await page.evaluate(()=>axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa']}}));axeReports.push({slug:x.slug,violations:r.violations,passes:r.passes.length});assert.deepEqual(r.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),[],x.slug+' accessibility');}
+  }
+  fs.writeFileSync(evidence+'/accessibility.json',JSON.stringify(axeReports,null,2)+'\n');
+- const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base+'/examples/');assert.equal(await p.locator('[data-example-card]:visible').count(),21);await p.goto(base+'/examples/replay/');assert.equal(await p.locator('.example-source code').textContent(),fs.readFileSync('public/samples/replay.kujo','utf8'));assert.equal(await p.locator('[data-copy-code]:visible').count(),0);
+- assert.deepEqual(errors,[]);await browser.close();console.log('Examples: all 21 pages, source/clipboard integrity, output copying, in-block icons, responsive layouts, filtering, no-JS and accessibility passed');
++ const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base+'/examples/');assert.equal(await p.locator('[data-example-card]:visible').count(),catalog.items.length);await p.goto(base+'/examples/replay/');assert.equal(await p.locator('.example-source code').textContent(),fs.readFileSync('public/samples/replay.kujo','utf8'));assert.equal(await p.locator('[data-copy-code]:visible').count(),0);
++ assert.deepEqual(errors,[]);await browser.close();console.log('Examples: all '+catalog.items.length+' pages, source/clipboard integrity, output copying, in-block icons, responsive layouts, filtering, no-JS and accessibility passed');
+ })().catch(e=>{console.error(e);process.exit(1)});
+diff --git a/scripts/test-language-browser.cjs b/scripts/test-language-browser.cjs
+index de2ed38..11e1ac1 100644
+--- a/scripts/test-language-browser.cjs
++++ b/scripts/test-language-browser.cjs
+@@ -64,6 +64,6 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
+      assert.deepEqual(result.violations.map(x=>({id:x.id,nodes:x.nodes.map(n=>n.target)})),[],route+' accessibility');
+    }
+  }
+- const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base);assert.equal(await p.locator('[data-example]:visible').count(),6);await p.goto(base+'/examples/');assert.equal(await p.locator('[data-example-card]:visible').count(),21);
++ const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base);assert.equal(await p.locator('[data-example]:visible').count(),6);await p.goto(base+'/examples/');assert.equal(await p.locator('[data-example-card]:visible').count(),JSON.parse(fs.readFileSync('examples/catalog.json','utf8')).items.length);
+  assert.deepEqual(errors,[]);await browser.close();console.log('Browser: selection, exact clipboard, filter, no-JS, mobile menu, responsive layouts and console passed');
+ })().catch(e=>{console.error(e);process.exit(1)});
+diff --git a/scripts/verify-language-examples.py b/scripts/verify-language-examples.py
+index 51b0121..c081345 100644
+--- a/scripts/verify-language-examples.py
++++ b/scripts/verify-language-examples.py
+@@ -1,9 +1,19 @@
+-import hashlib,json,os,pathlib,subprocess
++import hashlib,json,os,pathlib,subprocess,tempfile,tarfile,atexit
+ root=pathlib.Path(__file__).resolve().parents[1];c=json.loads((root/'examples/catalog.json').read_text());binary=os.environ.get('KUJO_BIN','kujo')
+ assert subprocess.check_output([binary,'--version'],text=True).strip()=='kujo '+c['version']
++# Run the downloadable bundle in an isolated directory, including replay fixtures.
++binary=str(pathlib.Path(binary).resolve()) if '/' in binary else binary
++temporary=tempfile.TemporaryDirectory();atexit.register(temporary.cleanup)
++samples=pathlib.Path(temporary.name)
++with tarfile.open(root/'public/samples/kujo-examples.tar.gz') as archive:
++ for member in archive.getmembers():
++  destination=samples/member.name
++  assert member.isfile() and destination.resolve().is_relative_to(samples.resolve()),member.name
++  destination.parent.mkdir(parents=True,exist_ok=True)
++  destination.write_bytes(archive.extractfile(member).read())
+ seen=set()
+ for x in c['items']:
+- assert x['slug'] not in seen;seen.add(x['slug']);p=root/'public/samples'/f"{x['slug']}.kujo"
++ assert x['slug'] not in seen;seen.add(x['slug']);p=samples/f"{x['slug']}.kujo"
+  assert hashlib.sha256(p.read_bytes()).hexdigest()==x['sha256'],x['slug']
+  assert x['mode'] in ['run','check','test-run']
+  subprocess.run([binary,'check',p.name],cwd=p.parent,check=True,capture_output=True,timeout=20)
+@@ -12,7 +22,7 @@ for x in c['items']:
+  print(x['slug']+': '+x['mode']+' passed')
+ print(f'{len(seen)} pinned examples verified')
+ 
+-denied=subprocess.run([binary,'run','--untrusted','capabilities.kujo'],cwd=root/'public/samples',capture_output=True,text=True,timeout=20)
++denied=subprocess.run([binary,'run','--untrusted','capabilities.kujo'],cwd=samples,capture_output=True,text=True,timeout=20)
+ assert denied.returncode != 0 and 'Capability denied' in denied.stderr
+ print('AI capability denied without grant and allowed with explicit grant')
+ 
+diff --git a/templates/page-language-examples-hello-world.html b/templates/page-language-examples-hello-world.html
+index 8a1d29b..5c473ae 100644
+--- a/templates/page-language-examples-hello-world.html
++++ b/templates/page-language-examples-hello-world.html
+@@ -12,4 +12,4 @@ print(<span class="syntax-token syntax-string">&quot;Kujo Kujo!&quot;</span>)
+  <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Expected output</h2><p>Your terminal should show this output.</p></header><div><div class="sample-code"><pre tabindex="0"><code>Kujo Kujo!
+ </code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div></div></section>
+  <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Executed offline.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/00-hello.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>b07c6c29b072dd18e95d23d76965da087faf49518d5eb959b1796cb26684f0b1</code></p></div></details>
+- <nav class="example-pagination" aria-label="Related examples"><a href="/examples/http/"><span>← Previous example</span><strong>HTTP and networking</strong></a><a href="/examples/variables/"><span>Next example →</span><strong>Variables and types</strong></a></nav></div></main>
++ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/token-budget/"><span>← Previous example</span><strong>Fit a token budget</strong></a><a href="/examples/variables/"><span>Next example →</span><strong>Variables and types</strong></a></nav></div></main>
+diff --git a/templates/page-language-examples-http.html b/templates/page-language-examples-http.html
+index afa8daf..6139605 100644
+--- a/templates/page-language-examples-http.html
++++ b/templates/page-language-examples-http.html
+@@ -28,4 +28,4 @@ server.listen()
+  </div>
+  <section class="example-result" aria-labelledby="result-title"><header><p class="eyebrow">Check the result</p><h2 id="result-title">Verification scope</h2><p>We checked the source without running its external integrations.</p></header><div><p class="example-scope">Checked only. We checked the source but did not run the full application.</p></div></section>
+  <details class="example-provenance"><summary>Source &amp; verification details</summary><div><p>Verified against <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Checked only.</p><p><a href="https://github.com/kujolang/kujo/blob/2cfaf185ad03059c89ef4f72fb061074255d00fc/examples/http_server_simple.kujo">Pinned source</a> · <a href="https://docs.kujolang.ai/learn/">Language documentation</a></p><p class="example-checksum">SHA-256 <code>c6ead2595d643ca4d44e30d73d9569a71cb9129f84dbbfcdc3aa72ca6cc2b05d</code></p></div></details>
+- <nav class="example-pagination" aria-label="Related examples"><a href="/examples/files/"><span>← Previous example</span><strong>File operations</strong></a><a href="/examples/hello-world/"><span>Next example →</span><strong>Hello World</strong></a></nav></div></main>
++ <nav class="example-pagination" aria-label="Related examples"><a href="/examples/files/"><span>← Previous example</span><strong>File operations</strong></a><a href="/examples/string-interpolation/"><span>Next example →</span><strong>String interpolation</strong></a></nav></div></main>
+diff --git a/templates/page-language-examples.html b/templates/page-language-examples.html
+index 65065c1..1f63f75 100644
+--- a/templates/page-language-examples.html
++++ b/templates/page-language-examples.html
+@@ -1,13 +1,14 @@
+ <main class="examples-site examples-index" id="main-content"><div class="examples-shell">
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Examples</span></nav>
+-<header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>21</strong><span>verified samples</span></p><p><strong>6</strong><span>categories</span></p></div><p>Each example includes code, a command and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
+-<div class="example-filter" hidden><div><label for="example-search">Search examples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option><option>Basics</option><option>Data</option><option>Concurrency</option><option>AI runtime</option><option>Tooling</option><option>Systems</option></select></div><p role="status" id="example-count"></p></div>
+-<nav class="examples-category-nav" aria-label="Example categories"><a href="#category-Basics"><span>01</span>Basics</a><a href="#category-Data"><span>02</span>Data</a><a href="#category-Concurrency"><span>03</span>Concurrency</a><a href="#category-AI-runtime"><span>04</span>AI runtime</a><a href="#category-Tooling"><span>05</span>Tooling</a><a href="#category-Systems"><span>06</span>Systems</a></nav>
+-<section class="example-category-group" id="category-Basics"><header class="example-group-heading"><div><p class="eyebrow">01 / Explore</p><h2>Basics</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/hello-world/">Hello World <span aria-hidden="true">↗</span></a></h3><p>Print your first message.</p><span class="example-card-file">hello-world.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/variables/">Variables and types <span aria-hidden="true">↗</span></a></h3><p>Create variables with let and print their values.</p><span class="example-card-file">variables.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/functions/">Functions and operators <span aria-hidden="true">↗</span></a></h3><p>Add the numbers in an array with a function.</p><span class="example-card-file">functions.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/control-flow/">Control flow <span aria-hidden="true">↗</span></a></h3><p>Choose which code runs with a comparison.</p><span class="example-card-file">control-flow.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/errors/">Error handling <span aria-hidden="true">↗</span></a></h3><p>Catch an error and keep the program running.</p><span class="example-card-file">errors.kujo</span></article></div></section>
+-<section class="example-category-group" id="category-Data"><header class="example-group-heading"><div><p class="eyebrow">02 / Explore</p><h2>Data</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/collections/">Collections <span aria-hidden="true">↗</span></a></h3><p>Build a report from arrays and dictionaries.</p><span class="example-card-file">collections.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/structs/">Structs and methods <span aria-hidden="true">↗</span></a></h3><p>Return a new counter from an instance method.</p><span class="example-card-file">structs.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/pattern-matching/">Enums and pattern matching <span aria-hidden="true">↗</span></a></h3><p>Handle tagged values and Result variants.</p><span class="example-card-file">pattern-matching.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/json/">JSON data <span aria-hidden="true">↗</span></a></h3><p>Read JSON and access nested fields.</p><span class="example-card-file">json.kujo</span></article></div></section>
++<header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>50</strong><span>verified samples</span></p><p><strong>7</strong><span>categories</span></p></div><p>Each example includes code, a command and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
++<div class="example-filter" hidden><div><label for="example-search">Search examples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option><option>Basics</option><option>Data</option><option>Concurrency</option><option>AI runtime</option><option>Tooling</option><option>Systems</option><option>Text</option></select></div><p role="status" id="example-count"></p></div>
++<nav class="examples-category-nav" aria-label="Example categories"><a href="#category-Basics"><span>01</span>Basics</a><a href="#category-Data"><span>02</span>Data</a><a href="#category-Concurrency"><span>03</span>Concurrency</a><a href="#category-AI-runtime"><span>04</span>AI runtime</a><a href="#category-Tooling"><span>05</span>Tooling</a><a href="#category-Systems"><span>06</span>Systems</a><a href="#category-Text"><span>07</span>Text</a></nav>
++<section class="example-category-group" id="category-Basics"><header class="example-group-heading"><div><p class="eyebrow">01 / Explore</p><h2>Basics</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/hello-world/">Hello World <span aria-hidden="true">↗</span></a></h3><p>Print your first message.</p><span class="example-card-file">hello-world.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/variables/">Variables and types <span aria-hidden="true">↗</span></a></h3><p>Create variables with let and print their values.</p><span class="example-card-file">variables.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/functions/">Functions and operators <span aria-hidden="true">↗</span></a></h3><p>Add the numbers in an array with a function.</p><span class="example-card-file">functions.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/control-flow/">Control flow <span aria-hidden="true">↗</span></a></h3><p>Choose which code runs with a comparison.</p><span class="example-card-file">control-flow.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/errors/">Error handling <span aria-hidden="true">↗</span></a></h3><p>Catch an error and keep the program running.</p><span class="example-card-file">errors.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/type-conversion/">Convert text to numbers <span aria-hidden="true">↗</span></a></h3><p>Read an age and a balance from strings.</p><span class="example-card-file">type-conversion.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/optional-values/">Handle missing values <span aria-hidden="true">↗</span></a></h3><p>Look up users and handle both Some and None.</p><span class="example-card-file">optional-values.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/partial-application/">Capture function arguments <span aria-hidden="true">↗</span></a></h3><p>Make a reusable adder by capturing a value in a closure.</p><span class="example-card-file">partial-application.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/type-inspection/">Inspect value types <span aria-hidden="true">↗</span></a></h3><p>Inspect runtime types and check whether a value is a number or string.</p><span class="example-card-file">type-inspection.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/function-composition/">Compose functions <span aria-hidden="true">↗</span></a></h3><p>Pass one function result into the next to calculate a value or format text.</p><span class="example-card-file">function-composition.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/result-errors/">Return errors as values <span aria-hidden="true">↗</span></a></h3><p>Return Ok or Err from division and handle each result.</p><span class="example-card-file">result-errors.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/loop-control/">Break and continue <span aria-hidden="true">↗</span></a></h3><p>Stop a loop early and skip even numbers.</p><span class="example-card-file">loop-control.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/recursion/">Calculate a factorial <span aria-hidden="true">↗</span></a></h3><p>Call a function recursively until it reaches a base case.</p><span class="example-card-file">recursion.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/loop-scope/">Accumulate a total <span aria-hidden="true">↗</span></a></h3><p>Update a running total as a loop visits each number.</p><span class="example-card-file">loop-scope.kujo</span></article></div></section>
++<section class="example-category-group" id="category-Data"><header class="example-group-heading"><div><p class="eyebrow">02 / Explore</p><h2>Data</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/collections/">Collections <span aria-hidden="true">↗</span></a></h3><p>Build a report from arrays and dictionaries.</p><span class="example-card-file">collections.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/structs/">Structs and methods <span aria-hidden="true">↗</span></a></h3><p>Return a new counter from an instance method.</p><span class="example-card-file">structs.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/pattern-matching/">Enums and pattern matching <span aria-hidden="true">↗</span></a></h3><p>Handle tagged values and Result variants.</p><span class="example-card-file">pattern-matching.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/json/">JSON data <span aria-hidden="true">↗</span></a></h3><p>Read JSON and access nested fields.</p><span class="example-card-file">json.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/data-access/">Read nested data <span aria-hidden="true">↗</span></a></h3><p>Read array positions and dictionary fields, then add values from records.</p><span class="example-card-file">data-access.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/array-spread/">Combine arrays <span aria-hidden="true">↗</span></a></h3><p>Combine arrays, insert values and copy a list with spread syntax.</p><span class="example-card-file">array-spread.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/map-and-filter/">Map and filter arrays <span aria-hidden="true">↗</span></a></h3><p>Transform numbers and names, then keep the even numbers.</p><span class="example-card-file">map-and-filter.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/array-utilities/">Sort and summarize arrays <span aria-hidden="true">↗</span></a></h3><p>Sort, reverse, deduplicate and sum a list of numbers.</p><span class="example-card-file">array-utilities.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/nested-dictionaries/">Nested dictionaries <span aria-hidden="true">↗</span></a></h3><p>Store a profile in a dictionary and read its nested fields.</p><span class="example-card-file">nested-dictionaries.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/canonical-json/">Canonical JSON <span aria-hidden="true">↗</span></a></h3><p>Check stable key ordering, pretty printing and JSON round trips.</p><span class="example-card-file">canonical-json.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/csv/">Read and write CSV <span aria-hidden="true">↗</span></a></h3><p>Parse rows, read named fields and check a CSV round trip.</p><span class="example-card-file">csv.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/yaml/">Read and write YAML <span aria-hidden="true">↗</span></a></h3><p>Read a YAML configuration and check its serialized output.</p><span class="example-card-file">yaml.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/toml/">Read and write TOML <span aria-hidden="true">↗</span></a></h3><p>Read server settings from TOML and write them back.</p><span class="example-card-file">toml.kujo</span></article></div></section>
+ <section class="example-category-group" id="category-Concurrency"><header class="example-group-heading"><div><p class="eyebrow">03 / Explore</p><h2>Concurrency</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Concurrency"><span class="example-badge">Executed offline</span><h3><a href="/examples/async/">Async tasks <span aria-hidden="true">↗</span></a></h3><p>Wait for an async function to return a value.</p><span class="example-card-file">async.kujo</span></article><article data-example-card data-category="Concurrency"><span class="example-badge">Executed offline</span><h3><a href="/examples/channels/">Channels <span aria-hidden="true">↗</span></a></h3><p>Send a value through a first-in, first-out channel.</p><span class="example-card-file">channels.kujo</span></article><article data-example-card data-category="Concurrency"><span class="example-badge">Executed offline</span><h3><a href="/examples/generators/">Generators <span aria-hidden="true">↗</span></a></h3><p>Generate values as you need them.</p><span class="example-card-file">generators.kujo</span></article></div></section>
+-<section class="example-category-group" id="category-AI-runtime"><header class="example-group-heading"><div><p class="eyebrow">04 / Explore</p><h2>AI runtime</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/structured-output/">Structured output validation <span aria-hidden="true">↗</span></a></h3><p>Check local data against a schema without calling a model.</p><span class="example-card-file">structured-output.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/request-hash/">Deterministic AI request IDs <span aria-hidden="true">↗</span></a></h3><p>Hash an AI request without including credentials.</p><span class="example-card-file">request-hash.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/replay/">AI calls and replay <span aria-hidden="true">↗</span></a></h3><p>Replay a recorded model response offline.</p><span class="example-card-file">replay.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/streaming/">AI streaming <span aria-hidden="true">↗</span></a></h3><p>Read a recorded response through a streaming callback.</p><span class="example-card-file">streaming.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/capabilities/">AI capability restrictions <span aria-hidden="true">↗</span></a></h3><p>Replay an AI call with explicit permissions.</p><span class="example-card-file">capabilities.kujo</span></article></div></section>
++<section class="example-category-group" id="category-AI-runtime"><header class="example-group-heading"><div><p class="eyebrow">04 / Explore</p><h2>AI runtime</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/structured-output/">Structured output validation <span aria-hidden="true">↗</span></a></h3><p>Check local data against a schema without calling a model.</p><span class="example-card-file">structured-output.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/request-hash/">Deterministic AI request IDs <span aria-hidden="true">↗</span></a></h3><p>Hash an AI request without including credentials.</p><span class="example-card-file">request-hash.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/replay/">AI calls and replay <span aria-hidden="true">↗</span></a></h3><p>Replay a recorded model response offline.</p><span class="example-card-file">replay.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/streaming/">AI streaming <span aria-hidden="true">↗</span></a></h3><p>Read a recorded response through a streaming callback.</p><span class="example-card-file">streaming.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/capabilities/">AI capability restrictions <span aria-hidden="true">↗</span></a></h3><p>Replay an AI call with explicit permissions.</p><span class="example-card-file">capabilities.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/vector-search/">Compare vectors <span aria-hidden="true">↗</span></a></h3><p>Normalize vectors, compare their similarity and rank matches.</p><span class="example-card-file">vector-search.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/response-envelope/">Inspect AI responses <span aria-hidden="true">↗</span></a></h3><p>Replay a model response and inspect a structured error offline.</p><span class="example-card-file">response-envelope.kujo</span></article><article data-example-card data-category="AI runtime"><span class="example-badge">Executed offline</span><h3><a href="/examples/token-budget/">Fit a token budget <span aria-hidden="true">↗</span></a></h3><p>Estimate token counts and trim a conversation to fit a budget.</p><span class="example-card-file">token-budget.kujo</span></article></div></section>
+ <section class="example-category-group" id="category-Tooling"><header class="example-group-heading"><div><p class="eyebrow">05 / Explore</p><h2>Tooling</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Tooling"><span class="example-badge">Test runner</span><h3><a href="/examples/tests/">Tests <span aria-hidden="true">↗</span></a></h3><p>Check assertions with the built-in test runner.</p><span class="example-card-file">tests.kujo</span></article><article data-example-card data-category="Tooling"><span class="example-badge">Checked only</span><h3><a href="/examples/modules/">Modules and imports <span aria-hidden="true">↗</span></a></h3><p>Read examples of dotted and named imports.</p><span class="example-card-file">modules.kujo</span></article></div></section>
+-<section class="example-category-group" id="category-Systems"><header class="example-group-heading"><div><p class="eyebrow">06 / Explore</p><h2>Systems</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Systems"><span class="example-badge">Checked only</span><h3><a href="/examples/files/">File operations <span aria-hidden="true">↗</span></a></h3><p>Explore file operations.</p><span class="example-card-file">files.kujo</span></article><article data-example-card data-category="Systems"><span class="example-badge">Checked only</span><h3><a href="/examples/http/">HTTP and networking <span aria-hidden="true">↗</span></a></h3><p>Read a local HTTP server example.</p><span class="example-card-file">http.kujo</span></article></div></section>
++<section class="example-category-group" id="category-Systems"><header class="example-group-heading"><div><p class="eyebrow">06 / Explore</p><h2>Systems</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Systems"><span class="example-badge">Checked only</span><h3><a href="/examples/files/">File operations <span aria-hidden="true">↗</span></a></h3><p>Explore file operations.</p><span class="example-card-file">files.kujo</span></article><article data-example-card data-category="Systems"><span class="example-badge">Checked only</span><h3><a href="/examples/http/">HTTP and networking <span aria-hidden="true">↗</span></a></h3><p>Read a local HTTP server example.</p><span class="example-card-file">http.kujo</span></article><article data-example-card data-category="Systems"><span class="example-badge">Executed offline</span><h3><a href="/examples/path-components/">Build file paths <span aria-hidden="true">↗</span></a></h3><p>Join path segments and extract a directory and filename.</p><span class="example-card-file">path-components.kujo</span></article><article data-example-card data-category="Systems"><span class="example-badge">Executed offline</span><h3><a href="/examples/secret-redaction/">Redact secret values <span aria-hidden="true">↗</span></a></h3><p>Check how secret values appear in printed text and JSON.</p><span class="example-card-file">secret-redaction.kujo</span></article><article data-example-card data-category="Systems"><span class="example-badge">Executed offline</span><h3><a href="/examples/password-verification/">Verify a password <span aria-hidden="true">↗</span></a></h3><p>Hash a sample password and check matching and incorrect input.</p><span class="example-card-file">password-verification.kujo</span></article></div></section>
++<section class="example-category-group" id="category-Text"><header class="example-group-heading"><div><p class="eyebrow">07 / Explore</p><h2>Text</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Text"><span class="example-badge">Executed offline</span><h3><a href="/examples/string-interpolation/">String interpolation <span aria-hidden="true">↗</span></a></h3><p>Put values and calculations into a message.</p><span class="example-card-file">string-interpolation.kujo</span></article><article data-example-card data-category="Text"><span class="example-badge">Executed offline</span><h3><a href="/examples/split-and-join/">Split and join text <span aria-hidden="true">↗</span></a></h3><p>Split text into fields, then join arrays into strings.</p><span class="example-card-file">split-and-join.kujo</span></article><article data-example-card data-category="Text"><span class="example-badge">Executed offline</span><h3><a href="/examples/url-encoding/">Encode URL components <span aria-hidden="true">↗</span></a></h3><p>Encode spaces, punctuation and Unicode for a URL component.</p><span class="example-card-file">url-encoding.kujo</span></article><article data-example-card data-category="Text"><span class="example-badge">Executed offline</span><h3><a href="/examples/url-decoding/">Decode URL components <span aria-hidden="true">↗</span></a></h3><p>Turn percent-encoded URL text back into readable characters.</p><span class="example-card-file">url-decoding.kujo</span></article><article data-example-card data-category="Text"><span class="example-badge">Executed offline</span><h3><a href="/examples/log-timestamps/">Extract log timestamps <span aria-hidden="true">↗</span></a></h3><p>Find timestamps in sample log lines with a regular expression.</p><span class="example-card-file">log-timestamps.kujo</span></article></div></section>
+ <section class="examples-next"><div><p class="eyebrow">Keep building</p><h2>Beyond a single script.</h2><p>Install packages and agent SDKs separately. These guides explain how to use them.</p></div><div><a href="https://docs.kujolang.ai/learn/packages/">Packages with Kennel <span aria-hidden="true">↗</span></a><a href="/ecosystem/agents-sdk/">Agents SDK <span aria-hidden="true">↗</span></a><a href="/ecosystem/ai-sdk/">AI SDK <span aria-hidden="true">↗</span></a></div></section>
+ <details class="example-provenance"><summary>About these samples</summary><div><p>Sources are pinned to <a href="https://github.com/kujolang/kujo/tree/2cfaf185ad03059c89ef4f72fb061074255d00fc">Kujo 1.9.0</a>. Each card tells you whether we ran the sample or checked its source. Extract the bundle before running its commands. Each example lists any other requirements.</p></div></details></div></main>
