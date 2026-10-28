@@ -1,0 +1,2 @@
+iteration	action	verdict	progress	evidence	justification
+001	configured-gates	failed	0	iterations/001/eval.log	required gate failed

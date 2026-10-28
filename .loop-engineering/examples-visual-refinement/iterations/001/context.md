@@ -1,0 +1,52 @@
+# Context
+
+- objective: Style the Examples index and all individual examples to match the refined homepage
+- git_head: 6edc849
+- changed_files:
+  - assets/css/style.css
+  - content/pages/language-examples-async.md
+  - content/pages/language-examples-capabilities.md
+  - content/pages/language-examples-channels.md
+  - content/pages/language-examples-collections.md
+  - content/pages/language-examples-control-flow.md
+  - content/pages/language-examples-errors.md
+  - content/pages/language-examples-files.md
+  - content/pages/language-examples-functions.md
+  - content/pages/language-examples-generators.md
+  - content/pages/language-examples-hello-world.md
+  - content/pages/language-examples-http.md
+  - content/pages/language-examples-json.md
+  - content/pages/language-examples-modules.md
+  - content/pages/language-examples-pattern-matching.md
+  - content/pages/language-examples-replay.md
+  - content/pages/language-examples-request-hash.md
+  - content/pages/language-examples-streaming.md
+  - content/pages/language-examples-structs.md
+  - content/pages/language-examples-structured-output.md
+  - content/pages/language-examples-tests.md
+  - content/pages/language-examples-variables.md
+  - content/pages/language-examples.md
+  - scripts/render-language-examples.mjs
+  - templates/page-home.html
+  - templates/page-language-examples-async.html
+  - templates/page-language-examples-capabilities.html
+  - templates/page-language-examples-channels.html
+  - templates/page-language-examples-collections.html
+  - templates/page-language-examples-control-flow.html
+  - templates/page-language-examples-errors.html
+  - templates/page-language-examples-files.html
+  - templates/page-language-examples-functions.html
+  - templates/page-language-examples-generators.html
+  - templates/page-language-examples-hello-world.html
+  - templates/page-language-examples-http.html
+  - templates/page-language-examples-json.html
+  - templates/page-language-examples-modules.html
+  - templates/page-language-examples-pattern-matching.html
+  - templates/page-language-examples-replay.html
+  - templates/page-language-examples-request-hash.html
+  - templates/page-language-examples-streaming.html
+  - templates/page-language-examples-structs.html
+  - templates/page-language-examples-structured-output.html
+  - templates/page-language-examples-tests.html
+  - templates/page-language-examples-variables.html
+  - templates/page-language-examples.html

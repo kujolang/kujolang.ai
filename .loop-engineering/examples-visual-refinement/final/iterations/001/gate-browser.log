@@ -1,0 +1,26 @@
+AssertionError [ERR_ASSERTION]: /examples/ accessibility
++ actual - expected
+
++ [
++   {
++     id: 'color-contrast',
++     nodes: [
++       [
++         '.examples-orientation > .eyebrow'
++       ],
++       [
++         '.examples-next > div:nth-child(1) > .eyebrow'
++       ]
++     ]
++   }
++ ]
+- []
+
+    at /Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/scripts/test-language-browser.cjs:32:13 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
