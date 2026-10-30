@@ -1,0 +1,3 @@
+[
+  "{\"findings\": [{\"path\": \"src/checkout.py\", \"line\": 2, \"reason\": \"Adding quantity undercharges multi-item purchases.\", \"suggestion\": \"Multiply price by quantity.\"}]}"
+]

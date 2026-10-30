@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string",
+      "enum": [
+        "billing",
+        "account",
+        "technical"
+      ]
+    }
+  },
+  "required": [
+    "label"
+  ],
+  "additionalProperties": false
+}

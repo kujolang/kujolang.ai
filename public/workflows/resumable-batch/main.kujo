@@ -1,0 +1,34 @@
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+let signature := sha256(to_json(input))
+mut checkpoint := {"input_hash": signature, "results": {}}
+if file_exists("checkpoint.json") {
+    checkpoint = load("checkpoint.json")
+    assert(checkpoint["input_hash"] == signature, "Input changed. Use a new checkpoint directory.")
+}
+let cfg := config()
+mut processed := 0
+mut seen := []
+for record in input["records"] {
+    assert(!contains(seen, record["id"]), "Duplicate record ID")
+    seen = push(seen, record["id"])
+}
+for record in input["records"] {
+    if has_key(checkpoint["results"], record["id"]) == 0 {
+        let result := request(cfg, "Classify this support message as billing, account or technical.", record, "responses-" + record["id"] + ".json", load("schema.json"))
+        let data := require_result(result)
+        checkpoint["results"][record["id"]] := data
+        # Publish a complete checkpoint only after its contents are written.
+        save("checkpoint.next.json", checkpoint)
+        rename_file("checkpoint.next.json", "checkpoint.json")
+        processed = processed + 1
+        print("Completed " + record["id"])
+        if to_string(processed) == env_or("KUJO_STOP_AFTER", "") {
+            print("Stopped after a saved checkpoint; rerun to resume.")
+            exit(3)
+        }
+    }
+}
+save("batch-results.json", checkpoint["results"])
+print("Saved batch-results.json; completed records were not requested again.")

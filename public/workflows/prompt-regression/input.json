@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "id": "refund",
+      "text": "Charged twice on the same invoice.",
+      "expected": "billing"
+    },
+    {
+      "id": "login",
+      "text": "The password reset link has expired.",
+      "expected": "account"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "baseline",
+      "text": "Classify the support message."
+    },
+    {
+      "id": "candidate",
+      "text": "Classify the support message. Charges and refunds are billing; login and password issues are account; crashes are technical."
+    }
+  ]
+}

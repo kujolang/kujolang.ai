@@ -1,0 +1,16 @@
+{
+  "records": [
+    {
+      "id": "r1",
+      "text": "Payment taken twice."
+    },
+    {
+      "id": "r2",
+      "text": "Cannot reset my password."
+    },
+    {
+      "id": "r3",
+      "text": "Application crashes on launch."
+    }
+  ]
+}

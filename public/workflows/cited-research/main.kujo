@@ -1,0 +1,29 @@
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+# Small, inspectable lexical retrieval. Replace this step for a larger corpus.
+mut sources := []
+for doc in input["documents"] {
+    mut matched := false
+    for term in input["terms"] {
+        if contains(to_lower(doc["text"]), to_lower(term)) { matched = true }
+    }
+    if matched { sources = push(sources, doc) }
+}
+if len(sources) == 0 {
+    save("answer.json", {"status": "insufficient_evidence", "answer": "No matching source was found.", "citations": []})
+    print("Saved answer.json; add relevant documents and rerun.")
+    exit(0)
+}
+let result := request(config(), "Answer using only the supplied sources. Cite source IDs and exact quotes. If the sources do not answer the question, say so.", {"question": input["question"], "sources": sources}, "responses.json", load("schema.json"))
+let data := require_result(result)
+assert(len(data["citations"]) > 0, "An answer needs supporting citations")
+for citation in data["citations"] {
+    mut grounded := false
+    for doc in sources {
+        if doc["id"] == citation["id"] && contains(doc["text"], citation["quote"]) { grounded = true }
+    }
+    assert(grounded, "Citation does not match a retrieved source")
+}
+save("answer.json", {"status": "needs_review", "answer": data["answer"], "citations": data["citations"], "retrieved": sources})
+print("Saved answer.json. Check whether the cited quotes support the answer.")

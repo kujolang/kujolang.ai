@@ -1,0 +1,8 @@
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+let result := request(config(), "Triage the support ticket. Extract its invoice ID and draft a reply for human review. Do not promise refunds or claim actions have been taken.", input, "responses.json", load("schema.json"))
+let data := require_result(result)
+assert(contains(input["message"], data["invoice"]), "Invoice must occur in the ticket")
+save("triage.json", {"ticket_id": input["id"], "classification": data, "attempts": result["attempts"], "status": "awaiting_human_review", "sent": false})
+print("Saved triage.json. No reply was sent.")

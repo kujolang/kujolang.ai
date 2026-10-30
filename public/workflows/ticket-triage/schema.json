@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": [
+        "billing",
+        "technical",
+        "account"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "urgent"
+      ]
+    },
+    "invoice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "draft": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "category",
+    "priority",
+    "invoice",
+    "draft"
+  ],
+  "additionalProperties": false
+}

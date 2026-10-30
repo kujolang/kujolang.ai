@@ -1,0 +1,17 @@
+{
+  "text": "The login page returns an error.",
+  "providers": [
+    {
+      "id": "primary",
+      "endpoint_env": "KUJO_PRIMARY_ENDPOINT",
+      "model_env": "KUJO_PRIMARY_MODEL",
+      "key_env": "KUJO_PRIMARY_KEY"
+    },
+    {
+      "id": "backup",
+      "endpoint_env": "KUJO_BACKUP_ENDPOINT",
+      "model_env": "KUJO_BACKUP_MODEL",
+      "key_env": "KUJO_BACKUP_KEY"
+    }
+  ]
+}

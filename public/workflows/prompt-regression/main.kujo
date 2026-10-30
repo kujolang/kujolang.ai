@@ -1,0 +1,20 @@
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+mut scores := []
+for prompt in input["prompts"] {
+    mut passed := 0
+    mut cases := []
+    for item in input["cases"] {
+        let result := request(config(), prompt["text"], {"text": item["text"]}, "responses-" + prompt["id"] + "-" + item["id"] + ".json", load("schema.json"))
+        let data := require_result(result)
+        let correct := data["label"] == item["expected"]
+        if correct { passed = passed + 1 }
+        cases = push(cases, {"id": item["id"], "actual": data["label"], "expected": item["expected"], "passed": correct})
+    }
+    scores = push(scores, {"prompt": prompt["id"], "prompt_hash": sha256(prompt["text"]), "passed": passed, "total": len(cases), "cases": cases})
+}
+let regression := scores[1]["passed"] < scores[0]["passed"]
+save("evaluation.json", {"mode": config()["mode"], "scores": scores, "regression": regression, "scope": "Only these saved cases; not a general model ranking"})
+print("Saved evaluation.json.")
+if regression { print("Candidate regressed; keep the baseline."); exit(4) }

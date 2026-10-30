@@ -1,0 +1,31 @@
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+# Build an allowlist of added lines directly from a unified Git diff.
+mut path := ""
+mut line := 0
+mut allowed := []
+for row in split(input["diff"], "\n") {
+    if starts_with(row, "+++ b/") {
+        path = substring(row, 6, len(row))
+    } else if starts_with(row, "@@ ") {
+        let header := split(row, " ")
+        line = to_int(replace(split(header[2], ",")[0], "+", ""))
+    } else if starts_with(row, "+") {
+        allowed = push(allowed, path + ":" + to_string(line))
+        line = line + 1
+    } else if starts_with(row, " ") {
+        line = line + 1
+    }
+}
+let result := request(config(), "Review this Git diff for concrete correctness bugs. Report only added lines, or an empty findings list. Explain a triggering input and suggest a fix.", input, "responses.json", load("schema.json"))
+let data := require_result(result)
+mut accepted := []
+mut rejected := []
+for finding in data["findings"] {
+    if contains(allowed, finding["path"] + ":" + to_string(finding["line"])) {
+        accepted = push(accepted, finding)
+    } else { rejected = push(rejected, finding) }
+}
+save("review.json", {"findings": accepted, "rejected_locations": rejected, "attempts": result["attempts"], "needs_human_review": true})
+print("Saved review.json; inspect findings before posting or changing code.")

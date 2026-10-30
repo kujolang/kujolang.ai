@@ -1,0 +1,4 @@
+[
+  "not json",
+  "{\"category\": \"billing\", \"priority\": \"normal\", \"invoice\": \"INV-88\", \"draft\": \"Thanks for flagging the duplicate charge on INV-88. Our billing team will check the payment records and follow up.\"}"
+]

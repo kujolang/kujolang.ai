@@ -1,0 +1,17 @@
+{
+  "question": "How long are backups retained?",
+  "terms": [
+    "backups",
+    "retained"
+  ],
+  "documents": [
+    {
+      "id": "handbook",
+      "text": "Daily backups are retained for 30 days. Restores require an operator approval."
+    },
+    {
+      "id": "billing",
+      "text": "Invoices are due within 14 days."
+    }
+  ]
+}

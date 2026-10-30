@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "properties": {
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "line": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "suggestion": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "path",
+          "line",
+          "reason",
+          "suggestion"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "findings"
+  ],
+  "additionalProperties": false
+}

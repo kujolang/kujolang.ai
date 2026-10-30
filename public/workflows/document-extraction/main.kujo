@@ -1,0 +1,14 @@
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+let result := request(config(), "Extract invoice fields from the text. Use null for an absent due date. Copy an exact evidence quote for the amount; never invent missing facts.", input, "responses.json", load("schema.json"))
+let data := require_result(result)
+assert(contains(input["text"], data["invoice"]), "Invoice ID is not grounded")
+assert(contains(input["text"], data["evidence"]), "Evidence is not in the document")
+assert(contains(data["evidence"], data["currency"]), "Currency is not in the evidence")
+assert(contains(data["evidence"], to_string(data["total"])), "Amount is not in the evidence")
+assert(data["due_date"] == null || contains(input["text"], data["due_date"]), "Due date is not in the document")
+mut missing := []
+if data["due_date"] == null { missing = push(missing, "due_date") }
+save("record.json", {"record": data, "missing_fields": missing, "ready_for_review": true, "attempts": result["attempts"]})
+print("Saved record.json with evidence and missing fields.")

@@ -1,0 +1,3 @@
+{
+  "diff": "diff --git a/src/checkout.py b/src/checkout.py\n--- a/src/checkout.py\n+++ b/src/checkout.py\n@@ -1,2 +1,2 @@\n def total(price, quantity):\n-    return price * quantity\n+    return price + quantity\n"
+}

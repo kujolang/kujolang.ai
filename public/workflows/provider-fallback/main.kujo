@@ -1,0 +1,23 @@
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+mut trace := []
+mut budget := 2
+for provider in input["providers"] {
+    if budget > 0 {
+        mut cfg := config()
+        cfg["max_attempts"] := 1
+        cfg["provider"] := provider
+        let result := request(cfg, "Classify this support message as billing, account or technical.", {"text": input["text"]}, "responses-" + provider["id"] + ".json", load("schema.json"))
+        budget = budget - 1
+        trace = push(trace, {"provider": provider["id"], "ok": result["ok"], "errors": result["errors"]})
+        if result["ok"] {
+            save("routing.json", {"selected": provider["id"], "result": result["data"], "trace": trace, "requests_remaining": budget})
+            print("Saved routing.json using " + provider["id"] + ".")
+            exit(0)
+        }
+    }
+}
+save("routing.json", {"selected": null, "trace": trace, "requests_remaining": budget})
+print("No provider returned a valid result within the two-request budget.")
+exit(2)
