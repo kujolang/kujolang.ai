@@ -1,0 +1,30 @@
+objective: "Audit all kujolang.ai pages and deliver a verified SEO and AI-search report without website changes"
+max_iterations: 1
+allowed_actions:
+  - read_files
+  - add_project_assets
+  - run_tests
+  - commit_local_changes
+blocked_actions:
+  - deploy
+  - production_config_change
+  - destructive_cleanup
+eval_gates:
+  - id: audit_evidence
+    command: "python3 seo-audit/2026-10-30/verify-audit.py"
+    required: true
+  - id: responsive
+    command: "npm run images:verify"
+    required: true
+  - id: source_schema
+    command: "npm run seo:pages:verify"
+    required: true
+  - id: social
+    command: "npm run social:verify"
+    required: true
+  - id: diff
+    command: "git diff --check"
+    required: true
+commit:
+  enabled: false
+  push: false

@@ -1,0 +1,97 @@
+{
+  "host_path_query_probes": [
+    {
+      "requested_url": "http://www.kujolang.ai/examples/context-packing/?audit=1",
+      "status": 200,
+      "final_url": "https://kujolang.ai/examples/context-packing/?audit=1",
+      "chain": [
+        {
+          "status": 301,
+          "source": "http://www.kujolang.ai/examples/context-packing/?audit=1",
+          "target": "https://www.kujolang.ai/examples/context-packing/?audit=1"
+        },
+        {
+          "status": 301,
+          "source": "https://www.kujolang.ai/examples/context-packing/?audit=1",
+          "target": "https://kujolang.ai/examples/context-packing/?audit=1"
+        }
+      ],
+      "headers": {
+        "Date": "Fri, 30 Oct 2026 17:58:50 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Server": "cloudflare",
+        "last-modified": "Fri, 30 Oct 2026 15:09:11 GMT",
+        "access-control-allow-origin": "*",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "expires": "Fri, 30 Oct 2026 18:01:02 GMT",
+        "Cache-Control": "max-age=600",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=GVyLq%2BkaeqsXWL152SkPmxIPTAoTdnPrqXRpJuCzrgAfUXEspft0mQYlvfknpxBl8LAHvSP6LdoaeYPMhmJG5GJnG3CgXY54wSdCgoP6GB6eTLUgbTJuTP8r11br6GkOSzVsKTDvV06W0Q%3D%3D\"}]}",
+        "x-proxy-cache": "MISS",
+        "x-github-request-id": "650E:C2F00:2F5932:337029:6AE4D905",
+        "x-github-edge-region": "iad",
+        "Server-Timing": "cfEdge;dur=60,cfOrigin;dur=2",
+        "Age": "433",
+        "via": "1.1 varnish",
+        "x-served-by": "cache-yyz-cyyz770051-YYZ",
+        "x-cache": "HIT",
+        "x-cache-hits": "0",
+        "x-timer": "S1793383131.800997,VS0,VE1",
+        "vary": "Accept-Encoding",
+        "x-fastly-request-id": "31ada68e46e60d5847419a4b4928ee8db08afc56",
+        "cf-cache-status": "DYNAMIC",
+        "CF-RAY": "a52c4f771f183b8e-YYZ",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "error": ""
+    },
+    {
+      "requested_url": "https://www.kujolang.ai/examples/context-packing/?audit=1",
+      "status": 200,
+      "final_url": "https://kujolang.ai/examples/context-packing/?audit=1",
+      "chain": [
+        {
+          "status": 301,
+          "source": "https://www.kujolang.ai/examples/context-packing/?audit=1",
+          "target": "https://kujolang.ai/examples/context-packing/?audit=1"
+        }
+      ],
+      "headers": {
+        "Date": "Fri, 30 Oct 2026 17:58:51 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Server": "cloudflare",
+        "last-modified": "Fri, 30 Oct 2026 15:09:11 GMT",
+        "access-control-allow-origin": "*",
+        "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "expires": "Fri, 30 Oct 2026 18:01:02 GMT",
+        "Cache-Control": "max-age=600",
+        "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=BSQqmRAiCP7gWf2bgnHli1Mj6IqVs%2FWi4YvloZTE%2B9V9ueDZhyFYsnC2%2FTh8xVNYdLVrdyNlSDhZhLizxmmRa%2FyWRV5XX0SDyn6QS%2FQucVooFdkW2C180bSfZhJIQWXz9EbTY5n6f9PcHQ%3D%3D\"}]}",
+        "x-proxy-cache": "MISS",
+        "x-github-request-id": "650E:C2F00:2F5932:337029:6AE4D905",
+        "x-github-edge-region": "iad",
+        "Server-Timing": "cfEdge;dur=45,cfOrigin;dur=5",
+        "via": "1.1 varnish",
+        "Age": "434",
+        "x-served-by": "cache-yyz-cyyz770048-YYZ",
+        "x-cache": "HIT",
+        "x-cache-hits": "1",
+        "x-timer": "S1793383131.487063,VS0,VE2",
+        "vary": "Accept-Encoding",
+        "x-fastly-request-id": "fb732f4beb0ee63c125350ef50ff0b345774c25b",
+        "cf-cache-status": "DYNAMIC",
+        "CF-RAY": "a52c4f7b794c39f5-YYZ",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "error": ""
+    }
+  ],
+  "sitemap_lastmod_count": 7,
+  "future_lastmods": 0,
+  "lastmod_note": "Optional field; source date/last_updated used when valid. No invented crawl date added.",
+  "authority": "Ethos and Contact pages plus project source/security links; no invented named author.",
+  "feed": "Valid empty RSS channel; consistent with Writing placeholder.",
+  "pagination_hreflang": "No paginated or translated site surface found; not applicable."
+}

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/seo-audit/2026-10-30/verify-audit.py", line 24, in <module>
+    with tarfile.open(A/'audit-receipts.tar.gz') as t:assert len(t.getmembers())>=329
+AssertionError

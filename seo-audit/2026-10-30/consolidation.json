@@ -1,0 +1,25 @@
+{
+  "signalbox": {
+    "captures": [
+      "cap_c047266f-cf01-47ba-88f1-d595fc97af54",
+      "cap_5b2fe7b1-ac9a-4d47-9c68-72abdd443f2b"
+    ],
+    "signals": [],
+    "duplicates_skipped": [],
+    "rejected": [
+      "Writing editorial recommendation: report only; no engineering bug asserted",
+      "Platform-access gaps and optional performance polish: no Signal",
+      "Routine audit recap: Strata only"
+    ],
+    "exact_retrieval": "passed",
+    "concept_retrieval": "passed; kujolang.ai query returned both captures"
+  },
+  "scope": "kujolang.ai main; ffad82c; report-only full audit",
+  "strata": {
+    "handoff": "f28e84cc-d7ef-4b14-82b2-480c377f25af",
+    "updated_timeline": "bba5ba58-b21f-48ad-9dd2-114d1581f9b0",
+    "exact_retrieval": "passed",
+    "concept_retrieval": "passed after focused tags and readable terms",
+    "query": "kujolang.ai full SEO audit"
+  }
+}
