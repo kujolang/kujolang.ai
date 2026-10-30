@@ -1,0 +1,11 @@
+╔════════════════════════════════════════════════╗
+║        Kujo Static Site Generator              ║
+╚════════════════════════════════════════════════╝
+
+Loaded configuration from kujo-ssg.yml
+Build complete
+  Posts generated: 0
+  Pages generated: 70
+  Output directory: output
+  Build time: 21.680536831s
+Full build completed; 1167 responsive variants reused with unchanged input, algorithm and output hashes.

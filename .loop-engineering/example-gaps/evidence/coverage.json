@@ -1,0 +1,45 @@
+{
+  "before": {
+    "samples": 50,
+    "applications": 8,
+    "total": 58
+  },
+  "after": {
+    "samples": 50,
+    "applications": 13,
+    "total": 63
+  },
+  "applications": [
+    {
+      "slug": "redacted-summary",
+      "source_sha256": "92b22b208366a9dc7f6bcf231b90516d4d5f2e5d109f610d2262d008b4352548",
+      "zip_sha256": "b83952ac152357e4a89840eb0e0a7df305a41e77efe0152b55c86e0fa6751ac9",
+      "image_sha256": "819123b5376f6b7d5c2f9d46d7b39b52057865c7a18e2941e8c824233c02a20a"
+    },
+    {
+      "slug": "grounded-analytics",
+      "source_sha256": "ce30316968997f6a3433f42409e00b243d68347a6efe93d75d0c19544da63f22",
+      "zip_sha256": "79211f8b5a5e9d3c065b65b6bd00fc489e2cc81d912891d2295fba334625812a",
+      "image_sha256": "dd10baa080e60d85be2f58d9dce1472fb89ea9a25db7b8251451b7b0f953f1a2"
+    },
+    {
+      "slug": "context-packing",
+      "source_sha256": "4a5aaf453e5aa7b487c632c1ba295e66bd7d423aee49198ff559255fbd2f9e97",
+      "zip_sha256": "86b91770040fc282ba574bc7f768c985daf26fe8b8dc7bb5ce4aba1892e8c181",
+      "image_sha256": "8b42a3b186b033d0d15cc9ca54e591b37f0779ed91da9595b18efd394836cbed"
+    },
+    {
+      "slug": "intent-routing",
+      "source_sha256": "2c1c91ca238a5f790d6407d1e524c52193cf6e3ae23c9764f937904817cbdff0",
+      "zip_sha256": "010affa28ca77fe131572011df9b4a84fa0cf276e1777fd50976ddf412321cb8",
+      "image_sha256": "3dd71999bcd3e1bda308fb0e43b59b34609f6764e6b2d4110afd5b9e0fc626c5"
+    },
+    {
+      "slug": "response-cache",
+      "source_sha256": "7dcbc1a7a7c1feef901130952bafcbf9bfe426061a960fade5cc7e459984ee81",
+      "zip_sha256": "26c08fda7b44eed539cecf3dc78b934098f829bff80a7b0472a6c9bf320fbdc8",
+      "image_sha256": "1fc86f4423b16974c37fe951472486412e46957d17e53e4c0470748c1fada979"
+    }
+  ],
+  "review": "New walkthroughs reviewed with Orwell criteria: direct instructions, concrete failure/recovery, explicit limitations; Howl contact sheet visually inspected."
+}

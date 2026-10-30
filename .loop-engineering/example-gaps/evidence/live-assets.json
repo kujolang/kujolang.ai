@@ -1,0 +1,124 @@
+{
+  "total": 63,
+  "samples": 50,
+  "applications": 13,
+  "assets": [
+    {
+      "path": "/workflows/ai-workflows.zip",
+      "sha256": "71819c31b64079fc79dd3c0a3730b7f7e8c4c15acc68619620f312c2283f3fcf",
+      "matches_source": true
+    },
+    {
+      "path": "/assets/images/social/examples-redacted-summary.jpg",
+      "sha256": "819123b5376f6b7d5c2f9d46d7b39b52057865c7a18e2941e8c824233c02a20a",
+      "matches_source": true
+    },
+    {
+      "path": "/workflows/redacted-summary.zip",
+      "sha256": "b83952ac152357e4a89840eb0e0a7df305a41e77efe0152b55c86e0fa6751ac9",
+      "matches_source": true
+    },
+    {
+      "path": "/assets/images/social/examples-grounded-analytics.jpg",
+      "sha256": "dd10baa080e60d85be2f58d9dce1472fb89ea9a25db7b8251451b7b0f953f1a2",
+      "matches_source": true
+    },
+    {
+      "path": "/workflows/grounded-analytics.zip",
+      "sha256": "79211f8b5a5e9d3c065b65b6bd00fc489e2cc81d912891d2295fba334625812a",
+      "matches_source": true
+    },
+    {
+      "path": "/assets/images/social/examples-context-packing.jpg",
+      "sha256": "8b42a3b186b033d0d15cc9ca54e591b37f0779ed91da9595b18efd394836cbed",
+      "matches_source": true
+    },
+    {
+      "path": "/workflows/context-packing.zip",
+      "sha256": "86b91770040fc282ba574bc7f768c985daf26fe8b8dc7bb5ce4aba1892e8c181",
+      "matches_source": true
+    },
+    {
+      "path": "/assets/images/social/examples-intent-routing.jpg",
+      "sha256": "3dd71999bcd3e1bda308fb0e43b59b34609f6764e6b2d4110afd5b9e0fc626c5",
+      "matches_source": true
+    },
+    {
+      "path": "/workflows/intent-routing.zip",
+      "sha256": "010affa28ca77fe131572011df9b4a84fa0cf276e1777fd50976ddf412321cb8",
+      "matches_source": true
+    },
+    {
+      "path": "/assets/images/social/examples-response-cache.jpg",
+      "sha256": "1fc86f4423b16974c37fe951472486412e46957d17e53e4c0470748c1fada979",
+      "matches_source": true
+    },
+    {
+      "path": "/workflows/response-cache.zip",
+      "sha256": "26c08fda7b44eed539cecf3dc78b934098f829bff80a7b0472a6c9bf320fbdc8",
+      "matches_source": true
+    }
+  ],
+  "attempts": [
+    {
+      "path": "/examples/",
+      "attempt": 1,
+      "status": 200
+    },
+    {
+      "path": "/workflows/ai-workflows.zip",
+      "attempt": 1,
+      "status": 200
+    },
+    {
+      "path": "/assets/images/social/examples-redacted-summary.jpg",
+      "attempt": 1,
+      "status": 200
+    },
+    {
+      "path": "/workflows/redacted-summary.zip",
+      "attempt": 1,
+      "status": 200
+    },
+    {
+      "path": "/assets/images/social/examples-grounded-analytics.jpg",
+      "attempt": 1,
+      "status": 200
+    },
+    {
+      "path": "/workflows/grounded-analytics.zip",
+      "attempt": 1,
+      "status": 200
+    },
+    {
+      "path": "/assets/images/social/examples-context-packing.jpg",
+      "attempt": 1,
+      "status": 200
+    },
+    {
+      "path": "/workflows/context-packing.zip",
+      "attempt": 1,
+      "status": 200
+    },
+    {
+      "path": "/assets/images/social/examples-intent-routing.jpg",
+      "attempt": 1,
+      "status": 200
+    },
+    {
+      "path": "/workflows/intent-routing.zip",
+      "attempt": 1,
+      "status": 200
+    },
+    {
+      "path": "/assets/images/social/examples-response-cache.jpg",
+      "attempt": 1,
+      "status": 200
+    },
+    {
+      "path": "/workflows/response-cache.zip",
+      "attempt": 1,
+      "status": 200
+    }
+  ]
+}

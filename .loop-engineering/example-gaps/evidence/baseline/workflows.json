@@ -1,0 +1,126 @@
+{
+  "runtime": "1.9.0",
+  "repository": "https://github.com/kujolang/kujolang.ai",
+  "items": [
+    {
+      "slug": "repository-review",
+      "title": "Repository change reviewer",
+      "description": "Review a Git diff and keep findings tied to added lines.",
+      "artifact": "review.json",
+      "scenario": "A checkout calculation changes multiplication to addition. The reviewer flags the changed line and suggests a correction.",
+      "steps": [
+        "Parse added-line locations from a unified Git diff.",
+        "Ask for structured findings with reasons and suggested fixes.",
+        "Separate findings with valid locations from invented locations."
+      ],
+      "failure": "Change the fixture finding to an unknown path or line. It moves to rejected_locations rather than appearing as an accepted finding. Restore the original response to recover.",
+      "adapt": "Replace input.json.diff with the output of git diff --no-ext-diff --unified=3. Keep the review local until a person checks it. This parser covers ordinary text diffs, not combined merge diffs or binary patches.",
+      "limits": "Location checks establish where a finding points. A person must still judge whether the bug and suggested fix are correct."
+    },
+    {
+      "slug": "ticket-triage",
+      "title": "Support ticket triage",
+      "description": "Classify a ticket and draft a reply for a person to review.",
+      "artifact": "triage.json",
+      "scenario": "A customer reports a duplicate charge. The output includes a billing category, invoice ID and unsent reply.",
+      "steps": [
+        "Read the ticket and request a constrained category and priority.",
+        "Retry an invalid response within a two-request limit.",
+        "Check that the extracted invoice occurs in the ticket; save an unsent draft."
+      ],
+      "failure": "The first authored response is invalid JSON. The second is valid, so the report records two attempts. Replace both with invalid text to reach failure.json; restore the responses to recover.",
+      "adapt": "Replace input.json with a ticket from your own queue and adjust schema.json categories. Review the draft and billing facts before sending anything. The application has no sending integration.",
+      "limits": "Schema validation cannot guarantee that a reply is appropriate or that its promises are true. The output remains awaiting_human_review."
+    },
+    {
+      "slug": "document-extraction",
+      "title": "Document extraction pipeline",
+      "description": "Turn invoice text into a validated record with source evidence.",
+      "artifact": "record.json",
+      "scenario": "An invoice includes an amount and currency but no due date. The result preserves the missing field instead of filling it in.",
+      "steps": [
+        "Extract a record under a JSON schema.",
+        "Require the invoice ID and amount evidence to occur in the source text.",
+        "Report missing fields for a person to resolve."
+      ],
+      "failure": "Change the returned amount to 999 while leaving its evidence unchanged. The grounding check stops the run. Restore the fixture and rerun; the result again reports the absent due date.",
+      "adapt": "Replace input.json.text with extracted document text and change the schema and grounding checks together. This example starts with text; PDF OCR and image extraction are separate steps.",
+      "limits": "Substring evidence checks are intentionally small and inspectable. Repeated amounts and ambiguous invoices need stronger field-to-span validation and human review."
+    },
+    {
+      "slug": "cited-research",
+      "title": "Research assistant with citations",
+      "description": "Answer from a supplied document collection and retain exact quotes.",
+      "artifact": "answer.json",
+      "scenario": "A handbook states how long backups are retained. The assistant retrieves that passage and cites its source ID.",
+      "steps": [
+        "Retrieve documents that match the supplied search terms.",
+        "Ask the model to answer only from those documents.",
+        "Check citation IDs and exact quotes against retrieved text."
+      ],
+      "failure": "Set input.json.terms to an unmatched word. The application returns insufficient_evidence without calling a model. Restore the terms to recover. An invented citation quote is also rejected.",
+      "adapt": "Replace the documents and query terms in input.json. The retriever uses simple lexical matching; replace that step with ranked retrieval when the collection grows.",
+      "limits": "An exact quote proves that text exists, not that it supports every claim in an answer. The result is marked needs_review; check the claim-to-citation relationship."
+    },
+    {
+      "slug": "resumable-batch",
+      "title": "Resumable batch processor",
+      "description": "Classify records, save checkpoints and continue after interruption.",
+      "artifact": "batch-results.json",
+      "scenario": "Three support records produce billing, account and technical labels. Completed record IDs survive a stopped process.",
+      "steps": [
+        "Check that IDs are unique and the input matches any saved checkpoint.",
+        "Request and validate one unfinished record at a time.",
+        "Write a complete checkpoint and rename it before moving to the next record."
+      ],
+      "failure": "Run KUJO_STOP_AFTER=1 kujo run main.kujo. Exit code 3 means the first result was saved. Run again without that variable to finish; the first request is skipped.",
+      "adapt": "Replace input.json.records with your batch. Live mode can process additional IDs without fixture files. Use a fresh directory when changing the input, schema or prompt. Run one worker per checkpoint directory.",
+      "limits": "This is a single-process checkpoint pattern, not a distributed queue or a power-loss durability guarantee. A request interrupted before its checkpoint may be repeated."
+    },
+    {
+      "slug": "safe-editor",
+      "title": "Safe tool-using assistant",
+      "description": "Preview a proposed file edit and apply only the approved contents.",
+      "artifact": "proposal.json",
+      "scenario": "The assistant proposes a clearer heading for a local draft. Its first run writes a preview and leaves the draft untouched.",
+      "steps": [
+        "Ask for complete before and after text for the allowed file.",
+        "Validate the path and original contents, then save a proposal and preview.",
+        "Require the printed proposal hash and unchanged source before applying."
+      ],
+      "failure": "Run the printed apply command with a wrong hash, or edit draft.txt after preview. The application refuses to apply. Generate a new preview and review it before approving its new hash.",
+      "adapt": "Start in the extracted bundle directory, which includes a disposable draft.txt. Adapt the allowed path and content checks deliberately. Never pass the model output to a shell. preview.diff is a human before/after display, not an apply-ready patch.",
+      "limits": "Approval is a content check, not an operating-system sandbox. Use a trusted local directory with a regular draft.txt and no concurrent writers. For hostile workspaces, use filesystem isolation and race-resistant file operations."
+    },
+    {
+      "slug": "prompt-regression",
+      "title": "Prompt regression lab",
+      "description": "Compare prompt revisions against saved, labeled cases.",
+      "artifact": "evaluation.json",
+      "scenario": "A baseline misclassifies a password-reset ticket. A more specific candidate passes both saved cases in the authored offline fixture.",
+      "steps": [
+        "Run both prompts over the same labeled cases.",
+        "Record predictions, per-case correctness and prompt hashes.",
+        "Exit with a failed gate if the candidate passes fewer cases."
+      ],
+      "failure": "Change both candidate response fixtures to technical. The candidate regresses and exits 4. Restore the original fixtures and rerun to recover.",
+      "adapt": "Add representative cases and expected labels to input.json. Use live mode to collect actual model results, repeat runs and review errors before changing a production prompt.",
+      "limits": "The offline score tests the evaluation machinery with authored responses. Two cases are not evidence of general prompt quality. Live results may vary even with temperature zero."
+    },
+    {
+      "slug": "provider-fallback",
+      "title": "Provider fallback workflow",
+      "description": "Try a second provider within a bounded request budget.",
+      "artifact": "routing.json",
+      "scenario": "The primary response fails validation. The backup returns a usable classification and the report records both attempts.",
+      "steps": [
+        "Try the configured primary once with a two-second timeout.",
+        "Treat transport errors and schema failures as unsuccessful attempts.",
+        "Try the backup once, then stop and save the routing trace."
+      ],
+      "failure": "The primary fixture is invalid by design. Make the backup invalid too to exhaust the two-request budget and exit 2. Restore the backup fixture to recover. Tests also exercise a real local HTTP timeout.",
+      "adapt": "Configure primary and backup endpoint, model and key variables independently. Use providers that accept the OpenAI-compatible chat format. Tune timeout and output-token limits in common.kujo for your workload.",
+      "limits": "The budget limits request count and per-request output tokens, not dollar spend. A timed-out provider may still complete and charge for a request. No unbounded retries or automatic provider discovery are performed."
+    }
+  ]
+}

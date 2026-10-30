@@ -1,0 +1,3 @@
+Remove known private values before sending a support note to a model.
+
+Kujo: Programming language for AI-native software

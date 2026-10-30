@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "repository-review",
+    "violations": []
+  },
+  {
+    "slug": "ticket-triage",
+    "violations": []
+  },
+  {
+    "slug": "document-extraction",
+    "violations": []
+  },
+  {
+    "slug": "cited-research",
+    "violations": []
+  },
+  {
+    "slug": "resumable-batch",
+    "violations": []
+  },
+  {
+    "slug": "safe-editor",
+    "violations": []
+  },
+  {
+    "slug": "prompt-regression",
+    "violations": []
+  },
+  {
+    "slug": "provider-fallback",
+    "violations": []
+  },
+  {
+    "slug": "redacted-summary",
+    "violations": []
+  },
+  {
+    "slug": "grounded-analytics",
+    "violations": []
+  },
+  {
+    "slug": "context-packing",
+    "violations": []
+  },
+  {
+    "slug": "intent-routing",
+    "violations": []
+  },
+  {
+    "slug": "response-cache",
+    "violations": []
+  }
+]

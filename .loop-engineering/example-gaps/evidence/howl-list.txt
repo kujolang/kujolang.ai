@@ -1,0 +1,26 @@
+examples-repository-review  —  Repository change reviewer
+    file: public/workflows/repository-review/main.kujo
+examples-ticket-triage  —  Support ticket triage
+    file: public/workflows/ticket-triage/main.kujo
+examples-document-extraction  —  Document extraction pipeline
+    file: public/workflows/document-extraction/main.kujo
+examples-cited-research  —  Research assistant with citations
+    file: public/workflows/cited-research/main.kujo
+examples-resumable-batch  —  Resumable batch processor
+    file: public/workflows/resumable-batch/main.kujo
+examples-safe-editor  —  Safe tool-using assistant
+    file: public/workflows/safe-editor/main.kujo
+examples-prompt-regression  —  Prompt regression lab
+    file: public/workflows/prompt-regression/main.kujo
+examples-provider-fallback  —  Provider fallback workflow
+    file: public/workflows/provider-fallback/main.kujo
+examples-redacted-summary  —  Redact before summarizing
+    file: public/workflows/redacted-summary/main.kujo
+examples-grounded-analytics  —  Explain computed metrics
+    file: public/workflows/grounded-analytics/main.kujo
+examples-context-packing  —  Pack context within a budget
+    file: public/workflows/context-packing/main.kujo
+examples-intent-routing  —  Route requests through an allowlist
+    file: public/workflows/intent-routing/main.kujo
+examples-response-cache  —  Cache validated responses
+    file: public/workflows/response-cache/main.kujo

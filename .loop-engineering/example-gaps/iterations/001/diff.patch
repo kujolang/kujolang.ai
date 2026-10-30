@@ -1,0 +1,1000 @@
+diff --git a/content/pages/language-examples.md b/content/pages/language-examples.md
+index d7d459d..c2044da 100644
+--- a/content/pages/language-examples.md
++++ b/content/pages/language-examples.md
+@@ -9,8 +9,8 @@ social_image: /assets/images/social/examples.jpg
+ 
+ 
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Examples</span></nav>
+-<header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>50</strong><span>verified samples</span></p><p><strong>7</strong><span>categories</span></p></div><p>Each example includes code, a command and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
+-<section class="workflow-collection" id="build-something-useful"><header><p class="eyebrow">Eight complete AI applications</p><h2>Build something useful.</h2><p>Start with a real task. Run it offline, inspect the result, then connect a provider when you are ready.</p></header><div class="examples-card-grid"><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/repository-review/">Repository change reviewer <span aria-hidden="true">↗</span></a></h3><p>Review a Git diff and keep findings tied to added lines.</p><span class="example-card-file">review.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/ticket-triage/">Support ticket triage <span aria-hidden="true">↗</span></a></h3><p>Classify a ticket and draft a reply for a person to review.</p><span class="example-card-file">triage.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/document-extraction/">Document extraction pipeline <span aria-hidden="true">↗</span></a></h3><p>Turn invoice text into a validated record with source evidence.</p><span class="example-card-file">record.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/cited-research/">Research assistant with citations <span aria-hidden="true">↗</span></a></h3><p>Answer from a supplied document collection and retain exact quotes.</p><span class="example-card-file">answer.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/resumable-batch/">Resumable batch processor <span aria-hidden="true">↗</span></a></h3><p>Classify records, save checkpoints and continue after interruption.</p><span class="example-card-file">batch-results.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/safe-editor/">Safe tool-using assistant <span aria-hidden="true">↗</span></a></h3><p>Preview a proposed file edit and apply only the approved contents.</p><span class="example-card-file">proposal.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/prompt-regression/">Prompt regression lab <span aria-hidden="true">↗</span></a></h3><p>Compare prompt revisions against saved, labeled cases.</p><span class="example-card-file">evaluation.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/provider-fallback/">Provider fallback workflow <span aria-hidden="true">↗</span></a></h3><p>Try a second provider within a bounded request budget.</p><span class="example-card-file">routing.json</span></article></div><a class="workflow-bundle-link" href="/workflows/ai-workflows.zip">Download all eight applications + fixtures ↓</a></section>
++<header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>63</strong><span>total examples</span></p><p><strong>13</strong><span>AI applications</span></p></div><p>50 language samples + 13 AI applications. Each includes code, commands and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
++<section class="workflow-collection" id="build-something-useful"><header><p class="eyebrow">13 complete AI applications</p><h2>Build something useful.</h2><p>Start with a real task. Run it offline, inspect the result, then connect a provider when you are ready.</p></header><div class="examples-card-grid"><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/repository-review/">Repository change reviewer <span aria-hidden="true">↗</span></a></h3><p>Review a Git diff and keep findings tied to added lines.</p><span class="example-card-file">review.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/ticket-triage/">Support ticket triage <span aria-hidden="true">↗</span></a></h3><p>Classify a ticket and draft a reply for a person to review.</p><span class="example-card-file">triage.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/document-extraction/">Document extraction pipeline <span aria-hidden="true">↗</span></a></h3><p>Turn invoice text into a validated record with source evidence.</p><span class="example-card-file">record.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/cited-research/">Research assistant with citations <span aria-hidden="true">↗</span></a></h3><p>Answer from a supplied document collection and retain exact quotes.</p><span class="example-card-file">answer.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/resumable-batch/">Resumable batch processor <span aria-hidden="true">↗</span></a></h3><p>Classify records, save checkpoints and continue after interruption.</p><span class="example-card-file">batch-results.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/safe-editor/">Safe tool-using assistant <span aria-hidden="true">↗</span></a></h3><p>Preview a proposed file edit and apply only the approved contents.</p><span class="example-card-file">proposal.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/prompt-regression/">Prompt regression lab <span aria-hidden="true">↗</span></a></h3><p>Compare prompt revisions against saved, labeled cases.</p><span class="example-card-file">evaluation.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/provider-fallback/">Provider fallback workflow <span aria-hidden="true">↗</span></a></h3><p>Try a second provider within a bounded request budget.</p><span class="example-card-file">routing.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/redacted-summary/">Redact before summarizing <span aria-hidden="true">↗</span></a></h3><p>Remove known private values before sending a support note to a model.</p><span class="example-card-file">summary.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/grounded-analytics/">Explain computed metrics <span aria-hidden="true">↗</span></a></h3><p>Compute sales totals in code and check the numbers returned by the model.</p><span class="example-card-file">analysis.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/context-packing/">Pack context within a budget <span aria-hidden="true">↗</span></a></h3><p>Select whole passages within a byte budget and reject citations to omitted sources.</p><span class="example-card-file">context-answer.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/intent-routing/">Route requests through an allowlist <span aria-hidden="true">↗</span></a></h3><p>Map a model decision to a fixed local handler and send uncertain requests to review.</p><span class="example-card-file">route.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/response-cache/">Cache validated responses <span aria-hidden="true">↗</span></a></h3><p>Reuse a checked result only when its input, prompt, schema and provider identity match.</p><span class="example-card-file">cached-result.json</span></article></div><a class="workflow-bundle-link" href="/workflows/ai-workflows.zip">Download all 13 applications + fixtures ↓</a></section>
+ <div class="example-filter" hidden><div><label for="example-search">Search language samples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option><option>Basics</option><option>Data</option><option>Concurrency</option><option>AI runtime</option><option>Tooling</option><option>Systems</option><option>Text</option></select></div><p role="status" id="example-count"></p></div>
+ <nav class="examples-category-nav" aria-label="Example categories"><a href="#category-Basics"><span>01</span>Basics</a><a href="#category-Data"><span>02</span>Data</a><a href="#category-Concurrency"><span>03</span>Concurrency</a><a href="#category-AI-runtime"><span>04</span>AI runtime</a><a href="#category-Tooling"><span>05</span>Tooling</a><a href="#category-Systems"><span>06</span>Systems</a><a href="#category-Text"><span>07</span>Text</a></nav>
+ <section class="example-category-group" id="category-Basics"><header class="example-group-heading"><div><p class="eyebrow">01 / Explore</p><h2>Basics</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/hello-world/">Hello World <span aria-hidden="true">↗</span></a></h3><p>Print your first message.</p><span class="example-card-file">hello-world.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/variables/">Variables and types <span aria-hidden="true">↗</span></a></h3><p>Create variables with let and print their values.</p><span class="example-card-file">variables.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/functions/">Functions and operators <span aria-hidden="true">↗</span></a></h3><p>Add the numbers in an array with a function.</p><span class="example-card-file">functions.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/control-flow/">Control flow <span aria-hidden="true">↗</span></a></h3><p>Choose which code runs with a comparison.</p><span class="example-card-file">control-flow.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/errors/">Error handling <span aria-hidden="true">↗</span></a></h3><p>Catch an error and keep the program running.</p><span class="example-card-file">errors.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/type-conversion/">Convert text to numbers <span aria-hidden="true">↗</span></a></h3><p>Read an age and a balance from strings.</p><span class="example-card-file">type-conversion.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/optional-values/">Handle missing values <span aria-hidden="true">↗</span></a></h3><p>Look up users and handle both Some and None.</p><span class="example-card-file">optional-values.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/partial-application/">Capture function arguments <span aria-hidden="true">↗</span></a></h3><p>Make a reusable adder by capturing a value in a closure.</p><span class="example-card-file">partial-application.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/type-inspection/">Inspect value types <span aria-hidden="true">↗</span></a></h3><p>Inspect runtime types and check whether a value is a number or string.</p><span class="example-card-file">type-inspection.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/function-composition/">Compose functions <span aria-hidden="true">↗</span></a></h3><p>Pass one function result into the next to calculate a value or format text.</p><span class="example-card-file">function-composition.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/result-errors/">Return errors as values <span aria-hidden="true">↗</span></a></h3><p>Return Ok or Err from division and handle each result.</p><span class="example-card-file">result-errors.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/loop-control/">Break and continue <span aria-hidden="true">↗</span></a></h3><p>Stop a loop early and skip even numbers.</p><span class="example-card-file">loop-control.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/recursion/">Calculate a factorial <span aria-hidden="true">↗</span></a></h3><p>Call a function recursively until it reaches a base case.</p><span class="example-card-file">recursion.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/loop-scope/">Accumulate a total <span aria-hidden="true">↗</span></a></h3><p>Update a running total as a loop visits each number.</p><span class="example-card-file">loop-scope.kujo</span></article></div></section>
+diff --git a/content/pages/workflow-cited-research.md b/content/pages/workflow-cited-research.md
+index b5902d7..00c6bd8 100644
+--- a/content/pages/workflow-cited-research.md
++++ b/content/pages/workflow-cited-research.md
+@@ -52,4 +52,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Replace the documents and query terms in input.json. The retriever uses simple lexical matching; replace that step with ranked retrieval when the collection grows.</p><h3>Know the boundary</h3><p>An exact quote proves that text exists, not that it supports every claim in an answer. The result is marked needs_review; check the claim-to-citation relationship.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/cited-research/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>e58d88772a78042c180a740999d2f09e9f4b8eba56afd2bf8d7040346e0ce123</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/resumable-batch/"><span>Next workflow →</span><strong>Resumable batch processor</strong></a></nav>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/resumable-batch/"><span>Next workflow →</span><strong>Resumable batch processor</strong></a></nav>
+diff --git a/content/pages/workflow-document-extraction.md b/content/pages/workflow-document-extraction.md
+index 5313a79..8201f0e 100644
+--- a/content/pages/workflow-document-extraction.md
++++ b/content/pages/workflow-document-extraction.md
+@@ -37,4 +37,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Replace input.json.text with extracted document text and change the schema and grounding checks together. This example starts with text; PDF OCR and image extraction are separate steps.</p><h3>Know the boundary</h3><p>Substring evidence checks are intentionally small and inspectable. Repeated amounts and ambiguous invoices need stronger field-to-span validation and human review.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/document-extraction/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>b7b389bbd6c6fa19b5f1ab5a7a875a4d7f1b5f925ba506015bc9655bd6b2c3cd</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/cited-research/"><span>Next workflow →</span><strong>Research assistant with citations</strong></a></nav>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/cited-research/"><span>Next workflow →</span><strong>Research assistant with citations</strong></a></nav>
+diff --git a/content/pages/workflow-prompt-regression.md b/content/pages/workflow-prompt-regression.md
+index 02cf2ec..72f9572 100644
+--- a/content/pages/workflow-prompt-regression.md
++++ b/content/pages/workflow-prompt-regression.md
+@@ -43,4 +43,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Add representative cases and expected labels to input.json. Use live mode to collect actual model results, repeat runs and review errors before changing a production prompt.</p><h3>Know the boundary</h3><p>The offline score tests the evaluation machinery with authored responses. Two cases are not evidence of general prompt quality. Live results may vary even with temperature zero.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/prompt-regression/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>723e9d45e1730e8eb2139bd9e0982707fc05f19703eb4956d4eb77883cc1c665</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/provider-fallback/"><span>Next workflow →</span><strong>Provider fallback workflow</strong></a></nav>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/provider-fallback/"><span>Next workflow →</span><strong>Provider fallback workflow</strong></a></nav>
+diff --git a/content/pages/workflow-provider-fallback.md b/content/pages/workflow-provider-fallback.md
+index 6f81bff..3cd548a 100644
+--- a/content/pages/workflow-provider-fallback.md
++++ b/content/pages/workflow-provider-fallback.md
+@@ -48,4 +48,4 @@ export KUJO_BACKUP_MODEL=your-backup-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Configure primary and backup endpoint, model and key variables independently. Use providers that accept the OpenAI-compatible chat format. Tune timeout and output-token limits in common.kujo for your workload.</p><h3>Know the boundary</h3><p>The budget limits request count and per-request output tokens, not dollar spend. A timed-out provider may still complete and charge for a request. No unbounded retries or automatic provider discovery are performed.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/provider-fallback/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>eed3078a9bedba6f981cfd1f2cb97d75ad03c932c69b19fe60a7e440a1a3a9dd</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/repository-review/"><span>Next workflow →</span><strong>Repository change reviewer</strong></a></nav>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/redacted-summary/"><span>Next workflow →</span><strong>Redact before summarizing</strong></a></nav>
+diff --git a/content/pages/workflow-repository-review.md b/content/pages/workflow-repository-review.md
+index c36ad60..770e4d2 100644
+--- a/content/pages/workflow-repository-review.md
++++ b/content/pages/workflow-repository-review.md
+@@ -54,4 +54,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Replace input.json.diff with the output of git diff --no-ext-diff --unified=3. Keep the review local until a person checks it. This parser covers ordinary text diffs, not combined merge diffs or binary patches.</p><h3>Know the boundary</h3><p>Location checks establish where a finding points. A person must still judge whether the bug and suggested fix are correct.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/repository-review/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>991f69b77256e72addaf6caf0a116c722ed2cc30133de36aaa60cd65bc50fcd6</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/ticket-triage/"><span>Next workflow →</span><strong>Support ticket triage</strong></a></nav>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/ticket-triage/"><span>Next workflow →</span><strong>Support ticket triage</strong></a></nav>
+diff --git a/content/pages/workflow-resumable-batch.md b/content/pages/workflow-resumable-batch.md
+index 7253c1d..d48c811 100644
+--- a/content/pages/workflow-resumable-batch.md
++++ b/content/pages/workflow-resumable-batch.md
+@@ -57,4 +57,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Replace input.json.records with your batch. Live mode can process additional IDs without fixture files. Use a fresh directory when changing the input, schema or prompt. Run one worker per checkpoint directory.</p><h3>Know the boundary</h3><p>This is a single-process checkpoint pattern, not a distributed queue or a power-loss durability guarantee. A request interrupted before its checkpoint may be repeated.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/resumable-batch/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>432f802966da5fbf8aba03228edf4f31f80b24c1c924c31d039920456643e9b5</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/safe-editor/"><span>Next workflow →</span><strong>Safe tool-using assistant</strong></a></nav>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/safe-editor/"><span>Next workflow →</span><strong>Safe tool-using assistant</strong></a></nav>
+diff --git a/content/pages/workflow-safe-editor.md b/content/pages/workflow-safe-editor.md
+index f98a800..c14da96 100644
+--- a/content/pages/workflow-safe-editor.md
++++ b/content/pages/workflow-safe-editor.md
+@@ -47,4 +47,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Start in the extracted bundle directory, which includes a disposable draft.txt. Adapt the allowed path and content checks deliberately. Never pass the model output to a shell. preview.diff is a human before/after display, not an apply-ready patch.</p><h3>Know the boundary</h3><p>Approval is a content check, not an operating-system sandbox. Use a trusted local directory with a regular draft.txt and no concurrent writers. For hostile workspaces, use filesystem isolation and race-resistant file operations.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/safe-editor/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>71a66ddf8e99c892f9d34d53c10c3a0cd5374fd4a9398d53588d82ee3fdd66d3</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/prompt-regression/"><span>Next workflow →</span><strong>Prompt regression lab</strong></a></nav>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/prompt-regression/"><span>Next workflow →</span><strong>Prompt regression lab</strong></a></nav>
+diff --git a/content/pages/workflow-ticket-triage.md b/content/pages/workflow-ticket-triage.md
+index b4003f3..364a4f1 100644
+--- a/content/pages/workflow-ticket-triage.md
++++ b/content/pages/workflow-ticket-triage.md
+@@ -31,4 +31,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Replace input.json with a ticket from your own queue and adjust schema.json categories. Review the draft and billing facts before sending anything. The application has no sending integration.</p><h3>Know the boundary</h3><p>Schema validation cannot guarantee that a reply is appropriate or that its promises are true. The output remains awaiting_human_review.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/ticket-triage/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>bec8ab19733718f13d696dde6a77e8a54103bfcd1b7333f3cbeee265e535c85f</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/document-extraction/"><span>Next workflow →</span><strong>Document extraction pipeline</strong></a></nav>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/document-extraction/"><span>Next workflow →</span><strong>Document extraction pipeline</strong></a></nav>
+diff --git a/howl-ai-workflows.json b/howl-ai-workflows.json
+index 2d35e94..f4db957 100644
+--- a/howl-ai-workflows.json
++++ b/howl-ai-workflows.json
+@@ -136,6 +136,86 @@
+       "language": "kujo",
+       "caption": "Try a second provider within a bounded request budget.",
+       "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-redacted-summary",
++      "title": "Redact before summarizing",
++      "tagline": "Remove known private values before sending a support note to a model.",
++      "file": "public/workflows/redacted-summary/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/redacted-summary/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Remove known private values before sending a support note to a model.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-grounded-analytics",
++      "title": "Explain computed metrics",
++      "tagline": "Compute sales totals in code and check the numbers returned by the model.",
++      "file": "public/workflows/grounded-analytics/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/grounded-analytics/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Compute sales totals in code and check the numbers returned by the model.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-context-packing",
++      "title": "Pack context within a budget",
++      "tagline": "Select whole passages within a byte budget and reject citations to omitted sources.",
++      "file": "public/workflows/context-packing/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/context-packing/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Select whole passages within a byte budget and reject citations to omitted sources.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-intent-routing",
++      "title": "Route requests through an allowlist",
++      "tagline": "Map a model decision to a fixed local handler and send uncertain requests to review.",
++      "file": "public/workflows/intent-routing/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/intent-routing/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Map a model decision to a fixed local handler and send uncertain requests to review.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-response-cache",
++      "title": "Cache validated responses",
++      "tagline": "Reuse a checked result only when its input, prompt, schema and provider identity match.",
++      "file": "public/workflows/response-cache/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/response-cache/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Reuse a checked result only when its input, prompt, schema and provider identity match.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
+     }
+   ]
+ }
+diff --git a/howl-language-pages.json b/howl-language-pages.json
+index 69a2674..b99b003 100644
+--- a/howl-language-pages.json
++++ b/howl-language-pages.json
+@@ -1067,6 +1067,86 @@
+       "language": "kujo",
+       "caption": "Try a second provider within a bounded request budget.",
+       "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-redacted-summary",
++      "title": "Redact before summarizing",
++      "tagline": "Remove known private values before sending a support note to a model.",
++      "file": "public/workflows/redacted-summary/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/redacted-summary/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Remove known private values before sending a support note to a model.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-grounded-analytics",
++      "title": "Explain computed metrics",
++      "tagline": "Compute sales totals in code and check the numbers returned by the model.",
++      "file": "public/workflows/grounded-analytics/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/grounded-analytics/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Compute sales totals in code and check the numbers returned by the model.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-context-packing",
++      "title": "Pack context within a budget",
++      "tagline": "Select whole passages within a byte budget and reject citations to omitted sources.",
++      "file": "public/workflows/context-packing/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/context-packing/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Select whole passages within a byte budget and reject citations to omitted sources.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-intent-routing",
++      "title": "Route requests through an allowlist",
++      "tagline": "Map a model decision to a fixed local handler and send uncertain requests to review.",
++      "file": "public/workflows/intent-routing/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/intent-routing/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Map a model decision to a fixed local handler and send uncertain requests to review.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-response-cache",
++      "title": "Cache validated responses",
++      "tagline": "Reuse a checked result only when its input, prompt, schema and provider identity match.",
++      "file": "public/workflows/response-cache/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/response-cache/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Reuse a checked result only when its input, prompt, schema and provider identity match.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
+     }
+   ]
+ }
+diff --git a/howl-social.json b/howl-social.json
+index 25d7925..a754fcb 100644
+--- a/howl-social.json
++++ b/howl-social.json
+@@ -4382,6 +4382,86 @@
+       "language": "kujo",
+       "caption": "Try a second provider within a bounded request budget.",
+       "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-redacted-summary",
++      "title": "Redact before summarizing",
++      "tagline": "Remove known private values before sending a support note to a model.",
++      "file": "public/workflows/redacted-summary/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/redacted-summary/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Remove known private values before sending a support note to a model.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-grounded-analytics",
++      "title": "Explain computed metrics",
++      "tagline": "Compute sales totals in code and check the numbers returned by the model.",
++      "file": "public/workflows/grounded-analytics/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/grounded-analytics/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Compute sales totals in code and check the numbers returned by the model.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-context-packing",
++      "title": "Pack context within a budget",
++      "tagline": "Select whole passages within a byte budget and reject citations to omitted sources.",
++      "file": "public/workflows/context-packing/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/context-packing/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Select whole passages within a byte budget and reject citations to omitted sources.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-intent-routing",
++      "title": "Route requests through an allowlist",
++      "tagline": "Map a model decision to a fixed local handler and send uncertain requests to review.",
++      "file": "public/workflows/intent-routing/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/intent-routing/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Map a model decision to a fixed local handler and send uncertain requests to review.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-response-cache",
++      "title": "Cache validated responses",
++      "tagline": "Reuse a checked result only when its input, prompt, schema and provider identity match.",
++      "file": "public/workflows/response-cache/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/response-cache/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Reuse a checked result only when its input, prompt, schema and provider identity match.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
+     }
+   ]
+ }
+diff --git a/public/workflows/ai-workflows.zip b/public/workflows/ai-workflows.zip
+index fb118f5d13fbb9f187d661e40de8b1825b53afba..31939655d3b7379f60687088eeaca9b4412f3f98 100644
+GIT binary patch
+delta 13979
+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
+
+delta 627
+zcmXw#PiT^H7{~Rg1x<T-p<(US*S1zI-wqAbS;5BCY08Qj+GW+OyzH>hAiBheJTz#L
+z!S_(CE`_W^D-79EYW``t`8R?tQLNRWAR+2h2M_i0XZu~A&-eTM`0_kY{@$iiloC-P
+zDaq5@k^`=&A=wu83(1umzYidilIW6vNLq(Mc`F{L6gs?}%O5E#-P*zNNZLYuI~jUu
+zSmKUg60n|DsNRwf7WGIhNz~BeY^DRBm&|mhi(|v9!OaB`!x@R{dzj@RVIS{gGG_AZ
+zhcDZU?1^^Fy%6y$tHn@Opj6X7O(qj7MpUzdG`oTAu;i?yRd__iufhDHh}oP(H3f1&
+zW(yebGshwh;&0AN8VgRHF=8UG&>stqj?1V#7je9#MJ+E-qaSN|KZR_p7~y->PcLoI
+zp4-Jk+rpw&_5a1yQ-{!9=)l9&ULHR*z-9flm0)M+p<@p2TrHSsvy0=?E6p2;_*P)k
+zwJhC=9_y<Ty>+9p>Y{}aq+>FIMTNHbFjI8XvJdZyE}HgZ^sWqBsgJ(5@H)eh0CRir
+zv82$G0G_cA&E+j+i6&3NSGLpTF`(?E<#D`cYIhL&ii6@o1S@u$I*)5}20qZ6ibUNZ
+z)GJO}3*pP7&gRv`&W&YRjjLxS5S!N{R#oW3Bt9i1c0&<gs}kM60CmktjxgLc4|PRw
+SyVfJvR5q0?s#Lm*&6IylQ2P)7
+
+diff --git a/scripts/bundle-ai-workflows.py b/scripts/bundle-ai-workflows.py
+index f327112..eea9cc9 100644
+--- a/scripts/bundle-ai-workflows.py
++++ b/scripts/bundle-ai-workflows.py
+@@ -32,4 +32,4 @@ for item in catalog['items']:
+     bundle(base/(item['slug']+'.zip'), files)
+     all_files.update({item['slug']+'/'+name: value for name, value in files.items()})
+ bundle(base/'ai-workflows.zip', all_files)
+-print('Verified' if '--check' in sys.argv else 'Built', 'eight application ZIPs and the complete bundle')
++print('Verified' if '--check' in sys.argv else 'Built', len(catalog['items']), 'application ZIPs and the complete bundle')
+diff --git a/scripts/render-ai-workflows.mjs b/scripts/render-ai-workflows.mjs
+index a842a38..d90d69d 100644
+--- a/scripts/render-ai-workflows.mjs
++++ b/scripts/render-ai-workflows.mjs
+@@ -24,7 +24,7 @@ for(const x of catalog.items){
+ <section class="workflow-section"><h2>Connect a live provider</h2><p>Live mode sends your input to the configured provider and may cost money. Choose an OpenAI-compatible endpoint and model you can access, then set credentials in your environment. The example sends at most 1,024 output tokens per request and normally allows two attempts. The batch and regression examples apply that limit per item.</p>${block(live,false)}<p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>${esc(x.adapt)}</p><h3>Know the boundary</h3><p>${esc(x.limits)}</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo ${catalog.runtime}. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="${catalog.repository}/blob/main/${dir}/main.kujo">Application source</a> · <a href="${catalog.repository}/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>${hash}</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/${catalog.items[(catalog.items.indexOf(x)+1)%catalog.items.length].slug}/"><span>Next workflow →</span><strong>${esc(catalog.items[(catalog.items.indexOf(x)+1)%catalog.items.length].title)}</strong></a></nav>`;
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All ${catalog.items.length} applications</span><strong>Build something useful</strong></a><a href="/examples/${catalog.items[(catalog.items.indexOf(x)+1)%catalog.items.length].slug}/"><span>Next workflow →</span><strong>${esc(catalog.items[(catalog.items.indexOf(x)+1)%catalog.items.length].title)}</strong></a></nav>`;
+  const template='workflow-'+x.slug;
+  write(`templates/page-${template}.html`,`<main class="examples-site workflow-detail" id="main-content"><div class="examples-shell">${body}</div></main>\n`);
+  write(`content/pages/${template}.md`,`---\ntitle: ${x.title}\ntemplate: ${template}\ncustom_url: examples/${x.slug}\ndescription: "${x.description}"\nseo_title: "${x.title} | Kujo"\nsocial_image: /assets/images/social/examples-${x.slug}.jpg\n---\n\n${body}\n`);
+diff --git a/scripts/render-language-examples.mjs b/scripts/render-language-examples.mjs
+index 5266cef..4321649 100644
+--- a/scripts/render-language-examples.mjs
++++ b/scripts/render-language-examples.mjs
+@@ -1,6 +1,7 @@
+ import fs from 'node:fs';
+ import crypto from 'node:crypto';
+ const catalog=JSON.parse(fs.readFileSync('examples/catalog.json','utf8'));
++const workflows=JSON.parse(fs.readFileSync('workflows/catalog.json','utf8'));
+ const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+ const check=process.argv.includes('--check');
+ function write(path,text){if(check){if(!fs.existsSync(path)||fs.readFileSync(path,'utf8')!==text)throw Error(`Stale generated file: ${path}`);}else fs.writeFileSync(path,text);}
+@@ -36,8 +37,8 @@ for(const [i,x] of catalog.items.entries()){
+ }
+ page('examples','Kujo language examples','Browse Kujo examples with code, commands, expected output and source links.',`
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Examples</span></nav>
+-<header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>${catalog.items.length}</strong><span>verified samples</span></p><p><strong>${categories.length}</strong><span>categories</span></p></div><p>Each example includes code, a command and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
+-<section class="workflow-collection" id="build-something-useful"><header><p class="eyebrow">Eight complete AI applications</p><h2>Build something useful.</h2><p>Start with a real task. Run it offline, inspect the result, then connect a provider when you are ready.</p></header><div class="examples-card-grid">${JSON.parse(fs.readFileSync('workflows/catalog.json','utf8')).items.map(x=>`<article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/${x.slug}/">${esc(x.title)} <span aria-hidden="true">↗</span></a></h3><p>${esc(x.description)}</p><span class="example-card-file">${esc(x.artifact)}</span></article>`).join('')}</div><a class="workflow-bundle-link" href="/workflows/ai-workflows.zip">Download all eight applications + fixtures ↓</a></section>
++<header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>${catalog.items.length + workflows.items.length}</strong><span>total examples</span></p><p><strong>${workflows.items.length}</strong><span>AI applications</span></p></div><p>${catalog.items.length} language samples + ${workflows.items.length} AI applications. Each includes code, commands and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
++<section class="workflow-collection" id="build-something-useful"><header><p class="eyebrow">${workflows.items.length} complete AI applications</p><h2>Build something useful.</h2><p>Start with a real task. Run it offline, inspect the result, then connect a provider when you are ready.</p></header><div class="examples-card-grid">${workflows.items.map(x=>`<article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/${x.slug}/">${esc(x.title)} <span aria-hidden="true">↗</span></a></h3><p>${esc(x.description)}</p><span class="example-card-file">${esc(x.artifact)}</span></article>`).join('')}</div><a class="workflow-bundle-link" href="/workflows/ai-workflows.zip">Download all ${workflows.items.length} applications + fixtures ↓</a></section>
+ <div class="example-filter" hidden><div><label for="example-search">Search language samples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option>${categories.map(x=>`<option>${x}</option>`).join('')}</select></div><p role="status" id="example-count"></p></div>
+ <nav class="examples-category-nav" aria-label="Example categories">${categories.map((x,i)=>`<a href="#${categoryId(x)}"><span>${String(i+1).padStart(2,'0')}</span>${x}</a>`).join('')}</nav>
+ ${categories.map((cat,i)=>`<section class="example-category-group" id="${categoryId(cat)}"><header class="example-group-heading"><div><p class="eyebrow">${String(i+1).padStart(2,'0')} / Explore</p><h2>${cat}</h2></div></header><div class="examples-card-grid">${catalog.items.filter(x=>x.category===cat).map(x=>`<article data-example-card data-category="${cat}"><span class="example-badge">${verification(x)}</span><h3><a href="/examples/${x.slug}/">${esc(x.title)} <span aria-hidden="true">↗</span></a></h3><p>${esc(x.description)}</p><span class="example-card-file">${x.slug}.kujo</span></article>`).join('')}</div></section>`).join('\n')}
+diff --git a/scripts/test-ai-workflows-browser.cjs b/scripts/test-ai-workflows-browser.cjs
+index 6e689ea..c900743 100644
+--- a/scripts/test-ai-workflows-browser.cjs
++++ b/scripts/test-ai-workflows-browser.cjs
+@@ -9,7 +9,7 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
+  const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));const reports=[];
+  for(const width of [1440,390]){
+   await page.setViewportSize({width,height:1000});await page.goto(base+'/examples/');
+-  assert.equal(await page.locator('.workflow-card').count(),8);assert.equal(await page.locator('[data-example-card]').count(),50);
++  assert.equal(await page.locator('.workflow-card').count(),catalog.items.length);assert.equal(await page.locator('[data-example-card]').count(),JSON.parse(fs.readFileSync('examples/catalog.json')).items.length);
+   await page.locator('#build-something-useful').screenshot({path:dir+`/collection-${width}.png`});
+   for(const x of catalog.items){
+    await page.goto(base+'/examples/'+x.slug+'/',{waitUntil:'domcontentloaded'});
+@@ -30,6 +30,6 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
+    const zip=await context.request.get(base+'/workflows/'+x.slug+'.zip');assert(zip.ok());assert.deepEqual(await zip.body(),fs.readFileSync(`public/workflows/${x.slug}.zip`));
+   }
+  }
+- const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base+'/examples/');assert.equal(await p.locator('.workflow-card:visible').count(),8);await p.goto(base+'/examples/safe-editor/');assert.equal(await p.locator('[data-copy-code]:visible').count(),0);assert(await p.locator('.example-source code').isVisible());
+- fs.writeFileSync(dir+'/accessibility.json',JSON.stringify(reports,null,2)+'\n');assert.deepEqual(errors,[]);await browser.close();console.log('All eight workflow pages passed desktop/mobile, exact clipboard, archive parity, no-JS and accessibility checks.');
++ const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base+'/examples/');assert.equal(await p.locator('.workflow-card:visible').count(),catalog.items.length);await p.goto(base+'/examples/safe-editor/');assert.equal(await p.locator('[data-copy-code]:visible').count(),0);assert(await p.locator('.example-source code').isVisible());
++ fs.writeFileSync(dir+'/accessibility.json',JSON.stringify(reports,null,2)+'\n');assert.deepEqual(errors,[]);await browser.close();console.log('All workflow pages passed desktop/mobile, exact clipboard, archive parity, no-JS and accessibility checks.');
+ })().catch(e=>{console.error(e);process.exit(1)});
+diff --git a/scripts/test-examples-browser.cjs b/scripts/test-examples-browser.cjs
+index 548a959..536732d 100644
+--- a/scripts/test-examples-browser.cjs
++++ b/scripts/test-examples-browser.cjs
+@@ -17,7 +17,7 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
+   await page.locator('.example-filter').waitFor({state:'visible'});await fits();assert.equal(await page.locator('[data-example-card]:visible').count(),catalog.items.length);
+   assert(await page.locator('.site-footer').isVisible());assert.equal(await page.locator('h1').count(),1);
+   for(const stat of await page.locator('.examples-stats strong').all())assert(/departure/i.test(await stat.evaluate(el=>getComputedStyle(el).fontFamily)),'Statistics use Departure Mono');
+-  assert.equal(await page.locator('.examples-stats strong').first().textContent(),String(catalog.items.length));
++  assert.equal(await page.locator('.examples-stats strong').first().textContent(),String(catalog.items.length+JSON.parse(fs.readFileSync('workflows/catalog.json')).items.length));
+   await page.screenshot({path:`${evidence}/index-${name}.png`,fullPage:true});
+   await page.fill('#example-search','no-such-example');assert.equal(await page.locator('.example-category-group:visible').count(),0);assert.equal(await page.locator('#example-count').textContent(),'0 examples found');
+   await page.fill('#example-search','');
+diff --git a/scripts/verify-ai-workflows.py b/scripts/verify-ai-workflows.py
+index 8af1e52..22ebc0c 100644
+--- a/scripts/verify-ai-workflows.py
++++ b/scripts/verify-ai-workflows.py
+@@ -16,8 +16,9 @@ import zipfile
+ ROOT = pathlib.Path(__file__).resolve().parents[1]
+ BIN = os.environ.get('KUJO_BIN', 'kujo')
+ BASE = ROOT/'public/workflows'
+-SLUGS = sorted(p.name for p in BASE.iterdir() if p.is_dir())
+-OUTPUTS = dict(zip(['repository-review','ticket-triage','document-extraction','cited-research','resumable-batch','safe-editor','prompt-regression','provider-fallback'],['review.json','triage.json','record.json','answer.json','batch-results.json','proposal.json','evaluation.json','routing.json']))
++CATALOG = json.loads((ROOT/'workflows/catalog.json').read_text())
++SLUGS = [x['slug'] for x in CATALOG['items']]
++OUTPUTS = {x['slug']: x['artifact'] for x in CATALOG['items']}
+ 
+ class Workflows(unittest.TestCase):
+     def setUp(self):
+@@ -141,6 +142,92 @@ class Workflows(unittest.TestCase):
+         self.setup('provider-fallback');self.write('responses-backup.json',['{}']);self.run_program(code=2)
+         data=self.read('routing.json');self.assertIsNone(data['selected']);self.assertEqual(data['requests_remaining'],0)
+ 
++    def test_redaction_transport_and_output_boundary(self):
++        self.setup('redacted-summary');original=self.read('input.json')
++        with self.server(lambda path,body: {'summary':'A customer needs help.'}) as (url,calls):
++            self.run_program(KUJO_WORKFLOW_MODE='live',KUJO_AI_ENDPOINT=url+'/chat',KUJO_AI_MODEL='mock')
++            payload=json.dumps(calls[0]['body'])
++            for value in original['private_values']:self.assertNotIn(value,payload)
++            self.assertNotIn('private_values',payload)
++            self.assertEqual(self.read('summary.json')['redacted_input'].count('[REDACTED]'),3)
++        self.responses({'summary':original['private_values'][0]})
++        self.run_program(code=None)
++        self.responses({'summary':'A customer needs help.'});self.run_program()
++
++    def test_redaction_rejects_empty_filter(self):
++        self.setup('redacted-summary');data=self.read('input.json');data['private_values']=[''];self.write('input.json',data)
++        with self.server(lambda path,body: {'summary':'unused'}) as (url,calls):
++            self.run_program(code=None,KUJO_WORKFLOW_MODE='live',KUJO_AI_ENDPOINT=url+'/chat',KUJO_AI_MODEL='mock')
++            self.assertEqual(calls,[])
++
++    def test_analytics_checks_numbers_and_recovers(self):
++        self.setup('grounded-analytics');data=json.loads(self.read('responses.json')[0]);data['total_cents']=9999;self.responses(data)
++        self.run_program(code=None);self.assertFalse((self.path/'analysis.json').exists())
++        data['total_cents']=9000;self.responses(data);self.run_program()
++        self.assertEqual(self.read('analysis.json')['metrics'],{'order_count':3,'total_cents':9000})
++        data['order_count']=4;self.responses(data);self.run_program(code=None)
++
++    def test_analytics_rejects_bad_records_before_request(self):
++        self.setup('grounded-analytics');original=self.read('input.json')
++        with self.server(lambda path,body: {}) as (url,calls):
++            for amount in [-1,1.5]:
++                data=json.loads(json.dumps(original));data['orders'][0]['total_cents']=amount;self.write('input.json',data)
++                self.run_program(code=None,KUJO_WORKFLOW_MODE='live',KUJO_AI_ENDPOINT=url+'/chat',KUJO_AI_MODEL='mock')
++            data=json.loads(json.dumps(original));data['orders'][1]['id']='o1';self.write('input.json',data)
++            self.run_program(code=None,KUJO_WORKFLOW_MODE='live',KUJO_AI_ENDPOINT=url+'/chat',KUJO_AI_MODEL='mock')
++            self.assertEqual(calls,[])
++
++    def test_context_budget_no_request_and_recovery(self):
++        self.setup('context-packing');original=self.read('input.json');self.write('input.json',{**original,'budget_bytes':2})
++        with self.server(lambda path,body: {}) as (url,calls):
++            self.run_program(KUJO_WORKFLOW_MODE='live',KUJO_AI_ENDPOINT=url+'/chat',KUJO_AI_MODEL='mock')
++            self.assertEqual(calls,[]);self.assertEqual(self.read('context-answer.json')['status'],'insufficient_context')
++        self.write('input.json',original);self.run_program();data=self.read('context-answer.json')
++        self.assertEqual(data['selected_ids'],['retention','encryption']);self.assertEqual(data['omitted_ids'],['appendix'])
++        self.assertLessEqual(data['context_bytes'],180)
++        self.responses({'answer':'Invented','source_ids':['appendix']});self.run_program(code=None)
++
++    def test_context_utf8_and_duplicate_ids(self):
++        self.setup('context-packing');passages=[{'id':'unicode','text':'é'*20}]
++        self.write('input.json',{'question':'Explain','budget_bytes':200,'passages':passages})
++        with self.server(lambda path,body: {'answer':'Unicode passage','source_ids':['unicode']}) as (url,calls):
++            self.run_program(KUJO_WORKFLOW_MODE='live',KUJO_AI_ENDPOINT=url+'/chat',KUJO_AI_MODEL='mock')
++            data=self.read('context-answer.json');size=data['context_bytes']
++            self.assertGreater(size,len(json.dumps(passages,ensure_ascii=False,separators=(',',':'))))
++            self.write('input.json',{'question':'Explain','budget_bytes':size-1,'passages':passages});self.run_program()
++            self.assertEqual(self.read('context-answer.json')['status'],'insufficient_context')
++            self.write('input.json',{'question':'Explain','budget_bytes':200,'passages':passages*2});self.run_program(code=None)
++
++    def test_routing_policy_and_recovery(self):
++        self.setup('intent-routing');self.responses({'intent':'account','confidence':0.4});self.run_program()
++        self.assertEqual(self.read('route.json')['handler'],'human_review')
++        self.responses({'intent':'account','confidence':0.8});self.run_program();self.assertEqual(self.read('route.json')['handler'],'account_help')
++        self.assertFalse(self.read('route.json')['dispatched'])
++        self.responses({'intent':'shell','confidence':1});self.run_program(code=2)
++        self.responses({'intent':'billing','confidence':0.95});self.run_program();self.assertEqual(self.read('route.json')['handler'],'billing_review')
++
++    def test_cache_hit_invalidation_and_corruption(self):
++        self.setup('response-cache');self.run_program();first=self.read('cached-result.json');self.assertFalse(first['cache_hit'])
++        fixture=(self.path/'responses.json').read_bytes();(self.path/'responses.json').unlink();self.run_program()
++        self.assertTrue(self.read('cached-result.json')['cache_hit'])
++        data=self.read('input.json');data['prompt_revision']='v2';self.write('input.json',data);self.run_program(code=None)
++        (self.path/'responses.json').write_bytes(fixture);self.run_program();second=self.read('cached-result.json')
++        self.assertFalse(second['cache_hit']);self.assertNotEqual(first['key'],second['key'])
++        cached=self.read('cache.json');cached['data']={'label':'invented'};self.write('cache.json',cached);self.run_program(code=None)
++        (self.path/'cache.json').unlink();self.run_program();self.assertFalse(self.read('cached-result.json')['cache_hit'])
++
++    def test_cache_live_identity_and_schema_invalidation(self):
++        self.setup('response-cache')
++        with self.server(lambda path,body: {'label':'account'}) as (url,calls):
++            env=dict(KUJO_WORKFLOW_MODE='live',KUJO_AI_ENDPOINT=url+'/chat',KUJO_AI_MODEL='mock')
++            self.run_program(**env);self.run_program(**env);self.assertEqual(len(calls),1)
++            self.run_program(**{**env,'KUJO_AI_MODEL':'other'});self.assertEqual(len(calls),2)
++            self.run_program(**{**env,'KUJO_AI_ENDPOINT':url+'/other'});self.assertEqual(len(calls),3)
++            schema=self.read('schema.json');schema['properties']['label']['description']='Updated policy';self.write('schema.json',schema)
++            self.run_program(**env);self.assertEqual(len(calls),4)
++            p=self.path/'common.kujo';p.write_text(p.read_text()+'\n# New request policy revision\n')
++            self.run_program(**env);self.assertEqual(len(calls),5)
++
+     @contextlib.contextmanager
+     def server(self, responder):
+         calls=[]
+@@ -158,7 +245,7 @@ class Workflows(unittest.TestCase):
+         try:yield f'http://127.0.0.1:{server.server_port}',calls
+         finally:server.shutdown();server.server_close()
+ 
+-    def test_live_adapter_all_eight(self):
++    def test_live_adapter_all_applications(self):
+         for slug in SLUGS:
+             with self.subTest(slug=slug):
+                 old=self.path;self.path=old/slug;self.path.mkdir();self.setup(slug)
+diff --git a/templates/page-language-examples.html b/templates/page-language-examples.html
+index 9395a20..5022992 100644
+--- a/templates/page-language-examples.html
++++ b/templates/page-language-examples.html
+@@ -1,7 +1,7 @@
+ <main class="examples-site examples-index" id="main-content"><div class="examples-shell">
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Examples</span></nav>
+-<header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>50</strong><span>verified samples</span></p><p><strong>7</strong><span>categories</span></p></div><p>Each example includes code, a command and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
+-<section class="workflow-collection" id="build-something-useful"><header><p class="eyebrow">Eight complete AI applications</p><h2>Build something useful.</h2><p>Start with a real task. Run it offline, inspect the result, then connect a provider when you are ready.</p></header><div class="examples-card-grid"><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/repository-review/">Repository change reviewer <span aria-hidden="true">↗</span></a></h3><p>Review a Git diff and keep findings tied to added lines.</p><span class="example-card-file">review.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/ticket-triage/">Support ticket triage <span aria-hidden="true">↗</span></a></h3><p>Classify a ticket and draft a reply for a person to review.</p><span class="example-card-file">triage.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/document-extraction/">Document extraction pipeline <span aria-hidden="true">↗</span></a></h3><p>Turn invoice text into a validated record with source evidence.</p><span class="example-card-file">record.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/cited-research/">Research assistant with citations <span aria-hidden="true">↗</span></a></h3><p>Answer from a supplied document collection and retain exact quotes.</p><span class="example-card-file">answer.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/resumable-batch/">Resumable batch processor <span aria-hidden="true">↗</span></a></h3><p>Classify records, save checkpoints and continue after interruption.</p><span class="example-card-file">batch-results.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/safe-editor/">Safe tool-using assistant <span aria-hidden="true">↗</span></a></h3><p>Preview a proposed file edit and apply only the approved contents.</p><span class="example-card-file">proposal.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/prompt-regression/">Prompt regression lab <span aria-hidden="true">↗</span></a></h3><p>Compare prompt revisions against saved, labeled cases.</p><span class="example-card-file">evaluation.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/provider-fallback/">Provider fallback workflow <span aria-hidden="true">↗</span></a></h3><p>Try a second provider within a bounded request budget.</p><span class="example-card-file">routing.json</span></article></div><a class="workflow-bundle-link" href="/workflows/ai-workflows.zip">Download all eight applications + fixtures ↓</a></section>
++<header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>63</strong><span>total examples</span></p><p><strong>13</strong><span>AI applications</span></p></div><p>50 language samples + 13 AI applications. Each includes code, commands and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
++<section class="workflow-collection" id="build-something-useful"><header><p class="eyebrow">13 complete AI applications</p><h2>Build something useful.</h2><p>Start with a real task. Run it offline, inspect the result, then connect a provider when you are ready.</p></header><div class="examples-card-grid"><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/repository-review/">Repository change reviewer <span aria-hidden="true">↗</span></a></h3><p>Review a Git diff and keep findings tied to added lines.</p><span class="example-card-file">review.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/ticket-triage/">Support ticket triage <span aria-hidden="true">↗</span></a></h3><p>Classify a ticket and draft a reply for a person to review.</p><span class="example-card-file">triage.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/document-extraction/">Document extraction pipeline <span aria-hidden="true">↗</span></a></h3><p>Turn invoice text into a validated record with source evidence.</p><span class="example-card-file">record.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/cited-research/">Research assistant with citations <span aria-hidden="true">↗</span></a></h3><p>Answer from a supplied document collection and retain exact quotes.</p><span class="example-card-file">answer.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/resumable-batch/">Resumable batch processor <span aria-hidden="true">↗</span></a></h3><p>Classify records, save checkpoints and continue after interruption.</p><span class="example-card-file">batch-results.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/safe-editor/">Safe tool-using assistant <span aria-hidden="true">↗</span></a></h3><p>Preview a proposed file edit and apply only the approved contents.</p><span class="example-card-file">proposal.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/prompt-regression/">Prompt regression lab <span aria-hidden="true">↗</span></a></h3><p>Compare prompt revisions against saved, labeled cases.</p><span class="example-card-file">evaluation.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/provider-fallback/">Provider fallback workflow <span aria-hidden="true">↗</span></a></h3><p>Try a second provider within a bounded request budget.</p><span class="example-card-file">routing.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/redacted-summary/">Redact before summarizing <span aria-hidden="true">↗</span></a></h3><p>Remove known private values before sending a support note to a model.</p><span class="example-card-file">summary.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/grounded-analytics/">Explain computed metrics <span aria-hidden="true">↗</span></a></h3><p>Compute sales totals in code and check the numbers returned by the model.</p><span class="example-card-file">analysis.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/context-packing/">Pack context within a budget <span aria-hidden="true">↗</span></a></h3><p>Select whole passages within a byte budget and reject citations to omitted sources.</p><span class="example-card-file">context-answer.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/intent-routing/">Route requests through an allowlist <span aria-hidden="true">↗</span></a></h3><p>Map a model decision to a fixed local handler and send uncertain requests to review.</p><span class="example-card-file">route.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/response-cache/">Cache validated responses <span aria-hidden="true">↗</span></a></h3><p>Reuse a checked result only when its input, prompt, schema and provider identity match.</p><span class="example-card-file">cached-result.json</span></article></div><a class="workflow-bundle-link" href="/workflows/ai-workflows.zip">Download all 13 applications + fixtures ↓</a></section>
+ <div class="example-filter" hidden><div><label for="example-search">Search language samples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option><option>Basics</option><option>Data</option><option>Concurrency</option><option>AI runtime</option><option>Tooling</option><option>Systems</option><option>Text</option></select></div><p role="status" id="example-count"></p></div>
+ <nav class="examples-category-nav" aria-label="Example categories"><a href="#category-Basics"><span>01</span>Basics</a><a href="#category-Data"><span>02</span>Data</a><a href="#category-Concurrency"><span>03</span>Concurrency</a><a href="#category-AI-runtime"><span>04</span>AI runtime</a><a href="#category-Tooling"><span>05</span>Tooling</a><a href="#category-Systems"><span>06</span>Systems</a><a href="#category-Text"><span>07</span>Text</a></nav>
+ <section class="example-category-group" id="category-Basics"><header class="example-group-heading"><div><p class="eyebrow">01 / Explore</p><h2>Basics</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/hello-world/">Hello World <span aria-hidden="true">↗</span></a></h3><p>Print your first message.</p><span class="example-card-file">hello-world.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/variables/">Variables and types <span aria-hidden="true">↗</span></a></h3><p>Create variables with let and print their values.</p><span class="example-card-file">variables.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/functions/">Functions and operators <span aria-hidden="true">↗</span></a></h3><p>Add the numbers in an array with a function.</p><span class="example-card-file">functions.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/control-flow/">Control flow <span aria-hidden="true">↗</span></a></h3><p>Choose which code runs with a comparison.</p><span class="example-card-file">control-flow.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/errors/">Error handling <span aria-hidden="true">↗</span></a></h3><p>Catch an error and keep the program running.</p><span class="example-card-file">errors.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/type-conversion/">Convert text to numbers <span aria-hidden="true">↗</span></a></h3><p>Read an age and a balance from strings.</p><span class="example-card-file">type-conversion.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/optional-values/">Handle missing values <span aria-hidden="true">↗</span></a></h3><p>Look up users and handle both Some and None.</p><span class="example-card-file">optional-values.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/partial-application/">Capture function arguments <span aria-hidden="true">↗</span></a></h3><p>Make a reusable adder by capturing a value in a closure.</p><span class="example-card-file">partial-application.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/type-inspection/">Inspect value types <span aria-hidden="true">↗</span></a></h3><p>Inspect runtime types and check whether a value is a number or string.</p><span class="example-card-file">type-inspection.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/function-composition/">Compose functions <span aria-hidden="true">↗</span></a></h3><p>Pass one function result into the next to calculate a value or format text.</p><span class="example-card-file">function-composition.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/result-errors/">Return errors as values <span aria-hidden="true">↗</span></a></h3><p>Return Ok or Err from division and handle each result.</p><span class="example-card-file">result-errors.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/loop-control/">Break and continue <span aria-hidden="true">↗</span></a></h3><p>Stop a loop early and skip even numbers.</p><span class="example-card-file">loop-control.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/recursion/">Calculate a factorial <span aria-hidden="true">↗</span></a></h3><p>Call a function recursively until it reaches a base case.</p><span class="example-card-file">recursion.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/loop-scope/">Accumulate a total <span aria-hidden="true">↗</span></a></h3><p>Update a running total as a loop visits each number.</p><span class="example-card-file">loop-scope.kujo</span></article></div></section>
+diff --git a/templates/page-workflow-cited-research.html b/templates/page-workflow-cited-research.html
+index 80be97a..416ace1 100644
+--- a/templates/page-workflow-cited-research.html
++++ b/templates/page-workflow-cited-research.html
+@@ -43,4 +43,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Replace the documents and query terms in input.json. The retriever uses simple lexical matching; replace that step with ranked retrieval when the collection grows.</p><h3>Know the boundary</h3><p>An exact quote proves that text exists, not that it supports every claim in an answer. The result is marked needs_review; check the claim-to-citation relationship.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/cited-research/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>e58d88772a78042c180a740999d2f09e9f4b8eba56afd2bf8d7040346e0ce123</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/resumable-batch/"><span>Next workflow →</span><strong>Resumable batch processor</strong></a></nav></div></main>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/resumable-batch/"><span>Next workflow →</span><strong>Resumable batch processor</strong></a></nav></div></main>
+diff --git a/templates/page-workflow-document-extraction.html b/templates/page-workflow-document-extraction.html
+index 733296d..66cbb53 100644
+--- a/templates/page-workflow-document-extraction.html
++++ b/templates/page-workflow-document-extraction.html
+@@ -28,4 +28,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Replace input.json.text with extracted document text and change the schema and grounding checks together. This example starts with text; PDF OCR and image extraction are separate steps.</p><h3>Know the boundary</h3><p>Substring evidence checks are intentionally small and inspectable. Repeated amounts and ambiguous invoices need stronger field-to-span validation and human review.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/document-extraction/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>b7b389bbd6c6fa19b5f1ab5a7a875a4d7f1b5f925ba506015bc9655bd6b2c3cd</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/cited-research/"><span>Next workflow →</span><strong>Research assistant with citations</strong></a></nav></div></main>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/cited-research/"><span>Next workflow →</span><strong>Research assistant with citations</strong></a></nav></div></main>
+diff --git a/templates/page-workflow-prompt-regression.html b/templates/page-workflow-prompt-regression.html
+index e3c8608..e8f9abe 100644
+--- a/templates/page-workflow-prompt-regression.html
++++ b/templates/page-workflow-prompt-regression.html
+@@ -34,4 +34,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Add representative cases and expected labels to input.json. Use live mode to collect actual model results, repeat runs and review errors before changing a production prompt.</p><h3>Know the boundary</h3><p>The offline score tests the evaluation machinery with authored responses. Two cases are not evidence of general prompt quality. Live results may vary even with temperature zero.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/prompt-regression/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>723e9d45e1730e8eb2139bd9e0982707fc05f19703eb4956d4eb77883cc1c665</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/provider-fallback/"><span>Next workflow →</span><strong>Provider fallback workflow</strong></a></nav></div></main>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/provider-fallback/"><span>Next workflow →</span><strong>Provider fallback workflow</strong></a></nav></div></main>
+diff --git a/templates/page-workflow-provider-fallback.html b/templates/page-workflow-provider-fallback.html
+index b5e05b3..d31558b 100644
+--- a/templates/page-workflow-provider-fallback.html
++++ b/templates/page-workflow-provider-fallback.html
+@@ -39,4 +39,4 @@ export KUJO_BACKUP_MODEL=your-backup-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Configure primary and backup endpoint, model and key variables independently. Use providers that accept the OpenAI-compatible chat format. Tune timeout and output-token limits in common.kujo for your workload.</p><h3>Know the boundary</h3><p>The budget limits request count and per-request output tokens, not dollar spend. A timed-out provider may still complete and charge for a request. No unbounded retries or automatic provider discovery are performed.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/provider-fallback/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>eed3078a9bedba6f981cfd1f2cb97d75ad03c932c69b19fe60a7e440a1a3a9dd</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/repository-review/"><span>Next workflow →</span><strong>Repository change reviewer</strong></a></nav></div></main>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/redacted-summary/"><span>Next workflow →</span><strong>Redact before summarizing</strong></a></nav></div></main>
+diff --git a/templates/page-workflow-repository-review.html b/templates/page-workflow-repository-review.html
+index 991a232..9b6198a 100644
+--- a/templates/page-workflow-repository-review.html
++++ b/templates/page-workflow-repository-review.html
+@@ -45,4 +45,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Replace input.json.diff with the output of git diff --no-ext-diff --unified=3. Keep the review local until a person checks it. This parser covers ordinary text diffs, not combined merge diffs or binary patches.</p><h3>Know the boundary</h3><p>Location checks establish where a finding points. A person must still judge whether the bug and suggested fix are correct.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/repository-review/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>991f69b77256e72addaf6caf0a116c722ed2cc30133de36aaa60cd65bc50fcd6</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/ticket-triage/"><span>Next workflow →</span><strong>Support ticket triage</strong></a></nav></div></main>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/ticket-triage/"><span>Next workflow →</span><strong>Support ticket triage</strong></a></nav></div></main>
+diff --git a/templates/page-workflow-resumable-batch.html b/templates/page-workflow-resumable-batch.html
+index edd05b8..8c56261 100644
+--- a/templates/page-workflow-resumable-batch.html
++++ b/templates/page-workflow-resumable-batch.html
+@@ -48,4 +48,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Replace input.json.records with your batch. Live mode can process additional IDs without fixture files. Use a fresh directory when changing the input, schema or prompt. Run one worker per checkpoint directory.</p><h3>Know the boundary</h3><p>This is a single-process checkpoint pattern, not a distributed queue or a power-loss durability guarantee. A request interrupted before its checkpoint may be repeated.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/resumable-batch/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>432f802966da5fbf8aba03228edf4f31f80b24c1c924c31d039920456643e9b5</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/safe-editor/"><span>Next workflow →</span><strong>Safe tool-using assistant</strong></a></nav></div></main>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/safe-editor/"><span>Next workflow →</span><strong>Safe tool-using assistant</strong></a></nav></div></main>
+diff --git a/templates/page-workflow-safe-editor.html b/templates/page-workflow-safe-editor.html
+index 00a9a2c..1a7bbc5 100644
+--- a/templates/page-workflow-safe-editor.html
++++ b/templates/page-workflow-safe-editor.html
+@@ -38,4 +38,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Start in the extracted bundle directory, which includes a disposable draft.txt. Adapt the allowed path and content checks deliberately. Never pass the model output to a shell. preview.diff is a human before/after display, not an apply-ready patch.</p><h3>Know the boundary</h3><p>Approval is a content check, not an operating-system sandbox. Use a trusted local directory with a regular draft.txt and no concurrent writers. For hostile workspaces, use filesystem isolation and race-resistant file operations.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/safe-editor/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>71a66ddf8e99c892f9d34d53c10c3a0cd5374fd4a9398d53588d82ee3fdd66d3</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/prompt-regression/"><span>Next workflow →</span><strong>Prompt regression lab</strong></a></nav></div></main>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/prompt-regression/"><span>Next workflow →</span><strong>Prompt regression lab</strong></a></nav></div></main>
+diff --git a/templates/page-workflow-ticket-triage.html b/templates/page-workflow-ticket-triage.html
+index 2b4a5b6..b280707 100644
+--- a/templates/page-workflow-ticket-triage.html
++++ b/templates/page-workflow-ticket-triage.html
+@@ -22,4 +22,4 @@ export KUJO_AI_MODEL=your-model
+ kujo run main.kujo</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div><p>Live transport was tested against a controlled local HTTP server, including failure and timeout cases. No paid provider call or claim about model quality is part of this demo.</p></section>
+ <section class="workflow-section"><h2>Make it yours</h2><p>Replace input.json with a ticket from your own queue and adjust schema.json categories. Review the draft and billing facts before sending anything. The application has no sending integration.</p><h3>Know the boundary</h3><p>Schema validation cannot guarantee that a reply is appropriate or that its promises are true. The output remains awaiting_human_review.</p></section>
+ <details class="example-provenance"><summary>Source and verification</summary><div><p>Checked and executed with Kujo 1.9.0. Offline fixtures and local HTTP provider tests cover success, rejection and recovery.</p><p><a href="https://github.com/kujolang/kujolang.ai/blob/main/public/workflows/ticket-triage/main.kujo">Application source</a> · <a href="https://github.com/kujolang/kujolang.ai/blob/main/scripts/verify-ai-workflows.py">Executable verification suite</a></p><p class="example-checksum">Main source SHA-256 <code>bec8ab19733718f13d696dde6a77e8a54103bfcd1b7333f3cbeee265e535c85f</code></p></div></details>
+-<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All eight applications</span><strong>Build something useful</strong></a><a href="/examples/document-extraction/"><span>Next workflow →</span><strong>Document extraction pipeline</strong></a></nav></div></main>
++<nav class="example-pagination" aria-label="More AI workflows"><a href="/examples/#build-something-useful"><span>All 13 applications</span><strong>Build something useful</strong></a><a href="/examples/document-extraction/"><span>Next workflow →</span><strong>Document extraction pipeline</strong></a></nav></div></main>
+diff --git a/workflows/catalog.json b/workflows/catalog.json
+index 8adb294..81ccb83 100644
+--- a/workflows/catalog.json
++++ b/workflows/catalog.json
+@@ -121,6 +121,81 @@
+       "failure": "The primary fixture is invalid by design. Make the backup invalid too to exhaust the two-request budget and exit 2. Restore the backup fixture to recover. Tests also exercise a real local HTTP timeout.",
+       "adapt": "Configure primary and backup endpoint, model and key variables independently. Use providers that accept the OpenAI-compatible chat format. Tune timeout and output-token limits in common.kujo for your workload.",
+       "limits": "The budget limits request count and per-request output tokens, not dollar spend. A timed-out provider may still complete and charge for a request. No unbounded retries or automatic provider discovery are performed."
++    },
++    {
++      "slug": "redacted-summary",
++      "title": "Redact before summarizing",
++      "description": "Remove known private values before sending a support note to a model.",
++      "artifact": "summary.json",
++      "scenario": "A support note repeats a customer email and account ID. Both values stay local while the model receives a redacted copy.",
++      "steps": [
++        "Replace every occurrence of the configured private values locally.",
++        "Send only the redacted message, without the private-value list.",
++        "Reject an output containing a known private value and save a reviewable summary."
++      ],
++      "failure": "Put the original email into the response fixture. The output check rejects it. Restore the redacted fixture and rerun to recover.",
++      "adapt": "Replace the message and private_values together. Include every value that must stay local, with longer overlapping values first. Inspect the redacted request before adapting this to real customer data.",
++      "limits": "This exact-value filter is not a general detector of personal information. Unlisted, encoded or inferred details can pass through. The original input remains on disk; use appropriate local access controls."
++    },
++    {
++      "slug": "grounded-analytics",
++      "title": "Explain computed metrics",
++      "description": "Compute sales totals in code and check the numbers returned by the model.",
++      "artifact": "analysis.json",
++      "scenario": "Three orders total 9,000 cents. Code calculates the total; the model writes an explanation that must repeat the same count and amount.",
++      "steps": [
++        "Validate unique order IDs and nonnegative integer amounts.",
++        "Compute the order count and total locally, then send only those metrics.",
++        "Reject model numbers that disagree with the calculation."
++      ],
++      "failure": "Change total_cents in the response fixture to 9999. The comparison rejects it. Restore 9000 and rerun to recover.",
++      "adapt": "Replace the orders with your own records and keep money in integer minor units. Add deterministic calculations for new metrics before asking the model to explain them.",
++      "limits": "The numeric fields are checked, but the prose may still mislead. Review the explanation before sharing it. This example does not generate or execute SQL."
++    },
++    {
++      "slug": "context-packing",
++      "title": "Pack context within a budget",
++      "description": "Select whole passages within a byte budget and reject citations to omitted sources.",
++      "artifact": "context-answer.json",
++      "scenario": "Two short passages fit the context budget. A longer appendix is skipped, and the answer can cite only the selected passages.",
++      "steps": [
++        "Read passages in caller-supplied priority order and reject duplicate IDs.",
++        "Measure the serialized passage array in UTF-8 bytes before adding each passage.",
++        "Send the selected context and check every returned citation ID."
++      ],
++      "failure": "Set budget_bytes to 2. No passage fits, so the application writes insufficient_context without a model call. Restore the budget to recover. A citation to the omitted appendix is also rejected.",
++      "adapt": "Rank your passages before running the application. This example budgets the serialized context array only; reserve space for the question, instructions, schema and answer separately.",
++      "limits": "Bytes are not model tokens. This is a predictable context-size limit, not a provider token-limit guarantee. Citation IDs establish source membership, not whether a claim is supported."
++    },
++    {
++      "slug": "intent-routing",
++      "title": "Route requests through an allowlist",
++      "description": "Map a model decision to a fixed local handler and send uncertain requests to review.",
++      "artifact": "route.json",
++      "scenario": "A password-reset request is routed to the account-help queue. The model cannot choose a URL, shell command or arbitrary handler.",
++      "steps": [
++        "Request one of three allowed intents and a confidence value.",
++        "Apply a local confidence threshold before selecting a handler.",
++        "Write a routing decision for review without dispatching an external action."
++      ],
++      "failure": "Lower the fixture confidence to 0.4. The request goes to human_review. Restore 0.95 to recover. An intent outside the enum exhausts the bounded retries without creating a route.",
++      "adapt": "Change the schema enum and local handler map together. Calibrate a review threshold against labeled requests before using routing decisions in a real queue.",
++      "limits": "Model-reported confidence is not a calibrated probability. This example illustrates the policy boundary; it does not establish routing accuracy or send a message."
++    },
++    {
++      "slug": "response-cache",
++      "title": "Cache validated responses",
++      "description": "Reuse a checked result only when its input, prompt, schema and provider identity match.",
++      "artifact": "cached-result.json",
++      "scenario": "A repeated classification uses a local cached response. Changing the prompt revision or request content forces a new request.",
++      "steps": [
++        "Hash the input, prompt, schema, mode, provider identity and request code.",
++        "Validate a matching cache entry before using it.",
++        "Write a complete replacement cache after a successful request."
++      ],
++      "failure": "Run twice, deleting responses.json after the first run. The second run succeeds from cache. Change prompt_revision in input.json and it must request again; restore responses.json from the ZIP to recover.",
++      "adapt": "Change prompt_revision when policy changes. The key also covers the prompt and request code automatically. Use one trusted writer per directory and delete cache.json when you want a fresh result.",
++      "limits": "This local cache has no expiry or cross-process lock. It excludes credentials from the key, so use separate directories for different accounts or tenants. Model behavior can change under the same model name; invalidate the cache when that matters."
+     }
+   ]
+ }

@@ -1,0 +1,34 @@
+# Context
+
+- objective: Fill five AI application gaps and publish accurate catalog-derived example counts
+- git_head: 113792d
+- changed_files:
+  - content/pages/language-examples.md
+  - content/pages/workflow-cited-research.md
+  - content/pages/workflow-document-extraction.md
+  - content/pages/workflow-prompt-regression.md
+  - content/pages/workflow-provider-fallback.md
+  - content/pages/workflow-repository-review.md
+  - content/pages/workflow-resumable-batch.md
+  - content/pages/workflow-safe-editor.md
+  - content/pages/workflow-ticket-triage.md
+  - howl-ai-workflows.json
+  - howl-language-pages.json
+  - howl-social.json
+  - public/workflows/ai-workflows.zip
+  - scripts/bundle-ai-workflows.py
+  - scripts/render-ai-workflows.mjs
+  - scripts/render-language-examples.mjs
+  - scripts/test-ai-workflows-browser.cjs
+  - scripts/test-examples-browser.cjs
+  - scripts/verify-ai-workflows.py
+  - templates/page-language-examples.html
+  - templates/page-workflow-cited-research.html
+  - templates/page-workflow-document-extraction.html
+  - templates/page-workflow-prompt-regression.html
+  - templates/page-workflow-provider-fallback.html
+  - templates/page-workflow-repository-review.html
+  - templates/page-workflow-resumable-batch.html
+  - templates/page-workflow-safe-editor.html
+  - templates/page-workflow-ticket-triage.html
+  - workflows/catalog.json
