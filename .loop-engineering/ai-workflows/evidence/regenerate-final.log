@@ -1,0 +1,7 @@
+
+> kujolang-ai-site@1.3.1 workflows:generate
+> node scripts/render-ai-workflows.mjs && node scripts/render-language-examples.mjs && node scripts/render-language-howl.mjs && python3 scripts/bundle-ai-workflows.py
+
+Generated 8 AI workflow applications and walkthroughs.
+Updated 63 page showcase sources.
+Built eight application ZIPs and the complete bundle

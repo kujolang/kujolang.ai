@@ -1,0 +1,291 @@
+
+## gate: workflows_source
+$ npm run workflows:check
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 workflows:check
+> node scripts/render-ai-workflows.mjs --check && python3 scripts/bundle-ai-workflows.py --check
+
+Checked 8 AI workflow applications and walkthroughs.
+Verified eight application ZIPs and the complete bundle
+gate workflows_source: pass
+
+## gate: workflows_runtime
+$ npm run workflows:verify
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 workflows:verify
+> python3 scripts/verify-ai-workflows.py
+
+test_batch_detects_changed_input (__main__.Workflows) ... ok
+test_batch_rejects_duplicate_ids (__main__.Workflows) ... ok
+test_batch_resume_skips_completed_requests (__main__.Workflows) ... ok
+test_bounded_invalid_responses (__main__.Workflows) ... ok
+test_editor_rejects_other_paths (__main__.Workflows) ... ok
+test_editor_rejects_stale_file (__main__.Workflows) ... ok
+test_editor_requires_exact_approval (__main__.Workflows) ... ok
+test_extraction_rejects_invented_amount (__main__.Workflows) ... ok
+test_extraction_rejects_invented_due_date (__main__.Workflows) ... ok
+test_fallback_exhaustion (__main__.Workflows) ... ok
+test_hundred_record_batch (__main__.Workflows) ... ok
+test_live_adapter_all_eight (__main__.Workflows) ... ok
+test_live_timeout_falls_back (__main__.Workflows) ... ok
+test_offline_outputs (__main__.Workflows) ... ok
+test_regression_gate_and_recovery (__main__.Workflows) ... ok
+test_research_no_evidence_and_recovery (__main__.Workflows) ... ok
+test_research_rejects_fabricated_quote (__main__.Workflows) ... ok
+test_review_rejects_invented_location (__main__.Workflows) ... ok
+test_ticket_rejects_invented_invoice (__main__.Workflows) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 8.974s
+
+OK
+gate workflows_runtime: pass
+
+## gate: examples_source
+$ npm run examples:check
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 examples:check
+> node scripts/render-language-examples.mjs --check && python3 scripts/bundle-language-examples.py --check
+
+Samples archive matches every sample and fixture
+gate examples_source: pass
+
+## gate: examples_runtime
+$ npm run examples:verify
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 examples:verify
+> python3 scripts/verify-language-examples.py
+
+hello-world: run passed
+variables: run passed
+functions: run passed
+control-flow: run passed
+collections: run passed
+structs: run passed
+pattern-matching: run passed
+errors: run passed
+async: run passed
+channels: run passed
+generators: run passed
+json: run passed
+structured-output: run passed
+request-hash: run passed
+replay: run passed
+streaming: run passed
+capabilities: run passed
+tests: test-run passed
+modules: check passed
+files: check passed
+http: check passed
+string-interpolation: run passed
+split-and-join: run passed
+url-encoding: run passed
+url-decoding: run passed
+type-conversion: run passed
+data-access: run passed
+array-spread: run passed
+map-and-filter: run passed
+array-utilities: run passed
+nested-dictionaries: run passed
+optional-values: run passed
+partial-application: run passed
+type-inspection: run passed
+function-composition: run passed
+result-errors: run passed
+loop-control: run passed
+recursion: run passed
+loop-scope: run passed
+canonical-json: run passed
+csv: run passed
+yaml: run passed
+toml: run passed
+path-components: run passed
+log-timestamps: run passed
+secret-redaction: run passed
+password-verification: run passed
+vector-search: run passed
+response-envelope: run passed
+token-budget: run passed
+50 pinned examples verified
+AI capability denied without grant and allowed with explicit grant
+Nested page route acceptance and traversal rejection passed
+gate examples_runtime: pass
+
+## gate: node_tests
+$ npm test
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 test
+> node --test tests/*.test.mjs
+
+✔ published projections match the validated catalog (49.194318ms)
+✔ reject unknown status (3.193535ms)
+✔ reject missing source (1.709437ms)
+✔ reject broken source (2.636438ms)
+✔ reject unknown Kujo fact (1.61376ms)
+✔ reject broken related page (1.544888ms)
+✔ reject path traversal (1.722934ms)
+✔ reject social card path traversal (1.411741ms)
+✔ reject missing competitor recommendation (1.836724ms)
+✔ reject missing identity provenance (2.682356ms)
+✔ reject duplicate route (2.786659ms)
+✔ reject invalid review date (2.131555ms)
+✔ hub rejects a stale fact reference before publication (2.622346ms)
+✔ hub rejects a missing language cell rather than shifting columns (2.918273ms)
+✔ direct comparisons reject architecture claims without valid evidence (2.192525ms)
+✔ direct comparisons reject incomplete decision rows (2.770947ms)
+✔ each technical comparison publishes its evaluation plan in HTML and Markdown (5.932983ms)
+✔ guides reject unsourced architecture cards and matrix claims (5.452998ms)
+✔ guides reject incomplete examples instead of shifting table columns (2.010636ms)
+✔ every guide preserves its detailed criteria and examples in HTML and Markdown (5.892814ms)
+✔ boundary table rejects missing evidence and malformed rows (2.179068ms)
+✔ boundary results survive both projections and HTML escapes fixture text (8.299137ms)
+✔ BAML hub execution points to runtime evidence, not compiler diagnostics (1.238393ms)
+✔ guide templates stay in sync with authored content (175.24891ms)
+✔ performance evidence agrees with the published receipt (0.93725ms)
+✔ provider registry contains each requested integration exactly once (2.421896ms)
+✔ every registered local logo exists (23.959542ms)
+✔ creates deterministic responsive WebP variants without enlarging small images (571.031146ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 990.054347
+gate node_tests: pass
+
+## gate: build
+$ python3 .loop-engineering/ai-workflows/evidence/rebuild-with-verified-images.py
+╔════════════════════════════════════════════════╗
+║        Kujo Static Site Generator              ║
+╚════════════════════════════════════════════════╝
+
+Loaded configuration from kujo-ssg.yml
+Build complete
+  Posts generated: 0
+  Pages generated: 65
+  Output directory: output
+  Build time: 19.557787129s
+Full build completed; 1167 responsive variants reused with unchanged input, algorithm and output hashes.
+gate build: pass
+
+## gate: responsive
+$ npm run images:verify
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 images:verify
+> node scripts/verify-responsive-images.mjs
+
+Responsive image contract passed for 556 rendered images.
+gate responsive: pass
+
+## gate: site_contract
+$ bash scripts/verify-site-contract.sh output
+Responsive image contract passed for 556 rendered images.
+Social cards verified: 318 cards cover 318 shareable routes; 404 uses the branded home fallback.
+Site contract passed: 57 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.
+gate site_contract: pass
+
+## gate: generated_output
+$ bash scripts/validate-generated-output.sh output
+Checked HTML files: 319
+Validation passed
+gate generated_output: pass
+
+## gate: language_contract
+$ npm run language:verify
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 language:verify
+> python3 scripts/verify-language-site.py
+
+Language-first content, all example routes, internal links, sitemap and static fallback passed
+gate language_contract: pass
+
+## gate: social
+$ npm run social:verify
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 social:verify
+> node scripts/verify-social-cards.mjs
+
+Social cards verified: 318 cards cover 318 shareable routes; 404 uses the branded home fallback.
+gate social: pass
+
+## gate: comparisons
+$ npm run compare:verify
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+
+> kujolang-ai-site@1.3.1 compare:verify
+> python3 scripts/verify-comparisons.py
+
+{
+  "routes": 8,
+  "internalLinksChecked": 333,
+  "errors": [],
+  "passed": true
+}
+gate comparisons: pass
+
+## gate: javascript
+$ node --check assets/js/site.js
+gate javascript: pass
+
+## gate: shell
+$ bash -n scripts/*.sh
+gate shell: pass
+
+## gate: audit
+$ npm audit --omit=dev
+npm warn Unknown user config "python". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.
+found 0 vulnerabilities
+gate audit: pass
+
+## gate: browser
+$ node scripts/test-language-browser.cjs
+Browser: selection, exact clipboard, filter, no-JS, mobile menu, responsive layouts and console passed
+gate browser: pass
+
+## gate: examples_browser
+$ node scripts/test-examples-browser.cjs
+Examples: all 50 pages, source/clipboard integrity, output copying, in-block icons, responsive layouts, filtering, no-JS and accessibility passed
+gate examples_browser: pass
+
+## gate: guides_source
+$ node scripts/render-language-guides.mjs --check
+gate guides_source: pass
+
+## gate: guides_browser
+$ node scripts/test-guides-browser.cjs
+Guides: three responsive layouts, exact code/clipboard, aligned feedback, receipt details, accessibility, no-JS and all homepage destinations passed
+gate guides_browser: pass
+
+## gate: seo_scope
+$ python3 scripts/verify-language-seo.py
+Passed canonical, unique metadata, H1, breadcrumb and source alignment checks for 63 pages.
+gate seo_scope: pass
+
+## gate: howl_sources
+$ node scripts/render-language-howl.mjs --check
+Checked 63 page showcase sources.
+gate howl_sources: pass
+
+## gate: howl_manifest
+$ ../howl/bin/howl validate --manifest howl-language-pages.json
+ok: howl-language-pages.json is valid (63 card(s))
+gate howl_manifest: pass
+
+## gate: workflows_browser
+$ node scripts/test-ai-workflows-browser.cjs
+All eight workflow pages passed desktop/mobile, exact clipboard, archive parity, no-JS and accessibility checks.
+gate workflows_browser: pass
+
+## gate: diff
+$ git diff --check
+gate diff: pass

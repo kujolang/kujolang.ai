@@ -1,0 +1,34 @@
+[
+  {
+    "slug": "repository-review",
+    "violations": []
+  },
+  {
+    "slug": "ticket-triage",
+    "violations": []
+  },
+  {
+    "slug": "document-extraction",
+    "violations": []
+  },
+  {
+    "slug": "cited-research",
+    "violations": []
+  },
+  {
+    "slug": "resumable-batch",
+    "violations": []
+  },
+  {
+    "slug": "safe-editor",
+    "violations": []
+  },
+  {
+    "slug": "prompt-regression",
+    "violations": []
+  },
+  {
+    "slug": "provider-fallback",
+    "violations": []
+  }
+]

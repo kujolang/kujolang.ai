@@ -1,0 +1,24 @@
+test_batch_detects_changed_input (__main__.Workflows) ... ok
+test_batch_rejects_duplicate_ids (__main__.Workflows) ... ok
+test_batch_resume_skips_completed_requests (__main__.Workflows) ... ok
+test_bounded_invalid_responses (__main__.Workflows) ... ok
+test_editor_rejects_other_paths (__main__.Workflows) ... ok
+test_editor_rejects_stale_file (__main__.Workflows) ... ok
+test_editor_requires_exact_approval (__main__.Workflows) ... ok
+test_extraction_rejects_invented_amount (__main__.Workflows) ... ok
+test_extraction_rejects_invented_due_date (__main__.Workflows) ... ok
+test_fallback_exhaustion (__main__.Workflows) ... ok
+test_hundred_record_batch (__main__.Workflows) ... ok
+test_live_adapter_all_eight (__main__.Workflows) ... ok
+test_live_timeout_falls_back (__main__.Workflows) ... ok
+test_offline_outputs (__main__.Workflows) ... ok
+test_regression_gate_and_recovery (__main__.Workflows) ... ok
+test_research_no_evidence_and_recovery (__main__.Workflows) ... ok
+test_research_rejects_fabricated_quote (__main__.Workflows) ... ok
+test_review_rejects_invented_location (__main__.Workflows) ... ok
+test_ticket_rejects_invented_invoice (__main__.Workflows) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 9.071s
+
+OK

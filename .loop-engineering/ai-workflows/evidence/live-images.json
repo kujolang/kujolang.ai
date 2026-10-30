@@ -1,0 +1,42 @@
+[
+  {
+    "path": "assets/images/social/examples-repository-review.jpg",
+    "sha256": "eb7de815ab171432a49c3f11ab9041cd2a04a615beeade85c8b098aa485d38a7",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-ticket-triage.jpg",
+    "sha256": "eff07b7dfbd84d4f84feece5231d9c7416d9aa127f07c52a11ec0e22e7e0cbcb",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-document-extraction.jpg",
+    "sha256": "0430b57515f4368f523bd9e38cb487509da1b66b1c3775c9982969c6d5ebb3f7",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-cited-research.jpg",
+    "sha256": "41c78a54747199740ce9860f9be69cfd6236f984547d2d21e2e850703c561deb",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-resumable-batch.jpg",
+    "sha256": "d9825f76850f4f0027112681c0d990d68e12d5a045c94480966ffd4d79fb0149",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-safe-editor.jpg",
+    "sha256": "6f088f3c0598ce53ddf5354581ceeddb34cbb824ae5643c774787d1d21cca2a3",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-prompt-regression.jpg",
+    "sha256": "7d629004d07cab29fbb8413aeb67138d88e71818d5c5368d3f577f6f4c15c07d",
+    "status": 200
+  },
+  {
+    "path": "assets/images/social/examples-provider-fallback.jpg",
+    "sha256": "27258e70730bb439b188ad7b6561c16d1e3e06cff14309703bbab2932c7e130f",
+    "status": 200
+  }
+]

@@ -1,0 +1,45 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+... Skipped lines
+
+  'from common import load, save, config, request, require_result\n' +
+    '\n' +
+    'let input := load("input.json")\n' +
+    'let result := request(config(), "Extract invoice fields from the text. Use null for an absent due date. Copy an exact evidence quote for the amount; never invent missing facts.", input, "responses.json", load("schema.json"))\n' +
+    'let data := require_result(result)\n' +
+...
+    'assert(contains(data["evidence"], to_string(data["total"])), "Amount is not in the evidence")\n' +
+-   'assert(data["due_date"] == null || contains(input["text"], data["due_date"]), "Due date is not in the document")\n' +
+    'mut missing := []\n' +
+    'if data["due_date"] == null { missing = push(missing, "due_date") }\n' +
+    'save("record.json", {"record": data, "missing_fields": missing, "ready_for_review": true, "attempts": result["attempts"]})\n' +
+    'print("Saved record.json with evidence and missing fields.")\n'
+
+    at /Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/scripts/test-ai-workflows-browser.cjs:19:11 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'from common import load, save, config, request, require_result\n' +
+    '\n' +
+    'let input := load("input.json")\n' +
+    'let result := request(config(), "Extract invoice fields from the text. Use null for an absent due date. Copy an exact evidence quote for the amount; never invent missing facts.", input, "responses.json", load("schema.json"))\n' +
+    'let data := require_result(result)\n' +
+    'assert(contains(input["text"], data["invoice"]), "Invoice ID is not grounded")\n' +
+    'assert(contains(input["text"], data["evidence"]), "Evidence is not in the document")\n' +
+    'assert(contains(data["evidence"], data["currency"]), "Currency is not in the evidence")\n' +
+    'assert(contains(data["evidence"], to_string(data["total"])), "Amount is not in the evidence")\n' +
+    'mut missing := []\n' +
+    '...',
+  expected: 'from common import load, save, config, request, require_result\n' +
+    '\n' +
+    'let input := load("input.json")\n' +
+    'let result := request(config(), "Extract invoice fields from the text. Use null for an absent due date. Copy an exact evidence quote for the amount; never invent missing facts.", input, "responses.json", load("schema.json"))\n' +
+    'let data := require_result(result)\n' +
+    'assert(contains(input["text"], data["invoice"]), "Invoice ID is not grounded")\n' +
+    'assert(contains(input["text"], data["evidence"]), "Evidence is not in the document")\n' +
+    'assert(contains(data["evidence"], data["currency"]), "Currency is not in the evidence")\n' +
+    'assert(contains(data["evidence"], to_string(data["total"])), "Amount is not in the evidence")\n' +
+    'assert(data["due_date"] == null || contains(input["text"], data["due_date"]), "Due date is not in the document")\n' +
+    '...',
+  operator: 'strictEqual',
+  diff: 'simple'
+}

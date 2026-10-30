@@ -1,0 +1,1 @@
+The initial full gate run began before a final grounding check was added for non-null extracted due dates. A nineteenth runtime test proves invented dates are rejected. The final build must include that check and the reviewed dark-panel label contrast correction. Preserve the first run as intermediate evidence; use the final run for release acceptance.

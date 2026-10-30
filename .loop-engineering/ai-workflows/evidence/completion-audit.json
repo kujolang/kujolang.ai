@@ -1,0 +1,29 @@
+{
+  "objective": "Add all eight proposed AI workflow applications",
+  "workflows": [
+    "repository-review",
+    "ticket-triage",
+    "document-extraction",
+    "cited-research",
+    "resumable-batch",
+    "safe-editor",
+    "prompt-regression",
+    "provider-fallback"
+  ],
+  "application_tests": 19,
+  "native_gates": 24,
+  "live_routes": 65,
+  "live_accessibility_pages": 8,
+  "matching_social_images": 8,
+  "combined_bundle_sha256": "6f9e06acf627992527c72c716ec571c813b2349dedcca62e8992b905ddac74c4",
+  "individual_bundles": "Byte parity checked in live browser suite; executed in isolated runtime tests",
+  "walkthrough_requirements": "Each catalog item has scenario, steps, failure/recovery, adaptation and limitations; each application includes input/schema/offline fixtures/live adapter/output artifact",
+  "original_samples": 50,
+  "commits": [
+    "595875d",
+    "708031d",
+    "d104148"
+  ],
+  "deployment": "https://github.com/kujolang/kujolang.ai/actions/runs/41073014596",
+  "remaining": []
+}

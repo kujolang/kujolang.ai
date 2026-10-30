@@ -1,0 +1,333 @@
+{
+  "run_id": 41073014596,
+  "run_url": "https://github.com/kujolang/kujolang.ai/actions/runs/41073014596",
+  "deployed_commit": "d10414810cc801e86bc964c0bd4997b8b6071d22",
+  "conclusion": "success",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/"
+    },
+    {
+      "route": "/language/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/language/"
+    },
+    {
+      "route": "/examples/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/"
+    },
+    {
+      "route": "/development-workflow/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/development-workflow/"
+    },
+    {
+      "route": "/performance/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/performance/"
+    },
+    {
+      "route": "/ecosystem/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/ecosystem/"
+    },
+    {
+      "route": "/compare/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/compare/"
+    },
+    {
+      "route": "/examples/hello-world/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/hello-world/"
+    },
+    {
+      "route": "/examples/variables/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/variables/"
+    },
+    {
+      "route": "/examples/functions/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/functions/"
+    },
+    {
+      "route": "/examples/control-flow/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/control-flow/"
+    },
+    {
+      "route": "/examples/collections/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/collections/"
+    },
+    {
+      "route": "/examples/structs/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/structs/"
+    },
+    {
+      "route": "/examples/pattern-matching/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/pattern-matching/"
+    },
+    {
+      "route": "/examples/errors/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/errors/"
+    },
+    {
+      "route": "/examples/async/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/async/"
+    },
+    {
+      "route": "/examples/channels/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/channels/"
+    },
+    {
+      "route": "/examples/generators/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/generators/"
+    },
+    {
+      "route": "/examples/json/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/json/"
+    },
+    {
+      "route": "/examples/structured-output/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/structured-output/"
+    },
+    {
+      "route": "/examples/request-hash/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/request-hash/"
+    },
+    {
+      "route": "/examples/replay/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/replay/"
+    },
+    {
+      "route": "/examples/streaming/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/streaming/"
+    },
+    {
+      "route": "/examples/capabilities/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/capabilities/"
+    },
+    {
+      "route": "/examples/tests/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/tests/"
+    },
+    {
+      "route": "/examples/modules/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/modules/"
+    },
+    {
+      "route": "/examples/files/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/files/"
+    },
+    {
+      "route": "/examples/http/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/http/"
+    },
+    {
+      "route": "/examples/string-interpolation/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/string-interpolation/"
+    },
+    {
+      "route": "/examples/split-and-join/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/split-and-join/"
+    },
+    {
+      "route": "/examples/url-encoding/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/url-encoding/"
+    },
+    {
+      "route": "/examples/url-decoding/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/url-decoding/"
+    },
+    {
+      "route": "/examples/type-conversion/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/type-conversion/"
+    },
+    {
+      "route": "/examples/data-access/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/data-access/"
+    },
+    {
+      "route": "/examples/array-spread/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/array-spread/"
+    },
+    {
+      "route": "/examples/map-and-filter/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/map-and-filter/"
+    },
+    {
+      "route": "/examples/array-utilities/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/array-utilities/"
+    },
+    {
+      "route": "/examples/nested-dictionaries/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/nested-dictionaries/"
+    },
+    {
+      "route": "/examples/optional-values/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/optional-values/"
+    },
+    {
+      "route": "/examples/partial-application/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/partial-application/"
+    },
+    {
+      "route": "/examples/type-inspection/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/type-inspection/"
+    },
+    {
+      "route": "/examples/function-composition/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/function-composition/"
+    },
+    {
+      "route": "/examples/result-errors/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/result-errors/"
+    },
+    {
+      "route": "/examples/loop-control/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/loop-control/"
+    },
+    {
+      "route": "/examples/recursion/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/recursion/"
+    },
+    {
+      "route": "/examples/loop-scope/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/loop-scope/"
+    },
+    {
+      "route": "/examples/canonical-json/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/canonical-json/"
+    },
+    {
+      "route": "/examples/csv/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/csv/"
+    },
+    {
+      "route": "/examples/yaml/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/yaml/"
+    },
+    {
+      "route": "/examples/toml/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/toml/"
+    },
+    {
+      "route": "/examples/path-components/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/path-components/"
+    },
+    {
+      "route": "/examples/log-timestamps/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/log-timestamps/"
+    },
+    {
+      "route": "/examples/secret-redaction/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/secret-redaction/"
+    },
+    {
+      "route": "/examples/password-verification/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/password-verification/"
+    },
+    {
+      "route": "/examples/vector-search/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/vector-search/"
+    },
+    {
+      "route": "/examples/response-envelope/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/response-envelope/"
+    },
+    {
+      "route": "/examples/token-budget/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/token-budget/"
+    },
+    {
+      "route": "/examples/repository-review/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/repository-review/"
+    },
+    {
+      "route": "/examples/ticket-triage/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/ticket-triage/"
+    },
+    {
+      "route": "/examples/document-extraction/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/document-extraction/"
+    },
+    {
+      "route": "/examples/cited-research/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/cited-research/"
+    },
+    {
+      "route": "/examples/resumable-batch/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/resumable-batch/"
+    },
+    {
+      "route": "/examples/safe-editor/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/safe-editor/"
+    },
+    {
+      "route": "/examples/prompt-regression/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/prompt-regression/"
+    },
+    {
+      "route": "/examples/provider-fallback/",
+      "status": 200,
+      "canonical": "https://kujolang.ai/examples/provider-fallback/"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+objective: "Ship all eight complete AI workflow applications with offline/live paths, walkthroughs and verification"
+max_iterations: 1
+max_no_progress: 2
+max_consecutive_failures: 3
+
+allowed_actions:
+  - read_files
+  - edit_files
+  - run_tests
+  - commit_local_changes
+  - add_project_assets
+  - convert_project_assets
+  - deploy
+
+blocked_actions:
+  - destructive_cleanup
+  - production_config_change
+
+eval_gates:
+  - id: workflows_source
+    command: "npm run workflows:check"
+    required: true
+  - id: workflows_runtime
+    command: "npm run workflows:verify"
+    required: true
+  - id: examples_source
+    command: "npm run examples:check"
+    required: true
+  - id: examples_runtime
+    command: "npm run examples:verify"
+    required: true
+  - id: node_tests
+    command: "npm test"
+    required: true
+  - id: build
+    command: "kujo run ./build.kujo -- --site-url https://kujolang.ai"
+    required: true
+  - id: responsive
+    command: "npm run images:responsive"
+    required: true
+  - id: site_contract
+    command: "bash scripts/verify-site-contract.sh output"
+    required: true
+  - id: generated_output
+    command: "bash scripts/validate-generated-output.sh output"
+    required: true
+  - id: language_contract
+    command: "npm run language:verify"
+    required: true
+  - id: social
+    command: "npm run social:verify"
+    required: true
+  - id: comparisons
+    command: "npm run compare:verify"
+    required: true
+  - id: javascript
+    command: "node --check assets/js/site.js"
+    required: true
+  - id: shell
+    command: "bash -n scripts/*.sh"
+    required: true
+  - id: audit
+    command: "npm audit --omit=dev"
+    required: true
+  - id: browser
+    command: "node scripts/test-language-browser.cjs"
+    required: true
+  - id: examples_browser
+    command: "node scripts/test-examples-browser.cjs"
+    required: true
+  - id: guides_source
+    command: "node scripts/render-language-guides.mjs --check"
+    required: true
+  - id: guides_browser
+    command: "node scripts/test-guides-browser.cjs"
+    required: true
+  - id: seo_scope
+    command: "python3 scripts/verify-language-seo.py"
+    required: true
+  - id: howl_sources
+    command: "node scripts/render-language-howl.mjs --check"
+    required: true
+  - id: howl_manifest
+    command: "../howl/bin/howl validate --manifest howl-language-pages.json"
+    required: true
+  - id: workflows_browser
+    command: "node scripts/test-ai-workflows-browser.cjs"
+    required: true
+  - id: diff
+    command: "git diff --check"
+    required: true
+
+commit:
+  enabled: false
+  strategy: small_meaningful
+  push: true
+
+memory:
+  enabled: true
+  provider: strata
+  project: "Agent Notes"
+  mode: consolidate
+  retrieval_tests: true
+
+# Commits/pushes are performed explicitly after all gates pass; native runner commits even on failure.
+# One evaluation per bounded phase; archive iterations before subsequent runs.

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/robertdevore/2026/Kujolang/kujo-repos/kujolang.ai-work/scripts/verify-language-seo.py", line 28, in <module>
+    assert code['text']==source and soup.select_one('.example-source pre code').get_text()==source,url
+AssertionError: https://kujolang.ai/examples/document-extraction/

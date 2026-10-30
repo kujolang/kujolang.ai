@@ -1,0 +1,31 @@
+id:       examples-safe-editor
+title:    Safe tool-using assistant
+tagline:  Preview a proposed file edit and apply only the approved contents.
+file:     public/workflows/safe-editor/main.kujo
+language: kujo
+
+--- code preview ---
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+let argv := args()
+if len(argv) > 0 && argv[0] == "apply" {
+    let proposal := load("proposal.json")
+    assert(len(argv) == 2, "Supply the reviewed proposal SHA-256 to approve")
+    assert(sha256(to_json(proposal)) == argv[1], "Approval does not match this proposal")
+    assert(proposal["path"] == "draft.txt", "Only draft.txt may be edited")
+    assert(read_file("draft.txt") == proposal["before"], "File changed since preview; generate a new proposal")
+    write_file("draft.txt", proposal["after"], true)
+    save("applied.json", {"path": "draft.txt", "proposal_hash": argv[1], "after_hash": sha256(proposal["after"])})
+    print("Applied the approved proposal to draft.txt.")
+} else {
+    let context := {"request": input["request"], "path": "draft.txt", "text": read_file("draft.txt")}
+    let result := request(config(), "Propose a replacement for draft.txt. Copy before exactly and return the complete after text. You cannot edit any other file.", context, "responses.json", load("schema.json"))
+    let proposal := require_result(result)
+    assert(proposal["path"] == "draft.txt", "Only draft.txt may be edited")
+    assert(proposal["before"] == context["text"], "Before text does not match")
+    save("proposal.json", proposal)
+    write_file("preview.diff", "--- draft.txt (before)\n+++ draft.txt (proposed)\n-" + replace(proposal["before"], "\n", "\n-") + "\n+" + replace(proposal["after"], "\n", "\n+") + "\n", true)
+    print("Review preview.diff. To approve this exact proposal, run:")
+    print("kujo run main.kujo -- apply " + sha256(to_json(proposal)))
+}

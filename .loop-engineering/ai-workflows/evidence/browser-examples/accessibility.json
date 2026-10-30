@@ -1,0 +1,252 @@
+[
+  {
+    "slug": "hello-world",
+    "violations": [],
+    "passes": 25
+  },
+  {
+    "slug": "variables",
+    "violations": [],
+    "passes": 25
+  },
+  {
+    "slug": "functions",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "control-flow",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "collections",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "structs",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "pattern-matching",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "errors",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "async",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "channels",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "generators",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "json",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "structured-output",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "request-hash",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "replay",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "streaming",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "capabilities",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "tests",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "modules",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "files",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "http",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "string-interpolation",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "split-and-join",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "url-encoding",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "url-decoding",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "type-conversion",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "data-access",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "array-spread",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "map-and-filter",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "array-utilities",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "nested-dictionaries",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "optional-values",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "partial-application",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "type-inspection",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "function-composition",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "result-errors",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "loop-control",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "recursion",
+    "violations": [],
+    "passes": 25
+  },
+  {
+    "slug": "loop-scope",
+    "violations": [],
+    "passes": 25
+  },
+  {
+    "slug": "canonical-json",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "csv",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "yaml",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "toml",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "path-components",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "log-timestamps",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "secret-redaction",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "password-verification",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "vector-search",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "response-envelope",
+    "violations": [],
+    "passes": 26
+  },
+  {
+    "slug": "token-budget",
+    "violations": [],
+    "passes": 26
+  }
+]

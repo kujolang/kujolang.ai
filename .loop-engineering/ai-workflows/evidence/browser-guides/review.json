@@ -1,0 +1,46 @@
+{
+  "routes": [
+    "language",
+    "development-workflow",
+    "performance"
+  ],
+  "homepageDestinations": [
+    "/language/",
+    "/examples/",
+    "/examples/hello-world/",
+    "/examples/functions/",
+    "/examples/collections/",
+    "/examples/async/",
+    "/examples/request-hash/",
+    "/examples/replay/",
+    "/examples/files/",
+    "/examples/http/",
+    "/compare/",
+    "/examples/structured-output/",
+    "/ecosystem/agents-sdk/",
+    "/ecosystem/dispatch/",
+    "/ecosystem/scout/",
+    "/ecosystem/eval/",
+    "/ecosystem/patchbrief/",
+    "/ecosystem/shipcheck/",
+    "/ecosystem/",
+    "/development-workflow/",
+    "/ecosystem/cms/",
+    "/ecosystem/crud-api/",
+    "/performance/"
+  ],
+  "accessibility": [
+    {
+      "route": "language",
+      "violations": []
+    },
+    {
+      "route": "development-workflow",
+      "violations": []
+    },
+    {
+      "route": "performance",
+      "violations": []
+    }
+  ]
+}

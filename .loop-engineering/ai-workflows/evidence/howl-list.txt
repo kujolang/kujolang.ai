@@ -1,0 +1,16 @@
+examples-repository-review  —  Repository change reviewer
+    file: public/workflows/repository-review/main.kujo
+examples-ticket-triage  —  Support ticket triage
+    file: public/workflows/ticket-triage/main.kujo
+examples-document-extraction  —  Document extraction pipeline
+    file: public/workflows/document-extraction/main.kujo
+examples-cited-research  —  Research assistant with citations
+    file: public/workflows/cited-research/main.kujo
+examples-resumable-batch  —  Resumable batch processor
+    file: public/workflows/resumable-batch/main.kujo
+examples-safe-editor  —  Safe tool-using assistant
+    file: public/workflows/safe-editor/main.kujo
+examples-prompt-regression  —  Prompt regression lab
+    file: public/workflows/prompt-regression/main.kujo
+examples-provider-fallback  —  Provider fallback workflow
+    file: public/workflows/provider-fallback/main.kujo

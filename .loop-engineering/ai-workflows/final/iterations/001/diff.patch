@@ -1,0 +1,465 @@
+diff --git a/.github/workflows/pages.yml b/.github/workflows/pages.yml
+index 51ea46c..99288fc 100644
+--- a/.github/workflows/pages.yml
++++ b/.github/workflows/pages.yml
+@@ -48,6 +48,8 @@ jobs:
+           kujo --version
+           npm run examples:check
+           npm run examples:verify
++          npm run workflows:check
++          npm run workflows:verify
+           kujo run ./build.kujo -- --site-url https://kujolang.ai
+           npm run images:responsive
+           cp CNAME output/CNAME
+diff --git a/assets/css/style.css b/assets/css/style.css
+index 1eb84ee..ca87a0e 100644
+--- a/assets/css/style.css
++++ b/assets/css/style.css
+@@ -2026,3 +2026,24 @@ pre, pre code, .sample-code pre, .sample-code code {
+  font-size: .75rem; line-height: 1.4; pointer-events: none;
+  transition: none !important; animation: none !important;
+ }
++
++/* Complete AI applications sit above the language reference samples. */
++.workflow-collection { margin: 0 0 4rem; padding: 3rem 0; border-block: 1px solid var(--example-line); }
++.workflow-collection > header { max-width: 46rem; margin-bottom: 2rem; }
++.workflow-collection h2, .workflow-section h2, .workflow-overview h2 { font-family: var(--sk-font-mono); margin-bottom: 1rem; }
++.workflow-card { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1.5rem; background: #fff; border: 1px solid var(--example-line); }
++.workflow-card h3 { font-family: var(--sk-font-mono); font-size: 1.15rem; line-height: 1.5; }
++.workflow-card p { line-height: 1.7; }
++.workflow-card .example-card-file { margin-top: auto; }
++.workflow-bundle-link { display: inline-block; margin-top: 2rem; }
++.workflow-overview { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-bottom: 3rem; padding: 2rem; background: #161616; color: #fff; }
++.workflow-overview strong { font-family: var(--sk-font-mono); overflow-wrap: anywhere; }
++.workflow-overview p { line-height: 1.7; }
++.workflow-section { padding-block: 3rem; border-bottom: 1px solid var(--example-line); }
++.workflow-section > p { max-width: 56rem; margin-bottom: 1.5rem; line-height: 1.8; }
++.workflow-section h3 { font-family: var(--sk-font-mono); margin: 2rem 0 1rem; }
++.workflow-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; padding-left: 1.5rem; line-height: 1.8; }
++.workflow-failure { border-left: 4px solid #171717; padding-left: 2rem; }
++@media(max-width: 700px) { .workflow-overview, .workflow-steps { grid-template-columns: 1fr; } .workflow-overview { padding: 1.5rem; } .workflow-failure { padding-left: 1rem; } }
++.workflow-overview .eyebrow { color: #ccc; }
++.workflow-collection { scroll-margin-top: 8rem; }
+diff --git a/content/pages/language-examples.md b/content/pages/language-examples.md
+index ffc6543..d7d459d 100644
+--- a/content/pages/language-examples.md
++++ b/content/pages/language-examples.md
+@@ -10,7 +10,8 @@ social_image: /assets/images/social/examples.jpg
+ 
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Examples</span></nav>
+ <header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>50</strong><span>verified samples</span></p><p><strong>7</strong><span>categories</span></p></div><p>Each example includes code, a command and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
+-<div class="example-filter" hidden><div><label for="example-search">Search examples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option><option>Basics</option><option>Data</option><option>Concurrency</option><option>AI runtime</option><option>Tooling</option><option>Systems</option><option>Text</option></select></div><p role="status" id="example-count"></p></div>
++<section class="workflow-collection" id="build-something-useful"><header><p class="eyebrow">Eight complete AI applications</p><h2>Build something useful.</h2><p>Start with a real task. Run it offline, inspect the result, then connect a provider when you are ready.</p></header><div class="examples-card-grid"><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/repository-review/">Repository change reviewer <span aria-hidden="true">↗</span></a></h3><p>Review a Git diff and keep findings tied to added lines.</p><span class="example-card-file">review.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/ticket-triage/">Support ticket triage <span aria-hidden="true">↗</span></a></h3><p>Classify a ticket and draft a reply for a person to review.</p><span class="example-card-file">triage.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/document-extraction/">Document extraction pipeline <span aria-hidden="true">↗</span></a></h3><p>Turn invoice text into a validated record with source evidence.</p><span class="example-card-file">record.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/cited-research/">Research assistant with citations <span aria-hidden="true">↗</span></a></h3><p>Answer from a supplied document collection and retain exact quotes.</p><span class="example-card-file">answer.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/resumable-batch/">Resumable batch processor <span aria-hidden="true">↗</span></a></h3><p>Classify records, save checkpoints and continue after interruption.</p><span class="example-card-file">batch-results.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/safe-editor/">Safe tool-using assistant <span aria-hidden="true">↗</span></a></h3><p>Preview a proposed file edit and apply only the approved contents.</p><span class="example-card-file">proposal.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/prompt-regression/">Prompt regression lab <span aria-hidden="true">↗</span></a></h3><p>Compare prompt revisions against saved, labeled cases.</p><span class="example-card-file">evaluation.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/provider-fallback/">Provider fallback workflow <span aria-hidden="true">↗</span></a></h3><p>Try a second provider within a bounded request budget.</p><span class="example-card-file">routing.json</span></article></div><a class="workflow-bundle-link" href="/workflows/ai-workflows.zip">Download all eight applications + fixtures ↓</a></section>
++<div class="example-filter" hidden><div><label for="example-search">Search language samples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option><option>Basics</option><option>Data</option><option>Concurrency</option><option>AI runtime</option><option>Tooling</option><option>Systems</option><option>Text</option></select></div><p role="status" id="example-count"></p></div>
+ <nav class="examples-category-nav" aria-label="Example categories"><a href="#category-Basics"><span>01</span>Basics</a><a href="#category-Data"><span>02</span>Data</a><a href="#category-Concurrency"><span>03</span>Concurrency</a><a href="#category-AI-runtime"><span>04</span>AI runtime</a><a href="#category-Tooling"><span>05</span>Tooling</a><a href="#category-Systems"><span>06</span>Systems</a><a href="#category-Text"><span>07</span>Text</a></nav>
+ <section class="example-category-group" id="category-Basics"><header class="example-group-heading"><div><p class="eyebrow">01 / Explore</p><h2>Basics</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/hello-world/">Hello World <span aria-hidden="true">↗</span></a></h3><p>Print your first message.</p><span class="example-card-file">hello-world.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/variables/">Variables and types <span aria-hidden="true">↗</span></a></h3><p>Create variables with let and print their values.</p><span class="example-card-file">variables.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/functions/">Functions and operators <span aria-hidden="true">↗</span></a></h3><p>Add the numbers in an array with a function.</p><span class="example-card-file">functions.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/control-flow/">Control flow <span aria-hidden="true">↗</span></a></h3><p>Choose which code runs with a comparison.</p><span class="example-card-file">control-flow.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/errors/">Error handling <span aria-hidden="true">↗</span></a></h3><p>Catch an error and keep the program running.</p><span class="example-card-file">errors.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/type-conversion/">Convert text to numbers <span aria-hidden="true">↗</span></a></h3><p>Read an age and a balance from strings.</p><span class="example-card-file">type-conversion.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/optional-values/">Handle missing values <span aria-hidden="true">↗</span></a></h3><p>Look up users and handle both Some and None.</p><span class="example-card-file">optional-values.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/partial-application/">Capture function arguments <span aria-hidden="true">↗</span></a></h3><p>Make a reusable adder by capturing a value in a closure.</p><span class="example-card-file">partial-application.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/type-inspection/">Inspect value types <span aria-hidden="true">↗</span></a></h3><p>Inspect runtime types and check whether a value is a number or string.</p><span class="example-card-file">type-inspection.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/function-composition/">Compose functions <span aria-hidden="true">↗</span></a></h3><p>Pass one function result into the next to calculate a value or format text.</p><span class="example-card-file">function-composition.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/result-errors/">Return errors as values <span aria-hidden="true">↗</span></a></h3><p>Return Ok or Err from division and handle each result.</p><span class="example-card-file">result-errors.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/loop-control/">Break and continue <span aria-hidden="true">↗</span></a></h3><p>Stop a loop early and skip even numbers.</p><span class="example-card-file">loop-control.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/recursion/">Calculate a factorial <span aria-hidden="true">↗</span></a></h3><p>Call a function recursively until it reaches a base case.</p><span class="example-card-file">recursion.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/loop-scope/">Accumulate a total <span aria-hidden="true">↗</span></a></h3><p>Update a running total as a loop visits each number.</p><span class="example-card-file">loop-scope.kujo</span></article></div></section>
+ <section class="example-category-group" id="category-Data"><header class="example-group-heading"><div><p class="eyebrow">02 / Explore</p><h2>Data</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/collections/">Collections <span aria-hidden="true">↗</span></a></h3><p>Build a report from arrays and dictionaries.</p><span class="example-card-file">collections.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/structs/">Structs and methods <span aria-hidden="true">↗</span></a></h3><p>Return a new counter from an instance method.</p><span class="example-card-file">structs.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/pattern-matching/">Enums and pattern matching <span aria-hidden="true">↗</span></a></h3><p>Handle tagged values and Result variants.</p><span class="example-card-file">pattern-matching.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/json/">JSON data <span aria-hidden="true">↗</span></a></h3><p>Read JSON and access nested fields.</p><span class="example-card-file">json.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/data-access/">Read nested data <span aria-hidden="true">↗</span></a></h3><p>Read array positions and dictionary fields, then add values from records.</p><span class="example-card-file">data-access.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/array-spread/">Combine arrays <span aria-hidden="true">↗</span></a></h3><p>Combine arrays, insert values and copy a list with spread syntax.</p><span class="example-card-file">array-spread.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/map-and-filter/">Map and filter arrays <span aria-hidden="true">↗</span></a></h3><p>Transform numbers and names, then keep the even numbers.</p><span class="example-card-file">map-and-filter.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/array-utilities/">Sort and summarize arrays <span aria-hidden="true">↗</span></a></h3><p>Sort, reverse, deduplicate and sum a list of numbers.</p><span class="example-card-file">array-utilities.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/nested-dictionaries/">Nested dictionaries <span aria-hidden="true">↗</span></a></h3><p>Store a profile in a dictionary and read its nested fields.</p><span class="example-card-file">nested-dictionaries.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/canonical-json/">Canonical JSON <span aria-hidden="true">↗</span></a></h3><p>Check stable key ordering, pretty printing and JSON round trips.</p><span class="example-card-file">canonical-json.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/csv/">Read and write CSV <span aria-hidden="true">↗</span></a></h3><p>Parse rows, read named fields and check a CSV round trip.</p><span class="example-card-file">csv.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/yaml/">Read and write YAML <span aria-hidden="true">↗</span></a></h3><p>Read a YAML configuration and check its serialized output.</p><span class="example-card-file">yaml.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/toml/">Read and write TOML <span aria-hidden="true">↗</span></a></h3><p>Read server settings from TOML and write them back.</p><span class="example-card-file">toml.kujo</span></article></div></section>
+diff --git a/howl-language-pages.json b/howl-language-pages.json
+index c9c216a..69a2674 100644
+--- a/howl-language-pages.json
++++ b/howl-language-pages.json
+@@ -939,6 +939,134 @@
+       "caption": "Estimate token counts and trim a conversation to fit a budget.",
+       "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. Token counts are local estimates, not provider billing records.",
+       "expected_output": "text_tokens: 10\nmessage_tokens: 75\ndropped: 2\nest_tokens: 27\nfits: true\nmessages: [{\"content\": Answer briefly and cite constraints., \"role\": system}, {\"content\": Give me the short version., \"role\": user}]\n"
++    },
++    {
++      "id": "examples-repository-review",
++      "title": "Repository change reviewer",
++      "tagline": "Review a Git diff and keep findings tied to added lines.",
++      "file": "public/workflows/repository-review/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/repository-review/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Review a Git diff and keep findings tied to added lines.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-ticket-triage",
++      "title": "Support ticket triage",
++      "tagline": "Classify a ticket and draft a reply for a person to review.",
++      "file": "public/workflows/ticket-triage/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/ticket-triage/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Classify a ticket and draft a reply for a person to review.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-document-extraction",
++      "title": "Document extraction pipeline",
++      "tagline": "Turn invoice text into a validated record with source evidence.",
++      "file": "public/workflows/document-extraction/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/document-extraction/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Turn invoice text into a validated record with source evidence.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-cited-research",
++      "title": "Research assistant with citations",
++      "tagline": "Answer from a supplied document collection and retain exact quotes.",
++      "file": "public/workflows/cited-research/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/cited-research/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Answer from a supplied document collection and retain exact quotes.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-resumable-batch",
++      "title": "Resumable batch processor",
++      "tagline": "Classify records, save checkpoints and continue after interruption.",
++      "file": "public/workflows/resumable-batch/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/resumable-batch/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Classify records, save checkpoints and continue after interruption.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-safe-editor",
++      "title": "Safe tool-using assistant",
++      "tagline": "Preview a proposed file edit and apply only the approved contents.",
++      "file": "public/workflows/safe-editor/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/safe-editor/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Preview a proposed file edit and apply only the approved contents.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-prompt-regression",
++      "title": "Prompt regression lab",
++      "tagline": "Compare prompt revisions against saved, labeled cases.",
++      "file": "public/workflows/prompt-regression/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/prompt-regression/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Compare prompt revisions against saved, labeled cases.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-provider-fallback",
++      "title": "Provider fallback workflow",
++      "tagline": "Try a second provider within a bounded request budget.",
++      "file": "public/workflows/provider-fallback/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/provider-fallback/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Try a second provider within a bounded request budget.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
+     }
+   ]
+ }
+diff --git a/howl-social.json b/howl-social.json
+index 9ee2f08..25d7925 100644
+--- a/howl-social.json
++++ b/howl-social.json
+@@ -4254,6 +4254,134 @@
+       "caption": "Estimate token counts and trim a conversation to fit a budget.",
+       "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. Token counts are local estimates, not provider billing records.",
+       "expected_output": "text_tokens: 10\nmessage_tokens: 75\ndropped: 2\nest_tokens: 27\nfits: true\nmessages: [{\"content\": Answer briefly and cite constraints., \"role\": system}, {\"content\": Give me the short version., \"role\": user}]\n"
++    },
++    {
++      "id": "examples-repository-review",
++      "title": "Repository change reviewer",
++      "tagline": "Review a Git diff and keep findings tied to added lines.",
++      "file": "public/workflows/repository-review/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/repository-review/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Review a Git diff and keep findings tied to added lines.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-ticket-triage",
++      "title": "Support ticket triage",
++      "tagline": "Classify a ticket and draft a reply for a person to review.",
++      "file": "public/workflows/ticket-triage/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/ticket-triage/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Classify a ticket and draft a reply for a person to review.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-document-extraction",
++      "title": "Document extraction pipeline",
++      "tagline": "Turn invoice text into a validated record with source evidence.",
++      "file": "public/workflows/document-extraction/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/document-extraction/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Turn invoice text into a validated record with source evidence.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-cited-research",
++      "title": "Research assistant with citations",
++      "tagline": "Answer from a supplied document collection and retain exact quotes.",
++      "file": "public/workflows/cited-research/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/cited-research/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Answer from a supplied document collection and retain exact quotes.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-resumable-batch",
++      "title": "Resumable batch processor",
++      "tagline": "Classify records, save checkpoints and continue after interruption.",
++      "file": "public/workflows/resumable-batch/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/resumable-batch/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Classify records, save checkpoints and continue after interruption.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-safe-editor",
++      "title": "Safe tool-using assistant",
++      "tagline": "Preview a proposed file edit and apply only the approved contents.",
++      "file": "public/workflows/safe-editor/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/safe-editor/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Preview a proposed file edit and apply only the approved contents.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-prompt-regression",
++      "title": "Prompt regression lab",
++      "tagline": "Compare prompt revisions against saved, labeled cases.",
++      "file": "public/workflows/prompt-regression/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/prompt-regression/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Compare prompt revisions against saved, labeled cases.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
++    },
++    {
++      "id": "examples-provider-fallback",
++      "title": "Provider fallback workflow",
++      "tagline": "Try a second provider within a bounded request budget.",
++      "file": "public/workflows/provider-fallback/main.kujo",
++      "variant": "social",
++      "label": "AI workflow",
++      "url": "kujolang.ai/examples/provider-fallback/",
++      "show_border": false,
++      "show_url": false,
++      "background_image": "assets/images/home-agent-workflow.webp",
++      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
++      "language": "kujo",
++      "caption": "Try a second provider within a bounded request budget.",
++      "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
+     }
+   ]
+ }
+diff --git a/package.json b/package.json
+index 471ae6c..bf05e7f 100644
+--- a/package.json
++++ b/package.json
+@@ -21,7 +21,10 @@
+     "guides:check": "node scripts/render-language-guides.mjs --check",
+     "howl:pages:generate": "node scripts/render-language-howl.mjs",
+     "howl:pages:check": "node scripts/render-language-howl.mjs --check",
+-    "seo:pages:verify": "python3 scripts/verify-language-seo.py"
++    "seo:pages:verify": "python3 scripts/verify-language-seo.py",
++    "workflows:generate": "node scripts/render-ai-workflows.mjs && node scripts/render-language-examples.mjs && node scripts/render-language-howl.mjs && python3 scripts/bundle-ai-workflows.py",
++    "workflows:check": "node scripts/render-ai-workflows.mjs --check && python3 scripts/bundle-ai-workflows.py --check",
++    "workflows:verify": "python3 scripts/verify-ai-workflows.py"
+   },
+   "dependencies": {
+     "scramble-decode": "0.1.0"
+diff --git a/scripts/render-language-examples.mjs b/scripts/render-language-examples.mjs
+index fc5afff..5266cef 100644
+--- a/scripts/render-language-examples.mjs
++++ b/scripts/render-language-examples.mjs
+@@ -4,16 +4,8 @@ const catalog=JSON.parse(fs.readFileSync('examples/catalog.json','utf8'));
+ const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+ const check=process.argv.includes('--check');
+ function write(path,text){if(check){if(!fs.existsSync(path)||fs.readFileSync(path,'utf8')!==text)throw Error(`Stale generated file: ${path}`);}else fs.writeFileSync(path,text);}
+-function highlight(code){
+- // Match comments/strings first so keywords inside them retain their own token class.
+- const tokens=/("(?:\\.|[^"\\])*"|#[^\n]*|\/\/[^\n]*|\b(?:func|let|mut|return|if|else|for|in|async|await|struct|enum|match|case|try|except|throw|yield|import|from|test)\b|\b(?:true|false|null)\b|\b\d+(?:\.\d+)?\b)/g;
+- return code.split(tokens).map((value,i)=>{
+-  if(i%2===0)return esc(value);
+-  const kind=value.startsWith('"')?'string':value.startsWith('#')||value.startsWith('//')?'comment':/^\d/.test(value)?'number':['true','false','null'].includes(value)?'literal':'keyword';
+-  return `<span class="syntax-token syntax-${kind}">${esc(value)}</span>`;
+- }).join('');
+-}
+-export function block(code,syntax=true){return `<div class="sample-code"><pre tabindex="0"><code>${syntax?highlight(code):esc(code)}</code></pre><button type="button" class="sk-button code-copy-icon" data-copy-code aria-label="Copy code" title="Copy code" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V4H4v12h4"/></svg></button><span role="status" data-code-status></span></div>`;}
++export {block} from './code-block.mjs';
++import {block} from './code-block.mjs';
+ const source=x=>`${catalog.repository}/blob/${catalog.commit}/${x.source}${x.start?'#L'+x.start+'-L'+x.end:''}`;
+ const sample=x=>fs.readFileSync(`public/samples/${x.slug}.kujo`,'utf8');
+ function panel(x,full=true){return `<article class="example-panel" id="example-${x.slug}" data-example="${x.slug}" data-category="${x.category}"><p class="eyebrow">${esc(x.category)} · ${x.mode==='run'?'Executed offline':x.mode==='test-run'?'Test runner':x.mode==='parse'?'Parse only':'Checked only'}${full?' · Kujo '+catalog.version:''}</p><h3>${esc(x.title)}</h3><p>${esc(x.description)}</p>${x.note?'<p class="example-note">'+esc(x.note)+'</p>':''}${block(sample(x))}<p>Save as <a href="/samples/${x.slug}.kujo" download>${x.slug}.kujo</a>, then:</p>${block(`kujo ${x.mode} ${x.args?x.args.join(' ')+' ':''}${x.slug}.kujo`)}${x.expected?`<details><summary>Expected output</summary>${block(x.expected,false)}</details>`:''}<p><a href="${source(x)}">Pinned source</a> · <a href="${x.docs}">Language documentation</a>${full?'':` · <a href="/examples/${x.slug}/">Full example</a>`}</p></article>`;}
+@@ -45,7 +37,8 @@ for(const [i,x] of catalog.items.entries()){
+ page('examples','Kujo language examples','Browse Kujo examples with code, commands, expected output and source links.',`
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Examples</span></nav>
+ <header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>${catalog.items.length}</strong><span>verified samples</span></p><p><strong>${categories.length}</strong><span>categories</span></p></div><p>Each example includes code, a command and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
+-<div class="example-filter" hidden><div><label for="example-search">Search examples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option>${categories.map(x=>`<option>${x}</option>`).join('')}</select></div><p role="status" id="example-count"></p></div>
++<section class="workflow-collection" id="build-something-useful"><header><p class="eyebrow">Eight complete AI applications</p><h2>Build something useful.</h2><p>Start with a real task. Run it offline, inspect the result, then connect a provider when you are ready.</p></header><div class="examples-card-grid">${JSON.parse(fs.readFileSync('workflows/catalog.json','utf8')).items.map(x=>`<article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/${x.slug}/">${esc(x.title)} <span aria-hidden="true">↗</span></a></h3><p>${esc(x.description)}</p><span class="example-card-file">${esc(x.artifact)}</span></article>`).join('')}</div><a class="workflow-bundle-link" href="/workflows/ai-workflows.zip">Download all eight applications + fixtures ↓</a></section>
++<div class="example-filter" hidden><div><label for="example-search">Search language samples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option>${categories.map(x=>`<option>${x}</option>`).join('')}</select></div><p role="status" id="example-count"></p></div>
+ <nav class="examples-category-nav" aria-label="Example categories">${categories.map((x,i)=>`<a href="#${categoryId(x)}"><span>${String(i+1).padStart(2,'0')}</span>${x}</a>`).join('')}</nav>
+ ${categories.map((cat,i)=>`<section class="example-category-group" id="${categoryId(cat)}"><header class="example-group-heading"><div><p class="eyebrow">${String(i+1).padStart(2,'0')} / Explore</p><h2>${cat}</h2></div></header><div class="examples-card-grid">${catalog.items.filter(x=>x.category===cat).map(x=>`<article data-example-card data-category="${cat}"><span class="example-badge">${verification(x)}</span><h3><a href="/examples/${x.slug}/">${esc(x.title)} <span aria-hidden="true">↗</span></a></h3><p>${esc(x.description)}</p><span class="example-card-file">${x.slug}.kujo</span></article>`).join('')}</div></section>`).join('\n')}
+ <section class="examples-next"><div><p class="eyebrow">Keep building</p><h2>Beyond a single script.</h2><p>Install packages and agent SDKs separately. These guides explain how to use them.</p></div><div><a href="https://docs.kujolang.ai/learn/packages/">Packages with Kennel <span aria-hidden="true">↗</span></a><a href="/ecosystem/agents-sdk/">Agents SDK <span aria-hidden="true">↗</span></a><a href="/ecosystem/ai-sdk/">AI SDK <span aria-hidden="true">↗</span></a></div></section>
+diff --git a/scripts/render-language-howl.mjs b/scripts/render-language-howl.mjs
+index 60a5702..078a4f9 100644
+--- a/scripts/render-language-howl.mjs
++++ b/scripts/render-language-howl.mjs
+@@ -20,6 +20,11 @@ const cards=definitions.map(([id,title,tagline,slug])=>{
+  if(sample?.expected)card.expected_output=sample.expected;else delete card.expected_output;
+  return card;
+ });
++for(const x of JSON.parse(fs.readFileSync('workflows/catalog.json','utf8')).items){
++ const card=manifest.cards.find(c=>c.id==='examples-'+x.slug);
++ if(!card)throw Error('Missing workflow card: '+x.slug);
++ cards.push(card);
++}
+ write('howl-social.json',JSON.stringify(manifest,null,2)+'\n');
+ write('howl-language-pages.json',JSON.stringify({...manifest,cards},null,2)+'\n');
+ console.log(`${check?'Checked':'Updated'} ${cards.length} page showcase sources.`);
+diff --git a/scripts/verify-language-seo.py b/scripts/verify-language-seo.py
+index cedd120..ddf9cf1 100644
+--- a/scripts/verify-language-seo.py
++++ b/scripts/verify-language-seo.py
+@@ -4,6 +4,8 @@ import json,pathlib
+ from bs4 import BeautifulSoup
+ root=pathlib.Path('output');catalog=json.loads(pathlib.Path('examples/catalog.json').read_text())
+ routes=['','language','development-workflow','performance','examples']+['examples/'+x['slug'] for x in catalog['items']]
++workflows=json.loads(pathlib.Path('workflows/catalog.json').read_text());workflow_slugs={x['slug'] for x in workflows['items']}
++routes += ['examples/'+x['slug'] for x in workflows['items']]
+ titles=set();descriptions=set()
+ for route in routes:
+  soup=BeautifulSoup((root/route/'index.html').read_text(),'html.parser');url='https://kujolang.ai/'+(route+'/' if route else '')
+@@ -20,9 +22,12 @@ for route in routes:
+   assert crumb['itemListElement'][-1]['item']==url,url
+  if route.startswith('examples/'):
+   code=next(x for x in nodes if x.get('@type')=='SoftwareSourceCode')
+-  source=pathlib.Path('public/samples/'+route.split('/')[1]+'.kujo').read_text()
++  slug=route.split('/')[1]
++  source_path='public/workflows/'+slug+'/main.kujo' if slug in workflow_slugs else 'public/samples/'+slug+'.kujo'
++  source=pathlib.Path(source_path).read_text()
+   assert code['text']==source and soup.select_one('.example-source pre code').get_text()==source,url
+-  assert catalog['commit'] in code['isBasedOn'],url
++  if slug in workflow_slugs: assert code['isBasedOn']==workflows['repository']+'/blob/main/'+source_path,url
++  else: assert catalog['commit'] in code['isBasedOn'],url
+  if route=='examples':assert any(x.get('@type')=='CollectionPage' for x in nodes),url
+  assert soup.select_one('.site-brand')['aria-label']=='Kujo home',url
+ print(f'Passed canonical, unique metadata, H1, breadcrumb and source alignment checks for {len(routes)} pages.')
+diff --git a/scripts/verify-production-language.py b/scripts/verify-production-language.py
+index a5bda0b..d19d5d5 100644
+--- a/scripts/verify-production-language.py
++++ b/scripts/verify-production-language.py
+@@ -6,6 +6,9 @@ run=json.loads(subprocess.check_output(['gh','api',f'repos/kujolang/kujolang.ai/
+ assert run['status']=='completed' and run['conclusion']=='success', (run['status'],run['conclusion'])
+ c=json.loads((root/'examples/catalog.json').read_text())
+ routes=['/','/language/','/examples/','/development-workflow/','/performance/','/ecosystem/','/compare/']+['/examples/'+x['slug']+'/' for x in c['items']]
++workflows=json.loads((root/'workflows/catalog.json').read_text())
++workflow_routes=['/examples/'+x['slug']+'/' for x in workflows['items']]
++routes+=workflow_routes
+ def verify(route):
+  url='https://kujolang.ai'+route
+  req=urllib.request.Request(url,headers={'User-Agent':'Kujo-site-release-verification','Cache-Control':'no-cache'})
+@@ -15,7 +18,8 @@ def verify(route):
+  assert '<meta property="og:image"' in html,route
+  if route=='/': assert 'data-code-explorer' in html and 'Get Started' in html
+  if route=='/examples/': assert 'example-search' in html
+- if route.startswith('/examples/') and route!='/examples/': assert c['commit'] in html and 'Pinned source' in html
++ if route in workflow_routes: assert 'Source and verification' in html and 'Connect a live provider' in html
++ if route.startswith('/examples/') and route!='/examples/' and route not in workflow_routes: assert c['commit'] in html and 'Pinned source' in html
+  return dict(route=route,status=200,canonical=url)
+ with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: results=list(pool.map(verify,routes))
+ receipt=dict(run_id=run['id'],run_url=run['html_url'],deployed_commit=run['head_sha'],conclusion=run['conclusion'],routes=results)
+diff --git a/templates/page-language-examples.html b/templates/page-language-examples.html
+index 1f63f75..9395a20 100644
+--- a/templates/page-language-examples.html
++++ b/templates/page-language-examples.html
+@@ -1,7 +1,8 @@
+ <main class="examples-site examples-index" id="main-content"><div class="examples-shell">
+ <nav class="examples-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Examples</span></nav>
+ <header class="examples-hero"><div><p class="eyebrow">The language / In practice</p><h1>Small programs.<br>Working examples.</h1><p>Find a small program you can read, run and change.</p><a class="sk-button" href="/examples/hello-world/">Start with Hello World</a></div><aside class="examples-orientation" aria-label="Example collection"><p class="eyebrow">From basics to AI</p><div class="examples-stats"><p><strong>50</strong><span>verified samples</span></p><p><strong>7</strong><span>categories</span></p></div><p>Each example includes code, a command and a record of what we checked.</p><a href="/samples/kujo-examples.tar.gz">Download samples + replay fixtures ↓</a></aside></header>
+-<div class="example-filter" hidden><div><label for="example-search">Search examples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option><option>Basics</option><option>Data</option><option>Concurrency</option><option>AI runtime</option><option>Tooling</option><option>Systems</option><option>Text</option></select></div><p role="status" id="example-count"></p></div>
++<section class="workflow-collection" id="build-something-useful"><header><p class="eyebrow">Eight complete AI applications</p><h2>Build something useful.</h2><p>Start with a real task. Run it offline, inspect the result, then connect a provider when you are ready.</p></header><div class="examples-card-grid"><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/repository-review/">Repository change reviewer <span aria-hidden="true">↗</span></a></h3><p>Review a Git diff and keep findings tied to added lines.</p><span class="example-card-file">review.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/ticket-triage/">Support ticket triage <span aria-hidden="true">↗</span></a></h3><p>Classify a ticket and draft a reply for a person to review.</p><span class="example-card-file">triage.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/document-extraction/">Document extraction pipeline <span aria-hidden="true">↗</span></a></h3><p>Turn invoice text into a validated record with source evidence.</p><span class="example-card-file">record.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/cited-research/">Research assistant with citations <span aria-hidden="true">↗</span></a></h3><p>Answer from a supplied document collection and retain exact quotes.</p><span class="example-card-file">answer.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/resumable-batch/">Resumable batch processor <span aria-hidden="true">↗</span></a></h3><p>Classify records, save checkpoints and continue after interruption.</p><span class="example-card-file">batch-results.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/safe-editor/">Safe tool-using assistant <span aria-hidden="true">↗</span></a></h3><p>Preview a proposed file edit and apply only the approved contents.</p><span class="example-card-file">proposal.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/prompt-regression/">Prompt regression lab <span aria-hidden="true">↗</span></a></h3><p>Compare prompt revisions against saved, labeled cases.</p><span class="example-card-file">evaluation.json</span></article><article class="workflow-card"><span class="example-badge">Application walkthrough</span><h3><a href="/examples/provider-fallback/">Provider fallback workflow <span aria-hidden="true">↗</span></a></h3><p>Try a second provider within a bounded request budget.</p><span class="example-card-file">routing.json</span></article></div><a class="workflow-bundle-link" href="/workflows/ai-workflows.zip">Download all eight applications + fixtures ↓</a></section>
++<div class="example-filter" hidden><div><label for="example-search">Search language samples</label><input id="example-search" type="search" placeholder="Try replay or collections"></div><div><label for="example-category">Category</label><select id="example-category"><option value="">All categories</option><option>Basics</option><option>Data</option><option>Concurrency</option><option>AI runtime</option><option>Tooling</option><option>Systems</option><option>Text</option></select></div><p role="status" id="example-count"></p></div>
+ <nav class="examples-category-nav" aria-label="Example categories"><a href="#category-Basics"><span>01</span>Basics</a><a href="#category-Data"><span>02</span>Data</a><a href="#category-Concurrency"><span>03</span>Concurrency</a><a href="#category-AI-runtime"><span>04</span>AI runtime</a><a href="#category-Tooling"><span>05</span>Tooling</a><a href="#category-Systems"><span>06</span>Systems</a><a href="#category-Text"><span>07</span>Text</a></nav>
+ <section class="example-category-group" id="category-Basics"><header class="example-group-heading"><div><p class="eyebrow">01 / Explore</p><h2>Basics</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/hello-world/">Hello World <span aria-hidden="true">↗</span></a></h3><p>Print your first message.</p><span class="example-card-file">hello-world.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/variables/">Variables and types <span aria-hidden="true">↗</span></a></h3><p>Create variables with let and print their values.</p><span class="example-card-file">variables.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/functions/">Functions and operators <span aria-hidden="true">↗</span></a></h3><p>Add the numbers in an array with a function.</p><span class="example-card-file">functions.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/control-flow/">Control flow <span aria-hidden="true">↗</span></a></h3><p>Choose which code runs with a comparison.</p><span class="example-card-file">control-flow.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/errors/">Error handling <span aria-hidden="true">↗</span></a></h3><p>Catch an error and keep the program running.</p><span class="example-card-file">errors.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/type-conversion/">Convert text to numbers <span aria-hidden="true">↗</span></a></h3><p>Read an age and a balance from strings.</p><span class="example-card-file">type-conversion.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/optional-values/">Handle missing values <span aria-hidden="true">↗</span></a></h3><p>Look up users and handle both Some and None.</p><span class="example-card-file">optional-values.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/partial-application/">Capture function arguments <span aria-hidden="true">↗</span></a></h3><p>Make a reusable adder by capturing a value in a closure.</p><span class="example-card-file">partial-application.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/type-inspection/">Inspect value types <span aria-hidden="true">↗</span></a></h3><p>Inspect runtime types and check whether a value is a number or string.</p><span class="example-card-file">type-inspection.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/function-composition/">Compose functions <span aria-hidden="true">↗</span></a></h3><p>Pass one function result into the next to calculate a value or format text.</p><span class="example-card-file">function-composition.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/result-errors/">Return errors as values <span aria-hidden="true">↗</span></a></h3><p>Return Ok or Err from division and handle each result.</p><span class="example-card-file">result-errors.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/loop-control/">Break and continue <span aria-hidden="true">↗</span></a></h3><p>Stop a loop early and skip even numbers.</p><span class="example-card-file">loop-control.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/recursion/">Calculate a factorial <span aria-hidden="true">↗</span></a></h3><p>Call a function recursively until it reaches a base case.</p><span class="example-card-file">recursion.kujo</span></article><article data-example-card data-category="Basics"><span class="example-badge">Executed offline</span><h3><a href="/examples/loop-scope/">Accumulate a total <span aria-hidden="true">↗</span></a></h3><p>Update a running total as a loop visits each number.</p><span class="example-card-file">loop-scope.kujo</span></article></div></section>
+ <section class="example-category-group" id="category-Data"><header class="example-group-heading"><div><p class="eyebrow">02 / Explore</p><h2>Data</h2></div></header><div class="examples-card-grid"><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/collections/">Collections <span aria-hidden="true">↗</span></a></h3><p>Build a report from arrays and dictionaries.</p><span class="example-card-file">collections.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/structs/">Structs and methods <span aria-hidden="true">↗</span></a></h3><p>Return a new counter from an instance method.</p><span class="example-card-file">structs.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/pattern-matching/">Enums and pattern matching <span aria-hidden="true">↗</span></a></h3><p>Handle tagged values and Result variants.</p><span class="example-card-file">pattern-matching.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/json/">JSON data <span aria-hidden="true">↗</span></a></h3><p>Read JSON and access nested fields.</p><span class="example-card-file">json.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/data-access/">Read nested data <span aria-hidden="true">↗</span></a></h3><p>Read array positions and dictionary fields, then add values from records.</p><span class="example-card-file">data-access.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/array-spread/">Combine arrays <span aria-hidden="true">↗</span></a></h3><p>Combine arrays, insert values and copy a list with spread syntax.</p><span class="example-card-file">array-spread.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/map-and-filter/">Map and filter arrays <span aria-hidden="true">↗</span></a></h3><p>Transform numbers and names, then keep the even numbers.</p><span class="example-card-file">map-and-filter.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/array-utilities/">Sort and summarize arrays <span aria-hidden="true">↗</span></a></h3><p>Sort, reverse, deduplicate and sum a list of numbers.</p><span class="example-card-file">array-utilities.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/nested-dictionaries/">Nested dictionaries <span aria-hidden="true">↗</span></a></h3><p>Store a profile in a dictionary and read its nested fields.</p><span class="example-card-file">nested-dictionaries.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/canonical-json/">Canonical JSON <span aria-hidden="true">↗</span></a></h3><p>Check stable key ordering, pretty printing and JSON round trips.</p><span class="example-card-file">canonical-json.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/csv/">Read and write CSV <span aria-hidden="true">↗</span></a></h3><p>Parse rows, read named fields and check a CSV round trip.</p><span class="example-card-file">csv.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/yaml/">Read and write YAML <span aria-hidden="true">↗</span></a></h3><p>Read a YAML configuration and check its serialized output.</p><span class="example-card-file">yaml.kujo</span></article><article data-example-card data-category="Data"><span class="example-badge">Executed offline</span><h3><a href="/examples/toml/">Read and write TOML <span aria-hidden="true">↗</span></a></h3><p>Read server settings from TOML and write them back.</p><span class="example-card-file">toml.kujo</span></article></div></section>

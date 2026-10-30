@@ -1,0 +1,3 @@
+Preview a proposed file edit and apply only the approved contents.
+
+Kujo: Programming language for AI-native software
