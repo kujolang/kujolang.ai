@@ -9,7 +9,7 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
  const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));const reports=[];
  for(const width of [1440,390]){
   await page.setViewportSize({width,height:1000});await page.goto(base+'/examples/');
-  assert.equal(await page.locator('.workflow-card').count(),8);assert.equal(await page.locator('[data-example-card]').count(),50);
+  assert.equal(await page.locator('.workflow-card').count(),catalog.items.length);assert.equal(await page.locator('[data-example-card]').count(),JSON.parse(fs.readFileSync('examples/catalog.json')).items.length);
   await page.locator('#build-something-useful').screenshot({path:dir+`/collection-${width}.png`});
   for(const x of catalog.items){
    await page.goto(base+'/examples/'+x.slug+'/',{waitUntil:'domcontentloaded'});
@@ -30,6 +30,6 @@ const fs=require('node:fs');const assert=require('node:assert/strict');
    const zip=await context.request.get(base+'/workflows/'+x.slug+'.zip');assert(zip.ok());assert.deepEqual(await zip.body(),fs.readFileSync(`public/workflows/${x.slug}.zip`));
   }
  }
- const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base+'/examples/');assert.equal(await p.locator('.workflow-card:visible').count(),8);await p.goto(base+'/examples/safe-editor/');assert.equal(await p.locator('[data-copy-code]:visible').count(),0);assert(await p.locator('.example-source code').isVisible());
- fs.writeFileSync(dir+'/accessibility.json',JSON.stringify(reports,null,2)+'\n');assert.deepEqual(errors,[]);await browser.close();console.log('All eight workflow pages passed desktop/mobile, exact clipboard, archive parity, no-JS and accessibility checks.');
+ const nojs=await browser.newContext({javaScriptEnabled:false});const p=await nojs.newPage();await p.goto(base+'/examples/');assert.equal(await p.locator('.workflow-card:visible').count(),catalog.items.length);await p.goto(base+'/examples/safe-editor/');assert.equal(await p.locator('[data-copy-code]:visible').count(),0);assert(await p.locator('.example-source code').isVisible());
+ fs.writeFileSync(dir+'/accessibility.json',JSON.stringify(reports,null,2)+'\n');assert.deepEqual(errors,[]);await browser.close();console.log('All workflow pages passed desktop/mobile, exact clipboard, archive parity, no-JS and accessibility checks.');
 })().catch(e=>{console.error(e);process.exit(1)});
