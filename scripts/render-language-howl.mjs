@@ -20,6 +20,11 @@ const cards=definitions.map(([id,title,tagline,slug])=>{
  if(sample?.expected)card.expected_output=sample.expected;else delete card.expected_output;
  return card;
 });
+for(const x of JSON.parse(fs.readFileSync('workflows/catalog.json','utf8')).items){
+ const card=manifest.cards.find(c=>c.id==='examples-'+x.slug);
+ if(!card)throw Error('Missing workflow card: '+x.slug);
+ cards.push(card);
+}
 write('howl-social.json',JSON.stringify(manifest,null,2)+'\n');
 write('howl-language-pages.json',JSON.stringify({...manifest,cards},null,2)+'\n');
 console.log(`${check?'Checked':'Updated'} ${cards.length} page showcase sources.`);

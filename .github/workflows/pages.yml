@@ -48,6 +48,8 @@ jobs:
           kujo --version
           npm run examples:check
           npm run examples:verify
+          npm run workflows:check
+          npm run workflows:verify
           kujo run ./build.kujo -- --site-url https://kujolang.ai
           npm run images:responsive
           cp CNAME output/CNAME

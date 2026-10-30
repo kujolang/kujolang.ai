@@ -21,7 +21,10 @@
     "guides:check": "node scripts/render-language-guides.mjs --check",
     "howl:pages:generate": "node scripts/render-language-howl.mjs",
     "howl:pages:check": "node scripts/render-language-howl.mjs --check",
-    "seo:pages:verify": "python3 scripts/verify-language-seo.py"
+    "seo:pages:verify": "python3 scripts/verify-language-seo.py",
+    "workflows:generate": "node scripts/render-ai-workflows.mjs && node scripts/render-language-examples.mjs && node scripts/render-language-howl.mjs && python3 scripts/bundle-ai-workflows.py",
+    "workflows:check": "node scripts/render-ai-workflows.mjs --check && python3 scripts/bundle-ai-workflows.py --check",
+    "workflows:verify": "python3 scripts/verify-ai-workflows.py"
   },
   "dependencies": {
     "scramble-decode": "0.1.0"

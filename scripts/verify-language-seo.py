@@ -4,6 +4,8 @@ import json,pathlib
 from bs4 import BeautifulSoup
 root=pathlib.Path('output');catalog=json.loads(pathlib.Path('examples/catalog.json').read_text())
 routes=['','language','development-workflow','performance','examples']+['examples/'+x['slug'] for x in catalog['items']]
+workflows=json.loads(pathlib.Path('workflows/catalog.json').read_text());workflow_slugs={x['slug'] for x in workflows['items']}
+routes += ['examples/'+x['slug'] for x in workflows['items']]
 titles=set();descriptions=set()
 for route in routes:
  soup=BeautifulSoup((root/route/'index.html').read_text(),'html.parser');url='https://kujolang.ai/'+(route+'/' if route else '')
@@ -20,9 +22,12 @@ for route in routes:
   assert crumb['itemListElement'][-1]['item']==url,url
  if route.startswith('examples/'):
   code=next(x for x in nodes if x.get('@type')=='SoftwareSourceCode')
-  source=pathlib.Path('public/samples/'+route.split('/')[1]+'.kujo').read_text()
+  slug=route.split('/')[1]
+  source_path='public/workflows/'+slug+'/main.kujo' if slug in workflow_slugs else 'public/samples/'+slug+'.kujo'
+  source=pathlib.Path(source_path).read_text()
   assert code['text']==source and soup.select_one('.example-source pre code').get_text()==source,url
-  assert catalog['commit'] in code['isBasedOn'],url
+  if slug in workflow_slugs: assert code['isBasedOn']==workflows['repository']+'/blob/main/'+source_path,url
+  else: assert catalog['commit'] in code['isBasedOn'],url
  if route=='examples':assert any(x.get('@type')=='CollectionPage' for x in nodes),url
  assert soup.select_one('.site-brand')['aria-label']=='Kujo home',url
 print(f'Passed canonical, unique metadata, H1, breadcrumb and source alignment checks for {len(routes)} pages.')
