@@ -1,0 +1,15 @@
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+let threshold_check := json_schema_validate(input["minimum_confidence"], {"type": "number", "minimum": 0, "maximum": 1})
+assert(threshold_check["valid"], "Review threshold must be between zero and one")
+let handlers := {"account": "account_help", "billing": "billing_review", "technical": "technical_support"}
+let result := request(config(), "Classify the request and report your confidence. Do not choose a handler or perform an action.", {"message": input["message"]}, "responses.json", load("schema.json"))
+let data := require_result(result)
+assert(has_key(handlers, data["intent"]), "Intent has no allowed handler")
+mut handler := "human_review"
+if data["confidence"] >= input["minimum_confidence"] {
+    handler = handlers[data["intent"]]
+}
+save("route.json", {"decision": data, "handler": handler, "dispatched": false})
+print("Saved route.json; no external action was dispatched.")

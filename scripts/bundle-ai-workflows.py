@@ -32,4 +32,4 @@ for item in catalog['items']:
     bundle(base/(item['slug']+'.zip'), files)
     all_files.update({item['slug']+'/'+name: value for name, value in files.items()})
 bundle(base/'ai-workflows.zip', all_files)
-print('Verified' if '--check' in sys.argv else 'Built', 'eight application ZIPs and the complete bundle')
+print('Verified' if '--check' in sys.argv else 'Built', len(catalog['items']), 'application ZIPs and the complete bundle')

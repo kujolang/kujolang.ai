@@ -1,0 +1,18 @@
+{
+  "question": "How long are backups kept and are they encrypted?",
+  "budget_bytes": 180,
+  "passages": [
+    {
+      "id": "retention",
+      "text": "Backups are retained for 30 days."
+    },
+    {
+      "id": "encryption",
+      "text": "Backups are encrypted at rest."
+    },
+    {
+      "id": "appendix",
+      "text": "This appendix contains operational notes. This appendix contains operational notes. This appendix contains operational notes. This appendix contains operational notes. This appendix contains operational notes. This appendix contains operational notes. This appendix contains operational notes. This appendix contains operational notes. This appendix contains operational notes. This appendix contains operational notes. This appendix contains operational notes. This appendix contains operational notes. "
+    }
+  ]
+}

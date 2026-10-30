@@ -121,6 +121,81 @@
       "failure": "The primary fixture is invalid by design. Make the backup invalid too to exhaust the two-request budget and exit 2. Restore the backup fixture to recover. Tests also exercise a real local HTTP timeout.",
       "adapt": "Configure primary and backup endpoint, model and key variables independently. Use providers that accept the OpenAI-compatible chat format. Tune timeout and output-token limits in common.kujo for your workload.",
       "limits": "The budget limits request count and per-request output tokens, not dollar spend. A timed-out provider may still complete and charge for a request. No unbounded retries or automatic provider discovery are performed."
+    },
+    {
+      "slug": "redacted-summary",
+      "title": "Redact before summarizing",
+      "description": "Remove known private values before sending a support note to a model.",
+      "artifact": "summary.json",
+      "scenario": "A support note repeats a customer email and account ID. Both values stay local while the model receives a redacted copy.",
+      "steps": [
+        "Replace every occurrence of the configured private values locally.",
+        "Send only the redacted message, without the private-value list.",
+        "Reject an output containing a known private value and save a reviewable summary."
+      ],
+      "failure": "Put the original email into the response fixture. The output check rejects it. Restore the redacted fixture and rerun to recover.",
+      "adapt": "Replace the message and private_values together. Include every value that must stay local, with longer overlapping values first. Inspect the redacted request before adapting this to real customer data.",
+      "limits": "This exact-value filter is not a general detector of personal information. Unlisted, encoded or inferred details can pass through. The original input remains on disk; use appropriate local access controls."
+    },
+    {
+      "slug": "grounded-analytics",
+      "title": "Explain computed metrics",
+      "description": "Compute sales totals in code and check the numbers returned by the model.",
+      "artifact": "analysis.json",
+      "scenario": "Three orders total 9,000 cents. Code calculates the total; the model writes an explanation that must repeat the same count and amount.",
+      "steps": [
+        "Validate unique order IDs and nonnegative integer amounts.",
+        "Compute the order count and total locally, then send only those metrics.",
+        "Reject model numbers that disagree with the calculation."
+      ],
+      "failure": "Change total_cents in the response fixture to 9999. The comparison rejects it. Restore 9000 and rerun to recover.",
+      "adapt": "Replace the orders with your own records and keep money in integer minor units. Add deterministic calculations for new metrics before asking the model to explain them.",
+      "limits": "The numeric fields are checked, but the prose may still mislead. Review the explanation before sharing it. This example does not generate or execute SQL."
+    },
+    {
+      "slug": "context-packing",
+      "title": "Pack context within a budget",
+      "description": "Select whole passages within a byte budget and reject citations to omitted sources.",
+      "artifact": "context-answer.json",
+      "scenario": "Two short passages fit the context budget. A longer appendix is skipped, and the answer can cite only the selected passages.",
+      "steps": [
+        "Read passages in caller-supplied priority order and reject duplicate IDs.",
+        "Measure the serialized passage array in UTF-8 bytes before adding each passage.",
+        "Send the selected context and check every returned citation ID."
+      ],
+      "failure": "Set budget_bytes to 2. No passage fits, so the application writes insufficient_context without a model call. Restore the budget to recover. A citation to the omitted appendix is also rejected.",
+      "adapt": "Rank your passages before running the application. This example budgets the serialized context array only; reserve space for the question, instructions, schema and answer separately.",
+      "limits": "Bytes are not model tokens. This is a predictable context-size limit, not a provider token-limit guarantee. Citation IDs establish source membership, not whether a claim is supported."
+    },
+    {
+      "slug": "intent-routing",
+      "title": "Route requests through an allowlist",
+      "description": "Map a model decision to a fixed local handler and send uncertain requests to review.",
+      "artifact": "route.json",
+      "scenario": "A password-reset request is routed to the account-help queue. The model cannot choose a URL, shell command or arbitrary handler.",
+      "steps": [
+        "Request one of three allowed intents and a confidence value.",
+        "Apply a local confidence threshold before selecting a handler.",
+        "Write a routing decision for review without dispatching an external action."
+      ],
+      "failure": "Lower the fixture confidence to 0.4. The request goes to human_review. Restore 0.95 to recover. An intent outside the enum exhausts the bounded retries without creating a route.",
+      "adapt": "Change the schema enum and local handler map together. Calibrate a review threshold against labeled requests before using routing decisions in a real queue.",
+      "limits": "Model-reported confidence is not a calibrated probability. This example illustrates the policy boundary; it does not establish routing accuracy or send a message."
+    },
+    {
+      "slug": "response-cache",
+      "title": "Cache validated responses",
+      "description": "Reuse a checked result only when its input, prompt, schema and provider identity match.",
+      "artifact": "cached-result.json",
+      "scenario": "A repeated classification uses a local cached response. Changing the prompt revision or request content forces a new request.",
+      "steps": [
+        "Hash the input, prompt, schema, mode, provider identity and request code.",
+        "Validate a matching cache entry before using it.",
+        "Write a complete replacement cache after a successful request."
+      ],
+      "failure": "Run twice, deleting responses.json after the first run. The second run succeeds from cache. Change prompt_revision in input.json and it must request again; restore responses.json from the ZIP to recover.",
+      "adapt": "Change prompt_revision when policy changes. The key also covers the prompt and request code automatically. Use one trusted writer per directory and delete cache.json when you want a fresh result.",
+      "limits": "This local cache has no expiry or cross-process lock. It excludes credentials from the key, so use separate directories for different accounts or tenants. Model behavior can change under the same model name; invalidate the cache when that matters."
     }
   ]
 }

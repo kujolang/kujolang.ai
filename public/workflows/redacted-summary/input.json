@@ -1,0 +1,7 @@
+{
+  "message": "Customer alex@example.test (account ACCT-42) cannot sign in. Contact alex@example.test after the reset.",
+  "private_values": [
+    "alex@example.test",
+    "ACCT-42"
+  ]
+}

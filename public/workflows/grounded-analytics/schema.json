@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties": {
+    "order_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "total_cents": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "order_count",
+    "total_cents",
+    "explanation"
+  ],
+  "additionalProperties": false
+}

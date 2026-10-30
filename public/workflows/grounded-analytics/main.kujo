@@ -1,0 +1,19 @@
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+mut seen := []
+mut total := 0
+for order in input["orders"] {
+    assert(!contains(seen, order["id"]), "Duplicate order ID")
+    seen = push(seen, order["id"])
+    let checked := json_schema_validate(order["total_cents"], {"type": "integer", "minimum": 0})
+    assert(checked["valid"], "Amounts must be nonnegative integer cents")
+    total = total + order["total_cents"]
+}
+let metrics := {"order_count": len(seen), "total_cents": total}
+let result := request(config(), "Explain these computed sales metrics. Copy their numeric fields exactly; do not infer trends from a single total.", metrics, "responses.json", load("schema.json"))
+let data := require_result(result)
+assert(data["order_count"] == metrics["order_count"], "Model changed the order count")
+assert(data["total_cents"] == total, "Model changed the computed total")
+save("analysis.json", {"metrics": metrics, "explanation": data["explanation"], "status": "needs_review"})
+print("Saved analysis.json with checked numeric fields.")

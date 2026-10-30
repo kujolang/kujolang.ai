@@ -1,0 +1,24 @@
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+let cfg := config()
+let schema := load("schema.json")
+let prompt := "Classify the support message as account, billing or technical."
+let identity := {"mode": cfg["mode"], "endpoint": env_or("KUJO_AI_ENDPOINT", ""), "model": env_or("KUJO_AI_MODEL", "")}
+let key := sha256(to_json({"input": input, "prompt": prompt, "schema": schema, "provider": identity, "request_code": sha256(read_file("common.kujo"))}))
+if file_exists("cache.json") {
+    let cached := load("cache.json")
+    if cached["key"] == key {
+        let checked := json_schema_validate(cached["data"], schema)
+        assert(checked["valid"], "Cached data failed validation. Remove cache.json and retry.")
+        save("cached-result.json", {"data": cached["data"], "cache_hit": true, "key": key})
+        print("Cache hit; no model request was made.")
+        exit(0)
+    }
+}
+let result := request(cfg, prompt, input, "responses.json", schema)
+let data := require_result(result)
+save("cache.next.json", {"key": key, "data": data})
+rename_file("cache.next.json", "cache.json")
+save("cached-result.json", {"data": data, "cache_hit": false, "key": key})
+print("Saved a validated result and its cache entry.")

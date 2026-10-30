@@ -1,0 +1,20 @@
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+mut redacted := input["message"]
+assert(len(input["private_values"]) > 0, "Configure the private values first")
+for value in input["private_values"] {
+    assert(len(value) > 0, "Private values must not be empty")
+    redacted = replace(redacted, value, "[REDACTED]")
+}
+for value in input["private_values"] {
+    assert(contains(redacted, value) == 0, "A private value remains in the request")
+}
+# Keep the original input and private-value list out of the provider request.
+let result := request(config(), "Summarize this redacted support note without guessing missing identities.", {"message": redacted}, "responses.json", load("schema.json"))
+let data := require_result(result)
+for value in input["private_values"] {
+    assert(contains(data["summary"], value) == 0, "Output contains a known private value")
+}
+save("summary.json", {"redacted_input": redacted, "summary": data["summary"], "status": "needs_review"})
+print("Saved summary.json; configured private values were not sent.")

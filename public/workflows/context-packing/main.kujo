@@ -1,0 +1,32 @@
+from common import load, save, config, request, require_result
+
+let input := load("input.json")
+let budget_check := json_schema_validate(input["budget_bytes"], {"type": "integer", "minimum": 2})
+assert(budget_check["valid"], "Budget must hold at least an empty JSON array")
+mut selected := []
+mut selected_ids := []
+mut omitted := []
+mut seen := []
+for passage in input["passages"] {
+    assert(!contains(seen, passage["id"]), "Duplicate passage ID")
+    seen = push(seen, passage["id"])
+    let candidate := push(selected, passage)
+    if byte_length(to_json(candidate)) <= input["budget_bytes"] {
+        selected = candidate
+        selected_ids = push(selected_ids, passage["id"])
+    } else {
+        omitted = push(omitted, passage["id"])
+    }
+}
+if len(selected) == 0 {
+    save("context-answer.json", {"status": "insufficient_context", "omitted_ids": omitted})
+    print("No passage fits. Increase the context budget and rerun.")
+    exit(0)
+}
+let result := request(config(), "Answer from the selected passages and cite their IDs. Do not invent sources.", {"question": input["question"], "passages": selected}, "responses.json", load("schema.json"))
+let data := require_result(result)
+for id in data["source_ids"] {
+    assert(contains(selected_ids, id), "Citation points outside the selected context")
+}
+save("context-answer.json", {"answer": data, "selected_ids": selected_ids, "omitted_ids": omitted, "context_bytes": byte_length(to_json(selected)), "status": "needs_review"})
+print("Saved context-answer.json with the selected and omitted source IDs.")
