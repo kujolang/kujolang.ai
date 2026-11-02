@@ -199,10 +199,10 @@
     },
     "baml-preview-release": {
       "label": "BAML latest nightly release",
-      "url": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.23.1-nightly.20261025.a",
+      "url": "https://github.com/BoundaryML/baml/releases/tag/baml-language-0.23.1-nightly.20261101.a",
       "level": "official nightly release metadata; not a stable release",
-      "version": "0.23.1-nightly.20261025.a; published 2026-10-26. Not executed in this review.",
-      "verified": "2026-10-26"
+      "version": "0.23.1-nightly.20261101.a; published 2026-11-02. Not executed in this review.",
+      "verified": "2026-11-02"
     },
     "zero-patch": {
       "label": "Zerolang patch validation implementation",

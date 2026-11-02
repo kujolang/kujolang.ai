@@ -20,3 +20,7 @@ The catalog's release metadata now identifies the current stable Kujo, Bend and 
 3. Kujo 1.9.0 needs the public producer/checker controls rerun before the site changes its 1.8.2 fixture wording.
 
 Recheck on any release above, on a material documentation change, or at the next weekly audit. The standing full claim ledger remains `comparison/research/fact-review-2026-10-19/claim-ledger.csv`.
+
+## 2026-11-02 follow-up
+
+Official release metadata now lists `0.23.1-nightly.20261101.a` as BAML's newest nightly. The stable release remains 0.23.0. The catalog links that nightly as unexecuted; all runtime assertions still name their tested 0.22.x builds.
