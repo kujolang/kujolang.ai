@@ -283,11 +283,11 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 57 ]] || fail "expected 57 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 60 ]] || fail "expected 57 project and 3 catalog output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_sources" == 58 ]] || fail "expected 58 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 61 ]] || fail "expected 58 project and 3 catalog output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 16 ]] || fail "expected 16 primitive cards, found ${primitive_count}"
 [[ "$tooling_count" == 31 ]] || fail "expected 31 tooling cards, found ${tooling_count}"
-[[ "$showcase_count" == 10 ]] || fail "expected 10 showcase cards, found ${showcase_count}"
+[[ "$showcase_count" == 11 ]] || fail "expected 11 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
 	image_path=$(sed -n 's/^featured_image: "\(.*\.webp\)"$/\1/p' "$source_file")
@@ -536,9 +536,18 @@ require_text "${output_dir}/ecosystem/tooling/index.html" 'href="/ecosystem/kujo
 require_text "${output_dir}/sitemap.xml" '/ecosystem/kujo-opencode/'
 require_social_meta "${output_dir}/ecosystem/kujo-opencode/index.html" 'kujo-opencode'
 
+# Require an accessible player rather than escaped Markdown HTML.
+require_text "${output_dir}/ecosystem/website-cloner/index.html" '<video controls playsinline preload="none"'
+require_text "${output_dir}/ecosystem/website-cloner/index.html" 'kind="captions"'
+require_text "${output_dir}/ecosystem/website-cloner/index.html" 'Video transcript'
+require_text "${output_dir}/ecosystem/website-cloner/index.html" '"@type": "VideoObject"'
+reject_text "${output_dir}/ecosystem/website-cloner/index.html" 'WEBSITE_CLONER_DEMO'
+reject_text "${output_dir}/ecosystem/website-cloner/index.html" '&lt;video'
+require_text "${output_dir}/index.html" 'href="/ecosystem/website-cloner/"'
+
 if (( failures > 0 )); then
 	printf 'Site contract failed with %d issue(s).\n' "$failures" >&2
 	exit 1
 fi
 
-printf 'Site contract passed: 57 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 58 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'

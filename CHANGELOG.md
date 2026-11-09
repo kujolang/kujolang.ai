@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add Website Cloner 0.1.1 to the ecosystem and homepage, with a dither hero, captioned promo, transcript, installer guidance and static-site migration limits.
+
 - Lead with the Kujo language, real code, installation and six goal-based ecosystem entry points.
 - Add 21 pinned examples with exact runtime verification, offline replay fixtures, accessible selection, copy feedback and category/search filtering.
 - Add language onboarding, a composable workflow exercise and reproducible performance methodology; preserve existing ecosystem and comparison routes.

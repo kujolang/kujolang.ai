@@ -1201,6 +1201,28 @@
     fill: currentColor;
   }
 
+  .home-cloner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: var(--sk-space-10);
+    padding-block-end: var(--site-section-gap);
+  }
+
+  .home-cloner__image img,
+  .cloner-demo video {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+  }
+
+  .cloner-demo { margin-inline: 0; }
+  .cloner-demo figcaption { margin-block-start: var(--sk-space-3); }
+  .home-cloner .section-heading { margin-block-end: 0; }
+
+  @media (max-width: 64rem) {
+    .home-cloner { grid-template-columns: minmax(0, 1fr); }
+  }
 
   @media (max-width: 64rem) {
     .home-hero__wash {

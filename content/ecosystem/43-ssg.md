@@ -55,3 +55,7 @@ Writes require explicit approval and keyed idempotency. MCP and agent hosts bind
 ## Learn more
 
 The repository is the source of truth for current setup, commands, examples, security notes, compatibility, and verification evidence.
+
+## Bring an existing WordPress site
+
+[Website Cloner](/ecosystem/website-cloner/) captures a public WordPress site and exports an editable Kujo SSG project. It runs locally without AI by default; review the generated pages and reports before publishing.

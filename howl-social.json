@@ -4462,6 +4462,19 @@
       "language": "kujo",
       "caption": "Reuse a checked result only when its input, prompt, schema and provider identity match.",
       "notes": "Authored offline fixtures and controlled local HTTP provider tests. Live model quality is not measured."
+    },
+    {
+      "id": "website-cloner",
+      "title": "WEBSITE CLONER",
+      "tagline": "Your website. Your next move.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "Showcase",
+      "url": "kujolang.ai/ecosystem/website-cloner/",
+      "show_border": false,
+      "show_url": false,
+      "background_image": "assets/images/ecosystem/website-cloner-page-duplication.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
     }
   ]
 }
