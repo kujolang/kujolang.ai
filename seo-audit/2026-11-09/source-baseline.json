@@ -1,0 +1,31 @@
+{
+  "commit": "05064fd211af4fd9b6700fe383717a877d965f37",
+  "files": [
+    {
+      "path": "templates/page-home.html",
+      "sha256": "b8af1be4ddb62f900e4b8538aedf930a5e13417ab4d0692eb296913e01a6fe7e"
+    },
+    {
+      "path": "templates/ecosystem.html",
+      "sha256": "646124c42f7a7a5617beb55dab558f5bea181c5cf4cbc91812aa59b12e5aee58"
+    },
+    {
+      "path": "templates/page-ecosystem.html",
+      "sha256": "e4ced94b559494136a92dd19a6a04219df9f8ac472d00de7b9addcda9e488ab3"
+    },
+    {
+      "path": "build.kujo",
+      "sha256": "edc297c6f2d6006be02e7802ecfd3e112c77caca83f144e1f9708ed0bda578df"
+    },
+    {
+      "path": "assets/css/style.css",
+      "sha256": "6b89dbba4a6e48e43e34a08e720e6f1efaa5cb52a1a4be47815e237566b53e22"
+    },
+    {
+      "path": "howl-social.json",
+      "sha256": "30d890d96c3425b67934e4c2198407b2cfa62060548883c7953fbe3e41946c17"
+    }
+  ],
+  "historical_generated_baseline": "../2026-10-30/baseline-html.tar.gz",
+  "note": "Historical generated audit is explicitly dated October 30; preliminary November 9 crawl was interrupted and is not a valid complete baseline. Production command-line requests returned 403, but browser access succeeded."
+}

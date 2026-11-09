@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "video_element": true,
+    "preload_none": true,
+    "captions": true,
+    "transcript": true,
+    "no_autoplay": true,
+    "video_schema": true,
+    "llms": true,
+    "webmcp": true,
+    "no_page_issues": true
+  },
+  "viewport_checks": {
+    "desktop": 1440,
+    "mobile": 390,
+    "overflow": false,
+    "video_duration_seconds": 66,
+    "playback_observed_seconds": 20.39
+  },
+  "media": {
+    "hero_dimensions": [
+      1916,
+      821
+    ],
+    "binary_channels": [
+      0,
+      255
+    ],
+    "mp4_bytes": 30787240
+  }
+}
