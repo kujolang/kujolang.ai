@@ -543,7 +543,7 @@ require_text "${output_dir}/ecosystem/website-cloner/index.html" 'Video transcri
 require_text "${output_dir}/ecosystem/website-cloner/index.html" '"@type": "VideoObject"'
 reject_text "${output_dir}/ecosystem/website-cloner/index.html" 'WEBSITE_CLONER_DEMO'
 reject_text "${output_dir}/ecosystem/website-cloner/index.html" '&lt;video'
-require_text "${output_dir}/index.html" 'href="/ecosystem/website-cloner/"'
+reject_text "${output_dir}/index.html" 'home-cloner'
 
 if (( failures > 0 )); then
 	printf 'Site contract failed with %d issue(s).\n' "$failures" >&2
