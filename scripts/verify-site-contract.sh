@@ -283,10 +283,10 @@ ecosystem_outputs=$(find "${output_dir}/ecosystem" -mindepth 1 -maxdepth 1 -type
 primitive_count=$(grep -l '^section: "Primitives"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 tooling_count=$(grep -l '^section: "Tooling"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
 showcase_count=$(grep -l '^section: "Showcase"$' "${repo_root}"/content/ecosystem/*.md | wc -l | tr -d ' ')
-[[ "$ecosystem_sources" == 58 ]] || fail "expected 58 ecosystem sources, found ${ecosystem_sources}"
-[[ "$ecosystem_outputs" == 61 ]] || fail "expected 58 project and 3 catalog output routes, found ${ecosystem_outputs}"
+[[ "$ecosystem_sources" == 59 ]] || fail "expected 59 ecosystem sources, found ${ecosystem_sources}"
+[[ "$ecosystem_outputs" == 62 ]] || fail "expected 59 project and 3 catalog output routes, found ${ecosystem_outputs}"
 [[ "$primitive_count" == 16 ]] || fail "expected 16 primitive cards, found ${primitive_count}"
-[[ "$tooling_count" == 31 ]] || fail "expected 31 tooling cards, found ${tooling_count}"
+[[ "$tooling_count" == 32 ]] || fail "expected 32 tooling cards, found ${tooling_count}"
 [[ "$showcase_count" == 11 ]] || fail "expected 11 showcase cards, found ${showcase_count}"
 
 for source_file in "${repo_root}"/content/ecosystem/*.md; do
@@ -550,4 +550,11 @@ if (( failures > 0 )); then
 	exit 1
 fi
 
-printf 'Site contract passed: 58 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+printf 'Site contract passed: 59 ecosystem projects, 3 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
+
+require_file "${output_dir}/ecosystem/kujo-hermes/index.html"
+require_text "${output_dir}/ecosystem/kujo-hermes/index.html" 'hermes plugins install kujolang/kujo-hermes'
+require_text "${output_dir}/ecosystem/kujo-hermes/index.html" 'width="1916" height="821"'
+require_text "${output_dir}/ecosystem/tooling/index.html" 'href="/ecosystem/kujo-hermes/"'
+require_text "${output_dir}/sitemap.xml" '/ecosystem/kujo-hermes/'
+require_social_meta "${output_dir}/ecosystem/kujo-hermes/index.html" 'kujo-hermes'

@@ -3828,7 +3828,7 @@
       "language": "kujo",
       "caption": "Turn percent-encoded URL text back into readable characters.",
       "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
-      "expected_output": "café & tea\n東京/検索\n"
+      "expected_output": "caf\u00e9 & tea\n\u6771\u4eac/\u691c\u7d22\n"
     },
     {
       "id": "examples-type-conversion",
@@ -4475,6 +4475,20 @@
       "show_url": false,
       "background_image": "assets/images/ecosystem/website-cloner-page-duplication.webp",
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2"
+    },
+    {
+      "id": "kujo-hermes",
+      "title": "Kujo Hermes",
+      "tagline": "Engineering checks. Human approvals. Inspectable receipts.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "tooling",
+      "url": "kujolang.ai/ecosystem/kujo-hermes/",
+      "background_image": "assets/images/ecosystem/hermes-verification-console.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false,
+      "caption": "Give Hermes engineering checks and execution evidence."
     }
   ]
 }
