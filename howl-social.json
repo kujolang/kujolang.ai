@@ -3828,7 +3828,7 @@
       "language": "kujo",
       "caption": "Turn percent-encoded URL text back into readable characters.",
       "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. ",
-      "expected_output": "caf\u00e9 & tea\n\u6771\u4eac/\u691c\u7d22\n"
+      "expected_output": "café & tea\n東京/検索\n"
     },
     {
       "id": "examples-type-conversion",
