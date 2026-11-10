@@ -67,6 +67,7 @@ jobs:
           path: output
 
   deploy:
+    timeout-minutes: 25
     if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
@@ -77,3 +78,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Pages file synchronization exceeded the default ten-minute window.
+          timeout: 1200000
