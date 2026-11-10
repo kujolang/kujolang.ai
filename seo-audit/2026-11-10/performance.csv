@@ -1,0 +1,4 @@
+phase,url,template,run_date,environment,lighthouse_version,html_bytes,css_bytes,js_bytes,image_bytes,font_bytes,requests,lcp_ms,inp_ms,cls,ttfb_ms,source,notes
+after,https://kujolang.ai/ecosystem/kujo-hermes/,,2026-11-10,generated HTML; not a lab or field performance run,,20353,,,,,,,,,,"Generated file size, not network performance or Core Web Vitals","LCP, INP, CLS, field TTFB and analytics: NOT AVAILABLE — DATA ACCESS REQUIRED"
+after,https://docs.kujolang.ai/tools/kujo-hermes/,,2026-11-10,generated HTML; not a lab or field performance run,,12260,,,,,,,,,,"Generated file size, not network performance or Core Web Vitals","LCP, INP, CLS, field TTFB and analytics: NOT AVAILABLE — DATA ACCESS REQUIRED"
+after,https://kujo.robertdevore.com/hermes/,,2026-11-10,generated HTML; not a lab or field performance run,,6627,,,,,,,,,,"Generated file size, not network performance or Core Web Vitals","LCP, INP, CLS, field TTFB and analytics: NOT AVAILABLE — DATA ACCESS REQUIRED"

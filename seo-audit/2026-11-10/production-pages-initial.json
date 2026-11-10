@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://docs.kujolang.ai/tools/kujo-hermes/",
+    "exit": 0,
+    "expected_content": true
+  },
+  {
+    "url": "https://kujo.robertdevore.com/hermes/",
+    "exit": 0,
+    "expected_content": true
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/kujo-hermes/",
+    "exit": 56,
+    "expected_content": false
+  }
+]

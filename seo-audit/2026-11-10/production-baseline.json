@@ -1,0 +1,42 @@
+[
+  {
+    "url": "https://kujolang.ai/ecosystem/",
+    "status": "200",
+    "receipt": "baseline-live-0.txt"
+  },
+  {
+    "url": "https://kujolang.ai/ecosystem/kujo-hermes/",
+    "status": "404",
+    "receipt": "baseline-live-1.txt"
+  },
+  {
+    "url": "https://docs.kujolang.ai/tools/kujo-hermes/",
+    "status": "404",
+    "receipt": "baseline-live-2.txt"
+  },
+  {
+    "url": "https://mcp.kujolang.ai/health",
+    "status": "200",
+    "receipt": "baseline-live-3.txt"
+  },
+  {
+    "url": "https://kennel.kujolang.ai/",
+    "status": "200",
+    "receipt": "baseline-live-4.txt"
+  },
+  {
+    "url": "https://kujo.robertdevore.com/",
+    "status": "200",
+    "receipt": "baseline-live-5.txt"
+  },
+  {
+    "url": "https://kujolang.ai/robots.txt",
+    "status": "200",
+    "receipt": "baseline-live-6.txt"
+  },
+  {
+    "url": "https://kujolang.ai/sitemap.xml",
+    "status": "200",
+    "receipt": "baseline-live-7.txt"
+  }
+]

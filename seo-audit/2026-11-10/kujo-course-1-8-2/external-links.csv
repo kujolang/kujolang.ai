@@ -1,0 +1,232 @@
+phase,source_url,destination_url,anchor_text,link_context,http_status,final_url,chain_length,verification,rel,recommended_action
+after,https://kujo.robertdevore.com/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/about/,https://github.com/robertdevore/kujo.robertdevore.com,standalone repository,main,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/about/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/about/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-1/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-1/,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/report,course repository,main,,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/report,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-1/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-1/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-2/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-2/,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/concurrent,course repository,main,,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/concurrent,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-2/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-2/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-3/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-3/,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/package,course repository,main,,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/package,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-3/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-3/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-4/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-4/,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/native,course repository,main,,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/native,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-4/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-4/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-5/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-5/,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/ai,course repository,main,,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/ai,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-5/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-5/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-6/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-6/,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/workflow,course repository,main,,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/workflow,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-6/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/build-6/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/capstone/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/capstone/,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/capstone,Inspect the complete source,main,,https://github.com/robertdevore/kujo.robertdevore.com/tree/main/projects/capstone,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/capstone/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/capstone/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/ai-effects-and-messages/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/ai-effects-and-messages/,https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/,Simon Willison’s analysis,article,,https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/ai-effects-and-messages/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/ai-effects-and-messages/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/ai-effects-and-messages/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/async-and-await/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/async-and-await/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/async-and-await/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/async-and-await/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/bindings-and-mutability/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/bindings-and-mutability/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/bindings-and-mutability/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/bindings-and-mutability/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/bounded-concurrency/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/bounded-concurrency/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/bounded-concurrency/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/bounded-concurrency/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/capability-security/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/capability-security/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/capability-security/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/capability-security/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/collections-and-pipelines/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/collections-and-pipelines/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/collections-and-pipelines/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/collections-and-pipelines/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/context-and-vectors/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/context-and-vectors/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/context-and-vectors/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/context-and-vectors/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/control-flow/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/control-flow/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/control-flow/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/control-flow/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/data-and-persistence/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/data-and-persistence/,https://github.com/kujolang/kujo/blob/v1.8.1/docs/POSTGRES_TLS_POOL.md,tagged contract and its dedicated local-server harness,article,,https://github.com/kujolang/kujo/blob/v1.8.1/docs/POSTGRES_TLS_POOL.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/data-and-persistence/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/data-and-persistence/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/data-and-persistence/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/documentation/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/documentation/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/documentation/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/documentation/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/editor-and-lsp/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/editor-and-lsp/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/editor-and-lsp/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/editor-and-lsp/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/evaluation/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/evaluation/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/evaluation/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/evaluation/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/evidence-and-handoffs/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/evidence-and-handoffs/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/evidence-and-handoffs/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/evidence-and-handoffs/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/exceptions/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/exceptions/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/exceptions/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/exceptions/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/filesystem/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/filesystem/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/filesystem/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/filesystem/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/functions/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/functions/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/functions/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/functions/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/http-and-networking/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/http-and-networking/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/http-and-networking/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/http-and-networking/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/isolation-and-observability/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/isolation-and-observability/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/isolation-and-observability/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/isolation-and-observability/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/loop-engineering/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/loop-engineering/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/loop-engineering/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/loop-engineering/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/machine-contracts/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/machine-contracts/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/machine-contracts/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/machine-contracts/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/match-result-option/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/match-result-option/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/match-result-option/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/match-result-option/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/mcp-interoperability/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/mcp-interoperability/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/mcp-interoperability/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/mcp-interoperability/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/mechanism-and-policy/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/mechanism-and-policy/,https://github.com/kujolang/kujo/blob/main/docs/KUJO_1_6_RELEASE.md,release record,article,,https://github.com/kujolang/kujo/blob/main/docs/KUJO_1_6_RELEASE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/mechanism-and-policy/,https://docs.kujolang.ai/ecosystem/,current ecosystem documentation,article,,https://docs.kujolang.ai/ecosystem/,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/mechanism-and-policy/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/mechanism-and-policy/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/mechanism-and-policy/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/modules/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/modules/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/modules/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/modules/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/optional-typing/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/optional-typing/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/optional-typing/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/optional-typing/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/processes/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/processes/,https://github.com/kujolang/kujo/blob/v1.8.1/docs/NATIVE_API_SECURITY_POSTURE.md,native security contract,article,,https://github.com/kujolang/kujo/blob/v1.8.1/docs/NATIVE_API_SECURITY_POSTURE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/processes/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/processes/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/processes/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/projects-and-lockfiles/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/projects-and-lockfiles/,https://github.com/kujolang/kennel,Kennel,article,,https://github.com/kujolang/kennel,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/projects-and-lockfiles/,https://kennel.kujolang.ai,its official registry,article,,https://kennel.kujolang.ai,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/projects-and-lockfiles/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/projects-and-lockfiles/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/projects-and-lockfiles/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/record-and-replay/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/record-and-replay/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/record-and-replay/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/record-and-replay/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/request-identity/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/request-identity/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/request-identity/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/request-identity/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/scope-and-capture/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/scope-and-capture/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/scope-and-capture/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/scope-and-capture/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/secret-boundaries/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/secret-boundaries/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/secret-boundaries/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/secret-boundaries/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/setup-and-cli/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/setup-and-cli/,https://github.com/kujolang/kujo/releases/tag/v1.9.0,the 1.9.0 release,article,,https://github.com/kujolang/kujo/releases/tag/v1.9.0,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/setup-and-cli/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/setup-and-cli/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/setup-and-cli/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/standard-library/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/standard-library/,https://github.com/kujolang/kujo/blob/v1.8.1/docs/STANDARD_LIBRARY.md,native inventory,article,,https://github.com/kujolang/kujo/blob/v1.8.1/docs/STANDARD_LIBRARY.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/standard-library/,https://github.com/kujolang/kujo/blob/v1.8.1/docs/PDF_RENDERING.md,PDF profile,article,,https://github.com/kujolang/kujo/blob/v1.8.1/docs/PDF_RENDERING.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/standard-library/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/standard-library/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/standard-library/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/streaming/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/streaming/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/streaming/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/streaming/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/structs-and-enums/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/structs-and-enums/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/structs-and-enums/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/structs-and-enums/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/structured-outputs/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/structured-outputs/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/structured-outputs/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/structured-outputs/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/testing/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/testing/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/testing/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/testing/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/tool-loops/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/tool-loops/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/tool-loops/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/tool-loops/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/values-and-truthiness/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/values-and-truthiness/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/values-and-truthiness/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/values-and-truthiness/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/what-is-kujo/,https://robertdevore.com,Robert DeVore,main,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/what-is-kujo/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,Source contract,article,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/what-is-kujo/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/course/what-is-kujo/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,language specification,main,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/LANGUAGE_SPEC.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,stable scope,main,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/V1_SCOPE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/STANDARD_LIBRARY.md,standard library,main,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/STANDARD_LIBRARY.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,AI runtime,main,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/AI_RUNTIME.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,CLI contracts,main,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/CLI_MACHINE_READABLE_CONTRACTS.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/VM_INTERPRETER_PARITY_MATRIX.md,parity matrix,main,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/VM_INTERPRETER_PARITY_MATRIX.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,security posture,main,,https://github.com/kujolang/kujo/blob/v1.9.0/docs/NATIVE_API_SECURITY_POSTURE.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo-workflows/tree/main/loop-engineering,Kujo Workflows,main,,https://github.com/kujolang/kujo-workflows/tree/main/loop-engineering,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/mcp,MCP framework,main,,https://github.com/kujolang/mcp,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/eval,Eval,main,,https://github.com/kujolang/eval,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/runledger,RunLedger,main,,https://github.com/kujolang/runledger,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://modelcontextprotocol.io/specification/2026-07-28,MCP specification,main,,https://modelcontextprotocol.io/specification/2026-07-28,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo/blob/v1.8.2/docs/RELEASE_NOTES_1_8.md,release notes,main,,https://github.com/kujolang/kujo/blob/v1.8.2/docs/RELEASE_NOTES_1_8.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo/blob/v1.8.2/docs/KUJO_1_8_RELEASE_READINESS.md,release-readiness evidence,main,,https://github.com/kujolang/kujo/blob/v1.8.2/docs/KUJO_1_8_RELEASE_READINESS.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo/blob/v1.8.2/docs/ZIP_9_RUST_MIGRATION.md,ZIP 9 API migration,main,,https://github.com/kujolang/kujo/blob/v1.8.2/docs/ZIP_9_RUST_MIGRATION.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo/blob/main/docs/RELEASE_NOTES_1_8_2.md,1.8.2 release notes,main,,https://github.com/kujolang/kujo/blob/main/docs/RELEASE_NOTES_1_8_2.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/kujolang/kujo/blob/main/docs/RELEASE_NOTES_1_9_0.md,1.9.0 release notes,main,,https://github.com/kujolang/kujo/blob/main/docs/RELEASE_NOTES_1_9_0.md,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/evidence/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/explorer/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/explorer/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/hermes/,https://kujolang.ai/ecosystem/kujo-hermes/,Kujo Hermes,main,,https://kujolang.ai/ecosystem/kujo-hermes/,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/hermes/,https://github.com/kujolang/kujo-hermes/tree/main/demo/checkout-video,recorded checkout example,main,,https://github.com/kujolang/kujo-hermes/tree/main/demo/checkout-video,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/hermes/,https://docs.kujolang.ai/tools/kujo-hermes/,installation and configuration guide,main,,https://docs.kujolang.ai/tools/kujo-hermes/,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/hermes/,https://github.com/robertdevore/kujo.robertdevore.com,Source,nav,,https://github.com/robertdevore/kujo.robertdevore.com,0,not probed in crawl,,none
+after,https://kujo.robertdevore.com/hermes/,https://robertdevore.com,Robert DeVore,nav,,https://robertdevore.com,0,not probed in crawl,,none

@@ -1,0 +1,4 @@
+id,phase,category,severity,affected_urls,affected_count,evidence,expected_benefit,confidence,difficulty,recommended_action,owner,status
+HERMES-01,after,discovery,P2,https://kujolang.ai/ecosystem/kujo-hermes/; https://docs.kujolang.ai/tools/kujo-hermes/,2,source-baseline.json; baseline/after inventories; production receipts,Accurate public discovery and installation guidance,High,Low,Add linked source-backed tool pages,Kujo,resolved
+HERMES-02,after,social,P2,https://kujolang.ai/ecosystem/kujo-hermes/,1,source-baseline.json; baseline/after inventories; production receipts,Accurate public discovery and installation guidance,High,Low,Generate dither hero and Howl social card,Kujo,resolved
+HERMES-03,after,catalog,P2,https://mcp.kujolang.ai/mcp,1,source-baseline.json; baseline/after inventories; production receipts,Accurate public discovery and installation guidance,High,Low,Regenerate read-only catalog from pinned website source,Kujo,resolved
