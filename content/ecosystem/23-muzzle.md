@@ -42,7 +42,11 @@ Install or update the command with Kennel:
 
 ```bash
 kennel tool install muzzle
-# For an existing unpinned installation:
+```
+
+For an existing unpinned installation:
+
+```bash
 kennel tool update muzzle
 muzzle version
 ```

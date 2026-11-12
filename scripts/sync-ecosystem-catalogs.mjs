@@ -299,11 +299,11 @@ workflows.forEach((workflow, index) => {
   writePage(workflowsDir, index + 1, slug, {
     title, custom_url: slug, description: workflow.purpose,
     featured_image: `/${heroPath}`, social_image: `/assets/images/social/${slug}.jpg`,
-    section: readiness, order: (index + 1) * 10,
+    section: `Local preview: ${readiness}`, order: (index + 1) * 10,
     install_command: `git clone --branch ${workflowsLinkRef} --depth 1 https://github.com/kujolang/kujo-workflows.git && cd kujo-workflows && ${workflow.entry}`,
     github_url: sourceUrl,
     launch_story: `A local-first workflow kit with explicit inputs, outputs, evidence, recovery, and approval boundaries.`,
-    scope_note: `Current readiness: ${readiness}. Review the workflow README before live-provider or host-affecting use.`,
+    scope_note: `Local preview readiness: ${readiness}. Review the workflow README before live-provider or host-affecting use.`,
     version: workflowVersion, last_updated: workflowDate,
     keywords: `${title}, Kujo workflow, ${slug}, local-first agent workflow`,
     seo_title: `${title} — Kujo Workflow`, seo_description: workflow.purpose

@@ -11,7 +11,7 @@ github_url: "https://github.com/kujolang/dispatch"
 launch_story: "Dispatch 1.4.1 routes bounded AI work through policy constraints, approvals, resumable state, and inspectable evidence."
 scope_note: "Dispatch 1.4.1 requires Kujo 1.8.1. Durable review, process-owned locks, policy-preserving resume and evidence inspection are included. Wave C beta assurance and Wave D alpha interoperability remain experimental and opt-in."
 keywords: "Dispatch, Kujo ecosystem, Primitive, Orchestration"
-seo_title: "Dispatch — Kujo Ecosystem"
+seo_title: "Dispatch — Record and Recover AI Workflows | Kujo"
 version: "1.4.1"
 last_updated: "2026-10-21"
 latest_release_url: "https://github.com/kujolang/dispatch/releases/tag/v1.4.1"
@@ -52,3 +52,7 @@ rollback, remote participant trust or general machine-loss recovery.
 ## Upgrade to 1.4.0
 
 Dispatch 1.4.0 adds revision-bound approval recovery, graph settlement and retained-host recovery, with resource and attempt accounting. Back up persisted state and stop older workers before upgrading. Filesystem and SQLite paused-workflow upgrade, restart and recovery checks passed. Experimental graph/operator state remains bound to its original source and dependency identities; automatic cross-version graph migration is not supported. Follow the [release and upgrade evidence](https://github.com/kujolang/dispatch/blob/v1.4.0/docs/audits/dispatch-1.4.0-release.md).
+
+## Inspect the evidence
+
+Review the [published release](https://github.com/kujolang/dispatch/releases/tag/v1.4.1), [source and test instructions](https://github.com/kujolang/dispatch), and [agent accountability boundaries](/agent-accountability/). Run the documented checks in your own environment; release labels do not certify every provider, host or workload.

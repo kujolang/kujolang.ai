@@ -11,7 +11,7 @@ github_url: "https://github.com/kujolang/workcell"
 launch_story: "Run agent work inside an explicit execution contract, then export only declared artifacts and durable evidence."
 scope_note: "Workcell 1.3.0 adds bounded preservation and execution evidence on Kujo 1.6. Docker/Podman remain stable; portable/remote adapters and process handoffs remain alpha. Git assurance beta is opt-in, required/deny and single-effect. Dispatch owns replay. Run doctor on the target host."
 keywords: "Workcell, Kujo ecosystem, bounded execution, Docker, Podman"
-seo_title: "Workcell — Kujo Ecosystem"
+seo_title: "Workcell — Configured Agent Execution Environments | Kujo"
 version: "1.3.0"
 latest_release_url: "https://github.com/kujolang/workcell/releases/tag/v1.3.0"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
@@ -53,3 +53,7 @@ The [Workcell repository](https://github.com/kujolang/workcell) includes install
 Workcell 1.3.0 requires Kujo 1.6.0 and adds retained-workspace observations, experimental checked Git boundaries, and cancellation improvements alongside bounded preservation and portable execution results. The Git CAS assurance profile and controlled process participant are experimental; Dispatch decides replay. Stable Docker/Podman scope and remote-adapter alpha boundaries remain unchanged.
 
 Wave C beta remains opt-in in the bounded single-effect required/deny domain, with alpha retained. Wave D handoffs remain alpha under a trusted local host. No remote participant trust or exactly-once guarantee is claimed.
+
+## Inspect the evidence
+
+Review the [published release](https://github.com/kujolang/workcell/releases/tag/v1.3.0), [source and test instructions](https://github.com/kujolang/workcell), and [agent accountability boundaries](/agent-accountability/). Run the documented checks in your own environment; release labels do not certify every provider, host or workload.

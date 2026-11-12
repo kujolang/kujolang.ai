@@ -9,7 +9,7 @@ order: 130
 install_command: "kennel add watchdog"
 github_url: "https://github.com/kujolang/watchdog"
 launch_story: "Track model requests, tool calls, and agent steps in one local dashboard."
-scope_note: "Your telemetry stays in a local SQLite database. Costs are estimates of direct API usage, not invoices."
+scope_note: "Telemetry is stored locally in SQLite; optional JSONL and OTLP exports can send it elsewhere. Costs are estimates of direct API usage, not invoices."
 keywords: "Watchdog, AI observability, token usage, API costs, local telemetry"
 seo_title: "Watchdog — AI Usage and Cost Dashboard"
 latest_release_url: "https://github.com/kujolang/watchdog/releases/latest"

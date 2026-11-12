@@ -11,7 +11,7 @@ github_url: "https://github.com/kujolang/agents-sdk"
 launch_story: "Build local agents with explicit tools, approvals, state, and run evidence."
 scope_note: "Version 1.1.3 hardens approvals, state recovery, storage, retries, and token accounting while preserving public contracts. Use Kujo 1.6.0+ and Kennel 1.1.0+. Controlled Ability handoffs remain experimental; the host owns provider permissions and cost governance."
 keywords: "Agents SDK, Kujo ecosystem, Primitive, Agents"
-seo_title: "Agents SDK — Kujo Ecosystem"
+seo_title: "Agents SDK — Build Inspectable Agent Runtimes | Kujo"
 version: "1.1.3"
 latest_release_url: "https://github.com/kujolang/agents-sdk/releases/tag/v1.1.3"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
@@ -61,3 +61,7 @@ Agents SDK projects a validated `kujo.ability/v1` definition into its native Too
 ## Learn more
 
 The repository is the source of truth for current setup, commands, examples, security notes, compatibility, and verification evidence.
+
+## Inspect the evidence
+
+Review the [published release](https://github.com/kujolang/agents-sdk/releases/tag/v1.1.3), [source and test instructions](https://github.com/kujolang/agents-sdk), and [agent accountability boundaries](/agent-accountability/). Run the documented checks in your own environment; release labels do not certify every provider, host or workload.
