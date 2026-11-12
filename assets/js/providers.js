@@ -10,10 +10,6 @@
   var dialog = modal.querySelector('[role="dialog"]');
   var search = document.querySelector('[data-provider-search]');
 
-  function escapeHtml(value) {
-    return String(value).replace(/[&<>"']/g, function (character) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]; });
-  }
-
   function copyText(text) {
     if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
     return new Promise(function (resolve, reject) {
@@ -48,14 +44,10 @@
       var haystack = [provider.name, provider.package, provider.protocol, provider.description].join(' ').toLowerCase();
       return matchesFilter && (!query || haystack.indexOf(query) !== -1);
     });
-    grid.innerHTML = visible.map(function (provider) {
-      return '<button class="provider-card" type="button" data-provider-id="' + escapeHtml(provider.id) + '" aria-label="Open details for ' + escapeHtml(provider.name) + '">' +
-        '<span class="provider-card__top"><span class="provider-logo"><img src="' + escapeHtml(provider.logo) + '" alt="' + escapeHtml(provider.name) + ' logo" width="56" height="56" loading="lazy"></span><span class="sk-badge" data-variant="outline">' + escapeHtml(provider.category) + '</span></span>' +
-        '<span><strong><span class="visually-hidden">Provider: </span>' + escapeHtml(provider.name) + '</strong><span class="provider-card__description">' + escapeHtml(provider.description) + '</span></span>' +
-        '<span class="provider-card__footer"><span>' + escapeHtml(provider.protocol) + '</span><span class="provider-card__arrow" aria-hidden="true">↗</span></span></button>';
-    }).join('');
+    grid.querySelectorAll('[data-provider-record]').forEach(function (card) {
+      card.hidden = !visible.some(function (provider) { return provider.id === card.dataset.providerRecord; });
+    });
     document.querySelector('[data-provider-count]').textContent = visible.length + ' provider' + (visible.length === 1 ? '' : 's');
-    grid.querySelectorAll('[data-provider-id]').forEach(function (card) { card.addEventListener('click', function () { open(records.find(function (item) { return item.id === card.dataset.providerId; }), card); }); });
   }
 
   function open(provider, trigger) {
@@ -84,7 +76,13 @@
     previousFocus = null;
   }
 
-  fetch('/assets/data/providers.json').then(function (response) { if (!response.ok) throw new Error('Provider registry unavailable'); return response.json(); }).then(function (data) { records = data; render(); }).catch(function () { grid.innerHTML = '<p class="providers-noscript">The provider directory could not load. <a href="https://github.com/kujolang">Open the Kujo GitHub organization</a> to browse the packages.</p>'; });
+  fetch('/assets/data/providers.json').then(function (response) { if (!response.ok) throw new Error('Provider registry unavailable'); return response.json(); }).then(function (data) { records = data;
+    document.querySelector('.providers-toolbar').hidden = false;
+    grid.querySelectorAll('[data-provider-id]').forEach(function (button) {
+      button.hidden = false;
+      button.addEventListener('click', function () { open(records.find(function (item) { return item.id === button.dataset.providerId; }), button); });
+    });
+    render(); }).catch(function () { document.querySelector('[data-provider-count]').textContent = 'Starter details unavailable. Package links remain available.'; });
   search.addEventListener('input', render);
   document.querySelectorAll('[data-provider-filter]').forEach(function (button) { button.addEventListener('click', function () { activeFilter = button.dataset.providerFilter.toLowerCase(); document.querySelectorAll('[data-provider-filter]').forEach(function (item) { var active = item === button; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', String(active)); }); render(); }); });
   modal.querySelectorAll('[data-provider-close]').forEach(function (control) { control.addEventListener('click', close); });
