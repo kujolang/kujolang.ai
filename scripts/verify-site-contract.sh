@@ -32,6 +32,11 @@ require_social_meta() {
 	local html_file="$1"
 	local card_id="$2"
 	local expected="https://kujolang.ai/assets/images/social/${card_id}.jpg"
+	if [[ "$card_id" == "home" ]]; then
+		local version
+		version=$(node -e 'const fs=require("node:fs"),crypto=require("node:crypto");process.stdout.write(crypto.createHash("sha256").update(fs.readFileSync(process.argv[1])).digest("hex").slice(0,12))' "${output_dir}/assets/images/social/home.jpg")
+		expected="https://kujolang.ai/assets/images/social/home-${version}.jpg"
+	fi
 	local og_image
 	local twitter_image
 	og_image=$(sed -n 's/.*<meta property="og:image" content="\([^"]*\)">.*/\1/p' "$html_file")

@@ -2171,6 +2171,13 @@ func favicon_html(prefix) {
 	return favicon_tag
 }
 
+# Publish a new homepage social URL whenever the rendered image bytes change.
+func home_social_image_path(settings) {
+	source := path_join(settings["assets"], "images/social/home.jpg")
+	version := substring(sha256_file(source), 0, 12)
+	return "assets/images/social/home-" + version + ".jpg"
+}
+
 func render_layout(layout_template, settings, route, page_title, meta_description, navigation, content, page_meta) {
 	# Delegates to the native renderer (compiled once, byte-identical to the
 	# previous interpreted body, which is preserved as render_layout_interpreted).
@@ -2185,6 +2192,9 @@ func render_layout(layout_template, settings, route, page_title, meta_descriptio
 	}
 	if len(default_image) == 0 {
 		page_meta["featured_image"] = "/assets/images/social/home.jpg"
+	}
+	if page_meta["featured_image"] == "/assets/images/social/home.jpg" {
+		page_meta["featured_image"] = "/" + home_social_image_path(settings)
 	}
 	prefix := route_prefix(route)
 	native_favicon := "<link rel=\"icon\" type=\"image/svg+xml\" href=\"" + prefix + "favicon.svg\">"
@@ -3714,6 +3724,7 @@ func build_site(settings) {
 		ensure_dir(output_dir)
 
 		copy_assets(settings)
+		copy_file(path_join(settings["assets"], "images/social/home.jpg"), path_join(output_dir, home_social_image_path(settings)))
 		copy_public_files(settings)
 		if settings["webmcp"] {
 			webmcp_assets_dir := path_join(output_dir, "assets/js")

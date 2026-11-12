@@ -1,5 +1,6 @@
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 
@@ -10,6 +11,9 @@ const outputDir = path.resolve(repoRoot, process.argv[2] ?? 'output');
 const outputImageDir = path.join(outputDir, 'assets/images/social');
 const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
 const failures = [];
+const homeVersion = createHash('sha256').update(await readFile(path.join(sourceImageDir, 'home.jpg'))).digest('hex').slice(0, 12);
+const homeFilename = `home-${homeVersion}.jpg`;
+const homeUrl = `https://kujolang.ai/assets/images/social/${homeFilename}`;
 
 function fail(message) {
 	failures.push(message);
@@ -87,9 +91,9 @@ for (const card of cards) {
 	routes.add(route);
 
 	const sourceImage = path.join(sourceImageDir, `${card.id}.jpg`);
-	const outputImage = path.join(outputImageDir, `${card.id}.jpg`);
+	const outputImage = path.join(outputImageDir, card.id === 'home' ? homeFilename : `${card.id}.jpg`);
 	const htmlPath = htmlPathForRoute(route);
-	const expectedUrl = `https://kujolang.ai/assets/images/social/${card.id}.jpg`;
+	const expectedUrl = card.id === 'home' ? homeUrl : `https://kujolang.ai/assets/images/social/${card.id}.jpg`;
 
 	try {
 		const [sourceBytes, outputBytes] = await Promise.all([readFile(sourceImage), readFile(outputImage)]);
@@ -125,7 +129,7 @@ for (const card of cards) {
 
 try {
 	const notFoundHtml = await readFile(path.join(outputDir, '404.html'), 'utf8');
-	const fallbackUrl = 'https://kujolang.ai/assets/images/social/home.jpg';
+	const fallbackUrl = homeUrl;
 	const fallbackOgImages = metaValues(notFoundHtml, 'property', 'og:image');
 	const fallbackTwitterImages = metaValues(notFoundHtml, 'name', 'twitter:image');
 	if (!notFoundHtml.includes('<meta name="robots" content="noindex,follow">')) fail('/404: missing noindex metadata');
