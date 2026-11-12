@@ -9,8 +9,10 @@ export function homeSocialOverlay(svg, card, logo) {
 		if (!pattern.test(svg)) throw new Error(`Howl homepage layout missing ${className}`);
 		svg = svg.replace(pattern, '');
 	}
+	const [headline, ...subtitle] = card.tagline.split('. ');
+	if (!subtitle.length) throw new Error('Homepage social copy requires a headline and subtitle');
 	const lines = [];
-	for (const word of card.tagline.split(/\s+/)) {
+	for (const word of subtitle.join('. ').split(/\s+/)) {
 		const last = lines.length - 1;
 		if (last < 0 || `${lines[last]} ${word}`.length > 43) lines.push(word);
 		else lines[last] += ` ${word}`;
@@ -19,6 +21,7 @@ export function homeSocialOverlay(svg, card, logo) {
 	// Center the 60px capital height on the 82px logo, allowing for the text baseline.
 	const lockup = `<image href="data:image/svg+xml;base64,${logo.toString('base64')}" x="78" y="154" width="82" height="82"/>\n`
 		+ `<text x="184" y="225" class="mono social-title">${escape(card.title)}</text>\n`
-		+ lines.map((line, index) => `<text x="78" y="342" class="mono social-tag" transform="translate(0 ${index * 34})">${escape(line)}</text>`).join('\n');
+		+ `<text x="78" y="326" class="mono social-tag" style="font-size:40px;fill:#050505">${escape(headline)}</text>\n`
+		+ lines.map((line, index) => `<text x="78" y="379" class="mono social-tag" transform="translate(0 ${index * 34})">${escape(line)}</text>`).join('\n');
 	return svg.replace('</svg>', `${lockup}\n</svg>`);
 }
