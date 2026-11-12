@@ -1,7 +1,7 @@
 {
   "project": {
     "name": "Kujo",
-    "tagline": "Accountability for your agentic workflows. Trust at the speed of AI",
+    "tagline": "Programming language for AI-native software",
     "url": "kujolang.ai"
   },
   "theme": {
