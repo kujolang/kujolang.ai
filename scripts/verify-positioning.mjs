@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import path from 'node:path';
 const root = process.argv[2] || 'output';
@@ -13,5 +14,7 @@ for (const route of ['integrations', 'agent-accountability', 'providers', 'ecosy
 }
 const providers = JSON.parse(fs.readFileSync('assets/data/providers.json', 'utf8'));
 const html = fs.readFileSync(path.join(root, 'providers/index.html'), 'utf8');
+const scriptVersion = createHash('md5').update(fs.readFileSync('assets/js/providers.js')).digest('hex').slice(0, 12);
+assert(html.includes(`src="/assets/js/providers.js?v=${scriptVersion}"`), 'Provider enhancement must use its content hash to invalidate stale scripts');
 for (const provider of providers) assert(html.includes(`href="${provider.repo}"`), `Missing static package ${provider.id}`);
 console.log('Positioning routes: single H1, canonicals, local links and static provider coverage passed.');
