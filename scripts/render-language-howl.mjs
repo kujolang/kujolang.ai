@@ -6,7 +6,7 @@ const write=(path,value)=>{if(check){if(!fs.existsSync(path)||fs.readFileSync(pa
 const yaml=fs.readFileSync('content/pages/development-workflow.md','utf8').match(/<code class="language-yaml">([\s\S]*?)<\/code>/)[1];
 write('public/samples/development-workflow.yml',yaml+'\n');
 const definitions=[
- ['home','Kujo','Programming language for AI-native software.','request-hash'],
+ ['home','Kujo','Language and toolchain for AI-native software.','request-hash'],
  ['examples','Kujo language examples','Code, commands, expected output and pinned sources.','hello-world'],
  ['language','Learn Kujo','Install the runtime and run your first program.','hello-world'],
  ['development-workflow','An inspectable development workflow','Define scope, test changes and inspect the evidence.','development-workflow'],

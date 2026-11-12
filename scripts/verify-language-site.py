@@ -2,8 +2,8 @@ import json,pathlib,re
 from html.parser import HTMLParser
 r=pathlib.Path('output');c=json.loads(pathlib.Path('examples/catalog.json').read_text());home=(r/'index.html').read_text();sitemap=(r/'sitemap.xml').read_text()
 assert home.index('home-hero') < home.index('data-code-explorer') < home.index('id="ecosystem-title"')
-for t in ['Get Started','View Examples','ai_request_hash','ai_chat','home-example']: assert t in home,t
-routes=['language','examples','development-workflow','performance']+['examples/'+x['slug'] for x in c['items']]
+for t in ['Get Started','Use in your existing project','ai_request_hash','ai_chat','home-example']: assert t in home,t
+routes=['integrations','agent-accountability','language','examples','development-workflow','performance']+['examples/'+x['slug'] for x in c['items']]
 class Links(HTMLParser):
  def handle_starttag(self,tag,attrs):
   d=dict(attrs)

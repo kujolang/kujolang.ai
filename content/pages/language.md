@@ -54,3 +54,5 @@ kujo run hello.kujo</code></pre>
 <p>If <code>kujo</code> is not found, reopen your terminal and check the installer’s PATH instructions. If your operating system or architecture is not listed above, consult the <a href="https://github.com/kujolang/kujo/blob/v1.9.0/INSTALLATION.md">source-build instructions</a>. Use the <a href="https://github.com/kujolang/kujo/issues">issue tracker</a> with your runtime version, operating system and a minimal sample.</p>
 </section>
 </div>
+
+<section class="guide-section"><h2>Add one tool at a time</h2><p>Follow <a href="https://docs.kujolang.ai/build/owned-agent-projects/">owned agent projects</a> for a first agent with offline fixtures. The <a href="/integrations/">integration and install matrix</a> distinguishes runtime-only npm installs, the core installer, Kennel packages, host plugins and separate Node applications. Pin each component independently.</p></section>

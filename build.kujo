@@ -2242,7 +2242,7 @@ func render_layout(layout_template, settings, route, page_title, meta_descriptio
 			rendered = replace(rendered, "</head>", "<script type=\"application/ld+json\">" + replace(to_json(crumb_schema), "<", "\\u003c") + "</script></head>")
 		}
 	}
-	if route == "examples/" || starts_with(route, "examples/") || route == "language/" || route == "development-workflow/" || route == "performance/" {
+	if route == "examples/" || starts_with(route, "examples/") || route == "language/" || route == "development-workflow/" || route == "performance/" || route == "integrations/" || route == "agent-accountability/" {
 		origin := settings["site_url"]
 		if len(origin) > 0 {
 			crumbs := [{"@type": "ListItem", "position": 1, "name": "Home", "item": origin + "/"}]
@@ -4953,8 +4953,8 @@ func build_site(settings) {
 				index_navigation,
 				index_content,
 				{
-					"seo_title": "Kujo — AI-Native Programming Language",
-					"seo_description": settings["site_tagline"],
+					"seo_title": "Kujo — Language and Toolchain for AI-Native Software",
+					"seo_description": "Build AI-native software with Kujo’s language and developer toolchain. Define checks, replay recorded model responses and inspect workflow evidence.",
 					"lang": "en",
 					"social_image": "/assets/images/social/home.jpg"
 				}

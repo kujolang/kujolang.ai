@@ -12,7 +12,7 @@
     {
       "id": "home",
       "title": "Kujo",
-      "tagline": "Programming language for AI-native software.",
+      "tagline": "Language and toolchain for AI-native software.",
       "file": "public/samples/request-hash.kujo",
       "variant": "social",
       "label": "language",
@@ -23,7 +23,7 @@
       "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
       "logo_image": "assets/images/kujo-logomark.svg",
       "language": "kujo",
-      "caption": "Programming language for AI-native software.",
+      "caption": "Language and toolchain for AI-native software.",
       "notes": "Source pinned to 2cfaf185ad03059c89ef4f72fb061074255d00fc. Verification: run. The credentials are dummy values. This example makes no network request.",
       "expected_output": "hash_length: 64\nsame_without_credentials: true\nhash: a6244047c108dcf58a952ed0a6c70dc04d13ee9aa9dba08eeb623f241fbd37ce\n"
     },
@@ -4489,6 +4489,38 @@
       "show_border": false,
       "show_url": false,
       "caption": "Give Hermes engineering checks and execution evidence."
+    },
+    {
+      "id": "integrations",
+      "title": "Coding agent integrations",
+      "tagline": "Use Kujo in your existing development workflow.",
+      "file": "public/samples/development-workflow.yml",
+      "variant": "social",
+      "label": "language",
+      "url": "kujolang.ai/integrations/",
+      "show_border": false,
+      "show_url": false,
+      "background_image": "assets/images/home-agent-workflow.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "language": "yaml",
+      "caption": "Define scope, test changes and inspect the evidence.",
+      "notes": "Configuration example; replace npm test with the existing project test command."
+    },
+    {
+      "id": "agent-accountability",
+      "title": "AI agent accountability",
+      "tagline": "Define scope, check results and inspect evidence.",
+      "file": "public/samples/development-workflow.yml",
+      "variant": "social",
+      "label": "language",
+      "url": "kujolang.ai/agent-accountability/",
+      "show_border": false,
+      "show_url": false,
+      "background_image": "assets/images/home-agent-workflow.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "language": "yaml",
+      "caption": "Define scope, test changes and inspect the evidence.",
+      "notes": "Configuration example; replace npm test with the existing project test command."
     }
   ]
 }

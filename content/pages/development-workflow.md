@@ -58,3 +58,5 @@ commit:
 <p>This website uses the same runner. Its <a href="https://github.com/kujolang/kujolang.ai/tree/main/.loop-engineering">committed workflow state</a> provides a concrete example of scoped changes and recorded checks.</p>
 </section>
 </div>
+
+<section class="guide-section"><h2>See a failed check become a passing check</h2><p>The <a href="https://github.com/kujolang/kujo-hermes/tree/main/demo/checkout-video">Hermes checkout demonstration</a> records a real conversation with a free local model. Eval detects a checkout regression, the model changes the implementation, and the unchanged tests pass. Both runs retain receipts; the edited film condenses model waits. This demonstrates that specific test suite, not universal model correctness.</p><p>Inspect the test assertions, changed code and both receipts together. A process exit, a tool verdict and an accepted business outcome are different evidence. Choose a host in the <a href="/integrations/">integration guide</a> or review <a href="/agent-accountability/">accountability boundaries</a>.</p></section>

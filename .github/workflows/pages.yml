@@ -46,6 +46,8 @@ jobs:
         shell: bash
         run: |
           kujo --version
+          npm run providers:check
+          npm run guides:check
           npm run examples:check
           npm run examples:verify
           npm run workflows:check
@@ -57,6 +59,7 @@ jobs:
           bash scripts/verify-site-contract.sh output
           bash scripts/validate-generated-output.sh output
           npm run language:verify
+          npm run positioning:verify
           npm run social:verify
           npm run compare:verify
           node --check output/assets/js/site.js

@@ -2055,3 +2055,23 @@ pre, pre code, .sample-code pre, .sample-code code {
 @media(max-width: 700px) { .workflow-overview, .workflow-steps { grid-template-columns: 1fr; } .workflow-overview { padding: 1.5rem; } .workflow-failure { padding-left: 1rem; } }
 .workflow-overview .eyebrow { color: #ccc; }
 .workflow-collection { scroll-margin-top: 8rem; }
+
+/* Static provider links remain usable when enhancement is unavailable. */
+.provider-card[hidden], .providers-toolbar[hidden], .provider-card button[hidden] { display: none; }
+.provider-card { cursor: default; }
+.provider-card h3 { margin-block: 1rem .5rem; }
+.provider-card .sk-button { margin-block-start: 1rem; }
+.guide-section { overflow-wrap: anywhere; }
+.integration-table { width: 100%; table-layout: fixed; }
+.integration-table th, .integration-table td { padding: .75rem; text-align: left; vertical-align: top; border-bottom: 1px solid #ddd; }
+.home-accountability .home-section-heading { display: block; text-align: center; }
+.home-accountability > p { margin-top: 1.5rem; line-height: 1.8; }
+@media (max-width: 600px) {
+  .integration-table, .integration-table tbody, .integration-table tr, .integration-table td { display: block; width: auto; }
+  .integration-table thead { display: none; }
+  .integration-table tr { border: 1px solid #ddd; margin-block: 1rem; }
+  .integration-table td::before { display: block; font-weight: bold; margin-bottom: .5rem; }
+  .integration-table td:nth-child(1)::before { content: "Integration"; }
+  .integration-table td:nth-child(2)::before { content: "Setup and scope"; }
+  .integration-table td:nth-child(3)::before { content: "Boundary"; }
+}

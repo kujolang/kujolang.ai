@@ -90,10 +90,10 @@ if find "${output_dir}" -type f -name '*.html' ! -name 'index.html' ! -name '404
 fi
 
 require_text "${output_dir}/index.html" 'Trust at the speed of AI'
-require_text "${output_dir}/index.html" '<title>Kujo — AI-Native Programming Language | Kujolang.ai</title>'
+require_text "${output_dir}/index.html" '<title>Kujo — Language and Toolchain for AI-Native Software | Kujolang.ai</title>'
 require_text "${output_dir}/index.html" '"name":"Kujo","alternateName":["Kujolang.ai","Kujolang"]'
 require_text "${output_dir}/index.html" '<meta name="author" content="Kujo Team">'
-require_text "${output_dir}/index.html" 'Kujo is a programming language for scripts, services and AI tools. Run your code locally, replay model responses and check the results.'
+require_text "${output_dir}/index.html" 'Kujo is a programming language and developer toolchain for AI-native software. Build scripts and agents, define checks, and inspect the evidence behind a change.'
 require_text "${output_dir}/index.html" 'data-hero-video-open aria-haspopup="dialog"'
 require_text "${output_dir}/index.html" '<span>View video</span>'
 require_text "${output_dir}/index.html" 'data-hero-video-modal hidden'

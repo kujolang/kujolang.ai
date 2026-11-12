@@ -212,3 +212,5 @@ For WCAG A/AA checks on the six key page types, set `AXE_SCRIPT` to an installed
 results beside screenshots. No browser or accessibility package is shipped to
 site visitors. The GitHub Pages build runs the source/runtime example gates and
 language-route verification before uploading its artifact.
+
+For positioning content sources, evidence boundaries and the post-publication measurement plan, see [the implementation record](docs/positioning-implementation.md). Provider HTML is generated with `npm run providers:generate` and checked with `npm run providers:check`. After building and serving the site, run `node scripts/test-positioning-browser.cjs` with the same Playwright environment used by the language browser suite.

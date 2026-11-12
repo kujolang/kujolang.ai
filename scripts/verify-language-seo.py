@@ -3,7 +3,7 @@
 import json,pathlib
 from bs4 import BeautifulSoup
 root=pathlib.Path('output');catalog=json.loads(pathlib.Path('examples/catalog.json').read_text())
-routes=['','language','development-workflow','performance','examples']+['examples/'+x['slug'] for x in catalog['items']]
+routes=['','integrations','agent-accountability','language','development-workflow','performance','examples']+['examples/'+x['slug'] for x in catalog['items']]
 workflows=json.loads(pathlib.Path('workflows/catalog.json').read_text());workflow_slugs={x['slug'] for x in workflows['items']}
 routes += ['examples/'+x['slug'] for x in workflows['items']]
 titles=set();descriptions=set()
