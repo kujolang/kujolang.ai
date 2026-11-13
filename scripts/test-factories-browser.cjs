@@ -46,15 +46,29 @@ const receipt = {base, started: new Date().toISOString(), pages: [], links: [], 
           const url = new URL(href);
           if (url.origin === new URL(base).origin) { url.hash = ''; internalLinks.add(url.href); }
         }
+        const currentNav = await page.locator('.site-header a[aria-current="page"]').evaluateAll(es => es.map(e=>e.textContent.trim()));
+        assert(currentNav.length > 0 && currentNav.every(label=>label === 'Factories'), 'only Factories navigation is current');
+        if (slug !== 'factories') {
+          assert.equal(await page.locator('.factory-recording, .factory-transcript').count(), 0);
+          assert(await page.locator('main').evaluate(e=>parseFloat(getComputedStyle(e).paddingBottom)) >= 48, 'detail footer separation');
+          assert.equal(await page.locator('.tool-body article > h2').first().evaluate(e=>getComputedStyle(e).marginTop), '0px', 'first heading aligns with sidebar');
+        }
         if (slug === 'factories') {
+          assert.equal(await page.locator('.page-hero .sk-badge').textContent(), 'Factories');
+          assert(await page.locator('.factory-feature-grid h3, .factory-feature-grid p').evaluateAll(es=>es.every(e=>getComputedStyle(e).fontFamily.includes('Departure Mono'))), 'factory card typography');
+          const gaps = await page.locator('.factory-feature-grid > li').evaluateAll(es=>es.map(e=>e.querySelector('h3').getBoundingClientRect().top-e.querySelector('img').getBoundingClientRect().bottom));
+          assert(gaps.every(gap=>gap >= 16), 'card image/title spacing');
+          const shell = await page.locator('.factory-feature-grid').boundingBox();
+          const expected = await page.locator('.tool-body, .section-shell').first().boundingBox();
+          assert(Math.abs(shell.x-expected.x)<1 && Math.abs(shell.width-expected.width)<1, 'factory cards fill the shared content shell');
           const design = await page.evaluate(() => {
             const cards = [...document.querySelectorAll('.factory-feature-grid > li')].map(e => { const r = e.getBoundingClientRect(); return {x:r.x,y:r.y,width:r.width}; });
-            const stations = [...document.querySelectorAll('.factory-stations li')].map(e => ({height:e.getBoundingClientRect().height,background:getComputedStyle(e).backgroundColor,title:e.querySelector('strong').textContent,font:getComputedStyle(e.querySelector('strong')).fontFamily,overflow:e.scrollWidth > e.clientWidth}));
+            const stations = [...document.querySelectorAll('.factory-stations li')].map(e => ({height:e.getBoundingClientRect().height,background:getComputedStyle(e).backgroundColor,title:e.querySelector('strong').textContent,font:getComputedStyle(e.querySelector('strong')).fontFamily,titleSize:parseFloat(getComputedStyle(e.querySelector('strong')).fontSize),bodySize:parseFloat(getComputedStyle(e.querySelector('p')).fontSize),overflow:e.scrollWidth > e.clientWidth}));
             return {cards,stations,fonts:[...document.querySelectorAll('.factory-comparison th, .factory-comparison caption')].map(e=>getComputedStyle(e).fontFamily),notes:[...document.querySelectorAll('.factory-note')].map(e=>({align:getComputedStyle(e).textAlign,size:parseFloat(getComputedStyle(e).fontSize)}))};
           });
           assert(design.fonts.every(font => font.includes('Departure Mono')));
           assert(design.notes.length === 2 && design.notes.every(note => note.align === 'center' && note.size <= 14));
-          assert(design.stations.every(station => station.background === 'rgb(255, 255, 255)' && station.font.includes('Departure Mono') && !/^\d/.test(station.title) && !station.overflow));
+          assert(design.stations.every(station => station.background === 'rgb(255, 255, 255)' && station.font.includes('Departure Mono') && station.titleSize > station.bodySize && !/^\d/.test(station.title) && !station.overflow));
           if (width === 1440) {
             assert(design.cards[0].width > design.cards[1].width * 1.9, 'Software spans two columns');
             assert(design.cards[0].y === design.cards[1].y && design.cards[2].y === design.cards[3].y && design.cards[3].y === design.cards[4].y, 'two cards then three');
@@ -114,6 +128,7 @@ const receipt = {base, started: new Date().toISOString(), pages: [], links: [], 
       for (const route of ['/', '/ecosystem/', '/ecosystem/tooling/', '/ecosystem/primitives/', '/ecosystem/showcase/']) {
         assert.equal((await page.goto(base + route, {waitUntil: 'domcontentloaded'})).status(), 200);
         assert.equal(await page.locator('h1').count(), 1);
+        if (route === '/') assert.equal(await page.locator('#home-factories').count(), 0);
         if (route === '/ecosystem/') {
           const carousel = page.locator('[aria-labelledby="factories-title"][data-carousel]');
           assert.equal(await carousel.locator('[data-carousel-track] > li').count(), 5);
