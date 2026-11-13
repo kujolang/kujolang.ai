@@ -90,7 +90,7 @@ require_text "${repo_root}/CNAME" 'kujolang.ai'
 require_text "${repo_root}/.github/workflows/pages.yml" 'uses: actions/deploy-pages@v4'
 require_text "${repo_root}/.github/workflows/pages.yml" 'kujo run ./build.kujo -- --site-url https://kujolang.ai'
 
-if find "${output_dir}" -type f -name '*.html' ! -name 'index.html' ! -name '404.html' | grep -q .; then
+if find "${output_dir}" -type f -name '*.html' ! -name 'index.html' ! -name '404.html' ! -path "${output_dir}/assets/sitekit/recipes/*" | grep -q .; then
 	fail 'flat HTML aliases should be disabled so GitHub Pages canonicalizes trailing slashes'
 fi
 
@@ -213,7 +213,7 @@ require_text "${output_dir}/llms.txt" 'https://kujolang.ai/ecosystem/cms/'
 require_text "${output_dir}/llms.txt" 'https://kujolang.ai/ecosystem/skills/kujo-cms-workflows/'
 
 require_text "${output_dir}/404.html" '<meta name="robots" content="noindex,follow">'
-require_text "${output_dir}/404.html" 'href="/assets/css/sitekit.css"'
+require_text "${output_dir}/404.html" 'href="/assets/sitekit/sitekit.css"'
 require_text "${output_dir}/404.html" 'href="/assets/css/style.min.css?v='
 require_text "${output_dir}/404.html" 'src="/assets/images/kujo-logomark.svg"'
 require_text "${output_dir}/404.html" 'src="/assets/js/site.js?v='
@@ -563,3 +563,5 @@ require_text "${output_dir}/ecosystem/kujo-hermes/index.html" 'width="1916" heig
 require_text "${output_dir}/ecosystem/tooling/index.html" 'href="/ecosystem/kujo-hermes/"'
 require_text "${output_dir}/sitemap.xml" '/ecosystem/kujo-hermes/'
 require_social_meta "${output_dir}/ecosystem/kujo-hermes/index.html" 'kujo-hermes'
+
+python3 scripts/verify-sitekit.py
