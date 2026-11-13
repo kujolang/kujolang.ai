@@ -37,3 +37,8 @@ Blocking findings take precedence over aggregate ratings. BluePencil proposes an
 ## Learn more
 
 The repository documents the review contracts, calibration corpus, verdict model, security boundaries, and validation suite.
+
+
+## In a factory
+
+[Publishing House Factory](/ecosystem/publishing-house-factory/) records independent editorial review through BluePencil. Human approval remains separate. [Compare the factories](/ecosystem/factories/).

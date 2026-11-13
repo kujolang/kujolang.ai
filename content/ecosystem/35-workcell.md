@@ -57,3 +57,8 @@ Wave C beta remains opt-in in the bounded single-effect required/deny domain, wi
 ## Inspect the evidence
 
 Review the [published release](https://github.com/kujolang/workcell/releases/tag/v1.3.0), [source and test instructions](https://github.com/kujolang/workcell), and [agent accountability boundaries](/agent-accountability/). Run the documented checks in your own environment; release labels do not certify every provider, host or workload.
+
+
+## In a factory
+
+[Software Factory](/ecosystem/software-factory/) runs candidate applications inside rootless Workcell containers, with trusted API and browser checks outside worker authority. [Compare the factories](/ecosystem/factories/).

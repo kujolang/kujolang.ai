@@ -37,3 +37,8 @@ StoryDesk records and coordinates work. It does not approve content, publish art
 ## Learn more
 
 The repository documents the editorial commands, state model, schemas, security posture, deterministic fixtures, and production validation gate.
+
+
+## In a factory
+
+[Publishing House Factory](/ecosystem/publishing-house-factory/) records editorial commissions through StoryDesk before drafting and independent review. [Compare the factories](/ecosystem/factories/).

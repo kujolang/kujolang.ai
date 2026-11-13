@@ -247,3 +247,10 @@ The first production release of the official Kujo programming language website.
 - Quick Install and agent-onboarding prompt modals with clipboard controls.
 - Public documentation, GitHub, X, Discord, sitemap, feeds, robots, and `llms.txt` destinations.
 - Deterministic generated-output and site-contract validation for release checks.
+
+## Unreleased — Factories integration
+
+- Add the Factories category and five source-backed product pages, with standalone/coordinator boundaries, setup guidance, retained evidence and honest release status.
+- Connect homepage, desktop/mobile navigation, footer and relevant tool pages; include factory routes in existing search, sitemap and metadata generation.
+- Add six distinct dither heroes, Howl social cards, authentic Factory Floor visuals and canonical recorded demonstrations.
+- Add catalog-survival, content, discovery and desktop/mobile browser regression checks. Preserve source research and release/media provenance in `docs/factories/`.

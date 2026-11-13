@@ -37,3 +37,8 @@ A checksum proves byte identity, not human identity, custody, legal rights, or p
 ## Learn more
 
 The repository documents the approval, revocation, validation, export, security, and drift-detection contracts.
+
+
+## In a factory
+
+[Publishing House Factory](/ecosystem/publishing-house-factory/) records an exact-package approval request through VersionSeal. The factory has no publication command. [Compare the factories](/ecosystem/factories/).

@@ -1,0 +1,42 @@
+[
+  {
+    "factory": "software-factory",
+    "source": "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/media/software-factory-demo.png",
+    "frame_seconds": null,
+    "destination": "assets/images/factories/software-factory-floor.webp",
+    "transform": "Sharp resize width <=1600, WebP quality 85; preserve aspect ratio",
+    "status": "Authentic retained evidence; not fresh execution"
+  },
+  {
+    "factory": "videoops-factory",
+    "source": "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/media/videoops-factory-demo.mp4",
+    "frame_seconds": 3,
+    "destination": "assets/images/factories/videoops-factory-floor.webp",
+    "transform": "Sharp resize width <=1600, WebP quality 85; preserve aspect ratio",
+    "status": "Authentic retained evidence; not fresh execution"
+  },
+  {
+    "factory": "publishing-house-factory",
+    "source": "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/factory-floor.png",
+    "frame_seconds": null,
+    "destination": "assets/images/factories/publishing-house-factory-floor.webp",
+    "transform": "Sharp resize width <=1600, WebP quality 85; preserve aspect ratio",
+    "status": "Authentic retained evidence; not fresh execution"
+  },
+  {
+    "factory": "webops-factory",
+    "source": "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/factory-floor.png",
+    "frame_seconds": null,
+    "destination": "assets/images/factories/webops-factory-floor.webp",
+    "transform": "Sharp resize width <=1600, WebP quality 85; preserve aspect ratio",
+    "status": "Authentic retained evidence; not fresh execution"
+  },
+  {
+    "factory": "product-launch-factory",
+    "source": "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/factory-floor.png",
+    "frame_seconds": null,
+    "destination": "assets/images/factories/product-launch-factory-floor.webp",
+    "transform": "Sharp resize width <=1600, WebP quality 85; preserve aspect ratio",
+    "status": "Authentic retained evidence; not fresh execution"
+  }
+]

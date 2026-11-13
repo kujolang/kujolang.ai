@@ -37,3 +37,8 @@ The repository is the source of truth for current setup, commands, examples, sec
 ## Inspect the evidence
 
 Review the [published release](https://github.com/kujolang/lens/releases/tag/v1.1.1), [source and test instructions](https://github.com/kujolang/lens), and [agent accountability boundaries](/agent-accountability/). Run the documented checks in your own environment; release labels do not certify every provider, host or workload.
+
+
+## In a factory
+
+[WebOps Factory](/ecosystem/webops-factory/) uses Lens for desktop and mobile homepage screenshots before and after bounded repairs to a static copy. [Compare the factories](/ecosystem/factories/).

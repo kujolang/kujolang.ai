@@ -214,3 +214,29 @@ site visitors. The GitHub Pages build runs the source/runtime example gates and
 language-route verification before uploading its artifact.
 
 For positioning content sources, evidence boundaries and the post-publication measurement plan, see [the implementation record](docs/positioning-implementation.md). Provider HTML is generated with `npm run providers:generate` and checked with `npm run providers:check`. After building and serving the site, run `node scripts/test-positioning-browser.cjs` with the same Playwright environment used by the language browser suite.
+
+## Factory product pages
+
+The five factory entries are canonical Markdown under `content/ecosystem/`, with
+`section: Factories`. The category source is `content/pages/factories.md` plus
+`templates/factories-intro.html`; its cards are projected from the canonical entries.
+After editing factory metadata or the category template, run:
+
+```sh
+npm run factories:generate
+npm run factories:check
+npm run social:cards
+kujo run ./build.kujo -- --site-url https://kujolang.ai
+npm run images:responsive
+npm run factories:verify
+```
+
+The normal skills/workflows sync preserves these files and Howl cards. The regression
+suite proves this using isolated Git fixtures. Native video markup lives in
+`templates/factory-media/`; use immutable public source URLs and the approved
+Product Launch v0.1.0 coordinator release asset. Never substitute its campaign clip.
+
+Research, source pins, relationship classes, media provenance and qualification
+records are in [`docs/factories/`](docs/factories/). A package version alone is not a
+published release. Run `scripts/test-factories-browser.cjs` with the existing
+Playwright/Chrome/Axe environment and the preview server to check all six pages.

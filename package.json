@@ -27,7 +27,10 @@
     "workflows:verify": "python3 scripts/verify-ai-workflows.py",
     "providers:generate": "node scripts/render-providers.mjs",
     "providers:check": "node scripts/render-providers.mjs --check",
-    "positioning:verify": "node scripts/verify-positioning.mjs"
+    "positioning:verify": "node scripts/verify-positioning.mjs",
+    "factories:generate": "node scripts/render-factories.mjs",
+    "factories:check": "node scripts/render-factories.mjs --check",
+    "factories:verify": "FACTORIES_OUTPUT=output node --test tests/factories.test.mjs"
   },
   "dependencies": {
     "scramble-decode": "0.1.0"

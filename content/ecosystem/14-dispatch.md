@@ -56,3 +56,8 @@ Dispatch 1.4.0 adds revision-bound approval recovery, graph settlement and retai
 ## Inspect the evidence
 
 Review the [published release](https://github.com/kujolang/dispatch/releases/tag/v1.4.1), [source and test instructions](https://github.com/kujolang/dispatch), and [agent accountability boundaries](/agent-accountability/). Run the documented checks in your own environment; release labels do not certify every provider, host or workload.
+
+
+## In a factory
+
+[Software Factory](/ecosystem/software-factory/) uses pinned Dispatch to coordinate bounded software proposals and retain native run state. [Compare the factories](/ecosystem/factories/).
