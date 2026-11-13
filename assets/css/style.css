@@ -1023,7 +1023,7 @@
 
   .tool-links {
     position: sticky;
-    inset-block-start: var(--sk-space-5);
+    inset-block-start: var(--site-sticky-offset);
   }
 
   .tool-links .sk-card__actions {
@@ -1146,7 +1146,7 @@
   }
 
   .site-footer {
-    margin-block-start: var(--site-section-gap);
+    margin-block-start: 0;
     border-block-start: var(--sk-border-1) solid var(--sk-border-default);
     background: #fff;
     padding-block: var(--sk-space-4);
@@ -2094,3 +2094,15 @@ pre, pre code, .sample-code pre, .sample-code code {
 .factory-page .tool-hero__copy .sk-hero__actions { flex-wrap: wrap; }
 .factory-page > nav[aria-label="Breadcrumb"] { padding-block-start: calc(var(--site-header-block) + 3rem); padding-block-end: 1rem; }
 .factory-page .tool-hero { padding-block-start: var(--sk-space-12); }
+
+/* Factory discovery follows the shared catalog and typography system. */
+.factory-comparison caption, .factory-comparison th { font-family: var(--sk-font-mono); }
+.factories-category .factory-note { margin-inline: auto; text-align: center; font-size: .875rem; }
+.factory-stations li { margin: 0; background: #fff; color: #111; }
+.factory-stations strong { font-family: var(--sk-font-mono); font-size: .875rem; white-space: nowrap; }
+.factory-stations p { margin-bottom: 0; }
+@media (min-width: 1100px) {
+  .factory-feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .factory-feature-grid > li:first-child { grid-column: span 2; }
+  .factory-stations { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}

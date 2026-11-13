@@ -46,6 +46,28 @@ const receipt = {base, started: new Date().toISOString(), pages: [], links: [], 
           const url = new URL(href);
           if (url.origin === new URL(base).origin) { url.hash = ''; internalLinks.add(url.href); }
         }
+        if (slug === 'factories') {
+          const design = await page.evaluate(() => {
+            const cards = [...document.querySelectorAll('.factory-feature-grid > li')].map(e => { const r = e.getBoundingClientRect(); return {x:r.x,y:r.y,width:r.width}; });
+            const stations = [...document.querySelectorAll('.factory-stations li')].map(e => ({height:e.getBoundingClientRect().height,background:getComputedStyle(e).backgroundColor,title:e.querySelector('strong').textContent,font:getComputedStyle(e.querySelector('strong')).fontFamily,overflow:e.scrollWidth > e.clientWidth}));
+            return {cards,stations,fonts:[...document.querySelectorAll('.factory-comparison th, .factory-comparison caption')].map(e=>getComputedStyle(e).fontFamily),notes:[...document.querySelectorAll('.factory-note')].map(e=>({align:getComputedStyle(e).textAlign,size:parseFloat(getComputedStyle(e).fontSize)}))};
+          });
+          assert(design.fonts.every(font => font.includes('Departure Mono')));
+          assert(design.notes.length === 2 && design.notes.every(note => note.align === 'center' && note.size <= 14));
+          assert(design.stations.every(station => station.background === 'rgb(255, 255, 255)' && station.font.includes('Departure Mono') && !/^\d/.test(station.title) && !station.overflow));
+          if (width === 1440) {
+            assert(design.cards[0].width > design.cards[1].width * 1.9, 'Software spans two columns');
+            assert(design.cards[0].y === design.cards[1].y && design.cards[2].y === design.cards[3].y && design.cards[3].y === design.cards[4].y, 'two cards then three');
+            assert(Math.max(...design.stations.map(s=>s.height))-Math.min(...design.stations.map(s=>s.height)) < 1, 'equal station heights');
+          }
+        } else if (width === 1440) {
+          await page.locator('.tool-body').scrollIntoViewIfNeeded();
+          const panel = await page.locator('.tool-links').boundingBox();
+          const header = await page.locator('.site-header').boundingBox();
+          assert(panel.y >= header.y + header.height, `${route}: sticky source panel clears header`);
+          await page.evaluate(() => scrollTo(0,0));
+        }
+        assert.equal(await page.locator('.site-footer').evaluate(e => getComputedStyle(e).marginBlockStart), '0px', 'footer adds no duplicate section gap');
         await page.screenshot({path: path.join(evidence, `${slug}-${width}.png`), fullPage: true});
         await page.screenshot({path: path.join(evidence, `${slug}-${width}-hero.png`)});
         if (width === 390) {
@@ -92,6 +114,15 @@ const receipt = {base, started: new Date().toISOString(), pages: [], links: [], 
       for (const route of ['/', '/ecosystem/', '/ecosystem/tooling/', '/ecosystem/primitives/', '/ecosystem/showcase/']) {
         assert.equal((await page.goto(base + route, {waitUntil: 'domcontentloaded'})).status(), 200);
         assert.equal(await page.locator('h1').count(), 1);
+        if (route === '/ecosystem/') {
+          const carousel = page.locator('[aria-labelledby="factories-title"][data-carousel]');
+          assert.equal(await carousel.locator('[data-carousel-track] > li').count(), 5);
+          assert.equal(await carousel.locator('#factories-title a').evaluate(e => getComputedStyle(e).textDecorationLine), 'none');
+          await carousel.scrollIntoViewIfNeeded();
+          await carousel.locator('[data-carousel-next]').click();
+          await page.waitForFunction(() => document.querySelector('[aria-labelledby="factories-title"] [data-carousel-track]').scrollLeft > 0);
+          await page.screenshot({path:path.join(evidence, `ecosystem-carousel-${width}.png`)});
+        }
         assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${route}: regression overflow`);
       }
     }
