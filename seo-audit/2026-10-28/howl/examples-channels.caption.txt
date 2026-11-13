@@ -1,3 +1,0 @@
-Send a value through a first-in, first-out channel.
-
-Kujo: Programming language for AI-native software

@@ -1,3 +1,0 @@
-Return a new counter from an instance method.
-
-Kujo: Programming language for AI-native software

@@ -1,7 +1,0 @@
-crawler,purpose,robots_access,live_status,waf_or_cdn_result,recommended_action,action_taken,evidence
-Googlebot,search discovery probe,,200,robots endpoint HTTP probe only; not authenticated crawler traffic,,none,curl UA probe 2026-11-10: https://docs.kujolang.ai/robots.txt
-Googlebot,search discovery probe,,200,robots endpoint HTTP probe only; not authenticated crawler traffic,,none,curl UA probe 2026-11-10: https://kujo.robertdevore.com/robots.txt
-bingbot,search discovery probe,,200,robots endpoint HTTP probe only; not authenticated crawler traffic,,none,curl UA probe 2026-11-10: https://docs.kujolang.ai/robots.txt
-bingbot,search discovery probe,,200,robots endpoint HTTP probe only; not authenticated crawler traffic,,none,curl UA probe 2026-11-10: https://kujo.robertdevore.com/robots.txt
-OAI-SearchBot,search discovery probe,,200,robots endpoint HTTP probe only; not authenticated crawler traffic,,none,curl UA probe 2026-11-10: https://docs.kujolang.ai/robots.txt
-OAI-SearchBot,search discovery probe,,200,robots endpoint HTTP probe only; not authenticated crawler traffic,,none,curl UA probe 2026-11-10: https://kujo.robertdevore.com/robots.txt

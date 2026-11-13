@@ -1,3 +1,0 @@
-Add the numbers in an array with a function.
-
-Kujo: Programming language for AI-native software
