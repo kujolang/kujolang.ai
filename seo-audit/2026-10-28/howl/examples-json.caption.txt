@@ -1,3 +1,0 @@
-Read JSON and access nested fields.
-
-Kujo: Programming language for AI-native software

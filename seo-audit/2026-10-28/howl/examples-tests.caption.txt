@@ -1,3 +1,0 @@
-Check assertions with the built-in test runner.
-
-Kujo: Programming language for AI-native software

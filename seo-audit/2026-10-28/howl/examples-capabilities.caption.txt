@@ -1,3 +1,0 @@
-Replay an AI call with explicit permissions.
-
-Kujo: Programming language for AI-native software

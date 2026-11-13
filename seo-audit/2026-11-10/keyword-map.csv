@@ -1,4 +1,0 @@
-phase,url,primary_topic,primary_entity,search_intent,primary_query_theme,secondary_queries,related_entities,relevant_questions,competing_internal_url,content_gap,recommended_action
-after,https://kujolang.ai/ecosystem/kujo-hermes/,product discovery,Kujo Hermes,product discovery,Kujo Hermes product discovery,,,,,,"Keep overview, operational docs and learning context distinct; no inferred demand volumes"
-after,https://docs.kujolang.ai/tools/kujo-hermes/,installation and operation,Kujo Hermes,installation and operation,Kujo Hermes installation and operation,,,,,,"Keep overview, operational docs and learning context distinct; no inferred demand volumes"
-after,https://kujo.robertdevore.com/hermes/,apply course practices,Kujo Hermes,apply course practices,Kujo Hermes apply course practices,,,,,,"Keep overview, operational docs and learning context distinct; no inferred demand volumes"

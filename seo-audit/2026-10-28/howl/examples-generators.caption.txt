@@ -1,3 +1,0 @@
-Generate values as you need them.
-
-Kujo: Programming language for AI-native software

@@ -1,3 +1,0 @@
-Reproduce the measurement and understand its limits.
-
-Kujo: Programming language for AI-native software
