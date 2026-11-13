@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Adopt the complete SiteKit 1.2.0 distribution, publish current recipe/release guidance, and verify vendored asset integrity through the site build.
+
 - Add Website Cloner 0.1.1 to the ecosystem and homepage, with a dither hero, captioned promo, transcript, installer guidance and static-site migration limits.
 
 - Lead with the Kujo language, real code, installation and six goal-based ecosystem entry points.
