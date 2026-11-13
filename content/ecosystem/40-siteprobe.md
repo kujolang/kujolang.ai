@@ -45,3 +45,8 @@ SiteProbe handles static and server-rendered HTML. It is GET-only, blocks privat
 ## Learn more
 
 Read the [versioned command and artifact reference](https://github.com/kujolang/siteprobe/tree/v0.3.0), or continue to the [SiteProbe documentation](https://docs.kujolang.ai/tools/siteprobe/).
+
+
+## In a factory
+
+[WebOps Factory](/ecosystem/webops-factory/) uses SiteProbe for before-and-after static findings. The factory only repairs four supported finding types and never deploys. [Compare the factories](/ecosystem/factories/).

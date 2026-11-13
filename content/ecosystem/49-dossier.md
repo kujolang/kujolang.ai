@@ -37,3 +37,8 @@ Records are immutable, history is append-only, and exports are bounded and atomi
 ## Learn more
 
 The repository documents the command groups, evidence taxonomy, public contracts, security guarantees, and deterministic verification suite.
+
+
+## In a factory
+
+[Publishing House Factory](/ecosystem/publishing-house-factory/) uses Dossier to retain sources and claim-to-excerpt mappings. An excerpt match does not prove factual truth. [Compare the factories](/ecosystem/factories/).

@@ -2075,3 +2075,22 @@ pre, pre code, .sample-code pre, .sample-code code {
   .integration-table td:nth-child(2)::before { content: "Setup and scope"; }
   .integration-table td:nth-child(3)::before { content: "Boundary"; }
 }
+
+/* Factories retain the shared SiteKit page and card layout. */
+.factory-video, .factory-recording img { display: block; width: 100%; height: auto; border: 1px solid var(--sk-color-border, #777); }
+.factory-recording { margin: 2rem 0; }
+.factory-recording figcaption { margin-top: .75rem; font-size: .875rem; }
+.factory-comparison { overflow-x: auto; margin-block: 2rem; }
+.factory-comparison table { width: 100%; border-collapse: collapse; min-width: 44rem; }
+.factory-comparison th, .factory-comparison td { text-align: left; vertical-align: top; padding: 1rem; border: 1px solid var(--sk-color-border, #777); }
+.factory-comparison caption { text-align: left; padding-bottom: 1rem; }
+.factory-stations { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: 1rem; list-style: none; padding: 0; }
+.factory-stations li { border: 1px solid var(--sk-color-border, #777); padding: 1rem; }
+.factories-category .page-hero .sk-hero__inner { justify-items: start; text-align: left; }
+.factories-category .page-hero__copy { margin-inline: 0; max-inline-size: 42rem; justify-items: start; text-align: left; }
+.factories-category .page-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+.factories-category .page-hero__copy, .factory-page .tool-hero__copy { background: color-mix(in srgb, var(--sk-surface-page) 96%, transparent); padding: 1.5rem; }
+.factories-category .sk-card img { width: 100%; height: auto; }
+.factory-page .tool-hero__copy .sk-hero__actions { flex-wrap: wrap; }
+.factory-page > nav[aria-label="Breadcrumb"] { padding-block-start: calc(var(--site-header-block) + 3rem); padding-block-end: 1rem; }
+.factory-page .tool-hero { padding-block-start: var(--sk-space-12); }

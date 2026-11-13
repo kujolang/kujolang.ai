@@ -4521,6 +4521,84 @@
       "language": "yaml",
       "caption": "Define scope, test changes and inspect the evidence.",
       "notes": "Configuration example; replace npm test with the existing project test command."
+    },
+    {
+      "id": "software-factory",
+      "title": "Software Factory",
+      "tagline": "Turn a software mission into a locally verified candidate.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "factory",
+      "url": "kujolang.ai/ecosystem/software-factory/",
+      "background_image": "assets/images/ecosystem/software-factory.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
+      "id": "videoops-factory",
+      "title": "VideoOps Factory",
+      "tagline": "Turn a sourced brief into an editable video candidate.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "factory",
+      "url": "kujolang.ai/ecosystem/videoops-factory/",
+      "background_image": "assets/images/ecosystem/videoops-factory.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
+      "id": "publishing-house-factory",
+      "title": "Publishing House Factory",
+      "tagline": "Turn sourced editorial material into a reviewable content package.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "factory",
+      "url": "kujolang.ai/ecosystem/publishing-house-factory/",
+      "background_image": "assets/images/ecosystem/publishing-house-factory.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
+      "id": "webops-factory",
+      "title": "WebOps Factory",
+      "tagline": "Inspect a static site and review a bounded repair candidate.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "factory",
+      "url": "kujolang.ai/ecosystem/webops-factory/",
+      "background_image": "assets/images/ecosystem/webops-factory.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
+      "id": "product-launch-factory",
+      "title": "Product Launch Factory",
+      "tagline": "Collect a product launch around one verified source packet.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "factory",
+      "url": "kujolang.ai/ecosystem/product-launch-factory/",
+      "background_image": "assets/images/ecosystem/product-launch-factory.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
+    },
+    {
+      "id": "factories",
+      "title": "Kujo Factories",
+      "tagline": "Choose a local factory and inspect the result before approval.",
+      "file": "social-card.txt",
+      "variant": "social",
+      "label": "collection",
+      "url": "kujolang.ai/ecosystem/factories/",
+      "background_image": "assets/images/ecosystem/factories.webp",
+      "font_file": "assets/css/fonts/DepartureMono-Regular.woff2",
+      "show_border": false,
+      "show_url": false
     }
   ]
 }

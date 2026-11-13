@@ -1,0 +1,1939 @@
+{
+  "schema": "kujolang.ai.factory-research/v1",
+  "researched_at": "2026-11-13",
+  "purpose": "Internal editorial evidence matrix; reviewed public copy is maintained separately in content/ecosystem. No live factory missions were executed for this website research.",
+  "method": "GitHub API default-branch commit and actual releases, isolated checkout of release where available otherwise exact remote main; repository README, security, setup, locks, implementations, tests, CI definitions, media manifests and retained verification evidence. Test results below are source-reported unless explicitly identified as website checks.",
+  "relationship_classes": [
+    "direct runtime dependency",
+    "pinned source dependency",
+    "build-time dependency",
+    "workflow or contract integration",
+    "optional integration",
+    "related ecosystem tool",
+    "proposed or experimental integration"
+  ],
+  "factories": [
+    {
+      "id": "software-factory",
+      "name": "Software Factory",
+      "repository": "https://github.com/kujolang/software-factory",
+      "default_branch": "main",
+      "default_commit": "cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24",
+      "source_commit": "cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24",
+      "release_tag": "0.1.0",
+      "release_url": "https://github.com/kujolang/software-factory/releases/tag/0.1.0",
+      "release_status": "Published GitHub release",
+      "package_version": "0.1.0",
+      "fields": {
+        "audience": {
+          "summary": "Developers preparing locally reviewed Node HTTP APIs, optional SQLite and static browser interfaces from a software mission; single trusted operator.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/README.md",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/PACKS.md"
+          ]
+        },
+        "input": {
+          "summary": "Mission text plus an optional reviewed and sealed JSON software pack. Packs define requirements, allowed files and bounded API/browser tests as data; issue tracker is default, converter and notes are examples.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/mission.txt",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/packs/converter.json",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/PACKS.md"
+          ]
+        },
+        "roles": {
+          "summary": "Commander interprets mission; architect scopes work; backend and frontend workers propose files concurrently; independent reviewer gates corrections; separate release reviewer examines the exact candidate. Read-only observer has no execution authority.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/worker.mjs",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/dispatch.kujo",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/ARCHITECTURE.md"
+          ]
+        },
+        "execution": {
+          "summary": "Node controller invokes pinned native Kujo Dispatch; tool-free Codex proposals enter allowlisted files. Trusted Workcell adapter executes generated code and API/browser checks in rootless containers. npm run factory -- run factory/mission.txt starts live work.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/cli.mjs",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/dispatch.kujo",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/workcell.mjs",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/worker.mjs"
+          ]
+        },
+        "outputs": {
+          "summary": "Locally approved build only after release verification; source, frozen pack, reports and audit/export bundle. Export schema is kujo.factory.export/v1. Examples are untrusted smoke fixtures, not current approval.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/export.mjs",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/USAGE.md",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/PROVENANCE.md"
+          ]
+        },
+        "evidence": {
+          "summary": "Run journal, worker proposals, rejected attempts, native Dispatch and Workcell evidence, API/browser results and exact source/harness/pack hashes; read-only Factory Floor and replay.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/core.mjs",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/web/index.html",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/VERIFICATION.md"
+          ]
+        },
+        "review": {
+          "summary": "Independent model review plus trusted acceptance checks, separate release review and repeated source-bound gates. Human reviews the software pack before sealing and reviews intended deployment separately. Source identity does not establish correctness or test completeness.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/PACKS.md",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/ARCHITECTURE.md",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/VERIFICATION.md"
+          ]
+        },
+        "boundaries": {
+          "summary": "Rootless Docker with seccomp, read-only root, no outside network, scoped mounts, process/memory/deadline limits. Provider home, Docker socket and host evidence are not mounted. Nested Chromium sandbox unavailable inside qualified outer Workcell; no kernel-exploit guarantee.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/SECURITY.md",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/WORKCELL.md"
+          ]
+        },
+        "dependencies": {
+          "summary": "Kujo runtime 1.9.0, Codex 0.144.4, AJV 8.20.0 and ajv-formats 3.0.1; exact Dispatch, Workcell and kujo-agents commits in source lock. No shipped Spec/Eval/ShipCheck/RunLedger/Casefile integration in this release.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/sources.lock.json",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/package.json",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/dispatch.kujo"
+          ]
+        },
+        "demo": {
+          "summary": "Canonical narrated issue-tracker demonstration is historical Agent City extraction, predates software packs, and does not qualify the standalone release. SHA-256 4046393dc1e7c836ee8b944a6006ab81c8ea28aeae1c9a8a387581104ff0288e.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/PROVENANCE.md",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/media/software-factory-demo.png"
+          ]
+        },
+        "setup": {
+          "summary": "Git, Node >=26.12.1 <27, Codex account and local rootless Docker/seccomp. npm ci; npm run setup; npm run login; configure rootless engine; npm run image:build; npm run doctor; npm run verify; npm run smoke; npm start. Floor port 4380. Linux/WSL intended but live native Linux/ARM/WSL not qualified; recorded live engine qualification is macOS/Colima.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/README.md",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/INSTALL.md",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/ENGINE.md",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/VERIFICATION.md"
+          ]
+        },
+        "limitations": {
+          "summary": "Local single operator only; no hosted multi-tenant service, unattended crash recovery or deployment qualification. Future ecosystem integration work in feature branches is outside published 0.1.0. Current public main and release match at research time.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/README.md",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/SECURITY.md",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/VERIFICATION.md"
+          ]
+        },
+        "relationships": {
+          "summary": "Standalone software-production system; no universal factory controller. Product Launch separately pins a newer Software Factory evidence-verifier revision; that is not a feature of this published baseline.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/ARCHITECTURE.md",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/sources.lock.json"
+          ]
+        }
+      },
+      "relationships": [
+        {
+          "tool": "Dispatch",
+          "classification": "direct runtime dependency",
+          "usage": "Native engine imported for bounded concurrent workflow steps.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/dispatch.kujo",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "Workcell",
+          "classification": "direct runtime dependency",
+          "usage": "Rootless execution leases and isolation evidence.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/workcell.mjs",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "kujo-agents",
+          "classification": "workflow or contract integration",
+          "usage": "Pinned Chain of Command role instructions for tool-free workers.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/worker.mjs",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "Kujo",
+          "classification": "direct runtime dependency",
+          "usage": "Pinned npm runtime executes native Dispatch adapter.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/package.json",
+            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/dispatch.kujo"
+          ]
+        },
+        {
+          "tool": "Spec",
+          "classification": "proposed or experimental integration",
+          "usage": "Outside standalone release baseline; integration increment must not be described as shipped standalone functionality.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/259aff26e3ca627873eec6b40a89d6942b039d7c/docs/RELEASE-QUALIFICATION.md"
+          ]
+        },
+        {
+          "tool": "Eval",
+          "classification": "proposed or experimental integration",
+          "usage": "Outside standalone release baseline; integration increment must not be described as shipped standalone functionality.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/259aff26e3ca627873eec6b40a89d6942b039d7c/docs/RELEASE-QUALIFICATION.md"
+          ]
+        },
+        {
+          "tool": "ShipCheck",
+          "classification": "proposed or experimental integration",
+          "usage": "Outside standalone release baseline; integration increment must not be described as shipped standalone functionality.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/259aff26e3ca627873eec6b40a89d6942b039d7c/docs/RELEASE-QUALIFICATION.md"
+          ]
+        },
+        {
+          "tool": "RunLedger",
+          "classification": "proposed or experimental integration",
+          "usage": "Outside standalone release baseline; integration increment must not be described as shipped standalone functionality.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/259aff26e3ca627873eec6b40a89d6942b039d7c/docs/RELEASE-QUALIFICATION.md"
+          ]
+        },
+        {
+          "tool": "Casefile",
+          "classification": "proposed or experimental integration",
+          "usage": "Outside standalone release baseline; integration increment must not be described as shipped standalone functionality.",
+          "evidence": [
+            "https://github.com/kujolang/software-factory/blob/259aff26e3ca627873eec6b40a89d6942b039d7c/docs/RELEASE-QUALIFICATION.md"
+          ]
+        }
+      ],
+      "source_dependencies": {
+        "schema": "kujo.software-factory.sources/v1",
+        "repositories": {
+          "dispatch": {
+            "url": "https://github.com/kujolang/dispatch.git",
+            "commit": "18b5c737a73904ae942f0bd1c3baa1f77c2bfb40"
+          },
+          "workcell": {
+            "url": "https://github.com/kujolang/workcell.git",
+            "commit": "189d7ab6e975301a0e5100b65e8ad3fe4a584573"
+          },
+          "kujo-agents": {
+            "url": "https://github.com/kujolang/kujo-agents.git",
+            "commit": "a7e9d0236d6e64b5db30273b32f4ad8c124f5173"
+          }
+        }
+      },
+      "npm_dependencies": {
+        "@kujolang/kujo-runtime": "1.9.0",
+        "@openai/codex": "0.144.4",
+        "ajv": "8.20.0",
+        "ajv-formats": "3.0.1"
+      },
+      "npm_overrides": {},
+      "source_inventory": [
+        {
+          "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+          "sha256": "b9593b373eeeb2632485208ab96b084b02963d251bac30bef1869b4422a06b6a"
+        },
+        {
+          "path": ".github/workflows/verify.yml",
+          "sha256": "6b882e69a44307530c3d5d8b3266fe4b48612e9fe451eeee0db1dcbef43236bd"
+        },
+        {
+          "path": "AGENTS.md",
+          "sha256": "5eda862aec55b21642a34396778ae26e314cefd995383c8b9b83966cf44f7eb0"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "sha256": "90b2f08c4390a7c1a8085eeb2edcb18f743c0abe878678dc9c41ca32c9cb1d1e"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "sha256": "3dc11cee4f3458976e0c0bec27f8099693df0163066d0493795a93ed8b0e9304"
+        },
+        {
+          "path": "README.md",
+          "sha256": "97d7e28e968af86dc6abc1a38757058e5f6a9309f93e55d5ae0c6aeca539528f"
+        },
+        {
+          "path": "SECURITY.md",
+          "sha256": "4e52cbebbbf336c45d2ef4d0d811d542b6fbdeafc304c8582eed138e9dbe91c8"
+        },
+        {
+          "path": "bin/software-factory.mjs",
+          "sha256": "305ab3658606a149a393263b3ba6a6977f0d79e0acecec2db0fe7fa0ad6c0fa4"
+        },
+        {
+          "path": "docs/ADAPT.md",
+          "sha256": "db44bb744aa4b7c0661c0b3b2bb0be7f5d7b93e8a18408cafabd462f4a17fe1b"
+        },
+        {
+          "path": "docs/AGENT-SETUP.md",
+          "sha256": "ee628bb25f680f5e5820f09ca95175ad06e1c59c9c6bb26681337f578ed2f87a"
+        },
+        {
+          "path": "docs/ARCHITECTURE.md",
+          "sha256": "9a6af8c8cd000107b2e67742068b8859f9637ac16e8d37e09dc1beef17230469"
+        },
+        {
+          "path": "docs/CONFIGURATION.md",
+          "sha256": "28a75c230c8bf6a9539084c503401170aa02d1ad0f940fc97c3285b83b6db4f0"
+        },
+        {
+          "path": "docs/ENGINE.md",
+          "sha256": "c3e2db2196b117906528d2d776f8f1147317b0de96213427c23bbbaf9114362b"
+        },
+        {
+          "path": "docs/INSTALL.md",
+          "sha256": "290dbfdfa0dbfcbad75c753f98af4b056d128a74e61b1ed0e107bf797f12ae89"
+        },
+        {
+          "path": "docs/PACKS.md",
+          "sha256": "85efb5b9161fe57884b8dfec5bade71e637bd4f88cf5a12b239630114ed498d1"
+        },
+        {
+          "path": "docs/PROVENANCE.md",
+          "sha256": "1d0533429e8a0af49ca95d93fa24d4b30c6af964e8d7625117c57b2488199143"
+        },
+        {
+          "path": "docs/TROUBLESHOOTING.md",
+          "sha256": "1e0bab03736ccf45e0a78f56d6849d56ff812f45b37e5be5b38f39cf626d68f5"
+        },
+        {
+          "path": "docs/USAGE.md",
+          "sha256": "60bf28dcba0835cbfae995757f68dc1cac6ae024b1eca8b0ac18d6e4fa8f02ae"
+        },
+        {
+          "path": "docs/VERIFICATION.md",
+          "sha256": "0a973ebb49368883b5087319a45c5b6f57eb00617c94f78db4bfcce7bd24641d"
+        },
+        {
+          "path": "examples/converter/README.md",
+          "sha256": "9d7041e9e08cd54fb26c8a0534f7bd511fb4a40e51ba17cb5347e351dd753450"
+        },
+        {
+          "path": "examples/converter/server.mjs",
+          "sha256": "d6909fbf6c926c18e703f52bc166b8fe4af10c51af5a03c18cd693cd11d2bdab"
+        },
+        {
+          "path": "examples/issue-tracker/CHANGELOG.md",
+          "sha256": "8ddf6d623c06b6426bd17bcbbf941b66f6241fa470c0aa035c6f26375e6097d0"
+        },
+        {
+          "path": "examples/issue-tracker/README.md",
+          "sha256": "b06ab779347a285913573f6100db69642d057c822b6615723641d87472f320c5"
+        },
+        {
+          "path": "examples/issue-tracker/build.mjs",
+          "sha256": "1995c74dfb52820762d91cc6c8f5c8aedff56cc00d163c835faa8206373a1473"
+        },
+        {
+          "path": "examples/issue-tracker/db.mjs",
+          "sha256": "53d45e672af76d02cf01d3a98b9c9b67d3888b59149ebd0165c2b85eae8cf2a1"
+        },
+        {
+          "path": "examples/issue-tracker/package.json",
+          "sha256": "168d475782fbf065368231a3ab7959c72de6d852bc34341b9bfd2cb3ef80d2dd"
+        },
+        {
+          "path": "examples/issue-tracker/server.mjs",
+          "sha256": "b254c44e9931b0f5b10813f95b3f8de1abe6ba2d84d229638b19800cfeb56d7b"
+        },
+        {
+          "path": "examples/issue-tracker/tests/README.md",
+          "sha256": "1fe49b7a24beb5077f1034320b122d4a5fbb6b9c9f3815520ed5a6cbbc405700"
+        },
+        {
+          "path": "examples/notes/README.md",
+          "sha256": "11aba31ca2d9468760a61953212659035c9412e08946c15ca63a68151f627eed"
+        },
+        {
+          "path": "examples/notes/server.mjs",
+          "sha256": "f209b42865fabbcba13fa93e0d33bacfe31b99e5f7a1005bb0de4603e01fd201"
+        },
+        {
+          "path": "factory/README.md",
+          "sha256": "5fef517da1355a4aa4d9b9b5b7bdb7514d06d56674f7dbc61ba5cd158264d005"
+        },
+        {
+          "path": "factory/WORKCELL.md",
+          "sha256": "482e65344e37409f6db6a8ee4420ce4d11782a2beba2d4dafe0eb917bbe32346"
+        },
+        {
+          "path": "factory/acceptance.mjs",
+          "sha256": "886adfded75cc1950c727843bbd649f87e941f43fcf09f694cd3cd030c464d35"
+        },
+        {
+          "path": "factory/audit.mjs",
+          "sha256": "4a03b0f0b2d34f72d712edf3019aa0c98641dff968764b33da6b6573053a3ba9"
+        },
+        {
+          "path": "factory/browser-acceptance.mjs",
+          "sha256": "efa7656ec89b1c3a7201504fd7fde0b0b642011feffa635c616e16d98b60bac1"
+        },
+        {
+          "path": "factory/build-workcell-image.mjs",
+          "sha256": "fd81bdf853228a8bd0344120997dc33de1efd2fc8b38682ba3353d0d15cde15a"
+        },
+        {
+          "path": "factory/cli.mjs",
+          "sha256": "ab52e72f00f10dd57203a75b3c649939991d88636f46a11d0d7f0c4ffa483872"
+        },
+        {
+          "path": "factory/contract.md",
+          "sha256": "9f921eea231a70b5ea08905788a07cbbcfc0db4d35abd3f20923852a04f68a63"
+        },
+        {
+          "path": "factory/core.mjs",
+          "sha256": "8a5f1a926be5cb398a863eaf56260664bf8b41837edd0e93a2c90ef8a97370c4"
+        },
+        {
+          "path": "factory/diagrams.mjs",
+          "sha256": "a1525f03b566bf1f9903522df0632c65200b236816704e71eb6a4cae36cf0b07"
+        },
+        {
+          "path": "factory/dispatch.kujo",
+          "sha256": "9329626ddb1ec43cf7165f1f4bc7e1d6875a32777e03e746f8811950b5b71078"
+        },
+        {
+          "path": "factory/export.mjs",
+          "sha256": "8756869a54846910d1f5cb0da6a21279a52a5225ac990d4856e6ac4f24ee5db9"
+        },
+        {
+          "path": "factory/pack-acceptance.mjs",
+          "sha256": "f1d9635abb3a21ec4a456a5f8eb6283252edf0af4f1b17b5c690d037bb0ec6e6"
+        },
+        {
+          "path": "factory/pack.mjs",
+          "sha256": "5fd86b0ea08df0e6c947814147100a8f6d02727085021f436fa303f25f5265ee"
+        },
+        {
+          "path": "factory/product-docs.mjs",
+          "sha256": "173f371959e43f0e56fe83d83de7902262b1924129e4bbcb12f38264b63599a9"
+        },
+        {
+          "path": "factory/settings.mjs",
+          "sha256": "64ca1f7f40ff11c36247c532136ae447d157806c43a449658efbf822b467e215"
+        },
+        {
+          "path": "factory/test-dispatch.mjs",
+          "sha256": "5ea066ad7a24d9d276abb8d2875785116233ad4c00630515b058978e4f6b941a"
+        },
+        {
+          "path": "factory/test-recheck.mjs",
+          "sha256": "12b3a1a67f0297844ff1907dab06303d1caa6874a8e573bb9bed1e505ede4a6a"
+        },
+        {
+          "path": "factory/tests.test.mjs",
+          "sha256": "c160b52c7a5f418652ebece0e82b88f39a98c6810c4c42db9976915c2a830079"
+        },
+        {
+          "path": "factory/web/assets/PROVENANCE.md",
+          "sha256": "f51d57f18dbf5a71954d0c19fe5614e816637f1b8340af72e260a8a3a888be89"
+        },
+        {
+          "path": "factory/workcell-controller-death-test.mjs",
+          "sha256": "80f3403c5197e7ed9f050a16b444bd4e4e932944724a075e21190ec0f3e502fc"
+        },
+        {
+          "path": "factory/workcell-image/README.md",
+          "sha256": "a48e579a85bfa37c5b5eaacedd852ed00f85bd6f5e44ebf90ea12641810e4ea6"
+        },
+        {
+          "path": "factory/workcell-image/app.mjs",
+          "sha256": "3e14ba6f072f0b44b324ddeb4098a0797dae458e5bba3f75bef46b88c63bfd1d"
+        },
+        {
+          "path": "factory/workcell-image/browser-check.mjs",
+          "sha256": "f66e95ccd7bdb87bbdef4b994f015e43fff836ce3f9a66596d5b0a2f9948aaa9"
+        },
+        {
+          "path": "factory/workcell-image/browser-demo.mjs",
+          "sha256": "16ee171c2a68755f44eb33dcedf51e21f25899f3408fea94163760f5044bc9a3"
+        },
+        {
+          "path": "factory/workcell-image/build.mjs",
+          "sha256": "f0e7447c77ab3c7e6ac4988ca213d2d64f19626e8ed9ec896e7bb6f41807b0a2"
+        },
+        {
+          "path": "factory/workcell-image/control.mjs",
+          "sha256": "75c128b798d5ccb08e8e7323396c29bbac985a91a9ead11c5a381cf37cec964e"
+        },
+        {
+          "path": "factory/workcell-image/http-bridge.mjs",
+          "sha256": "3988550f143e02125c8967ec6ba51c7f4f20ed228b29377073d884d37cdbf63d"
+        },
+        {
+          "path": "factory/workcell-image/keepalive.mjs",
+          "sha256": "7033b3ae2b8a902b82d62a1ad676cbef175c88b4bc38911743c75116c8c598f3"
+        },
+        {
+          "path": "factory/workcell-image/pack-browser.mjs",
+          "sha256": "85f2530d6f5b5920df4e7b039e84d6be53e4867644686ba5256e36e622de95ba"
+        },
+        {
+          "path": "factory/workcell-tests.mjs",
+          "sha256": "1ac1add6b954b82b9fe25bb2db2ce5ff8a8833abeeadd7af5b0072a1d8c4e258"
+        },
+        {
+          "path": "factory/workcell.mjs",
+          "sha256": "69ba87dd645ea7460a913f4e7ded30a6643c912777894046ebb67ca1c9fdef00"
+        },
+        {
+          "path": "factory/worker.mjs",
+          "sha256": "0b55f7b783d7a3ad9eb8bef3bca3d53d73a31094b02b919a047eaf465dd5a648"
+        },
+        {
+          "path": "package-lock.json",
+          "sha256": "771c1087c37132f55f898393edaf82458c3c2176b6ac8c0dbefc92005013a8ef"
+        },
+        {
+          "path": "package.json",
+          "sha256": "a8157ed6ea04548db8170a4db6d583ca2bcb47faa44c62fc896ebbeadf2fcadf"
+        },
+        {
+          "path": "scripts/check-docs.mjs",
+          "sha256": "fcca98fc4ac96aac453c1f624116ca86b0771f3bd0e00322e45f47b5240ae1e9"
+        },
+        {
+          "path": "scripts/configure.mjs",
+          "sha256": "0caa4dda15b1b22943688b6fa8d9f3c61065fd474d315aa87caec8e66309d5c5"
+        },
+        {
+          "path": "scripts/connect-colima.mjs",
+          "sha256": "86c988bdf1ed69d554837fec07bacfb731f35e079335ac3de479cbf6e9d31dfe"
+        },
+        {
+          "path": "scripts/doctor.mjs",
+          "sha256": "3c2b0dfba7da4fbc44aa86cd212e6abf561420008c65cb0c3540b8b3a33ab789"
+        },
+        {
+          "path": "scripts/login.mjs",
+          "sha256": "ab72492155f330d54da9f4ef41420f79ac715630365847099002a09ba8bed006"
+        },
+        {
+          "path": "scripts/pack.mjs",
+          "sha256": "0627f16f315469981581ff4557878c712b56ebf6557eabee5e07006b7117a0c6"
+        },
+        {
+          "path": "scripts/setup.mjs",
+          "sha256": "cb77c7f525e10565d4c62766dc870807f882e0f75f9ccec9326ed4fd5598dbdc"
+        },
+        {
+          "path": "scripts/smoke.mjs",
+          "sha256": "8f26a3318c1c4f91323ddd9dbff9ae701662c83581ca8574f8e59c7507366b71"
+        },
+        {
+          "path": "scripts/test-packs.mjs",
+          "sha256": "aeb7cb580f2e41625ee242d35a66e8df76bf98f31dfba80537f3ffc18bc16503"
+        },
+        {
+          "path": "sources.lock.json",
+          "sha256": "ec6cfbc181159d5b3b3ad0005acde4a877b73e651af7811ff651525d8110782f"
+        },
+        {
+          "path": "tests/observer.test.mjs",
+          "sha256": "aae9ce50ff0263c2f954c6e285645c6aa7fef77681cfbc1147ad1a94e57c1dab"
+        },
+        {
+          "path": "tests/packs.test.mjs",
+          "sha256": "8e3bdd830c00ea071c459d9ec7c8394da92c132ce5043455a0c756fbb124d4b8"
+        },
+        {
+          "path": "tests/settings.test.mjs",
+          "sha256": "70696661243c7414cbf09fbd0b78feca411242c75074d47717d664781e615d44"
+        }
+      ],
+      "media": {
+        "video_path": "docs/media/software-factory-demo.mp4",
+        "image_path": "docs/media/software-factory-demo.png",
+        "label": "Historical recorded demonstration; predates software packs"
+      },
+      "branch_only_evidence": {
+        "commit": "259aff26e3ca627873eec6b40a89d6942b039d7c",
+        "source": "https://github.com/kujolang/software-factory/blob/259aff26e3ca627873eec6b40a89d6942b039d7c/docs/RELEASE-QUALIFICATION.md",
+        "status": "Explicitly blocks feature-complete release; version 0.1.0 is not a new release tag.",
+        "qualification_limits": [
+          "Clean Linux/macOS/WSL installation not executed",
+          "Additional runtime missions/full provider missions not executed",
+          "Upstream VideoOps Kujo validator reports VM Stack underflow; separate JSON-schema validation passes"
+        ],
+        "public_use": "Do not project branch integration claims onto standalone 0.1.0. Product Launch uses the pinned portable verifier only."
+      }
+    },
+    {
+      "id": "videoops-factory",
+      "name": "VideoOps Factory",
+      "repository": "https://github.com/kujolang/videoops-factory",
+      "default_branch": "main",
+      "default_commit": "dcf2dc4fa7311f59ba3dd16f58a227439a155979",
+      "source_commit": "dcf2dc4fa7311f59ba3dd16f58a227439a155979",
+      "release_tag": null,
+      "release_url": null,
+      "release_status": "Default-branch source preview; no published GitHub release found",
+      "package_version": "0.1.0",
+      "fields": {
+        "audience": {
+          "summary": "Small teams creating screenshot-led product launch clips from sourced facts and registered media.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/README.md",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/AGENT-SETUP.md"
+          ]
+        },
+        "input": {
+          "summary": "kujo.videoops.brief/v1 JSON: request, facts with sources, CTA, registered asset IDs; 1920\u00d71080 or 1080\u00d71920, 30fps, 3\u201360 seconds, silent. Operator registers trusted assets with provenance, rights and SHA-256.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/examples/launch-brief.json",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/examples/social-brief.json",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/assets/catalog.json",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/contracts.mjs"
+          ]
+        },
+        "roles": {
+          "summary": "Producer validates scope; Creative Director proposes timed plan; Asset Scout checks supplied provenance; Media Generator records NOT_REQUIRED for silent registered assets; HyperFrames Editor reviews plan; Video Critic reviews technical evidence. Calls are sequential.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/runner.mjs",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/agent.mjs"
+          ]
+        },
+        "execution": {
+          "summary": "Canonical videoops-production initializer; tool-free Codex proposals; trusted compiler creates HyperFrames scenes, checks and renders; canonical Python review tool records exact-candidate status. npm run factory -- run examples/launch-brief.json.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/runner.mjs",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/render.mjs",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/template.mjs"
+          ]
+        },
+        "outputs": {
+          "summary": "output/draft.mp4, editable production/hyperframes project, metadata, frames, logs, role proposals and handoffs. Landscape and portrait examples are intentionally silent 12-second clips.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/README.md",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/render.mjs",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/examples/software-factory-launch/run.json"
+          ]
+        },
+        "evidence": {
+          "summary": "State timestamps/elapsed time, JSONL events, kujo.handoff/v1 records, registered file hashes, metadata/technical checks, exact candidate SHA and videoops-review-decision/v1 ledger.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/runner.mjs",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/REVIEW.md"
+          ]
+        },
+        "review": {
+          "summary": "Successful run stops at REVIEW_INCOMPLETE. Full visual playback and listening (including intentional silence) required by capable reviewer; local record/promote commands bind exact SHA. Rendering, contact sheets and model statements do not provide perceptual approval.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/REVIEW.md",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/runner.mjs"
+          ]
+        },
+        "boundaries": {
+          "summary": "Tools/apps/web disabled for private Codex proposals; trusted renderer accepts validated data, not model HTML/JS. Loopback read-only floor. Registered codecs/media remain trusted host operations; this factory does not inherit Workcell isolation.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/SECURITY.md",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/contracts.mjs"
+          ]
+        },
+        "dependencies": {
+          "summary": "Kujo 1.9.0, Codex 0.144.4, GSAP 3.14.2, HyperFrames 0.9.40, Undici override 7.30.2; kujo-agents and kujo-workflows pinned sources; Python kujo-agents-videoops 0.3.0 with exact requirements. Retired kujo-videoops is historical, not a dependency.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/package.json",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/sources.lock.json",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/REUSE.md"
+          ]
+        },
+        "demo": {
+          "summary": "Canonical narrated showcase uses actual floor/review stills and example renders from distinct recorded runs. Technical PASS; full listening not attested; REVIEW_INCOMPLETE. Separate authorized Siren demo does not make automatic narration part of silent runner.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/DEMO.md",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/media/manifest.json",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/media/playback-verification.json"
+          ]
+        },
+        "setup": {
+          "summary": "macOS/Linux; Git, Node >=26.12.1 <27, Python 3.10+, FFmpeg/ffprobe 6+ with libx264/AAC, Codex account; browser download for render and libatomic1 on minimal Ubuntu. npm ci; setup; login; doctor; verify; npm start. Floor 4381. Model usage is separate from setup; no paid media generation on silent route.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/README.md",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/REUSE.md",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/ONBOARDING-BENCHMARK.md"
+          ]
+        },
+        "limitations": {
+          "summary": "Three to five template scenes and final Kujo bumper; no general footage timeline, automatic narrated campaigns, arbitrary remote assets, automatic editor repair loop or publication. Failed runs require a new run; no mid-render resume.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/AGENT-SETUP.md",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/REVIEW.md",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/contracts.mjs"
+          ]
+        },
+        "relationships": {
+          "summary": "Standalone factory; Product Launch consumes pinned tools via a coordinator adapter. Canonical VideoOps tools live in kujo-agents, not retired kujo-videoops.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/REUSE.md",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/README.md"
+          ]
+        }
+      },
+      "relationships": [
+        {
+          "tool": "kujo-agents / VideoOps",
+          "classification": "direct runtime dependency",
+          "usage": "Pinned role contracts, media service, audio QA and exact-candidate review CLI/Python tools.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/sources.lock.json",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/REUSE.md",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/runner.mjs"
+          ]
+        },
+        {
+          "tool": "kujo-workflows",
+          "classification": "workflow or contract integration",
+          "usage": "Pinned videoops-production initializer and media bridge.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/runner.mjs",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/REUSE.md"
+          ]
+        },
+        {
+          "tool": "HyperFrames",
+          "classification": "direct runtime dependency",
+          "usage": "Trusted composition checking, preview and rendering.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/package.json",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/render.mjs"
+          ]
+        },
+        {
+          "tool": "Kujo",
+          "classification": "direct runtime dependency",
+          "usage": "Runtime for production initializer.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/src/runner.mjs",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/package.json"
+          ]
+        },
+        {
+          "tool": "ElevenLabs",
+          "classification": "optional integration",
+          "usage": "Canonical media service used for separately authorized demos; not called by silent example runner.",
+          "evidence": [
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/REUSE.md",
+            "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/DEMO.md"
+          ]
+        }
+      ],
+      "source_dependencies": {
+        "schema": "kujo.videoops-factory.sources/v1",
+        "repositories": {
+          "kujo-agents": {
+            "url": "https://github.com/kujolang/kujo-agents.git",
+            "commit": "a7e9d0236d6e64b5db30273b32f4ad8c124f5173"
+          },
+          "kujo-workflows": {
+            "url": "https://github.com/kujolang/kujo-workflows.git",
+            "commit": "d766eae4fd9a131e51c34796d029fd3bc6974689"
+          }
+        },
+        "python": {
+          "distribution": "kujo-agents-videoops",
+          "version": "0.3.0",
+          "requirements": {
+            "pip": "24.3.1",
+            "setuptools": "80.9.0",
+            "wheel": "0.45.1",
+            "jsonschema": "4.26.0",
+            "attrs": "23.2.0",
+            "jsonschema-specifications": "2025.9.1",
+            "referencing": "0.37.0",
+            "rpds-py": "0.30.0",
+            "typing-extensions": "4.15.0"
+          }
+        }
+      },
+      "npm_dependencies": {
+        "@kujolang/kujo-runtime": "1.9.0",
+        "@openai/codex": "0.144.4",
+        "gsap": "3.14.2",
+        "hyperframes": "0.9.40"
+      },
+      "npm_overrides": {
+        "undici": "7.30.2"
+      },
+      "source_inventory": [
+        {
+          "path": ".github/workflows/verify.yml",
+          "sha256": "c63688fb971768b74f46dc944ab32c6da22f2256e0a6422671827861a8ae1dc7"
+        },
+        {
+          "path": "AGENTS.md",
+          "sha256": "d0d9ebcd9578663b53bc97f7303cfbfc7330f3e8c00aa9f45290c4b9e105118d"
+        },
+        {
+          "path": "README.md",
+          "sha256": "6ad8d0c8a26a8bbb960f730f85f32974a2067b85b5e99386bc050d63e67affc0"
+        },
+        {
+          "path": "SECURITY.md",
+          "sha256": "b7e44f5e339fbb8e5f3112a6e9a56c8df27d9c12c256a565bd58deb0111e113d"
+        },
+        {
+          "path": "bin/videoops-factory.mjs",
+          "sha256": "b645eabf954859932206497816d46d291f4fcbca7f33b37900422a02c50b33ec"
+        },
+        {
+          "path": "docs/AGENT-SETUP.md",
+          "sha256": "c4da4b272192b5bcb6db104dc5c4593a1dca5b26a208db977fc98cb567e5c10d"
+        },
+        {
+          "path": "docs/BENCHMARK.md",
+          "sha256": "31cc41a955569a88435a1c3cbe121264bfdd1fe3ccbbe6006f9ed2d349be82ed"
+        },
+        {
+          "path": "docs/CREATIVE-DIRECTION.md",
+          "sha256": "41ecacb190832929a2955ec791bae74c23fc2049ca92bd2c5973c1f6c1039d67"
+        },
+        {
+          "path": "docs/DEMO.md",
+          "sha256": "0e6f401c4fd6ca583d538a971904c60005ecef43b4ab2bb6861df586d43c1c8d"
+        },
+        {
+          "path": "docs/MEDIA-PROVENANCE.md",
+          "sha256": "d96abd47ec4f888b52a6b810eb46ce75e2df928302d207d4f42242da3c26cc67"
+        },
+        {
+          "path": "docs/NEXT-FACTORY.md",
+          "sha256": "12583db6cf0dfeb248f0111e814b97d049c0928bbc01818f45ad8f8798d754a2"
+        },
+        {
+          "path": "docs/ONBOARDING-BENCHMARK.md",
+          "sha256": "16d70d22cdc815900078c694d33e7d8ee6120467a52ae390adb0707c4c509614"
+        },
+        {
+          "path": "docs/REUSE.md",
+          "sha256": "74e8e6c1987cbe92197dd3b95196c1e4d0f44eebf94e3870ad7f4922a8db9611"
+        },
+        {
+          "path": "docs/REVIEW.md",
+          "sha256": "cc6b4a73ad0d1ce6f2a12da82db5d519bba4a97c584c8eeb56825b8905164cb5"
+        },
+        {
+          "path": "package-lock.json",
+          "sha256": "70d55e33c9ff0ac1917b41ed528df8bf51e8aa3fb9d789930de3b344db437863"
+        },
+        {
+          "path": "package.json",
+          "sha256": "bb8050aa62b11849889e0d5ff9bcf74cd11c856fad2a487a935de40e720afa5a"
+        },
+        {
+          "path": "scripts/benchmark/probe.mjs",
+          "sha256": "5facbf2b7c9169bf7969397652ac8aa22c291b87cf8ba2f808e563963733a4a6"
+        },
+        {
+          "path": "scripts/benchmark/run.py",
+          "sha256": "be156acd63a197d5e3cd89225e96a7e59e9dcf1327c21683ec5d16184e4c8e38"
+        },
+        {
+          "path": "scripts/build-demo.mjs",
+          "sha256": "5297155b6abdd595408da6db273afc32690e6ace97a80232dfa741cb55e5fa43"
+        },
+        {
+          "path": "scripts/check-docs.mjs",
+          "sha256": "c80e4d59eead0ef0fd2fbed732d32b6fdd1b5ad9b3d7d29b9b34db92e6b86087"
+        },
+        {
+          "path": "scripts/doctor.mjs",
+          "sha256": "e4d2dbacc0f680dd12d18a3da4bd660111194387305c3ab8727ac8ec287e7857"
+        },
+        {
+          "path": "scripts/login.mjs",
+          "sha256": "80bfd718d4de631639b8dcacd62cfc5b839085add97f595b66d111aff644f12d"
+        },
+        {
+          "path": "scripts/setup.mjs",
+          "sha256": "a0d25997e8efe04f4443281542aab1d926a7b1d678fec7c9862e77216b021a7f"
+        },
+        {
+          "path": "sources.lock.json",
+          "sha256": "1e55702f449c4c86805ea22707e95074c35c074311b861eeb6495606aece69da"
+        },
+        {
+          "path": "src/agent.mjs",
+          "sha256": "bafc6cc8389202e529aad07c2d9137ccf9b467654536b3fdae4c0383ee4645f6"
+        },
+        {
+          "path": "src/contracts.mjs",
+          "sha256": "73bc8c16687f331a3d9c3c0bde970d17467d478e61f0598df5121363928b788f"
+        },
+        {
+          "path": "src/process.mjs",
+          "sha256": "aec6f2fd1f234bdbdcce4cd131e99bd2279a0c4be67c2e59edf0e6a9c5ce534c"
+        },
+        {
+          "path": "src/render.mjs",
+          "sha256": "02e7ee9016fbc7c95d17fba582135a10128fa4bb032849778c82365eaa5ef23b"
+        },
+        {
+          "path": "src/runner.mjs",
+          "sha256": "8679d8d4ae558377546adeb545eb4097642b02ae1e418b5e33b2d745f1629290"
+        },
+        {
+          "path": "src/server.mjs",
+          "sha256": "b1a73f69fe2e9c98c538cb4171ed6e7ece4260bef60ec26d228d6529f0a648e4"
+        },
+        {
+          "path": "src/settings.mjs",
+          "sha256": "8d9d33a501e9f88b1a9a68da28eedf3c925837d3c5b1048a0467289e3e18b465"
+        },
+        {
+          "path": "src/template.mjs",
+          "sha256": "ab8f53f0fef19988ee8f41d13c0886915ff761a4c354b53c39f9574b1052fb55"
+        },
+        {
+          "path": "tests/contracts.test.mjs",
+          "sha256": "c0d4c4eb2159e5c2c7b9c8fb6099606cd775f8344a52e367e64e8d8860a8a017"
+        },
+        {
+          "path": "tests/review.test.mjs",
+          "sha256": "2687fe93ea87ff6cdbc6eef35a9123f048b869476a90eecbda5b8a02dae324b6"
+        },
+        {
+          "path": "tests/server.test.mjs",
+          "sha256": "5ea9a2f61fa0312aa373fb5604a3588ad48f9b03336a4ed083f4a7b60836448a"
+        }
+      ],
+      "media": {
+        "video_path": "docs/media/videoops-factory-demo.mp4",
+        "image_path": null,
+        "image_note": "No standalone VideoOps floor image committed; extract authentic floor frame from canonical demo. assets/factory-floor.png belongs to Software Factory input.",
+        "label": "Recorded narrated showcase; technical candidate, listening not attested"
+      }
+    },
+    {
+      "id": "publishing-house-factory",
+      "name": "Publishing House Factory",
+      "repository": "https://github.com/kujolang/publishing-house-factory",
+      "default_branch": "main",
+      "default_commit": "38e7900a16f8482d12ad6b8b6a15f538d7ee3099",
+      "source_commit": "38e7900a16f8482d12ad6b8b6a15f538d7ee3099",
+      "release_tag": null,
+      "release_url": null,
+      "release_status": "Default-branch source preview; no published GitHub release found",
+      "package_version": "0.1.0",
+      "fields": {
+        "audience": {
+          "summary": "Editorial teams producing a reviewable article and adaptations from supplied source material.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/README.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/AGENT-SETUP.md"
+          ]
+        },
+        "input": {
+          "summary": "Brief schema kujo.publishing-house-factory.brief/v1 with title/audience/objective/voice/constraints and 1\u201310 UTF-8 source files inside brief directory; each <=100 KB, brief <=64 KB; HTTPS URLs are provenance, not remote retrieval.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/AGENT-SETUP.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/examples/videoops-launch.json",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/factory.py"
+          ]
+        },
+        "roles": {
+          "summary": "Commissioning Editor proposes angle/outline; Standards & Evidence Editor maps claims and separately reviews article; Technical Editor/Writer drafts/revises; Franchise & Adaptation Editor creates newsletter, three social posts and landing copy; Copy Chief reviews adaptations. Production code packages records.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/README.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/editorial.py"
+          ]
+        },
+        "execution": {
+          "summary": "Canonical Publishing House Operator owns phases, leases, retries/checkpoints and approval pause. Python adapter calls Codex directly for sequential tool-free proposals and allowlisted Kujo tool commands. Text-only asset stage runs no media generator.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/common.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/factory.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/editorial.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/ARCHITECTURE.md"
+          ]
+        },
+        "outputs": {
+          "summary": "Article and newsletter Markdown/JSON, exactly three social drafts, escaped landing HTML, retained source packet and versioned package manifest; local six-preview Factory Floor.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/editorial.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/example-campaign/manifest.json",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/README.md"
+          ]
+        },
+        "evidence": {
+          "summary": "Source snapshots and hashes; exact-excerpt claim mapping in Dossier; request/proposal pairs; BluePencil reviews; GalleyPack version/revision lineage and frozen manifest; VersionSeal request.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/editorial.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/ARCHITECTURE.md"
+          ]
+        },
+        "review": {
+          "summary": "Separate writer/reviewer calls, at most two article revisions and two adaptation revisions. Excerpt presence is observed support, not truth. Model pass ends at approval_required/AWAITING_HUMAN_REVIEW; human must inspect exact package.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/REVIEW.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/editorial.py"
+          ]
+        },
+        "boundaries": {
+          "summary": "No model code execution, browse or general tools; private read-only Codex proposals, regular confined source files, escaped HTML and loopback read-only viewer. Source text goes to model provider. No Workcell sandbox or publication credentials.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/SECURITY.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/scripts/propose.mjs"
+          ]
+        },
+        "dependencies": {
+          "summary": "Kujo 1.9.0 and Codex 0.144.4; exact pinned canonical operator/roles and StoryDesk, Dossier, GalleyPack, BluePencil, VersionSeal. Dispatch and Agents SDK satisfy installed operator layout but do not run this adapter\u2019s workers. PressWire initialized for compatibility; no publication effects.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/package.json",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/sources.lock.json",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/ARCHITECTURE.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/factory.py"
+          ]
+        },
+        "demo": {
+          "summary": "Recorded live campaign and narrated canonical demo; inspect source/transition/playback verification. These are recorded evidence, not new work or campaign publication approval.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/DEMO.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/media/manifest.json",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/media/playback-verification.json",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/factory-floor.png"
+          ]
+        },
+        "setup": {
+          "summary": "macOS/Linux/compatible WSL, Git, Python 3.10+, Node >=26.12.1 <27 and Codex account. npm ci; npm run setup; npm run login; npm run doctor; npm run verify; npm start. Run examples/videoops-launch.json in another terminal. Floor 4382. No Docker/FFmpeg/database needed.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/README.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/AGENT-SETUP.md"
+          ]
+        },
+        "limitations": {
+          "summary": "One fixed text campaign contract; no source research, media production or publication destinations. No approval/publish CLI, and direct publication phases rejected. Resume preserves completed matching artifacts; changed input or exhausted revisions require new run.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/REVIEW.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/SECURITY.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/factory.py"
+          ]
+        },
+        "relationships": {
+          "summary": "Standalone editorial system coordinated by canonical operator. Product Launch invokes this factory for copy; Software and VideoOps remain independent.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/README.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/ARCHITECTURE.md"
+          ]
+        }
+      },
+      "relationships": [
+        {
+          "tool": "StoryDesk",
+          "classification": "direct runtime dependency",
+          "usage": "Commissioning records through operator.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/editorial.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/factory.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "Dossier",
+          "classification": "direct runtime dependency",
+          "usage": "Sources, claims and observed excerpt support.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/editorial.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/factory.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "BluePencil",
+          "classification": "direct runtime dependency",
+          "usage": "Independent model review records.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/editorial.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/factory.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "GalleyPack",
+          "classification": "direct runtime dependency",
+          "usage": "Artifact revisions and frozen package.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/editorial.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/factory.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "VersionSeal",
+          "classification": "direct runtime dependency",
+          "usage": "Exact manifest approval request only.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/editorial.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/factory.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "Publishing House Operator",
+          "classification": "direct runtime dependency",
+          "usage": "Canonical kujo-workflows Python control loop, loaded directly.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/common.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/ARCHITECTURE.md"
+          ]
+        },
+        {
+          "tool": "kujo-agents",
+          "classification": "workflow or contract integration",
+          "usage": "Editorial role contracts used by proposal bridge.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/scripts/propose.mjs",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "Dispatch",
+          "classification": "pinned source dependency",
+          "usage": "Installed operator compatibility; no worker Dispatch/Agents SDK scheduling or PressWire publication effects. PressWire local init/doctor is permitted.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/ARCHITECTURE.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/factory.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "Agents SDK",
+          "classification": "pinned source dependency",
+          "usage": "Installed operator compatibility; no worker Dispatch/Agents SDK scheduling or PressWire publication effects. PressWire local init/doctor is permitted.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/ARCHITECTURE.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/factory.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "PressWire",
+          "classification": "pinned source dependency",
+          "usage": "Installed operator compatibility; no worker Dispatch/Agents SDK scheduling or PressWire publication effects. PressWire local init/doctor is permitted.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/ARCHITECTURE.md",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/factory.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "Kujo",
+          "classification": "direct runtime dependency",
+          "usage": "Executes trusted editorial tools.",
+          "evidence": [
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/src/common.py",
+            "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/package.json"
+          ]
+        }
+      ],
+      "source_dependencies": {
+        "schema": "kujo.publishing-house-factory.sources/v1",
+        "repositories": {
+          "kujo-workflows": {
+            "url": "https://github.com/kujolang/kujo-workflows.git",
+            "commit": "d766eae4fd9a131e51c34796d029fd3bc6974689"
+          },
+          "kujo-agents": {
+            "url": "https://github.com/kujolang/kujo-agents.git",
+            "commit": "a7e9d0236d6e64b5db30273b32f4ad8c124f5173"
+          },
+          "storydesk": {
+            "url": "https://github.com/kujolang/storydesk.git",
+            "commit": "31b4d2965c1a977c37fc9560cbc13480f7cf8f5b"
+          },
+          "dossier": {
+            "url": "https://github.com/kujolang/dossier.git",
+            "commit": "670def8c62e690bcd3c0936cd85b224257ca4a03"
+          },
+          "galleypack": {
+            "url": "https://github.com/kujolang/galleypack.git",
+            "commit": "f829584070b098488b7538f30ed6e97c32c62c0e"
+          },
+          "bluepencil": {
+            "url": "https://github.com/kujolang/bluepencil.git",
+            "commit": "88df35c3514c78fd986d750b3ff281ca280efabf"
+          },
+          "versionseal": {
+            "url": "https://github.com/kujolang/versionseal.git",
+            "commit": "f005374d72026a57c5246b6ed38473209e4bfc32"
+          },
+          "presswire": {
+            "url": "https://github.com/kujolang/presswire.git",
+            "commit": "2f8bd7054a62101ff3e97f3e1a0a61a77d35fe22"
+          },
+          "dispatch": {
+            "url": "https://github.com/kujolang/dispatch.git",
+            "commit": "18b5c737a73904ae942f0bd1c3baa1f77c2bfb40"
+          },
+          "agents-sdk": {
+            "url": "https://github.com/kujolang/agents-sdk.git",
+            "commit": "70cd1fb780cf102dd4d09d2d5ba4d24a85ce462c"
+          }
+        }
+      },
+      "npm_dependencies": {
+        "@kujolang/kujo-runtime": "1.9.0",
+        "@openai/codex": "0.144.4"
+      },
+      "npm_overrides": {},
+      "source_inventory": [
+        {
+          "path": ".github/workflows/verify.yml",
+          "sha256": "d7341d3a41552fdf5aeaef1ee31e1d1e30ef68b456232fe6801b6234fe8f8a8c"
+        },
+        {
+          "path": "AGENTS.md",
+          "sha256": "45b54aacce17a959a5e2f937d280f3ab6ff93140cca42b0bdb46328de44b806c"
+        },
+        {
+          "path": "README.md",
+          "sha256": "d348cc6b363cf8586801adcf90189c9a19d9c1e5cc93b8f2c62236c091bfe424"
+        },
+        {
+          "path": "SECURITY.md",
+          "sha256": "f9f3bb6fe2d6bf89a0af18b5b7af995d2b4f65145a491c7017eabf6032d43683"
+        },
+        {
+          "path": "docs/AGENT-SETUP.md",
+          "sha256": "725fc002690e0a551d9832c0fe426ff8dc220a067fa4225ef5d8d23eb64269dd"
+        },
+        {
+          "path": "docs/ARCHITECTURE.md",
+          "sha256": "2c2658f3e41ba143c6bc1b7f8ec22d16292c51f530bfda5cf837ae8d31b3cf88"
+        },
+        {
+          "path": "docs/DEMO.md",
+          "sha256": "aa1008d7a0f23c079ce6f4d36c527a1e5c556ed6dc0fbbe554f3298bb7a18458"
+        },
+        {
+          "path": "docs/REVIEW.md",
+          "sha256": "988d0c008cd8b96b2852513b1b6d3d5af842586253026457f29e8148c1ca1a29"
+        },
+        {
+          "path": "docs/VERIFICATION.md",
+          "sha256": "a4dfa69e6c7bbf67eb652c4d218608d7ed7b8e233a6d37306b56a0c4b7497e7b"
+        },
+        {
+          "path": "docs/example-campaign/README.md",
+          "sha256": "4c985d0e653c8ad8947ef9f676594a14a43a517dadf2105ccff8fad6b3f0ebf9"
+        },
+        {
+          "path": "docs/example-campaign/article.md",
+          "sha256": "cd723c9c01e6f43d6b0fe07d01bf20b34e605e76a5ec28d71a86b865e5763211"
+        },
+        {
+          "path": "docs/example-campaign/newsletter.md",
+          "sha256": "7fe3fb064e030173c6ad71736333d3c40f2c90e8f019870a633c505aec9bdeb5"
+        },
+        {
+          "path": "docs/example-campaign/social.md",
+          "sha256": "d0df3bf5993e9a35e8099ed107c7be487bc0882728ab12441bc2bea738e50433"
+        },
+        {
+          "path": "examples/README.md",
+          "sha256": "c77523f5c9b5cf172c32c3490a59f7f5c9519e62b71023a9a8d04be94e71dd8d"
+        },
+        {
+          "path": "package-lock.json",
+          "sha256": "08273adb4bc1abff5f9a26fb74f80ef3911a95790357eff7a3e5aacf9966837e"
+        },
+        {
+          "path": "package.json",
+          "sha256": "155b2a5fd2783f09466683fb68c58f192174828cefe25a3fee404eea67c63105"
+        },
+        {
+          "path": "scripts/check_docs.py",
+          "sha256": "461b5a56f51beda41c9a52c28f214c75cf361e246a9d4ce303997b2593c0aeef"
+        },
+        {
+          "path": "scripts/login.mjs",
+          "sha256": "80bfd718d4de631639b8dcacd62cfc5b839085add97f595b66d111aff644f12d"
+        },
+        {
+          "path": "scripts/propose.mjs",
+          "sha256": "ee8cbc73c0b606d3c6cb06956a02136f54d3e8f2a9ed984bf2415969661f3391"
+        },
+        {
+          "path": "scripts/setup.mjs",
+          "sha256": "9a6fa381957378a3fff8fbe2c9b066c3d7d4defbed32bc430a2134cb2d377c6c"
+        },
+        {
+          "path": "sources.lock.json",
+          "sha256": "c1b35c2bf0ea933c83d644defe406458c14aa8caa651a4b69efa25eec50e8292"
+        },
+        {
+          "path": "src/common.py",
+          "sha256": "71f98bd36332813e533c556b1442bde1aa99fc88fda63a54ab80327ab050802a"
+        },
+        {
+          "path": "src/editorial.py",
+          "sha256": "613ba8443c810bce0ae053152e4a62d90792d062b573c2e988da4c04fe762730"
+        },
+        {
+          "path": "src/factory.py",
+          "sha256": "a8c2eb5d30f424617a637022b227d9463855646266e79f78a6ddd6b37edf39db"
+        },
+        {
+          "path": "src/settings.mjs",
+          "sha256": "e0e78266c7fc310a54c64538d7921bdb6ea2bd7b9af31d616725f85840f802a8"
+        },
+        {
+          "path": "tests/test_contracts.py",
+          "sha256": "b0b2914f9516346ec36be7161124b85f13b01341f36a674b922f52f02944173f"
+        },
+        {
+          "path": "tests/test_integration.py",
+          "sha256": "341ff9ba72306605257a10364faa94bf8270cfa25c1bb6ac52a5da176a58297a"
+        }
+      ],
+      "media": {
+        "video_path": "docs/media/publishing-house-factory-demo.mp4",
+        "image_path": "docs/factory-floor.png",
+        "label": "Recorded live editorial campaign; package awaits human review"
+      }
+    },
+    {
+      "id": "webops-factory",
+      "name": "WebOps Factory",
+      "repository": "https://github.com/kujolang/webops-factory",
+      "default_branch": "main",
+      "default_commit": "a2aba2c63777f37bf47d64dc93748949658b977b",
+      "source_commit": "a2aba2c63777f37bf47d64dc93748949658b977b",
+      "release_tag": null,
+      "release_url": null,
+      "release_status": "Default-branch source preview; no published GitHub release found",
+      "package_version": "0.1.0",
+      "fields": {
+        "audience": {
+          "summary": "Owners of bounded static exports needing scoped metadata, image-alternative and internal-link fixes on a disposable copy.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/README.md",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/AGENT-SETUP.md"
+          ]
+        },
+        "input": {
+          "summary": "JSON title/site/objective; static site relative to mission. At most 120 files and 8,000,000 bytes; worker context 150 KB. HTML/CSS/SVG/common images/text/XML allowed. Scripts, event handlers, frames, symlinks and active embeds rejected; hidden files/node_modules excluded.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/examples/studio.json",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/siteops.py",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/factory.py",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/README.md"
+          ]
+        },
+        "roles": {
+          "summary": "Metadata Auditor owns missing/empty title and description; Link Health Auditor owns broken local file destinations; Accessibility Auditor supplies missing alt attributes; Site QA Operator independently reviews exact patch. Sequential tool-free calls.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/factory.py",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/ARCHITECTURE.md"
+          ]
+        },
+        "execution": {
+          "summary": "Snapshot original, deterministic HTML audit, SiteProbe crawl/verify and Lens check; validate values, repair candidate copy, repeat checks, independent model review and package. --fixture supplies fixed proposals but real browser/crawl tools; --live uses Codex.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/factory.py",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/siteops.py"
+          ]
+        },
+        "outputs": {
+          "summary": "before/ snapshot, candidate/ repaired copy, before/after findings, proposals/ and requests/, patches/repairs.diff, evidence/ SiteProbe/Lens output and package.json.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/README.md",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/factory.py",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/example-run/package.json"
+          ]
+        },
+        "evidence": {
+          "summary": "Original byte comparison, exact source diff, before/after homepage desktop/mobile screenshots, crawl/browser/accessibility/link reports, worker values and reasons, independent review, manifest file hashes.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/ARCHITECTURE.md",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/factory.py",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/VERIFICATION.md"
+          ]
+        },
+        "review": {
+          "summary": "Zero supported findings, passing final Lens threshold and passing independent review required for approval_required package. Broader crawl warnings retained. Human reviews patch/candidate before separate release process.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/factory.py",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/VERIFICATION.md"
+          ]
+        },
+        "boundaries": {
+          "summary": "Workers cannot submit commands, markup, external targets or new repair types. Original never modified; preview CSP blocks scripts and network effects. Local floor read-only; manifest integrity is not a signature or malicious-host defense.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/SECURITY.md",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/siteops.py",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/factory.py"
+          ]
+        },
+        "dependencies": {
+          "summary": "Kujo 1.9.0, Codex 0.144.4, Playwright 1.61.1; exact SiteProbe, Lens, kujo-agents and kujo-workflows commits. Canonical finding-to-fix PROPOSE contract informs adapter; production mutation step is not invoked.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/package.json",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/sources.lock.json",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/ARCHITECTURE.md"
+          ]
+        },
+        "demo": {
+          "summary": "Canonical narrated video shows exported recorded live run, not real-time execution. Media REVIEW_INCOMPLETE because listening not attested. npm run demo imports verified checked-in record without new model work.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/VERIFICATION.md",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/media/manifest.json",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/media/readme-playback.json"
+          ]
+        },
+        "setup": {
+          "summary": "macOS/Linux/compatible WSL; Git, Python 3.10+, Node >=26.12.1 <27, Codex for live mode. npm ci; setup; login; doctor; npm run factory -- run examples/studio.json --live; npm start. Linux may need npx playwright install-deps chromium. Floor 4383.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/README.md",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/AGENT-SETUP.md",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/scripts/setup.mjs"
+          ]
+        },
+        "limitations": {
+          "summary": "Only four repair operations; no full WCAG/SEO certification, external link health, fragments, rankings/analytics, JavaScript sites, frameworks, authenticated crawling, retry/resume, source mutation or deployment. Static audit covers imported HTML; Lens checks homepage desktop/mobile.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/README.md",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/ARCHITECTURE.md",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/siteops.py"
+          ]
+        },
+        "relationships": {
+          "summary": "Standalone bounded adapter using SiteProbe/Lens; Product Launch consumes website candidate and browser evidence. Other factories are related, not runtime parents.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/README.md",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/ARCHITECTURE.md"
+          ]
+        }
+      },
+      "relationships": [
+        {
+          "tool": "SiteProbe",
+          "classification": "direct runtime dependency",
+          "usage": "Real before/after inspection and retained verification artifacts.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/factory.py",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "Lens",
+          "classification": "direct runtime dependency",
+          "usage": "Real before/after inspection and retained verification artifacts.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/src/factory.py",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "kujo-agents",
+          "classification": "workflow or contract integration",
+          "usage": "Pinned WebOps specialist and independent QA contracts.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/scripts/propose.mjs",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "kujo-workflows",
+          "classification": "workflow or contract integration",
+          "usage": "Pinned finding-to-fix boundary reference; adapter owns these bounded operations and does not run production mutation.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/ARCHITECTURE.md",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "Kujo",
+          "classification": "direct runtime dependency",
+          "usage": "Pinned runtime executes inspection tools.",
+          "evidence": [
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/scripts/setup.mjs",
+            "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/package.json"
+          ]
+        }
+      ],
+      "source_dependencies": {
+        "schema": "kujo.webops-factory.sources/v1",
+        "repositories": {
+          "siteprobe": {
+            "url": "https://github.com/kujolang/siteprobe.git",
+            "commit": "957ce6b72b2a1c2f1a46650a33bdc44498ddcc96"
+          },
+          "lens": {
+            "url": "https://github.com/kujolang/lens.git",
+            "commit": "91049646d70c11bf0c6071f39cf7dfac6b1ba70b"
+          },
+          "kujo-agents": {
+            "url": "https://github.com/kujolang/kujo-agents.git",
+            "commit": "a7e9d0236d6e64b5db30273b32f4ad8c124f5173"
+          },
+          "kujo-workflows": {
+            "url": "https://github.com/kujolang/kujo-workflows.git",
+            "commit": "d766eae4fd9a131e51c34796d029fd3bc6974689"
+          }
+        }
+      },
+      "npm_dependencies": {
+        "@kujolang/kujo-runtime": "1.9.0",
+        "@openai/codex": "0.144.4",
+        "playwright": "1.61.1"
+      },
+      "npm_overrides": {},
+      "source_inventory": [
+        {
+          "path": ".github/workflows/verify.yml",
+          "sha256": "857fbf0bffa151be509021fe85bfcd76e9adf33cece2971f95c3f3be1dfd1bd9"
+        },
+        {
+          "path": "AGENTS.md",
+          "sha256": "6cb91049fd25a1a00dcbaaa7d1966551f6517412fe3be81e0d143a45219a4a1c"
+        },
+        {
+          "path": "README.md",
+          "sha256": "fc98a4889e15a76011192828f13427b119c725c7e3fcdb06f1bceb219cb516af"
+        },
+        {
+          "path": "SECURITY.md",
+          "sha256": "4a170df1cb398f22c313c85b0781c4ad769d1f0b31fafb763a9d02ed52ff653e"
+        },
+        {
+          "path": "docs/AGENT-SETUP.md",
+          "sha256": "ca5bfffde8760e3972cca6361173ca2e8ee3c3c5a4b72f83187601a399207fc4"
+        },
+        {
+          "path": "docs/ARCHITECTURE.md",
+          "sha256": "d4e17c186fab45f57d2a7c1c086ad1c2f8c58f574775084e54c5d5b22140f4e6"
+        },
+        {
+          "path": "docs/VERIFICATION.md",
+          "sha256": "6ba61576c5b1b158a7125da60a019a282587bb8036a6656138cf1bdae7c2ef44"
+        },
+        {
+          "path": "docs/media/review.md",
+          "sha256": "d84e5996223d1414719217be3c791028a7b2d4efa6c9f0f62bdb4a71ab9f3bdd"
+        },
+        {
+          "path": "package-lock.json",
+          "sha256": "a5e37a8921a8800d452e88c72d957061d45251a4a5588245fe8a8dfd1534882b"
+        },
+        {
+          "path": "package.json",
+          "sha256": "f97f880fdc816feba94cfb2cf03cb8f4da4f93049e44c4a4281317c4e2afcf93"
+        },
+        {
+          "path": "scripts/browser-check.mjs",
+          "sha256": "9892899c5400afb198491435c2e8d3904baceed90afed3f4859ac56aaa6808f9"
+        },
+        {
+          "path": "scripts/check-browser.mjs",
+          "sha256": "5b4c370450579bd417b9e55ba52eedebe6ad85b387a556af5366847927b823b1"
+        },
+        {
+          "path": "scripts/check_docs.py",
+          "sha256": "461b5a56f51beda41c9a52c28f214c75cf361e246a9d4ce303997b2593c0aeef"
+        },
+        {
+          "path": "scripts/login.mjs",
+          "sha256": "80bfd718d4de631639b8dcacd62cfc5b839085add97f595b66d111aff644f12d"
+        },
+        {
+          "path": "scripts/propose.mjs",
+          "sha256": "cfa1d9b692d54fedf3159d771df904265f8547894c707832acb17e5f41caeb4c"
+        },
+        {
+          "path": "scripts/setup.mjs",
+          "sha256": "3f87ef758287a8de51bc0e0d2c6ffbcd2255ebd3921e072fd849ff389a32df9e"
+        },
+        {
+          "path": "sources.lock.json",
+          "sha256": "6c9d4d6ebb22864a8ea130cafada313bd5e6c20dcbcc94bf4412494ec853d89e"
+        },
+        {
+          "path": "src/factory.py",
+          "sha256": "bf797488caaeff8fae4b08cbe40aed1c8953abd6bb15b37cd57dfbb708e435cb"
+        },
+        {
+          "path": "src/settings.mjs",
+          "sha256": "e0e78266c7fc310a54c64538d7921bdb6ea2bd7b9af31d616725f85840f802a8"
+        },
+        {
+          "path": "src/siteops.py",
+          "sha256": "dc97f4a409f8dd2b346eafde217f1b89405f05f1dd9950ff8bbb801e5cfc35fd"
+        },
+        {
+          "path": "tests/test_factory.py",
+          "sha256": "8b2c4615d758043cff71beafb2eec51272a6bc7056243cd570d7aae6d90f950a"
+        }
+      ],
+      "media": {
+        "video_path": "docs/media/webops-factory-demo.mp4",
+        "image_path": "docs/factory-floor.png",
+        "label": "Recorded live repair evidence; narrated demo listening not attested"
+      }
+    },
+    {
+      "id": "product-launch-factory",
+      "name": "Product Launch Factory",
+      "repository": "https://github.com/kujolang/product-launch-factory",
+      "default_branch": "main",
+      "default_commit": "d61c7021b0469c45f909b8371205f0df3afbac8b",
+      "source_commit": "d61c7021b0469c45f909b8371205f0df3afbac8b",
+      "release_tag": "v0.1.0",
+      "release_url": "https://github.com/kujolang/product-launch-factory/releases/tag/v0.1.0",
+      "release_status": "Published GitHub release",
+      "package_version": "0.1.0",
+      "fields": {
+        "audience": {
+          "summary": "Product teams preparing consistent editorial, website and video deliverables from existing product evidence.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/README.md",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/AGENT-SETUP.md"
+          ]
+        },
+        "input": {
+          "summary": "kujo.product-launch.brief/v1: captured text sources with HTTPS provenance, audience/objective/voice/constraints, software-export or webops-package evidence, up to three PNG/JPEG product visuals with rights; silent video default, narration separate.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/schemas/launch-brief.json",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/examples/webops-launch.json",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/AGENT-SETUP.md"
+          ]
+        },
+        "roles": {
+          "summary": "Five stations: Source evidence verifies existing package; Publishing House commissions/writes/reviews/adapts; WebOps inspects bounded landing repairs; VideoOps plans/compiles/renders/checks; Launch review collects versions and awaits human approval. Uses child roles rather than a new universal worker team.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/README.md",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/launch.py",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/ARCHITECTURE.md"
+          ]
+        },
+        "execution": {
+          "summary": "Python coordinator freezes brief/evidence, invokes pinned child adapters, constructs static landing page from escaped editorial data and passes checked screenshots/facts to VideoOps. Software adapter invokes evidence.mjs verify only, never application construction.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/launch.py",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/video.mjs",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/ARCHITECTURE.md"
+          ]
+        },
+        "outputs": {
+          "summary": "Local package with article, newsletter, three social posts, landing website, MP4, editable composition and underlying evidence. Export strips private homes and omits local approval.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/launch.py",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/AGENT-SETUP.md",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/example-run/package/manifest.json"
+          ]
+        },
+        "evidence": {
+          "summary": "kujo.product-launch.handoff/v1 records input hashes, factory revisions, output inventory and prior dependency hashes. Exact package manifest and approval checks detect edited, added or deleted files. Recorded example includes 200 packaged files.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/launch.py",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/core.py",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/example-run/handoffs/package.json"
+          ]
+        },
+        "review": {
+          "summary": "Technical/model gates remain child-specific. Completed handoffs reused only with matching bytes; changed input needs new version, invalidates downstream review. Human reads every deliverable and plays full video before exact-hash local approve command; no publication authority.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/AGENT-SETUP.md",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/core.py",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/VERIFICATION.md"
+          ]
+        },
+        "boundaries": {
+          "summary": "Local trusted single operator; confined source paths and trusted pinned child execution, no arbitrary repository builds. Loopback read-only floor; generated previews block scripts/external assets/forms. Sources sent to configured model. Paid speech requires exact authorization and budget.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/SECURITY.md",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/video.mjs",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/launch.py"
+          ]
+        },
+        "dependencies": {
+          "summary": "Pinned Publishing House, WebOps and VideoOps factories plus newer Software Factory evidence-verifier commit 259aff26e3ca627873eec6b40a89d6942b039d7c (not public Software 0.1.0). Direct npm Codex 0.144.4 and Playwright 1.61.1; child locks determine inherited tools.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/sources.lock.json",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/package.json",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/scripts/setup.py"
+          ]
+        },
+        "demo": {
+          "summary": "Approved v0.1.0 coordinator demo: releases/download/v0.1.0/launch.mp4; 31.6s, 1920\u00d71080, 30fps; SHA 60102b8d687173399387df3cd4bb1f4e37446538ef7705cabc524e94dc28fa45. Owner presentation approval recorded in release notes; raw technical ledger still REVIEW_INCOMPLETE and no independent listening attestation. Underlying example campaign remains unapproved.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/releases/v0.1.0.md",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/demo/README.md",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/media/product-launch-demo/manifest.json"
+          ]
+        },
+        "setup": {
+          "summary": "macOS/Linux; Git, Python 3.10+, Node 26.12.1, npm, FFmpeg/ffprobe, Chromium OS libraries; Codex login/model allowance for live work. npm ci; setup; login; doctor; factory -- run examples/webops-launch.json; npm start. npm run demo; npm start gives read-only recorded replay without model calls. Floor 4384.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/README.md",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/AGENT-SETUP.md"
+          ]
+        },
+        "limitations": {
+          "summary": "No new software application creation, automatic campaign publication or deployment. Silent default; speech requires explicit separate authorization. Recorded campaign awaiting editorial/listening approval is distinct from approved coordinator presentation. Hashes prove identity, not truth/authorship.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/releases/v0.1.0.md",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/SECURITY.md",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/VIDEO.md"
+          ]
+        },
+        "relationships": {
+          "summary": "Coordinator of existing domain factories through exact-version handoffs. Software Factory remains standalone and supplies existing export verification only. Child pins may differ from independently public factory releases.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/sources.lock.json",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/launch.py",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/ARCHITECTURE.md"
+          ]
+        }
+      },
+      "relationships": [
+        {
+          "tool": "Publishing House Factory",
+          "classification": "direct runtime dependency",
+          "usage": "Pinned child factory produces its domain artifacts and evidence; coordinator validates handoff.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/launch.py",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "WebOps Factory",
+          "classification": "direct runtime dependency",
+          "usage": "Pinned child factory produces its domain artifacts and evidence; coordinator validates handoff.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/launch.py",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "VideoOps Factory",
+          "classification": "direct runtime dependency",
+          "usage": "Pinned child factory produces its domain artifacts and evidence; coordinator validates handoff.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/launch.py",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/sources.lock.json"
+          ]
+        },
+        {
+          "tool": "Software Factory",
+          "classification": "workflow or contract integration",
+          "usage": "Pinned portable verifier consumes existing export; application builder is not executed.",
+          "evidence": [
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/src/launch.py",
+            "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/sources.lock.json"
+          ]
+        }
+      ],
+      "source_dependencies": {
+        "schema": "kujo.product-launch.sources/v1",
+        "repositories": {
+          "publishing-house-factory": {
+            "url": "https://github.com/kujolang/publishing-house-factory.git",
+            "commit": "38e7900a16f8482d12ad6b8b6a15f538d7ee3099"
+          },
+          "webops-factory": {
+            "url": "https://github.com/kujolang/webops-factory.git",
+            "commit": "a2aba2c63777f37bf47d64dc93748949658b977b"
+          },
+          "videoops-factory": {
+            "url": "https://github.com/kujolang/videoops-factory.git",
+            "commit": "dcf2dc4fa7311f59ba3dd16f58a227439a155979"
+          },
+          "software-factory": {
+            "url": "https://github.com/kujolang/software-factory.git",
+            "commit": "259aff26e3ca627873eec6b40a89d6942b039d7c"
+          }
+        }
+      },
+      "npm_dependencies": {
+        "@openai/codex": "0.144.4",
+        "playwright": "1.61.1"
+      },
+      "npm_overrides": {},
+      "source_inventory": [
+        {
+          "path": ".github/workflows/onboarding.yml",
+          "sha256": "e77efb30afe145ee639a03b17f69ae696bd476ac3e383c650a81b4bdf155c67b"
+        },
+        {
+          "path": ".github/workflows/verify.yml",
+          "sha256": "01104ec7a59b7cb3763756637c064690378d8210b64be8bed2695c8d9b4d2d2d"
+        },
+        {
+          "path": "AGENTS.md",
+          "sha256": "4e82a2a245df75ab389c61e5ba4fe8c68977a2cdf9ad973d075b9bdeae10ae88"
+        },
+        {
+          "path": "README.md",
+          "sha256": "390cea640dcd2a06192c1344d8668e3940653375c928f99d851298dc5bc87533"
+        },
+        {
+          "path": "SECURITY.md",
+          "sha256": "e03e8dae95d2458e43c4b1d1e43269ce4a8f2aa6673becde10b8c1878b49e8d5"
+        },
+        {
+          "path": "docs/AGENT-SETUP.md",
+          "sha256": "35791f047c8cdc7f1f38a4c30ef2f008288447a7be6961967855333af58c2e62"
+        },
+        {
+          "path": "docs/ARCHITECTURE.md",
+          "sha256": "662df5520104e939db1ded3165d837ac9fb70c077dda5400183edc29cde36326"
+        },
+        {
+          "path": "docs/VERIFICATION.md",
+          "sha256": "4161bcbd3487481e8f57754d0df192e25235531674239398a01cf601b12322ab"
+        },
+        {
+          "path": "docs/VIDEO.md",
+          "sha256": "b9d3770c8f562ee41f5e2f16139fbd108ac6a722695bdd6cef13206ef53fd347"
+        },
+        {
+          "path": "docs/demo/README.md",
+          "sha256": "5a86fee6ef2d5bd85ae8aaff553a32569b49b78dd8f3626df3656579fc6086f6"
+        },
+        {
+          "path": "docs/media/product-launch-demo/evidence/music-source-licenses.md",
+          "sha256": "2e7435f34cfdb6d923373742b7d12ff59fd5ec610e3758b182efb0ce4f35a985"
+        },
+        {
+          "path": "docs/media/product-launch-demo/evidence/music-source-log.md",
+          "sha256": "cb242f5f28876be7e0117c70daaa4ef066a63c9e39a17a4e9a0ab5a2185903e1"
+        },
+        {
+          "path": "docs/releases/v0.1.0.md",
+          "sha256": "a9fd218d0bafae7e128d6307a04b0ef374c19652bc8c55fe9e142e034624f115"
+        },
+        {
+          "path": "examples/webops-evidence/evidence/after/lens/lens-report.md",
+          "sha256": "aaa9ae92a440ae274ad54ee8b3effe16d395d8206e6133533c5cf6a46d661c59"
+        },
+        {
+          "path": "examples/webops-evidence/evidence/after/siteprobe/report.md",
+          "sha256": "4f8bf6da3018c3749e1ba86c5776b5cea11e51ae5d6b26d6257236a4b6a346ab"
+        },
+        {
+          "path": "examples/webops-evidence/evidence/before/lens/lens-report.md",
+          "sha256": "d70d54052e9c056dfdf72d4ed38ef1f6d32edf68b8d5f47becf1079e388f0a68"
+        },
+        {
+          "path": "examples/webops-evidence/evidence/before/siteprobe/report.md",
+          "sha256": "8220aeed8d109d2881962008b2185ac007a7265c3d26da9d7e3c3c2df55c08a8"
+        },
+        {
+          "path": "examples/webops-evidence/package.json",
+          "sha256": "1e4676ba50bcab12753eb8b9ae7b4270ebec7948504e29b958afa779587cb2c3"
+        },
+        {
+          "path": "package-lock.json",
+          "sha256": "60543300b5011c451a21b260cf8ff1b4b08804488b9b343660f436f2b29e0fbd"
+        },
+        {
+          "path": "package.json",
+          "sha256": "3216bb92d8991e45ef8f5bc65dd0577239a17940ca7c3287017873f03df2176f"
+        },
+        {
+          "path": "scripts/check-readme-video.mjs",
+          "sha256": "f78e2d7c1edf7baac202c6f8924f64ea8d3f74e3d0af07f23e043694e9362f13"
+        },
+        {
+          "path": "scripts/check_docs.py",
+          "sha256": "461b5a56f51beda41c9a52c28f214c75cf361e246a9d4ce303997b2593c0aeef"
+        },
+        {
+          "path": "scripts/child.py",
+          "sha256": "f1b0b6069ee79d5cdb89d134c0bee6cadf3fa96250f009c1712f115e7ca110bf"
+        },
+        {
+          "path": "scripts/login.mjs",
+          "sha256": "80bfd718d4de631639b8dcacd62cfc5b839085add97f595b66d111aff644f12d"
+        },
+        {
+          "path": "scripts/setup.py",
+          "sha256": "19892524502f2b458f470f23622fd6d1f34c3bb11e8b0d3999b47185e96dc3ed"
+        },
+        {
+          "path": "scripts/test-onboarding-browser.mjs",
+          "sha256": "45381f9e4d00d5b69788b9f6ec20383976d1901672f2427fc9fafc3292f8d6a9"
+        },
+        {
+          "path": "scripts/test-onboarding.py",
+          "sha256": "3a791e1ed3c970293a6b6da4b61b4f9dfa041498c425cdb7d940ba25f417f481"
+        },
+        {
+          "path": "scripts/video-media.mjs",
+          "sha256": "5c97b2aec0f41dbff7c47c30f515baf4f5759349009173330d8da1a0fecb5033"
+        },
+        {
+          "path": "scripts/video-review.mjs",
+          "sha256": "186d5a5afc8e2ab9ef6721fd6254b3d3403a6dc8051637775b3af85f0757b096"
+        },
+        {
+          "path": "scripts/video-static-template.mjs",
+          "sha256": "9c7f89407fafb68ff5384778e8d7dfadb98899143613cf0aca9c48a51025da44"
+        },
+        {
+          "path": "sources.lock.json",
+          "sha256": "b80899b7f6a8a918a87f2ee515434853fe683a62c64495f5e7d80931a2ffabdc"
+        },
+        {
+          "path": "src/core.py",
+          "sha256": "f527bd5ca7b7dc0abd51fcd3a261d8c29ac00df69d30574e90817d3be45a981d"
+        },
+        {
+          "path": "src/launch.py",
+          "sha256": "567d077ade98ceda845b0a35177a9ca7a908634a4bc809c48f455a0adaedce62"
+        },
+        {
+          "path": "src/settings.mjs",
+          "sha256": "e0e78266c7fc310a54c64538d7921bdb6ea2bd7b9af31d616725f85840f802a8"
+        },
+        {
+          "path": "src/video.mjs",
+          "sha256": "9688815901b59361d2ce9d41d75b5789b4096b470971c19c8a484793903e6581"
+        },
+        {
+          "path": "tests/test_http.py",
+          "sha256": "602d406160a8d2fbece2954d2a5621afaebfaa168fd7f0863186ef9a89151a32"
+        },
+        {
+          "path": "tests/test_integrity.py",
+          "sha256": "5c9b49b09aa83769a57d41aa0e09e9aeb02fd739eb32749199c7d70d4aadbcb3"
+        },
+        {
+          "path": "tests/video.test.mjs",
+          "sha256": "f6c68154fa6b0d5ac2c9e864c23fc03b9ac4759f8b632b024b9ec3ad25c10e30"
+        }
+      ],
+      "media": {
+        "video_url": "https://github.com/kujolang/product-launch-factory/releases/download/v0.1.0/launch.mp4",
+        "video_path": "docs/media/product-launch-demo/launch.mp4",
+        "image_path": "docs/factory-floor.png",
+        "label": "Approved recorded coordinator demonstration; campaign remains unapproved"
+      },
+      "installation_observation": {
+        "tested_commit": "5f5c697f9734b2c7ccb347993c19492ba4956325",
+        "pre_login_seconds": 67.073,
+        "total_seconds": 69.625,
+        "tests": 23,
+        "platform": "Fresh GitHub-hosted Ubuntu 24.04",
+        "empty_application_caches": true,
+        "preprovisioned": [
+          "Git",
+          "Node 26.12.1",
+          "Python 3.12"
+        ],
+        "excluded": [
+          "account sign-in",
+          "live model generation"
+        ],
+        "ci_url": "https://github.com/kujolang/product-launch-factory/actions/runs/43479881789",
+        "evidence": "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/onboarding/receipt.json",
+        "scope": "Observed retained pre-release commit; not a universal installation guarantee or fresh live qualification of release HEAD."
+      }
+    }
+  ],
+  "research_verification": "research-verification.json"
+}

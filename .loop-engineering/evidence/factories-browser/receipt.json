@@ -1,0 +1,295 @@
+{
+  "base": "http://127.0.0.1:4178",
+  "started": "2026-11-13T19:18:37.351Z",
+  "pages": [
+    {
+      "route": "/ecosystem/factories/",
+      "width": 1440,
+      "images": 6,
+      "status": 200
+    },
+    {
+      "route": "/ecosystem/software-factory/",
+      "width": 1440,
+      "images": 2,
+      "status": 200
+    },
+    {
+      "route": "/ecosystem/videoops-factory/",
+      "width": 1440,
+      "images": 2,
+      "status": 200
+    },
+    {
+      "route": "/ecosystem/publishing-house-factory/",
+      "width": 1440,
+      "images": 2,
+      "status": 200
+    },
+    {
+      "route": "/ecosystem/webops-factory/",
+      "width": 1440,
+      "images": 2,
+      "status": 200
+    },
+    {
+      "route": "/ecosystem/product-launch-factory/",
+      "width": 1440,
+      "images": 2,
+      "status": 200
+    },
+    {
+      "route": "/ecosystem/factories/",
+      "width": 390,
+      "images": 6,
+      "status": 200
+    },
+    {
+      "route": "/ecosystem/software-factory/",
+      "width": 390,
+      "images": 2,
+      "status": 200
+    },
+    {
+      "route": "/ecosystem/videoops-factory/",
+      "width": 390,
+      "images": 2,
+      "status": 200
+    },
+    {
+      "route": "/ecosystem/publishing-house-factory/",
+      "width": 390,
+      "images": 2,
+      "status": 200
+    },
+    {
+      "route": "/ecosystem/webops-factory/",
+      "width": 390,
+      "images": 2,
+      "status": 200
+    },
+    {
+      "route": "/ecosystem/product-launch-factory/",
+      "width": 390,
+      "images": 2,
+      "status": 200
+    }
+  ],
+  "links": [
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/factories/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/language/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/workflows/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/skills/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/software-factory/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/videoops-factory/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/publishing-house-factory/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/webops-factory/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/product-launch-factory/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/dispatch/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/workcell/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/storydesk/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/dossier/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/bluepencil/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/galleypack/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/versionseal/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/workflows/publishing-house-operator/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/siteprobe/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:4178/ecosystem/lens/",
+      "status": 200
+    }
+  ],
+  "media": [
+    {
+      "route": "/ecosystem/software-factory/",
+      "src": "http://127.0.0.1:4178/media/factories/software-factory.mp4",
+      "duration": 49.16,
+      "width": 1920,
+      "height": 1080,
+      "currentTime": 0.328418,
+      "downloadStatus": 200,
+      "contentType": "video/mp4",
+      "verification": "Metadata decoded, muted playback advanced and public download HEAD succeeded; this is not full listening or creative approval."
+    },
+    {
+      "route": "/ecosystem/videoops-factory/",
+      "src": "http://127.0.0.1:4178/media/factories/videoops-factory.mp4",
+      "duration": 40,
+      "width": 1280,
+      "height": 720,
+      "currentTime": 0.195708,
+      "downloadStatus": 200,
+      "contentType": "video/mp4",
+      "verification": "Metadata decoded, muted playback advanced and public download HEAD succeeded; this is not full listening or creative approval."
+    },
+    {
+      "route": "/ecosystem/publishing-house-factory/",
+      "src": "http://127.0.0.1:4178/media/factories/publishing-house-factory.mp4",
+      "duration": 53.205,
+      "width": 1280,
+      "height": 720,
+      "currentTime": 0.192827,
+      "downloadStatus": 200,
+      "contentType": "video/mp4",
+      "verification": "Metadata decoded, muted playback advanced and public download HEAD succeeded; this is not full listening or creative approval."
+    },
+    {
+      "route": "/ecosystem/webops-factory/",
+      "src": "http://127.0.0.1:4178/media/factories/webops-factory.mp4",
+      "duration": 53.376,
+      "width": 1280,
+      "height": 720,
+      "currentTime": 0.194371,
+      "downloadStatus": 200,
+      "contentType": "video/mp4",
+      "verification": "Metadata decoded, muted playback advanced and public download HEAD succeeded; this is not full listening or creative approval."
+    },
+    {
+      "route": "/ecosystem/product-launch-factory/",
+      "src": "http://127.0.0.1:4178/media/factories/product-launch-factory.mp4",
+      "duration": 31.6,
+      "width": 1920,
+      "height": 1080,
+      "currentTime": 0.157797,
+      "downloadStatus": 200,
+      "contentType": "video/mp4",
+      "verification": "Metadata decoded, muted playback advanced and public download HEAD succeeded; this is not full listening or creative approval."
+    }
+  ],
+  "accessibility": [
+    {
+      "route": "/ecosystem/factories/",
+      "width": 1440,
+      "violations": [],
+      "passes": 26
+    },
+    {
+      "route": "/ecosystem/software-factory/",
+      "width": 1440,
+      "violations": [],
+      "passes": 24
+    },
+    {
+      "route": "/ecosystem/videoops-factory/",
+      "width": 1440,
+      "violations": [],
+      "passes": 25
+    },
+    {
+      "route": "/ecosystem/publishing-house-factory/",
+      "width": 1440,
+      "violations": [],
+      "passes": 25
+    },
+    {
+      "route": "/ecosystem/webops-factory/",
+      "width": 1440,
+      "violations": [],
+      "passes": 25
+    },
+    {
+      "route": "/ecosystem/product-launch-factory/",
+      "width": 1440,
+      "violations": [],
+      "passes": 25
+    },
+    {
+      "route": "/ecosystem/factories/",
+      "width": 390,
+      "violations": [],
+      "passes": 27
+    },
+    {
+      "route": "/ecosystem/software-factory/",
+      "width": 390,
+      "violations": [],
+      "passes": 23
+    },
+    {
+      "route": "/ecosystem/videoops-factory/",
+      "width": 390,
+      "violations": [],
+      "passes": 24
+    },
+    {
+      "route": "/ecosystem/publishing-house-factory/",
+      "width": 390,
+      "violations": [],
+      "passes": 24
+    },
+    {
+      "route": "/ecosystem/webops-factory/",
+      "width": 390,
+      "violations": [],
+      "passes": 24
+    },
+    {
+      "route": "/ecosystem/product-launch-factory/",
+      "width": 390,
+      "violations": [],
+      "passes": 24
+    }
+  ],
+  "consoleErrors": [],
+  "result": "passed",
+  "accessibilityMode": "axe WCAG A/AA",
+  "finished": "2026-11-13T19:19:03.076Z"
+}

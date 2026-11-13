@@ -37,3 +37,8 @@ Packaging is not publication or approval. GalleyPack preserves review references
 ## Learn more
 
 The repository documents the artifact and package contracts, lineage model, comparison commands, security controls, and full validation gate.
+
+
+## In a factory
+
+[Publishing House Factory](/ecosystem/publishing-house-factory/) uses GalleyPack to record draft bytes and freeze the review package. [Compare the factories](/ecosystem/factories/).

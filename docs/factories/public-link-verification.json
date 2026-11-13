@@ -1,0 +1,170 @@
+{
+  "method": "curl HEAD with redirects; 2026-11-13",
+  "results": [
+    {
+      "url": "https://github.com/kujolang/product-launch-factory",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/AGENT-SETUP.md",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/VERIFICATION.md",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/VIDEO.md",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/demo/README.md",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/media/product-launch-demo/evidence/output__narration-text.txt",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/product-launch-factory/releases/download/v0.1.0/launch.mp4",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/product-launch-factory/releases/tag/v0.1.0",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/product-launch-factory/tree/d61c7021b0469c45f909b8371205f0df3afbac8b",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/publishing-house-factory",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/AGENT-SETUP.md",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/DEMO.md",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/media/narration.txt",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/publishing-house-factory/tree/38e7900a16f8482d12ad6b8b6a15f538d7ee3099",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/software-factory",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/AGENT-SETUP.md",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/ENGINE.md",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/PROVENANCE.md",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/software-factory/releases/tag/0.1.0",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/software-factory/tree/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/videoops-factory",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/AGENT-SETUP.md",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/DEMO.md",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/videoops-factory/tree/dcf2dc4fa7311f59ba3dd16f58a227439a155979",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/webops-factory",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/AGENT-SETUP.md",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/media/manifest.json",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/media/narration.txt",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://github.com/kujolang/webops-factory/tree/a2aba2c63777f37bf47d64dc93748949658b977b",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kujolang/publishing-house-factory/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/media/publishing-house-factory-demo-mobile.mp4",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kujolang/software-factory/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/media/software-factory-demo.mp4",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kujolang/videoops-factory/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/media/videoops-factory-demo-mobile.mp4",
+      "http_status": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kujolang/webops-factory/a2aba2c63777f37bf47d64dc93748949658b977b/docs/media/webops-factory-demo-mobile.mp4",
+      "http_status": "200",
+      "exit_code": 0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "kujolang.ai.factory-research-check/v1",
+  "date": "2026-11-13",
+  "matrix": {"records": 5, "capabilityFieldsPerRecord": 13, "sourceEvidencePathsExist": true, "exactSourceCommits": true},
+  "productLaunchContractTests": {
+    "commit": "d61c7021b0469c45f909b8371205f0df3afbac8b",
+    "release": "v0.1.0",
+    "location": "isolated temporary research checkout",
+    "commands": ["python3 -m unittest discover -s tests -v", "node --test tests/video.test.mjs"],
+    "pythonPassed": 12,
+    "nodePassed": 11,
+    "failed": 0,
+    "nodeVersion": "v26.12.1",
+    "providerCalls": 0,
+    "scope": "Contract tests only; no setup, live child generation, fresh Ubuntu benchmark or perceptual review was repeated."
+  }
+}
