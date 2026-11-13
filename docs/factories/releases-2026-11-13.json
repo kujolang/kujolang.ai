@@ -1,0 +1,29 @@
+[
+  {
+    "repository": "videoops-factory",
+    "commit": "dcf2dc4fa7311f59ba3dd16f58a227439a155979",
+    "tag": "v0.1.0",
+    "url": "https://github.com/kujolang/videoops-factory/releases/tag/v0.1.0",
+    "published_at": "2026-11-13T20:16:42Z",
+    "ci_run": 43375559727,
+    "verification": "npm run verify: passed"
+  },
+  {
+    "repository": "publishing-house-factory",
+    "commit": "38e7900a16f8482d12ad6b8b6a15f538d7ee3099",
+    "tag": "v0.1.0",
+    "url": "https://github.com/kujolang/publishing-house-factory/releases/tag/v0.1.0",
+    "published_at": "2026-11-13T20:16:44Z",
+    "ci_run": 43427864036,
+    "verification": "npm run verify: passed"
+  },
+  {
+    "repository": "webops-factory",
+    "commit": "a2aba2c63777f37bf47d64dc93748949658b977b",
+    "tag": "v0.1.0",
+    "url": "https://github.com/kujolang/webops-factory/releases/tag/v0.1.0",
+    "published_at": "2026-11-13T20:16:46Z",
+    "ci_run": 43452363958,
+    "verification": "npm run verify: passed"
+  }
+]

@@ -7,14 +7,15 @@ social_image: "/assets/images/social/webops-factory.jpg"
 section: "Factories"
 template: factory
 order: 930
-install_command: "git clone https://github.com/kujolang/webops-factory.git\ncd webops-factory\ngit checkout a2aba2c63777f37bf47d64dc93748949658b977b"
+install_command: "git clone https://github.com/kujolang/webops-factory.git\ncd webops-factory"
 github_url: "https://github.com/kujolang/webops-factory"
 launch_story: "Site maintainers with a static export who want to inspect a patch before applying it themselves."
 scope_note: "Local software. Inspect the setup guide and review boundaries before authorizing live model calls."
 last_updated: "2026-11-13"
 seo_title: "WebOps Factory \u2014 Kujo Factories"
-release_status: "Source preview; no published GitHub Release"
-version: "Source preview"
+release_status: "Published v0.1.0"
+version: "v0.1.0"
+latest_release_url: "https://github.com/kujolang/webops-factory/releases/tag/v0.1.0"
 ---
 
 ## What you give it
@@ -46,7 +47,7 @@ The static audit examines every imported HTML page; SiteProbe adds bounded crawl
 
 macOS or Linux, Git, Python 3.10+, Node 26.12.1 or later 26.x and a Codex account for live workers. Setup installs pinned sources, Kujo and Chromium. Linux may need Playwright system libraries; use the setup guide. Native Windows is unsupported; use a compatible WSL environment.
 
-Read the [authoritative setup guide](https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/AGENT-SETUP.md). The hero command checks out the revision described here. Install its dependencies and pinned tools:
+Read the [authoritative setup guide](https://github.com/kujolang/webops-factory/blob/a2aba2c63777f37bf47d64dc93748949658b977b/docs/AGENT-SETUP.md). The clone command gets the current default branch. Follow the setup guide in your checkout for current requirements. Install the dependencies and pinned tools:
 
 ```sh
 npm ci
@@ -74,7 +75,7 @@ Use `--fixture` instead of `--live` for fixed proposals with real checks. Verify
 
 ## Release status and limitations
 
-Source preview: no published GitHub Release was present when checked on 2026-11-13. The package version 0.1.0 is not a release record. This page uses commit [`a2aba2c63777`](https://github.com/kujolang/webops-factory/tree/a2aba2c63777f37bf47d64dc93748949658b977b).
+Published GitHub release [v0.1.0](https://github.com/kujolang/webops-factory/releases/tag/v0.1.0). This page uses commit [`a2aba2c63777`](https://github.com/kujolang/webops-factory/tree/a2aba2c63777f37bf47d64dc93748949658b977b).
 
 Only missing or empty titles and descriptions, missing image alt attributes and broken internal file links are repairable. This is not general website repair or full accessibility compliance. Fragment-only links, external link health, rankings and analytics are outside scope. No automatic retry/resume, original-site mutation or deployment is implemented.
 

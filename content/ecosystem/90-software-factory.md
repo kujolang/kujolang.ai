@@ -7,7 +7,7 @@ social_image: "/assets/images/social/software-factory.jpg"
 section: "Factories"
 template: factory
 order: 900
-install_command: "git clone https://github.com/kujolang/software-factory.git\ncd software-factory\ngit checkout 0.1.0"
+install_command: "git clone https://github.com/kujolang/software-factory.git\ncd software-factory"
 github_url: "https://github.com/kujolang/software-factory"
 launch_story: "Developers who can define a bounded Node API or static browser application and review its contract."
 scope_note: "Local software. Inspect the setup guide and review boundaries before authorizing live model calls."
@@ -47,7 +47,7 @@ Workers cannot run commands. The controller admits scoped files and keeps creden
 
 Git, Node 26.12.1 or later 26.x, a Codex account, and a local rootless Docker engine with seccomp. Linux/WSL2 is required for Windows users; native Windows is unsupported. Follow the [engine guide](https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/ENGINE.md) to configure the required rootless engine before building its image. Live isolation qualification was recorded on macOS with Colima; native Linux, ARM and WSL2 live-engine paths remain unqualified. Setup installs pinned Kujo and Codex CLIs.
 
-Read the [authoritative setup guide](https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/AGENT-SETUP.md). The hero command checks out the revision described here. Install its dependencies and pinned tools:
+Read the [authoritative setup guide](https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/AGENT-SETUP.md). The clone command gets the current default branch. Follow the setup guide in your checkout for current requirements. Install the dependencies and pinned tools:
 
 ```sh
 npm ci

@@ -7,14 +7,15 @@ social_image: "/assets/images/social/videoops-factory.jpg"
 section: "Factories"
 template: factory
 order: 910
-install_command: "git clone https://github.com/kujolang/videoops-factory.git\ncd videoops-factory\ngit checkout dcf2dc4fa7311f59ba3dd16f58a227439a155979"
+install_command: "git clone https://github.com/kujolang/videoops-factory.git\ncd videoops-factory"
 github_url: "https://github.com/kujolang/videoops-factory"
 launch_story: "Developers and creative operators making bounded, screenshot-led launch clips."
 scope_note: "Local software. Inspect the setup guide and review boundaries before authorizing live model calls."
 last_updated: "2026-11-13"
 seo_title: "VideoOps Factory \u2014 Kujo Factories"
-release_status: "Source preview; no published GitHub Release"
-version: "Source preview"
+release_status: "Published v0.1.0"
+version: "v0.1.0"
+latest_release_url: "https://github.com/kujolang/videoops-factory/releases/tag/v0.1.0"
 ---
 
 ## What you give it
@@ -47,7 +48,7 @@ Sequential tool-free model proposals cannot edit the renderer or execute brief i
 
 macOS or Linux, Git, Node 26.12.1 or later 26.x, Python 3.10+, FFmpeg/ffprobe 6+ with libx264/AAC, and a Codex account. Rendering downloads a browser when needed. Minimal Ubuntu also needs libatomic1. Native Windows is unsupported.
 
-Read the [authoritative setup guide](https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/AGENT-SETUP.md). The hero command checks out the revision described here. Install its dependencies and pinned tools:
+Read the [authoritative setup guide](https://github.com/kujolang/videoops-factory/blob/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/AGENT-SETUP.md). The clone command gets the current default branch. Follow the setup guide in your checkout for current requirements. Install the dependencies and pinned tools:
 
 ```sh
 npm ci
@@ -71,7 +72,7 @@ npm run factory -- run examples/launch-brief.json
 
 ## Release status and limitations
 
-Source preview: no published GitHub Release was present when checked on 2026-11-13. The package version 0.1.0 is not a release record. This page uses commit [`dcf2dc4fa731`](https://github.com/kujolang/videoops-factory/tree/dcf2dc4fa7311f59ba3dd16f58a227439a155979).
+Published GitHub release [v0.1.0](https://github.com/kujolang/videoops-factory/releases/tag/v0.1.0). This page uses commit [`dcf2dc4fa731`](https://github.com/kujolang/videoops-factory/tree/dcf2dc4fa7311f59ba3dd16f58a227439a155979).
 
 The first contract supports monochrome screenshot-led clips, three to five scenes, a Kujo bumper, 30 fps and 3–60-second silent output. Footage timelines, other creative formats and automatic narrated campaigns require an explicit extension. The separately authorized narrated walkthrough does not make the silent runner a speech service.
 

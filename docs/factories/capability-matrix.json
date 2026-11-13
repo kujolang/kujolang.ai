@@ -568,9 +568,9 @@
       "default_branch": "main",
       "default_commit": "dcf2dc4fa7311f59ba3dd16f58a227439a155979",
       "source_commit": "dcf2dc4fa7311f59ba3dd16f58a227439a155979",
-      "release_tag": null,
-      "release_url": null,
-      "release_status": "Default-branch source preview; no published GitHub release found",
+      "release_tag": "v0.1.0",
+      "release_url": "https://github.com/kujolang/videoops-factory/releases/tag/v0.1.0",
+      "release_status": "Published GitHub release",
       "package_version": "0.1.0",
       "fields": {
         "audience": {
@@ -914,9 +914,9 @@
       "default_branch": "main",
       "default_commit": "38e7900a16f8482d12ad6b8b6a15f538d7ee3099",
       "source_commit": "38e7900a16f8482d12ad6b8b6a15f538d7ee3099",
-      "release_tag": null,
-      "release_url": null,
-      "release_status": "Default-branch source preview; no published GitHub release found",
+      "release_tag": "v0.1.0",
+      "release_url": "https://github.com/kujolang/publishing-house-factory/releases/tag/v0.1.0",
+      "release_status": "Published GitHub release",
       "package_version": "0.1.0",
       "fields": {
         "audience": {
@@ -1302,9 +1302,9 @@
       "default_branch": "main",
       "default_commit": "a2aba2c63777f37bf47d64dc93748949658b977b",
       "source_commit": "a2aba2c63777f37bf47d64dc93748949658b977b",
-      "release_tag": null,
-      "release_url": null,
-      "release_status": "Default-branch source preview; no published GitHub release found",
+      "release_tag": "v0.1.0",
+      "release_url": "https://github.com/kujolang/webops-factory/releases/tag/v0.1.0",
+      "release_status": "Published GitHub release",
       "package_version": "0.1.0",
       "fields": {
         "audience": {

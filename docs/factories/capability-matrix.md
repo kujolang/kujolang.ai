@@ -5,9 +5,9 @@ Research date: 2026-11-13. Internal editorial evidence, not a claim that every f
 | Factory | Source commit | GitHub release | Public status |
 | --- | --- | --- | --- |
 | Software Factory | `cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24` | 0.1.0 | Published GitHub release |
-| VideoOps Factory | `dcf2dc4fa7311f59ba3dd16f58a227439a155979` | None found | Default-branch source preview; no published GitHub release found |
-| Publishing House Factory | `38e7900a16f8482d12ad6b8b6a15f538d7ee3099` | None found | Default-branch source preview; no published GitHub release found |
-| WebOps Factory | `a2aba2c63777f37bf47d64dc93748949658b977b` | None found | Default-branch source preview; no published GitHub release found |
+| VideoOps Factory | `dcf2dc4fa7311f59ba3dd16f58a227439a155979` | v0.1.0 | Published GitHub release |
+| Publishing House Factory | `38e7900a16f8482d12ad6b8b6a15f538d7ee3099` | v0.1.0 | Published GitHub release |
+| WebOps Factory | `a2aba2c63777f37bf47d64dc93748949658b977b` | v0.1.0 | Published GitHub release |
 | Product Launch Factory | `d61c7021b0469c45f909b8371205f0df3afbac8b` | v0.1.0 | Published GitHub release |
 
 ## Software Factory
@@ -313,7 +313,7 @@ Repository: [product-launch-factory](https://github.com/kujolang/product-launch-
 
 - Software Factory public `0.1.0` and remote main matched at research time. Local feature-branch integration changes were deliberately excluded. Spec, Eval, ShipCheck, RunLedger, Casefile and broader catalogs must not be described as shipped by this release.
 - Product Launch pins a later Software Factory verifier source than the standalone published release. That source boundary is deliberate and must remain visible in research.
-- VideoOps, Publishing House and WebOps package manifests say 0.1.0, but the GitHub releases API returned no releases. Public pages must say source preview, not latest release.
+- VideoOps, Publishing House and WebOps initially had no GitHub releases. The owner subsequently authorized v0.1.0 releases at the same inspected source commits. Local verification and exact-commit CI passed; publication receipts are in [releases-2026-11-13.json](releases-2026-11-13.json).
 - Product Launch coordinator presentation approval is explicitly recorded by the owner in release notes. The retained video technical manifest still says REVIEW_INCOMPLETE; owner acceptance does not create a listening attestation or campaign approval.
 - Product Launch onboarding receipt measures commit `5f5c697f9734b2c7ccb347993c19492ba4956325`: 67.073 seconds before login and 69.625 seconds total, 23 tests, empty application caches on Ubuntu 24.04. Git, Node and Python were provisioned first. Sign-in and live model calls were excluded. This is retained qualification evidence, not a new benchmark of release HEAD.
 - A checked-in CI workflow documents intended checks. It does not itself prove a successful run. Source-reported qualification evidence remains distinct from website verification.

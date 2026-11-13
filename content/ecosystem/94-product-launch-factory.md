@@ -7,7 +7,7 @@ social_image: "/assets/images/social/product-launch-factory.jpg"
 section: "Factories"
 template: factory
 order: 940
-install_command: "git clone https://github.com/kujolang/product-launch-factory.git\ncd product-launch-factory\ngit checkout v0.1.0"
+install_command: "git clone https://github.com/kujolang/product-launch-factory.git\ncd product-launch-factory"
 github_url: "https://github.com/kujolang/product-launch-factory"
 launch_story: "Product teams coordinating editorial, static-site and video candidates for a final human review."
 scope_note: "Local software. Inspect the setup guide and review boundaries before authorizing live model calls."
@@ -48,7 +48,7 @@ Each handoff binds exact input and output bytes. Resume reuses completed handoff
 
 macOS or Linux, Git, Python 3.10+, Node 26.12.1, npm, FFmpeg and Chromium operating-system libraries. A Codex login with model access is required for live work. The supplied live brief produces a silent video. Narration needs separate [configuration and explicit authorization](https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/VIDEO.md), or an existing recording. Source text goes to the configured model account.
 
-Read the [authoritative setup guide](https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/AGENT-SETUP.md). The hero command checks out the revision described here. Install its dependencies and pinned tools:
+Read the [authoritative setup guide](https://github.com/kujolang/product-launch-factory/blob/d61c7021b0469c45f909b8371205f0df3afbac8b/docs/AGENT-SETUP.md). The clone command gets the current default branch. Follow the setup guide in your checkout for current requirements. Install the dependencies and pinned tools:
 
 ```sh
 npm ci

@@ -68,16 +68,15 @@ test('related ecosystem references name existing canonical pages', () => {
   }
 });
 
-test('release claims distinguish GitHub releases from source previews', () => {
+test('release claims match verified publication records and clone commands follow main', () => {
+  const matrix = JSON.parse(read('docs/factories/capability-matrix.json'));
   for (const {source} of factories) {
     const slug = field(source, 'custom_url');
-    if (['videoops-factory', 'publishing-house-factory', 'webops-factory'].includes(slug)) {
-      assert.ok(!field(source, 'latest_release_url'), `${slug}: no invented GitHub release`);
-      assert.match(source, /no (?:published )?GitHub release|source preview|unreleased/i);
-    } else {
-      const tag = slug === 'software-factory' ? '0.1.0' : 'v0.1.0';
-      assert.ok(source.includes(`releases/tag/${tag}`), `${slug}: verified release link`);
-    }
+    const record = matrix.factories.find(factory => factory.id === slug);
+    assert.equal(field(source, 'latest_release_url'), record.release_url);
+    assert.equal(field(source, 'release_status'), `Published ${record.release_tag}`);
+    assert.doesNotMatch(field(source, 'install_command'), /checkout|--branch/);
+    assert.doesNotMatch(source, /no published GitHub Release|Source preview/i);
   }
 });
 

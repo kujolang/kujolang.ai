@@ -7,14 +7,15 @@ social_image: "/assets/images/social/publishing-house-factory.jpg"
 section: "Factories"
 template: factory
 order: 920
-install_command: "git clone https://github.com/kujolang/publishing-house-factory.git\ncd publishing-house-factory\ngit checkout 38e7900a16f8482d12ad6b8b6a15f538d7ee3099"
+install_command: "git clone https://github.com/kujolang/publishing-house-factory.git\ncd publishing-house-factory"
 github_url: "https://github.com/kujolang/publishing-house-factory"
 launch_story: "Technical writers and product teams preparing a sourced campaign for human editorial review."
 scope_note: "Local software. Inspect the setup guide and review boundaries before authorizing live model calls."
 last_updated: "2026-11-13"
 seo_title: "Publishing House Factory \u2014 Kujo Factories"
-release_status: "Source preview; no published GitHub Release"
-version: "Source preview"
+release_status: "Published v0.1.0"
+version: "v0.1.0"
+latest_release_url: "https://github.com/kujolang/publishing-house-factory/releases/tag/v0.1.0"
 ---
 
 ## What you give it
@@ -47,7 +48,7 @@ Model proposals are sequential and tool-free. An excerpt match proves that text 
 
 macOS or Linux, including compatible WSL, Git, Python 3.10+, Node 26.12.1 or later 26.x and a Codex account. Setup downloads pinned sources and the Kujo runtime. No Docker, FFmpeg, database or sibling checkout is needed. Minimal Linux may need libatomic1.
 
-Read the [authoritative setup guide](https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/AGENT-SETUP.md). The hero command checks out the revision described here. Install its dependencies and pinned tools:
+Read the [authoritative setup guide](https://github.com/kujolang/publishing-house-factory/blob/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/AGENT-SETUP.md). The clone command gets the current default branch. Follow the setup guide in your checkout for current requirements. Install the dependencies and pinned tools:
 
 ```sh
 npm ci
@@ -73,7 +74,7 @@ Use `npm run factory -- status`, `npm run factory -- resume RUN_ID` and `npm run
 
 ## Release status and limitations
 
-Source preview: no published GitHub Release was present when checked on 2026-11-13. The package version 0.1.0 is not a release record. This page uses commit [`38e7900a16f8`](https://github.com/kujolang/publishing-house-factory/tree/38e7900a16f8482d12ad6b8b6a15f538d7ee3099).
+Published GitHub release [v0.1.0](https://github.com/kujolang/publishing-house-factory/releases/tag/v0.1.0). This page uses commit [`38e7900a16f8`](https://github.com/kujolang/publishing-house-factory/tree/38e7900a16f8482d12ad6b8b6a15f538d7ee3099).
 
 The contract is text-only and supports the listed campaign formats. New destinations or formats require an extension. Resume preserves completed work after a blocked cause is fixed; changed inputs or exhausted review revisions require a fresh run. Publication-phase adapter requests are rejected.
 
