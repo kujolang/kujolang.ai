@@ -6,7 +6,9 @@
     "local": "public/media/factories/software-factory.mp4",
     "sha256": "4046393dc1e7c836ee8b944a6006ab81c8ea28aeae1c9a8a387581104ff0288e",
     "bytes": 2120047,
-    "variant": "original"
+    "variant": "original",
+    "upstream_verified_sha256": "4046393dc1e7c836ee8b944a6006ab81c8ea28aeae1c9a8a387581104ff0288e",
+    "verified_at": "2026-11-13"
   },
   {
     "factory": "videoops-factory",
@@ -15,7 +17,9 @@
     "local": "public/media/factories/videoops-factory.mp4",
     "sha256": "203b65355d6b54f0645cf38f4804b1ed27ae00b6f97e75a2ac573512a1a01445",
     "bytes": 1939534,
-    "variant": "canonical mobile version"
+    "variant": "canonical mobile version",
+    "upstream_verified_sha256": "203b65355d6b54f0645cf38f4804b1ed27ae00b6f97e75a2ac573512a1a01445",
+    "verified_at": "2026-11-13"
   },
   {
     "factory": "publishing-house-factory",
@@ -24,7 +28,9 @@
     "local": "public/media/factories/publishing-house-factory.mp4",
     "sha256": "5fd6291341c2262f67716878d03fc7a5f14070422c7df484465de5e17fb0d5e7",
     "bytes": 2310191,
-    "variant": "canonical mobile version"
+    "variant": "canonical mobile version",
+    "upstream_verified_sha256": "5fd6291341c2262f67716878d03fc7a5f14070422c7df484465de5e17fb0d5e7",
+    "verified_at": "2026-11-13"
   },
   {
     "factory": "webops-factory",
@@ -33,7 +39,9 @@
     "local": "public/media/factories/webops-factory.mp4",
     "sha256": "0d998f5065797da2bfa1d7a9e056db8c0eb4e0da11562f9d4f42ec7d4ea7c950",
     "bytes": 1391610,
-    "variant": "canonical mobile version"
+    "variant": "canonical mobile version",
+    "upstream_verified_sha256": "0d998f5065797da2bfa1d7a9e056db8c0eb4e0da11562f9d4f42ec7d4ea7c950",
+    "verified_at": "2026-11-13"
   },
   {
     "factory": "product-launch-factory",
@@ -42,6 +50,8 @@
     "local": "public/media/factories/product-launch-factory.mp4",
     "sha256": "60102b8d687173399387df3cd4bb1f4e37446538ef7705cabc524e94dc28fa45",
     "bytes": 1478507,
-    "variant": "release asset"
+    "variant": "release asset",
+    "upstream_verified_sha256": "60102b8d687173399387df3cd4bb1f4e37446538ef7705cabc524e94dc28fa45",
+    "verified_at": "2026-11-13"
   }
 ]

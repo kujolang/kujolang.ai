@@ -2092,3 +2092,5 @@ pre, pre code, .sample-code pre, .sample-code code {
 .factories-category .page-hero__copy, .factory-page .tool-hero__copy { background: color-mix(in srgb, var(--sk-surface-page) 96%, transparent); padding: 1.5rem; }
 .factories-category .sk-card img { width: 100%; height: auto; }
 .factory-page .tool-hero__copy .sk-hero__actions { flex-wrap: wrap; }
+.factory-page > nav[aria-label="Breadcrumb"] { padding-block-start: calc(var(--site-header-block) + 3rem); padding-block-end: 1rem; }
+.factory-page .tool-hero { padding-block-start: var(--sk-space-12); }

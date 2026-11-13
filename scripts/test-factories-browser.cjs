@@ -26,6 +26,14 @@ const receipt = {base, started: new Date().toISOString(), pages: [], links: [], 
         assert.equal(response.status(), 200, route);
         assert.equal(await page.locator('main').count(), 1, `${route}: one main`);
         assert.equal(await page.locator('h1').count(), 1, `${route}: one h1`);
+        const breadcrumb = page.locator('main > nav[aria-label="Breadcrumb"]');
+        if (await breadcrumb.count()) {
+          const box = await breadcrumb.locator('a').first().boundingBox();
+          const header = await page.locator('.site-header').boundingBox();
+          assert(box.y >= header.y + header.height, `${route}: breadcrumb clears fixed navigation`);
+        }
+        const brokenAnchors = await page.locator('main a[href^="#"]').evaluateAll(links => links.filter(link => !document.getElementById(decodeURIComponent(link.hash.slice(1)))).map(link => link.hash));
+        assert.deepEqual(brokenAnchors, [], `${route}: section links resolve`);
         assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${route}: overflow at ${width}`);
         // Scroll through lazy images before checking dimensions and taking the full-page capture.
         await page.evaluate(async () => {

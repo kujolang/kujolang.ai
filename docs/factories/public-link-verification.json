@@ -147,7 +147,7 @@
       "exit_code": 0
     },
     {
-      "url": "https://raw.githubusercontent.com/kujolang/publishing-house-factory/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/media/publishing-house-factory-demo.mp4",
+      "url": "https://raw.githubusercontent.com/kujolang/publishing-house-factory/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/media/publishing-house-factory-demo-mobile.mp4",
       "http_status": "200",
       "exit_code": 0
     },
@@ -157,12 +157,12 @@
       "exit_code": 0
     },
     {
-      "url": "https://raw.githubusercontent.com/kujolang/videoops-factory/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/media/videoops-factory-demo.mp4",
+      "url": "https://raw.githubusercontent.com/kujolang/videoops-factory/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/media/videoops-factory-demo-mobile.mp4",
       "http_status": "200",
       "exit_code": 0
     },
     {
-      "url": "https://raw.githubusercontent.com/kujolang/webops-factory/a2aba2c63777f37bf47d64dc93748949658b977b/docs/media/webops-factory-demo.mp4",
+      "url": "https://raw.githubusercontent.com/kujolang/webops-factory/a2aba2c63777f37bf47d64dc93748949658b977b/docs/media/webops-factory-demo-mobile.mp4",
       "http_status": "200",
       "exit_code": 0
     }
