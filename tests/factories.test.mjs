@@ -48,6 +48,7 @@ test('factory image, demo and social references resolve to authored assets', () 
     assert.match(media, /<video\b[^>]*\bcontrols\b/);
     assert.match(media, /preload="none"/);
     assert.doesNotMatch(media, /autoplay/);
+    assert.doesNotMatch(media, /factory-recording|factory-transcript|byte-identical|Historical narrated|<img/);
     assert.match(media, /poster="[^"]+"/);
     const videos = [...media.matchAll(/(?:src|href)="([^"]+\.mp4(?:\?[^" ]*)?)"/g)].map(match => match[1]);
     assert.ok(videos.length >= 2, `${slug}: playable source and download fallback`);

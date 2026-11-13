@@ -35,7 +35,7 @@ A JSON mission such as `examples/studio.json`, pointing to a static export direc
 
 ## Factory Floor and demonstration
 
-Recorded live repair demonstration with separately produced narration. The actual floor shows retained proposals, screenshots and checks. Run npm run demo to import the recorded evidence; it is not a new mission.
+See specialist agents repair a static website copy, compare the changes and hand the candidate back for your review.
 
 FACTORY_MEDIA
 

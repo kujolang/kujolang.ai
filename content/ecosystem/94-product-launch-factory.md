@@ -36,7 +36,7 @@ An article, newsletter, three social posts, website candidate, video MP4, editab
 
 ## Factory Floor and demonstration
 
-Approved v0.1.0 coordinator demonstration: source evidence, Publishing House, WebOps, VideoOps and launch review. This is the coordinator film, not the older generated campaign clip. The floor screenshot is the recorded example; its underlying campaign remains awaiting human review.
+Follow source evidence through Publishing House, WebOps and VideoOps, then inspect the assembled launch package.
 
 FACTORY_MEDIA
 

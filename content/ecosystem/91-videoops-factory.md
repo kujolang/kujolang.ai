@@ -36,7 +36,7 @@ latest_release_url: "https://github.com/kujolang/videoops-factory/releases/tag/v
 
 ## Factory Floor and demonstration
 
-Recorded narrated walkthrough, technically checked but still a review candidate. The runner’s included examples are silent. The screenshot below is a frame from the retained recording, not a fresh execution.
+Follow a creative brief through asset checks, editing and video review. Inspect landscape and portrait outputs from one campaign.
 
 FACTORY_MEDIA
 

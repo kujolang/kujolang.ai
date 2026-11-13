@@ -35,7 +35,7 @@ Proposed `application/` files, an approved local `build/` only after release gat
 
 ## Factory Floor and demonstration
 
-Historical narrated issue-tracker recording. It predates software packs and does not qualify a fresh run or the current checkout. The retained frame shows that recorded Factory Floor.
+See a software team scope an application, build a candidate and review the result on the Factory Floor.
 
 FACTORY_MEDIA
 

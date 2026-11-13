@@ -36,7 +36,7 @@ An article, newsletter, three social posts and local landing-page preview, plus 
 
 ## Factory Floor and demonstration
 
-Recorded live editorial campaign and narrated walkthrough. The real Factory Floor screenshot shows retained campaign state; it does not grant publication approval.
+Watch sourced material become an article, newsletter, social posts and landing-page copy, with editorial review at each stage.
 
 FACTORY_MEDIA
 
