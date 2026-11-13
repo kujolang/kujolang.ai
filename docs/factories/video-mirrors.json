@@ -1,0 +1,47 @@
+[
+  {
+    "factory": "software-factory",
+    "upstream": "https://raw.githubusercontent.com/kujolang/software-factory/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/media/software-factory-demo.mp4",
+    "source_commit": "cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24",
+    "local": "public/media/factories/software-factory.mp4",
+    "sha256": "4046393dc1e7c836ee8b944a6006ab81c8ea28aeae1c9a8a387581104ff0288e",
+    "bytes": 2120047,
+    "variant": "original"
+  },
+  {
+    "factory": "videoops-factory",
+    "upstream": "https://raw.githubusercontent.com/kujolang/videoops-factory/dcf2dc4fa7311f59ba3dd16f58a227439a155979/docs/media/videoops-factory-demo-mobile.mp4",
+    "source_commit": "dcf2dc4fa7311f59ba3dd16f58a227439a155979",
+    "local": "public/media/factories/videoops-factory.mp4",
+    "sha256": "203b65355d6b54f0645cf38f4804b1ed27ae00b6f97e75a2ac573512a1a01445",
+    "bytes": 1939534,
+    "variant": "canonical mobile version"
+  },
+  {
+    "factory": "publishing-house-factory",
+    "upstream": "https://raw.githubusercontent.com/kujolang/publishing-house-factory/38e7900a16f8482d12ad6b8b6a15f538d7ee3099/docs/media/publishing-house-factory-demo-mobile.mp4",
+    "source_commit": "38e7900a16f8482d12ad6b8b6a15f538d7ee3099",
+    "local": "public/media/factories/publishing-house-factory.mp4",
+    "sha256": "5fd6291341c2262f67716878d03fc7a5f14070422c7df484465de5e17fb0d5e7",
+    "bytes": 2310191,
+    "variant": "canonical mobile version"
+  },
+  {
+    "factory": "webops-factory",
+    "upstream": "https://raw.githubusercontent.com/kujolang/webops-factory/a2aba2c63777f37bf47d64dc93748949658b977b/docs/media/webops-factory-demo-mobile.mp4",
+    "source_commit": "a2aba2c63777f37bf47d64dc93748949658b977b",
+    "local": "public/media/factories/webops-factory.mp4",
+    "sha256": "0d998f5065797da2bfa1d7a9e056db8c0eb4e0da11562f9d4f42ec7d4ea7c950",
+    "bytes": 1391610,
+    "variant": "canonical mobile version"
+  },
+  {
+    "factory": "product-launch-factory",
+    "upstream": "https://github.com/kujolang/product-launch-factory/releases/download/v0.1.0/launch.mp4",
+    "source_commit": "d61c7021b0469c45f909b8371205f0df3afbac8b",
+    "local": "public/media/factories/product-launch-factory.mp4",
+    "sha256": "60102b8d687173399387df3cd4bb1f4e37446538ef7705cabc524e94dc28fa45",
+    "bytes": 1478507,
+    "variant": "release asset"
+  }
+]

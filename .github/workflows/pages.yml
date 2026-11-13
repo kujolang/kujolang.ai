@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -46,6 +47,7 @@ jobs:
         shell: bash
         run: |
           kujo --version
+          npm run factories:check
           npm run providers:check
           npm run guides:check
           npm run examples:check
@@ -58,6 +60,7 @@ jobs:
           touch output/.nojekyll
           bash scripts/verify-site-contract.sh output
           bash scripts/validate-generated-output.sh output
+          npm run factories:verify
           npm run language:verify
           npm run positioning:verify
           npm run social:verify
