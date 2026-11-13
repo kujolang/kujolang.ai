@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-13",
+  "surface": "Live local browser WebMCP search_site",
+  "input": {
+    "query": "factory",
+    "content_type": "ecosystem",
+    "limit": 10
+  },
+  "returned_count": 5,
+  "has_more": false,
+  "ids": [
+    "ecosystem:product-launch-factory",
+    "ecosystem:publishing-house-factory",
+    "ecosystem:software-factory",
+    "ecosystem:videoops-factory",
+    "ecosystem:webops-factory"
+  ]
+}
