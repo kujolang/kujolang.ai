@@ -6,16 +6,16 @@ featured_image: "/assets/images/ecosystem/kujo-language-runtime.webp"
 section: "Primitives"
 tags: [Core, Language]
 order: 10
-install_command: "curl -fsSL https://kujolang.ai/install.sh | KUJO_RELEASE_VERSION=v1.9.0 bash"
+install_command: "curl -fsSL https://kujolang.ai/install.sh | KUJO_RELEASE_VERSION=v1.10.0 bash"
 github_url: "https://github.com/kujolang/kujo"
 launch_story: "The ecosystem core: readable source, explicit capabilities, deterministic tooling contracts, and strong native APIs."
-scope_note: "Kujo 1.9.0 is released for Linux x64/arm64, macOS x64/arm64 and Windows x64 through native archives and npm. The 1.8 series adds stronger optional inference and shared editor analysis, measured generator performance improvements, and expanded VM/interpreter parity coverage. Wave C beta and Wave D alpha remain experimental; participant SDK packages remain private/unpublished."
+scope_note: "Kujo 1.10.0 is released for Linux x64/arm64, macOS x64/arm64 and Windows x64 through native archives and npm. The 1.10 release improves VM loop reuse and collection updates and fixes runtime error handling. Wave C beta and Wave D alpha remain experimental; participant SDK packages remain private/unpublished."
 keywords: "Kujo, Kujo ecosystem, Core, Language"
 seo_title: "Kujo — Kujo Ecosystem"
-version: "1.9.0"
-latest_release_url: "https://github.com/kujolang/kujo/releases/tag/v1.9.0"
+version: "1.10.0"
+latest_release_url: "https://github.com/kujolang/kujo/releases/tag/v1.10.0"
 release_status: "Version identifies the latest published GitHub Release. Unpinned clone commands select default-branch source; see scope_note for release boundaries."
-last_updated: "2026-10-22"
+last_updated: "2026-11-20"
 ---
 
 ## What it does
@@ -28,7 +28,7 @@ The ecosystem core: readable source, explicit capabilities, deterministic toolin
 
 ## Operating boundary
 
-Kujo 1.9.0 is released for Linux x64/arm64, macOS x64/arm64 and Windows x64 through native archives and npm. The 1.8 series adds stronger optional inference and shared editor analysis, measured generator performance improvements, and expanded VM/interpreter parity coverage. Wave C beta and Wave D alpha remain experimental; participant SDK packages remain private/unpublished.
+Kujo 1.10.0 is released for Linux x64/arm64, macOS x64/arm64 and Windows x64 through native archives and npm. The 1.10 release improves VM loop reuse and collection updates and fixes runtime error handling. Wave C beta and Wave D alpha remain experimental; participant SDK packages remain private/unpublished.
 
 ## Install and maintain the runtime
 
@@ -43,13 +43,13 @@ Read the [installation guide](https://docs.kujolang.ai/install/), [runtime guide
 ## Install from npm
 
 ```bash
-npm install --global @kujolang/kujo-runtime@1.9.0
+npm install --global @kujolang/kujo-runtime@1.10.0
 kujo --version
 ```
 
-Expected version output: `kujo 1.9.0`.
+Expected version output: `kujo 1.10.0`.
 
-The runtime resolver and all five native npm packages are published at 1.9.0. Native archives, deterministic source, checksums and exact-source provenance are attached to the release. Package-manager installs use their original manager for upgrades.
+The runtime resolver and all five native npm packages are published at 1.10.0. Native archives, deterministic source, checksums and exact-source provenance are attached to the release. Package-manager installs use their original manager for upgrades.
 
 ## What changed in 1.8
 
@@ -80,6 +80,13 @@ Kujo 1.8.2 fixes dependency advisories and maintenance warnings, preserves archi
 
 See the [1.8.2 release notes](https://github.com/kujolang/kujo/blob/main/docs/RELEASE_NOTES_1_8_2.md) for compatibility and verification scope.
 
+
+## Runtime release 1.10.0
+
+Kujo 1.10.0 improves VM loop reuse and collection updates, corrects call-error
+handling, and updates date, timezone and security-sensitive dependencies. The
+[release notes](https://github.com/kujolang/kujo/blob/main/docs/RELEASE_NOTES_1_10_0.md)
+cover compatibility, measured performance and the Windows JIT memory limitation.
 
 ## Runtime release 1.9.0
 
