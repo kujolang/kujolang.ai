@@ -18,11 +18,11 @@
 <div class="guide-sections kujo-content"><section class="guide-section"><h2 id="step-1">Install the runtime</h2>
 <p>Kujo is a programming language with a Rust-based runtime. Start with the runtime alone; independent ecosystem packages can come later.</p>
 <p>With Node.js 18 or newer, the runtime-only npm package supports macOS x64/arm64, Linux x64/arm64 and Windows x64:</p>
-<pre><code class="language-sh">npm install --global @kujolang/kujo-runtime@1.9.0
+<pre><code class="language-sh">npm install --global @kujolang/kujo-runtime@1.10.0
 kujo --version</code></pre>
-<p>Expected version: <code>kujo 1.9.0</code>. On Windows, use PowerShell or a terminal with Node.js on PATH. Native Windows archives and checksum instructions are in the <a href="https://github.com/kujolang/kujo/blob/v1.9.0/INSTALLATION.md">official installation guide</a>.</p>
+<p>Expected version: <code>kujo 1.10.0</code>. On Windows, use PowerShell or a terminal with Node.js on PATH. Native Windows archives and checksum instructions are in the <a href="https://github.com/kujolang/kujo/blob/v1.10.0/INSTALLATION.md">official installation guide</a>.</p>
 <p>For the runtime and core toolset on macOS/Linux:</p>
-<pre><code class="language-sh">curl -fsSL https://kujolang.ai/install.sh | KUJO_RELEASE_VERSION=v1.9.0 bash
+<pre><code class="language-sh">curl -fsSL https://kujolang.ai/install.sh | KUJO_RELEASE_VERSION=v1.10.0 bash
 export PATH="$HOME/.local/bin:$PATH"
 kujo --version</code></pre>
 <p>This second option also installs separately versioned ecosystem tools. The runtime version does not pin those tool snapshots. Review the official installer and release-manifest options when reproducibility matters.</p>
@@ -41,11 +41,11 @@ kujo run hello.kujo</code></pre>
 <li><a href="/examples/">Browse verified examples</a>: functions, collections, async and AI replay.</li>
 <li><a href="https://docs.kujolang.ai/learn/">Follow the language tutorial</a>.</li>
 <li><a href="https://docs.kujolang.ai/learn/packages/">Learn packages with Kennel</a>.</li>
-<li><a href="https://github.com/kujolang/kujo/tree/v1.9.0">Read the runtime source</a>.</li>
+<li><a href="https://github.com/kujolang/kujo/tree/v1.10.0">Read the runtime source</a>.</li>
 </ul>
 </section>
 <section class="guide-section"><h2 id="step-4">Troubleshooting</h2>
-<p>If <code>kujo</code> is not found, reopen your terminal and check the installer’s PATH instructions. If your operating system or architecture is not listed above, consult the <a href="https://github.com/kujolang/kujo/blob/v1.9.0/INSTALLATION.md">source-build instructions</a>. Use the <a href="https://github.com/kujolang/kujo/issues">issue tracker</a> with your runtime version, operating system and a minimal sample.</p>
+<p>If <code>kujo</code> is not found, reopen your terminal and check the installer’s PATH instructions. If your operating system or architecture is not listed above, consult the <a href="https://github.com/kujolang/kujo/blob/v1.10.0/INSTALLATION.md">source-build instructions</a>. Use the <a href="https://github.com/kujolang/kujo/issues">issue tracker</a> with your runtime version, operating system and a minimal sample.</p>
 </section>
 </div>
 
