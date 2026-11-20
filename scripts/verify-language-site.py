@@ -22,5 +22,7 @@ for route in routes+['']:
 for x in c['items']:
  html=(r/'examples'/x['slug']/'index.html').read_text()
  assert 'Pinned source' in html and 'Breadcrumb' in html and x['sha256']
+ assert f"/tree/{c['runtimeCommit']}\">Kujo {c['version']}</a>" in html, x['slug']
+ assert f"/blob/{c['commit']}/{x['source']}" in html, x['slug']
 urls=re.findall(r'<loc>(.*?)</loc>',sitemap);assert len(urls)==len(set(urls))
 print('Language-first content, all example routes, internal links, sitemap and static fallback passed')

@@ -2,7 +2,7 @@
 
 Select whole passages within a byte budget and reject citations to omitted sources.
 
-Requires Kujo 1.9.0. Run inside this extracted directory.
+Requires Kujo 1.10.0. Run inside this extracted directory.
 
 ## Offline demo
 

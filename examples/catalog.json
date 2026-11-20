@@ -1,5 +1,6 @@
 {
-  "version": "1.9.0",
+  "version": "1.10.0",
+  "runtimeCommit": "5d1eeca402f0dfbd1450452f796417fad0c5aa00",
   "commit": "2cfaf185ad03059c89ef4f72fb061074255d00fc",
   "repository": "https://github.com/kujolang/kujo",
   "items": [

@@ -2,7 +2,7 @@
 
 Reuse a checked result only when its input, prompt, schema and provider identity match.
 
-Requires Kujo 1.9.0. Run inside this extracted directory.
+Requires Kujo 1.10.0. Run inside this extracted directory.
 
 ## Offline demo
 

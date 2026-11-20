@@ -2,7 +2,7 @@
 
 Compute sales totals in code and check the numbers returned by the model.
 
-Requires Kujo 1.9.0. Run inside this extracted directory.
+Requires Kujo 1.10.0. Run inside this extracted directory.
 
 ## Offline demo
 

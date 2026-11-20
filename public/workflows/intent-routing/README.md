@@ -2,7 +2,7 @@
 
 Map a model decision to a fixed local handler and send uncertain requests to review.
 
-Requires Kujo 1.9.0. Run inside this extracted directory.
+Requires Kujo 1.10.0. Run inside this extracted directory.
 
 ## Offline demo
 

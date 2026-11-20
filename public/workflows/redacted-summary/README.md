@@ -2,7 +2,7 @@
 
 Remove known private values before sending a support note to a model.
 
-Requires Kujo 1.9.0. Run inside this extracted directory.
+Requires Kujo 1.10.0. Run inside this extracted directory.
 
 ## Offline demo
 

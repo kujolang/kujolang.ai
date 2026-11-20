@@ -2,7 +2,7 @@
 
 Turn invoice text into a validated record with source evidence.
 
-Requires Kujo 1.9.0. Run inside this extracted directory.
+Requires Kujo 1.10.0. Run inside this extracted directory.
 
 ## Offline demo
 
