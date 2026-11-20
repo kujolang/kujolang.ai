@@ -72,6 +72,7 @@
     modal.querySelector('[data-provider-package]').textContent = provider.package;
     modal.querySelector('[data-provider-code]').textContent = provider.code;
     modal.querySelector('[data-provider-install]').textContent = provider.install;
+    modal.querySelector('[data-provider-setup]').href = provider.setup;
     modal.querySelector('[data-provider-repo]').href = provider.repo;
     modal.querySelector('[data-provider-docs]').href = provider.docs;
     modal.hidden = false;

@@ -11,6 +11,7 @@ const original = readFileSync(target, 'utf8');
 const existing = new Map(JSON.parse(original).filter(row => row.package !== 'ai-sdk').map(row => [row.id, row]));
 const seen = new Set();
 const repo = 'https://github.com/kujolang/ai-sdk';
+const setupGuide = 'https://docs.kujolang.ai/ecosystem/providers/#configure-a-provider';
 const lobeIcons = 'https://raw.githubusercontent.com/lobehub/lobe-icons/9752d967494e48d8f83f2808feb2b0207bf70997/packages/static-svg/icons/';
 const logos = {
   'lm-studio': lobeIcons + 'lmstudio.svg',
@@ -39,7 +40,6 @@ const records = manifest.providers.map(provider => {
     id: provider.id,
     package: 'ai-sdk',
     repo: repo + '/tree/' + revision,
-    setup: repo + '/blob/' + revision + '/docs/PROVIDER_SETUP.md',
     protocol: provider.integration_type === 'native' ? 'Native retrieval' : 'OpenAI-compatible',
     install: 'git clone ' + repo + '.git\ncd ai-sdk\ngit checkout ' + revision,
     code: 'KUJO_MODULE_PATH="$PWD/src" kujo run examples/provider_quickstart.kujo -- ' + provider.id + ' ' + script + ' YOUR_MODEL_ID',
@@ -51,6 +51,11 @@ const records = manifest.providers.map(provider => {
   };
   return {
     ...(prior ?? starter),
+    setup: setupGuide,
+    ...(prior && {
+      install: 'kujo run "$KENNEL_SCRIPT" -- add ' + provider.setup.source + ' --alias ' + provider.setup.alias +
+        '\nkujo run "$KENNEL_SCRIPT" -- install',
+    }),
     name: provider.name,
     category: provider.category,
     docs: provider.documentation_url,

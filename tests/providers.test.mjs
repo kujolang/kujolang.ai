@@ -15,6 +15,10 @@ test('provider registry contains each requested integration exactly once', () =>
       assert.match(provider.logo_source, /^https:\/\/raw\.githubusercontent\.com\//);
     }
     assert.ok(provider.docs && provider.code && provider.install);
+    assert.equal(provider.setup, 'https://docs.kujolang.ai/ecosystem/providers/#configure-a-provider');
+    if (provider.package !== 'ai-sdk') {
+      assert.match(provider.install, /kujo run "\$KENNEL_SCRIPT" -- add github:kujolang\//);
+    }
     assert.match(provider.certificationRevision, /^[a-f0-9]{40}$/);
     assert.ok(['verified', 'partial', 'not_tested'].includes(provider.verification));
     assert.equal(!!provider.verifiedDate, provider.verification !== 'not_tested');
