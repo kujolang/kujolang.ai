@@ -9,6 +9,9 @@
   var previousFocus = null;
   var dialog = modal.querySelector('[role="dialog"]');
   var search = document.querySelector('[data-provider-search]');
+  var capability = document.querySelector('[data-provider-capability]');
+  var verification = document.querySelector('[data-provider-verification]');
+  var integration = document.querySelector('[data-provider-integration]');
 
   function copyText(text) {
     if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
@@ -42,19 +45,28 @@
     var visible = records.filter(function (provider) {
       var matchesFilter = activeFilter === 'all' || provider.category.toLowerCase() === activeFilter;
       var haystack = [provider.name, provider.package, provider.protocol, provider.description].join(' ').toLowerCase();
-      return matchesFilter && (!query || haystack.indexOf(query) !== -1);
+      return matchesFilter && (!query || haystack.indexOf(query) !== -1) &&
+        (!capability.value || provider.capabilities.includes(capability.value)) &&
+        (!verification.value || provider.verification === verification.value) &&
+        (!integration.value || provider.integration === integration.value);
     });
     grid.querySelectorAll('[data-provider-record]').forEach(function (card) {
       card.hidden = !visible.some(function (provider) { return provider.id === card.dataset.providerRecord; });
     });
-    document.querySelector('[data-provider-count]').textContent = visible.length + ' provider' + (visible.length === 1 ? '' : 's');
+    document.querySelector('[data-provider-count]').textContent = visible.length + ' integration' + (visible.length === 1 ? '' : 's');
   }
 
   function open(provider, trigger) {
     if (!provider) return;
     previousFocus = trigger || document.activeElement;
-    modal.querySelector('[data-provider-logo]').src = provider.logo;
-    modal.querySelector('[data-provider-logo]').alt = provider.name + ' logo';
+    var logo = modal.querySelector('[data-provider-logo]');
+    logo.hidden = !provider.logo;
+    if (provider.logo) {
+      logo.src = provider.logo;
+      logo.alt = provider.name + ' logo';
+    } else {
+      logo.removeAttribute('src');
+    }
     modal.querySelector('[data-provider-title]').textContent = provider.name;
     modal.querySelector('[data-provider-category]').textContent = provider.category + ' / ' + provider.package;
     modal.querySelector('[data-provider-description]').textContent = provider.description;
@@ -84,6 +96,7 @@
     });
     render(); }).catch(function () { document.querySelector('[data-provider-count]').textContent = 'Starter details unavailable. Package links remain available.'; });
   search.addEventListener('input', render);
+  [capability, verification, integration].forEach(function (filter) { filter.addEventListener('change', render); });
   document.querySelectorAll('[data-provider-filter]').forEach(function (button) { button.addEventListener('click', function () { activeFilter = button.dataset.providerFilter.toLowerCase(); document.querySelectorAll('[data-provider-filter]').forEach(function (item) { var active = item === button; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', String(active)); }); render(); }); });
   modal.querySelectorAll('[data-provider-close]').forEach(function (control) { control.addEventListener('click', close); });
   modal.addEventListener('keydown', function (event) {

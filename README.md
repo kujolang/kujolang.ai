@@ -13,6 +13,21 @@ Current release: **v1.3.1**
 - Documentation: [docs.kujolang.ai](https://docs.kujolang.ai)
 - Community: [Discord](https://discord.gg/RqDgyb3BX)
 
+## Provider directory
+
+The AI SDK certification manifest owns provider identities, capabilities and
+live verification. Website entries retain their package starters and logos.
+To update the directory from a reviewed AI SDK revision:
+
+```sh
+node scripts/sync-provider-certification.mjs ../ai-sdk/providers/certification.json "$(git -C ../ai-sdk rev-parse HEAD)"
+npm run providers:generate
+npm run providers:check
+```
+
+Publish the referenced AI SDK commit before updating the site. The site build
+checks the directory against that immutable revision.
+
 ## Build
 
 Install [Kujo](https://github.com/kujolang/kujo), then run:
