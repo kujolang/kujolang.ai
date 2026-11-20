@@ -14,7 +14,7 @@ keywords: "AI SDK, Kujo ecosystem, Primitive, AI"
 seo_title: "AI SDK — Kujo Ecosystem"
 version: "1.2.0"
 latest_release_url: "https://github.com/kujolang/ai-sdk/releases/tag/v1.2.0"
-release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
+release_status: "Version identifies the published release. The Kennel command pins AI SDK 1.2.0. The scope note links to the newer source setup."
 last_updated: "2026-11-20"
 ---
 
