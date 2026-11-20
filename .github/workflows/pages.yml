@@ -38,6 +38,15 @@ jobs:
       - name: Run Node.js tests
         run: npm test
 
+      - name: Check provider certification projection
+        shell: bash
+        run: |
+          revision=$(node -p 'require("./assets/data/providers.json")[0].certificationRevision')
+          [[ "$revision" =~ ^[0-9a-f]{40}$ ]]
+          manifest=$(mktemp)
+          curl --fail --silent --show-error --retry 2 "https://raw.githubusercontent.com/kujolang/ai-sdk/$revision/providers/certification.json" -o "$manifest"
+          node scripts/sync-provider-certification.mjs "$manifest" "$revision" --check
+
       - name: Install reviewed Kujo release
         uses: kujolang/kujo/.github/actions/setup-kujo@a91702682e2969a66938b561b8059034ab2bc717
         with:
