@@ -17,10 +17,10 @@
 <nav class="guide-nav" aria-label="On this page"><a href="#step-1">Install the runtime <span aria-hidden="true">↗</span></a><a href="#step-2">Create hello.kujo <span aria-hidden="true">↗</span></a><a href="#step-3">Where to go next <span aria-hidden="true">↗</span></a><a href="#step-4">Troubleshooting <span aria-hidden="true">↗</span></a></nav>
 <div class="guide-sections kujo-content"><section class="guide-section"><h2 id="step-1">Install the runtime</h2>
 <p>Kujo is a programming language with a Rust-based runtime. Start with the runtime alone; independent ecosystem packages can come later.</p>
-<p>With Node.js 18 or newer, the runtime-only npm package supports macOS x64/arm64, Linux x64/arm64 and Windows x64:</p>
-<pre><code class="language-sh">npm install --global @kujolang/kujo-runtime@1.10.0
-kujo --version</code></pre>
-<p>Expected version: <code>kujo 1.10.0</code>. On Windows, use PowerShell or a terminal with Node.js on PATH. Native Windows archives and checksum instructions are in the <a href="https://github.com/kujolang/kujo/blob/v1.10.0/INSTALLATION.md">official installation guide</a>.</p>
+<p>The runtime-only npm package supports macOS x64/arm64, Linux x64/arm64 and Windows x64. Use a Node.js version supported by the <a href="https://github.com/kujolang/kujo/blob/v1.10.0/npm/runtime/package.json">npm package manifest</a>.</p>
+<!--email_off--><pre><code class="language-sh">npm install --global @kujolang/kujo-runtime@1.10.0
+kujo --version</code></pre><!--/email_off-->
+<p>Expected version: <code>kujo 1.10.0</code>. On Windows, use PowerShell or a terminal with Node.js on PATH. Native Windows archives and checksum instructions are in the <a href="https://docs.kujolang.ai/install/#npm-and-supported-platforms">official installation guide</a>.</p>
 <p>For the runtime and core toolset on macOS/Linux:</p>
 <pre><code class="language-sh">curl -fsSL https://kujolang.ai/install.sh | KUJO_RELEASE_VERSION=v1.10.0 bash
 export PATH="$HOME/.local/bin:$PATH"
@@ -45,7 +45,7 @@ kujo run hello.kujo</code></pre>
 </ul>
 </section>
 <section class="guide-section"><h2 id="step-4">Troubleshooting</h2>
-<p>If <code>kujo</code> is not found, reopen your terminal and check the installer’s PATH instructions. If your operating system or architecture is not listed above, consult the <a href="https://github.com/kujolang/kujo/blob/v1.10.0/INSTALLATION.md">source-build instructions</a>. Use the <a href="https://github.com/kujolang/kujo/issues">issue tracker</a> with your runtime version, operating system and a minimal sample.</p>
+<p>If <code>kujo</code> is not found, reopen your terminal and check the installer’s PATH instructions. If your operating system or architecture is not listed above, consult the <a href="https://docs.kujolang.ai/install/#source-install">source-build instructions</a>. Use the <a href="https://github.com/kujolang/kujo/issues">issue tracker</a> with your runtime version, operating system and a minimal sample.</p>
 </section>
 </div>
 
