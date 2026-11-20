@@ -10,7 +10,6 @@
   var dialog = modal.querySelector('[role="dialog"]');
   var search = document.querySelector('[data-provider-search]');
   var capability = document.querySelector('[data-provider-capability]');
-  var verification = document.querySelector('[data-provider-verification]');
   var integration = document.querySelector('[data-provider-integration]');
 
   function copyText(text) {
@@ -47,7 +46,6 @@
       var haystack = [provider.name, provider.package, provider.protocol, provider.description].join(' ').toLowerCase();
       return matchesFilter && (!query || haystack.indexOf(query) !== -1) &&
         (!capability.value || provider.capabilities.includes(capability.value)) &&
-        (!verification.value || provider.verification === verification.value) &&
         (!integration.value || provider.integration === integration.value);
     });
     grid.querySelectorAll('[data-provider-record]').forEach(function (card) {
@@ -96,7 +94,7 @@
     });
     render(); }).catch(function () { document.querySelector('[data-provider-count]').textContent = 'Starter details unavailable. Package links remain available.'; });
   search.addEventListener('input', render);
-  [capability, verification, integration].forEach(function (filter) { filter.addEventListener('change', render); });
+  [capability, integration].forEach(function (filter) { filter.addEventListener('change', render); });
   document.querySelectorAll('[data-provider-filter]').forEach(function (button) { button.addEventListener('click', function () { activeFilter = button.dataset.providerFilter.toLowerCase(); document.querySelectorAll('[data-provider-filter]').forEach(function (item) { var active = item === button; item.classList.toggle('is-active', active); item.setAttribute('aria-pressed', String(active)); }); render(); }); });
   modal.querySelectorAll('[data-provider-close]').forEach(function (control) { control.addEventListener('click', close); });
   modal.addEventListener('keydown', function (event) {

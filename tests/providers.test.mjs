@@ -25,3 +25,10 @@ test('every registered local logo exists', async () => {
     assert.ok(logo.length > 32, provider.id);
   }
 });
+
+test('public provider directory displays the registry count without verification labels', async () => {
+  const template = await readFile(new URL('../templates/page-providers.html', import.meta.url), 'utf8');
+  assert.match(template, new RegExp(`data-provider-filter="all"[^>]*>All <span data-provider-total>${registry.length}</span>`));
+  assert.match(template, new RegExp(`data-provider-count>${registry.length} integrations`));
+  assert.doesNotMatch(template, /data-provider-verification|live verification|(?:partly )?live verified|live testing pending/i);
+});

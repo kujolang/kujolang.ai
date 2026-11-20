@@ -11,6 +11,10 @@ const original = readFileSync(target, 'utf8');
 const existing = new Map(JSON.parse(original).filter(row => row.package !== 'ai-sdk').map(row => [row.id, row]));
 const seen = new Set();
 const repo = 'https://github.com/kujolang/ai-sdk';
+const descriptions = {
+  'llama-cpp': 'Run GGUF models locally with llama-server. Tool calling depends on the model and chat template. Embeddings require a pooling mode.',
+  jina: 'Generate embeddings, rerank documents, or extract text from a URL with Jina Reader. Set a Jina API key for authenticated requests.',
+};
 const records = manifest.providers.map(provider => {
   if (seen.has(provider.id)) throw Error('Duplicate provider ' + provider.id);
   seen.add(provider.id);
@@ -25,7 +29,7 @@ const records = manifest.providers.map(provider => {
     protocol: provider.integration_type === 'native' ? 'Native retrieval' : 'OpenAI-compatible',
     install: 'git clone ' + repo + '.git\ncd ai-sdk\ngit checkout ' + revision,
     code: 'KUJO_MODULE_PATH="$PWD/src" kujo run examples/provider_quickstart.kujo -- ' + provider.id + ' ' + script + ' YOUR_MODEL_ID',
-    description: provider.limitations,
+    description: descriptions[provider.id] ?? provider.limitations,
   };
   return {
     ...(prior ?? starter),
