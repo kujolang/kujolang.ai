@@ -18,82 +18,78 @@
       "name": "Software Factory",
       "repository": "https://github.com/kujolang/software-factory",
       "default_branch": "main",
-      "default_commit": "cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24",
-      "source_commit": "cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24",
-      "release_tag": "0.1.0",
-      "release_url": "https://github.com/kujolang/software-factory/releases/tag/0.1.0",
+      "default_commit": "aaf5c672b7fdce514d692ae3eab6dab9d7392f7f",
+      "source_commit": "aaf5c672b7fdce514d692ae3eab6dab9d7392f7f",
+      "release_tag": "0.2.0",
+      "release_url": "https://github.com/kujolang/software-factory/releases/tag/0.2.0",
       "release_status": "Published GitHub release",
-      "package_version": "0.1.0",
+      "package_version": "0.2.0",
       "fields": {
         "audience": {
-          "summary": "Developers preparing locally reviewed Node HTTP APIs, optional SQLite and static browser interfaces from a software mission; single trusted operator.",
+          "summary": "Developers preparing independently checked local software candidates and portable review evidence.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/README.md",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/PACKS.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/README.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/KNOWN-LIMITATIONS.md"
           ]
         },
         "input": {
-          "summary": "Mission text plus an optional reviewed and sealed JSON software pack. Packs define requirements, allowed files and bounded API/browser tests as data; issue tracker is default, converter and notes are examples.",
+          "summary": "A brief, reviewed Spec, supported committed repository, or GitHub issue. Software packs can define trusted acceptance separately from generated proposals.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/mission.txt",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/packs/converter.json",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/PACKS.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/MISSION-WORKFLOWS.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/SPEC-PIPELINE.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/PACKS.md"
           ]
         },
         "roles": {
-          "summary": "Commander interprets mission; architect scopes work; backend and frontend workers propose files concurrently; independent reviewer gates corrections; separate release reviewer examines the exact candidate. Read-only observer has no execution authority.",
+          "summary": "The pinned catalog includes all 28 Chain of Command roles and 136 skill packages. Role and skill routing depends on the mission.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/worker.mjs",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/dispatch.kujo",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/ARCHITECTURE.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/CATALOGS.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/MISSION-WORKFLOWS.md"
           ]
         },
         "execution": {
-          "summary": "Node controller invokes pinned native Kujo Dispatch; tool-free Codex proposals enter allowlisted files. Trusted Workcell adapter executes generated code and API/browser checks in rootless containers. npm run factory -- run factory/mission.txt starts live work.",
+          "summary": "Dispatch coordinates scoped software work. Rootless Workcell executes independent checks for the selected qualified runtime profile.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/cli.mjs",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/dispatch.kujo",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/workcell.mjs",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/worker.mjs"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/ARCHITECTURE.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/CLI-RUNTIMES.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/SECURITY.md"
           ]
         },
         "outputs": {
-          "summary": "Locally approved build only after release verification; source, frozen pack, reports and audit/export bundle. Export schema is kujo.factory.export/v1. Examples are untrusted smoke fixtures, not current approval.",
+          "summary": "Reviewable candidate code, source-bound local approval when gates pass, and an export that can be verified offline.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/export.mjs",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/USAGE.md",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/PROVENANCE.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/USAGE.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/EVIDENCE.md"
           ]
         },
         "evidence": {
-          "summary": "Run journal, worker proposals, rejected attempts, native Dispatch and Workcell evidence, API/browser results and exact source/harness/pack hashes; read-only Factory Floor and replay.",
+          "summary": "Factory Floor and local MCP show run status, failure evidence, and test observations. Exported artifacts retain source and acceptance bindings.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/core.mjs",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/web/index.html",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/VERIFICATION.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/MCP.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/EVIDENCE.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/RELEASE-QUALIFICATION.md"
           ]
         },
         "review": {
-          "summary": "Independent model review plus trusted acceptance checks, separate release review and repeated source-bound gates. Human reviews the software pack before sealing and reviews intended deployment separately. Source identity does not establish correctness or test completeness.",
+          "summary": "Independent review, trusted acceptance tests, and source-bound release gates. Delivery decisions require separate authorization.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/PACKS.md",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/ARCHITECTURE.md",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/VERIFICATION.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/ARCHITECTURE.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/KNOWN-LIMITATIONS.md"
           ]
         },
         "boundaries": {
           "summary": "Rootless Docker with seccomp, read-only root, no outside network, scoped mounts, process/memory/deadline limits. Provider home, Docker socket and host evidence are not mounted. Nested Chromium sandbox unavailable inside qualified outer Workcell; no kernel-exploit guarantee.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/SECURITY.md",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/WORKCELL.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/SECURITY.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/factory/WORKCELL.md"
           ]
         },
         "dependencies": {
-          "summary": "Kujo runtime 1.9.0, Codex 0.144.4, AJV 8.20.0 and ajv-formats 3.0.1; exact Dispatch, Workcell and kujo-agents commits in source lock. No shipped Spec/Eval/ShipCheck/RunLedger/Casefile integration in this release.",
+          "summary": "Pinned Kujo runtime, catalog sources, and native accountability adapters including Spec, Eval, ShipCheck, RunLedger, Casefile, and Lens.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/sources.lock.json",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/package.json",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/dispatch.kujo"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/sources.lock.json",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/config/accountability.lock.json",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/RELEASE-QUALIFICATION.md"
           ]
         },
         "demo": {
@@ -104,27 +100,23 @@
           ]
         },
         "setup": {
-          "summary": "Git, Node >=26.12.1 <27, Codex account and local rootless Docker/seccomp. npm ci; npm run setup; npm run login; configure rootless engine; npm run image:build; npm run doctor; npm run verify; npm run smoke; npm start. Floor port 4380. Linux/WSL intended but live native Linux/ARM/WSL not qualified; recorded live engine qualification is macOS/Colima.",
+          "summary": "Clone the exact Git tag, install dependencies with npm ci, run setup, and check the environment. Live execution requires rootless Docker with seccomp and model-backed work uses a separate provider.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/README.md",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/INSTALL.md",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/ENGINE.md",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/VERIFICATION.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/AGENT-SETUP.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/ENGINE.md"
           ]
         },
         "limitations": {
-          "summary": "Local single operator only; no hosted multi-tenant service, unattended crash recovery or deployment qualification. Future ecosystem integration work in feature branches is outside published 0.1.0. Current public main and release match at research time.",
+          "summary": "Local single-operator scope and documented project shapes. Hosted multi-tenant operation, unrestricted runtimes, and automatic deployment are outside this release.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/README.md",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/SECURITY.md",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/VERIFICATION.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/KNOWN-LIMITATIONS.md"
           ]
         },
         "relationships": {
           "summary": "Standalone software-production system; no universal factory controller. Product Launch separately pins a newer Software Factory evidence-verifier revision; that is not a feature of this published baseline.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/docs/ARCHITECTURE.md",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/sources.lock.json"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/ARCHITECTURE.md",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/sources.lock.json"
           ]
         }
       },
@@ -134,8 +126,8 @@
           "classification": "direct runtime dependency",
           "usage": "Native engine imported for bounded concurrent workflow steps.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/dispatch.kujo",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/sources.lock.json"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/factory/dispatch.kujo",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/sources.lock.json"
           ]
         },
         {
@@ -143,8 +135,8 @@
           "classification": "direct runtime dependency",
           "usage": "Rootless execution leases and isolation evidence.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/workcell.mjs",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/sources.lock.json"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/factory/workcell.mjs",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/sources.lock.json"
           ]
         },
         {
@@ -152,8 +144,8 @@
           "classification": "workflow or contract integration",
           "usage": "Pinned Chain of Command role instructions for tool-free workers.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/worker.mjs",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/sources.lock.json"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/factory/worker.mjs",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/sources.lock.json"
           ]
         },
         {
@@ -161,48 +153,53 @@
           "classification": "direct runtime dependency",
           "usage": "Pinned npm runtime executes native Dispatch adapter.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/package.json",
-            "https://github.com/kujolang/software-factory/blob/cfddc146e225229a9c15d3bf8ad2bfc01e2c8e24/factory/dispatch.kujo"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/package.json",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/factory/dispatch.kujo"
           ]
         },
         {
           "tool": "Spec",
-          "classification": "proposed or experimental integration",
-          "usage": "Outside standalone release baseline; integration increment must not be described as shipped standalone functionality.",
+          "classification": "workflow or contract integration",
+          "usage": "Native adapter exercised within the documented Software Factory qualification.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/259aff26e3ca627873eec6b40a89d6942b039d7c/docs/RELEASE-QUALIFICATION.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/config/accountability.lock.json",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/RELEASE-QUALIFICATION.md"
           ]
         },
         {
           "tool": "Eval",
-          "classification": "proposed or experimental integration",
-          "usage": "Outside standalone release baseline; integration increment must not be described as shipped standalone functionality.",
+          "classification": "workflow or contract integration",
+          "usage": "Native adapter exercised within the documented Software Factory qualification.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/259aff26e3ca627873eec6b40a89d6942b039d7c/docs/RELEASE-QUALIFICATION.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/config/accountability.lock.json",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/RELEASE-QUALIFICATION.md"
           ]
         },
         {
           "tool": "ShipCheck",
-          "classification": "proposed or experimental integration",
-          "usage": "Outside standalone release baseline; integration increment must not be described as shipped standalone functionality.",
+          "classification": "workflow or contract integration",
+          "usage": "Native adapter exercised within the documented Software Factory qualification.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/259aff26e3ca627873eec6b40a89d6942b039d7c/docs/RELEASE-QUALIFICATION.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/config/accountability.lock.json",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/RELEASE-QUALIFICATION.md"
           ]
         },
         {
           "tool": "RunLedger",
-          "classification": "proposed or experimental integration",
-          "usage": "Outside standalone release baseline; integration increment must not be described as shipped standalone functionality.",
+          "classification": "workflow or contract integration",
+          "usage": "Native adapter exercised within the documented Software Factory qualification.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/259aff26e3ca627873eec6b40a89d6942b039d7c/docs/RELEASE-QUALIFICATION.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/config/accountability.lock.json",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/RELEASE-QUALIFICATION.md"
           ]
         },
         {
           "tool": "Casefile",
-          "classification": "proposed or experimental integration",
-          "usage": "Outside standalone release baseline; integration increment must not be described as shipped standalone functionality.",
+          "classification": "workflow or contract integration",
+          "usage": "Native adapter exercised within the documented Software Factory qualification.",
           "evidence": [
-            "https://github.com/kujolang/software-factory/blob/259aff26e3ca627873eec6b40a89d6942b039d7c/docs/RELEASE-QUALIFICATION.md"
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/config/accountability.lock.json",
+            "https://github.com/kujolang/software-factory/blob/aaf5c672b7fdce514d692ae3eab6dab9d7392f7f/docs/RELEASE-QUALIFICATION.md"
           ]
         }
       ],
@@ -215,11 +212,23 @@
           },
           "workcell": {
             "url": "https://github.com/kujolang/workcell.git",
-            "commit": "189d7ab6e975301a0e5100b65e8ad3fe4a584573"
+            "commit": "144ab49da88a17fd0d786d01d98030d7ec7798cb"
           },
           "kujo-agents": {
             "url": "https://github.com/kujolang/kujo-agents.git",
-            "commit": "a7e9d0236d6e64b5db30273b32f4ad8c124f5173"
+            "commit": "ce87309d8c920695cf5337ca76155ff188a7bf24"
+          },
+          "kujo-skills": {
+            "url": "https://github.com/kujolang/kujo-skills.git",
+            "commit": "76c249632b08bc6e2c6d08846094040ac94f4b91"
+          },
+          "kujo-workflows": {
+            "url": "https://github.com/kujolang/kujo-workflows.git",
+            "commit": "d766eae4fd9a131e51c34796d029fd3bc6974689"
+          },
+          "ollama": {
+            "url": "https://github.com/kujolang/ollama.git",
+            "commit": "5821d7baee785ac8c10cf07dae8f29dc43b846ab"
           }
         }
       },
@@ -245,7 +254,7 @@
         },
         {
           "path": "CHANGELOG.md",
-          "sha256": "90b2f08c4390a7c1a8085eeb2edcb18f743c0abe878678dc9c41ca32c9cb1d1e"
+          "sha256": "23d250913021c0d24a9c52476469f05c0ca196617628269a6a77c95293a19b82"
         },
         {
           "path": "CONTRIBUTING.md",
@@ -253,19 +262,23 @@
         },
         {
           "path": "README.md",
-          "sha256": "97d7e28e968af86dc6abc1a38757058e5f6a9309f93e55d5ae0c6aeca539528f"
+          "sha256": "a149a72c5082080f8c90adb093bf9af05c659adc998d8571acb4f058f33e6fcb"
         },
         {
           "path": "SECURITY.md",
-          "sha256": "4e52cbebbbf336c45d2ef4d0d811d542b6fbdeafc304c8582eed138e9dbe91c8"
+          "sha256": "0e9788a399ff71b8bb7b54d1e2a75cb6a52021829231fab74ef32100c319f448"
         },
         {
           "path": "bin/software-factory.mjs",
-          "sha256": "305ab3658606a149a393263b3ba6a6977f0d79e0acecec2db0fe7fa0ad6c0fa4"
+          "sha256": "2c9bc3650913d907ddbd33c6e557aa8372e9cce21af157484713101b0fbfd7d8"
+        },
+        {
+          "path": "config/accountability.lock.json",
+          "sha256": "891908069775a8ca859fd00c9c95a3acc8fa251fc23481d51f184a3560bec464"
         },
         {
           "path": "docs/ADAPT.md",
-          "sha256": "db44bb744aa4b7c0661c0b3b2bb0be7f5d7b93e8a18408cafabd462f4a17fe1b"
+          "sha256": "9b62a33b3a8a73200b9ea94405b2ac40c377f5ceb246b3f2d6700fb8ba2acca4"
         },
         {
           "path": "docs/AGENT-SETUP.md",
@@ -273,7 +286,15 @@
         },
         {
           "path": "docs/ARCHITECTURE.md",
-          "sha256": "9a6af8c8cd000107b2e67742068b8859f9637ac16e8d37e09dc1beef17230469"
+          "sha256": "0cc2c8e50cd3d7f0264f8519543343ebfa732fad9be51e66af5e162e0dbc9698"
+        },
+        {
+          "path": "docs/CATALOGS.md",
+          "sha256": "440decfb9e07992aacf11a99be74f673cbecf91e35a772668af49ee975b60c54"
+        },
+        {
+          "path": "docs/CLI-RUNTIMES.md",
+          "sha256": "28150f3903bf67b2ad71dac380fa7bf235ef0cd0901ad71eb3ee507da372d7a2"
         },
         {
           "path": "docs/CONFIGURATION.md",
@@ -284,8 +305,24 @@
           "sha256": "c3e2db2196b117906528d2d776f8f1147317b0de96213427c23bbbaf9114362b"
         },
         {
+          "path": "docs/EVIDENCE.md",
+          "sha256": "22dba75a53a0c31adbda86541ff11ff3c940d2ddb835cac8393f44336d034821"
+        },
+        {
           "path": "docs/INSTALL.md",
-          "sha256": "290dbfdfa0dbfcbad75c753f98af4b056d128a74e61b1ed0e107bf797f12ae89"
+          "sha256": "b7329e44dd60cf942b5bfd97f8bf50c2e719fc6c3eee66478fc0113a86a77065"
+        },
+        {
+          "path": "docs/KNOWN-LIMITATIONS.md",
+          "sha256": "c10eae4786878bf20f2ceb6fc807f551887fcc74b2df3ce654024104756e92ef"
+        },
+        {
+          "path": "docs/MCP.md",
+          "sha256": "2f765042d9631e052c09b30e4882ea1e08ee7220eefdf2c49775bbd4237b6368"
+        },
+        {
+          "path": "docs/MISSION-WORKFLOWS.md",
+          "sha256": "ca8c29fda808d12e59929d66a36028903972f96db309702783c0c72e97b48088"
         },
         {
           "path": "docs/PACKS.md",
@@ -296,16 +333,24 @@
           "sha256": "1d0533429e8a0af49ca95d93fa24d4b30c6af964e8d7625117c57b2488199143"
         },
         {
+          "path": "docs/RELEASE-QUALIFICATION.md",
+          "sha256": "67486879b98fd3a8650d4a243b96d7a0468659899c24923bb5468c7c1cd727cd"
+        },
+        {
+          "path": "docs/SPEC-PIPELINE.md",
+          "sha256": "5a5aca16c023b2d2f9cad648b0542038e575c186e79786641c3dcd8beaa8d308"
+        },
+        {
           "path": "docs/TROUBLESHOOTING.md",
           "sha256": "1e0bab03736ccf45e0a78f56d6849d56ff812f45b37e5be5b38f39cf626d68f5"
         },
         {
           "path": "docs/USAGE.md",
-          "sha256": "60bf28dcba0835cbfae995757f68dc1cac6ae024b1eca8b0ac18d6e4fa8f02ae"
+          "sha256": "0e7398b8d7d10faf7512f1a3a3a627125b057e85aae77c907e4b88671e54bec0"
         },
         {
           "path": "docs/VERIFICATION.md",
-          "sha256": "0a973ebb49368883b5087319a45c5b6f57eb00617c94f78db4bfcce7bd24641d"
+          "sha256": "33813fe14888240648fbc03cf45aba31802b0f2684a2a047c5f71f9de9201ad2"
         },
         {
           "path": "examples/converter/README.md",
@@ -365,7 +410,7 @@
         },
         {
           "path": "factory/audit.mjs",
-          "sha256": "4a03b0f0b2d34f72d712edf3019aa0c98641dff968764b33da6b6573053a3ba9"
+          "sha256": "d4162aa135c4ec50b0f4d01ac1e6fe8c1b9a966feee4049f3c106b7d841ef411"
         },
         {
           "path": "factory/browser-acceptance.mjs",
@@ -373,11 +418,11 @@
         },
         {
           "path": "factory/build-workcell-image.mjs",
-          "sha256": "fd81bdf853228a8bd0344120997dc33de1efd2fc8b38682ba3353d0d15cde15a"
+          "sha256": "51ccb834b284569d7116b269bbe98ccc2caf0de0ba56490b1cb46a785f915e56"
         },
         {
           "path": "factory/cli.mjs",
-          "sha256": "ab52e72f00f10dd57203a75b3c649939991d88636f46a11d0d7f0c4ffa483872"
+          "sha256": "3d1166c23b18f38e6a73c2ebdcae57a735737725133e0f2efdaddeb63a51876d"
         },
         {
           "path": "factory/contract.md",
@@ -385,7 +430,7 @@
         },
         {
           "path": "factory/core.mjs",
-          "sha256": "8a5f1a926be5cb398a863eaf56260664bf8b41837edd0e93a2c90ef8a97370c4"
+          "sha256": "e9aafbbda4dd2a69fd9c4bc8367d715539a4df103bf1d47987b47c36946ddc04"
         },
         {
           "path": "factory/diagrams.mjs",
@@ -393,11 +438,11 @@
         },
         {
           "path": "factory/dispatch.kujo",
-          "sha256": "9329626ddb1ec43cf7165f1f4bc7e1d6875a32777e03e746f8811950b5b71078"
+          "sha256": "f65be0043d3f87b9df47db80c576ed425c3e49e010c619786e20e0c0692e41fa"
         },
         {
           "path": "factory/export.mjs",
-          "sha256": "8756869a54846910d1f5cb0da6a21279a52a5225ac990d4856e6ac4f24ee5db9"
+          "sha256": "8fbeb062bab0027ee8c10b4965be2be7a333015f59f4a9b2e59020f27ead70cb"
         },
         {
           "path": "factory/pack-acceptance.mjs",
@@ -413,7 +458,7 @@
         },
         {
           "path": "factory/settings.mjs",
-          "sha256": "64ca1f7f40ff11c36247c532136ae447d157806c43a449658efbf822b467e215"
+          "sha256": "bf7d127477ae023b1238e0a6908d8b030d0e1aa8a7d326af48f62243a9cabc5d"
         },
         {
           "path": "factory/test-dispatch.mjs",
@@ -421,11 +466,11 @@
         },
         {
           "path": "factory/test-recheck.mjs",
-          "sha256": "12b3a1a67f0297844ff1907dab06303d1caa6874a8e573bb9bed1e505ede4a6a"
+          "sha256": "2ce6ae52dfb3740d3d13421c7d39d48d44c3bfef5dc038aa769848ea85cfbd3c"
         },
         {
           "path": "factory/tests.test.mjs",
-          "sha256": "c160b52c7a5f418652ebece0e82b88f39a98c6810c4c42db9976915c2a830079"
+          "sha256": "15f721484a515ac35643db6bf5c86100d3dec025a6eed5bd2d8362d143c3825c"
         },
         {
           "path": "factory/web/assets/PROVENANCE.md",
@@ -477,19 +522,19 @@
         },
         {
           "path": "factory/workcell.mjs",
-          "sha256": "69ba87dd645ea7460a913f4e7ded30a6643c912777894046ebb67ca1c9fdef00"
+          "sha256": "968834b8f26c16c2682bfeff568fb6f31f2e7a88473d6e77b52212523c0f9a1e"
         },
         {
           "path": "factory/worker.mjs",
-          "sha256": "0b55f7b783d7a3ad9eb8bef3bca3d53d73a31094b02b919a047eaf465dd5a648"
+          "sha256": "1561a004331556f52e00e40aa4aec6ad364519071965684b2b1c259a7a02e5e7"
         },
         {
           "path": "package-lock.json",
-          "sha256": "771c1087c37132f55f898393edaf82458c3c2176b6ac8c0dbefc92005013a8ef"
+          "sha256": "71b4bbbfbb22710a0e7f612079f51a4860ff91fb7910e7155962fb3ebdbd706e"
         },
         {
           "path": "package.json",
-          "sha256": "a8157ed6ea04548db8170a4db6d583ca2bcb47faa44c62fc896ebbeadf2fcadf"
+          "sha256": "450d81f81c67d686f5fce71a4b2003e33de66e5e9059786ecac7142e64a895cb"
         },
         {
           "path": "scripts/check-docs.mjs",
@@ -505,7 +550,7 @@
         },
         {
           "path": "scripts/doctor.mjs",
-          "sha256": "3c2b0dfba7da4fbc44aa86cd212e6abf561420008c65cb0c3540b8b3a33ab789"
+          "sha256": "991edb1714f87171c1259cef851fc58e544143d11e3781c264f1bbbef4d70ab4"
         },
         {
           "path": "scripts/login.mjs",
@@ -517,7 +562,7 @@
         },
         {
           "path": "scripts/setup.mjs",
-          "sha256": "cb77c7f525e10565d4c62766dc870807f882e0f75f9ccec9326ed4fd5598dbdc"
+          "sha256": "9956be0541c5654edfc386a1a3bc30546ecd4c006a27831df55d3d1bae1add67"
         },
         {
           "path": "scripts/smoke.mjs",
@@ -525,19 +570,19 @@
         },
         {
           "path": "scripts/test-packs.mjs",
-          "sha256": "aeb7cb580f2e41625ee242d35a66e8df76bf98f31dfba80537f3ffc18bc16503"
+          "sha256": "24a114a3aa6d0171fc5e2d03c2b1cc83aa0879e50ad438d98dd8de49e84e6516"
         },
         {
           "path": "sources.lock.json",
-          "sha256": "ec6cfbc181159d5b3b3ad0005acde4a877b73e651af7811ff651525d8110782f"
+          "sha256": "67407995783d72ab15328c7eb1d18a98fb75d140e98091dbcfea05fab07efca4"
         },
         {
           "path": "tests/observer.test.mjs",
-          "sha256": "aae9ce50ff0263c2f954c6e285645c6aa7fef77681cfbc1147ad1a94e57c1dab"
+          "sha256": "c5bbd3bb5a3862ce74725d40c193a2b8dd5fb1ef21023f4513316ff8c6a50e1b"
         },
         {
           "path": "tests/packs.test.mjs",
-          "sha256": "8e3bdd830c00ea071c459d9ec7c8394da92c132ce5043455a0c756fbb124d4b8"
+          "sha256": "9a928d06421d8a1af4d2bc433f30c9c1748fcca5392b761df284c698cb2575eb"
         },
         {
           "path": "tests/settings.test.mjs",
@@ -548,17 +593,6 @@
         "video_path": "docs/media/software-factory-demo.mp4",
         "image_path": "docs/media/software-factory-demo.png",
         "label": "Historical recorded demonstration; predates software packs"
-      },
-      "branch_only_evidence": {
-        "commit": "259aff26e3ca627873eec6b40a89d6942b039d7c",
-        "source": "https://github.com/kujolang/software-factory/blob/259aff26e3ca627873eec6b40a89d6942b039d7c/docs/RELEASE-QUALIFICATION.md",
-        "status": "Explicitly blocks feature-complete release; version 0.1.0 is not a new release tag.",
-        "qualification_limits": [
-          "Clean Linux/macOS/WSL installation not executed",
-          "Additional runtime missions/full provider missions not executed",
-          "Upstream VideoOps Kujo validator reports VM Stack underflow; separate JSON-schema validation passes"
-        ],
-        "public_use": "Do not project branch integration claims onto standalone 0.1.0. Product Launch uses the pinned portable verifier only."
       }
     },
     {
