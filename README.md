@@ -28,6 +28,17 @@ npm run providers:check
 Publish the referenced AI SDK commit before updating the site. The site build
 checks the directory against that immutable revision.
 
+Provider artwork is credited to its sources. The eight SVGs for LM Studio,
+vLLM, Kimi, MiniMax, SiliconFlow, Novita, Voyage AI, and Jina come from
+[Lobe Icons](https://github.com/lobehub/lobe-icons) under its
+[MIT license](assets/images/providers/LOBE-ICONS-LICENSE.txt).
+The llama.cpp mark comes from [ggml-org/llama.brand](https://github.com/ggml-org/llama.brand)
+under its [brand usage terms](https://github.com/ggml-org/llama.brand/blob/9e91eb167731ae69a3f2108b3b577b6baf32dede/BRAND-USAGE.md).
+The unmodified SGLang mark is by the [SGLang Team](https://github.com/sgl-project)
+under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+See the [original SGLang asset](https://github.com/sgl-project/sglang/blob/d675c98bc76df951eec83196063cf2e546e0753d/assets/logo_square.svg).
+
+
 ## Build
 
 Install [Kujo](https://github.com/kujolang/kujo), then run:

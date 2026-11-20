@@ -11,6 +11,20 @@ const original = readFileSync(target, 'utf8');
 const existing = new Map(JSON.parse(original).filter(row => row.package !== 'ai-sdk').map(row => [row.id, row]));
 const seen = new Set();
 const repo = 'https://github.com/kujolang/ai-sdk';
+const lobeIcons = 'https://raw.githubusercontent.com/lobehub/lobe-icons/9752d967494e48d8f83f2808feb2b0207bf70997/packages/static-svg/icons/';
+const logos = {
+  'lm-studio': lobeIcons + 'lmstudio.svg',
+  vllm: lobeIcons + 'vllm-color.svg',
+  'llama-cpp': 'https://raw.githubusercontent.com/ggml-org/llama.brand/9e91eb167731ae69a3f2108b3b577b6baf32dede/logo/svg/icon/icon-light.svg',
+  sglang: 'https://raw.githubusercontent.com/sgl-project/sglang/d675c98bc76df951eec83196063cf2e546e0753d/assets/logo_square.svg',
+  moonshot: lobeIcons + 'kimi-color.svg',
+  minimax: lobeIcons + 'minimax-color.svg',
+  siliconflow: lobeIcons + 'siliconcloud-color.svg',
+  novita: lobeIcons + 'novita-color.svg',
+  voyage: lobeIcons + 'voyage-color.svg',
+  jina: lobeIcons + 'jina.svg',
+};
+
 const descriptions = {
   'llama-cpp': 'Run GGUF models locally with llama-server. Tool calling depends on the model and chat template. Embeddings require a pooling mode.',
   jina: 'Generate embeddings, rerank documents, or extract text from a URL with Jina Reader. Set a Jina API key for authenticated requests.',
@@ -30,6 +44,10 @@ const records = manifest.providers.map(provider => {
     install: 'git clone ' + repo + '.git\ncd ai-sdk\ngit checkout ' + revision,
     code: 'KUJO_MODULE_PATH="$PWD/src" kujo run examples/provider_quickstart.kujo -- ' + provider.id + ' ' + script + ' YOUR_MODEL_ID',
     description: descriptions[provider.id] ?? provider.limitations,
+    ...(logos[provider.id] && {
+      logo: '/assets/images/providers/' + provider.id + '.svg',
+      logo_source: logos[provider.id],
+    }),
   };
   return {
     ...(prior ?? starter),

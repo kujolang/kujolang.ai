@@ -9,7 +9,11 @@ test('provider registry contains each requested integration exactly once', () =>
   assert.equal(new Set(registry.map((provider) => provider.id)).size, 35);
   for (const provider of registry) {
     assert.match(provider.repo, /^https:\/\/github\.com\/kujolang\//);
-    if (provider.logo) assert.match(provider.logo, /^\/assets\/images\/providers\//);
+    assert.match(provider.logo, /^\/assets\/images\/providers\//);
+    if (provider.package === 'ai-sdk') {
+      assert.equal(provider.logo, `/assets/images/providers/${provider.id}.svg`);
+      assert.match(provider.logo_source, /^https:\/\/raw\.githubusercontent\.com\//);
+    }
     assert.ok(provider.docs && provider.code && provider.install);
     assert.match(provider.certificationRevision, /^[a-f0-9]{40}$/);
     assert.ok(['verified', 'partial', 'not_tested'].includes(provider.verification));
@@ -19,10 +23,10 @@ test('provider registry contains each requested integration exactly once', () =>
 
 test('every registered local logo exists', async () => {
   for (const provider of registry) {
-    if (!provider.logo) continue;
     const path = new URL(`..${provider.logo}`, import.meta.url);
     const logo = await readFile(path);
     assert.ok(logo.length > 32, provider.id);
+    if (provider.logo.endsWith('.svg')) assert.match(logo.toString(), /<svg\b/);
   }
 });
 
