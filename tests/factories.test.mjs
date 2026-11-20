@@ -69,14 +69,19 @@ test('related ecosystem references name existing canonical pages', () => {
   }
 });
 
-test('release claims match verified publication records and clone commands follow main', () => {
+test('release claims match verified publication records and clone commands match the reviewed installation policy', () => {
   const matrix = JSON.parse(read('docs/factories/capability-matrix.json'));
   for (const {source} of factories) {
     const slug = field(source, 'custom_url');
     const record = matrix.factories.find(factory => factory.id === slug);
     assert.equal(field(source, 'latest_release_url'), record.release_url);
     assert.equal(field(source, 'release_status'), `Published ${record.release_tag}`);
-    assert.doesNotMatch(field(source, 'install_command'), /checkout|--branch/);
+    const install = field(source, 'install_command');
+    if (slug === 'software-factory') {
+      assert.ok(install.startsWith(`git clone --branch ${record.release_tag} ${record.repository}.git`));
+    } else {
+      assert.doesNotMatch(install, /checkout|--branch/);
+    }
     assert.doesNotMatch(source, /no published GitHub Release|Source preview/i);
   }
 });
