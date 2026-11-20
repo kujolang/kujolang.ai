@@ -9,13 +9,13 @@ order: 90
 install_command: "kennel add ai-sdk@1.2.0"
 github_url: "https://github.com/kujolang/ai-sdk"
 launch_story: "Call chat and embedding models through one Kujo response contract."
-scope_note: "Requires Kujo 1.6.0 or newer. Strict accounting is opt-in; memory state is process-local. Incremental chunk callbacks require a runtime with http_stream_collect and are unavailable in published Kujo 1.5/1.6. Provider credentials are needed for live calls."
+scope_note: "Requires Kujo 1.6.0 or newer. Strict accounting is opt-in; memory state is process-local. Incremental chunk callbacks require a runtime with http_stream_collect and are unavailable in published Kujo 1.5/1.6. Provider credentials are needed for live calls when the endpoint requires them. The common setup for 35 integrations uses a newer pinned source checkout: https://docs.kujolang.ai/ecosystem/providers/#configure-a-provider"
 keywords: "AI SDK, Kujo ecosystem, Primitive, AI"
 seo_title: "AI SDK — Kujo Ecosystem"
 version: "1.2.0"
 latest_release_url: "https://github.com/kujolang/ai-sdk/releases/tag/v1.2.0"
 release_status: "Version identifies the published release. The Kennel command selects the latest stable registry package; see scope_note for release boundaries."
-last_updated: "2026-10-13"
+last_updated: "2026-11-20"
 ---
 
 ## What it does
@@ -27,6 +27,16 @@ This release keeps client counters across calls, charges completed usage before 
 ## Install
 
 Use Kujo 1.6.0 or newer and Kennel 1.1.0 or newer. Run `kennel add ai-sdk@1.2.0`, then `kennel install`. Response, driver, and model-catalog contracts remain at 1.0.0.
+
+## Configure a provider
+
+The AI SDK source checkout gives all 35 integrations a shared setup path.
+Ten built-in presets and 20 package-backed drivers use the SDK request
+contract. Five cloud and media integrations use their packages' native
+operations. The published Kennel package remains AI SDK 1.2.0. Follow the
+source setup instructions for the unified registry. [Provider setup guide](https://docs.kujolang.ai/ecosystem/providers/#configure-a-provider)
+
+Compare providers and open their starters from the directory. [Provider directory](/providers/)
 
 ## Transport and state
 
