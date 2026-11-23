@@ -24,3 +24,7 @@ Recheck on any release above, on a material documentation change, or at the next
 ## 2026-11-02 follow-up
 
 Official release metadata now lists `0.23.1-nightly.20261101.a` as BAML's newest nightly. The stable release remains 0.23.0. The catalog links that nightly as unexecuted; all runtime assertions still name their tested 0.22.x builds.
+
+## 2026-11-23 follow-up
+
+GitHub's official release feeds list Kujo 1.10.0 (2026-11-20), Bend 2.0.40 (2026-11-06), BAML 0.26.0 (2026-11-21), and BAML 0.26.1-nightly.20261120.a (2026-11-21). Zerolang's latest numbered release remains 0.3.4. The catalog updates those release references only; none of the new versions was executed, and every behavior claim remains bound to its recorded older fixture.
