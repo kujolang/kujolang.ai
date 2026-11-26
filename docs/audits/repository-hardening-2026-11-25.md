@@ -16,7 +16,7 @@
 | SITE-03 | P1 | Keyboard accessibility | Provider modal opening delayed focus to the next animation frame. The baseline browser run could press Escape while focus was still on the trigger. Backward tabbing from the dialog container could also leave both provider and installer dialogs. | Move focus synchronously, wrap backward tabbing from the dialog itself, and skip disabled installer controls. Exercise focus entry, containment, Escape and focus restoration. | Fixed |
 | SITE-04 | P2 | Audit accuracy | The delivery probe treated a 404 from a required endpoint as expected, accepted a URL prefix as a canonical origin, and recorded a lost query outside the issues field. | Verify endpoint-specific status, exact canonical scheme/authority/path and query preservation. | Fixed |
 | SITE-05 | P2 | Release verification | Pages checked rendered comparisons but skipped the authored-source drift check, and the browser registration harness remained outside CI. | Gate comparison freshness, Python regressions and the generated WebMCP runtime in Pages. | Fixed |
-| SITE-06 | Needs more evidence | Shared WebMCP request lifecycle | `webmcp_runtime_source` caches one fetch with the initiating tool call's signal. The current test checks one cancelled call and cache reuse. The same loader exists in `kujolang/ssg`. | Trace concurrent caller cancellation in the SSG pass and promote any common fix to the website copy. | Open |
+| SITE-06 | P1 | Shared WebMCP request lifecycle | `webmcp_runtime_source` caches one fetch with the initiating tool call's signal. The current test checks one cancelled call and cache reuse. The same loader exists in `kujolang/ssg`. | Synced the canonical SSG adapter from `c656da3`. The website builder emitted both forms from a clean fixture and both passed the concurrent cancellation and cached-page lifecycle tests. | Fixed |
 
 ## Audit coverage
 
@@ -53,4 +53,4 @@ The first overlapping baseline artifact check produced missing-file errors durin
 
 ## Cross-repository follow-up
 
-Coordinate SITE-06 with the canonical SSG implementation and keep the website installer byte-identical to the reviewed Kujo copy when updating it.
+Keep WebMCP changes synchronized with the canonical SSG adapter and the website installer byte-identical to the reviewed Kujo copy.
