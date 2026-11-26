@@ -105,33 +105,39 @@ def redirects(
         variants.insert(-2, (f"https://{host}/" + feed_path.strip("/"), "feed"))
     receipts = {}
     rows = []
-    canonical_host = f"https://{host}"
     for url, label in variants:
         receipt = request(url, "KujolangSEOAudit/1.0")
         receipts[url] = receipt
         first_status = receipt["chain"][0]["status"] if receipt["chain"] else receipt["status"]
         final_url = receipt["final_url"]
-        source_query = urllib.parse.urlparse(url).query
-        final_query = urllib.parse.urlparse(final_url).query
+        source_target = urllib.parse.urlparse(url)
+        source_query = source_target.query
+        final_target = urllib.parse.urlparse(final_url)
+        final_query = final_target.query
         query_preserved = "n/a" if not source_query else ("yes" if source_query == final_query else "no")
         issues = []
         if label in {"apex HTTP", "www HTTP", "www HTTPS", "nested no trailing slash"}:
             if first_status not in (301, 308):
                 issues.append("non-permanent or missing canonical redirect")
-        if label == "flat HTML alias" and receipt["status"] != 404:
-            issues.append("retired flat alias did not return 404")
-        if label == "404" and receipt["status"] != 404:
-            issues.append("unexpected missing-route status")
-        if receipt["status"] not in (200, 404):
-            issues.append("unexpected final status")
+        missing_route = label in {"flat HTML alias", "404"}
+        expected_status = 404 if missing_route else 200
+        if receipt["status"] != expected_status:
+            issues.append(f"unexpected final status (expected {expected_status})")
+        expected_path = key_path if label == "nested no trailing slash" else source_target.path
+        canonical = (final_target.scheme == "https" and final_target.netloc.lower() == host.lower()
+                     and final_target.path == expected_path)
+        if not missing_route and not canonical:
+            issues.append("unexpected canonical target")
+        if query_preserved == "no":
+            issues.append("query string changed or missing")
         rows.append({
             "phase": phase, "source_url": url, "source_variant": label,
             "http_status": first_status, "target_url": final_url,
             "chain_length": len(receipt["chain"]), "final_status": receipt["status"],
-            "canonical_target": "n/a" if label in {"flat HTML alias", "404"} else ("yes" if final_url.startswith(canonical_host) else "no"),
+            "canonical_target": "n/a" if missing_route else ("yes" if canonical else "no"),
             "query_preserved": query_preserved,
             "verification": "live request with redirects followed",
-            "issues": "; ".join(issues + ([receipt["error"]] if receipt["error"] and not (label in {"404", "flat HTML alias"} and receipt["status"] == 404) else [])),
+            "issues": "; ".join(issues + ([receipt["error"]] if receipt["error"] and not (missing_route and receipt["status"] == 404) else [])),
         })
     return rows, receipts
 
