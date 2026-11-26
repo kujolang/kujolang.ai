@@ -187,7 +187,7 @@
       currentModal = modal;
       document.body.classList.add('modal-open');
       var dialog = modal.querySelector('[role="dialog"]');
-      window.requestAnimationFrame(function () { dialog.focus(); });
+      dialog.focus();
     }
 
     function closeModal(modal) {
@@ -236,11 +236,11 @@
           return;
         }
         if (event.key !== 'Tab') return;
-        var focusable = Array.prototype.slice.call(dialog.querySelectorAll('button, input, textarea, a[href], [tabindex]:not([tabindex="-1"])'));
+        var focusable = Array.prototype.slice.call(dialog.querySelectorAll('button:not(:disabled), input:not(:disabled), textarea:not(:disabled), a[href], [tabindex]:not([tabindex="-1"])'));
         if (!focusable.length) return;
         var first = focusable[0];
         var last = focusable[focusable.length - 1];
-        if (event.shiftKey && document.activeElement === first) {
+        if (event.shiftKey && (document.activeElement === dialog || document.activeElement === first)) {
           event.preventDefault();
           last.focus();
         } else if (!event.shiftKey && document.activeElement === last) {

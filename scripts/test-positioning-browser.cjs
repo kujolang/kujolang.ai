@@ -14,10 +14,19 @@ const assert = require('node:assert/strict');
     if (mode === 'enabled') {
       await page.locator('[data-provider-search]').fill('ollama');
       assert.equal(await page.locator('[data-provider-record]:visible').count(), 1);
-      await page.locator('[data-provider-id="ollama"]').click();
-      assert(await page.getByRole('dialog').isVisible());
+      const starter = page.locator('[data-provider-id="ollama"]');
+      const dialog = page.getByRole('dialog');
+      assert.equal(await starter.evaluate(button => {
+        button.focus();
+        button.click();
+        return document.activeElement.getAttribute('role');
+      }), 'dialog', 'opening the dialog must move focus immediately');
+      assert(await dialog.isVisible());
+      await page.keyboard.press('Shift+Tab');
+      assert(await dialog.evaluate(element => element.contains(document.activeElement)));
       await page.keyboard.press('Escape');
-      assert.equal(await page.getByRole('dialog').count(), 0);
+      assert.equal(await dialog.count(), 0);
+      assert(await starter.evaluate(button => document.activeElement === button));
     } else assert.equal(await page.locator('[data-provider-record]:visible').count(), providers.length);
     for (const route of ['integrations', 'agent-accountability']) {
       for (const width of [390, 1440]) {

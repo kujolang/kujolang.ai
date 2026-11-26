@@ -77,7 +77,7 @@
     modal.querySelector('[data-provider-docs]').href = provider.docs;
     modal.hidden = false;
     document.body.classList.add('modal-open');
-    window.requestAnimationFrame(function () { dialog.focus(); });
+    dialog.focus();
   }
 
   function close() {
@@ -103,7 +103,7 @@
     if (event.key !== 'Tab') return;
     var focusable = Array.prototype.slice.call(dialog.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])'));
     if (!focusable.length) return;
-    if (event.shiftKey && document.activeElement === focusable[0]) { event.preventDefault(); focusable[focusable.length - 1].focus(); }
+    if (event.shiftKey && (document.activeElement === dialog || document.activeElement === focusable[0])) { event.preventDefault(); focusable[focusable.length - 1].focus(); }
     else if (!event.shiftKey && document.activeElement === focusable[focusable.length - 1]) { event.preventDefault(); focusable[0].focus(); }
   });
   modal.querySelector('[data-provider-copy]').addEventListener('click', function (event) {
