@@ -78,8 +78,10 @@ curl -fsSL https://kujolang.ai/install.sh | bash
 
 [`public/install.sh`](public/install.sh) is the published copy of Kujo's
 canonical [`install.sh`](https://github.com/kujolang/kujo/blob/main/install.sh).
-When the installer changes, copy the reviewed canonical script here in the same
-change so the website artifact remains self-contained and deployable.
+When the installer changes, copy the reviewed canonical script here so the
+website artifact remains self-contained. Remote release manifests and their
+redirects use HTTPS. The installer sends `KUJO_GITHUB_TOKEN` only to supported
+GitHub hosts.
 
 ## Verification
 
@@ -90,6 +92,7 @@ kujo run ./build.kujo -- --site-url https://kujolang.ai
 npm run images:responsive
 bash scripts/verify-site-contract.sh output
 bash scripts/validate-generated-output.sh output
+node scripts/test-webmcp-runtime.js output/assets/js/kujo-webmcp.min.js output/.well-known/kujo-site-index.json
 node --check assets/js/site.js
 npm audit --omit=dev
 ```

@@ -31,10 +31,17 @@ reject_text() {
 require_social_meta() {
 	local html_file="$1"
 	local card_id="$2"
+	if [[ ! -f "$html_file" ]]; then
+		fail "missing social metadata page: $html_file"
+		return
+	fi
 	local expected="https://kujolang.ai/assets/images/social/${card_id}.jpg"
 	if [[ "$card_id" == "home" ]]; then
 		local version
-		version=$(node -e 'const fs=require("node:fs"),crypto=require("node:crypto");process.stdout.write(crypto.createHash("sha256").update(fs.readFileSync(process.argv[1])).digest("hex").slice(0,12))' "${output_dir}/assets/images/social/home.jpg")
+		if ! version=$(node -e 'const fs=require("node:fs"),crypto=require("node:crypto");process.stdout.write(crypto.createHash("sha256").update(fs.readFileSync(process.argv[1])).digest("hex").slice(0,12))' "${output_dir}/assets/images/social/home.jpg"); then
+			fail 'cannot determine homepage social card version'
+			return
+		fi
 		expected="https://kujolang.ai/assets/images/social/home-${version}.jpg"
 	fi
 	local og_image
@@ -90,7 +97,8 @@ require_text "${repo_root}/CNAME" 'kujolang.ai'
 require_text "${repo_root}/.github/workflows/pages.yml" 'uses: actions/deploy-pages@v4'
 require_text "${repo_root}/.github/workflows/pages.yml" 'kujo run ./build.kujo -- --site-url https://kujolang.ai'
 
-if find "${output_dir}" -type f -name '*.html' ! -name 'index.html' ! -name '404.html' ! -path "${output_dir}/assets/sitekit/recipes/*" | grep -q .; then
+unexpected_html=$(find "${output_dir}" -type f -name '*.html' ! -name 'index.html' ! -name '404.html' ! -path "${output_dir}/assets/sitekit/recipes/*" -print -quit)
+if [[ -n "$unexpected_html" ]]; then
 	fail 'flat HTML aliases should be disabled so GitHub Pages canonicalizes trailing slashes'
 fi
 
@@ -553,13 +561,6 @@ reject_text "${output_dir}/index.html" 'home-cloner'
 require_text "${output_dir}/ecosystem/factories/index.html" 'id="choose"'
 require_text "${output_dir}/ecosystem/factories/index.html" 'aria-label="Factory comparison"'
 
-if (( failures > 0 )); then
-	printf 'Site contract failed with %d issue(s).\n' "$failures" >&2
-	exit 1
-fi
-
-printf 'Site contract passed: ecosystem projects, 4 section catalogs, 135 skills, 44 released workflow kits plus the Publishing House Operator, carousels, animated Bayer-dither heroes, nested 404 recovery, navigation, social cards, and metadata verified.\n'
-
 require_file "${output_dir}/ecosystem/kujo-hermes/index.html"
 require_text "${output_dir}/ecosystem/kujo-hermes/index.html" 'hermes plugins install kujolang/kujo-hermes'
 require_text "${output_dir}/ecosystem/kujo-hermes/index.html" 'width="1916" height="821"'
@@ -567,4 +568,11 @@ require_text "${output_dir}/ecosystem/tooling/index.html" 'href="/ecosystem/kujo
 require_text "${output_dir}/sitemap.xml" '/ecosystem/kujo-hermes/'
 require_social_meta "${output_dir}/ecosystem/kujo-hermes/index.html" 'kujo-hermes'
 
-python3 scripts/verify-sitekit.py
+python3 "${repo_root}/scripts/verify-sitekit.py" "$output_dir" || fail 'SiteKit integrity check failed'
+
+if (( failures > 0 )); then
+	printf 'Site contract failed with %d issue(s).\n' "$failures" >&2
+	exit 1
+fi
+
+printf 'Site contract passed.\n'
